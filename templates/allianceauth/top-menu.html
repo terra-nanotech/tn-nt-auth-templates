@@ -33,12 +33,13 @@
                 {% endif %}
                 {% if user.is_authenticated %}
                     {% if user.is_staff %}
-                        <li><a href="{% url 'admin:index' %}">{% trans "Admin" %}</a></li>
+                        <li><a href="{% url 'admin:index' %}" target="_blank" rel="noopener noreferer">{% trans "Admin" %}</a></li>
                     {% endif %}
                 {% endif %}
-                <li><a href="https://terra-nanotech.de/" target="_blank" rel="noopener">TN-NT Website</a></li>
-                <li><a href="https://forum.terra-nanotech.de/" target="_blank" rel="noopener">TN-NT Forums</a></li>
-                <li><a href="https://wiki.terra-nanotech.de/" target="_blank" rel="noopener">TN-NT Wiki</a></li>
+                <li><a href="https://terra-nanotech.de/" target="_blank" rel="noopener noreferer">TN-NT Website</a></li>
+                <li><a href="https://forum.terra-nanotech.de/" target="_blank" rel="noopener noreferer">TN-NT Forums</a></li>
+                <li><a href="https://wiki.terra-nanotech.de/" target="_blank" rel="noopener noreferer">TN-NT Wiki</a></li>
+                <li><a href="https://seat.terra-nanotech.de/" target="_blank" rel="noopener noreferer">TN-NT SeAT</a></li>
                 {% if user.is_authenticated %}
                     <li><a href="{% url 'auth_logout' %}">{% trans "Logout" %}</a></li>
                 {% else %}
