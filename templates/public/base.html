@@ -18,7 +18,8 @@
 
         <style>
             body {
-                background: url('{% static 'authentication/img/background.jpg' %}') no-repeat center center fixed;
+                /*background: url('{% static 'authentication/img/background.jpg' %}') no-repeat center center fixed;*/
+                background: url('https://web.ccpgamescdn.com/aws/eveonline/sso/background.jpg') no-repeat center center fixed;
                 -webkit-background-size: cover;
                 -moz-background-size: cover;
                 -o-background-size: cover;
@@ -44,7 +45,7 @@
         </style>
     </head>
     <body>
-        <div class="container" style="margin-top:150px">
+        <div class="auth-login-box" style="margin: 0; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
             {% block content %}
             {% endblock %}
         </div>
