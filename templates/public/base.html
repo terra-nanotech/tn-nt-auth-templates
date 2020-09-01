@@ -33,9 +33,39 @@
                 background-size: cover;
             }
 
-            .panel-transparent {
+            .auth-login-box {
+                margin: 0;
+                position: absolute;
+                top: 0;
+                left: 10vw;
+                /* transform: translate(-50%, -50%); */
+                bottom: 0;
+                width: 40rem;
                 background: rgba(48, 48, 48, 0.7);
+            }
+
+            .login-image {
+                width: 194px;
+                opacity: 0.3;
+                transition: opacity .5s ease-in-out;
+                -moz-transition: opacity .5s ease-in-out;
+                -webkit-transition: opacity .5s ease-in-out;
+            }
+
+
+            .auth-login-box-inner {
+                position: absolute;
+                bottom: 10%;
+            }
+
+            .auth-login-box-inner:hover .login-image {
+                opacity: 1;
+            }
+
+            .panel-transparent {
+                background: transparent;
                 color: #ffffff;
+                border: none;
             }
 
             .panel-body {
@@ -52,7 +82,7 @@
         </style>
     </head>
     <body>
-        <div class="auth-login-box" style="margin: 0; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+        <div class="auth-login-box">
             {% block content %}
             {% endblock %}
         </div>
