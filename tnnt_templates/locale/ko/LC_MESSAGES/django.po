@@ -1,0 +1,94 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-09-02 18:25+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+#: tnnt_templates/templates/allianceauth/top-menu.html:9
+msgid "Toggle navigation"
+msgstr ""
+
+#: tnnt_templates/templates/allianceauth/top-menu.html:29
+msgid "Notifications"
+msgstr ""
+
+#: tnnt_templates/templates/allianceauth/top-menu.html:41
+msgid "Admin"
+msgstr ""
+
+#: tnnt_templates/templates/allianceauth/top-menu.html:51
+msgid "Logout"
+msgstr ""
+
+#: tnnt_templates/templates/allianceauth/top-menu.html:53
+msgid "Login"
+msgstr ""
+
+#: tnnt_templates/templates/public/login.html:25
+msgid "For information on SSO, ESI and security read the CCP Dev Blog"
+msgstr ""
+
+#: tnnt_templates/templates/public/login.html:30
+msgid "Manage ESI Applications"
+msgstr ""
+
+#: tnnt_templates/templates/public/register.html:21
+msgid "Register"
+msgstr ""
+
+#: tnnt_templates/templates/registration/activate.html:13
+msgid "Invalid or expired activation link."
+msgstr ""
+
+#: tnnt_templates/templates/registration/registration_form.html:17
+msgid "Please provide your email address for registration confirmation."
+msgstr ""
+
+#: tnnt_templates/templates/registration/registration_form.html:23
+msgid "Submit"
+msgstr ""
+
+#: tnnt_templates/templates/services/teamspeak3/teamspeakjoin.html:7
+msgid "Verify Teamspeak"
+msgstr ""
+
+#: tnnt_templates/templates/services/teamspeak3/teamspeakjoin.html:13
+msgid "Verify Teamspeak Identity"
+msgstr ""
+
+#: tnnt_templates/templates/services/teamspeak3/teamspeakjoin.html:19
+msgid "If you are already connected to TS"
+msgstr ""
+
+#: tnnt_templates/templates/services/teamspeak3/teamspeakjoin.html:24
+msgid "If you are already on the server use the following token:"
+msgstr ""
+
+#: tnnt_templates/templates/services/teamspeak3/teamspeakjoin.html:34
+msgid "You <b>DO NOT</b> have Teamspeak Open"
+msgstr ""
+
+#: tnnt_templates/templates/services/teamspeak3/teamspeakjoin.html:38
+msgid "Join Server"
+msgstr ""
+
+#: tnnt_templates/templates/services/teamspeak3/teamspeakjoin.html:46
+msgid "Auth Teamspeak"
+msgstr ""
+
+#: tnnt_templates/templates/services/teamspeak3/teamspeakjoin.html:58
+msgid "Continue"
+msgstr ""
