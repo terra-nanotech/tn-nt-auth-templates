@@ -1,1 +1,5 @@
-/nbproject/private/
+/build/
+/dist/
+/*.egg-info/
+/tnnt_templates/__pycache__/
+.idea/
