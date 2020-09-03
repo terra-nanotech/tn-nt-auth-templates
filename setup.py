@@ -17,7 +17,7 @@ setup(
     version=__version__,
     packages=find_packages(),
     include_package_data=True,
-    license="MIT",
+    license="GPLv3",
     description="Terra Nanotech Template Overrides for Alliance Auth",
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -29,7 +29,7 @@ setup(
         "Framework :: Django",
         "Framework :: Django :: 2.2",
         "Intended Audience :: Developers",
-        "License :: OSI Approved :: MIT License",
+        "License :: OSI Approved :: GNU General Public License v3 (GPLv3)"
         "Operating System :: OS Independent",
         "Programming Language :: Python",
         "Programming Language :: Python :: 3.6",

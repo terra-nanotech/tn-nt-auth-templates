@@ -1,12 +1,13 @@
 {% extends 'public/middle_box.html' %}
 
+{% load i18n %}
 {% load static %}
 
 {% block page_title %}Login{% endblock %}
 
 {% block middle_box_content %}
     <p style="text-align: center">
-        <img class="login-image" src="https://images.evetech.net/corporations/98000030/logo?size=256" style="border-radius: 50%;">
+        <img class="login-image" src="https://images.evetech.net/corporations/98000030/logo?size=128">
     </p>
 
     <p style="text-align: center; font-size: 150%;">
@@ -21,12 +22,12 @@
     </p>
 
     <p style="text-align: center;">
-        For information on SSO, ESI and security read the CCP Dev Blog <a href="https://www.eveonline.com/article/introducing-esi" target="_blank">Introducing ESI</a>
+        {% trans "For information on SSO, ESI and security read the CCP Dev Blog" %}<br><a href="https://www.eveonline.com/article/introducing-esi" target="_blank">Introducing ESI - A New API For Eve Online</a>
     </p>
 
     <p style="text-align: center;">
         <a href="https://community.eveonline.com/support/third-party-applications/" target="_blank">
-            Manage ESI Applications
+            {% trans "Manage ESI Applications" %}
         </a>
     </p>
 {% endblock %}
