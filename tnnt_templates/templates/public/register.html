@@ -1,34 +1,8 @@
 {% extends 'public/middle_box.html' %}
-{#{% extends 'public/base.html' %}#}
 
 {% load static %}
 {% load bootstrap %}
 {% load i18n %}
-
-{#{% block page_title %}Registration{% endblock %}#}
-
-{#{% block extra_include %}#}
-{#    {% include 'bundles/bootstrap-css.html' %}#}
-{#    {% include 'bundles/fontawesome.html' %}#}
-{#    {% include 'bundles/bootstrap-js.html' %}#}
-{#{% endblock %}#}
-
-{#{% block content %}#}
-{#    <div>#}
-{#        <div class="panel panel-default panel-transparent">#}
-{#            <div class="panel-body">#}
-{#                <form method="POST">#}
-{#                    {% csrf_token %}#}
-{#                    {{ form|bootstrap }}#}
-{#                    <button class="btn btn-lg btn-primary btn-block" type="submit">{% trans "Register" %}</button>#}
-{#                </form>#}
-{#            </div>#}
-{#        </div>#}
-{##}
-{#        {% include 'public/lang_select.html' %}#}
-{#    </div>#}
-{#{% endblock %}#}
-
 
 {% block title %}Register{% endblock %}
 
@@ -44,15 +18,9 @@
 
     <p>{% trans "Please provide your email address for registration confirmation." %}</p>
 
-{#    <p>#}
-{#        <div class="panel panel-default panel-transparent">#}
-{#            <div class="panel-body">#}
-                <form method="POST">
-                    {% csrf_token %}
-                    {{ form|bootstrap }}
-                    <button class="btn btn-lg btn-primary btn-block" type="submit">{% trans "Register" %}</button>
-                </form>
-{#            </div>#}
-{#        </div>#}
-{#    </p>#}
+    <form method="POST">
+        {% csrf_token %}
+        {{ form|bootstrap }}
+        <button class="btn btn-lg btn-primary btn-block" type="submit">{% trans "Register" %}</button>
+    </form>
 {% endblock %}
