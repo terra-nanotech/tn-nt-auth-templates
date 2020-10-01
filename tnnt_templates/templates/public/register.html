@@ -1,28 +1,58 @@
+{% extends 'public/middle_box.html' %}
+{#{% extends 'public/base.html' %}#}
+
 {% load static %}
 {% load bootstrap %}
 {% load i18n %}
 
-{% extends 'public/base.html' %}
-{% block page_title %}Registration{% endblock %}
+{#{% block page_title %}Registration{% endblock %}#}
 
-{% block extra_include %}
-    {% include 'bundles/bootstrap-css.html' %}
-    {% include 'bundles/fontawesome.html' %}
-    {% include 'bundles/bootstrap-js.html' %}
-{% endblock %}
+{#{% block extra_include %}#}
+{#    {% include 'bundles/bootstrap-css.html' %}#}
+{#    {% include 'bundles/fontawesome.html' %}#}
+{#    {% include 'bundles/bootstrap-js.html' %}#}
+{#{% endblock %}#}
 
-{% block content %}
-    <div>
-        <div class="panel panel-default panel-transparent">
-            <div class="panel-body">
+{#{% block content %}#}
+{#    <div>#}
+{#        <div class="panel panel-default panel-transparent">#}
+{#            <div class="panel-body">#}
+{#                <form method="POST">#}
+{#                    {% csrf_token %}#}
+{#                    {{ form|bootstrap }}#}
+{#                    <button class="btn btn-lg btn-primary btn-block" type="submit">{% trans "Register" %}</button>#}
+{#                </form>#}
+{#            </div>#}
+{#        </div>#}
+{##}
+{#        {% include 'public/lang_select.html' %}#}
+{#    </div>#}
+{#{% endblock %}#}
+
+
+{% block title %}Register{% endblock %}
+
+{% block middle_box_content %}
+    <p style="text-align: center">
+        <img class="login-image" src="https://images.evetech.net/corporations/98000030/logo?size=256">
+    </p>
+
+    <p style="text-align: center; font-size: 150%;">
+        Terra Nanotech<br>
+        Authentication System
+    </p>
+
+    <p>{% trans "Please provide your email address for registration confirmation." %}</p>
+
+{#    <p>#}
+{#        <div class="panel panel-default panel-transparent">#}
+{#            <div class="panel-body">#}
                 <form method="POST">
                     {% csrf_token %}
                     {{ form|bootstrap }}
                     <button class="btn btn-lg btn-primary btn-block" type="submit">{% trans "Register" %}</button>
                 </form>
-            </div>
-        </div>
-
-        {% include 'public/lang_select.html' %}
-    </div>
+{#            </div>#}
+{#        </div>#}
+{#    </p>#}
 {% endblock %}
