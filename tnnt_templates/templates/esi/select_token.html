@@ -199,7 +199,7 @@
         <div class="container">
             <div class="container-inner">
                 <ul class="cards_container">
-                    {% for token in tokens %}
+                    {% for token in tokens|dictsort:"character_name" %}
                         <li class="cars_item">
                             <div class="card">
                                 <div class="card-header">{{ token.character_name }}</div>
