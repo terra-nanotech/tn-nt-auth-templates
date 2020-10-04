@@ -37,28 +37,7 @@
         <div class="container">
             <div class="container-inner">
                 <ul class="cards_container">
-                    {% for token in tokens|dictsort:"character_name" %}
-                        <li class="cards_item">
-                            <div class="card">
-                                <div class="card-header">{{ token.character_name }}</div>
-
-                                <div class="card-body card__content">
-                                    <img src="{{ token.character_id|character_portrait_url:256 }}" alt="{{ token.character_name }}">
-                                </div>
-
-                                <div class="card-footer">
-                                    <form method="post">
-                                        {% csrf_token %}
-
-                                        <input type="hidden" name="_token" value="{{ token.pk }}">
-
-                                        <button class="select-character" type="submit" title="Select {{ token.character_name }}" formmethod="post">Select</button>
-                                    </form>
-                                </div>
-                            </div>
-                        </li>
-                    {% endfor %}
-
+                    <!-- Add New Character -->
                     <li class="cards_item">
                         <div class="card">
                             <div class="card-header">Add Character</div>
@@ -80,6 +59,29 @@
                             </div>
                         </div>
                     </li>
+
+                    {% for token in tokens|dictsort:"character_name" %}
+                        <!-- Use {{ token.character_name }} -->
+                        <li class="cards_item">
+                            <div class="card">
+                                <div class="card-header">{{ token.character_name }}</div>
+
+                                <div class="card-body card__content">
+                                    <img src="{{ token.character_id|character_portrait_url:256 }}" alt="{{ token.character_name }}">
+                                </div>
+
+                                <div class="card-footer">
+                                    <form method="post">
+                                        {% csrf_token %}
+
+                                        <input type="hidden" name="_token" value="{{ token.pk }}">
+
+                                        <button class="select-character" type="submit" title="Select {{ token.character_name }}" formmethod="post">Select</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </li>
+                    {% endfor %}
                 </ul>
             </div>
         </div>
