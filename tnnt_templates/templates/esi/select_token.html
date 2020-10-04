@@ -6,180 +6,10 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="">
-        <meta name="author" content="">
 
         <title>ESI Token Selection</title>
 
-        <style type="text/css">
-        @media all {
-            *,
-            *::before,
-            *::after {
-                box-sizing: border-box;
-            }
-
-            body {
-                margin: 0;
-                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-                            "Helvetica Neue", Arial, "Noto Sans", sans-serif,
-                            "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-                            "Noto Color Emoji";
-                font-size: 1rem;
-                font-weight: 400;
-                line-height: 1.5;
-                color: rgb(33, 37, 41);
-                text-align: left;
-                background-color: rgb(255, 255, 255);
-            }
-
-            .bg-dark {
-                background-color: rgb(52, 58, 64);
-            }
-
-            .container {
-                width: 100%;
-                padding-right: 1rem;
-                padding-left: 1rem;
-                margin-right: auto;
-                margin-left: auto;
-                margin-top: 3rem;
-            }
-
-            .container-inner {
-                flex: 0 0 50%;
-                max-width: 75%;
-                margin: 0 auto;
-            }
-
-            .card {
-                position: relative;
-                display: -ms-flexbox;
-                display: flex;
-                -ms-flex-direction: column;
-                flex-direction: column;
-                min-width: 0;
-                word-wrap: break-word;
-                background-color: rgb(255, 255, 255);
-                background-clip: border-box;
-                border: 1px solid rgba(0, 0, 0, .125);
-                border-radius: 0.25rem;
-            }
-
-            .card-header, .card-footer {
-                padding: 0.75rem 1.25rem;
-                margin-bottom: 0;
-                background-color: rgba(0, 0, 0, 0.03);
-                border-bottom: 1px solid rgba(0, 0, 0, 0.125);
-                text-align: center;
-            }
-
-            .card-footer {
-                border-bottom: none;
-                border-top: 1px solid rgba(0, 0, 0, 0.125);
-            }
-
-            .card-header:first-child {
-                border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
-            }
-
-            .card-body {
-                -ms-flex: 1 1 auto;
-                flex: 1 1 auto;
-                min-height: 1px;
-                padding: 1.25rem;
-            }
-
-            .cards_container {
-                display: flex;
-                flex-wrap: wrap;
-                list-style: none;
-                margin: 0;
-                padding: 0;
-                justify-content: center;
-                margin-left: -1rem;
-                margin-right: -1rem;
-            }
-
-            .cars_item {
-                display: flex;
-                padding: 1rem;
-            }
-
-            .cars_item .card {
-                display: flex;
-                flex-direction: column;
-            }
-
-            img {
-                max-width: 100%;
-            }
-
-            .text-center {
-                text-align: center;
-            }
-
-            .label {
-                display: inline;
-                padding: 0.3rem 0.6rem 0.3rem;
-                font-size: 75%;
-                font-weight: 700;
-                line-height: 1;
-                color: rgb(255,255,255);
-                text-align: center;
-                white-space: nowrap;
-                vertical-align: baseline;
-                border-radius: 0.1rem;
-                cursor: pointer;
-            }
-
-            .label-requested-scope {
-                margin-left: 1rem;
-                background-color: rgb(192, 192, 192);
-                color: rgb(54, 54, 54);
-            }
-
-            .select-character {
-                width: 100%;
-                padding: 0.35rem;
-                cursor: pointer;
-            }
-
-            form {
-                margin-bottom: 0.3rem;
-            }
-
-            .btn-new-character-sso {
-                padding: 0;
-                border: none;
-                cursor: pointer;
-            }
-        }
-
-        @media(min-width: 40rem) {
-            .cars_item {
-                width: 50%;
-            }
-        }
-
-        @media(min-width: 56rem) {
-            .cars_item {
-                width: 33.33333%;
-            }
-        }
-
-        @media(min-width: 75rem) {
-            .cars_item {
-                width: 25%;
-            }
-        }
-
-        @media(min-width: 96rem) {
-            .cars_item {
-                width: 20%;
-            }
-        }
-        </style>
+        <link rel="stylesheet" id="select-esi-token" href="{% static 'tnnt_templates/css/select-esi-token.min.css' %}" type="text/css" media="all">
     </head>
 
     <body class="bg-dark">
@@ -192,7 +22,9 @@
                         <p>
                             {% for token in tokens %}
                                 {% for scope in token.scopes.all %}
-                                    <span class="label label-requested-scope" data-toggle="tooltip" data-placement="top"title="{{ scope.help_text }}">{{ scope.friendly_name }}</span>
+                                    <span class="label label-requested-scope" data-toggle="tooltip" data-placement="top" title="{{ scope.help_text }}">
+                                        {{ scope.friendly_name }}
+                                    </span>
                                 {% endfor %}
                             {% endfor %}
                         </p>
@@ -206,12 +38,12 @@
             <div class="container-inner">
                 <ul class="cards_container">
                     {% for token in tokens|dictsort:"character_name" %}
-                        <li class="cars_item">
+                        <li class="cards_item">
                             <div class="card">
                                 <div class="card-header">{{ token.character_name }}</div>
 
                                 <div class="card-body card__content">
-                                    <img src="{{ token.character_id|character_portrait_url:256 }}">
+                                    <img src="{{ token.character_id|character_portrait_url:256 }}" alt="{{ token.character_name }}">
                                 </div>
 
                                 <div class="card-footer">
@@ -220,19 +52,19 @@
 
                                         <input type="hidden" name="_token" value="{{ token.pk }}">
 
-                                        <button class="select-character" type="submit" title="Select" formmethod="post">Select</button>
+                                        <button class="select-character" type="submit" title="Select {{ token.character_name }}" formmethod="post">Select</button>
                                     </form>
                                 </div>
                             </div>
                         </li>
                     {% endfor %}
 
-                    <li class="cars_item">
+                    <li class="cards_item">
                         <div class="card">
                             <div class="card-header">Add Character</div>
 
                             <div class="card-body card__content">
-                                <img src="{% static 'tnnt_templates/images/no_avatar.jpg' %}">
+                                <img src="{% static 'tnnt_templates/images/no_avatar.jpg' %}" alt="Add character">
                             </div>
 
                             <div class="card-footer">
@@ -241,13 +73,9 @@
 
                                     <input type="hidden" name="_add" value="True">
 
-{#                                    <a href="#" type="submit">#}
-{#                                        <input type="image" name="go" src="{% static 'tnnt_templates/images/eve-sso-login-black-small.png' %}" alt="Add Character">#}
-{#                                    </a>#}
-
-{#                                    <a href="#" type="submit">#}
-                                        <button class="btn-new-character-sso" type="submit" name="go" alt="Add Character"><img src="{% static 'tnnt_templates/images/eve-sso-login-black-small.png' %}"></button>
-{#                                    </a>#}
+                                    <button class="btn-new-character-sso" type="submit" name="go">
+                                        <img src="{% static 'tnnt_templates/images/eve-sso-login-black-small.png' %}" title="Add new character by logging in with EVE Online" alt="Add Character">
+                                    </button>
                                 </form>
                             </div>
                         </div>
