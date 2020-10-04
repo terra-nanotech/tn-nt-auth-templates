@@ -2,5 +2,5 @@
 
 Add translations (in project root):
 ```bash
-django-admin makemessages -l d
+django-admin makemessages -l de
 ```
