@@ -39,8 +39,8 @@
 
             .container {
                 width: 100%;
-                padding-right: 15px;
-                padding-left: 15px;
+                padding-right: 1rem;
+                padding-left: 1rem;
                 margin-right: auto;
                 margin-left: auto;
                 margin-top: 3rem;
@@ -60,14 +60,14 @@
                 flex-direction: column;
                 min-width: 0;
                 word-wrap: break-word;
-                background-color: #fff;
+                background-color: rgb(255, 255, 255);
                 background-clip: border-box;
                 border: 1px solid rgba(0, 0, 0, .125);
-                border-radius: .25rem;
+                border-radius: 0.25rem;
             }
 
             .card-header, .card-footer {
-                padding: .75rem 1.25rem;
+                padding: 0.75rem 1.25rem;
                 margin-bottom: 0;
                 background-color: rgba(0, 0, 0, 0.03);
                 border-bottom: 1px solid rgba(0, 0, 0, 0.125);
@@ -80,7 +80,7 @@
             }
 
             .card-header:first-child {
-                border-radius: calc(.25rem - 1px) calc(.25rem - 1px) 0 0;
+                border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
             }
 
             .card-body {
@@ -121,7 +121,7 @@
 
             .label {
                 display: inline;
-                padding: 0.3em 0.6em 0.3em;
+                padding: 0.3rem 0.6rem 0.3rem;
                 font-size: 75%;
                 font-weight: 700;
                 line-height: 1;
@@ -129,7 +129,7 @@
                 text-align: center;
                 white-space: nowrap;
                 vertical-align: baseline;
-                border-radius: 0.25em;
+                border-radius: 0.1rem;
                 cursor: pointer;
             }
 
@@ -141,12 +141,18 @@
 
             .select-character {
                 width: 100%;
-                padding: 0.3rem;
+                padding: 0.35rem;
                 cursor: pointer;
             }
 
             form {
                 margin-bottom: 0.3rem;
+            }
+
+            .btn-new-character-sso {
+                padding: 0;
+                border: none;
+                cursor: pointer;
             }
         }
 
@@ -223,7 +229,7 @@
 
                     <li class="cars_item">
                         <div class="card">
-                            <div class="card-header">New Character</div>
+                            <div class="card-header">Add Character</div>
 
                             <div class="card-body card__content">
                                 <img src="{% static 'tnnt_templates/images/no_avatar.jpg' %}">
@@ -235,9 +241,13 @@
 
                                     <input type="hidden" name="_add" value="True">
 
-                                    <a href="#" type="submit">
-                                        <input type="image" name="go" src="{% static 'tnnt_templates/images/eve-sso-login-black-small.png' %}" alt="Add Character">
-                                    </a>
+{#                                    <a href="#" type="submit">#}
+{#                                        <input type="image" name="go" src="{% static 'tnnt_templates/images/eve-sso-login-black-small.png' %}" alt="Add Character">#}
+{#                                    </a>#}
+
+{#                                    <a href="#" type="submit">#}
+                                        <button class="btn-new-character-sso" type="submit" name="go" alt="Add Character"><img src="{% static 'tnnt_templates/images/eve-sso-login-black-small.png' %}"></button>
+{#                                    </a>#}
                                 </form>
                             </div>
                         </div>
