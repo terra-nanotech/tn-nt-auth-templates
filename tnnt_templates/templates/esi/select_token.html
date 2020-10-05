@@ -43,7 +43,7 @@
                             <div class="card-header">Add Character</div>
 
                             <div class="card-body card__content">
-                                <img src="{% static 'tnnt_templates/images/no_avatar.jpg' %}" alt="Add character">
+                                <img src="{{ 1|character_portrait_url:256 }}" alt="Add character">
                             </div>
 
                             <div class="card-footer">
