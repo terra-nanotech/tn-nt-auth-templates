@@ -7,7 +7,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>ESI Token Selection</title>
+        <title>Character Selection</title>
 
         <link rel="stylesheet" id="select-esi-token" href="{% static 'tnnt_templates/css/select-esi-token.min.css' %}" type="text/css" media="all">
     </head>
@@ -40,72 +40,80 @@
                     {% if tokens|length > 10 %}
                         <!-- Add New Character -->
                         <li class="cards_item">
-                            <div class="card">
-                                <div class="card-header">Add Character</div>
+                            <form method="post">
+                                {% csrf_token %}
 
-                                <div class="card-body card__content">
-                                    <img src="{{ 1|character_portrait_url:256 }}" alt="Add character">
-                                </div>
+                                <input type="hidden" name="_add" value="True">
 
-                                <div class="card-footer">
-                                    <form method="post">
-                                        {% csrf_token %}
+                                <div class="card">
+                                    <div class="card-header">Add Character</div>
 
-                                        <input type="hidden" name="_add" value="True">
+                                    <div class="card-body card__content">
+                                        <button class="btn btn-new-character-sso" type="submit" name="go">
+                                            <img src="{{ 1|character_portrait_url:256 }}" alt="Add character">
+                                        </button>
+                                    </div>
 
-                                        <button class="btn-new-character-sso" type="submit" name="go">
+                                    <div class="card-footer">
+                                        <button class="btn btn-new-character-sso" type="submit" name="go">
                                             <img src="{% static 'tnnt_templates/images/eve-sso-login-black-small.png' %}" title="Add new character by logging in with EVE Online" alt="Add Character">
                                         </button>
-                                    </form>
+                                    </div>
                                 </div>
-                            </div>
+                            </form>
                         </li>
                     {% endif %}
 
                     {% for token in tokens|dictsort:"character_name" %}
-                        <!-- Use {{ token.character_name }} -->
-                        <li class="cards_item">
-                            <div class="card">
-                                <div class="card-header">{{ token.character_name }}</div>
+                        {% ifchanged token.character_name %}
+                            <!-- Use {{ token.character_name }} -->
+                            <li class="cards_item">
+                                <form method="post">
+                                    {% csrf_token %}
 
-                                <div class="card-body card__content">
-                                    <img src="{{ token.character_id|character_portrait_url:256 }}" alt="{{ token.character_name }}">
-                                </div>
+                                    <input type="hidden" name="_token" value="{{ token.pk }}">
 
-                                <div class="card-footer">
-                                    <form method="post">
-                                        {% csrf_token %}
+                                    <div class="card">
+                                        <div class="card-header">{{ token.character_name }}</div>
 
-                                        <input type="hidden" name="_token" value="{{ token.pk }}">
+                                        <div class="card-body card__content">
+                                            <button class="btn btn-select-character btn-character-image" type="submit" title="Select {{ token.character_name }}" formmethod="post">
+                                                <img src="{{ token.character_id|character_portrait_url:256 }}" alt="{{ token.character_name }}">
+                                            </button>
+                                        </div>
 
-                                        <button class="select-character" type="submit" title="Select {{ token.character_name }}" formmethod="post">Select</button>
-                                    </form>
-                                </div>
-                            </div>
-                        </li>
+                                        <div class="card-footer">
+                                            <button class="btn btn-select-character" type="submit" title="Select {{ token.character_name }}" formmethod="post">Select</button>
+                                        </div>
+                                    </div>
+                                </form>
+                            </li>
+                        {% endifchanged %}
                     {% endfor %}
 
                     <!-- Add New Character -->
                     <li class="cards_item">
-                        <div class="card">
-                            <div class="card-header">Add Character</div>
+                        <form method="post">
+                            {% csrf_token %}
 
-                            <div class="card-body card__content">
-                                <img src="{{ 1|character_portrait_url:256 }}" alt="Add character">
-                            </div>
+                            <input type="hidden" name="_add" value="True">
 
-                            <div class="card-footer">
-                                <form method="post">
-                                    {% csrf_token %}
+                            <div class="card">
+                                <div class="card-header">Add Character</div>
 
-                                    <input type="hidden" name="_add" value="True">
+                                <div class="card-body card__content">
+                                    <button class="btn btn-new-character-sso" type="submit" name="go">
+                                        <img src="{{ 1|character_portrait_url:256 }}" alt="Add character">
+                                    </button>
+                                </div>
 
-                                    <button class="btn-new-character-sso" type="submit" name="go">
+                                <div class="card-footer">
+                                    <button class="btn btn-new-character-sso" type="submit" name="go">
                                         <img src="{% static 'tnnt_templates/images/eve-sso-login-black-small.png' %}" title="Add new character by logging in with EVE Online" alt="Add Character">
                                     </button>
-                                </form>
+                                </div>
                             </div>
-                        </div>
+                        </form>
                     </li>
                 </ul>
             </div>
