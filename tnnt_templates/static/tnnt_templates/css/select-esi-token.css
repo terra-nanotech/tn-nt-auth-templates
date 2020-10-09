@@ -124,17 +124,18 @@
         color: rgb(54, 54, 54);
     }
 
-    .select-character {
+    form {
+        margin-bottom: 0.3rem;
+    }
+
+    .btn-select-character {
         width: 100%;
         padding: 0.35rem;
         cursor: pointer;
     }
 
-    form {
-        margin-bottom: 0.3rem;
-    }
-
-    .btn-new-character-sso {
+    .btn-new-character-sso,
+    .btn-character-image {
         padding: 0;
         border: none;
         cursor: pointer;
@@ -142,25 +143,32 @@
 }
 
 @media(min-width: 40rem) {
-    .cards_item {
-        width: 50%;
+    .cards_container .cards_item {
+        width: calc(100% / 2);
     }
 }
 
 @media(min-width: 56rem) {
-    .cards_item {
-        width: 33.33333%;
+    .cards_container .cards_item {
+        width: calc(100% / 3);
     }
 }
 
 @media(min-width: 75rem) {
-    .cards_item {
-        width: 25%;
+    .cards_container .cards_item {
+        width: calc(100% / 4);
     }
 }
 
-@media(min-width: 96rem) {
-    .cards_item {
-        width: 20%;
+@media(min-width: 90rem) {
+    .cards_container .cards_item {
+        width: calc(100% / 5);
+    }
+}
+
+
+@media(min-width: 105rem) {
+    .cards_container .cards_item {
+        width: calc(100% / 6);
     }
 }
