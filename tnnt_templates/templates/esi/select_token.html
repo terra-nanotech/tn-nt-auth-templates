@@ -14,24 +14,24 @@
 
     <body class="bg-dark">
         <!-- Requested Scopes -->
-        <div class="container">
-            <div class="container-inner">
-                <div class="card">
-                    <div class="card-header text-center">Scopes Requested</div>
-                    <div class="card-body text-center">
-                        <p>
-                            {% for token in tokens %}
-                                {% for scope in token.scopes.all %}
-                                    <span class="label label-requested-scope" data-toggle="tooltip" data-placement="top" title="{{ scope.help_text }}">
-                                        {{ scope.friendly_name }}
-                                    </span>
-                                {% endfor %}
-                            {% endfor %}
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
+{#        <div class="container">#}
+{#            <div class="container-inner">#}
+{#                <div class="card">#}
+{#                    <div class="card-header text-center">Scopes Requested</div>#}
+{#                    <div class="card-body text-center">#}
+{#                        <p>#}
+{#                            {% for token in tokens %}#}
+{#                                {% for scope in token.scopes.all %}#}
+{#                                    <span class="label label-requested-scope" data-toggle="tooltip" data-placement="top" title="{{ scope.help_text }}">#}
+{#                                        {{ scope.friendly_name }}#}
+{#                                    </span>#}
+{#                                {% endfor %}#}
+{#                            {% endfor %}#}
+{#                        </p>#}
+{#                    </div>#}
+{#                </div>#}
+{#            </div>#}
+{#        </div>#}
 
         <!-- Character Selection -->
         <div class="container">
