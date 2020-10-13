@@ -7,7 +7,7 @@
 
 {% block middle_box_content %}
     <p style="text-align: center">
-        <img class="login-image" src="https://images.evetech.net/corporations/98000030/logo?size=128">
+        <img class="login-image" src="https://images.evetech.net/corporations/98000030/logo?size=256">
     </p>
 
     <p style="text-align: center; font-size: 150%;">
@@ -16,8 +16,10 @@
     </p>
 
     <p style="text-align: center">
-        <a href="{% url 'auth_sso_login' %}">
-            <img src="{% static 'img/sso/EVE_SSO_Login_Buttons_Large_Black.png' %}">
+        <a class="sso-login-button" href="{% url 'auth_sso_login' %}">
+            <svg>
+                <use xlink:href="#tnnt-aa-svg-sso"/>
+            </svg>
         </a>
     </p>
 
