@@ -27,7 +27,7 @@ setup(
     classifiers=[
         "Environment :: Web Environment",
         "Framework :: Django",
-        "Framework :: Django :: 2.2",
+        "Framework :: Django :: 3.1",
         "Intended Audience :: Developers",
         "License :: OSI Approved :: GNU General Public License v3 (GPLv3)"
         "Operating System :: OS Independent",
@@ -39,5 +39,5 @@ setup(
         "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
     ],
     python_requires="~=3.6",
-    install_requires=["allianceauth>=2.7.2"],
+    install_requires=["allianceauth>=2.8.0"],
 )
