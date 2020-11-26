@@ -16,13 +16,13 @@
         Authentication System
     </p>
 
-    <p>{% trans "Please provide your email address for registration confirmation." %}</p>
+    <p>{% translate "Please provide your email address for registration confirmation." %}</p>
 
     <form class="form-signin" role="form" action="" method="POST">
         {% csrf_token %}
         {{ form|bootstrap }}
         <br/>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">{% trans "Submit" %}</button>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">{% translate "Submit" %}</button>
         <br/>
     </form>
 {% endblock %}
