@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 {% load evelinks %}
 
 <html lang="en">
@@ -7,31 +8,25 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Character Selection</title>
+        <title>{% translate 'Character Selection' %}</title>
 
         <link rel="stylesheet" id="select-esi-token" href="{% static 'tnnt_templates/css/select-esi-token.min.css' %}" type="text/css" media="all">
     </head>
 
     <body class="bg-dark">
         <!-- Requested Scopes -->
-{#        <div class="container">#}
-{#            <div class="container-inner">#}
-{#                <div class="card">#}
-{#                    <div class="card-header text-center">Scopes Requested</div>#}
-{#                    <div class="card-body text-center">#}
-{#                        <p>#}
-{#                            {% for token in tokens %}#}
-{#                                {% for scope in token.scopes.all %}#}
-{#                                    <span class="label label-requested-scope" data-toggle="tooltip" data-placement="top" title="{{ scope.help_text }}">#}
-{#                                        {{ scope.friendly_name }}#}
-{#                                    </span>#}
-{#                                {% endfor %}#}
-{#                            {% endfor %}#}
-{#                        </p>#}
-{#                    </div>#}
-{#                </div>#}
-{#            </div>#}
-{#        </div>#}
+        <div class="container">
+            <div class="container-inner">
+                <div class="card">
+                    <div class="card-header text-center">{% translate 'Scopes Requested' %}</div>
+                    <div class="card-body text-center">
+                        <p>
+                            {% for scope in scopes %}<span class="label-requested-esi-scope">{{ scope|scope_friendly_name }}</span> {% endfor %}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Character Selection -->
         <div class="container">
@@ -46,17 +41,17 @@
                                 <input type="hidden" name="_add" value="True">
 
                                 <div class="card">
-                                    <div class="card-header">Add Character</div>
+                                    <div class="card-header">{% translate 'Add Character' %}</div>
 
                                     <div class="card-body card__content">
                                         <button class="btn btn-new-character-sso" type="submit" name="go">
-                                            <img src="{{ 1|character_portrait_url:256 }}" alt="Add character">
+                                            <img src="{{ 1|character_portrait_url:256 }}" title="{% translate 'Add new character by logging in with EVE Online' %}" alt="{% translate 'Add Character' %}">
                                         </button>
                                     </div>
 
                                     <div class="card-footer">
                                         <button class="btn btn-new-character-sso" type="submit" name="go">
-                                            <img src="{% static 'tnnt_templates/images/eve-sso-login-black-small.png' %}" title="Add new character by logging in with EVE Online" alt="Add Character">
+                                            <img src="{% static 'tnnt_templates/images/eve-sso-login-black-small.png' %}" title="{% translate 'Add new character by logging in with EVE Online' %}" alt="{% translate 'Add Character' %}">
                                         </button>
                                     </div>
                                 </div>
@@ -77,13 +72,13 @@
                                         <div class="card-header">{{ token.character_name }}</div>
 
                                         <div class="card-body card__content">
-                                            <button class="btn btn-select-character btn-character-image" type="submit" title="Select {{ token.character_name }}" formmethod="post">
+                                            <button class="btn btn-select-character btn-character-image" type="submit" title="{% translate 'Select Character' %} {{ token.character_name }}" formmethod="post">
                                                 <img src="{{ token.character_id|character_portrait_url:256 }}" alt="{{ token.character_name }}">
                                             </button>
                                         </div>
 
                                         <div class="card-footer">
-                                            <button class="btn btn-select-character" type="submit" title="Select {{ token.character_name }}" formmethod="post">Select</button>
+                                            <button class="btn btn-select-character" type="submit" title="{% translate 'Select Character' %} {{ token.character_name }}" formmethod="post">{% translate 'Select' %}</button>
                                         </div>
                                     </div>
                                 </form>
@@ -99,17 +94,17 @@
                             <input type="hidden" name="_add" value="True">
 
                             <div class="card">
-                                <div class="card-header">Add Character</div>
+                                <div class="card-header">{% translate 'Add Character' %}</div>
 
                                 <div class="card-body card__content">
                                     <button class="btn btn-new-character-sso" type="submit" name="go">
-                                        <img src="{{ 1|character_portrait_url:256 }}" alt="Add character">
+                                        <img src="{{ 1|character_portrait_url:256 }}" title="{% translate 'Add new character by logging in with EVE Online' %}" alt="{% translate 'Add Character' %}">
                                     </button>
                                 </div>
 
                                 <div class="card-footer">
                                     <button class="btn btn-new-character-sso" type="submit" name="go">
-                                        <img src="{% static 'tnnt_templates/images/eve-sso-login-black-small.png' %}" title="Add new character by logging in with EVE Online" alt="Add Character">
+                                        <img src="{% static 'tnnt_templates/images/eve-sso-login-black-small.png' %}" title="{% translate 'Add new character by logging in with EVE Online' %}" alt="{% translate 'Add Character' %}">
                                     </button>
                                 </div>
                             </div>
