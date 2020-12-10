@@ -1,6 +1,3 @@
-# tn-nt-auth-templates
+# Terra Nanotech Auth Templates
 
-Add translations (in project root):
-```bash
-django-admin makemessages -l de
-```
+Terra Nanotech Template Overrides for Alliance Auth
