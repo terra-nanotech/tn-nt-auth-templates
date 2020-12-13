@@ -334,11 +334,6 @@
 
 {% block extra_css %}
     {% include 'bundles/datatables-css.html' %}
-    <style>
-    .form-control {
-        margin: 2px;
-    }
-    </style>
 {% endblock %}
 
 {% block extra_script %}
@@ -354,10 +349,12 @@
             ],
             "filterDropDown": {
                 columns: [{% for service in service_percent %}
-                        {
-                            idx: 1+{{ forloop.counter }}
-                        },{% endfor %}
-                        ]
+                    {
+                        idx: 1+{{ forloop.counter }}
+                    },{% endfor %}
+                ],
+                autoSize: false,
+                bootstrap: true
             }
         });
         $('#table-members').DataTable({
