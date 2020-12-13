@@ -6,6 +6,15 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [0.0.4] - 2020.12.13
+
+### Added
+
+- Fixes for AA's wrong usage of Bootstrap classes
+- Template overrides for built-in functions to accommodate these fixes
+- Template overrides for external apps we use
+
+
 ## [0.0.3] - 2020.12.13
 
 ### Changed
