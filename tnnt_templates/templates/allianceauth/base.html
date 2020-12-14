@@ -15,16 +15,16 @@
         <title>{% block title %}{% block page_title %}{% endblock page_title %} - Alliance Auth{% endblock title %}</title>
 
 {#        {% include 'bundles/bootstrap-css.html' %}#}
-        <link rel="stylesheet" href="{% static 'tnnt_templates/css/theme/terra-nanotech/v3/css/bootstrap.min.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'tnnt_templates/css/theme/terra-nanotech/v3/css/bootstrap.css' %}" type="text/css">
         {% include 'bundles/fontawesome.html' %}
 
-        <link rel="stylesheet" href="{% static 'tnnt_templates/css/terra-nanotech.min.css' %}" type="text/css">
-        <link rel="stylesheet" href="{% static 'tnnt_templates/css/community-app-fixes.min.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'tnnt_templates/css/terra-nanotech.css' %}" type="text/css">
         {% if NIGHT_MODE %}
-            <link rel="stylesheet" href="{% static 'tnnt_templates/css/terra-nanotech-dark-mode-extras.min.css' %}" type="text/css">
+            <link rel="stylesheet" href="{% static 'tnnt_templates/css/terra-nanotech-dark-mode-extras.css' %}" type="text/css">
         {% endif %}
 
         {% block extra_css %}{% endblock extra_css %}
+        <link rel="stylesheet" href="{% static 'tnnt_templates/css/community-app-fixes.css' %}" type="text/css">
     </head>
 
     <body class="{% if NIGHT_MODE %}template-dark-mode{% else %}template-light-mode{% endif %}">
