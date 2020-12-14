@@ -1806,7 +1806,7 @@ a.bg-danger:focus {
 .page-header {
     padding-bottom: 9px;
     margin: 40px 0 20px;
-    border-bottom: 1px solid rgb(28, 30, 34);
+    /*border-bottom: 1px solid rgb(28, 30, 34);*/
 }
 
 ul,
@@ -2906,7 +2906,7 @@ pre code {
 }
 
 table {
-    background-color: rgb(46, 51, 56);
+    background-color: rgba(46, 51, 56, 0.5);
 }
 
 table col[class*="col-"] {
@@ -2948,7 +2948,7 @@ th {
     padding: 8px;
     line-height: 1.42857143;
     vertical-align: top;
-    border-top: 1px solid rgb(28, 30, 34);
+    /*border-top: 1px solid rgb(28, 30, 34);*/
 }
 
 .table > thead > tr > th {
@@ -2970,7 +2970,7 @@ th {
 }
 
 .table .table {
-    background-color: rgb(39, 43, 48);
+    background-color: rgba(39, 43, 48, 0.6);
 }
 
 .table-condensed > thead > tr > th,
@@ -3001,11 +3001,11 @@ th {
 }
 
 .table-striped > tbody > tr:nth-of-type(odd) {
-    background-color: rgb(53, 58, 65);
+    background-color: rgba(53, 58, 65, 0.8);
 }
 
 .table-hover > tbody > tr:hover {
-    background-color: rgb(73, 81, 90);
+    background-color: rgba(73, 81, 90, 0.8);
 }
 
 .table > thead > tr > td.active,
@@ -3020,7 +3020,7 @@ th {
 .table > thead > tr.active > th,
 .table > tbody > tr.active > th,
 .table > tfoot > tr.active > th {
-    background-color: rgb(73, 81, 90);
+    background-color: rgba(73, 81, 90, 0.8);
 }
 
 .table-hover > tbody > tr > td.active:hover,
@@ -3028,7 +3028,7 @@ th {
 .table-hover > tbody > tr.active:hover > td,
 .table-hover > tbody > tr:hover > .active,
 .table-hover > tbody > tr.active:hover > th {
-    background-color: rgb(62, 68, 76);
+    background-color: rgba(62, 68, 76, 0.8);
 }
 
 .table > thead > tr > td.success,
@@ -4235,8 +4235,8 @@ fieldset[disabled] .btn-link:focus {
 
 .btn-sm,
 .btn-group-sm > .btn {
-    padding: 5px 10px;
-    font-size: 12px;
+    padding: 6px 9px;
+    font-size: 13px;
     line-height: 1.5;
     border-radius: 3px;
 }
@@ -5925,57 +5925,57 @@ a.label:focus {
 }
 
 .label-default {
-    background-color: rgb(58, 63, 68);
+    background-color: rgba(58, 63, 68, 0.6);
 }
 
 .label-default[href]:hover,
 .label-default[href]:focus {
-    background-color: rgb(35, 38, 40);
+    background-color: rgba(35, 38, 40, 0.6);
 }
 
 .label-primary {
-    background-color: rgb(122, 130, 136);
+    background-color: rgba(122, 130, 136, 0.6);
 }
 
 .label-primary[href]:hover,
 .label-primary[href]:focus {
-    background-color: rgb(98, 104, 109);
+    background-color: rgba(98, 104, 109, 0.6);
 }
 
 .label-success {
-    background-color: rgb(98, 196, 98);
+    background-color: rgba(98, 196, 98, 0.6);
 }
 
 .label-success[href]:hover,
 .label-success[href]:focus {
-    background-color: rgb(66, 177, 66);
+    background-color: rgba(66, 177, 66, 0.6);
 }
 
 .label-info {
-    background-color: rgb(91, 192, 222);
+    background-color: rgba(91, 192, 222, 0.6);
 }
 
 .label-info[href]:hover,
 .label-info[href]:focus {
-    background-color: rgb(49, 176, 213);
+    background-color: rgba(49, 176, 213, 0.6);
 }
 
 .label-warning {
-    background-color: rgb(248, 148, 6);
+    background-color: rgba(248, 148, 6, 0.6);
 }
 
 .label-warning[href]:hover,
 .label-warning[href]:focus {
-    background-color: rgb(198, 118, 5);
+    background-color: rgba(198, 118, 5, 0.6);
 }
 
 .label-danger {
-    background-color: rgb(238, 95, 91);
+    background-color: rgba(238, 95, 91, 0.6);
 }
 
 .label-danger[href]:hover,
 .label-danger[href]:focus {
-    background-color: rgb(233, 50, 45);
+    background-color: rgba(233, 50, 45, 0.6);
 }
 
 .badge {
@@ -6229,7 +6229,7 @@ a.thumbnail.active {
     height: 20px;
     margin-bottom: 20px;
     overflow: hidden;
-    background-color: rgb(28, 30, 34);
+    background-color: rgba(28, 30, 34, 0.5);
     border-radius: 4px;
     box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
 }
@@ -6362,7 +6362,7 @@ a.thumbnail.active {
     display: block;
     padding: 10px 15px;
     margin-bottom: -1px;
-    background-color: rgb(50, 56, 62);
+    background-color: rgba(50, 56, 62, 0.6);
     border: 1px solid rgba(0, 0, 0, 0.6);
 }
 
@@ -6450,7 +6450,7 @@ button.list-group-item {
 
 .list-group-item-success {
     color: rgb(255, 255, 255);
-    background-color: rgb(98, 196, 98);
+    background-color: rgba(98, 196, 98, 0.6);
 }
 
 a.list-group-item-success,
@@ -6468,7 +6468,7 @@ button.list-group-item-success:hover,
 a.list-group-item-success:focus,
 button.list-group-item-success:focus {
     color: rgb(255, 255, 255);
-    background-color: rgb(79, 189, 79);
+    background-color: rgba(79, 189, 79, 0.6);
 }
 
 a.list-group-item-success.active,
@@ -6596,7 +6596,8 @@ button.list-group-item-danger.active:focus {
 
 .panel {
     margin-bottom: 20px;
-    background-color: rgb(46, 51, 56);
+    /*background-color: rgb(46, 51, 56);*/
+    background-color: rgba(200,200,200, 0.2);
     border: 1px solid transparent;
     border-radius: 4px;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
@@ -6891,7 +6892,8 @@ button.list-group-item-danger.active:focus {
 }
 
 .panel-primary {
-    border-color: rgba(0, 0, 0, 0.6);
+    /*border-color: rgba(0, 0, 0, 0.6);*/
+    border-color: rgba(200,200,200, 0.6);
 }
 
 .panel-primary > .panel-heading {

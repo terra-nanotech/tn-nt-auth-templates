@@ -1,4 +1,4 @@
-/* Fittings module fixes
+/* App: Fittings
 ------------------------------------------------------------------------------------- */
 @media all {
     .aa-fittings-add-dropdown {
@@ -15,6 +15,7 @@
 
 /* ---------------------------------------------------------------------------------- */
 
+
 /* App: AA Blueprints
 ------------------------------------------------------------------------------------- */
 @media all {
@@ -22,5 +23,73 @@
     .template-light-mode .aa-blueprints .tr-group {
         font-weight: bold;
         background-color: rgb(62, 68, 76) !important;
+    }
+}
+/* ---------------------------------------------------------------------------------- */
+
+
+/* App :: AA Memberaudit
+------------------------------------------------------------------------------------- */
+@media all {
+    .template-light-mode .aa-memberaudit .sidebar_character > a,
+    .template-dark-mode .aa-memberaudit .sidebar_character > a {
+        color: rgb(255, 255, 255);
+    }
+
+    .template-light-mode .aa-memberaudit .sidebar_character:hover > a,
+    .template-light-mode .aa-memberaudit .sidebar_character.active > a,
+    .template-dark-mode .aa-memberaudit .sidebar_character:hover > a,
+    .template-dark-mode .aa-memberaudit .sidebar_character.active > a {
+        background-color: rgb(34, 34, 34);
+    }
+
+    .template-light-mode .aa-memberaudit .nav-tabs > li.active > a,
+    .template-dark-mode .aa-memberaudit .nav-tabs > li.active > a {
+        background-color: rgb(70, 69, 69) !important;
+        color: rgb(255, 255, 255) !important;
+    }
+
+    .template-light-mode .aa-memberaudit .table > tbody > .table-group > td,
+    .template-light-mode .aa-memberaudit .table > tbody > .table-group > td {
+        background-color: rgb(62, 68, 76);
+        color: rgb(255, 255, 255);
+        font-weight: bold;
+    }
+
+    .template-light-mode .aa-memberaudit .cards_container .card,
+    .template-dark-mode .aa-memberaudit .cards_container .card {
+        background-color: rgba(100, 100, 100, 0.5);
+    }
+}
+/* ---------------------------------------------------------------------------------- */
+
+
+/* App: AA Sovtimer
+------------------------------------------------------------------------------------- */
+@media all {
+    .aa-sovtimer .table > tbody > tr > td {
+        vertical-align: middle;
+    }
+
+    .aa-sovtimer .aa-sovtimer-trend {
+        display: inline-block;
+        cursor: default;
+        position: relative;
+        top: 0.55rem;
+        left: .5rem;
+        margin-right: 1rem;
+    }
+
+    .aa-sovtimer .aa-sov-timer-zkb-icon > img {
+        position: relative;
+        top: -2px;
+    }
+
+    .aa-sovtimer .aa-sovtimer-campaigns tr td:last-child {
+        padding-top: 0;
+    }
+
+    .aa-sovtimer .aa-sovtimer-remaining {
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
     }
 }
