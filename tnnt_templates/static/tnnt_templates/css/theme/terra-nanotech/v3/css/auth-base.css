@@ -55,25 +55,25 @@
     }
 
     /* default style for tables */
-    .table-aa > thead > tr > th {
-        border-bottom: 1px solid rgb(242, 242, 242);
-    }
+    /*.table-aa > thead > tr > th {*/
+    /*    border-bottom: 1px solid rgb(242, 242, 242);*/
+    /*}*/
 
-    .table-aa > thead > tr > th {
-        vertical-align: middle;
-    }
+    /*.table-aa > thead > tr > th {*/
+    /*    vertical-align: middle;*/
+    /*}*/
 
-    .table-aa > tbody > tr > td {
-        border-bottom: 1px solid rgb(242, 242, 242);
-    }
+    /*.table-aa > tbody > tr > td {*/
+    /*    border-bottom: 1px solid rgb(242, 242, 242);*/
+    /*}*/
 
-    .table-aa > tbody > tr > td {
-        vertical-align: middle;
-    }
+    /*.table-aa > tbody > tr > td {*/
+    /*    vertical-align: middle;*/
+    /*}*/
 
-    .table-aa > tbody > tr:last-child {
-        border-bottom: none;
-    }
+    /*.table-aa > tbody > tr:last-child {*/
+    /*    border-bottom: none;*/
+    /*}*/
 }
 
 /* highlight active menu items
