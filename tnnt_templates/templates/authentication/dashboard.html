@@ -16,7 +16,7 @@
 {#    <div class="col-sm-12">#}
     <div>
         <div class="row vertical-flexbox-row2">
-            <div class="col-sm-6 text-center">
+            <div class="col-sm-6">
                 <div class="panel panel-primary" style="height:100%">
                     <div class="panel-heading">
                         <h3 class="panel-title">
@@ -95,12 +95,12 @@
 
                         <div class="row">
                             <div class="col-sm-6 button-wrapper">
-                                <a href="{% url 'authentication:add_character' %}" class="btn btn-block btn-info"
+                                <a href="{% url 'authentication:add_character' %}" class="btn btn-block btn-primary"
                                 title="Add Character">{% translate 'Add Character' %}</a>
                             </div>
 
                             <div class="col-sm-6 button-wrapper">
-                                <a href="{% url 'authentication:change_main_character' %}" class="btn btn-block btn-info"
+                                <a href="{% url 'authentication:change_main_character' %}" class="btn btn-block btn-primary"
                                 title="Change Main Character">{% translate "Change Main" %}</a>
                             </div>
                         </div>
@@ -108,13 +108,13 @@
                 </div>
             </div>
 
-            <div class="col-sm-6 text-center">
-                <div class="panel panel-success" style="height:100%">
+            <div class="col-sm-6">
+                <div class="panel panel-primary" style="height:100%">
                     <div class="panel-heading">
                         <h3 class="panel-title">{% translate "Group Memberships" %}</h3>
                     </div>
 
-                    <div class="panel-body">
+                    <div class="panel-body text-center">
                         <div style="height: 240px;overflow:-moz-scrollbars-vertical;overflow-y:auto;">
 {#                            <table class="table">#}
 {#                                {% for group in groups %}#}
@@ -141,13 +141,13 @@
 
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title text-center" style="text-align: center">
+                <h3 class="panel-title">
                     {% translate 'Characters' %}
                 </h3>
             </div>
 
             <div class="panel-body">
-                <table class="table table-aa hidden-xs">
+                <table class="table hidden-xs">
                     <thead>
                         <tr>
                             <th class="text-center"></th>

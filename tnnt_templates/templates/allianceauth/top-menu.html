@@ -20,9 +20,9 @@
 
         <div class="collapse navbar-collapse auth-menus-collapse">
             <ul class="nav navbar-nav navbar-right navbar-pills">
-                <li>
-                    {% include 'allianceauth/night-toggle.html' %}
-                </li>
+{#                <li>#}
+{#                    {% include 'allianceauth/night-toggle.html' %}#}
+{#                </li>#}
 
                 {% if notifications %}
                     <li class="{% navactive request 'notifications:' %}">
@@ -31,8 +31,10 @@
                         </a>
                     </li>
                 {% else %}
-                    <li><a href="{% url 'notifications:list' %}">
-                        <i class="far fa-bell"></i></a>
+                    <li>
+                        <a href="{% url 'notifications:list' %}">
+                            <i class="far fa-bell"></i>
+                        </a>
                     </li>
                 {% endif %}
 
