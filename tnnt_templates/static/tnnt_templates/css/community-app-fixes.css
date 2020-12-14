@@ -12,4 +12,15 @@
         margin-top: 0.8em;
     }
 }
+
 /* ---------------------------------------------------------------------------------- */
+
+/* App: AA Blueprints
+------------------------------------------------------------------------------------- */
+@media all {
+    .template-light-mode .aa-blueprints .table-striped > tbody > tr.tr-group,
+    .template-light-mode .aa-blueprints .tr-group {
+        font-weight: bold;
+        background-color: rgb(62, 68, 76) !important;
+    }
+}
