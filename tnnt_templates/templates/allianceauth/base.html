@@ -19,9 +19,6 @@
         {% include 'bundles/fontawesome.html' %}
 
         <link rel="stylesheet" href="{% static 'tnnt_templates/css/terra-nanotech.css' %}" type="text/css">
-        {% if NIGHT_MODE %}
-            <link rel="stylesheet" href="{% static 'tnnt_templates/css/terra-nanotech-dark-mode-extras.css' %}" type="text/css">
-        {% endif %}
 
         {% block extra_css %}{% endblock extra_css %}
         <link rel="stylesheet" href="{% static 'tnnt_templates/css/community-app-fixes.css' %}" type="text/css">
