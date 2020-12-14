@@ -31,14 +31,14 @@
 ------------------------------------------------------------------------------------- */
 @media all {
     .aa-fittings-add-dropdown {
-        margin-bottom: 0.8em;
+        margin-bottom: 0.5em;
     }
 }
 
 @media all and (min-width: 768px) {
     .aa-fittings-add-dropdown {
         margin-bottom: 0;
-        margin-top: 0.8em;
+        margin-top: 0.5em;
     }
 }
 
