@@ -1,3 +1,32 @@
+/* General DataTables styles
+------------------------------------------------------------------------------------- */
+@media all {
+    .dataTables_wrapper > .form-inline {
+        margin-bottom: 0.625rem;
+    }
+
+    .dataTables_wrapper > .form-inline select {
+        margin-right: 0.625rem;
+        margin-bottom: 0.625rem;
+    }
+
+    .dataTables_wrapper > .form-inline select:last-child {
+        margin-right: 0;
+    }
+
+    .dataTables_length select {
+        margin: 0 0.625rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .dataTables_wrapper > .form-inline select:first-child {
+        margin-left: 0.625rem;
+    }
+}
+
+/* ---------------------------------------------------------------------------------- */
+
 /* App: Fittings
 ------------------------------------------------------------------------------------- */
 @media all {
@@ -74,9 +103,13 @@
         display: inline-block;
         cursor: default;
         position: relative;
-        top: 0.55rem;
-        left: .5rem;
-        margin-right: 1rem;
+        top: 0.34375rem;
+        left: 0.3125rem;
+        margin-right: 0.625rem;
+    }
+
+    .aa-sovtimer .aa-sov-timer-zkb-icon {
+        margin-left: 0.5rem;
     }
 
     .aa-sovtimer .aa-sov-timer-zkb-icon > img {
@@ -86,6 +119,7 @@
 
     .aa-sovtimer .aa-sovtimer-campaigns tr td:last-child {
         padding-top: 0;
+        white-space: nowrap;
     }
 
     .aa-sovtimer .aa-sovtimer-remaining {

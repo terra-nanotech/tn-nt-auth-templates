@@ -27,6 +27,7 @@
     <body class="{% if NIGHT_MODE %}template-dark-mode{% else %}template-light-mode{% endif %}">
         {% if user.is_authenticated %}
 {#            <div id="wrapper" class="container">#}
+            <div class="alliance-auth-background"></div>
             <div class="alliance-auth-content">
                 <!-- Navigation -->
                 {% include 'allianceauth/top-menu.html' %}

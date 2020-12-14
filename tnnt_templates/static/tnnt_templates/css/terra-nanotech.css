@@ -1,8 +1,20 @@
 /* Auth base styles
 ------------------------------------------------------------------------------------- */
 @media all {
-    .alliance-auth-content {
+    .alliance-auth-background{
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        z-index: 0;
+        width: 100%;
+        margin: 0;
         background-color: rgba(39, 43, 48, 0.9);
+    }
+
+    .alliance-auth-content {
+        position: relative;
+        z-index: 1;
+        margin-bottom: 2rem;
     }
 
     .gray-icon-color .fa {
@@ -102,35 +114,6 @@
 @media all and (min-width: 768px) {
     .site-body-wrapper {
         margin-left: -15px;
-    }
-}
-
-/* ---------------------------------------------------------------------------------- */
-
-/* General DataTables styles
-------------------------------------------------------------------------------------- */
-@media all {
-    .dataTables_wrapper > .form-inline {
-        margin-bottom: 1rem;
-    }
-
-    .dataTables_wrapper > .form-inline select {
-        margin-right: 1rem;
-        margin-bottom: 1rem;
-    }
-
-    .dataTables_wrapper > .form-inline select:last-child {
-        margin-right: 0;
-    }
-
-    .dataTables_length select {
-        margin: 0 1rem;
-    }
-}
-
-@media (min-width: 768px) {
-    .dataTables_wrapper > .form-inline select:first-child {
-        margin-left: 1rem;
     }
 }
 
