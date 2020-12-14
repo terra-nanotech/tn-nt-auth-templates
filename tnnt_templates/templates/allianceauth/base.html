@@ -14,10 +14,12 @@
 
         <title>{% block title %}{% block page_title %}{% endblock page_title %} - Alliance Auth{% endblock title %}</title>
 
-        {% include 'bundles/bootstrap-css.html' %}
+{#        {% include 'bundles/bootstrap-css.html' %}#}
+        <link rel="stylesheet" href="{% static 'tnnt_templates/css/theme/terra-nanotech/v3/css/bootstrap.min.css' %}" type="text/css">
         {% include 'bundles/fontawesome.html' %}
 
-        <link href="{% static 'css/auth-base.css' %}" type="text/css" rel="stylesheet">
+{#        <link href="{% static 'css/auth-base.css' %}" type="text/css" rel="stylesheet">#}
+        <link rel="stylesheet" href="{% static 'tnnt_templates/css/theme/terra-nanotech/v3/css/auth-base.min.css' %}" type="text/css">
 
         <link rel="stylesheet" href="{% static 'tnnt_templates/css/community-app-fixes.min.css' %}" type="text/css">
         <link rel="stylesheet" href="{% static 'tnnt_templates/css/terra-nanotech.min.css' %}" type="text/css">
