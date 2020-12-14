@@ -3043,7 +3043,7 @@ th {
 .table > thead > tr.success > th,
 .table > tbody > tr.success > th,
 .table > tfoot > tr.success > th {
-    background-color: rgb(98, 196, 98);
+    background-color: rgba(98, 196, 98, 0.5);
 }
 
 .table-hover > tbody > tr > td.success:hover,
@@ -3051,7 +3051,7 @@ th {
 .table-hover > tbody > tr.success:hover > td,
 .table-hover > tbody > tr:hover > .success,
 .table-hover > tbody > tr.success:hover > th {
-    background-color: rgb(79, 189, 79);
+    background-color: rgba(79, 189, 79, 0.5);
 }
 
 .table > thead > tr > td.info,
@@ -3066,7 +3066,7 @@ th {
 .table > thead > tr.info > th,
 .table > tbody > tr.info > th,
 .table > tfoot > tr.info > th {
-    background-color: rgb(91, 192, 222);
+    background-color: rgba(91, 192, 222, 0.5);
 }
 
 .table-hover > tbody > tr > td.info:hover,
@@ -3074,7 +3074,7 @@ th {
 .table-hover > tbody > tr.info:hover > td,
 .table-hover > tbody > tr:hover > .info,
 .table-hover > tbody > tr.info:hover > th {
-    background-color: rgb(70, 184, 218);
+    background-color: rgba(70, 184, 218, 0.5);
 }
 
 .table > thead > tr > td.warning,
@@ -3089,7 +3089,7 @@ th {
 .table > thead > tr.warning > th,
 .table > tbody > tr.warning > th,
 .table > tfoot > tr.warning > th {
-    background-color: rgb(248, 148, 6);
+    background-color: rgba(248, 148, 6, 0.5);
 }
 
 .table-hover > tbody > tr > td.warning:hover,
@@ -3097,7 +3097,7 @@ th {
 .table-hover > tbody > tr.warning:hover > td,
 .table-hover > tbody > tr:hover > .warning,
 .table-hover > tbody > tr.warning:hover > th {
-    background-color: rgb(223, 133, 5);
+    background-color: rgba(223, 133, 5, 0.5);
 }
 
 .table > thead > tr > td.danger,
@@ -3112,7 +3112,7 @@ th {
 .table > thead > tr.danger > th,
 .table > tbody > tr.danger > th,
 .table > tfoot > tr.danger > th {
-    background-color: rgb(238, 95, 91);
+    background-color: rgba(238, 95, 91, 0.5);
 }
 
 .table-hover > tbody > tr > td.danger:hover,
@@ -3120,7 +3120,7 @@ th {
 .table-hover > tbody > tr.danger:hover > td,
 .table-hover > tbody > tr:hover > .danger,
 .table-hover > tbody > tr.danger:hover > th {
-    background-color: rgb(236, 72, 68);
+    background-color: rgba(236, 72, 68, 0.5);
 }
 
 .table-responsive {
@@ -6153,7 +6153,7 @@ a.thumbnail.active {
 
 .alert-success {
     color: rgb(255, 255, 255);
-    background-color: rgb(98, 196, 98);
+    background-color: rgba(98, 196, 98, 0.5);
     border-color: rgb(98, 189, 79);
 }
 
@@ -6167,7 +6167,7 @@ a.thumbnail.active {
 
 .alert-info {
     color: rgb(255, 255, 255);
-    background-color: rgb(91, 192, 222);
+    background-color: rgba(91, 192, 222, 0.5);
     border-color: rgb(61, 206, 216);
 }
 
@@ -6181,7 +6181,7 @@ a.thumbnail.active {
 
 .alert-warning {
     color: rgb(255, 255, 255);
-    background-color: rgb(248, 148, 6);
+    background-color: rgba(248, 148, 6, 0.5);
     border-color: rgb(233, 101, 6);
 }
 
@@ -6195,7 +6195,7 @@ a.thumbnail.active {
 
 .alert-danger {
     color: rgb(255, 255, 255);
-    background-color: rgb(238, 95, 91);
+    background-color: rgba(238, 95, 91, 0.5);
     border-color: rgb(237, 77, 99);
 }
 
