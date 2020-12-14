@@ -6597,7 +6597,7 @@ button.list-group-item-danger.active:focus {
 .panel {
     margin-bottom: 20px;
     /*background-color: rgb(46, 51, 56);*/
-    background-color: rgba(200,200,200, 0.2);
+    background-color: rgba(200, 200, 200, 0.2);
     border: 1px solid transparent;
     border-radius: 4px;
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
@@ -6893,7 +6893,7 @@ button.list-group-item-danger.active:focus {
 
 .panel-primary {
     /*border-color: rgba(0, 0, 0, 0.6);*/
-    border-color: rgba(200,200,200, 0.6);
+    border-color: rgba(200, 200, 200, 0.6);
 }
 
 .panel-primary > .panel-heading {
