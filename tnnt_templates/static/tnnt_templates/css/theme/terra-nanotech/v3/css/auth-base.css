@@ -1,0 +1,119 @@
+@media all {
+    .alliance-auth-content {
+        background-color: rgba(39, 43, 48, 0.875);
+    }
+
+    .gray-icon-color .fa {
+        color: rgb(80, 80, 80);
+    }
+
+    .notification-bell-color {
+        color: rgb(168, 143, 30);
+    }
+
+    .navbar-brand {
+        /* height: 58px; */
+        /*padding: 19px 19px;*/
+    }
+
+    .auth-navbar-top {
+        margin-bottom: 0;
+    }
+
+    .auth-side-navbar-collapse {
+        padding-left: 0;
+    }
+
+    #wrapper {
+        width: 100%;
+        padding: 0;
+    }
+
+    #site-body-wrapper {
+        margin-right: 0;
+    }
+
+    /* Horizontal list group */
+    ul.list-group.list-group-horizontal {
+        display: table;
+        width: 100%;
+    }
+
+    ul.list-group.list-group-horizontal > li.list-group-item {
+        display: table-cell;
+        max-width: 0;
+    }
+
+    .flex-center-horizontal {
+        justify-content: center;
+    }
+
+    /* style group headers within a table */
+    .table-striped > tbody > tr.tr-group, .tr-group {
+        font-weight: bold;
+        background-color: rgb(230, 230, 230);
+    }
+
+    /* default style for tables */
+    .table-aa > thead > tr > th {
+        border-bottom: 1px solid rgb(242, 242, 242);
+    }
+
+    .table-aa > thead > tr > th {
+        vertical-align: middle;
+    }
+
+    .table-aa > tbody > tr > td {
+        border-bottom: 1px solid rgb(242, 242, 242);
+    }
+
+    .table-aa > tbody > tr > td {
+        vertical-align: middle;
+    }
+
+    .table-aa > tbody > tr:last-child {
+        border-bottom: none;
+    }
+}
+
+/* highlight active menu items
+------------------------------------------------------------------------------------- */
+@media all {
+    /*.template-light-mode .nav-pills > li > a.active {*/
+    /*    background-color: rgb(236, 240, 241);*/
+    /*}*/
+
+    /*.template-dark-mode .nav-pills > li > a.active {*/
+    /*    background-color: rgb(48, 48, 48);*/
+    /*}*/
+
+    .nav-pills > li > a.active {
+        background-color: rgb(48, 48, 48);
+    }
+}
+
+/* Small devices (tablets, 768px and up)
+------------------------------------------------------------------------------------- */
+@media (min-width: 768px) {
+    /* class for vertically aligning columns in a bootstrap row */
+    .row.vertical-flexbox-row2 {
+        display:  -webkit-box;
+        display: -webkit-flex;
+        display:  -ms-flexbox;
+        display:         flex;
+        flex-wrap: wrap;
+      }
+
+      .row.vertical-flexbox-row2 > [class*='col-'] {
+        display: flex;
+        flex-direction: column;
+      }
+}
+
+/* Extra Small devices (Phones, <768px)
+------------------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+    .button-wrapper .btn {
+        margin-bottom:5px;
+    }
+}
