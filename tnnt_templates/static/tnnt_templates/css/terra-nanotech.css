@@ -55,6 +55,16 @@
         font-weight: bold;
         background-color: rgb(62, 68, 76);
     }
+
+    .label-tnnt-default {
+        display: inline-block;
+        background-color: rgb(192, 192, 192);
+        color: rgb(54, 54, 54);
+        padding: 1rem 1rem 1rem 0.7rem;
+        font-size: 100%;
+        font-weight: normal;
+        border-left: 5px solid rgb(0, 0, 0);
+    }
 }
 
 /* highlight active menu items
@@ -72,20 +82,20 @@
 @media (min-width: 768px) {
     /* class for vertically aligning columns in a bootstrap row */
     .row.vertical-flexbox-row2 {
-        display:  -webkit-box;
+        display: -webkit-box;
         display: -webkit-flex;
-        display:  -ms-flexbox;
-        display:         flex;
+        display: -ms-flexbox;
+        display: flex;
         flex-wrap: wrap;
-      }
+    }
 
-      .row.vertical-flexbox-row2 > [class*='col-'] {
+    .row.vertical-flexbox-row2 > [class*='col-'] {
         display: flex;
         flex-direction: column;
-      }
+    }
 }
-/* ---------------------------------------------------------------------------------- */
 
+/* ---------------------------------------------------------------------------------- */
 
 /* Alliance Auth Bootstrap fixes
 ------------------------------------------------------------------------------------- */
@@ -94,8 +104,8 @@
         margin-left: -15px;
     }
 }
-/* ---------------------------------------------------------------------------------- */
 
+/* ---------------------------------------------------------------------------------- */
 
 /* General DataTables styles
 ------------------------------------------------------------------------------------- */
@@ -123,4 +133,5 @@
         margin-left: 1rem;
     }
 }
+
 /* ---------------------------------------------------------------------------------- */
