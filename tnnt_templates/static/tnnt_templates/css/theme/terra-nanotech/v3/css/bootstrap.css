@@ -2906,7 +2906,7 @@ pre code {
 }
 
 table {
-    background-color: rgba(46, 51, 56, 0.5);
+    background-color: rgba(46, 51, 56, 0.6);
 }
 
 table col[class*="col-"] {
@@ -3001,7 +3001,7 @@ th {
 }
 
 .table-striped > tbody > tr:nth-of-type(odd) {
-    background-color: rgba(53, 58, 65, 0.8);
+    background-color: rgba(53, 58, 65, 0.75);
 }
 
 .table-hover > tbody > tr:hover {
@@ -8325,7 +8325,7 @@ h6 {
 }
 
 .table-responsive > .table {
-    background-color: rgb(46, 51, 56);
+    background-color: rgba(46, 51, 56, 0.5);
 }
 
 input,
