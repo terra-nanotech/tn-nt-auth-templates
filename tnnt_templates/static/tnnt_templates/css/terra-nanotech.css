@@ -1,3 +1,92 @@
+/* Auth base styles
+------------------------------------------------------------------------------------- */
+@media all {
+    .alliance-auth-content {
+        background-color: rgba(39, 43, 48, 0.875);
+    }
+
+    .gray-icon-color .fa {
+        color: rgb(80, 80, 80);
+    }
+
+    .notification-bell-color {
+        color: rgb(168, 143, 30);
+    }
+
+    .navbar-brand {
+        /* height: 58px; */
+        /*padding: 19px 19px;*/
+    }
+
+    .auth-navbar-top {
+        margin-bottom: 0;
+    }
+
+    .auth-side-navbar-collapse {
+        padding-left: 0;
+    }
+
+    #wrapper {
+        width: 100%;
+        padding: 0;
+    }
+
+    #site-body-wrapper {
+        margin-right: 0;
+    }
+
+    /* Horizontal list group */
+    ul.list-group.list-group-horizontal {
+        display: table;
+        width: 100%;
+    }
+
+    ul.list-group.list-group-horizontal > li.list-group-item {
+        display: table-cell;
+        max-width: 0;
+    }
+
+    .flex-center-horizontal {
+        justify-content: center;
+    }
+
+    /* style group headers within a table */
+    .table-striped > tbody > tr.tr-group, .tr-group {
+        font-weight: bold;
+        background-color: rgb(230, 230, 230);
+    }
+}
+
+/* highlight active menu items
+------------------------------------------------------------------------------------- */
+@media all {
+    .nav-pills > li > a.active,
+    .nav-pills > li > a:hover {
+        background-color: rgb(62, 68, 76);
+        color: rgb(255, 255, 255);
+    }
+}
+
+/* Small devices (tablets, 768px and up)
+------------------------------------------------------------------------------------- */
+@media (min-width: 768px) {
+    /* class for vertically aligning columns in a bootstrap row */
+    .row.vertical-flexbox-row2 {
+        display:  -webkit-box;
+        display: -webkit-flex;
+        display:  -ms-flexbox;
+        display:         flex;
+        flex-wrap: wrap;
+      }
+
+      .row.vertical-flexbox-row2 > [class*='col-'] {
+        display: flex;
+        flex-direction: column;
+      }
+}
+/* ---------------------------------------------------------------------------------- */
+
+
 /* Alliance Auth Bootstrap fixes
 ------------------------------------------------------------------------------------- */
 @media all and (min-width: 768px) {
@@ -6,6 +95,7 @@
     }
 }
 /* ---------------------------------------------------------------------------------- */
+
 
 /* General DataTables styles
 ------------------------------------------------------------------------------------- */
