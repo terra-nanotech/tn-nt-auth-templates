@@ -29,12 +29,12 @@
                     <div class="panel-body">
                         {% if request.user.profile.main_character %}
                             {% with request.user.profile.main_character as main %}
-                                <div class="hidden-xs">
-                                    <div class="col-lg-4 col-sm-2">
+                                <div class="row clearfix">
+                                    <div class="col-lg-4 col-sm-4 col-xs-4">
                                         <table class="table">
                                             <tr>
                                                 <td class="text-center">
-                                                    <img class="ra-avatar"src="{{ main.portrait_url_128 }}">
+                                                    <img class="ra-avatar"src="{{ main.portrait_url_128 }}" alt="{{ main.character_name }}">
                                                 </td>
                                             </tr>
                                             <tr>
@@ -43,11 +43,11 @@
                                         </table>
                                     </div>
 
-                                    <div class="col-lg-4 col-sm-2">
+                                    <div class="col-lg-4 col-sm-4 col-xs-4">
                                         <table class="table">
                                             <tr>
                                                 <td class="text-center">
-                                                    <img class="ra-avatar"src="{{ main.corporation_logo_url_128 }}">
+                                                    <img class="ra-avatar"src="{{ main.corporation_logo_url_128 }}" alt="{{ main.corporation_name }}">
                                                 </td>
                                             </tr>
                                             <tr>
@@ -56,12 +56,12 @@
                                         </table>
                                     </div>
 
-                                    <div class="col-lg-4 col-sm-2">
+                                    <div class="col-lg-4 col-sm-4 col-xs-4">
                                         {% if main.alliance_id %}
                                             <table class="table">
                                                 <tr>
                                                     <td class="text-center">
-                                                        <img class="ra-avatar"src="{{ main.alliance_logo_url_128 }}">
+                                                        <img class="ra-avatar"src="{{ main.alliance_logo_url_128 }}" alt="{{ main.alliance_name }}">
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -71,19 +71,6 @@
                                         {% endif %}
                                     </div>
                                 </div>
-
-                                <div class="table visible-xs-block">
-                                    <p>
-                                        <img class="ra-avatar" src="{{ main.portrait_url_64 }}">
-                                        <img class="ra-avatar" src="{{ main.corporation_logo_url_64 }}">
-                                        <img class="ra-avatar" src="{{ main.alliance_logo_url_64 }}">
-                                    </p>
-                                    <p>
-                                        <strong>{{ main.character_name }}</strong><br>
-                                        {{ main.corporation_name }}<br>
-                                        {{ main.alliance_name }}
-                                    </p>
-                                </div>
                             {% endwith %}
                         {% else %}
                             <div class="alert alert-danger" role="alert">
@@ -91,9 +78,7 @@
                             </div>
                         {% endif %}
 
-                        <div class="clearfix"></div>
-
-                        <div class="row">
+                        <div class="row clearfix">
                             <div class="col-sm-6 button-wrapper">
                                 <a href="{% url 'authentication:add_character' %}" class="btn btn-block btn-primary"
                                 title="Add Character">{% translate 'Add Character' %}</a>
@@ -116,14 +101,6 @@
 
                     <div class="panel-body text-center">
                         <div style="height: 240px;overflow:-moz-scrollbars-vertical;overflow-y:auto;">
-{#                            <table class="table">#}
-{#                                {% for group in groups %}#}
-{#                                    <tr>#}
-{#                                        <td>{{ group.name }}</td>#}
-{#                                    </tr>#}
-{#                                {% endfor %}#}
-{#                            </table>#}
-
                             <div class="auth-member-groups">
                                 {% for group in groups %}
                                     <span class="label label-tnnt-default label-dashboard-group-name auth-member-group-item">
