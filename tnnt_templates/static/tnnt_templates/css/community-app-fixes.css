@@ -25,8 +25,6 @@
     }
 }
 
-/* ---------------------------------------------------------------------------------- */
-
 /* App: Fittings
 ------------------------------------------------------------------------------------- */
 @media all {
@@ -42,8 +40,6 @@
     }
 }
 
-/* ---------------------------------------------------------------------------------- */
-
 /* App: AA Blueprints
 ------------------------------------------------------------------------------------- */
 @media all {
@@ -53,8 +49,6 @@
         background-color: rgb(62, 68, 76) !important;
     }
 }
-
-/* ---------------------------------------------------------------------------------- */
 
 /* App :: AA Memberaudit
 ------------------------------------------------------------------------------------- */
@@ -68,12 +62,12 @@
     .template-light-mode .aa-memberaudit .sidebar_character.active > a,
     .template-dark-mode .aa-memberaudit .sidebar_character:hover > a,
     .template-dark-mode .aa-memberaudit .sidebar_character.active > a {
-        background-color: rgb(34, 34, 34);
+        background-color: rgb(62, 68, 76);
     }
 
     .template-light-mode .aa-memberaudit .nav-tabs > li.active > a,
     .template-dark-mode .aa-memberaudit .nav-tabs > li.active > a {
-        background-color: rgb(70, 69, 69) !important;
+        background-color: rgb(62, 68, 76) !important;
         color: rgb(255, 255, 255) !important;
     }
 
@@ -90,16 +84,9 @@
     }
 
     .aa-memberaudit .cards_container {
-        display: flex;
-        flex-wrap: wrap;
-        list-style: none;
         margin: 0 0 2rem 0;
-        padding: 0;
-        justify-content: center;
     }
 }
-
-/* ---------------------------------------------------------------------------------- */
 
 /* App: AA Sovtimer
 ------------------------------------------------------------------------------------- */
@@ -134,5 +121,14 @@
     .aa-sovtimer .aa-sovtimer-timer-elapsed {
         color: rgb(253, 126, 20);
         text-shadow: 1px 1px 1px rgba(255, 0, 0, 0.3);
+    }
+}
+
+/* App: AA Structures
+------------------------------------------------------------------------------------- */
+@media all {
+    .template-light-mode .nav-tabs > li.active > a {
+        background-color: rgb(62, 68, 76) !important;
+        color: rgb(255, 255, 255) !important;
     }
 }

@@ -66,7 +66,6 @@ a:hover {
 
 abbr[title] {
     border-bottom: none;
-    text-decoration: underline;
     text-decoration: underline dotted;
 }
 
@@ -1757,7 +1756,7 @@ a.text-danger:focus {
 }
 
 .bg-primary {
-    color: #fff;
+    color: rgb(255, 255, 255);
     background-color: rgb(122, 130, 136);
 }
 
@@ -1805,7 +1804,6 @@ a.bg-danger:focus {
 .page-header {
     padding-bottom: 9px;
     margin: 40px 0 20px;
-    /*border-bottom: 1px solid rgb(28, 30, 34);*/
 }
 
 ul,
@@ -2268,7 +2266,7 @@ pre code {
 }
 
 .col-xs-offset-0 {
-    margin-left: 0%;
+    margin-left: 0;
 }
 
 @media (min-width: 768px) {
@@ -2478,7 +2476,7 @@ pre code {
     }
 
     .col-sm-offset-0 {
-        margin-left: 0%;
+        margin-left: 0;
     }
 }
 
@@ -2689,7 +2687,7 @@ pre code {
     }
 
     .col-md-offset-0 {
-        margin-left: 0%;
+        margin-left: 0;
     }
 }
 
@@ -2900,12 +2898,12 @@ pre code {
     }
 
     .col-lg-offset-0 {
-        margin-left: 0%;
+        margin-left: 0;
     }
 }
 
 table {
-    background-color: rgba(46, 51, 56, 0.6);
+    /*background-color: rgba(46, 51, 56, 0.6);*/
 }
 
 table col[class*="col-"] {
@@ -2947,7 +2945,6 @@ th {
     padding: 8px;
     line-height: 1.42857143;
     vertical-align: top;
-    /*border-top: 1px solid rgb(28, 30, 34);*/
 }
 
 .table > thead > tr > th {
@@ -4333,7 +4330,6 @@ tbody.collapse.in {
     list-style: none;
     background-color: rgb(58, 63, 68);
     background-clip: padding-box;
-    border: 1px solid rgb(39, 43, 48);
     border: 1px solid rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
@@ -5004,7 +5000,6 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .nav-pills > li.active > a:hover,
 .nav-pills > li.active > a:focus {
     color: rgb(255, 255, 255);
-    background-color: transparent;
 }
 
 .nav-stacked > li {
@@ -5485,7 +5480,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus {
     color: rgb(255, 255, 255);
-    background-color: none;
+    background-color: transparent;
 }
 
 .navbar-default .navbar-text {
@@ -5603,7 +5598,7 @@ fieldset[disabled] .navbar-default .btn-link:focus {
 .navbar-inverse .navbar-brand:hover,
 .navbar-inverse .navbar-brand:focus {
     color: rgb(255, 255, 255);
-    background-color: none;
+    background-color: transparent;
 }
 
 .navbar-inverse .navbar-text {
@@ -6235,7 +6230,7 @@ a.thumbnail.active {
 
 .progress-bar {
     float: left;
-    width: 0%;
+    width: 0;
     height: 100%;
     font-size: 12px;
     line-height: 20px;
@@ -6476,7 +6471,7 @@ a.list-group-item-success.active:hover,
 button.list-group-item-success.active:hover,
 a.list-group-item-success.active:focus,
 button.list-group-item-success.active:focus {
-    color: #fff;
+    color: rgb(255, 255, 255);
     background-color: rgb(255, 255, 255);
     border-color: rgb(255, 255, 255);
 }
@@ -6510,7 +6505,7 @@ a.list-group-item-info.active:hover,
 button.list-group-item-info.active:hover,
 a.list-group-item-info.active:focus,
 button.list-group-item-info.active:focus {
-    color: #fff;
+    color: rgb(255, 255, 255);
     background-color: rgb(255, 255, 255);
     border-color: rgb(255, 255, 255);
 }
@@ -6544,7 +6539,7 @@ a.list-group-item-warning.active:hover,
 button.list-group-item-warning.active:hover,
 a.list-group-item-warning.active:focus,
 button.list-group-item-warning.active:focus {
-    color: #fff;
+    color: rgb(255, 255, 255);
     background-color: rgb(255, 255, 255);
     border-color: rgb(255, 255, 255);
 }
@@ -6578,7 +6573,7 @@ a.list-group-item-danger.active:hover,
 button.list-group-item-danger.active:hover,
 a.list-group-item-danger.active:focus,
 button.list-group-item-danger.active:focus {
-    color: #fff;
+    color: rgb(255, 255, 255);
     background-color: rgb(255, 255, 255);
     border-color: rgb(255, 255, 255);
 }
@@ -6595,7 +6590,6 @@ button.list-group-item-danger.active:focus {
 
 .panel {
     margin-bottom: 20px;
-    /*background-color: rgb(46, 51, 56);*/
     background-color: rgba(200, 200, 200, 0.2);
     border: 1px solid transparent;
     border-radius: 4px;
@@ -6891,7 +6885,6 @@ button.list-group-item-danger.active:focus {
 }
 
 .panel-primary {
-    /*border-color: rgba(0, 0, 0, 0.6);*/
     border-color: rgba(200, 200, 200, 0.6);
 }
 
@@ -7134,7 +7127,6 @@ button.close {
     position: relative;
     background-color: rgb(46, 51, 56);
     background-clip: padding-box;
-    border: 1px solid rgb(153, 153, 153);
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 6px;
     box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
@@ -7237,7 +7229,6 @@ button.close {
     font-weight: 400;
     line-height: 1.42857143;
     line-break: auto;
-    text-align: left;
     text-align: start;
     text-decoration: none;
     text-shadow: none;
@@ -7371,7 +7362,6 @@ button.close {
     font-weight: 400;
     line-height: 1.42857143;
     line-break: auto;
-    text-align: left;
     text-align: start;
     text-decoration: none;
     text-shadow: none;
@@ -7384,7 +7374,6 @@ button.close {
     font-size: 14px;
     background-color: rgb(46, 51, 56);
     background-clip: padding-box;
-    border: 1px solid rgb(153, 153, 153);
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 6px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
@@ -8110,12 +8099,9 @@ button.close {
 }
 
 .navbar {
-    /*background-image: linear-gradient(#484e55, rgb(58, 63, 68) 60%, #313539);*/
-    /*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff484e55', endColorstr='#ff313539', GradientType=0);*/
     background-repeat: no-repeat;
     -webkit-filter: none;
     filter: none;
-    /*border: 1px solid rgba(0, 0, 0, 0.6);*/
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
@@ -8125,8 +8111,6 @@ button.close {
 }
 
 .navbar .navbar-nav > li > a:hover {
-    /*background-image: linear-gradient(#020202, #101112 40%, #141618);*/
-    /*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff020202', endColorstr='#ff141618', GradientType=0);*/
     background-repeat: no-repeat;
     -webkit-filter: none;
     filter: none;
@@ -8135,7 +8119,6 @@ button.close {
 
 .navbar-inverse {
     background-image: linear-gradient(rgb(138, 145, 150), rgb(122, 130, 136) 60%, rgb(112, 120, 125));
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff8a9196', endColorstr='#ff70787d', GradientType=0);
     background-repeat: no-repeat;
     -webkit-filter: none;
     filter: none;
@@ -8146,8 +8129,6 @@ button.close {
 }
 
 .navbar-inverse .navbar-nav > li > a:hover {
-    /*background-image: linear-gradient(#404448, #4e5458 40%, #53595d);*/
-    /*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff404448', endColorstr='#ff53595d', GradientType=0);*/
     background-repeat: no-repeat;
     -webkit-filter: none;
     filter: none;
@@ -8174,7 +8155,6 @@ button.close {
 
 .btn-default {
     background-image: linear-gradient(rgb(72, 78, 85), rgb(58, 63, 68) 60%, rgb(49, 53, 57));
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff484e55', endColorstr='#ff313539', GradientType=0);
     background-repeat: no-repeat;
     -webkit-filter: none;
     filter: none;
@@ -8182,7 +8162,6 @@ button.close {
 
 .btn-default:hover {
     background-image: linear-gradient(rgb(2, 2, 2), rgb(16, 17, 18) 40%, rgb(20, 22, 24));
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff020202', endColorstr='#ff141618', GradientType=0);
     background-repeat: no-repeat;
     -webkit-filter: none;
     filter: none;
@@ -8190,7 +8169,6 @@ button.close {
 
 .btn-primary {
     background-image: linear-gradient(rgb(138, 145, 150), rgb(122, 130, 136) 60%, rgb(112, 120, 125));
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff8a9196', endColorstr='#ff70787d', GradientType=0);
     background-repeat: no-repeat;
     -webkit-filter: none;
     filter: none;
@@ -8198,7 +8176,6 @@ button.close {
 
 .btn-primary:hover {
     background-image: linear-gradient(rgb(64, 68, 72), rgb(78, 84, 88) 40%, rgb(83, 89, 93));
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff404448', endColorstr='#ff53595d', GradientType=0);
     background-repeat: no-repeat;
     -webkit-filter: none;
     filter: none;
@@ -8206,7 +8183,6 @@ button.close {
 
 .btn-success {
     background-image: linear-gradient(rgb(120, 204, 120), rgb(98, 196, 98) 60%, rgb(83, 190, 83));
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff78cc78', endColorstr='#ff53be53', GradientType=0);
     background-repeat: no-repeat;
     -webkit-filter: none;
     filter: none;
@@ -8214,7 +8190,6 @@ button.close {
 
 .btn-success:hover {
     background-image: linear-gradient(rgb(47, 125, 47), rgb(55, 147, 55) 40%, rgb(58, 154, 58));
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff2f7d2f', endColorstr='#ff3a9a3a', GradientType=0);
     background-repeat: no-repeat;
     -webkit-filter: none;
     filter: none;
@@ -8222,7 +8197,6 @@ button.close {
 
 .btn-info {
     background-image: linear-gradient(rgb(116, 202, 227), rgb(91, 192, 222) 60%, rgb(74, 185, 219));
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff74cae3', endColorstr='#ff4ab9db', GradientType=0);
     background-repeat: no-repeat;
     -webkit-filter: none;
     filter: none;
@@ -8230,7 +8204,6 @@ button.close {
 
 .btn-info:hover {
     background-image: linear-gradient(rgb(32, 130, 159), rgb(37, 150, 184) 40%, rgb(39, 157, 193));
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff20829f', endColorstr='#ff279dc1', GradientType=0);
     background-repeat: no-repeat;
     -webkit-filter: none;
     filter: none;
@@ -8238,7 +8211,6 @@ button.close {
 
 .btn-warning {
     background-image: linear-gradient(rgb(250, 161, 35), rgb(248, 148, 6) 60%, rgb(228, 136, 6));
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffaa123', endColorstr='#ffe48806', GradientType=0);
     background-repeat: no-repeat;
     -webkit-filter: none;
     filter: none;
@@ -8246,7 +8218,6 @@ button.close {
 
 .btn-warning:hover {
     background-image: linear-gradient(rgb(128, 77, 3), rgb(158, 95, 4) 40%, rgb(168, 100, 4));
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff804d03', endColorstr='#ffa86404', GradientType=0);
     background-repeat: no-repeat;
     -webkit-filter: none;
     filter: none;
@@ -8254,7 +8225,6 @@ button.close {
 
 .btn-danger {
     background-image: linear-gradient(rgb(241, 122, 119), rgb(238, 95, 91) 60%, rgb(236, 77, 73));
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff17a77', endColorstr='#ffec4d49', GradientType=0);
     background-repeat: no-repeat;
     -webkit-filter: none;
     filter: none;
@@ -8262,7 +8232,6 @@ button.close {
 
 .btn-danger:hover {
     background-image: linear-gradient(rgb(187, 24, 19), rgb(215, 28, 22) 40%, rgb(224, 29, 23));
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffbb1813', endColorstr='#ffe01d17', GradientType=0);
     background-repeat: no-repeat;
     -webkit-filter: none;
     filter: none;
@@ -8311,7 +8280,7 @@ h6 {
 .table .warning,
 .table .danger,
 .table .info {
-    color: #fff;
+    color: rgb(255, 255, 255);
 }
 
 .table-bordered tbody tr.success td,
@@ -8405,13 +8374,12 @@ textarea {
 }
 
 legend {
-    color: #fff;
+    color: rgb(255, 255, 255);
 }
 
 .input-group-addon {
     background-color: rgb(58, 63, 68);
     background-image: linear-gradient(rgb(72, 78, 85), rgb(58, 63, 68) 60%, rgb(49, 53, 57));
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff484e55', endColorstr='#ff313539', GradientType=0);
     background-repeat: no-repeat;
     -webkit-filter: none;
     filter: none;
@@ -8426,24 +8394,18 @@ legend {
 }
 
 .nav-pills > li > a {
-    /*background-image: linear-gradient(#484e55, rgb(58, 63, 68) 60%, #313539);*/
-    /*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff484e55', endColorstr='#ff313539', GradientType=0);*/
     background-repeat: no-repeat;
     -webkit-filter: none;
     filter: none;
-    /*border: 1px solid rgba(0, 0, 0, 0.6);*/
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
 }
 
 .nav-pills > li > a:hover {
-    /*background-image: linear-gradient(#020202, #101112 40%, #141618);*/
-    /*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff020202', endColorstr='#ff141618', GradientType=0);*/
-    background: #ecf0f1;
+    background: rgb(236, 240, 241);
     color: rgb(54, 54, 54);
     background-repeat: no-repeat;
     -webkit-filter: none;
     filter: none;
-    /*border: 1px solid rgba(0, 0, 0, 0.6);*/
 }
 
 .nav-pills > li > a.active {
@@ -8452,19 +8414,14 @@ legend {
 
 .nav-pills > li.active > a,
 .nav-pills > li.active > a:hover {
-    background-color: none;
-    /*background-image: linear-gradient(#020202, #101112 40%, #141618);*/
-    /*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff020202', endColorstr='#ff141618', GradientType=0);*/
+    background-color: rgb(62, 68, 76);
     background-repeat: no-repeat;
     -webkit-filter: none;
     filter: none;
-    /*border: 1px solid rgba(0, 0, 0, 0.6);*/
 }
 
 .nav-pills > li.disabled > a,
 .nav-pills > li.disabled > a:hover {
-    /*background-image: linear-gradient(#484e55, rgb(58, 63, 68) 60%, #313539);*/
-    /*filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff484e55', endColorstr='#ff313539', GradientType=0);*/
     background-repeat: no-repeat;
     -webkit-filter: none;
     filter: none;
@@ -8474,7 +8431,6 @@ legend {
 .pagination > li > span {
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
     background-image: linear-gradient(rgb(72, 78, 85), rgb(58, 63, 68) 60%, rgb(49, 53, 57));
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff484e55', endColorstr='#ff313539', GradientType=0);
     background-repeat: no-repeat;
     -webkit-filter: none;
     filter: none;
@@ -8483,7 +8439,6 @@ legend {
 .pagination > li > a:hover,
 .pagination > li > span:hover {
     background-image: linear-gradient(rgb(2, 2, 2), rgb(16, 17, 18) 40%, rgb(20, 22, 24));
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff020202', endColorstr='#ff141618', GradientType=0);
     background-repeat: no-repeat;
     -webkit-filter: none;
     filter: none;
@@ -8492,7 +8447,6 @@ legend {
 .pagination > li.active > a,
 .pagination > li.active > span {
     background-image: linear-gradient(rgb(2, 2, 2), rgb(16, 17, 18) 40%, rgb(20, 22, 24));
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff020202', endColorstr='#ff141618', GradientType=0);
     background-repeat: no-repeat;
     -webkit-filter: none;
     filter: none;
@@ -8504,7 +8458,6 @@ legend {
 .pagination > li.disabled > span:hover {
     background-color: transparent;
     background-image: linear-gradient(rgb(72, 78, 85), rgb(58, 63, 68) 60%, rgb(49, 53, 57));
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff484e55', endColorstr='#ff313539', GradientType=0);
     background-repeat: no-repeat;
     -webkit-filter: none;
     filter: none;
@@ -8512,7 +8465,6 @@ legend {
 
 .pager > li > a {
     background-image: linear-gradient(rgb(72, 78, 85), rgb(58, 63, 68) 60%, rgb(49, 53, 57));
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff484e55', endColorstr='#ff313539', GradientType=0);
     background-repeat: no-repeat;
     -webkit-filter: none;
     filter: none;
@@ -8521,7 +8473,6 @@ legend {
 
 .pager > li > a:hover {
     background-image: linear-gradient(rgb(2, 2, 2), rgb(16, 17, 18) 40%, rgb(20, 22, 24));
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff020202', endColorstr='#ff141618', GradientType=0);
     background-repeat: no-repeat;
     -webkit-filter: none;
     filter: none;
@@ -8531,7 +8482,6 @@ legend {
 .pager > li.disabled > a:hover {
     background-color: transparent;
     background-image: linear-gradient(rgb(72, 78, 85), rgb(58, 63, 68) 60%, rgb(49, 53, 57));
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff484e55', endColorstr='#ff313539', GradientType=0);
     background-repeat: no-repeat;
     -webkit-filter: none;
     filter: none;
@@ -8541,7 +8491,6 @@ legend {
     border: 1px solid rgba(0, 0, 0, 0.6);
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
     background-image: linear-gradient(rgb(72, 78, 85), rgb(58, 63, 68) 60%, rgb(49, 53, 57));
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff484e55', endColorstr='#ff313539', GradientType=0);
     background-repeat: no-repeat;
     -webkit-filter: none;
     filter: none;
@@ -8549,7 +8498,7 @@ legend {
 
 .alert .alert-link,
 .alert a {
-    color: #fff;
+    color: rgb(255, 255, 255);
     text-decoration: underline;
 }
 
