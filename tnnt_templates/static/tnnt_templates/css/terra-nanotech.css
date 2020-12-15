@@ -1,6 +1,11 @@
 /* Auth base styles
 ------------------------------------------------------------------------------------- */
 @media all {
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
     .alliance-auth-background {
         position: fixed;
         top: 0;
