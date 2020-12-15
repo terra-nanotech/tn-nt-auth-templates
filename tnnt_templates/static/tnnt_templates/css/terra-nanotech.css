@@ -1,7 +1,7 @@
 /* Auth base styles
 ------------------------------------------------------------------------------------- */
 @media all {
-    .alliance-auth-background{
+    .alliance-auth-background {
         position: fixed;
         top: 0;
         bottom: 0;
@@ -13,7 +13,7 @@
 
     .alliance-auth-content {
         position: relative;
-        z-index: 1;
+        /*z-index: 1;*/
         margin-bottom: 2rem;
     }
 
