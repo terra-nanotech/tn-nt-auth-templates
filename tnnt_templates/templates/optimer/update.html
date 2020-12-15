@@ -11,8 +11,7 @@
 {% endblock extra_css %}
 
 {% block content %}
-
-    <div>
+    <div class="clearfix">
         <h1 class="page-header text-center">{% trans "Update Fleet Operation" %}</h1>
 
         <div class="container-fluid">
@@ -32,9 +31,7 @@
                 </div>
             </div>
         </div>
-
     </div>
-
 {% endblock content %}
 
 {% block extra_javascript %}
@@ -42,7 +39,6 @@
 {% endblock %}
 
 {% block extra_script %}
-
     $('#id_start').datetimepicker({
     setlocale: '{{ LANGUAGE_CODE }}',
     {% if NIGHT_MODE %}
@@ -54,5 +50,4 @@
     format: 'Y-m-d H:i',
     minDate: 0
     });
-
 {% endblock extra_script %}

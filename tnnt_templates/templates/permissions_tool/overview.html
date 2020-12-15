@@ -6,7 +6,7 @@
 {% block page_title %}{% trans "Permissions Overview" %}{% endblock page_title %}
 
 {% block content %}
-    <div>
+    <div class="clearfix">
         <h1 class="page-header">{% trans "Permissions Overview" %}</h1>
         <p>
         {% if request.GET.all != 'yes' %}
@@ -44,6 +44,7 @@
                         </th>
                     </tr>
                 </thead>
+
                 <tbody>
                 {% for perm in permissions %}
                     <tr>
