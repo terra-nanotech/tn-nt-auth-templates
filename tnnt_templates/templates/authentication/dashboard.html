@@ -33,7 +33,9 @@
                                         <table class="table">
                                             <tr>
                                                 <td class="text-center">
-                                                    <img class="ra-avatar" src="{{ main.portrait_url_128 }}" alt="{{ main.character_name }}">
+                                                    <img class="ra-avatar"
+                                                         src="{{ main.portrait_url_128 }}"
+                                                         alt="{{ main.character_name }}">
                                                 </td>
                                             </tr>
                                             <tr>
@@ -46,7 +48,9 @@
                                         <table class="table">
                                             <tr>
                                                 <td class="text-center">
-                                                    <img class="ra-avatar" src="{{ main.corporation_logo_url_128 }}" alt="{{ main.corporation_name }}">
+                                                    <img class="ra-avatar"
+                                                         src="{{ main.corporation_logo_url_128 }}"
+                                                         alt="{{ main.corporation_name }}">
                                                 </td>
                                             </tr>
                                             <tr>
@@ -60,7 +64,9 @@
                                             <table class="table">
                                                 <tr>
                                                     <td class="text-center">
-                                                        <img class="ra-avatar" src="{{ main.alliance_logo_url_128 }}" alt="{{ main.alliance_name }}">
+                                                        <img class="ra-avatar"
+                                                             src="{{ main.alliance_logo_url_128 }}"
+                                                             alt="{{ main.alliance_name }}">
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -79,13 +85,17 @@
 
                         <div class="row clearfix">
                             <div class="col-sm-6 button-wrapper">
-                                <a href="{% url 'authentication:add_character' %}" class="btn btn-block btn-primary" title="Add Character">
+                                <a href="{% url 'authentication:add_character' %}"
+                                   class="btn btn-block btn-primary"
+                                   title="Add Character">
                                     {% translate 'Add Character' %}
                                 </a>
                             </div>
 
                             <div class="col-sm-6 button-wrapper">
-                                <a href="{% url 'authentication:change_main_character' %}" class="btn btn-block btn-primary" title="Change Main Character">
+                                <a href="{% url 'authentication:change_main_character' %}"
+                                   class="btn btn-block btn-primary"
+                                   title="Change Main Character">
                                     {% translate "Change Main" %}
                                 </a>
                             </div>
@@ -136,34 +146,39 @@
                     </thead>
 
                     <tbody>
-                        {% for char in characters %}
-                            <tr>
-                                <td class="text-center">
-                                    <img class="ra-avatar img-circle" src="{{ char.portrait_url_32 }}" alt="{{ char.character_name }}">
-                                </td>
-                                <td class="text-center">{{ char.character_name }}</td>
-                                <td class="text-center">{{ char.corporation_name }}</td>
-                                <td class="text-center">{{ char.alliance_name }}</td>
-                            </tr>
-                        {% endfor %}
+                    {% for char in characters %}
+                        <tr>
+                            <td class="text-center">
+                                <img class="ra-avatar img-circle"
+                                     src="{{ char.portrait_url_32 }}"
+                                     alt="{{ char.character_name }}">
+                            </td>
+                            <td class="text-center">{{ char.character_name }}</td>
+                            <td class="text-center">{{ char.corporation_name }}</td>
+                            <td class="text-center">{{ char.alliance_name }}</td>
+                        </tr>
+                    {% endfor %}
                     </tbody>
                 </table>
 
                 <table class="table table-aa visible-xs-block" style="width: 100%;">
                     <tbody>
-                        {% for char in characters %}
-                            <tr>
-                                <td class="text-center" style="vertical-align: middle;">
-                                    <img class="ra-avatar img-circle" src="{{ char.portrait_url_32 }}" alt="{{ char.character_name }}">
-                                </td>
+                    {% for char in characters %}
+                        <tr>
+                            <td class="text-center" style="vertical-align: middle;">
+                                <img class="ra-avatar img-circle"
+                                     src="{{ char.portrait_url_32 }}"
+                                     alt="{{ char.character_name }}">
+                            </td>
 
-                                <td class="text-center" style="vertical-align: middle; width: 100%;">
-                                    <strong>{{ char.character_name }}</strong><br>
-                                    {{ char.corporation_name }}<br>
-                                    {{ char.alliance_name|default:"" }}
-                                </td>
-                            </tr>
-                        {% endfor %}
+                            <td class="text-center"
+                                style="vertical-align: middle; width: 100%;">
+                                <strong>{{ char.character_name }}</strong><br>
+                                {{ char.corporation_name }}<br>
+                                {{ char.alliance_name|default:"" }}
+                            </td>
+                        </tr>
+                    {% endfor %}
                     </tbody>
                 </table>
             </div>
