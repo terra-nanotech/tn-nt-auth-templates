@@ -122,7 +122,8 @@
         white-space: nowrap;
     }
 
-    .aa-sovtimer .aa-sovtimer-remaining {
-        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    .aa-sovtimer .aa-sovtimer-timer-elapsed {
+        color: rgb(253, 126, 20);
+        text-shadow: 1px 1px 1px rgba(255, 0, 0, 0.3);
     }
 }
