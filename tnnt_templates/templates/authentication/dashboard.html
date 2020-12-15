@@ -13,8 +13,7 @@
         {% include 'allianceauth/admin-status/include.html' %}
     {% endif %}
 
-{#    <div class="col-sm-12">#}
-    <div>
+    <div class="clearfix">
         <div class="row vertical-flexbox-row2">
             <div class="col-sm-6">
                 <div class="panel panel-primary" style="height:100%">
@@ -80,13 +79,15 @@
 
                         <div class="row clearfix">
                             <div class="col-sm-6 button-wrapper">
-                                <a href="{% url 'authentication:add_character' %}" class="btn btn-block btn-primary"
-                                title="Add Character">{% translate 'Add Character' %}</a>
+                                <a href="{% url 'authentication:add_character' %}" class="btn btn-block btn-primary" title="Add Character">
+                                    {% translate 'Add Character' %}
+                                </a>
                             </div>
 
                             <div class="col-sm-6 button-wrapper">
-                                <a href="{% url 'authentication:change_main_character' %}" class="btn btn-block btn-primary"
-                                title="Change Main Character">{% translate "Change Main" %}</a>
+                                <a href="{% url 'authentication:change_main_character' %}" class="btn btn-block btn-primary" title="Change Main Character">
+                                    {% translate "Change Main" %}
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -137,7 +138,8 @@
                     <tbody>
                         {% for char in characters %}
                             <tr>
-                                <td class="text-center"><img class="ra-avatar img-circle" src="{{ char.portrait_url_32 }}">
+                                <td class="text-center">
+                                    <img class="ra-avatar img-circle" src="{{ char.portrait_url_32 }}" alt="{{ char.character_name }}">
                                 </td>
                                 <td class="text-center">{{ char.character_name }}</td>
                                 <td class="text-center">{{ char.corporation_name }}</td>
@@ -152,7 +154,7 @@
                         {% for char in characters %}
                             <tr>
                                 <td class="text-center" style="vertical-align: middle">
-                                    <img class="ra-avatar img-circle" src="{{ char.portrait_url_32 }}">
+                                    <img class="ra-avatar img-circle" src="{{ char.portrait_url_32 }}" alt="{{ char.character_name }}">
                                 </td>
 
                                 <td class="text-center" style="vertical-align: middle; width: 100%">
