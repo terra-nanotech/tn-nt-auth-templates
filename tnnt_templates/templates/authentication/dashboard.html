@@ -16,7 +16,7 @@
     <div class="clearfix">
         <div class="row vertical-flexbox-row2">
             <div class="col-sm-6">
-                <div class="panel panel-primary" style="height:100%">
+                <div class="panel panel-primary" style="height: 100%;">
                     <div class="panel-heading">
                         <h3 class="panel-title">
                             {% blocktrans with state=request.user.profile.state %}
@@ -33,7 +33,7 @@
                                         <table class="table">
                                             <tr>
                                                 <td class="text-center">
-                                                    <img class="ra-avatar"src="{{ main.portrait_url_128 }}" alt="{{ main.character_name }}">
+                                                    <img class="ra-avatar" src="{{ main.portrait_url_128 }}" alt="{{ main.character_name }}">
                                                 </td>
                                             </tr>
                                             <tr>
@@ -46,7 +46,7 @@
                                         <table class="table">
                                             <tr>
                                                 <td class="text-center">
-                                                    <img class="ra-avatar"src="{{ main.corporation_logo_url_128 }}" alt="{{ main.corporation_name }}">
+                                                    <img class="ra-avatar" src="{{ main.corporation_logo_url_128 }}" alt="{{ main.corporation_name }}">
                                                 </td>
                                             </tr>
                                             <tr>
@@ -60,7 +60,7 @@
                                             <table class="table">
                                                 <tr>
                                                     <td class="text-center">
-                                                        <img class="ra-avatar"src="{{ main.alliance_logo_url_128 }}" alt="{{ main.alliance_name }}">
+                                                        <img class="ra-avatar" src="{{ main.alliance_logo_url_128 }}" alt="{{ main.alliance_name }}">
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -95,7 +95,7 @@
             </div>
 
             <div class="col-sm-6">
-                <div class="panel panel-primary" style="height:100%">
+                <div class="panel panel-primary" style="height: 100%;">
                     <div class="panel-heading">
                         <h3 class="panel-title">{% translate "Group Memberships" %}</h3>
                     </div>
@@ -149,15 +149,15 @@
                     </tbody>
                 </table>
 
-                <table class="table table-aa visible-xs-block" style="width: 100%">
+                <table class="table table-aa visible-xs-block" style="width: 100%;">
                     <tbody>
                         {% for char in characters %}
                             <tr>
-                                <td class="text-center" style="vertical-align: middle">
+                                <td class="text-center" style="vertical-align: middle;">
                                     <img class="ra-avatar img-circle" src="{{ char.portrait_url_32 }}" alt="{{ char.character_name }}">
                                 </td>
 
-                                <td class="text-center" style="vertical-align: middle; width: 100%">
+                                <td class="text-center" style="vertical-align: middle; width: 100%;">
                                     <strong>{{ char.character_name }}</strong><br>
                                     {{ char.corporation_name }}<br>
                                     {{ char.alliance_name|default:"" }}
