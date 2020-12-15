@@ -14,7 +14,6 @@
 
         <title>{% block title %}{% block page_title %}{% endblock page_title %} - Alliance Auth{% endblock title %}</title>
 
-{#        {% include 'bundles/bootstrap-css.html' %}#}
         <link rel="stylesheet" href="{% static 'tnnt_templates/css/theme/terra-nanotech/v3/css/bootstrap.min.css' %}" type="text/css">
         {% include 'bundles/fontawesome.html' %}
 
@@ -30,13 +29,11 @@
 
     <body class="{% if NIGHT_MODE %}template-dark-mode{% else %}template-light-mode{% endif %}">
         {% if user.is_authenticated %}
-{#            <div id="wrapper" class="container">#}
             <div class="alliance-auth-background"></div>
             <div class="alliance-auth-content">
                 <!-- Navigation -->
                 {% include 'allianceauth/top-menu.html' %}
 
-{#                <div class="row" id="site-body-wrapper">#}
                 <div class="site-body-wrapper">
                     {% include 'allianceauth/side-menu.html' %}
                     <div class="col-sm-10">
