@@ -7,6 +7,10 @@
         font-family: monospace;
     }
 
+    body {
+        font-size: 1.125rem;
+    }
+
     .nav-pills > li > a.active, .nav-pills > li > a:hover {
         background-color: rgba(78, 154, 6, 0.4) !important;
         color: rgb(0, 0, 0) !important;

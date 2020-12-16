@@ -8,13 +8,15 @@
 
 {% block content %}
     <div class="clearfix">
-        <h1 class="page-header text-center">{% trans "Fleet Operation Timers" %}
-            <div class="text-right">
-                {% if perms.auth.optimer_management %}
-                    <a href="{% url 'optimer:add' %}" class="btn btn-success">{% trans "Create Operation" %}</a>
-                {% endif %}
-            </div>
+        <h1 class="page-header text-center">
+            {% translate "Fleet Operation Timers" %}
         </h1>
+
+        {% if perms.auth.optimer_management %}
+            <div class="text-right">
+                <a href="{% url 'optimer:add' %}" class="btn btn-success">{% translate "Create Operation" %}</a>
+            </div>
+        {% endif %}
 
         <div class="text-center">
             <p>
@@ -26,14 +28,14 @@
         <!-- upcoming timers -->
         <div class="panel panel-default">
             <div class="panel-heading">
-                <span class="panel-title">{% translate "Next Timers" %}</span>
+                <div class="panel-title">{% translate "Next Timers" %}</div>
             </div>
 
             <div class="panel-body">
                 {% if future_timers %}
                     {% include "optimer/fleetoptable.html" with timers=future_timers %}
                 {% else %}
-                    <div class="alert alert-warning text-center">{% trans "No upcoming timers." %}</div>
+                    <div class="alert alert-warning text-center">{% translate "No upcoming timers." %}</div>
                 {% endif %}
             </div>
         </div>
@@ -41,19 +43,20 @@
         <!-- past timers -->
         <div class="panel panel-default">
             <div class="panel-heading">
-                <span class="panel-title">{% translate "Past Timers" %}</span>
+                <div class="panel-title">{% translate "Past Timers" %}</div>
             </div>
             <div class="panel-body">
                 {% if past_timers %}
                     {% include "optimer/fleetoptable.html" with timers=past_timers %}
                 {% else %}
-                    <div class="alert alert-warning text-center">{% trans "No past timers." %}</div>
+                    <div class="alert alert-warning text-center">{% translate "No past timers." %}</div>
                 {% endif %}
             </div>
         </div>
     </div>
 
     {% include 'bundles/moment-js.html' with locale=True %}
+
     <script src="{% static 'js/timers.js' %}"></script>
     <script type="application/javascript">
         // Data

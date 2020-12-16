@@ -62,6 +62,10 @@
         justify-content: center;
     }
 
+    .table-striped > tbody > tr:nth-of-type(odd) {
+        background-color: rgba(62, 68, 76, 0.5);
+    }
+
     /* style group headers within a table */
     .table-striped > tbody > tr.tr-group, .tr-group {
         font-weight: bold;
@@ -78,16 +82,25 @@
         border-left: 5px solid rgb(0, 0, 0);
     }
 
+    .panel {
+        /*border: 1px solid transparent;*/
+        border: none;
+    }
+
     .panel-title {
         display: block;
-        font-size: 1.125rem;
-        font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-size: 1rem;
+        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
         font-weight: 700;
         line-height: 1.1;
         color: inherit;
-        margin-top: 0.625rem;
-        margin-bottom: 0.625rem;
-        text-shadow: -1px -1px 0 rgba(0,0,0,.3);
+        margin-top: 0.25rem;
+        margin-bottom: 0.25rem;
+        text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
+    }
+
+    .panel-body {
+        min-height: 100px;
     }
 }
 

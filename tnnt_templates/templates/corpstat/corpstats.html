@@ -43,15 +43,15 @@
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <ul class="nav nav-pills pull-left">
-                        <li class="active"><a href="#mains" data-toggle="pill">{% trans 'Mains' %} ({{ total_mains }})</a></li>
-                        <li><a href="#members" data-toggle="pill">{% trans 'Members' %} ({{ total_members }})</a></li>
-                        <li><a href="#unregistered" data-toggle="pill">{% trans 'Unregistered' %} ({{ total_unreg }})</a></li>
-                        <li><a href="#orphans" data-toggle="pill">{% trans 'Orphans' %} ({{ total_orphans }})</a></li>
-                        <li><a href="#tracking" data-toggle="pill">{% trans 'Member Tracking' %}</a></li>
+                        <li class="active"><a href="#mains" data-toggle="pill">{% translate 'Mains' %} ({{ total_mains }})</a></li>
+                        <li><a href="#members" data-toggle="pill">{% translate 'Members' %} ({{ total_members }})</a></li>
+                        <li><a href="#unregistered" data-toggle="pill">{% translate 'Unregistered' %} ({{ total_unreg }})</a></li>
+                        <li><a href="#orphans" data-toggle="pill">{% translate 'Orphans' %} ({{ total_orphans }})</a></li>
+                        <li><a href="#tracking" data-toggle="pill">{% translate 'Member Tracking' %}</a></li>
                     </ul>
 
                     <div class="pull-right">
-                        {% trans "Last update:" %} {{ corpstats.last_update|naturaltime }}
+                        {% translate "Last update:" %} {{ corpstats.last_update|naturaltime }}
 
                         <a class="btn btn-success" type="button" href="{% url 'corpstat:update' corpstats.corp.corporation_id %}" title="Update Now">
                             <span class="glyphicon glyphicon-refresh"></span>
@@ -102,9 +102,9 @@
                                                                 {% if forloop.first %}
                                                                     <tr>
                                                                         <th></th>
-                                                                        <th class="text-center">{% trans "Character" %}</th>
-                                                                        <th class="text-center">{% trans "Corporation" %}</th>
-                                                                        <th class="text-center">{% trans "Alliance" %}</th>
+                                                                        <th class="text-center">{% translate "Character" %}</th>
+                                                                        <th class="text-center">{% translate "Corporation" %}</th>
+                                                                        <th class="text-center">{% translate "Alliance" %}</th>
                                                                         <th class="text-center"></th>
 
                                                                     </tr>
@@ -122,7 +122,7 @@
                                                                     <td class="text-center" style="width:5%">
                                                                         <a href="https://zkillboard.com/character/{{ alt.character_id }}/"
                                                                            class="label label-danger" target="_blank">
-                                                                            {% trans "Killboard" %}
+                                                                            {% translate "Killboard" %}
                                                                         </a>
                                                                     </td>
                                                                 </tr>
@@ -148,11 +148,11 @@
                                         <thead>
                                             <tr>
                                                 <th></th>
-                                                <th class="text-center">{% trans "Character" %}</th>
+                                                <th class="text-center">{% translate "Character" %}</th>
                                                 <th class="text-center"></th>
-                                                <th class="text-center">{% trans "Main Character" %}</th>
-                                                <th class="text-center">{% trans "Main Corporation" %}</th>
-                                                <th class="text-center">{% trans "Main Alliance" %}</th>
+                                                <th class="text-center">{% translate "Main Character" %}</th>
+                                                <th class="text-center">{% translate "Main Corporation" %}</th>
+                                                <th class="text-center">{% translate "Main Alliance" %}</th>
                                             </tr>
                                         </thead>
 
@@ -166,7 +166,7 @@
                                                             href="https://zkillboard.com/character/{{ member.character_id }}/"
                                                             class="label label-danger"
                                                             target="_blank"
-                                                        >{% trans "Killboard" %}</a>
+                                                        >{% translate "Killboard" %}</a>
                                                     </td>
                                                     <td class="text-center">{{ member.character_ownership.user.profile.main_character.character_name }}</td>
                                                     <td class="text-center">{{ member.character_ownership.user.profile.main_character.corporation_name }}</td>
@@ -183,7 +183,7 @@
                                                             href="https://zkillboard.com/character/{{ member.character_id }}/"
                                                             class="label label-danger"
                                                             target="_blank"
-                                                        >{% trans "Killboard" %}</a>
+                                                        >{% translate "Killboard" %}</a>
                                                     </td>
                                                     <td class="text-center"></td>
                                                     <td class="text-center"></td>
@@ -204,7 +204,7 @@
                                         <thead>
                                             <tr>
                                                 <th></th>
-                                                <th class="text-center">{% trans "Character" %}</th>
+                                                <th class="text-center">{% translate "Character" %}</th>
                                                 <th class="text-center"></th>
                                             </tr>
                                         </thead>
@@ -218,7 +218,7 @@
                                                         <a href="https://zkillboard.com/character/{{ member.character_id }}/"
                                                            class="label label-danger"
                                                            target="_blank">
-                                                            {% trans "Killboard" %}
+                                                            {% translate "Killboard" %}
                                                         </a>
                                                     </td>
                                                 </tr>
@@ -240,11 +240,11 @@
                                         <thead>
                                             <tr>
                                                 <th></th>
-                                                <th class="text-center">{% trans "Character" %}</th>
+                                                <th class="text-center">{% translate "Character" %}</th>
                                                 <th class="text-center"></th>
-                                                <th class="text-center">{% trans "Main Character" %}</th>
-                                                <th class="text-center">{% trans "Main Corporation" %}</th>
-                                                <th class="text-center">{% trans "Main Alliance" %}</th>
+                                                <th class="text-center">{% translate "Main Character" %}</th>
+                                                <th class="text-center">{% translate "Main Corporation" %}</th>
+                                                <th class="text-center">{% translate "Main Alliance" %}</th>
                                             </tr>
                                         </thead>
 
@@ -256,7 +256,7 @@
                                                     <td class="text-center"><a
                                                             href="https://zkillboard.com/character/{{ member.character_id }}/"
                                                             class="label label-danger"
-                                                            target="_blank">{% trans "Killboard" %}</a></td>
+                                                            target="_blank">{% translate "Killboard" %}</a></td>
                                                     <td class="text-center">{{ member.character_ownership.user.profile.main_character.character_name }}</td>
                                                     <td class="text-center">{{ member.character_ownership.user.profile.main_character.corporation_name }}</td>
                                                     <td class="text-center">{{ member.character_ownership.user.profile.main_character.alliance_name }}</td>
@@ -279,11 +279,11 @@
                                         <thead>
                                             <tr>
                                                 <th></th>
-                                                <th class="text-center">{% trans 'Character' %}</th>
-                                                <th class="text-center">{% trans 'Ship' %}</th>
-                                                <th class="text-center">{% trans 'Last Online' %}</th>
-                                                <th class="text-center">{% trans 'Joined' %}</th>
-                                                <th class="text-center">{% trans 'Registered' %}</th>
+                                                <th class="text-center">{% translate 'Character' %}</th>
+                                                <th class="text-center">{% translate 'Ship' %}</th>
+                                                <th class="text-center">{% translate 'Last Online' %}</th>
+                                                <th class="text-center">{% translate 'Joined' %}</th>
+                                                <th class="text-center">{% translate 'Registered' %}</th>
                                             </tr>
                                         </thead>
 
