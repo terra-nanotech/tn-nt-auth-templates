@@ -1,5 +1,7 @@
 {% extends 'allianceauth/base.html' %}
+
 {% load i18n %}
+
 {% block extra_css %}
     <style>
         .flex-container {
@@ -27,6 +29,7 @@
 
     {% block more_css %}{%endblock%}
 {% endblock extra_css %}
+
 {% block content %}
     <div>
         <br />
@@ -48,11 +51,13 @@
                         <li><a href="{% url 'fittings:view_all_fits' %}">{% translate "View All Fits" %}</a></li>
                         <li><a href="{% url 'fittings:view_all_categories' %}">{% translate "View All Categories" %}</a></li>
                     </ul>
+
                     {% if perms.fittings.manage %}
                         <div class="dropdown pull-right aa-fittings-add-dropdown">
                             <button class="btn btn-success btn-sm dropdown-toggle" type="button" id="manageDrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="fa fa-plus"></span>
                             </button>
+
                             <ul class="dropdown-menu" aria-labelledby="manageDrop">
                                 <li> <a href="{% url 'fittings:add_fit' %}">{% translate "Fitting" %}</a></li>
                                 <li> <a href="{% url 'fittings:add_doctrine' %}">{% translate "Doctrine" %}</a></li>
