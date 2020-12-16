@@ -1,0 +1,51 @@
+{% load i18n %}
+{% load evelinks %}
+
+{% block content %}
+     <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th class="col-lg-2">{% trans "Operation Name" %}</th>
+                    <th class="col lg-2">{% trans "Doctrine" %}</th>
+                    <th class="col-lg-2">{% trans "Form Up System" %}</th>
+                    <th class="col-lg-1">{% trans "Start Time" %}</th>
+                    <th class="col-lg-1">{% trans "Local Time" %}</th>
+                    <th class="col-lg-1">{% trans "Duration" %}</th>
+                    <th class="col-lg-1">{% trans "FC" %}</th>
+
+                    {% if perms.auth.optimer_management %}
+                        <th class="text-center col-lg-1">{% trans "Creator" %}</th>
+                        <th class="text-center col-lg-1">{% trans "Action" %}</th>
+                    {% endif %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for ops in timers %}
+                    <tr>
+                        <td>{{ ops.operation_name }}</td>
+                        <td>{{ ops.doctrine }}</td>
+                        <td>
+                            <a href="{{ ops.system|dotlan_solar_system_url }}">{{ ops.system }}</a>
+                        </td>
+                        <td nowrap>{{ ops.start | date:"Y-m-d H:i" }}</td>
+                        <td nowrap><div id="localtime{{ ops.id }}"></div><div id="countdown{{ ops.id }}"></div></td>
+                        <td>{{ ops.duration }}</td>
+                        <td>{{ ops.fc }}</td>
+                        {% if perms.auth.optimer_management %}
+                            <td>{{ ops.eve_character }}</td>
+                            <td>
+                                <a href="{% url 'optimer:remove' ops.id %}" class="btn btn-danger">
+                                    <span class="glyphicon glyphicon-remove"></span>
+                                </a>
+                                <a href="{% url 'optimer:edit' ops.id %}" class="btn btn-info">
+                                    <span class="glyphicon glyphicon-pencil"></span>
+                                </a>
+                            </td>
+                        {% endif %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock content %}

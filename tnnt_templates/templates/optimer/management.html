@@ -3,7 +3,7 @@
 {% load i18n %}
 {% get_current_language as LANGUAGE_CODE %}
 
-{% block page_title %}{% trans "Fleet Operation Management" %}{% endblock page_title %}
+{% block page_title %}{% translate "Fleet Operation Management" %}{% endblock page_title %}
 {% block extra_css %}{% endblock extra_css %}
 
 {% block content %}
@@ -16,27 +16,41 @@
             </div>
         </h1>
 
-        <div class="col-lg-12 text-center row">
-            <div class="label label-info text-left">
-                <b>{% trans "Current Eve Time:" %} </b>
-            </div>
-            <strong class="label label-info text-left" id="current-time"></strong>
-            <br  />
+        <div class="text-center">
+            <p>
+                <b class="label label-info text-left">{% translate "Current Eve Time:" %}</b>
+                <b class="label label-info text-left" id="current-time"></b>
+            </p>
         </div>
 
-        <h4><b>{% trans "Next Timers" %}</b></h4>
-        {% if future_timers %}
-            {% include "optimer/fleetoptable.html" with timers=future_timers %}
-        {% else %}
-            <div class="alert alert-warning text-center">{% trans "No upcoming timers." %}</div>
-        {% endif %}
+        <!-- upcoming timers -->
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <span class="panel-title">{% translate "Next Timers" %}</span>
+            </div>
 
-        <h4><b>{% trans "Past Timers" %}</b></h4>
-        {% if past_timers %}
-            {% include "optimer/fleetoptable.html" with timers=past_timers %}
-        {% else %}
-            <div class="alert alert-warning text-center">{% trans "No past timers." %}</div>
-        {% endif %}
+            <div class="panel-body">
+                {% if future_timers %}
+                    {% include "optimer/fleetoptable.html" with timers=future_timers %}
+                {% else %}
+                    <div class="alert alert-warning text-center">{% trans "No upcoming timers." %}</div>
+                {% endif %}
+            </div>
+        </div>
+
+        <!-- past timers -->
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <span class="panel-title">{% translate "Past Timers" %}</span>
+            </div>
+            <div class="panel-body">
+                {% if past_timers %}
+                    {% include "optimer/fleetoptable.html" with timers=past_timers %}
+                {% else %}
+                    <div class="alert alert-warning text-center">{% trans "No past timers." %}</div>
+                {% endif %}
+            </div>
+        </div>
     </div>
 
     {% include 'bundles/moment-js.html' with locale=True %}
@@ -44,38 +58,20 @@
     <script type="application/javascript">
         // Data
         var timers = [
-        {% for op in optimer %}
-            {
-                'id': {{ op.id }},
-                'start': moment("{{ op.start | date:"c" }}"),
-                'expired': false
-            },
-        {% endfor %}
+            {% for op in optimer %}
+                {
+                    'id': {{ op.id }},
+                    'start': moment("{{ op.start | date:"c" }}"),
+                    'expired': false
+                },
+            {% endfor %}
         ];
     </script>
+
     <script type="application/javascript">
-
-        timedUpdate();
-        setAllLocalTimes();
-
-        // Start timed updates
-        setInterval(timedUpdate, 1000);
-
-        function timedUpdate() {
-            updateClock();
-            updateAllTimers();
-        }
-
-        function updateAllTimers () {
-            var l = timers.length;
-            for (var i=0; i < l; ++i) {
-                if (timers[i].expired) continue;
-                updateTimer(timers[i]);
-            }
-        }
-
         /**
          * Update a timer
+         *
          * @param timer Timer information
          * @param timer.start Date of the timer
          * @param timer.id Id number of the timer
@@ -92,16 +88,6 @@
         }
 
         /**
-         * Set all local time fields
-         */
-        function setAllLocalTimes() {
-            var l = timers.length;
-            for (var i=0; i < l; ++i) {
-                setLocalTime(timers[i]);
-            }
-        }
-
-        /**
          * Set the local time info for the timer
          * @param timer Timer information
          * @param timer.start Date of the timer
@@ -111,8 +97,38 @@
             document.getElementById("localtime" + timer.id).innerHTML = timer.start.format("ddd @ LT");
         }
 
+        /**
+         * Set all local time fields
+         */
+        function setAllLocalTimes() {
+            var l = timers.length;
+            for (var i=0; i < l; ++i) {
+                setLocalTime(timers[i]);
+            }
+        }
+
         function updateClock() {
             document.getElementById("current-time").innerHTML = getCurrentEveTimeString();
         }
+
+        function updateAllTimers () {
+            var l = timers.length;
+
+            for (var i=0; i < l; ++i) {
+                if (timers[i].expired) continue;
+                updateTimer(timers[i]);
+            }
+        }
+
+        function timedUpdate() {
+            updateClock();
+            updateAllTimers();
+        }
+
+        timedUpdate();
+        setAllLocalTimes();
+
+        // Start timed updates
+        setInterval(timedUpdate, 1000);
     </script>
 {% endblock content %}
