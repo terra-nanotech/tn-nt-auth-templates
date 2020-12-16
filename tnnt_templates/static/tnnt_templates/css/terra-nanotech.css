@@ -30,6 +30,10 @@
         color: rgb(168, 143, 30);
     }
 
+    .navbar-brand {
+        padding: 10px 15px 15px 16px;
+    }
+
     .auth-navbar-top {
         margin-bottom: 0;
     }
