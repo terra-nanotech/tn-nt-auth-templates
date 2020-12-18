@@ -54,7 +54,10 @@
                 </div>
 
                 <div class="modal-body">
-                    <textarea style="width: 100%; height: 100%;" rows="25" onclick="this.select()">{{ fit.eft }}</textarea>
+                    <label for="eft-fitting">
+                        <p>{% translate "EFT Formatted Fitting" %}</p>
+                    </label>
+                    <textarea id="eft-fitting" style="width: 100%; height: 100%;" rows="25" onclick="this.select()">{{ fit.eft }}</textarea>
                 </div>
 
                 <div class="modal-footer">
@@ -349,21 +352,20 @@
                                     <div class="panel-body text-center">
                                         {{ fit.ship_type.type_name }}
                                     </div>
+                                </div>
 
+                                <div class="panel panel-warning">
                                     <div class="panel-heading text-center">
                                         {% translate "Fitting Notes" %}
                                     </div>
 
                                     <div class="panel-body">
                                         <div class="well">
-                                            <p style="white-space: pre-wrap; white-space: -moz-pre-wrap; white-space: -o-pre-wrap; word-wrap: break-word;">
-                                                {{ fit.description|linebreaks|urlize }}
-                                            </p>
+                                            {{ fit.description|linebreaks|urlize }}
                                         </div>
                                     </div>
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
