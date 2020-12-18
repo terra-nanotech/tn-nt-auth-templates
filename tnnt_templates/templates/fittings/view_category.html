@@ -65,6 +65,8 @@
                 {% endif %}
             </div>
 
+            <p>&nbsp;</p>
+
             <div class="panel-body btm">
                 <ul class="nav nav-tabs" style="margin-bottom: 10px;">
                     <li class="active mv"><a data-toggle="tab" href="#doctrines">{% translate "Doctrines" %}</a></li>
@@ -75,7 +77,7 @@
                     <div class="tab-pane fade-in active panel-default pd" id="doctrines">
                         <table class="table table-striped dataTable" role="table" id="docTable">
                             <thead>
-                                <th> </th>
+                                <th></th>
                                 <th>{% translate "Name" %}</th>
                                 <th>{% translate "Categories" %}</th>
                                 <th>{% translate "Description" %}</th>
@@ -92,11 +94,19 @@
                                 {% else %}
                                     {% for doc in docs %}
                                         <tr>
-                                            <td> <a href="{% url 'fittings:view_doctrine' doc.pk %}"><img src="{{ doc.icon_url }}" class="img-circle" style="display: block; margin: auto;"/> </a></td>
-                                            <td> <a href="{% url 'fittings:view_doctrine' doc.pk %}">{{ doc.name }}</a> </td>
+                                            <td>
+                                                <a href="{% url 'fittings:view_doctrine' doc.pk %}">
+                                                    <img src="{{ doc.icon_url }}" class="img-circle" style="display: block; margin: auto;"/>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <a href="{% url 'fittings:view_doctrine' doc.pk %}">{{ doc.name }}</a>
+                                            </td>
                                             <td>
                                                 {% for cate in doc.category.all %}
-                                                <span class="label" style="background-color: {{cate.color}}"><a href="{% url 'fittings:view_category' cate.pk %}" class="nostyle">{{cate.name}}</a></span>
+                                                    <span class="label" style="background-color: {{cate.color}}">
+                                                        <a href="{% url 'fittings:view_category' cate.pk %}" class="nostyle">{{cate.name}}</a>
+                                                    </span>
                                                 {% endfor %}
                                             </td>
                                             <td> {{ doc.description|linebreaks|urlize }} </td>
@@ -134,7 +144,9 @@
                                             <td><a href="{% url 'fittings:view_fit' fit.pk %}">{{ fit.name }}</a></td>
                                             <td>
                                                 {% for cate in cats|get_item:fit.pk %}
-                                                    <span class="label" style="background-color: {{cate.color}}"><a href="{% url 'fittings:view_category' cate.pk %}" class="nostyle">{{cate.name}}</a></span>
+                                                    <span class="label" style="background-color: {{cate.color}}">
+                                                        <a href="{% url 'fittings:view_category' cate.pk %}" class="nostyle">{{cate.name}}</a>
+                                                    </span>
                                                 {% endfor %}
                                             </td>
                                             <td>{{ fit.description|linebreaks|urlize }}</td>
@@ -153,15 +165,24 @@
 
 {% block extra_javascript %}
     {% include 'bundles/datatables-js.html' %}
+
+    <script type="application/javascript">
+        $(document).ready(function() {
+            {% if docs %}
+                $('#docTable').DataTable({
+                    "order": [[ 1, "asc" ]],
+                });
+            {% endif %}
+
+            {% if fits %}
+                $('#fitTable').DataTable();
+            {% endif %}
+
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
 {% endblock %}
 
 {% block extra_script %}
-    $(document).ready(function(){
-        $('#docTable').DataTable({
-            "order": [[ 1, "asc" ]],
-        });
-        $('[data-toggle="tooltip"]').tooltip();
-        $('#fitTable').DataTable();
-        $('[data-toggle="tooltip"]').tooltip();
-    })
+
 {% endblock %}

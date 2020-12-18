@@ -72,11 +72,18 @@
 
 {% block extra_javascript %}
     {% include 'bundles/datatables-js.html' %}
+
+    <script type="application/javascript">
+        $(document).ready(function() {
+            {% if fits %}
+                $('#fitTable').DataTable();
+            {% endif %}
+
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
 {% endblock %}
 
 {% block extra_script %}
-    $(document).ready(function(){
-        $('#fitTable').DataTable();
-        $('[data-toggle="tooltip"]').tooltip();
-    })
+
 {% endblock %}

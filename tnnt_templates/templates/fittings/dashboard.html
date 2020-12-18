@@ -76,13 +76,20 @@
 
 {% block extra_javascript %}
     {% include 'bundles/datatables-js.html' %}
+
+    <script type="application/javascript">
+        $(document).ready(function(){
+            {% if docs %}
+                $('#docTable').DataTable({
+                    "order": [[ 1, "asc" ]],
+                });
+            {% endif %}
+
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
 {% endblock %}
 
 {% block extra_script %}
-    $(document).ready(function(){
-        $('#docTable').DataTable({
-            "order": [[ 1, "asc" ]],
-        });
-        $('[data-toggle="tooltip"]').tooltip();
-    })
+
 {% endblock %}
