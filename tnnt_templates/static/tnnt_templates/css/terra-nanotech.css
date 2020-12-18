@@ -70,6 +70,7 @@
     }
 
     .nav-pills > li.active > a,
+    .nav-pills > li.active > a:focus,
     .nav-pills > li.active > a:hover {
         background-color: rgb(62, 68, 76);
         background-image: none;
