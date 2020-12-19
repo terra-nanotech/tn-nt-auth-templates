@@ -6,6 +6,26 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.0.0] - 2020.12.19
+
+### Added
+
+- Own template for Terra Nanotech
+- Template overrides for the external apps we use, to accommodate with the fixes to
+  bootstrap we made
+
+### Fixed
+
+- Many wrongly used bootstrap classes and markup within the original Auth template
+
+
+## [0.0.6] - 2020.12.14
+
+### Fixed
+
+- Missing `}` in a django template
+
+
 ## [0.0.5] - 2020.12.14
 
 ### Added
@@ -38,7 +58,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Changed
 
-- Group names on dashboard are now nice labels instead of an ugly table
+- Group names on the dashboard are now nice labels instead of an ugly table
 
 
 ## [0.0.1] - 2020.12.10
