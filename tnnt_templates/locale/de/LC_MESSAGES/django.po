@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: TN-NT Auth Templates\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-09-02 18:06+0200\n"
+"POT-Creation-Date: 2020-12-18 12:41+0100\n"
 "PO-Revision-Date: 2020-09-02 18:16+0200\n"
 "Last-Translator: \n"
 "Language-Team: Terra Nanotech\n"
@@ -15,14 +15,18 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SearchPath-0: .\n"
 
-#: tnnt_templates/templates/public/login.html:25
+#: templates/public/login.html:27
 msgid "For information on SSO, ESI and security read the CCP Dev Blog"
-msgstr "Für Informationen zu SSO, ESI und Sicherheit, lies bitte den CCP Dev-Blog"
+msgstr ""
+"Für Informationen zu SSO, ESI und Sicherheit, lies bitte den CCP Dev-Blog"
 
-#: tnnt_templates/templates/public/login.html:30
+#: templates/public/login.html:32
 msgid "Manage ESI Applications"
 msgstr "ESI Applikationen verwalten"
 
-#: tnnt_templates/templates/registration/registration_form.html:17
+#: templates/public/register.html:19
+#: templates/registration/registration_form.html:19
 msgid "Please provide your email address for registration confirmation."
-msgstr "Bitte trage eine E-Mail Adresse  ein. Du erhältst dann einen Link zur Bestätigung Deine Anmeldung."
+msgstr ""
+"Bitte trage eine E-Mail Adresse  ein. Du erhältst dann einen Link zur "
+"Bestätigung Deine Anmeldung."

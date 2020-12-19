@@ -1,11 +1,11 @@
 {% extends 'allianceauth/base.html' %}
 {% load i18n %}
 
-{% block page_title %}{% trans "Structures" %}{% endblock %}
+{% block page_title %}{% translate "Structures" %}{% endblock %}
 
 {% block content %}
     <h2 class="text-center">{{ page_title }}</h2>
-    <div>
+    <div class="clearfix">
         {% block details %}{% endblock %}
     </div>
 {% endblock %}

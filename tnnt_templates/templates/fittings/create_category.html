@@ -36,11 +36,13 @@
             <div class="panel-heading">
                 {% translate "New Category" %}
             </div>
+
             <div class="panel-body">
                 <div class="row">
                     <div class="col-md-10 col-md-offset-1">
                         <form class="form" role="form" action="" method="POST">
                             {% csrf_token %}
+
                             <div class="row">
                                 <div class="col-sm-10">
                                     <div class="form-group">
@@ -48,6 +50,7 @@
                                         <input type="text" class="form-control" name="name" id="name" required/>
                                     </div>
                                 </div>
+
                                 <div class="col-sm-2">
                                     <div class="form-group">
                                         <label for="color">{% translate "Category Color" %}</label>
@@ -57,11 +60,14 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="row">
                                 <div class="col-sm-12">
                                     <div class="form-group">
                                         <label for="groupSelect" style="margin-bottom: 0;">{% translate "Select Groups" %}</label>
+
                                         <span class="help-block" style="margin-top: 0; margin-bottom: 0; font-size: 10pt; font-style: italic;">{% translate "Only selected groups will have access to fittings and doctrines in this category. If no groups are selected the category will be visible to all with fittings module access." %}</span>
+
                                         <select name="groupSelect" id="groupSelect" multiple>
                                             {% for group in groups %}
                                             <option value="{{group.pk}}">{{group.name}}</option>
@@ -70,10 +76,12 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label for="fitSelect">{% translate "Select Fits" %}</label>
+
                                         <select name="fitSelect" id="fitSelect" multiple>
                                             {% for fit in fits %}
                                             <option value="{{fit.pk}}">{{fit.name}}</option>
@@ -81,9 +89,11 @@
                                         </select>
                                     </div>
                                 </div>
+
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label for="docSelect">{% translate "Select Doctrines" %}</label>
+
                                         <select name="docSelect" id="docSelect" multiple>
                                             {% for doc in docs %}
                                             <option value="{{doc.pk}}">{{doc.name}}</option>
@@ -92,6 +102,7 @@
                                     </div>
                                 </div>
                             </div>
+
                             <br />
                             <button class="btn btn-primary btn-block" type="submit">{% translate "Submit" %}</button>
                         </form>
@@ -122,5 +133,4 @@ new SlimSelect({
 
 new SlimSelect({select: "#fitSelect", hideSelectedOption: true});
 new SlimSelect({select: "#docSelect", hideSelectedOption: true});
-
 {% endblock %}

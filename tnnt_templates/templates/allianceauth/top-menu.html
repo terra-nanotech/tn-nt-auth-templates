@@ -31,8 +31,10 @@
                         </a>
                     </li>
                 {% else %}
-                    <li><a href="{% url 'notifications:list' %}">
-                        <i class="far fa-bell"></i></a>
+                    <li>
+                        <a href="{% url 'notifications:list' %}">
+                            <i class="far fa-bell"></i>
+                        </a>
                     </li>
                 {% endif %}
 
@@ -44,8 +46,8 @@
 
                 <li><a href="https://terra-nanotech.de/" target="_blank" rel="noopener noreferer">TN-NT Website</a></li>
                 <li><a href="https://forum.terra-nanotech.de/" target="_blank" rel="noopener noreferer">TN-NT Forums</a></li>
-                <li><a href="https://wiki.terra-nanotech.de/" target="_blank" rel="noopener noreferer">TN-NT Wiki</a></li>
-                <li><a href="https://seat.terra-nanotech.de/" target="_blank" rel="noopener noreferer">TN-NT SeAT</a></li>
+{#                <li><a href="https://wiki.terra-nanotech.de/" target="_blank" rel="noopener noreferer">TN-NT Wiki</a></li>#}
+{#                <li><a href="https://seat.terra-nanotech.de/" target="_blank" rel="noopener noreferer">TN-NT SeAT</a></li>#}
 
                 {% if user.is_authenticated %}
                     <li><a href="{% url 'logout' %}">{% translate "Logout" %}</a></li>
@@ -55,7 +57,7 @@
 
                 {% if user.is_superuser %}
                     <li>
-                        <a class="navbar-brand" style="margin-left: -4px;" href="https://allianceauth.readthedocs.io/" target="_blank">
+                        <a href="https://allianceauth.readthedocs.io/" target="_blank">
                             <i class="fas fa-question-circle fa-fw"></i>
                         </a>
                     </li>
