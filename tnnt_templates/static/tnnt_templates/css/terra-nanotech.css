@@ -80,6 +80,20 @@
         border: none;
     }
 
+    /* in case someone puts the nav into a panel header ...
+    ------------------------------------------------------- */
+    .panel-heading .nav-pills > li > a:hover,
+    .panel-heading .nav-pills > li.active > a,
+    .panel-heading .nav-pills > li.active > a:focus,
+    .panel-heading .nav-pills > li.active > a:hover {
+        background-color: rgba(200, 200, 200, 0.2);
+        background-image: none;
+        background-repeat: no-repeat;
+        -webkit-filter: none;
+        filter: none;
+        border: none;
+    }
+
     .nav-pills > li.disabled > a,
     .nav-pills > li.disabled > a:hover {
         background-image: none;
@@ -219,7 +233,6 @@
         background-color: rgba(79, 189, 79, 0.5);
     }
 
-
     .table > thead > tr > td.info,
     .table > tbody > tr > td.info,
     .table > tfoot > tr > td.info,
@@ -242,7 +255,6 @@
     .table-hover > tbody > tr.info:hover > th {
         background-color: rgba(70, 184, 218, 0.5);
     }
-
 
     .table > thead > tr > td.warning,
     .table > tbody > tr > td.warning,
@@ -529,6 +541,7 @@
     .progress-bar-info {
         background-color: rgba(91, 192, 222, 0.5);
     }
+
     .progress-bar-warning {
         background-color: rgba(248, 148, 6, 0.5);
     }
@@ -581,7 +594,7 @@
     }
 
     .table-hover > tbody > tr:nth-of-type(odd):hover {
-        background-color: rgba(73,81,90,.8);
+        background-color: rgba(73, 81, 90, 0.8);
     }
 }
 
