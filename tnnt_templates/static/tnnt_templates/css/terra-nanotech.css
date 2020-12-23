@@ -578,6 +578,58 @@
     .panel-body {
         min-height: 100px;
     }
+
+    .panel-default > .panel-heading {
+        background-color: rgba(62, 68, 76, 0.6);
+    }
+
+    .panel-default > .panel-heading .badge {
+        background-color: rgba(200, 200, 200, 0.75);
+    }
+
+    .panel-primary > .panel-heading {
+        background-color: rgba(122, 130, 136, 0.6);
+    }
+
+    .panel-primary > .panel-heading .badge {
+        background-color: rgba(255, 255, 255, 0.75);
+    }
+
+    .panel-success > .panel-heading {
+        background-color: rgba(98, 196, 98, 0.6);
+    }
+
+    .panel-success > .panel-heading .badge {
+        background-color: rgba(255, 255, 255, 0.75);
+    }
+
+    .panel-info {
+        border-color: rgba(0, 0, 0, 0.6);
+    }
+
+    .panel-info > .panel-heading {
+        background-color: rgba(91, 192, 222, 0.6);
+    }
+
+    .panel-info > .panel-heading .badge {
+        background-color: rgba(255, 255, 255, 0.75);
+    }
+
+    .panel-warning > .panel-heading {
+        background-color: rgba(248, 148, 6, 0.6);
+    }
+
+    .panel-warning > .panel-heading .badge {
+        background-color: rgba(255, 255, 255, 0.75);
+    }
+
+    .panel-danger > .panel-heading {
+        background-color: rgba(238, 95, 91, 0.6);
+    }
+
+    .panel-danger > .panel-heading .badge {
+        background-color: rgba(255, 255, 255, 0.75);
+    }
 }
 
 /* tables
