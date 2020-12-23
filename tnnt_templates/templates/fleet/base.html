@@ -2,7 +2,7 @@
 
 {% load i18n %}
 
-{% block page_title %}{% trans "fleet" %}{% endblock %}
+{% block page_title %}{% translate "fleet" %}{% endblock %}
 
 {% block content %}
     <br />
@@ -10,13 +10,13 @@
         <div class="container-fluid">
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">{% trans "Toggle navigation" %}</span>
+                    <span class="sr-only">{% translate "Toggle navigation" %}</span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
 
-                <a class="navbar-brand" href="{% url 'fleet:dashboard' %}">{% trans "Available Fleets" %}</a>
+                <a class="navbar-brand" href="{% url 'fleet:dashboard' %}">{% translate "Available Fleets" %}</a>
             </div>
 
             <ul class="nav navbar-nav">
