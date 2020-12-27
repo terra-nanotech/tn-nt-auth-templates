@@ -87,24 +87,37 @@
     </div>
 {% endblock content %}
 
-{% block extra_javascript %}
-    {% include 'bundles/datatables-js.html' %}
-{% endblock %}
-
 {% block extra_css %}
     {% include 'bundles/datatables-css.html' %}
 {% endblock %}
 
-{% block extra_script %}
-    $(document).ready(function(){
-        $('#tab_group_members').DataTable({
-            order: [[0, "asc"]],
-            columnDefs: [
-                {
-                    "sortable": false,
-                    "targets": [2]
-                },
-            ]
+{% block extra_javascript %}
+    {% include 'bundles/datatables-js.html' %}
+
+    <script type="application/javascript">
+        $(document).ready(function() {
+            {% if group.user_set %}
+                $('#tab_group_members').DataTable({
+                    order: [[0, "asc"]],
+                    columnDefs: [
+                        {
+                            width: '250px',
+                            targets: [0]
+                        },
+                        {
+                            width: '150px',
+                            targets: [2]
+                        },
+                        {
+                            orderable: false,
+                            targets: [2]
+                        }
+                    ]
+                });
+            {% endif %}
         });
-    });
+    </script>
+{% endblock %}
+
+{% block extra_script %}
 {% endblock %}
