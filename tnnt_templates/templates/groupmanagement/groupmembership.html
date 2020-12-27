@@ -3,7 +3,6 @@
 {% load i18n %}
 
 {% block page_title %}{% translate "Groups Membership" %}{% endblock page_title %}
-{% block extra_css %}{% endblock extra_css %}
 
 {% block content %}
     <div class="clearfix">
@@ -17,7 +16,7 @@
 
             <div class="panel-body">
                 {% if groups %}
-                    <table class="table table-striped">
+                    <table class="table table-striped" id="group-membership-overview">
                         <thead>
                             <tr>
                                 <th>{% translate "Name" %}</th>
@@ -78,10 +77,41 @@
     </div>
 {% endblock content %}
 
+{% block extra_css %}
+    {% include 'bundles/datatables-css.html' %}
+{% endblock extra_css %}
+
 {% block extra_javascript %}
+    {% include 'bundles/datatables-js.html' %}
     {% include 'bundles/clipboard-js.html' %}
 
     <script>
-        new ClipboardJS('#clipboard-copy');
+        $(document).ready(function() {
+            {% if groups %}
+                $('#group-membership-overview').DataTable({
+                    paging: false,
+                    info: false,
+                    order: [
+                        [0, 'asc']
+                    ],
+                    columnDefs: [
+                        {
+                            width: '250px',
+                            targets: [0]
+                        },
+                        {
+                            width: '150px',
+                            targets: [4]
+                        },
+                        {
+                            orderable: false,
+                            targets: [1,2,3,4]
+                        }
+                    ],
+                });
+            {% endif %}
+
+            new ClipboardJS('#clipboard-copy');
+        });
     </script>
 {% endblock %}
