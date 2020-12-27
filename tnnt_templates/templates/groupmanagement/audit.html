@@ -71,62 +71,47 @@
     </div>
 {% endblock %}
 
-{% block extra_javascript %}
-    {% include 'bundles/datatables-js.html' %}
-    {% include 'bundles/moment-js.html' with locale=True %}
-    <script type="application/javascript" src="{% static 'js/filterDropDown/filterDropDown.min.js' %}"></script>
-{% endblock %}
-
 {% block extra_css %}
     {% include 'bundles/datatables-css.html' %}
 {% endblock %}
 
+{% block extra_javascript %}
+    {% include 'bundles/datatables-js.html' %}
+    {% include 'bundles/moment-js.html' with locale=True %}
+    <script type="application/javascript" src="{% static 'js/filterDropDown/filterDropDown.min.js' %}"></script>
+
+    <script type="application/javascript">
+        $(document).ready(function() {
+            $('#log-entries').DataTable({
+                order: [[0, 'desc'], [1, 'asc']],
+                filterDropDown:
+                {
+                    columns: [
+                        {
+                            idx: 1
+                        },
+                        {
+                            idx: 2
+                        },
+                        {
+                            idx: 3
+                        },
+                        {
+                            idx: 4
+                        },
+                        {
+                            idx: 5
+                        },
+                        {
+                            idx: 6
+                        }
+                    ],
+                    bootstrap: true
+                },
+            });
+        });
+    </script>
+{% endblock %}
+
 {% block extra_script %}
-    $.fn.dataTable.moment = function(format, locale) {
-        var types = $.fn.dataTable.ext.type;
-
-        // Add type detection
-        types.detect.unshift(function(d) {
-            return moment(d, format, locale, true).isValid() ?
-                'moment-'+format :
-                null;
-        });
-
-        // Add sorting method - use an integer for the sorting
-        types.order[ 'moment-'+format+'-pre' ] = function(d) {
-            return moment(d, format, locale, true).unix();
-        };
-    };
-
-    $(document).ready(function(){
-        $.fn.dataTable.moment('YYYY-MMM-D, HH:mm');
-
-        $('#log-entries').DataTable({
-            order: [[0, 'desc'], [1, 'asc']],
-            filterDropDown:
-            {
-                columns: [
-                    {
-                        idx: 1
-                    },
-                    {
-                        idx: 2
-                    },
-                    {
-                        idx: 3
-                    },
-                    {
-                        idx: 4
-                    },
-                    {
-                        idx: 5
-                    },
-                    {
-                        idx: 6
-                    }
-                ],
-                bootstrap: true
-            },
-        });
-    });
 {% endblock %}
