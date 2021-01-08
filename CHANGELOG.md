@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.1.2] - 2021-01-09
+
+### Fixed
+
+- django.template.exceptions.TemplateSyntaxError:
+  Invalid block tag on line 22: 'translate"Ratio"', expected 'endblock'.
+
 ## [1.1.2] - 2021-01-06
 
 ### Added
