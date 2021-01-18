@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.2.0] - 2021-01-18
+
+### Added
+
+- Templates for AFAT statistics to set the right font color on the canvas elements
+
+
 ## [1.1.3] - 2021-01-09
 
 ### Fixed
