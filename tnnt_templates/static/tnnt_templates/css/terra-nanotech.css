@@ -55,6 +55,7 @@
         -webkit-filter: none;
         filter: none;
         border: none;
+        color: rgb(255, 255, 255);
     }
 
     .nav-pills > li > a:hover {
