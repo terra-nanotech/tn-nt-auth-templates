@@ -49,7 +49,7 @@ class Timers(commands.Cog):
 
         if (
             ctx.message.channel.id not in settings.ADMIN_DISCORD_BOT_CHANNELS
-            and ctx.message.channel.id not in settings.DISCORDBOT_TIMER_CHANNELS
+            and ctx.message.channel.id not in settings.DISCORD_BOT_TIMER_CHANNELS
         ):
             return await ctx.message.add_reaction(chr(0x1F44E))
 
