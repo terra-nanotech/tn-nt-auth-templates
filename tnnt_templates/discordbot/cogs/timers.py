@@ -75,21 +75,25 @@ class Timers(commands.Cog):
             else:
                 embed.colour = Color.from_rgb(255, 255, 255)
 
-            creator_name = next_timer.user.username
             user_has_no_profile = False
 
-            try:
-                creator_profile = next_timer.user.profile
-            except Exception:
-                user_has_no_profile = True
+            if next_timer.user is not None:
+                creator_name = next_timer.user.username
 
-            if user_has_no_profile is False:
-                if creator_profile.main_character is not None:
-                    creator_name = creator_profile.main_character.character_name
+                try:
+                    creator_profile = next_timer.user.profile
+                except Exception:
+                    user_has_no_profile = True
 
-            embed.set_footer(
-                text="Timer added by {creator_name}".format(creator_name=creator_name)
-            )
+                if user_has_no_profile is False:
+                    if creator_profile.main_character is not None:
+                        creator_name = creator_profile.main_character.character_name
+
+                embed.set_footer(
+                    text="Timer added by {creator_name}".format(
+                        creator_name=creator_name
+                    )
+                )
 
             embed.add_field(name="Structure:", value=next_timer.structure_type.name)
 

@@ -6,12 +6,18 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.2.5] - 2021-01-23
+
+### Fixed
+
+- AttributeError: 'NoneType' object has no attribute 'username'
+
+
 ## [1.2.4] - 2021-01-23
 
 ### Fixed
 
 - Typo in configuration constant
-
 
 
 ## [1.2.3] - 2021-01-23
