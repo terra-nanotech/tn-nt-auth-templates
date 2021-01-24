@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.2.6] - 2021-01-24
+
+### Changed
+
+- Set "Roboto" as the default font
+
+
 ## [1.2.5] - 2021-01-23
 
 ### Fixed
