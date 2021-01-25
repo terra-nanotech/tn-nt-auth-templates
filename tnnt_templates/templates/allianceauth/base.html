@@ -1,6 +1,7 @@
 {% load static %}
 {% load i18n %}
 {% load navactive %}
+{% load auth_notifications %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -8,7 +9,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="">
-        <meta name="author" content="">
+        <meta name="author" content="Terra Nanotech">
 
         {% include 'allianceauth/icons.html' %}
 
@@ -56,7 +57,17 @@
             </div>
         {% endif %}
 
+        <!-- share data with JS part -->
+        <div
+            id="dataExport"
+            data-notificationsListViewUrl="{% url 'notifications:list' %}"
+            data-notificationsRefreshTime="{% notifications_refresh_time %}"
+            data-userNotificationsCountViewUrl="{% url 'notifications:user_notifications_count' request.user.pk %}"
+        >
+        </div>
         {% include 'bundles/bootstrap-js.html' %}
+        {% include 'bundles/jquery-visibility-js.html' %}
+        <script src="{% static 'js/refresh_notifications.js' %}"></script>
 
         {% block extra_javascript %}
         {% endblock extra_javascript %}
