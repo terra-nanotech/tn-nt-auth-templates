@@ -373,6 +373,10 @@
         border-radius: 6px;
     }
 
+    .img-circle {
+        border-radius: 6px;
+    }
+
     .img-default {
         border-radius: 0;
     }
