@@ -419,8 +419,12 @@
         justify-content: center;
     }
 
-    .navbar-nav > li.top-user-menu a {
+    .navbar-nav > li.top-user-menu.with-main-character a {
         padding: 9px 15px;
+    }
+
+    .navbar-nav > li.top-user-menu.with-main-character > .dropdown-menu {
+        padding-top: 0.5rem;
     }
 }
 

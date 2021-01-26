@@ -25,7 +25,7 @@
                     {% include 'allianceauth/notifications_menu_item.html' %}
                 </li>
 
-                <li class="top-user-menu dropdown">
+                <li class="top-user-menu dropdown{% if request.user.profile.main_character %} with-main-character{% endif %}">
                     <a href="#" class="dropdown-toggle" type="button" id="top-user-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                         {% if request.user.profile.main_character %}
                             {% with request.user.profile.main_character as main %}
@@ -36,10 +36,10 @@
                         {% endif %}
                         <span class="caret"></span>
                     </a>
-                    <ul class="dropdown-menu" aria-labelledby="top-user-menu" style="padding-top: 1rem;">
+                    <ul class="dropdown-menu" aria-labelledby="top-user-menu">
                         <!-- user avatar -->
-                        <li>
-                            {% if request.user.profile.main_character %}
+                        {% if request.user.profile.main_character %}
+                            <li>
                                 {% with request.user.profile.main_character as main %}
                                     <p class="text-center">
                                         <img class="ra-avatar" src="{{ main.character_id|character_portrait_url:256 }}" alt="{{ main.character_name }}">
@@ -51,8 +51,9 @@
                                         <span class="text-white text-primary" style="display: block; font-size: 1rem;">{{ main.alliance_name }}</span>
                                     </p>
                                 {% endwith %}
-                            {% endif %}
-                        </li>
+                            </li>
+                            <li role="separator" class="divider"></li>
+                        {% endif %}
 
                         <!-- night mode toggle -->
                         {% include 'allianceauth/night-toggle.html' %}
