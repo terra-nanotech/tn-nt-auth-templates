@@ -6,6 +6,16 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.3.0] - 2021-xx-xx
+
+### Added
+
+- Compatibility with the notification changes from upstream
+  ([see here](https://gitlab.com/allianceauth/allianceauth/-/merge_requests/1218))
+- Moved top menu into a user menu dropdown
+
+
+
 ## [1.2.6] - 2021-01-24
 
 ### Changed

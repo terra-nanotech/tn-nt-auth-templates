@@ -96,7 +96,7 @@
                                         <tr>
                                             <td>
                                                 <a href="{% url 'fittings:view_doctrine' doc.pk %}">
-                                                    <img src="{{ doc.icon_url }}" class="img-circle" style="display: block; margin: auto;"/>
+                                                    <img src="{{ doc.icon_url }}" class="img-rounded" style="display: block; margin: auto;"/>
                                                 </a>
                                             </td>
                                             <td>
@@ -104,15 +104,15 @@
                                             </td>
                                             <td>
                                                 {% for cate in doc.category.all %}
-                                                    <span class="label" style="background-color: {{cate.color}}">
-                                                        <a href="{% url 'fittings:view_category' cate.pk %}" class="nostyle">{{cate.name}}</a>
+                                                    <span class="label" style="background-color: {{ cate.color }}">
+                                                        <a href="{% url 'fittings:view_category' cate.pk %}" class="nostyle">{{ cate.name }}</a>
                                                     </span>
                                                 {% endfor %}
                                             </td>
                                             <td> {{ doc.description|linebreaks|urlize }} </td>
                                             <td>
                                                 {% for fitting in doc_dict|get_item:doc.pk %}
-                                                    <img src="{{ fitting.ship_type_type_id|type_render_url:32 }}" class="img-circle" data-toggle="tooltip" data-placement="bottom" title="{{ fitting.ship_type.type_name }}"/>
+                                                    <img src="{{ fitting.ship_type_type_id|type_render_url:32 }}" class="img-rounded" data-toggle="tooltip" data-placement="bottom" title="{{ fitting.ship_type.type_name }}"/>
                                                 {% endfor %}
                                             </td>
                                         </tr>
@@ -144,13 +144,13 @@
                                             <td><a href="{% url 'fittings:view_fit' fit.pk %}">{{ fit.name }}</a></td>
                                             <td>
                                                 {% for cate in cats|get_item:fit.pk %}
-                                                    <span class="label" style="background-color: {{cate.color}}">
-                                                        <a href="{% url 'fittings:view_category' cate.pk %}" class="nostyle">{{cate.name}}</a>
+                                                    <span class="label" style="background-color: {{ cate.color }}">
+                                                        <a href="{% url 'fittings:view_category' cate.pk %}" class="nostyle">{{ cate.name }}</a>
                                                     </span>
                                                 {% endfor %}
                                             </td>
                                             <td>{{ fit.description|linebreaks|urlize }}</td>
-                                            <td><img class="img-circle" src="{{ fit.ship_type_type_id|type_render_url:128 }}" style="height: 32px; width: 32px;" title="{{ fit.ship_type.type_name }}"> {{ fit.ship_type.type_name }}</td>
+                                            <td><img class="img-rounded" src="{{ fit.ship_type_type_id|type_render_url:128 }}" style="height: 32px; width: 32px;" title="{{ fit.ship_type.type_name }}"> {{ fit.ship_type.type_name }}</td>
                                         </tr>
                                     {% endfor %}
                                 {% endif %}

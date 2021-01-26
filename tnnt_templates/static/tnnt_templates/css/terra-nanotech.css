@@ -23,6 +23,7 @@
     .h1, .h2, .h3, .h4, .h5, .h6,
     h1, h2, h3, h4, h5, h6 {
         font-family: Roboto, "Helvetica Neue", sans-serif;
+        font-weight: 400;
     }
 
     .tooltip {
@@ -369,6 +370,15 @@
     img {
         max-width: 100%;
         height: auto;
+        border-radius: 6px;
+    }
+
+    .img-circle {
+        border-radius: 6px;
+    }
+
+    .img-default {
+        border-radius: 0;
     }
 
     .gray-icon-color .fa {
@@ -417,6 +427,14 @@
 
     .flex-center-horizontal {
         justify-content: center;
+    }
+
+    .navbar-nav > li.top-user-menu.with-main-character a {
+        padding: 9px 15px;
+    }
+
+    .navbar-nav > li.top-user-menu.with-main-character > .dropdown-menu {
+        padding-top: 0.5rem;
     }
 }
 
@@ -583,9 +601,10 @@
     .panel-title {
         display: block;
         font-size: 1rem;
-        font-family: Roboto, "Helvetica Neue", sans-serif;
+        /*font-family: Roboto, "Helvetica Neue", sans-serif;*/
+        font-family: Georgia, Times, serif;
         font-weight: 700;
-        line-height: 1.1;
+        /*line-height: 1.1;*/
         color: inherit;
         margin-top: 0.25rem;
         margin-bottom: 0.25rem;
