@@ -31,7 +31,7 @@
                                         <table class="table">
                                             <tr>
                                                 <td class="text-center">
-                                                    <img class="ra-avatar"
+                                                    <img class="img-rounded ra-avatar"
                                                          src="{{ main.portrait_url_128 }}"
                                                          alt="{{ main.character_name }}">
                                                 </td>
@@ -46,7 +46,7 @@
                                         <table class="table">
                                             <tr>
                                                 <td class="text-center">
-                                                    <img class="ra-avatar"
+                                                    <img class="img-rounded ra-avatar"
                                                          src="{{ main.corporation_logo_url_128 }}"
                                                          alt="{{ main.corporation_name }}">
                                                 </td>
@@ -62,7 +62,7 @@
                                             <table class="table">
                                                 <tr>
                                                     <td class="text-center">
-                                                        <img class="ra-avatar"
+                                                        <img class="img-rounded ra-avatar"
                                                              src="{{ main.alliance_logo_url_128 }}"
                                                              alt="{{ main.alliance_name }}">
                                                     </td>
@@ -136,24 +136,29 @@
                 <table class="table table-striped hidden-xs">
                     <thead>
                         <tr>
-                            <th class="text-center"></th>
-                            <th class="text-center">{% translate 'Name' %}</th>
-                            <th class="text-center">{% translate 'Corp' %}</th>
-                            <th class="text-center">{% translate 'Alliance' %}</th>
+{#                            <th></th>#}
+                            <th>{% translate 'Name' %}</th>
+                            <th>{% translate 'Corp' %}</th>
+                            <th>{% translate 'Alliance' %}</th>
                         </tr>
                     </thead>
 
                     <tbody>
                     {% for char in characters %}
                         <tr>
-                            <td class="text-center">
-                                <img class="ra-avatar img-circle"
+{#                            <td>#}
+{#                                <img class="ra-avatar img-rounded"#}
+{#                                     src="{{ char.portrait_url_32 }}"#}
+{#                                     alt="{{ char.character_name }}">#}
+{#                            </td>#}
+                            <td>
+                                <img class="ra-avatar img-rounded"
                                      src="{{ char.portrait_url_32 }}"
                                      alt="{{ char.character_name }}">
+                                {{ char.character_name }}
                             </td>
-                            <td class="text-center">{{ char.character_name }}</td>
-                            <td class="text-center">{{ char.corporation_name }}</td>
-                            <td class="text-center">{{ char.alliance_name }}</td>
+                            <td>{{ char.corporation_name }}</td>
+                            <td>{{ char.alliance_name|default:"" }}</td>
                         </tr>
                     {% endfor %}
                     </tbody>
@@ -164,13 +169,12 @@
                     {% for char in characters %}
                         <tr>
                             <td class="text-center" style="vertical-align: middle;">
-                                <img class="ra-avatar img-circle"
+                                <img class="ra-avatar img-rounded"
                                      src="{{ char.portrait_url_32 }}"
                                      alt="{{ char.character_name }}">
                             </td>
 
-                            <td class="text-center"
-                                style="vertical-align: middle; width: 100%;">
+                            <td class="text-center" style="vertical-align: middle; width: 100%;">
                                 <strong>{{ char.character_name }}</strong><br>
                                 {{ char.corporation_name }}<br>
                                 {{ char.alliance_name|default:"" }}
