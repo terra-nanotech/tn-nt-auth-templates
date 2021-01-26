@@ -1,6 +1,7 @@
 {% load i18n %}
 {% load static %}
 {% load navactive %}
+{% load evelinks %}
 
 <nav class="navbar navbar-default navbar-static-top auth-navbar-top" role="navigation">
     <div class="container-fluid">
@@ -13,36 +14,64 @@
             </button>
 
             <a class="navbar-brand">
-                <img src="https://images.evetech.net/corporations/98000030/logo?size=32" style="display: inline-block;" height="32" width="32"/>
+                <img class="img-rounded" src="https://images.evetech.net/corporations/98000030/logo?size=32" style="display: inline-block;" height="32" width="32"/>
                 {{ SITE_NAME }}
             </a>
         </div>
 
         <div class="collapse navbar-collapse auth-menus-collapse">
             <ul class="nav navbar-nav navbar-right navbar-pills">
-                <li>
-                    {% include 'allianceauth/night-toggle.html' %}
-                </li>
-
                 <li class="{% navactive request 'notifications:' %}" id="menu_item_notifications">
                     {% include 'allianceauth/notifications_menu_item.html' %}
                 </li>
 
-                {% if user.is_authenticated %}
-                    {% if user.is_staff %}
-                        <li><a href="{% url 'admin:index' %}" target="_blank" rel="noopener noreferer">{% translate "Admin" %}</a></li>
-                    {% endif %}
-                {% endif %}
+                <li class="top-user-menu dropdown">
+                    <a href="#" class="dropdown-toggle" type="button" id="top-user-menu" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        {% if request.user.profile.main_character %}
+                            {% with request.user.profile.main_character as main %}
+                                <img class="img-rounded ra-avatar" src="{{ main.character_id|character_portrait_url:32 }}" alt="{{ main.character_name }}">
+                            {% endwith %}
+                        {% else %}
+                            {% translate "Menu" %}
+                        {% endif %}
+                        <span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="top-user-menu" style="padding-top: 1rem;">
+                        <!-- user avatar -->
+                        <li>
+                            {% if request.user.profile.main_character %}
+                                {% with request.user.profile.main_character as main %}
+                                    <p class="text-center">
+                                        <img class="img-rounded ra-avatar" src="{{ main.character_id|character_portrait_url:256 }}" alt="{{ main.character_name }}">
+                                    </p>
 
-                {% include 'allianceauth/tnnt-menu-top.html' %}
+                                    <p class="text-center">
+                                        <span class="text-white text-primary" style="display: block; font-size: 1rem;">{{ main.character_name }}</span>
+                                        <span class="text-white text-primary" style="display: block; font-size: 1rem;">{{ main.corporation_name }}</span>
+                                        <span class="text-white text-primary" style="display: block; font-size: 1rem;">{{ main.alliance_name }}</span>
+                                    </p>
+                                {% endwith %}
+                            {% endif %}
+                        </li>
 
-                {% if user.is_authenticated %}
-                    <li><a href="{% url 'logout' %}">{% translate "Logout" %}</a></li>
-                {% else %}
-                    <li><a href="{% url 'authentication:login' %}">{% translate "Login" %}</a></li>
-                {% endif %}
+                        <!-- night mode toggle -->
+                        {% include 'allianceauth/night-toggle.html' %}
 
-                {% include 'allianceauth/admin-menu-top.html' %}
+                        <!-- tnnt related menu items -->
+                        {% include 'allianceauth/tnnt-menu-top.html' %}
+
+                        <!-- admin related menu items -->
+                        {% include 'allianceauth/admin-menu-top.html' %}
+
+                        <!-- logout / login -->
+                        <li role="separator" class="divider"></li>
+                        {% if user.is_authenticated %}
+                            <li><a href="{% url 'logout' %}">{% translate "Logout" %}</a></li>
+                        {% else %}
+                            <li><a href="{% url 'authentication:login' %}">{% translate "Login" %}</a></li>
+                        {% endif %}
+                    </ul>
+                </li>
             </ul>
 
             <form id="f-lang-select" class="navbar-form navbar-right" action="{% url 'set_language' %}" method="post">
