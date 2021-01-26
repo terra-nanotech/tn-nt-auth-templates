@@ -42,7 +42,7 @@
                             {% if request.user.profile.main_character %}
                                 {% with request.user.profile.main_character as main %}
                                     <p class="text-center">
-                                        <img class="img-rounded ra-avatar" src="{{ main.character_id|character_portrait_url:256 }}" alt="{{ main.character_name }}">
+                                        <img class="ra-avatar" src="{{ main.character_id|character_portrait_url:256 }}" alt="{{ main.character_name }}">
                                     </p>
 
                                     <p class="text-center">
