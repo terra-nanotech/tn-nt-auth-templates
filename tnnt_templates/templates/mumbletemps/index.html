@@ -11,8 +11,13 @@
                 <div class="panel-heading">
                     <div class="panel-title">Mumble Links</div>
                 </div>
+
                 <div class="panel-body text-center">
-                    Temp Links Give Access to mumble with the <b class="text-success">Guest</b> Group for the preset time<br><br>Connected users <b class="text-warning">will not</b> be kicked at the end of this time period<br><br>Templink users can be kicked in mumble by typing <span class="badge badge-danger text-warning">!kicktemps</span> in mumble chat<br><br>There are <b class="text-warning">no restrictions</b> on who or how many can use a templink, share wisely.</div>
+                    <p>Temp Links Give Access to mumble with the <b class="text-success">Guest</b> Group for the preset time</p>
+                    <p>Connected users <b class="text-warning">will not</b> be kicked at the end of this time period</p>
+                    <p>Templink users can be kicked in mumble by typing <span class="badge badge-danger text-warning">!kicktemps</span> in mumble chat</p>
+                    <p>There are <b class="text-warning">no restrictions</b> on who or how many can use a templink, share wisely.</p>
+                </div>
             </div>
         </div>
 
@@ -48,8 +53,8 @@
                         <h3 class="panel-title">New Link</h3>
                     </div>
                     <div class="panel-body text-center" style="min-height: 100px;">
-                        <p>Expires in: <span id="countdown{{tl.link_ref}}hot"></span></p>
-                        <pre>{{ request.scheme }}://{{request.get_host}}{% url 'mumbletemps:join' tl.link_ref %}</pre>
+                        <p>Expires in: <span id="countdown{{ tl.link_ref }}hot"></span></p>
+                        <pre>{{ request.scheme }}://{{ request.get_host }}{% url 'mumbletemps:join' tl.link_ref %}</pre>
                         <button class="btn btn-info col-md-12" id="clipboard-new" data-clipboard-text="{{ request.scheme }}://{{request.get_host}}{% url 'mumbletemps:join' tl.link_ref %}">Copy to Clipboard!</button>
                     </div>
                 </div>
@@ -76,11 +81,11 @@
                         <tbody>
                             {% for lnk in tl_list %}
                             <tr>
-                                <td class="text-center"><img class="ra-avatar img-circle" src="{{lnk.creator.portrait_url_32}}"></td>
-                                <td class="text-center">{{lnk.creator.character_name}}</td>
-                                <td class="text-center">{{lnk.link_ref}}</td>
-                                <td class="text-center" id="countdown{{lnk.link_ref}}"></td>
-                                <td class="text-center"><button class="btn btn-info" id="clipboard-{{lnk.link_ref}}" data-clipboard-text="{{ request.scheme }}://{{request.get_host}}{% url 'mumbletemps:join' lnk.link_ref %}">Copy to Clipboard!</button></td>
+                                <td class="text-center"><img class="ra-avatar img-rounded" src="{{ lnk.creator.portrait_url_32 }}" alt="{{ lnk.creator.character_name }}"></td>
+                                <td class="text-center">{{ lnk.creator.character_name }}</td>
+                                <td class="text-center">{{ lnk.link_ref }}</td>
+                                <td class="text-center" id="countdown{{ lnk.link_ref }}"></td>
+                                <td class="text-center"><button class="btn btn-info" id="clipboard-{{ lnk.link_ref }}" data-clipboard-text="{{ request.scheme }}://{{ request.get_host }}{% url 'mumbletemps:join' lnk.link_ref %}">Copy to Clipboard!</button></td>
                                 <td class="text-center"><a class="btn btn-danger" href="{% url 'mumbletemps:nuke' lnk.link_ref %}">Nuke Link!</a></td>
                             </tr>
                             {% endfor %}
@@ -104,9 +109,9 @@
                             <tbody>
                                 {% for lnk in ex_tl_list %}
                                 <tr>
-                                    <td class="text-center"><img class="ra-avatar img-circle" src="{{lnk.creator.portrait_url_32}}"></td>
-                                    <td class="text-center">{{lnk.creator.character_name}}</td>
-                                    <td class="text-center">{{lnk.link_ref}}</td>
+                                    <td class="text-center"><img class="ra-avatar img-rounded" src="{{ lnk.creator.portrait_url_32 }}" alt="{{ lnk.creator.character_name }}"></td>
+                                    <td class="text-center">{{ lnk.creator.character_name }}</td>
+                                    <td class="text-center">{{ lnk.link_ref }}</td>
                                     <td class="text-center"><a class="btn btn-danger" href="{% url 'mumbletemps:nuke' lnk.link_ref %}">Nuke Link!</a></td>
                                 </tr>
                                 {% endfor %}
@@ -124,7 +129,7 @@
 <script>
     var clipboard = new ClipboardJS('#clipboard-new');
     {% for lnk in tl_list %}
-    var lnk{{lnk.link_ref}} = new ClipboardJS('#clipboard-{{lnk.link_ref}}');
+    var lnk{{ lnk.link_ref }} = new ClipboardJS('#clipboard-{{ lnk.link_ref }}');
     {% endfor %}
 </script>
 {% include 'bundles/moment-js.html' with locale=True %}
@@ -183,7 +188,6 @@
             document.getElementById("countdown" + timer.id).innerHTML = "";
         }
     }
-
 </script>
 
 

@@ -10,12 +10,12 @@
                 <table class="table">
                     <tr>
                         <td class="text-center {% if corpstats.corp.alliance %}col-md-4{% else %}col-md-8{% endif %}">
-                            <img class="ra-avatar" src="{{ corpstats.corp.logo_url_128 }}">
+                            <img class="img-rounded ra-avatar" src="{{ corpstats.corp.logo_url_128 }}" alt="{{ corpstats.corp.corporation_name }}">
                         </td>
 
                         {% if corpstats.corp.alliance %}
                             <td class="text-center col-md-4">
-                                <img class="ra-avatar" src="{{ corpstats.corp.alliance.logo_url_128 }}">
+                                <img class="img-rounded ra-avatar" src="{{ corpstats.corp.alliance.logo_url_128 }}" alt="{{ corpstats.corp.alliance.alliance_name }}">
                             </td>
                         {% endif %}
 
@@ -97,7 +97,7 @@
                                                 <tr>
                                                     <td class="text-center" style="vertical-align:middle">
                                                         <div class="thumbnail" style="border: 0 none; box-shadow: none; background: transparent;">
-                                                            <img src="{{ main.main.portrait_url_64 }}" class="img-circle">
+                                                            <img src="{{ main.main.portrait_url_64 }}" class="img-rounded" alt="{{ main.main.character_name }}">
                                                             <div class="caption text-center">
                                                                 {{ main.main.character_name }}
                                                                 <br>
@@ -125,7 +125,7 @@
                                                                     <tr>
                                                                         <td class="text-center" style="width:5%">
                                                                             <div class="thumbnail" style="border: 0 none; box-shadow: none; background: transparent;">
-                                                                                <img src="{{ alt.portrait_url_32 }}" class="img-circle">
+                                                                                <img src="{{ alt.portrait_url_32 }}" class="img-rounded" alt="{{ alt.character_name }}">
                                                                             </div>
                                                                         </td>
                                                                         <td class="text-center" style="width:30%">{{ alt.character_name }}</td>
@@ -172,7 +172,7 @@
                                         <tbody>
                                             {% for member in members %}
                                                 <tr>
-                                                    <td><img src="{{ member.portrait_url }}" class="img-circle"></td>
+                                                    <td><img src="{{ member.portrait_url }}" class="img-rounded" alt="{{ member.character_name }}"></td>
                                                     <td class="text-center">{{ member.character_name }}</td>
                                                     <td class="text-center">
                                                         <a
@@ -189,7 +189,7 @@
 
                                             {% for member in unregistered %}
                                                 <tr class="danger">
-                                                    <td><img src="{{ member.portrait_url }}" class="img-circle"></td>
+                                                    <td><img src="{{ member.portrait_url }}" class="img-rounded" alt="{{ member.character_name }}"></td>
                                                     <td class="text-center">{{ member.character_name }}</td>
                                                     <td class="text-center">
                                                         <a
@@ -225,7 +225,7 @@
                                         <tbody>
                                             {% for member in unregistered %}
                                                 <tr class="danger">
-                                                    <td><img src="{{ member.portrait_url }}" class="img-circle"></td>
+                                                    <td><img src="{{ member.portrait_url }}" class="img-rounded" alt="{{ member.character_name }}"></td>
                                                     <td class="text-center">{{ member.character_name }}</td>
                                                     <td class="text-center">
                                                         <a href="https://zkillboard.com/character/{{ member.character_id }}/"
@@ -264,12 +264,13 @@
                                         <tbody>
                                             {% for member in orphans %}
                                                 <tr class="danger">
-                                                    <td><img src="{{ member.portrait_url }}" class="img-circle"></td>
+                                                    <td><img src="{{ member.portrait_url }}" class="img-rounded" alt="{{ member.character_name }}"></td>
                                                     <td class="text-center">{{ member.character_name }}</td>
-                                                    <td class="text-center"><a
-                                                            href="https://zkillboard.com/character/{{ member.character_id }}/"
-                                                            class="label label-danger"
-                                                            target="_blank">{% translate "Killboard" %}</a></td>
+                                                    <td class="text-center">
+                                                        <a href="https://zkillboard.com/character/{{ member.character_id }}/" class="label label-danger" target="_blank">
+                                                            {% translate "Killboard" %}
+                                                        </a>
+                                                    </td>
                                                     <td class="text-center">{{ member.character_ownership.user.profile.main_character.character_name }}</td>
                                                     <td class="text-center">{{ member.character_ownership.user.profile.main_character.corporation_name }}</td>
                                                     <td class="text-center">{{ member.character_ownership.user.profile.main_character.alliance_name }}</td>
@@ -303,7 +304,7 @@
                                         <tbody>
                                             {% for member in unregistered %}
                                                 <tr class="danger">
-                                                    <td class="text-center" style="vertical-align:middle"><img src="{{ member.portrait_url }}" class="img-circle"></td>
+                                                    <td class="text-center" style="vertical-align:middle"><img src="{{ member.portrait_url }}" class="img-rounded" alt="{{ member.character_name }}"></td>
                                                     <td class="text-center" style="vertical-align:middle">{{ member.character_name }}</td>
                                                     <td class="text-center" style="vertical-align:middle">{{ member.ship_type_name }}</td>
                                                     <td class="text-center" style="vertical-align:middle">{{ member.logoff_date|date:"Y-m-d H:i" }}<br><span class="label label-primary">{{ member.logon_date|timesince }} ago</span><br><span class="label label-default">Duration: {{ member.logon_date|timesince:member.logoff_date }}</span></td>
@@ -316,7 +317,7 @@
 
                                             {% for member in tracking %}
                                                 <tr >
-                                                    <td class="text-center" style="vertical-align:middle"><img src="{{ member.portrait_url }}" class="img-circle"></td>
+                                                    <td class="text-center" style="vertical-align:middle"><img src="{{ member.portrait_url }}" class="img-rounded" alt="{{ member.character_name }}"></td>
                                                     <td class="text-center" style="vertical-align:middle">{{ member.character_name }}</td>
                                                     <td class="text-center" style="vertical-align:middle">{{ member.ship_type_name }}</td>
                                                     <td class="text-center" style="vertical-align:middle">{{ member.logoff_date|date:"Y-m-d H:i" }}<br><span class="label label-primary">{{ member.logon_date|timesince }} ago</span><br><span class="label label-default">Duration: {{ member.logon_date|timesince:member.logoff_date }}</span></td>
