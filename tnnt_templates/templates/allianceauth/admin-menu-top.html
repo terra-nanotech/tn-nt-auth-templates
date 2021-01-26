@@ -1,0 +1,16 @@
+{% load i18n %}
+
+{% if user.is_superuser %}
+    <li>
+        <a href="https://allianceauth.readthedocs.io/" target="_blank">
+            <i class="fas fa-question-circle fa-fw"></i>
+        </a>
+    </li>
+
+    <li>
+        <a href="https://discord.gg/fjnHAmk" target="_blank">
+            <i class="fab fa-discord fa-fw"></i>
+            {% translate "AA Support Discord" %}
+        </a>
+    </li>
+{% endif %}

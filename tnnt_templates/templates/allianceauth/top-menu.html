@@ -34,10 +34,7 @@
                     {% endif %}
                 {% endif %}
 
-                <li><a href="https://terra-nanotech.de/" target="_blank" rel="noopener noreferer">TN-NT Website</a></li>
-                <li><a href="https://forum.terra-nanotech.de/" target="_blank" rel="noopener noreferer">TN-NT Forums</a></li>
-{#                <li><a href="https://wiki.terra-nanotech.de/" target="_blank" rel="noopener noreferer">TN-NT Wiki</a></li>#}
-{#                <li><a href="https://seat.terra-nanotech.de/" target="_blank" rel="noopener noreferer">TN-NT SeAT</a></li>#}
+                {% include 'allianceauth/tnnt-menu-top.html' %}
 
                 {% if user.is_authenticated %}
                     <li><a href="{% url 'logout' %}">{% translate "Logout" %}</a></li>
@@ -45,13 +42,7 @@
                     <li><a href="{% url 'authentication:login' %}">{% translate "Login" %}</a></li>
                 {% endif %}
 
-                {% if user.is_superuser %}
-                    <li>
-                        <a href="https://allianceauth.readthedocs.io/" target="_blank">
-                            <i class="fas fa-question-circle fa-fw"></i>
-                        </a>
-                    </li>
-                {% endif %}
+                {% include 'allianceauth/admin-menu-top.html' %}
             </ul>
 
             <form id="f-lang-select" class="navbar-form navbar-right" action="{% url 'set_language' %}" method="post">
