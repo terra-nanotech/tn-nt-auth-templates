@@ -1,6 +1,16 @@
 {% load i18n %}
 
-<li role="separator" class="divider"></li>
-<li><a href="https://terra-nanotech.de/" target="_blank" rel="noopener noreferer">{% translate "TN-NT Website" %}</a></li>
-<li><a href="https://forum.terra-nanotech.de/" target="_blank" rel="noopener noreferer">{% translate "TN-NT Forums" %}</a></li>
-<li><a href="https://wiki.terra-nanotech.de/" target="_blank" rel="noopener noreferer">{% translate "TN-NT Wiki" %}</a></li>
+{% if TNNT_TEMPLATE_URLS_TNNT_WEBSITES %}
+    <li role="separator" class="divider"></li>
+    {% for website in TNNT_TEMPLATE_URLS_TNNT_WEBSITES %}
+        <li><a href="{{ website.url }}"{% if website.new_tab %} target="_blank" rel="noopener noreferer"{% endif %}>{{ website.name }}</a></li>
+    {% endfor %}
+{% endif %}
+
+
+{% if TNNT_TEMPLATE_URLS_OTHER_WEBSITES %}
+    <li role="separator" class="divider"></li>
+    {% for website in TNNT_TEMPLATE_URLS_OTHER_WEBSITES %}
+        <li><a href="{{ website.url }}"{% if website.new_tab %} target="_blank" rel="noopener noreferer"{% endif %}>{{ website.name }}</a></li>
+    {% endfor %}
+{% endif %}
