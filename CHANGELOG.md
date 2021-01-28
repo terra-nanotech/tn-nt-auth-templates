@@ -14,11 +14,16 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
   ([see here](https://gitlab.com/allianceauth/allianceauth/-/merge_requests/1218))
 - Moved top menu into a user menu dropdown
 - Common image style, o longer mix of `img-circle` and `img-rounded`
+- Cog for auth commands for discordbot
+- Cog for `!time` command added for discordbot
+
+### Changed
+
+- Entity logo made configurable
 
 ### Fixed
 
 - Panels hrapplication templates
-
 
 
 ## [1.2.6] - 2021-01-24
