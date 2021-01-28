@@ -9,6 +9,13 @@ def tnnt_settings(request):
     return_value = dict()
 
     try:
+        return_value["TNNT_TEMPLATE_ENTITY_LOGO"] = settings.TNNT_TEMPLATE_ENTITY_LOGO
+    except AttributeError:
+        return_value[
+            "TNNT_TEMPLATE_ENTITY_LOGO"
+        ] = "https://images.evetech.net/corporations/98000030/logo"
+
+    try:
         return_value[
             "TNNT_TEMPLATE_URLS_TNNT_WEBSITES"
         ] = settings.TNNT_TEMPLATE_URLS_TNNT_WEBSITES

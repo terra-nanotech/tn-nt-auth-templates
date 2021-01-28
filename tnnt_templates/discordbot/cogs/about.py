@@ -4,19 +4,18 @@
 Since we don't want to have it branded for "The Initiative", we have to build our own ..
 """
 
-import re
 import logging
 import pendulum
 
-# Cog Stuff
 from discord.ext import commands
 from discord.embeds import Embed
 from discord.colour import Color
 from discord.utils import get
 
-# AA Contexts
 from django.conf import settings
+
 from aadiscordbot import app_settings, __version__, __branch__
+from aadiscordbot.app_settings import get_site_url
 
 
 logger = logging.getLogger(__name__)
@@ -39,9 +38,12 @@ class About(commands.Cog):
         await ctx.trigger_typing()
 
         embed = Embed(title="Alliance Auth Discord Bot")
-        embed.set_thumbnail(
-            url="https://images.evetech.net/corporations/98000030/logo?size=256"
-        )
+
+        try:
+            embed.set_thumbnail(url=settings.TNNT_TEMPLATE_ENTITY_LOGO + "?size=256")
+        except AttributeError:
+            pass
+
         embed.colour = Color.green()
 
         embed.description = (
@@ -49,13 +51,15 @@ class About(commands.Cog):
             "specifically for Alliance Auth.\n\nType `!help` for more information."
         )
 
-        regex = r"^(.+)\/d.+"
+        # regex = r"^(.+)\/d.+"
+        #
+        # matches = re.finditer(regex, settings.DISCORD_CALLBACK_URL, re.MULTILINE)
+        #
+        # url = []
+        # for match in matches:
+        #     url = match.groups()
 
-        matches = re.finditer(regex, settings.DISCORD_CALLBACK_URL, re.MULTILINE)
-
-        url = []
-        for match in matches:
-            url = match.groups()
+        url = get_site_url()
 
         embed.set_footer(text="Developedby Aaron Kable, Forked by Rounon Dax")
 
@@ -69,7 +73,7 @@ class About(commands.Cog):
 
         embed.add_field(
             name="Auth Link",
-            value="[{auth_link}]({auth_link})".format(auth_link=url[0]),
+            value="[{auth_url}]({auth_url})".format(auth_url=url),
             inline=False,
         )
 
