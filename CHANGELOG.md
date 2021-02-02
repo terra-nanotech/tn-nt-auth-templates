@@ -23,7 +23,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Fixed
 
-- Panels hrapplication templates
+- Panel headers
+- Table look and feel
 
 
 ## [1.2.6] - 2021-01-24
