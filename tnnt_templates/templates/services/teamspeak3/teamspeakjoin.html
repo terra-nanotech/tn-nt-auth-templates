@@ -16,10 +16,10 @@
             <div class="col-md-6">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
-                        <h3 class="panel-title text-center">{% translate "If you are already connected to TS" %}</h3>
+                        <div class="panel-title">{% translate "If you are already connected to TS" %}</div>
                     </div>
 
-                    <div class="panel-body text-center">
+                    <div class="panel-body">
                         <p>
                             {% translate "If you are already on the server use the following token:" %}<br><br>
                             <b>{{ authinfo.teamspeak3_perm_key }}</b>
@@ -31,10 +31,10 @@
             <div class="col-md-6">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
-                        <h3 class="panel-title">{% translate "You <b>DO NOT</b> have Teamspeak Open" %}</h3>
+                        <div class="panel-title">{% translate "You <b>DO NOT</b> have Teamspeak Open" %}</div>
                     </div>
 
-                    <div class="panel-body text-center">
+                    <div class="panel-body">
                         <a href="ts3server://{{ public_url }}?token={{ authinfo.teamspeak3_perm_key }}&nickname={{ authinfo.teamspeak3_uid }}" class="btn btn-primary btn-block btn-lg" title="Join">{% translate "Join Server" %}</a>
                     </div>
                 </div>
@@ -43,13 +43,11 @@
             <div class="col-md-12">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
-                        <h3 class="panel-title text-center">{% translate "Auth Teamspeak" %}</h3>
+                        <div class="panel-title">{% translate "Auth Teamspeak" %}</div>
                     </div>
 
-                    <div class="panel-body" style="min-height: 100px;">
-                       <div class="panel-body text-center">
-                           <p>Once connected click here</p>
-                       </div>
+                    <div class="panel-body">
+                       <p>Once connected click here</p>
 
                         <form class="form-signin" role="form" action="{% url 'teamspeak3:verify' %}" method="POST">
                             {% csrf_token %}

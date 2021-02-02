@@ -18,11 +18,11 @@
     <div class="clearfix">
         <div class="row vertical-flexbox-row2">
             <div class="col-sm-6">
-                <div class="panel panel-primary" style="height: 100%;">
+                <div class="panel panel-primary">
                     <div class="panel-heading">
-                        <h3 class="panel-title">
+                        <div class="panel-title">
                             {% blocktrans with state=request.user.profile.state %}Main Character (State: {{ state }}){% endblocktrans %}
-                        </h3>
+                        </div>
                     </div>
 
                     <div class="panel-body">
@@ -99,9 +99,9 @@
             </div>
 
             <div class="col-sm-6">
-                <div class="panel panel-primary" style="height: 100%;">
+                <div class="panel panel-primary">
                     <div class="panel-heading">
-                        <h3 class="panel-title">{% translate "Group Memberships" %}</h3>
+                        <div class="panel-title">{% translate "Group Memberships" %}</div>
                     </div>
 
                     <div class="panel-body text-center">
@@ -123,9 +123,9 @@
 
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title">
+                <div class="panel-title">
                     {% translate 'Characters' %}
-                </h3>
+                </div>
             </div>
 
             <div class="panel-body">

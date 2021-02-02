@@ -41,10 +41,10 @@
                 </tr>
 
                 <tr>
-                    <td class="text-center"><h4>{{ corpstats.corp.corporation_name }}</h4></td>
+                    <td class="text-center">{{ corpstats.corp.corporation_name }}</td>
 
                     {% if corpstats.corp.alliance_id %}
-                        <td class="text-center"><h4>{{ corpstats.corp.alliance.alliance_name }}</h4></td>
+                        <td class="text-center">{{ corpstats.corp.alliance.alliance_name }}</td>
                     {% endif %}
                 </tr>
             </table>
@@ -52,7 +52,7 @@
 
         <div class="clearfix">
             <div class="panel panel-default">
-                <div class="panel-heading">
+                <div class="panel-heading clearfix">
                     <ul class="nav nav-pills pull-left">
                         <li class="active"><a href="#mains" data-toggle="pill">{% translate 'Mains' %} ({{ total_mains }})</a></li>
                         <li><a href="#members" data-toggle="pill">{% translate 'Members' %} ({{ total_members }})</a></li>
@@ -67,12 +67,11 @@
                         <a class="btn btn-success" type="button" href="{% url 'corpstat:update' corpstats.corp.corporation_id %}" title="Update Now">
                             <span class="glyphicon glyphicon-refresh"></span>
                         </a>
+
                         <a class="btn btn-primary" type="button" href="{%  url 'corpstat:export' corpstats.corp.corporation_id %}" title="Export">
                             <span class="glyphicon glyphicon-download-alt"></span>
                         </a>
                     </div>
-
-                    <div class="clearfix"></div>
                 </div>
 
                 <div class="panel-body">
