@@ -143,12 +143,12 @@
 {#                            <td>#}
 {#                                <img class="ra-avatar img-rounded" src="{{ char.portrait_url_32 }}" alt="{{ char.character_name }}">#}
 {#                            </td>#}
-                            <td>
+                            <td class="valign-middle">
                                 <img class="ra-avatar img-rounded" src="{{ char.portrait_url_32 }}" alt="{{ char.character_name }}">
                                 {{ char.character_name }}
                             </td>
-                            <td>{{ char.corporation_name }}</td>
-                            <td>{{ char.alliance_name|default:"" }}</td>
+                            <td class="valign-middle">{{ char.corporation_name }}</td>
+                            <td class="valign-middle">{{ char.alliance_name|default:"" }}</td>
                         </tr>
                     {% endfor %}
                     </tbody>
@@ -158,7 +158,7 @@
                     <tbody>
                     {% for char in characters %}
                         <tr>
-                            <td class="text-center" style="vertical-align: middle;">
+                            <td class="text-center valign-middle">
                                 <img class="ra-avatar img-rounded" src="{{ char.portrait_url_32 }}" alt="{{ char.character_name }}">
                             </td>
 

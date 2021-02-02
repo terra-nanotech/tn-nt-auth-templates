@@ -49,9 +49,10 @@
                             <tbody>
                                 {% for acceptrequest in acceptrequests %}
                                     <tr>
-                                        <td>
-                                            <img src="{{ acceptrequest.main_char|character_portrait_url:32 }}" class="img-rounded" style="margin-right: 1rem;">
+                                        <td class="valign-middle">
                                             {% if acceptrequest.main_char %}
+                                                <img src="{{ acceptrequest.main_char|character_portrait_url:32 }}" class="img-rounded" style="margin-right: 0.25rem;">
+
                                                 <a href="{{ acceptrequest.main_char|evewho_character_url }}" target="_blank">
                                                     {{ acceptrequest.main_char.character_name }}
                                                 </a>
@@ -59,18 +60,19 @@
                                                 {{ acceptrequest.user.username }}
                                             {% endif %}
                                         </td>
-                                        <td>
+                                        <td class="valign-middle">
                                             {% if acceptrequest.main_char %}
                                                 <a href="{{ acceptrequest.main_char|dotlan_corporation_url }}" target="_blank">
                                                     {{ acceptrequest.main_char.corporation_name }}
-                                                </a><br>
+                                                </a>
+                                                <br>
                                                 {{ acceptrequest.main_char.alliance_name|default_if_none:"" }}
                                             {% else %}
                                                 {% translate "(unknown)" %}
                                             {% endif %}
                                         </td>
-                                        <td>{{ acceptrequest.group.name }}</td>
-                                        <td class="text-right">
+                                        <td class="valign-middle">{{ acceptrequest.group.name }}</td>
+                                        <td class="text-right valign-middle">
                                             <a href="{% url 'groupmanagement:accept_request' acceptrequest.id %}" class="btn btn-success">
                                                 {% translate "Accept" %}
                                             </a>
@@ -105,9 +107,10 @@
                             <tbody>
                                 {% for leaverequest in leaverequests %}
                                     <tr>
-                                        <td>
-                                            <img src="{{ leaverequest.main_char|character_portrait_url:32 }}" class="img-rounded" style="margin-right: 1rem;">
+                                        <td class="valign-middle">
                                             {% if leaverequest.main_char %}
+                                                <img src="{{ leaverequest.main_char|character_portrait_url:32 }}" class="img-rounded" style="margin-right: 0.25rem;">
+
                                                 <a href="{{ leaverequest.main_char|evewho_character_url }}" target="_blank">
                                                     {{ leaverequest.main_char.character_name }}
                                                 </a>
@@ -115,18 +118,19 @@
                                                 {{ leaverequest.user.username }}
                                             {% endif %}
                                         </td>
-                                        <td>
+                                        <td class="valign-middle">
                                             {% if leaverequest.main_char %}
                                                 <a href="{{ leaverequest.main_char|dotlan_corporation_url }}" target="_blank">
                                                     {{ leaverequest.main_char.corporation_name }}
-                                                </a><br>
+                                                </a>
+                                                <br>
                                                 {{ leaverequest.main_char.alliance_name|default_if_none:"" }}
                                             {% else %}
                                                 {% translate "(unknown)" %}
                                             {% endif %}
                                         </td>
-                                        <td>{{ leaverequest.group.name }}</td>
-                                        <td class="text-right">
+                                        <td class="valign-middle">{{ leaverequest.group.name }}</td>
+                                        <td class="text-right valign-middle">
                                             <a href="{% url 'groupmanagement:leave_accept_request' leaverequest.id %}" class="btn btn-success">
                                                 {% translate "Accept" %}
                                             </a>

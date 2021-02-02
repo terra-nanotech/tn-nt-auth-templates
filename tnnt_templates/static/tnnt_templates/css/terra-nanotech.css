@@ -340,6 +340,19 @@
     button.list-group-item-success:focus {
         background-color: rgba(79, 189, 79, 0.6);
     }
+
+    .valign-middle,
+    .table > tbody > tr > td.valign-middle,
+    .table > tbody > tr > th.valign-middle,
+    .table > tfoot > tr > td.valign-middle,
+    .table > tfoot > tr > th.valign-middle,
+    .table > thead > tr > td.valign-middle {
+        vertical-align: middle;
+    }
+
+    td p:last-child {
+        margin-bottom: 0;
+    }
 }
 
 /* auth base styles
