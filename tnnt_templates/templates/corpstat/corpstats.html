@@ -119,7 +119,7 @@
                                                                 {% for alt in main.alts %}
                                                                     <tr>
                                                                         <td class="valign-middle" style="width:30%">
-                                                                            <img src="{{ alt.portrait_url_32 }}" class="img-rounded" alt="{{ alt.character_name }}" style="margin-right: 0.5rem;">
+                                                                            <img src="{{ alt.portrait_url_32 }}" class="img-rounded" alt="{{ alt.character_name }}" style="margin-right: 0.25rem;">
                                                                             {{ alt.character_name }}
                                                                         </td>
                                                                         <td class="valign-middle" style="width:30%">
@@ -173,7 +173,7 @@
                                             {% for member in members %}
                                                 <tr>
                                                     <td class="valign-middle">
-                                                        <img src="{{ member.portrait_url }}" class="img-rounded" alt="{{ member.character_name }}" style="margin-right: 0.5rem;">
+                                                        <img src="{{ member.portrait_url }}" class="img-rounded" alt="{{ member.character_name }}" style="margin-right: 0.25rem;">
                                                         {{ member.character_name }}
                                                     </td>
                                                     <td class="valign-middle">
@@ -184,15 +184,15 @@
                                                         >{% translate "Killboard" %}</a>
                                                     </td>
                                                     <td class="valign-middle">
-                                                        <img src="{{ member.character_ownership.user.profile.main_character.character_id|character_portrait_url:32 }}" class="img-rounded" alt="{{ member.character_ownership.user.profile.main_character.character_name }}" style="margin-right: 0.5rem;">
+                                                        <img src="{{ member.character_ownership.user.profile.main_character.character_id|character_portrait_url:32 }}" class="img-rounded" alt="{{ member.character_ownership.user.profile.main_character.character_name }}" style="margin-right: 0.25rem;">
                                                         {{ member.character_ownership.user.profile.main_character.character_name }}
                                                     </td>
                                                     <td class="valign-middle">
-                                                        <img src="{{ member.character_ownership.user.profile.main_character.corporation_id|corporation_logo_url:32 }}" class="img-rounded" alt="{{ member.character_ownership.user.profile.main_character.corporation_name }}" style="margin-right: 0.5rem;">
+                                                        <img src="{{ member.character_ownership.user.profile.main_character.corporation_id|corporation_logo_url:32 }}" class="img-rounded" alt="{{ member.character_ownership.user.profile.main_character.corporation_name }}" style="margin-right: 0.25rem;">
                                                         {{ member.character_ownership.user.profile.main_character.corporation_name }}
                                                     </td>
                                                     <td class="valign-middle">
-                                                        <img src="{{ member.character_ownership.user.profile.main_character.alliance_id|alliance_logo_url:32 }}" class="img-rounded" alt="{{ member.character_ownership.user.profile.main_character.alliance_name }}" style="margin-right: 0.5rem;">
+                                                        <img src="{{ member.character_ownership.user.profile.main_character.alliance_id|alliance_logo_url:32 }}" class="img-rounded" alt="{{ member.character_ownership.user.profile.main_character.alliance_name }}" style="margin-right: 0.25rem;">
                                                         {{ member.character_ownership.user.profile.main_character.alliance_name }}
                                                     </td>
                                                 </tr>
@@ -201,7 +201,7 @@
                                             {% for member in unregistered %}
                                                 <tr class="danger">
                                                     <td class="valign-middle">
-                                                        <img src="{{ member.portrait_url }}" class="img-rounded" alt="{{ member.character_name }}" style="margin-right: 0.5rem;">
+                                                        <img src="{{ member.portrait_url }}" class="img-rounded" alt="{{ member.character_name }}" style="margin-right: 0.25rem;">
                                                         {{ member.character_name }}
                                                     </td>
                                                     <td class="valign-middle">
@@ -238,7 +238,7 @@
                                             {% for member in unregistered %}
                                                 <tr class="danger">
                                                     <td class="valign-middle">
-                                                        <img src="{{ member.portrait_url }}" class="img-rounded" alt="{{ member.character_name }}" style="margin-right: 0.5rem;">
+                                                        <img src="{{ member.portrait_url }}" class="img-rounded" alt="{{ member.character_name }}" style="margin-right: 0.25rem;">
                                                         {{ member.character_name }}
                                                     </td>
 
@@ -277,7 +277,7 @@
                                             {% for member in orphans %}
                                                 <tr class="danger">
                                                     <td class="valign-middle">
-                                                        <img src="{{ member.portrait_url }}" class="img-rounded" alt="{{ member.character_name }}" style="margin-right: 0.5rem;">
+                                                        <img src="{{ member.portrait_url }}" class="img-rounded" alt="{{ member.character_name }}" style="margin-right: 0.25rem;">
                                                         {{ member.character_name }}
                                                     </td>
                                                     <td class="valign-middle">
@@ -286,15 +286,15 @@
                                                         </a>
                                                     </td>
                                                     <td class="valign-middle">
-                                                        <img src="{{ member.character_ownership.user.profile.main_character.character_id|character_portrait_url:32 }}" class="img-rounded" alt="{{ member.character_ownership.user.profile.main_character.character_name }}" style="margin-right: 0.5rem;">
+                                                        <img src="{{ member.character_ownership.user.profile.main_character.character_id|character_portrait_url:32 }}" class="img-rounded" alt="{{ member.character_ownership.user.profile.main_character.character_name }}" style="margin-right: 0.25rem;">
                                                         {{ member.character_ownership.user.profile.main_character.character_name }}
                                                     </td>
                                                     <td class="valign-middle">
-                                                        <img src="{{ member.character_ownership.user.profile.main_character.corporation_id|corporation_logo_url:32 }}" class="img-rounded" alt="{{ member.character_ownership.user.profile.main_character.corporation_name }}" style="margin-right: 0.5rem;">
+                                                        <img src="{{ member.character_ownership.user.profile.main_character.corporation_id|corporation_logo_url:32 }}" class="img-rounded" alt="{{ member.character_ownership.user.profile.main_character.corporation_name }}" style="margin-right: 0.25rem;">
                                                         {{ member.character_ownership.user.profile.main_character.corporation_name }}
                                                     </td>
                                                     <td class="valign-middle">
-                                                        <img src="{{ member.character_ownership.user.profile.main_character.alliance_id|alliance_logo_url:32 }}" class="img-rounded" alt="{{ member.character_ownership.user.profile.main_character.alliance_name }}" style="margin-right: 0.5rem;">
+                                                        <img src="{{ member.character_ownership.user.profile.main_character.alliance_id|alliance_logo_url:32 }}" class="img-rounded" alt="{{ member.character_ownership.user.profile.main_character.alliance_name }}" style="margin-right: 0.25rem;">
                                                         {{ member.character_ownership.user.profile.main_character.alliance_name }}
                                                     </td>
                                                 </tr>
@@ -327,11 +327,11 @@
                                             {% for member in unregistered %}
                                                 <tr class="danger">
                                                     <td class="valign-middle" style="vertical-align:middle">
-                                                        <img src="{{ member.portrait_url }}" class="img-rounded" alt="{{ member.character_name }}" style="margin-right: 0.5rem;">
+                                                        <img src="{{ member.portrait_url }}" class="img-rounded" alt="{{ member.character_name }}" style="margin-right: 0.25rem;">
                                                         {{ member.character_name }}
                                                     </td>
                                                     <td class="valign-middle">
-                                                        <img src="{{ member.ship_type_id|type_render_url:32 }}" class="img-rounded" alt="{{ member.ship_type_name }}" style="margin-right: 0.5rem;">
+                                                        <img src="{{ member.ship_type_id|type_render_url:32 }}" class="img-rounded" alt="{{ member.ship_type_name }}" style="margin-right: 0.25rem;">
                                                         {{ member.ship_type_name }}
                                                     </td>
                                                     <td class="valign-middle">{{ member.logoff_date|date:"Y-m-d H:i" }}<br><span class="label label-primary">{{ member.logon_date|timesince }} ago</span><br><span class="label label-default">Duration: {{ member.logon_date|timesince:member.logoff_date }}</span></td>
@@ -345,11 +345,11 @@
                                             {% for member in tracking %}
                                                 <tr >
                                                     <td class="valign-middle" style="vertical-align:middle">
-                                                        <img src="{{ member.portrait_url }}" class="img-rounded" alt="{{ member.character_name }}" style="margin-right: 0.5rem;">
+                                                        <img src="{{ member.portrait_url }}" class="img-rounded" alt="{{ member.character_name }}" style="margin-right: 0.25rem;">
                                                         {{ member.character_name }}
                                                     </td>
                                                     <td class="valign-middle">
-                                                        <img src="{{ member.ship_type_id|type_render_url:32 }}" class="img-rounded" alt="{{ member.ship_type_name }}" style="margin-right: 0.5rem;">
+                                                        <img src="{{ member.ship_type_id|type_render_url:32 }}" class="img-rounded" alt="{{ member.ship_type_name }}" style="margin-right: 0.25rem;">
                                                         {{ member.ship_type_name }}
                                                     </td>
                                                     <td class="valign-middle">{{ member.logoff_date|date:"Y-m-d H:i" }}<br><span class="label label-primary">{{ member.logon_date|timesince }} ago</span><br><span class="label label-default">Duration: {{ member.logon_date|timesince:member.logoff_date }}</span></td>
