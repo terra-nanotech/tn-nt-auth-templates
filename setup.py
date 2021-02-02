@@ -40,5 +40,8 @@ setup(
         "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
     ],
     python_requires="~=3.6",
-    install_requires=["allianceauth>=2.8.1", "aa-timezones>=1.3.1"],
+    install_requires=[
+        "allianceauth>=2.8.1",
+        "aa-timezones>=1.3.1",  # needed for the time cog from teh discordbot app we use
+    ],
 )
