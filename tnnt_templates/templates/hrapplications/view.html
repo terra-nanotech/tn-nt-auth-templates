@@ -1,7 +1,9 @@
 {% extends "allianceauth/base.html" %}
+
 {% load static %}
 {% load bootstrap %}
 {% load i18n %}
+{% load evelinks %}
 
 {% block page_title %}{% translate "View Application" %}{% endblock page_title %}
 {% block extra_css %}{% endblock extra_css %}
@@ -29,16 +31,20 @@
             </div>
 
             <div class="panel-body">
-                <table class="table">
-                    <tr>
-                        <th class="text-center">{% translate "User" %}</th>
-                        <th class="text-center">{% translate "Main Character" %}</th>
-                    </tr>
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th class="text-center">{% translate "User" %}</th>
+                            <th class="text-center">{% translate "Main Character" %}</th>
+                        </tr>
+                    </thead>
 
-                    <tr>
-                        <td class="text-center">{{ app.user }}</td>
-                        <td class="text-center">{{ app.main_character }}</td>
-                    </tr>
+                    <tbody>
+                        <tr>
+                            <td class="text-center">{{ app.user }}</td>
+                            <td class="text-center">{{ app.main_character }}</td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
         </div>
@@ -49,24 +55,35 @@
             </div>
 
             <div class="panel-body">
-                <table class="table">
-                    <tr>
-                        <th class="text-center"></th>
-                        <th class="text-center">{% translate "Name" %}</th>
-                        <th class="text-center">{% translate "Corp" %}</th>
-                        <th class="text-center">{% translate "Alliance" %}</th>
-                    </tr>
-
-                    {% for char in app.characters %}
+                <table class="table table-striped table-hover">
+                    <thead>
                         <tr>
-                            <td class="text-center">
-                                <img class="ra-avatar img-responsive img-rounded" src="{{ char.portrait_url_32 }}" alt="{{ char.character_name }}">
-                            </td>
-                            <td class="text-center">{{ char.character_name }}</td>
-                            <td class="text-center">{{ char.corporation_name }}</td>
-                            <td class="text-center">{{ char.alliance_name }}</td>
+                            <th>{% translate "Name" %}</th>
+                            <th>{% translate "Corp" %}</th>
+                            <th>{% translate "Alliance" %}</th>
                         </tr>
-                    {% endfor %}
+                    </thead>
+
+                    <tbody>
+                        {% for char in app.characters %}
+                            <tr>
+                                <td class="valign-middle">
+                                    <img class="ra-avatar img-rounded" src="{{ char.portrait_url_32 }}" alt="{{ char.character_name }}" style="margin-right: 0.25rem;">
+                                    {{ char.character_name }}
+                                </td>
+                                <td class="valign-middle">
+                                    <img class="ra-avatar img-rounded" src="{{ char.corporation_id|corporation_logo_url:32 }}" alt="{{ char.corporation_name }}" style="margin-right: 0.25rem;">
+                                    {{ char.corporation_name }}
+                                </td>
+                                <td class="valign-middle">
+                                    {% if char.alliance_name %}
+                                        <img class="ra-avatar img-rounded" src="{{ char.alliance_id|alliance_logo_url:32 }}" alt="{{ char.alliance_name }}" style="margin-right: 0.25rem;">
+                                        {{ char.alliance_name }}
+                                    {% endif %}
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
                 </table>
             </div>
         </div>
