@@ -1,6 +1,8 @@
 {% extends "allianceauth/base.html" %}
+
 {% load static %}
 {% load i18n %}
+{% load evelinks %}
 
 {% block page_title %}{% translate "Dashboard" %}{% endblock %}
 
@@ -130,7 +132,6 @@
                 <table class="table table-striped hidden-xs">
                     <thead>
                         <tr>
-{#                            <th></th>#}
                             <th>{% translate 'Name' %}</th>
                             <th>{% translate 'Corp' %}</th>
                             <th>{% translate 'Alliance' %}</th>
@@ -140,15 +141,20 @@
                     <tbody>
                     {% for char in characters %}
                         <tr>
-{#                            <td>#}
-{#                                <img class="ra-avatar img-rounded" src="{{ char.portrait_url_32 }}" alt="{{ char.character_name }}">#}
-{#                            </td>#}
                             <td class="valign-middle">
-                                <img class="ra-avatar img-rounded" src="{{ char.portrait_url_32 }}" alt="{{ char.character_name }}">
+                                <img class="ra-avatar img-rounded" src="{{ char.portrait_url_32 }}" alt="{{ char.character_name }}" style="margin-right: 0.25rem;">
                                 {{ char.character_name }}
                             </td>
-                            <td class="valign-middle">{{ char.corporation_name }}</td>
-                            <td class="valign-middle">{{ char.alliance_name|default:"" }}</td>
+                            <td class="valign-middle">
+                                <img src="{{ char.corporation_id|corporation_logo_url:32 }}" alt=" {{ char.corporation_name }}" style="margin-right: 0.25rem;">
+                                {{ char.corporation_name }}
+                            </td>
+                            <td class="valign-middle">
+                                {% if char.alliance_name %}
+                                    <img src="{{ char.alliance_id|alliance_logo_url:32 }}" alt=" {{ char.alliance_name }}" style="margin-right: 0.25rem;">
+                                    {{ char.alliance_name }}
+                                {% endif %}
+                            </td>
                         </tr>
                     {% endfor %}
                     </tbody>
