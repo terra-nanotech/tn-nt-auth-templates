@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Common image style, o longer mix of `img-circle` and `img-rounded`
 - Cog for auth commands for discordbot
 - Cog for `!time` command added for discordbot
+- Templates for [securegroups](https://github.com/pvyParts/allianceauth-secure-groups)
 
 ### Changed
 
