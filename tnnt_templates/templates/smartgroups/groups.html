@@ -32,9 +32,13 @@
                                     </td>
 
                                     <td>
-                                        {{ g.smart_group.group.authgroup.description|linebreaks|urlize }}
-                                        <br>
-                                        {{ g.smart_group.description|linebreaks|urlize }}
+                                        {% if g.smart_group.group.authgroup.description %}
+                                            {{ g.smart_group.group.authgroup.description|linebreaks|urlize }}
+                                        {% endif %}
+
+                                        {% if g.smart_group.description %}
+                                            {{ g.smart_group.description|linebreaks|urlize }}
+                                        {% endif %}
                                     </td>
 
                                     <td class="text-right">
