@@ -133,8 +133,7 @@
                                                                             {% endif %}
                                                                         </td>
                                                                         <td class="valign-middle" style="width:5%">
-                                                                            <a href="https://zkillboard.com/character/{{ alt.character_id }}/"
-                                                                               class="label label-danger" target="_blank">
+                                                                            <a href="https://zkillboard.com/character/{{ alt.character_id }}/" class="label label-danger" target="_blank">
                                                                                 {% translate "Killboard" %}
                                                                             </a>
                                                                         </td>
@@ -192,8 +191,10 @@
                                                         {{ member.character_ownership.user.profile.main_character.corporation_name }}
                                                     </td>
                                                     <td class="valign-middle">
-                                                        <img src="{{ member.character_ownership.user.profile.main_character.alliance_id|alliance_logo_url:32 }}" class="img-rounded" alt="{{ member.character_ownership.user.profile.main_character.alliance_name }}" style="margin-right: 0.25rem;">
-                                                        {{ member.character_ownership.user.profile.main_character.alliance_name }}
+                                                        {% if member.character_ownership.user.profile.main_character.alliance_name %}
+                                                            <img src="{{ member.character_ownership.user.profile.main_character.alliance_id|alliance_logo_url:32 }}" class="img-rounded" alt="{{ member.character_ownership.user.profile.main_character.alliance_name }}" style="margin-right: 0.25rem;">
+                                                            {{ member.character_ownership.user.profile.main_character.alliance_name }}
+                                                        {% endif %}
                                                     </td>
                                                 </tr>
                                             {% endfor %}
@@ -294,8 +295,10 @@
                                                         {{ member.character_ownership.user.profile.main_character.corporation_name }}
                                                     </td>
                                                     <td class="valign-middle">
-                                                        <img src="{{ member.character_ownership.user.profile.main_character.alliance_id|alliance_logo_url:32 }}" class="img-rounded" alt="{{ member.character_ownership.user.profile.main_character.alliance_name }}" style="margin-right: 0.25rem;">
-                                                        {{ member.character_ownership.user.profile.main_character.alliance_name }}
+                                                        {% if member.character_ownership.user.profile.main_character.alliance_name %}
+                                                            <img src="{{ member.character_ownership.user.profile.main_character.alliance_id|alliance_logo_url:32 }}" class="img-rounded" alt="{{ member.character_ownership.user.profile.main_character.alliance_name }}" style="margin-right: 0.25rem;">
+                                                            {{ member.character_ownership.user.profile.main_character.alliance_name }}
+                                                        {% endif %}
                                                     </td>
                                                 </tr>
                                             {% endfor %}
