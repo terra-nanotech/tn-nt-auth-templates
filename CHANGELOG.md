@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.3.2] - 2021-02-05
+
+### Fixed
+
+- Alliance name in corpstats
+
+
 ## [1.3.1] - 2021-02-05
 
 ### Fixed
