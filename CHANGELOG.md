@@ -26,6 +26,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - Panel headers
 - Table look and feel
+- Fitting panel in doctrine view (fittings module)
 
 
 ## [1.2.6] - 2021-01-24
