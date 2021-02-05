@@ -8,8 +8,13 @@
     }
 
     body {
+        /*background-color: rgb(0, 0, 0) !important;*/
         font-size: 1.125rem;
     }
+
+    /*body * {*/
+    /*    background-color: transparent !important;*/
+    /*}*/
 
     .nav-pills > li > a.active, .nav-pills > li > a:hover {
         background-color: rgba(78, 154, 6, 0.4) !important;
@@ -38,5 +43,14 @@
     .template-dark-mode .aa-memberaudit .nav-tabs > li.active > a {
         background-color: rgba(78, 154, 6, 0.4) !important;
         color: rgb(0, 0, 0) !important;
+    }
+}
+
+/* AA Fittings
+------------------------------------------------------------------------------------- */
+@media all {
+    #Fitting_Panel,
+    #Fitting_Panel * {
+        background-color: transparent !important;
     }
 }

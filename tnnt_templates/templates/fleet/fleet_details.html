@@ -64,12 +64,12 @@
                     {% for member in fleet.fleet %}
                         <tr>
                             <td>
-                                <img class="img-circle eve-character-portrait" src="{{ member.character_id|character_portrait_url:32 }}" style="margin-right: 1rem;">
+                                <img class="img-rounded eve-character-portrait" src="{{ member.character_id|character_portrait_url:32 }}" style="margin-right: 1rem;" alt="{{ member.character_name }}">
                                 {{ member.character_name }}
                             </td>
 
                             <td>
-                                <img class="img-circle eve-type-icon" src="{{ member.ship_type_id|type_icon_url:32 }}" style="margin-right: 1rem;">
+                                <img class="img-rounded eve-type-icon" src="{{ member.ship_type_id|type_icon_url:32 }}" style="margin-right: 1rem;" alt="{{ member.ship_type_name }}">
                                 {{ member.ship_type_name }}
                             </td>
 

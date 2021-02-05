@@ -37,15 +37,15 @@
                     {% for fleet in fleets %}
                         <tr>
                             <td>
-                                <img class="img-circle eve-character-portrait" style="display: block; margin: auto;" src="{{ fleet.fleet_commander_id|character_portrait_url:32 }}">
+                                <img class="img-rounded eve-character-portrait" style="display: block; margin: auto;" src="{{ fleet.fleet_commander_id|character_portrait_url:32 }}">
                             </td>
 
                             <td>
-                                {{fleet.name}}
+                                {{ fleet.name }}
                             </td>
 
                             <td>
-                                {{fleet.created_at|date:"Y-m-d H:i"}}
+                                {{ fleet.created_at|date:"Y-m-d H:i" }}
                             </td>
 
                             <td>

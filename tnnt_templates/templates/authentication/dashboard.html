@@ -1,6 +1,8 @@
 {% extends "allianceauth/base.html" %}
+
 {% load static %}
 {% load i18n %}
+{% load evelinks %}
 
 {% block page_title %}{% translate "Dashboard" %}{% endblock %}
 
@@ -16,11 +18,11 @@
     <div class="clearfix">
         <div class="row vertical-flexbox-row2">
             <div class="col-sm-6">
-                <div class="panel panel-primary" style="height: 100%;">
+                <div class="panel panel-primary">
                     <div class="panel-heading">
-                        <h3 class="panel-title">
+                        <div class="panel-title">
                             {% blocktrans with state=request.user.profile.state %}Main Character (State: {{ state }}){% endblocktrans %}
-                        </h3>
+                        </div>
                     </div>
 
                     <div class="panel-body">
@@ -31,9 +33,7 @@
                                         <table class="table">
                                             <tr>
                                                 <td class="text-center">
-                                                    <img class="ra-avatar"
-                                                         src="{{ main.portrait_url_128 }}"
-                                                         alt="{{ main.character_name }}">
+                                                    <img class="img-rounded ra-avatar" src="{{ main.portrait_url_128 }}" alt="{{ main.character_name }}">
                                                 </td>
                                             </tr>
                                             <tr>
@@ -46,9 +46,7 @@
                                         <table class="table">
                                             <tr>
                                                 <td class="text-center">
-                                                    <img class="ra-avatar"
-                                                         src="{{ main.corporation_logo_url_128 }}"
-                                                         alt="{{ main.corporation_name }}">
+                                                    <img class="img-rounded ra-avatar" src="{{ main.corporation_logo_url_128 }}" alt="{{ main.corporation_name }}">
                                                 </td>
                                             </tr>
                                             <tr>
@@ -62,9 +60,7 @@
                                             <table class="table">
                                                 <tr>
                                                     <td class="text-center">
-                                                        <img class="ra-avatar"
-                                                             src="{{ main.alliance_logo_url_128 }}"
-                                                             alt="{{ main.alliance_name }}">
+                                                        <img class="img-rounded ra-avatar" src="{{ main.alliance_logo_url_128 }}" alt="{{ main.alliance_name }}">
                                                     </td>
                                                 </tr>
                                                 <tr>
@@ -103,9 +99,9 @@
             </div>
 
             <div class="col-sm-6">
-                <div class="panel panel-primary" style="height: 100%;">
+                <div class="panel panel-primary">
                     <div class="panel-heading">
-                        <h3 class="panel-title">{% translate "Group Memberships" %}</h3>
+                        <div class="panel-title">{% translate "Group Memberships" %}</div>
                     </div>
 
                     <div class="panel-body text-center">
@@ -127,50 +123,52 @@
 
         <div class="panel panel-default">
             <div class="panel-heading">
-                <h3 class="panel-title">
+                <div class="panel-title">
                     {% translate 'Characters' %}
-                </h3>
+                </div>
             </div>
 
             <div class="panel-body">
-                <table class="table table-striped hidden-xs">
+                <table class="table table-striped table-hover hidden-xs">
                     <thead>
                         <tr>
-                            <th class="text-center"></th>
-                            <th class="text-center">{% translate 'Name' %}</th>
-                            <th class="text-center">{% translate 'Corp' %}</th>
-                            <th class="text-center">{% translate 'Alliance' %}</th>
+                            <th>{% translate 'Name' %}</th>
+                            <th>{% translate 'Corp' %}</th>
+                            <th>{% translate 'Alliance' %}</th>
                         </tr>
                     </thead>
 
                     <tbody>
                     {% for char in characters %}
                         <tr>
-                            <td class="text-center">
-                                <img class="ra-avatar img-circle"
-                                     src="{{ char.portrait_url_32 }}"
-                                     alt="{{ char.character_name }}">
+                            <td class="valign-middle">
+                                <img class="ra-avatar img-rounded" src="{{ char.portrait_url_32 }}" alt="{{ char.character_name }}" style="margin-right: 0.25rem;">
+                                {{ char.character_name }}
                             </td>
-                            <td class="text-center">{{ char.character_name }}</td>
-                            <td class="text-center">{{ char.corporation_name }}</td>
-                            <td class="text-center">{{ char.alliance_name }}</td>
+                            <td class="valign-middle">
+                                <img src="{{ char.corporation_id|corporation_logo_url:32 }}" alt=" {{ char.corporation_name }}" style="margin-right: 0.25rem;">
+                                {{ char.corporation_name }}
+                            </td>
+                            <td class="valign-middle">
+                                {% if char.alliance_name %}
+                                    <img src="{{ char.alliance_id|alliance_logo_url:32 }}" alt=" {{ char.alliance_name }}" style="margin-right: 0.25rem;">
+                                    {{ char.alliance_name }}
+                                {% endif %}
+                            </td>
                         </tr>
                     {% endfor %}
                     </tbody>
                 </table>
 
-                <table class="table table-aa visible-xs-block" style="width: 100%;">
+                <table class="table visible-xs-block" style="width: 100%;">
                     <tbody>
                     {% for char in characters %}
                         <tr>
-                            <td class="text-center" style="vertical-align: middle;">
-                                <img class="ra-avatar img-circle"
-                                     src="{{ char.portrait_url_32 }}"
-                                     alt="{{ char.character_name }}">
+                            <td class="text-center valign-middle">
+                                <img class="ra-avatar img-rounded" src="{{ char.portrait_url_32 }}" alt="{{ char.character_name }}">
                             </td>
 
-                            <td class="text-center"
-                                style="vertical-align: middle; width: 100%;">
+                            <td class="text-center" style="vertical-align: middle; width: 100%;">
                                 <strong>{{ char.character_name }}</strong><br>
                                 {{ char.corporation_name }}<br>
                                 {{ char.alliance_name|default:"" }}

@@ -34,7 +34,7 @@
 
         <div class="panel panel-default">
             <div class="panel-heading">
-                {% translate "Fits" %}
+                <div class="panel-title">{% translate "Fits" %}</div>
             </div>
 
             <div class="panel-body">
@@ -52,11 +52,11 @@
                         <tbody>
                             {% for fit in fits %}
                                 <tr>
-                                    <td><img class="img-circle" src="{{ fit.ship_type_type_id|type_render_url:32 }}" title="{{ fit.ship_type.type_name }}"> {{ fit.ship_type.type_name }}</td>
+                                    <td><img class="img-rounded" src="{{ fit.ship_type_type_id|type_render_url:32 }}" title="{{ fit.ship_type.type_name }}"> {{ fit.ship_type.type_name }}</td>
                                     <td><a href="{% url 'fittings:view_fit' fit.pk %}">{{ fit.name }}</a></td>
                                     <td>
                                         {% for cat in cats|get_item:fit.pk %}
-                                        <span class="label" style="background-color: {{cat.color}}"><a href="{% url 'fittings:view_category' cat.pk %}" class="nostyle">{{cat.name}}</a></span>
+                                        <span class="label" style="background-color: {{ cat.color }}"><a href="{% url 'fittings:view_category' cat.pk %}" class="nostyle">{{ cat.name }}</a></span>
                                         {% endfor %}
                                     </td>
                                     <td>{{ fit.description|linebreaks|urlize }}</td>

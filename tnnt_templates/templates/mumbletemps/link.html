@@ -37,13 +37,13 @@
             <div style="margin-top: 2rem;">
                 <div class="text-center">
                     <div class="clearfix">
-                        <img class="ra-avatar img-circle" src="{{ link.creator.portrait_url_128 }}" alt="{{ link.creator.character_name }}"><br><br>
+                        <img class="ra-avatar img-rounded" src="{{ link.creator.portrait_url_128 }}" alt="{{ link.creator.character_name }}"><br><br>
                         <h1>{{ link.creator.character_name }} has invited you to join Mumble!</h1>
                         <p>Time Remaining: <span id="countdown{{ link.link_ref }}"></span></p>
                         <p><span class="label">Link Ref: {{ link.link_ref }}</span></p>
                         <p>
                             <a class="btn btn-default clearfix" href="mumble://{{ connect_url }}">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Icons_mumble.svg/400px-Icons_mumble.svg.png" alt="Mumble" height="64" width="64" style="float: left;">
+                                <img class="img-rounded" src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8f/Icons_mumble.svg/400px-Icons_mumble.svg.png" alt="Mumble" height="64" width="64" style="float: left;">
                                 <span style="display: inline-block; margin-top: 0.6rem; margin-left: 1rem;">Click to Join Mumble as: <b><br>{{ temp_user.name }}</b></span>
                             </a>
                         </p>

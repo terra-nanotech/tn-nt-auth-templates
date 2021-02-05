@@ -12,6 +12,7 @@
     <h1 class="page-header text-center">
         {% translate "SRP Management" %}
     </h1>
+
     <div class="text-right">
         <p>
             {% if perms.auth.srp_management %}
@@ -42,7 +43,7 @@
             </div>
 
             <div class="panel-body">
-                <table class="table table-striped">
+                <table class="table table-striped table-hover">
                     <thead>
                         <tr>
                             <th class="text-center">{% translate "Fleet Name" %}</th>

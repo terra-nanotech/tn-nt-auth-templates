@@ -17,39 +17,46 @@
                     </button>
                 </div>
             </h1>
-            <div class="container-fluid">
-                <table class="table table-bordered">
-                    <tr>
-                        <th class="text-center">{% translate "Application ID" %}</th>
-                        <th class="text-center">{% translate "Username" %}</th>
-                        <th class="text-center">{% translate "Main Character" %}</th>
-                        <th class="text-center">{% translate "Corporation" %}</th>
-                        <th class="text-center">{% translate "Status" %}</th>
-                        <th class="text-center">{% translate "Actions" %}</th>
-                    </tr>
-                    {% for app in applications %}
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <div class="panel-title">
+                        {% translate 'Applications found' %}
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <table class="table table-striped table-hover">
                         <tr>
-                            <td class="text-center">{{ app.id }}</td>
-                            <td class="text-center">{{ app.user }}</td>
-                            <td class="text-center">{{ app.main_character }}</td>
-                            <td class="text-center">{{ app.form.corp }}</td>
-                            <td class="text-center">
-                                {% if app.approved == None %}
-                                    <div class="label label-warning">{% translate "Pending" %}</div>
-                                {% elif  app.approved == True %}
-                                    <div class="label label-success">{% translate "Approved" %}</div>
-                                {% else %}
-                                    <div class="label label-danger">{% translate "Rejected" %}</div>
-                                {% endif %}
-                            </td>
-                            <td class="text-center">
-                                <a href="{% url 'hrapplications:view' app.id %}" class="btn btn-primary">
-                                    <span class="glyphicon glyphicon-eye-open"></span>
-                                </a>
-                            </td>
+                            <th class="text-center">{% translate "Application ID" %}</th>
+                            <th class="text-center">{% translate "Username" %}</th>
+                            <th class="text-center">{% translate "Main Character" %}</th>
+                            <th class="text-center">{% translate "Corporation" %}</th>
+                            <th class="text-center">{% translate "Status" %}</th>
+                            <th class="text-center">{% translate "Actions" %}</th>
                         </tr>
-                    {% endfor %}
-                </table>
+                        {% for app in applications %}
+                            <tr>
+                                <td class="text-center">{{ app.id }}</td>
+                                <td class="text-center">{{ app.user }}</td>
+                                <td class="text-center">{{ app.main_character }}</td>
+                                <td class="text-center">{{ app.form.corp }}</td>
+                                <td class="text-center">
+                                    {% if app.approved == None %}
+                                        <div class="label label-warning">{% translate "Pending" %}</div>
+                                    {% elif  app.approved == True %}
+                                        <div class="label label-success">{% translate "Approved" %}</div>
+                                    {% else %}
+                                        <div class="label label-danger">{% translate "Rejected" %}</div>
+                                    {% endif %}
+                                </td>
+                                <td class="text-center">
+                                    <a href="{% url 'hrapplications:view' app.id %}" class="btn btn-primary">
+                                        <span class="glyphicon glyphicon-eye-open"></span>
+                                    </a>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </table>
+                </div>
             </div>
         {% endif %}
     </div>

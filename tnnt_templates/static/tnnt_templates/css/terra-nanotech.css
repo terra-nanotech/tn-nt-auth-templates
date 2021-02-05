@@ -23,6 +23,7 @@
     .h1, .h2, .h3, .h4, .h5, .h6,
     h1, h2, h3, h4, h5, h6 {
         font-family: Roboto, "Helvetica Neue", sans-serif;
+        font-weight: 400;
     }
 
     .tooltip {
@@ -339,6 +340,52 @@
     button.list-group-item-success:focus {
         background-color: rgba(79, 189, 79, 0.6);
     }
+
+    .list-group-item-info {
+        background-color: rgba(91, 192, 222, 0.6);
+    }
+
+    a.list-group-item-info:hover,
+    button.list-group-item-info:hover,
+    a.list-group-item-info:focus,
+    button.list-group-item-info:focus {
+        background-color: rgba(70, 184, 218, 0.6);
+    }
+
+    .list-group-item-warning {
+        background-color: rgba(248, 148, 6, 0.6);
+    }
+
+    a.list-group-item-warning:hover,
+    button.list-group-item-warning:hover,
+    a.list-group-item-warning:focus,
+    button.list-group-item-warning:focus {
+        background-color: rgba(223, 133, 5, 0.6);
+    }
+
+    .list-group-item-danger {
+        background-color: rgba(238, 95, 91, 0.6);
+    }
+
+    a.list-group-item-danger:hover,
+    button.list-group-item-danger:hover,
+    a.list-group-item-danger:focus,
+    button.list-group-item-danger:focus {
+        background-color: rgba(236, 72, 68, 0.6);
+    }
+
+    .valign-middle,
+    .table > tbody > tr > td.valign-middle,
+    .table > tbody > tr > th.valign-middle,
+    .table > tfoot > tr > td.valign-middle,
+    .table > tfoot > tr > th.valign-middle,
+    .table > thead > tr > td.valign-middle {
+        vertical-align: middle;
+    }
+
+    td p:last-child {
+        margin-bottom: 0;
+    }
 }
 
 /* auth base styles
@@ -369,6 +416,15 @@
     img {
         max-width: 100%;
         height: auto;
+        border-radius: 6px;
+    }
+
+    .img-circle {
+        border-radius: 6px;
+    }
+
+    .img-default {
+        border-radius: 0;
     }
 
     .gray-icon-color .fa {
@@ -417,6 +473,14 @@
 
     .flex-center-horizontal {
         justify-content: center;
+    }
+
+    .navbar-nav > li.top-user-menu.with-main-character a {
+        padding: 9px 15px;
+    }
+
+    .navbar-nav > li.top-user-menu.with-main-character > .dropdown-menu {
+        padding-top: 0.5rem;
     }
 }
 
@@ -580,12 +644,13 @@
         border-color: rgba(200, 200, 200, 0.6);
     }
 
-    .panel-title {
+    .panel-title, .modal-title {
         display: block;
         font-size: 1rem;
-        font-family: Roboto, "Helvetica Neue", sans-serif;
+        /*font-family: Roboto, "Helvetica Neue", sans-serif;*/
+        font-family: Georgia, Times, serif;
         font-weight: 700;
-        line-height: 1.1;
+        /*line-height: 1.1;*/
         color: inherit;
         margin-top: 0.25rem;
         margin-bottom: 0.25rem;

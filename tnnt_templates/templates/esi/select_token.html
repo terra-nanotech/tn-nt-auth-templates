@@ -45,13 +45,13 @@
 
                                     <div class="card-body card__content">
                                         <button class="btn btn-new-character-sso" type="submit" name="go">
-                                            <img src="{{ 1|character_portrait_url:256 }}" title="{% translate 'Add new character by logging in with EVE Online' %}" alt="{% translate 'Add Character' %}">
+                                            <img class="img-rounded" src="{{ 1|character_portrait_url:256 }}" title="{% translate 'Add new character by logging in with EVE Online' %}" alt="{% translate 'Add Character' %}">
                                         </button>
                                     </div>
 
                                     <div class="card-footer">
                                         <button class="btn btn-new-character-sso" type="submit" name="go">
-                                            <img src="{% static 'tnnt_templates/images/eve-sso-login-black-small.png' %}" title="{% translate 'Add new character by logging in with EVE Online' %}" alt="{% translate 'Add Character' %}">
+                                            <img class="img-rounded" src="{% static 'tnnt_templates/images/eve-sso-login-black-small.png' %}" title="{% translate 'Add new character by logging in with EVE Online' %}" alt="{% translate 'Add Character' %}">
                                         </button>
                                     </div>
                                 </div>
@@ -73,7 +73,7 @@
 
                                         <div class="card-body card__content">
                                             <button class="btn btn-select-character btn-character-image" type="submit" title="{% translate 'Select Character' %} {{ token.character_name }}" formmethod="post">
-                                                <img src="{{ token.character_id|character_portrait_url:256 }}" alt="{{ token.character_name }}">
+                                                <img class="img-rounded" src="{{ token.character_id|character_portrait_url:256 }}" alt="{{ token.character_name }}">
                                             </button>
                                         </div>
 
@@ -98,13 +98,13 @@
 
                                 <div class="card-body card__content">
                                     <button class="btn btn-new-character-sso" type="submit" name="go">
-                                        <img src="{{ 1|character_portrait_url:256 }}" title="{% translate 'Add new character by logging in with EVE Online' %}" alt="{% translate 'Add Character' %}">
+                                        <img class="img-rounded" src="{{ 1|character_portrait_url:256 }}" title="{% translate 'Add new character by logging in with EVE Online' %}" alt="{% translate 'Add Character' %}">
                                     </button>
                                 </div>
 
                                 <div class="card-footer">
                                     <button class="btn btn-new-character-sso" type="submit" name="go">
-                                        <img src="{% static 'tnnt_templates/images/eve-sso-login-black-small.png' %}" title="{% translate 'Add new character by logging in with EVE Online' %}" alt="{% translate 'Add Character' %}">
+                                        <img class="img-rounded" src="{% static 'tnnt_templates/images/eve-sso-login-black-small.png' %}" title="{% translate 'Add new character by logging in with EVE Online' %}" alt="{% translate 'Add Character' %}">
                                     </button>
                                 </div>
                             </div>

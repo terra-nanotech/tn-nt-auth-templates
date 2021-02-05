@@ -6,6 +6,29 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.3.0] - 2021-02-05
+
+### Added
+
+- Compatibility with the notification changes from upstream
+  ([see here](https://gitlab.com/allianceauth/allianceauth/-/merge_requests/1218))
+- Moved top menu into a user menu dropdown
+- Common image style, no longer mix of `img-circle` and `img-rounded`
+- Cog for auth commands for discordbot
+- Cog for `!time` command added for discordbot
+- Templates for [securegroups](https://github.com/pvyParts/allianceauth-secure-groups)
+
+### Changed
+
+- Entity logo made configurable
+
+### Fixed
+
+- Panel headers
+- Table look and feel
+- Fitting panel in doctrine view (fittings module)
+
+
 ## [1.2.6] - 2021-01-24
 
 ### Changed

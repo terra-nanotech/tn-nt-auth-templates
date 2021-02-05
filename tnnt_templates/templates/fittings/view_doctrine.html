@@ -39,24 +39,26 @@
         <div class="col-md-3">
             <div class="panel panel-primary">
                 <div class="panel-heading">
-                    {% translate "Doctrine Information" %}
+                    <div class="panel-title">
+                        {% translate "Doctrine Information" %}
 
-                    {% if perms.fittings.manage %}
-                        <span data-toggle="modal" data-target="#deleteModal">
-                            <button class="btn btn-xs btn-danger" style="float: right; margin-left: 5px;" data-toggle="tooltip" data-placement="top" title="{% translate 'Delete Doctrine' %}"><span class="fa fas fa-times"></span> </button>
-                        </span>
-                        <a href="{% url 'fittings:edit_doctrine' doctrine.pk %}" class="btn btn-xs btn-warning" style="float: right" data-toggle="tooltip" data-placement="top" title="{% translate 'Edit Doctrine' %}"><span class="fa fas fa-pencil-alt"></span> </a>
-                    {% endif %}
+                        {% if perms.fittings.manage %}
+                            <span data-toggle="modal" data-target="#deleteModal">
+                                <button class="btn btn-xs btn-danger" style="float: right; margin-left: 5px;" data-toggle="tooltip" data-placement="top" title="{% translate 'Delete Doctrine' %}"><span class="fa fas fa-times"></span> </button>
+                            </span>
+                            <a href="{% url 'fittings:edit_doctrine' doctrine.pk %}" class="btn btn-xs btn-warning" style="float: right" data-toggle="tooltip" data-placement="top" title="{% translate 'Edit Doctrine' %}"><span class="fa fas fa-pencil-alt"></span> </a>
+                        {% endif %}
+                    </div>
                 </div>
 
                 <div class="panel-body">
-                    <img src="{{ doctrine.icon_url }}" class="img-circle center-block" style="text-align: center"/>
-                    <h4 style="text-align: center">{{ doctrine.name }}</h4>
-                    <h5 style="text-align: center">
+                    <img src="{{ doctrine.icon_url }}" class="img-rounded center-block" style="text-align: center"/>
+                    <div style="text-align: center">{{ doctrine.name }}</div>
+                    <div style="text-align: center">
                         {% for cat in d_cats %}
-                            <span class="label" style="background-color: {{cat.color}}"><a href="{% url 'fittings:view_category' cat.pk %}" class="nostyle">{{cat.name}}</a></span>
+                            <span class="label" style="background-color: {{ cat.color }}"><a href="{% url 'fittings:view_category' cat.pk %}" class="nostyle">{{ cat.name }}</a></span>
                         {% endfor %}
-                    </h5>
+                    </div>
 
                     <hr />
 
@@ -76,7 +78,9 @@
 
         <div class="col-md-9">
             <div class="panel panel-default">
-                <div class="panel-heading">{% translate "Doctrine Fits" %}</div>
+                <div class="panel-heading">
+                    <div class="panel-title">{% translate "Doctrine Fits" %}</div>
+                </div>
 
                 <div class="panel-body">
                     {% if not fits %}
@@ -93,11 +97,11 @@
                             <tbody>
                                 {% for fit in fits %}
                                     <tr>
-                                        <td><img class="img-circle" src="{{ fit.ship_type_type_id|type_render_url:32 }}" title="{{ fit.ship_type.type_name }}"> {{ fit.ship_type.type_name }}</td>
+                                        <td><img class="img-rounded" src="{{ fit.ship_type_type_id|type_render_url:32 }}" title="{{ fit.ship_type.type_name }}"> {{ fit.ship_type.type_name }}</td>
                                         <td><a href="{% url 'fittings:view_fit' fit.pk %}">{{ fit.name }}</a></td>
                                         <td>
                                             {% for cat in f_cats|get_item:fit.pk %}
-                                                <span class="label" style="background-color: {{cat.color}}"><a href="{% url 'fittings:view_category' cat.pk %}" class="nostyle">{{cat.name}}</a></span>
+                                                <span class="label" style="background-color: {{ cat.color }}"><a href="{% url 'fittings:view_category' cat.pk %}" class="nostyle">{{ cat.name }}</a></span>
                                             {% endfor %}
                                         </td>
                                         <td>{{ fit.description|linebreaks|urlize }}</td>
