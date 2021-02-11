@@ -14,7 +14,15 @@
             </button>
 
             <a class="navbar-brand">
-                <img class="img-rounded" src="{{ TNNT_TEMPLATE_ENTITY_LOGO}}?size=32" style="display: inline-block;" height="32" width="32" alt="Terra Nanotech">
+                {% if TNNT_TEMPLATE_ENTITY_ID == 1 %}
+                    <img class="img-rounded" src="{{ TNNT_TEMPLATE_AA_LOGO }}?size=32" style="display: inline-block;" height="32" width="32" alt="{{ TNNT_TEMPLATE_ENTITY_NAME }}">
+                {% else %}
+                    {% if TNNT_TEMPLATE_ENTITY_TYPE == 'alliance' %}
+                        <img class="img-rounded" src="{{ TNNT_TEMPLATE_ENTITY_ID|alliance_logo_url:32 }}" style="display: inline-block;" height="32" width="32" alt="{{ TNNT_TEMPLATE_ENTITY_NAME }}">
+                    {% elif TNNT_TEMPLATE_ENTITY_TYPE == 'corporation' %}
+                        <img class="img-rounded" src="{{ TNNT_TEMPLATE_ENTITY_ID|corporation_logo_url:32 }}" style="display: inline-block;" height="32" width="32" alt="{{ TNNT_TEMPLATE_ENTITY_NAME }}">
+                    {% endif %}
+                {% endif %}
                 {{ SITE_NAME }}
             </a>
         </div>

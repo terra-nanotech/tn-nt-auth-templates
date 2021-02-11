@@ -1,3 +1,3 @@
 # Terra Nanotech Auth Templates
 
-Terra Nanotech Template Overrides for Alliance Auth
+Template Overrides for Alliance Auth
