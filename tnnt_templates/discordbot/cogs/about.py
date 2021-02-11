@@ -17,6 +17,11 @@ from django.conf import settings
 from aadiscordbot import app_settings, __version__, __branch__
 from aadiscordbot.app_settings import get_site_url
 
+from allianceauth.eveonline.evelinks.eveimageserver import (
+    alliance_logo_url,
+    corporation_logo_url,
+)
+
 
 logger = logging.getLogger(__name__)
 
@@ -40,7 +45,18 @@ class About(commands.Cog):
         embed = Embed(title="Alliance Auth Discord Bot")
 
         try:
-            embed.set_thumbnail(url=settings.TNNT_TEMPLATE_ENTITY_LOGO + "?size=256")
+            if settings.TNNT_TEMPLATE_ENTITY_ID == 1:
+                embed.set_thumbnail(url=get_site_url + "static/icons/allianceauth.png")
+            else:
+                if settings.TNNT_TEMPLATE_ENTITY_TYPE == "alliance":
+                    embed.set_thumbnail(
+                        url=alliance_logo_url(settings.TNNT_TEMPLATE_ENTITY_ID, 256)
+                    )
+                elif settings.TNNT_TEMPLATE_ENTITY_TYPE == "corporation":
+                    embed.set_thumbnail(
+                        url=corporation_logo_url(settings.TNNT_TEMPLATE_ENTITY_ID, 256)
+                    )
+
         except AttributeError:
             pass
 
@@ -51,25 +67,9 @@ class About(commands.Cog):
             "specifically for Alliance Auth.\n\nType `!help` for more information."
         )
 
-        # regex = r"^(.+)\/d.+"
-        #
-        # matches = re.finditer(regex, settings.DISCORD_CALLBACK_URL, re.MULTILINE)
-        #
-        # url = []
-        # for match in matches:
-        #     url = match.groups()
-
         url = get_site_url()
 
         embed.set_footer(text="Developedby Aaron Kable, Forked by Rounon Dax")
-
-        # embed.add_field(
-        #     name="Number of Servers:", value=len(self.bot.guilds), inline=True
-        # )
-
-        # embed.add_field(
-        #     name="Unwilling Monitorees:", value=len(self.bot.users), inline=True
-        # )
 
         embed.add_field(
             name="Auth Link",
@@ -82,10 +82,6 @@ class About(commands.Cog):
             value="{version}@{branch}".format(version=__version__, branch=__branch__),
             inline=False,
         )
-
-        # embed.add_field(
-        #     name="Creator", value="<@259357133592723456>", inline=False
-        # )
 
         return await ctx.send(embed=embed)
 

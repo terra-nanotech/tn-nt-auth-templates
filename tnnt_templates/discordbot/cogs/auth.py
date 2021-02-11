@@ -13,6 +13,10 @@ from django.conf import settings
 from aadiscordbot.app_settings import get_site_url, get_admins
 
 from allianceauth.services.modules.discord.models import DiscordUser
+from allianceauth.eveonline.evelinks.eveimageserver import (
+    alliance_logo_url,
+    corporation_logo_url,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -34,17 +38,27 @@ class Auth(commands.Cog):
 
         await ctx.trigger_typing()
 
-        embed = Embed(title="AllianceAuth")
+        embed = Embed(title="Alliance Auth")
 
         try:
-            embed.set_thumbnail(url=settings.TNNT_TEMPLATE_ENTITY_LOGO + "?size=256")
+            if settings.TNNT_TEMPLATE_ENTITY_ID == 1:
+                embed.set_thumbnail(url=get_site_url + "static/icons/allianceauth.png")
+            else:
+                if settings.TNNT_TEMPLATE_ENTITY_TYPE == "alliance":
+                    embed.set_thumbnail(
+                        url=alliance_logo_url(settings.TNNT_TEMPLATE_ENTITY_ID, 256)
+                    )
+                elif settings.TNNT_TEMPLATE_ENTITY_TYPE == "corporation":
+                    embed.set_thumbnail(
+                        url=corporation_logo_url(settings.TNNT_TEMPLATE_ENTITY_ID, 256)
+                    )
         except AttributeError:
             pass
 
         embed.colour = Color.blue()
 
         embed.description = (
-            "All Authentication functions for this Discord "
+            "All authentication functions for this Discord "
             "server are handled through our Alliance Auth instance."
         )
 
