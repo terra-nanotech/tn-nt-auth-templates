@@ -12,6 +12,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - Use the constant for the entity name where ever possible
 
+### Fixed
+
+- Template's overall image style also for entity logo on login/register
+
 
 ## [1.4.0] - 2021-02-11
 

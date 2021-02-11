@@ -21,10 +21,6 @@
         background: rgba(48,48,48,0.75);
     }
 
-    .login-image {
-        border-radius: 50%;
-    }
-
     .auth-login-box-inner {
         position: absolute;
         bottom: 5vh;
