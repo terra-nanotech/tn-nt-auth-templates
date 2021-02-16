@@ -24,7 +24,10 @@
                     <p class="text-center">
                         <span class="text-white text-primary" style="display: block; font-size: 1rem;">{{ main.character_name }}</span>
                         <span class="text-white text-primary" style="display: block; font-size: 1rem;">{{ main.corporation_name }}</span>
-                        <span class="text-white text-primary" style="display: block; font-size: 1rem;">{{ main.alliance_name }}</span>
+
+                        {% if main.alliance_name %}
+                            <span class="text-white text-primary" style="display: block; font-size: 1rem;">{{ main.alliance_name }}</span>
+                        {% endif %}
                     </p>
                 {% endwith %}
             </li>

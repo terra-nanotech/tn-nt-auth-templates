@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.4.2] - 2021-02-16
+
+### Fixed
+
+- Show alliance name in user menu only when there is an alliance
+
+
 ## [1.4.1] - 2021-02-11
 
 ### Changed

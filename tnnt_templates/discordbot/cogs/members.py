@@ -233,8 +233,10 @@ class Members(commands.Cog):
         for a in alts_in_corp:
             try:
                 main = a.character_ownership.user.profile.main_character
+
                 if main.character_id not in mains:
                     mains[main.character_id] = [main, 0]
+
                 mains[main.character_id][1] += 1
                 # alt_corp_id = a.corporation_id
             except Exception as e:
