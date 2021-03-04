@@ -85,7 +85,7 @@ class Auth(commands.Cog):
         await ctx.send("Searching for Orphaned Discord Users")
         await ctx.trigger_typing()
 
-        payload = "The following Users cannot be located in Alliance Auth \n"
+        payload = "The following Users cannot be located in Alliance Auth\n"
 
         member_list = ctx.message.guild.members
 
@@ -107,14 +107,26 @@ class Auth(commands.Cog):
                 # lets also ignore bots here
                 pass
             else:
+                # Dump the payload if it gets too big
+                if len(payload) > 1000:
+                    try:
+                        await ctx.send(payload)
+
+                        payload = (
+                            "The following Users cannot be located in Alliance Auth\n"
+                        )
+                    except Exception as e:
+                        logger.error(e)
+
+                # keep building the payload
                 payload = payload + member.mention + "\n"
 
         try:
             await ctx.send(payload)
         except Exception as e:
             logger.error(e)
-            await ctx.send(payload[0:1999])
-            await ctx.send("Maximum Discord message length reached")
+            # await ctx.send(payload[0:1999])
+            # await ctx.send("Maximum Discord message length reached")
 
 
 def setup(bot):
