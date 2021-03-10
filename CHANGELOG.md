@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.4.5] - 2021-03-10
+
+### Changed
+
+- Some text fixes for allianceauth-dicordbot
+
+
 ## [1.4.4] - 2021-03-08
 
 ### Changed
