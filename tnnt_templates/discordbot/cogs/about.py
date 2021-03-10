@@ -14,7 +14,7 @@ from discord.utils import get
 
 from django.conf import settings
 
-from aadiscordbot import app_settings, __version__, __branch__
+from aadiscordbot import app_settings
 from aadiscordbot.app_settings import get_site_url
 
 from allianceauth.eveonline.evelinks.eveimageserver import (
@@ -42,7 +42,7 @@ class About(commands.Cog):
 
         await ctx.trigger_typing()
 
-        embed = Embed(title="Alliance Auth Discord Bot")
+        embed = Embed(title="TN-NT Discord Services")
 
         try:
             if settings.TNNT_TEMPLATE_ENTITY_ID == 1:
@@ -64,12 +64,10 @@ class About(commands.Cog):
 
         embed.description = (
             "This is a multi-functional discord bot tailored "
-            "specifically for Alliance Auth.\n\nType `!help` for more information."
+            "specifically for Terra Nanotech.\n\nType `!help` for more information."
         )
 
         url = get_site_url()
-
-        embed.set_footer(text="Developedby Aaron Kable, Forked by Rounon Dax")
 
         embed.add_field(
             name="Auth Link",
@@ -77,10 +75,8 @@ class About(commands.Cog):
             inline=False,
         )
 
-        embed.add_field(
-            name="Version",
-            value="{version}@{branch}".format(version=__version__, branch=__branch__),
-            inline=False,
+        embed.set_footer(
+            text="Developed by Aaron Kable, forked for Terra Nanotech by Rounon Dax"
         )
 
         return await ctx.send(embed=embed)
