@@ -32,7 +32,7 @@ class Auth(commands.Cog):
     @commands.command(pass_context=True)
     async def auth(self, ctx):
         """
-        Returns a link to the AllianceAuth Install
+        Returns a link to TN-NT Auth
         Used by many other Bots and is a common command that users will attempt to run.
         """
 
@@ -75,7 +75,7 @@ class Auth(commands.Cog):
     @commands.command(pass_context=True)
     async def orphans(self, ctx):
         """
-        Returns a list of users on this server, who are not known to AA
+        Returns a list of users on this server, who are unknown to TN-NT Auth
         """
 
         if ctx.message.author.id not in get_admins():
