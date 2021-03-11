@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.4.6] - 2021-03-11
+
+### Fixed
+
+- django.template.exceptions.TemplateSyntaxError: Invalid filter:
+  'alliance_logo_url' (Missing evelinks template tag)
+- Page title translations
+
 ## [1.4.5] - 2021-03-10
 
 ### Changed
