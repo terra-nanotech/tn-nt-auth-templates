@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - django.template.exceptions.TemplateSyntaxError: Invalid filter:
   'alliance_logo_url' (Missing evelinks template tag)
+- Page title translations
 
 ## [1.4.5] - 2021-03-10
 
