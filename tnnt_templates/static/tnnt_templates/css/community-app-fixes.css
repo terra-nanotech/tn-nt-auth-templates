@@ -140,3 +140,11 @@
         padding: 3px 36px 3px 20px;
     }
 }
+
+/* App: AA Timezones
+------------------------------------------------------------------------------------- */
+@media all {
+    .aa-fleetpings-pingtext {
+        top: 3.6875rem;
+    }
+}
