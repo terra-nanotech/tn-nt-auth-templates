@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.4.7] - 2021-03-16
+
+### Fixed
+
+- top positioning for `.aa-fleetpings-pingtext` box
+
+
 ## [1.4.6] - 2021-03-11
 
 ### Fixed
