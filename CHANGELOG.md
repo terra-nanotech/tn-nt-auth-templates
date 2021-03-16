@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.4.8] - 2021-03-16
+
+### Added
+
+- Add `target="_blank"` and `rel="noopener noreferer"` to external links
+
+
 ## [1.4.7] - 2021-03-16
 
 ### Fixed
