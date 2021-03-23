@@ -90,6 +90,23 @@ class PriceCheck(commands.Cog):
 
         await ctx.trigger_typing()
 
+        # these will be mapped to "Exotic Dancers, Male"
+        map_exotic_dancers = {
+            "hooker",
+            "hookers",
+            "prostitute",
+            "prostitutes",
+            "whore",
+            "whores",
+            "hussy",
+            "hussies",
+            "tramp",
+            "tramps",
+        }
+
+        if item_name.lower() in (needle.lower() for needle in map_exotic_dancers):
+            item_name = "Exotic Dancers, Male"
+
         if item_name != "":
             embed = Embed(
                 title="Price Lookup for {item_name}".format(item_name=item_name),
