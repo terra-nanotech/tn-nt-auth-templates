@@ -1,5 +1,5 @@
 """
-Market Shenanigans
+Market Price Checks
 """
 
 import logging
@@ -29,133 +29,330 @@ class PriceCheck(commands.Cog):
 
         has_thumbnail = False
 
+        markets = [
+            {"name": "Jita", "api_key": "jita"},
+            {"name": "Amarr", "api_key": "amarr"},
+        ]
+
         await ctx.trigger_typing()
 
         item_name = ctx.message.content[7:]
 
-        embed = Embed(
-            title="Price Lookup (Jita and Amarr) for {item_name}".format(
-                item_name=item_name
-            ),
-            color=Color.green(),
-        )
+        if item_name != "":
+            embed = Embed(
+                title="Price Lookup (Jita and Amarr) for {item_name}".format(
+                    item_name=item_name
+                ),
+                color=Color.green(),
+            )
 
-        embed.add_field(
-            name="Jita Market",
-            value="Prices for {item_name} on the Jita Market.".format(
-                item_name=item_name
-            ),
-            inline=False,
-        )
-
-        # Jita Market
-        jita_market = requests.post(
-            "https://evepraisal.com/appraisal/structured.json",
-            json={"market_name": "jita", "items": [{"name": item_name}]},
-        )
-
-        if jita_market.status_code == 200:
-            jita_json = jita_market.json()
-
-            has_thumbnail = True
-            embed.set_thumbnail(
-                url="https://images.evetech.net/types/{type_id}/icon?size=64".format(
-                    type_id=jita_json["appraisal"]["items"][0]["typeID"]
+            for market in markets:
+                embed.add_field(
+                    name="{market_name} Market".format(market_name=market["name"]),
+                    value="Prices for {item_name} on the {market_name} Market.".format(
+                        item_name=item_name, market_name=market["name"]
+                    ),
+                    inline=False,
                 )
-            )
 
-            # sell order price
-            jita_market_sell_order_price = (
-                f'{jita_json["appraisal"]["items"][0]["prices"]["sell"]["min"]:,} ISK'
-            )
+                market_data = requests.post(
+                    "https://evepraisal.com/appraisal/structured.json",
+                    json={
+                        "market_name": market["api_key"],
+                        "items": [{"name": item_name}],
+                    },
+                )
 
-            if jita_json["appraisal"]["items"][0]["prices"]["sell"]["order_count"] == 0:
-                jita_market_sell_order_price = "No sell orders found"
+                if market_data.status_code == 200:
+                    market_json = market_data.json()
 
-            embed.add_field(
-                name="Sell Order Price",
-                value=jita_market_sell_order_price,
-                inline=True,
-            )
+                    if has_thumbnail is False:
+                        embed.set_thumbnail(
+                            url=(
+                                "https://images.evetech.net/types/{type_id}/icon?size=64"
+                            ).format(
+                                type_id=market_json["appraisal"]["items"][0]["typeID"]
+                            )
+                        )
 
-            # buy order price
-            jita_market_buy_order_price = (
-                f'{jita_json["appraisal"]["items"][0]["prices"]["buy"]["max"]:,} ISK'
-            )
+                        has_thumbnail = True
 
-            if jita_json["appraisal"]["items"][0]["prices"]["buy"]["order_count"] == 0:
-                jita_market_buy_order_price = "No buy orders found"
+                    # sell order price
+                    market_sell_order_price = f'{market_json["appraisal"]["items"][0]["prices"]["sell"]["min"]:,} ISK'  # noqa: E501
 
-            embed.add_field(
-                name="Buy Order Price",
-                value=jita_market_buy_order_price,
-                inline=True,
-            )
+                    if (
+                        market_json["appraisal"]["items"][0]["prices"]["sell"][
+                            "order_count"
+                        ]
+                        == 0
+                    ):
+                        market_sell_order_price = "No sell orders found"
+
+                    embed.add_field(
+                        name="Sell Order Price",
+                        value=market_sell_order_price,
+                        inline=True,
+                    )
+
+                    # buy order price
+                    market_buy_order_price = f'{market_json["appraisal"]["items"][0]["prices"]["buy"]["max"]:,} ISK'  # noqa: E501
+
+                    if (
+                        market_json["appraisal"]["items"][0]["prices"]["buy"][
+                            "order_count"
+                        ]
+                        == 0
+                    ):
+                        market_buy_order_price = "No buy orders found"
+
+                    embed.add_field(
+                        name="Buy Order Price",
+                        value=market_buy_order_price,
+                        inline=True,
+                    )
+                else:
+                    embed.add_field(
+                        name="API Error",
+                        value=(
+                            "Couldn't not fetch the price for the {market_name} market."
+                        ).format(market_name=market["name"]),
+                        inline=False,
+                    )
         else:
+            embed = Embed(
+                title="Price Lookup",
+                color=Color.red(),
+            )
+
             embed.add_field(
-                name="API Error",
-                value="Couldn't not fetch the price for the Jita market.",
+                name="Error",
+                value=(
+                    "You forget to enter an item you want to lookup the price for ..."
+                ),
                 inline=False,
             )
 
-        embed.add_field(
-            name="Amarr Market",
-            value="Prices for {item_name} on the Amarr Market.".format(
-                item_name=item_name
-            ),
-            inline=False,
-        )
+        return await ctx.send(embed=embed)
 
-        # Amarr Market
-        amarr_market = requests.post(
-            "https://evepraisal.com/appraisal/structured.json",
-            json={"market_name": "amarr", "items": [{"name": item_name}]},
-        )
+    @commands.command(pass_context=True)
+    async def jita(self, ctx):
+        """
+        Check an item price on Jita market
+        :param ctx:
+        :return:
+        """
 
-        if amarr_market.status_code == 200:
-            amarr_json = amarr_market.json()
+        has_thumbnail = False
 
-            if has_thumbnail is False:
-                embed.set_thumbnail(
-                    url=(
-                        "https://images.evetech.net/types/{type_id}/icon?size=64"
-                    ).format(type_id=amarr_json["appraisal"]["items"][0]["typeID"])
+        markets = [
+            {"name": "Jita", "api_key": "jita"},
+        ]
+
+        await ctx.trigger_typing()
+
+        item_name = ctx.message.content[6:]
+
+        if item_name != "":
+            embed = Embed(
+                title="Price Lookup for {item_name}".format(item_name=item_name),
+                color=Color.green(),
+            )
+
+            for market in markets:
+                embed.add_field(
+                    name="{market_name} Market".format(market_name=market["name"]),
+                    value="Prices for {item_name} on the {market_name} Market.".format(
+                        item_name=item_name, market_name=market["name"]
+                    ),
+                    inline=False,
                 )
 
-            # sell order price
-            amarr_market_sell_order_price = (
-                f'{amarr_json["appraisal"]["items"][0]["prices"]["sell"]["min"]:,} ISK'
-            )
+                market_data = requests.post(
+                    "https://evepraisal.com/appraisal/structured.json",
+                    json={
+                        "market_name": market["api_key"],
+                        "items": [{"name": item_name}],
+                    },
+                )
 
-            if (
-                amarr_json["appraisal"]["items"][0]["prices"]["sell"]["order_count"]
-                == 0
-            ):
-                amarr_market_sell_order_price = "No sell orders found"
+                if market_data.status_code == 200:
+                    market_json = market_data.json()
 
-            embed.add_field(
-                name="Sell Order Price",
-                value=amarr_market_sell_order_price,
-                inline=True,
-            )
+                    if has_thumbnail is False:
+                        embed.set_thumbnail(
+                            url=(
+                                "https://images.evetech.net/types/{type_id}/icon?size=64"
+                            ).format(
+                                type_id=market_json["appraisal"]["items"][0]["typeID"]
+                            )
+                        )
 
-            # buy order price
-            amarr_market_buy_order_price = (
-                f'{amarr_json["appraisal"]["items"][0]["prices"]["buy"]["max"]:,} ISK'
-            )
+                        has_thumbnail = True
 
-            if amarr_json["appraisal"]["items"][0]["prices"]["buy"]["order_count"] == 0:
-                amarr_market_buy_order_price = "No buy orders found"
+                    # sell order price
+                    market_sell_order_price = f'{market_json["appraisal"]["items"][0]["prices"]["sell"]["min"]:,} ISK'  # noqa: E501
 
-            embed.add_field(
-                name="Buy Order Price",
-                value=amarr_market_buy_order_price,
-                inline=True,
-            )
+                    if (
+                        market_json["appraisal"]["items"][0]["prices"]["sell"][
+                            "order_count"
+                        ]
+                        == 0
+                    ):
+                        market_sell_order_price = "No sell orders found"
+
+                    embed.add_field(
+                        name="Sell Order Price",
+                        value=market_sell_order_price,
+                        inline=True,
+                    )
+
+                    # buy order price
+                    market_buy_order_price = f'{market_json["appraisal"]["items"][0]["prices"]["buy"]["max"]:,} ISK'  # noqa: E501
+
+                    if (
+                        market_json["appraisal"]["items"][0]["prices"]["buy"][
+                            "order_count"
+                        ]
+                        == 0
+                    ):
+                        market_buy_order_price = "No buy orders found"
+
+                    embed.add_field(
+                        name="Buy Order Price",
+                        value=market_buy_order_price,
+                        inline=True,
+                    )
+                else:
+                    embed.add_field(
+                        name="API Error",
+                        value=(
+                            "Couldn't not fetch the price for the {market_name} market."
+                        ).format(market_name=market["name"]),
+                        inline=False,
+                    )
         else:
+            embed = Embed(
+                title="Price Lookup",
+                color=Color.red(),
+            )
+
             embed.add_field(
-                name="API Error",
-                value="Couldn't not fetch the price for the Amarr market.",
+                name="Error",
+                value=(
+                    "You forget to enter an item you want to lookup the price for ..."
+                ),
+                inline=False,
+            )
+
+        return await ctx.send(embed=embed)
+
+    @commands.command(pass_context=True)
+    async def amarr(self, ctx):
+        """
+        Check an item price on Jita and Amarr market
+        :param ctx:
+        :return:
+        """
+
+        has_thumbnail = False
+
+        markets = [
+            {"name": "Amarr", "api_key": "amarr"},
+        ]
+
+        await ctx.trigger_typing()
+
+        item_name = ctx.message.content[7:]
+
+        if item_name != "":
+            embed = Embed(
+                title="Price Lookup for {item_name}".format(item_name=item_name),
+                color=Color.green(),
+            )
+
+            for market in markets:
+                embed.add_field(
+                    name="{market_name} Market".format(market_name=market["name"]),
+                    value="Prices for {item_name} on the {market_name} Market.".format(
+                        item_name=item_name, market_name=market["name"]
+                    ),
+                    inline=False,
+                )
+
+                market_data = requests.post(
+                    "https://evepraisal.com/appraisal/structured.json",
+                    json={
+                        "market_name": market["api_key"],
+                        "items": [{"name": item_name}],
+                    },
+                )
+
+                if market_data.status_code == 200:
+                    market_json = market_data.json()
+
+                    if has_thumbnail is False:
+                        embed.set_thumbnail(
+                            url=(
+                                "https://images.evetech.net/types/{type_id}/icon?size=64"
+                            ).format(
+                                type_id=market_json["appraisal"]["items"][0]["typeID"]
+                            )
+                        )
+
+                        has_thumbnail = True
+
+                    # sell order price
+                    market_sell_order_price = f'{market_json["appraisal"]["items"][0]["prices"]["sell"]["min"]:,} ISK'  # noqa: E501
+
+                    if (
+                        market_json["appraisal"]["items"][0]["prices"]["sell"][
+                            "order_count"
+                        ]
+                        == 0
+                    ):
+                        market_sell_order_price = "No sell orders found"
+
+                    embed.add_field(
+                        name="Sell Order Price",
+                        value=market_sell_order_price,
+                        inline=True,
+                    )
+
+                    # buy order price
+                    market_buy_order_price = f'{market_json["appraisal"]["items"][0]["prices"]["buy"]["max"]:,} ISK'  # noqa: E501
+
+                    if (
+                        market_json["appraisal"]["items"][0]["prices"]["buy"][
+                            "order_count"
+                        ]
+                        == 0
+                    ):
+                        market_buy_order_price = "No buy orders found"
+
+                    embed.add_field(
+                        name="Buy Order Price",
+                        value=market_buy_order_price,
+                        inline=True,
+                    )
+                else:
+                    embed.add_field(
+                        name="API Error",
+                        value=(
+                            "Couldn't not fetch the price for the {market_name} market."
+                        ).format(market_name=market["name"]),
+                        inline=False,
+                    )
+        else:
+            embed = Embed(
+                title="Price Lookup",
+                color=Color.red(),
+            )
+
+            embed.add_field(
+                name="Error",
+                value=(
+                    "You forget to enter an item you want to lookup the price for ..."
+                ),
                 inline=False,
             )
 
@@ -168,4 +365,5 @@ def setup(bot):
     :param bot:
     :return:
     """
+
     bot.add_cog(PriceCheck(bot))

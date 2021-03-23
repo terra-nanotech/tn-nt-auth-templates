@@ -6,6 +6,17 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.5.1] - 2021-03-23
+
+### Added
+
+- `!jita` and `!amarr` commands to price lookups
+
+### Changed
+
+- Price check code optimized
+
+
 ## [1.5.0] - 2021-03-23
 
 ### Added
