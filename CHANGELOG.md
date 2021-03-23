@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.5.0] - 2021-03-23
+
+### Added
+
+- Price checks (Jita and Amarr) for the Discordbot
+
+
 ## [1.4.8] - 2021-03-16
 
 ### Added
