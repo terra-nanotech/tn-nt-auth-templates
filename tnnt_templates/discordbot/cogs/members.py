@@ -1,23 +1,24 @@
 import logging
 
+from aadiscordbot.app_settings import aastatistics_active
+
+# AA-Discordbot
+from aadiscordbot.cogs.utils.decorators import sender_has_perm
+from discord.colour import Color
+from discord.embeds import Embed
+
 # Cog Stuff
 from discord.ext import commands
-from discord.embeds import Embed
-from discord.colour import Color
 
 # Django
 from django.conf import settings
 from django.contrib.auth.models import User
 from django.core.exceptions import ObjectDoesNotExist
 
-# AA-Discordbot
-from aadiscordbot.cogs.utils.decorators import sender_has_perm
-from aadiscordbot.app_settings import aastatistics_active
+from allianceauth.eveonline.evelinks import evewho
 
 # Alliance Auth
 from allianceauth.eveonline.models import EveCharacter
-from allianceauth.eveonline.evelinks import evewho
-
 
 logger = logging.getLogger(__name__)
 

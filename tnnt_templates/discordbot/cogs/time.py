@@ -3,17 +3,13 @@
 """
 
 import logging
-
 from datetime import datetime
 
 import pytz
-
-from discord.ext import commands
-from discord.embeds import Embed
-from discord.colour import Color
-
 from aadiscordbot.app_settings import get_site_url, timezones_active
-
+from discord.colour import Color
+from discord.embeds import Embed
+from discord.ext import commands
 
 logger = logging.getLogger(__name__)
 
@@ -72,8 +68,8 @@ class Time(commands.Cog):
 
             # get default timezones from module
             else:
-                from timezones import __version__ as timezones_version
                 from packaging import version
+                from timezones import __version__ as timezones_version
 
                 if version.parse(timezones_version) >= version.parse("1.3.1"):
                     from timezones.constants import AA_TIMEZONE_DEFAULT_PANELS

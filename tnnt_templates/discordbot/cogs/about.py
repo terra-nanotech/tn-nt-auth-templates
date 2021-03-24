@@ -5,23 +5,21 @@ Since we don't want to have it branded for "The Initiative", we have to build ou
 """
 
 import logging
-import pendulum
 
-from discord.ext import commands
-from discord.embeds import Embed
+import pendulum
+from aadiscordbot import app_settings
+from aadiscordbot.app_settings import get_site_url
 from discord.colour import Color
+from discord.embeds import Embed
+from discord.ext import commands
 from discord.utils import get
 
 from django.conf import settings
-
-from aadiscordbot import app_settings
-from aadiscordbot.app_settings import get_site_url
 
 from allianceauth.eveonline.evelinks.eveimageserver import (
     alliance_logo_url,
     corporation_logo_url,
 )
-
 
 logger = logging.getLogger(__name__)
 
