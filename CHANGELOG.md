@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.5.3] - 2021-03-24
+
+### Changed
+
+- Mapping removed
+
+
 ## [1.5.2] - 2021-03-23
 
 ### Changed
