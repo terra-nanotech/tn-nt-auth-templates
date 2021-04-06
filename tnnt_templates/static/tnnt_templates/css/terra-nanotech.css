@@ -386,6 +386,54 @@
     td p:last-child {
         margin-bottom: 0;
     }
+
+    .text-decoration-none {
+        text-decoration: none !important;
+    }
+}
+
+/* display
+------------------------------------------------------------------------------------- */
+@media all {
+    .d-none {
+        display: none !important;
+    }
+
+    .d-inline {
+        display: inline !important;
+    }
+
+    .d-inline-block {
+        display: inline-block !important;
+    }
+
+    .d-block {
+        display: block !important;
+    }
+
+    .d-table {
+        display: table !important;
+    }
+
+    .d-table-row {
+        display: table-row !important;
+    }
+
+    .d-table-cell {
+        display: table-cell !important;
+    }
+
+    .d-flex {
+        display: -webkit-box !important;
+        display: -ms-flexbox !important;
+        display: flex !important;
+    }
+
+    .d-inline-flex {
+        display: -webkit-inline-box !important;
+        display: -ms-inline-flexbox !important;
+        display: inline-flex !important;
+    }
 }
 
 /* auth base styles

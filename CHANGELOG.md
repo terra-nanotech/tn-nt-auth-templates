@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 
 - Templates for AFAT release 2.0.0
+- Link ship icon in doctrine view to open fitting
 
 
 ## [1.5.3] - 2021-03-24
