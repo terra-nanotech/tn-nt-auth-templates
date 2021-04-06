@@ -3,7 +3,7 @@
 <div class="clearfix">
     <div class="row vertical-flexbox-row2">
         <div class="col-sm-6">
-            <div class="panel panel-primary" style="height: 100%;">
+            <div class="panel panel-primary" style="height: 100%; position: relative;">
                 <div class="panel-heading">
                     <div class="panel-title">{% translate "Alliance Auth Notifications" %}</div>
                 </div>
@@ -22,6 +22,22 @@
                             </li>
                         {% endfor %}
                     </ul>
+                </div>
+
+                <div class="text-right" style="position: absolute; bottom: 5px; right: 5px;">
+                    <a href="https://gitlab.com/allianceauth/allianceauth/issues" style="margin-right: 0.5rem;">
+                        <span class="label" style="background-color: rgb(230,83,40);">
+                            <i class="fab fa-gitlab" aria-hidden="true"></i>
+                            {% translate 'Powered by GitLab' %}
+                        </span>
+                    </a>
+
+                    <a href="https://discord.com/invite/fjnHAmk">
+                        <span class="label" style="background-color: rgb(110,133,211);">
+                            <i class="fab fa-discord" aria-hidden="true"></i>
+                            {% translate 'Support Discord' %}
+                        </span>
+                    </a>
                 </div>
             </div>
         </div>

@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [1.5.4] - 2021-04-05
 
+### Added
+
+- Link to support Discord to admin notifications paned on dashboard
+
 ### Changed
 
 - Templates for AFAT release 2.0.0
