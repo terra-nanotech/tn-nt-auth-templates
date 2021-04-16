@@ -18,6 +18,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - Templates for AFAT release 2.0.0
 - Link ship icon in doctrine view to open fitting
+- Link ship icon in all fittings view to open fitting
 - Templates for Fittings and Doctrines module, so they don't use cloudflare CDN
 
 
