@@ -11,11 +11,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 
 - Link to support Discord to admin notifications paned on dashboard
+- JS libraries used by Fittings and Doctrines module, so we don't have to use
+  cloudflare CDN here
 
 ### Changed
 
 - Templates for AFAT release 2.0.0
 - Link ship icon in doctrine view to open fitting
+- Templates for Fittings and Doctrines module, so they don't use cloudflare CDN
 
 
 ## [1.5.3] - 2021-03-24
