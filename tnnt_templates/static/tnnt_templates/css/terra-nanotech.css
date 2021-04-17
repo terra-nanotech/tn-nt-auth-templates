@@ -38,12 +38,22 @@
         border-bottom: none;
     }
 
+    .nav > li > a {
+        padding: 10px 10px;
+    }
+
     .navbar {
         background-image: none;
         background-repeat: no-repeat;
         border: 1px solid rgba(0, 0, 0, 0.6);
         filter: none;
         text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    }
+
+    .navbar-nav > li > a {
+        line-height: 20px;
+        padding-bottom: 10px;
+        padding-top: 10px;
     }
 
     .navbar .navbar-nav > li > a:hover {
@@ -96,10 +106,6 @@
         border: none;
         -webkit-filter: none;
         filter: none;
-    }
-
-    .nav > li > a {
-        padding: 10px;
     }
 
     /* in case someone puts the nav into a panel header ...
@@ -848,6 +854,11 @@
 /* navbar
 ------------------------------------------------------------------------------------- */
 @media all and (min-width: 768px) {
+    .navbar-nav > li > a {
+        padding-bottom: 15px;
+        padding-top: 15px;
+    }
+
     .auth-side-navbar {
         background-color: transparent;
     }
