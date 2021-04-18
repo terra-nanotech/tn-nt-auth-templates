@@ -2,6 +2,9 @@
 
 Template Overrides for Alliance Auth
 
+![TN-NT Auth Template](https://raw.githubusercontent.com/terra-nanotech/tn-nt-auth-templates/master/tnnt_templates/images/tnnt-template.jpg)
+
+
 ```shell
 pip install tnnt-templates
 ```
