@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Link to support Discord to admin notifications paned on dashboard
 - JS libraries used by Fittings and Doctrines module, so we don't have to use
   cloudflare CDN here
+- CSS for ckeditor
 
 ### Changed
 
