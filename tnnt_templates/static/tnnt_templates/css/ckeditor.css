@@ -5,11 +5,13 @@
         -o-background-size: cover;
         -webkit-background-size: cover;
         background-size: cover;
+        height: 100%;
     }
 
     body {
         background-color: rgba(39, 43, 48, .95);
         background-image: none;
+        height: 100%;
         padding: 1rem;
     }
 }
