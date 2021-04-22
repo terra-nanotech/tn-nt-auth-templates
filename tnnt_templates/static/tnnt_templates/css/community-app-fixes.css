@@ -6,8 +6,8 @@
     }
 
     .dataTables_wrapper > .form-inline select {
-        margin-right: 0.625rem;
         margin-bottom: 0.625rem;
+        margin-right: 0.625rem;
     }
 
     .dataTables_wrapper > .form-inline select:last-child {
@@ -45,8 +45,8 @@
 @media all {
     .template-light-mode .aa-blueprints .table-striped > tbody > tr.tr-group,
     .template-light-mode .aa-blueprints .tr-group {
-        font-weight: bold;
         background-color: rgb(62, 68, 76) !important;
+        font-weight: bold;
     }
 }
 
@@ -96,12 +96,12 @@
     }
 
     .aa-sovtimer .aa-sovtimer-trend {
-        display: inline-block;
         cursor: default;
-        position: relative;
-        top: 0.34375rem;
+        display: inline-block;
         left: 0.3125rem;
         margin-right: 0.625rem;
+        position: relative;
+        top: 0.34375rem;
     }
 
     .aa-sovtimer .aa-sov-timer-zkb-icon {

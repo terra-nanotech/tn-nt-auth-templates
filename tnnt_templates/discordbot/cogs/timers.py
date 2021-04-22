@@ -3,22 +3,21 @@ All about the timers ....
 """
 
 import datetime
-
 import logging
 
 # Cog Stuff
 from aadiscordbot.app_settings import get_site_url
-from allianceauth.eveonline.templatetags.evelinks import dotlan_solar_system_url
-from discord.ext import commands
-from discord.embeds import Embed
 from discord.colour import Color
+from discord.embeds import Embed
+from discord.ext import commands
+from structuretimers.models import Timer
+
+from django.conf import settings
 
 # AA Contexts
 from django.utils import timezone
-from django.conf import settings
 
-from structuretimers.models import Timer
-
+from allianceauth.eveonline.templatetags.evelinks import dotlan_solar_system_url
 
 logger = logging.getLogger(__name__)
 

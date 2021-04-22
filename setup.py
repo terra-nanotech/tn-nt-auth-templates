@@ -1,8 +1,8 @@
+import os
+
 from setuptools import find_packages, setup
 
 from tnnt_templates import __version__
-
-import os
 
 # read the contents of your README file
 this_directory = os.path.abspath(os.path.dirname(__file__))

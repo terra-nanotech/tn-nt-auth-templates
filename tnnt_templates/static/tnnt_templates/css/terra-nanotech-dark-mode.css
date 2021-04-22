@@ -1,20 +1,15 @@
 @media all {
     * {
-        color: rgb(78, 154, 6) !important;
         background-color: rgb(0, 0, 0) !important;
         background-image: none !important;
         border-color: rgba(78, 154, 6, 0.6) !important;
+        color: rgb(78, 154, 6) !important;
         font-family: monospace;
     }
 
     body {
-        /*background-color: rgb(0, 0, 0) !important;*/
         font-size: 1.125rem;
     }
-
-    /*body * {*/
-    /*    background-color: transparent !important;*/
-    /*}*/
 
     .nav-pills > li > a.active, .nav-pills > li > a:hover {
         background-color: rgba(78, 154, 6, 0.4) !important;
@@ -32,8 +27,8 @@
     }
 
     .badge {
-        color: rgb(0, 0, 0) !important;
         background-color: rgba(78, 154, 6, 0.4) !important;
+        color: rgb(0, 0, 0) !important;
     }
 }
 

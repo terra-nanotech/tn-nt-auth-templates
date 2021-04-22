@@ -4,19 +4,18 @@
 
 import logging
 
+from aadiscordbot.app_settings import get_admins, get_site_url
 from discord.colour import Color
 from discord.embeds import Embed
 from discord.ext import commands
 
 from django.conf import settings
 
-from aadiscordbot.app_settings import get_site_url, get_admins
-
-from allianceauth.services.modules.discord.models import DiscordUser
 from allianceauth.eveonline.evelinks.eveimageserver import (
     alliance_logo_url,
     corporation_logo_url,
 )
+from allianceauth.services.modules.discord.models import DiscordUser
 
 logger = logging.getLogger(__name__)
 

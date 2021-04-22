@@ -6,6 +6,23 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.5.4] - 2021-04-22
+
+### Added
+
+- Link to support Discord to admin notifications paned on dashboard
+- JS libraries used by Fittings and Doctrines module, so we don't have to use
+  cloudflare CDN here
+- CSS for ckeditor
+
+### Changed
+
+- Templates for AFAT release 2.0.0
+- Link ship icon in doctrine view to open fitting
+- Link ship icon in all fittings view to open fitting
+- Templates for Fittings and Doctrines module, so they don't use cloudflare CDN
+
+
 ## [1.5.3] - 2021-03-24
 
 ### Changed

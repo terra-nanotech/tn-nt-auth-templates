@@ -9,15 +9,15 @@
 
     body {
         /*font-family: "Roboto";*/
-        font-family: Roboto, "Helvetica Neue", sans-serif;
-        font-size: 100%;
-        color: rgb(200, 200, 200);
-        background-color: rgb(39, 43, 48);
         background: url('https://web.ccpgamescdn.com/aws/eveonline/sso/background.jpg') no-repeat center center fixed;
-        -webkit-background-size: cover;
+        background-color: rgb(39, 43, 48);
         -moz-background-size: cover;
         -o-background-size: cover;
+        -webkit-background-size: cover;
         background-size: cover;
+        color: rgb(200, 200, 200);
+        font-family: Roboto, "Helvetica Neue", sans-serif;
+        font-size: 100%;
     }
 
     .h1, .h2, .h3, .h4, .h5, .h6,
@@ -38,20 +38,30 @@
         border-bottom: none;
     }
 
+    .nav > li > a {
+        padding: 10px 10px;
+    }
+
     .navbar {
         background-image: none;
         background-repeat: no-repeat;
-        filter: none;
         border: 1px solid rgba(0, 0, 0, 0.6);
+        filter: none;
         text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+    }
+
+    .navbar-nav > li > a {
+        line-height: 20px;
+        padding-bottom: 10px;
+        padding-top: 10px;
     }
 
     .navbar .navbar-nav > li > a:hover {
         background-image: none;
         background-repeat: no-repeat;
+        border-left-color: transparent;
         -webkit-filter: none;
         filter: none;
-        border-left-color: transparent;
     }
 
     .navbar-inverse .navbar-nav > li > a:hover {
@@ -69,18 +79,18 @@
     .nav-pills > li > a {
         background-image: none;
         background-repeat: no-repeat;
-        -webkit-filter: none;
-        filter: none;
         border: none;
         color: rgb(255, 255, 255);
+        -webkit-filter: none;
+        filter: none;
     }
 
     .nav-pills > li > a:hover {
-        background-image: none;
-        filter: none;
         background: rgb(236, 240, 241);
-        color: rgb(54, 54, 54);
+        background-image: none;
         border: none;
+        color: rgb(54, 54, 54);
+        filter: none;
     }
 
     .nav-pills > li > a.active {
@@ -93,9 +103,9 @@
         background-color: rgb(62, 68, 76);
         background-image: none;
         background-repeat: no-repeat;
+        border: none;
         -webkit-filter: none;
         filter: none;
-        border: none;
     }
 
     /* in case someone puts the nav into a panel header ...
@@ -107,9 +117,9 @@
         background-color: rgba(200, 200, 200, 0.2);
         background-image: none;
         background-repeat: no-repeat;
+        border: none;
         -webkit-filter: none;
         filter: none;
-        border: none;
     }
 
     .nav-pills > li.disabled > a,
@@ -122,11 +132,11 @@
 
     .pagination > li > a,
     .pagination > li > span {
-        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
         background-image: linear-gradient(rgb(72, 78, 85), rgb(58, 63, 68) 60%, rgb(49, 53, 57));
         background-repeat: no-repeat;
         -webkit-filter: none;
         filter: none;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
     }
 
     .pagination > li > a:hover,
@@ -322,8 +332,8 @@
 
     .btn-sm,
     .btn-group-sm > .btn {
-        padding: 6px 9px;
         font-size: 13px;
+        padding: 6px 9px;
     }
 
     .list-group-item {
@@ -386,37 +396,85 @@
     td p:last-child {
         margin-bottom: 0;
     }
+
+    .text-decoration-none {
+        text-decoration: none !important;
+    }
+}
+
+/* display
+------------------------------------------------------------------------------------- */
+@media all {
+    .d-none {
+        display: none !important;
+    }
+
+    .d-inline {
+        display: inline !important;
+    }
+
+    .d-inline-block {
+        display: inline-block !important;
+    }
+
+    .d-block {
+        display: block !important;
+    }
+
+    .d-table {
+        display: table !important;
+    }
+
+    .d-table-row {
+        display: table-row !important;
+    }
+
+    .d-table-cell {
+        display: table-cell !important;
+    }
+
+    .d-flex {
+        display: -webkit-box !important;
+        display: -ms-flexbox !important;
+        display: flex !important;
+    }
+
+    .d-inline-flex {
+        display: -webkit-inline-box !important;
+        display: -ms-inline-flexbox !important;
+        display: inline-flex !important;
+    }
 }
 
 /* auth base styles
 ------------------------------------------------------------------------------------- */
 @media all {
     #wrapper {
-        width: 100%;
-        padding: 0;
         background-color: rgba(48, 48, 48, 0.75);
         color: rgb(255, 2552, 255);
+        padding: 0;
+        width: 100%;
     }
 
     .alliance-auth-background {
+        background-color: rgba(39, 43, 48, 0.95);
+        bottom: 0;
+        margin: 0;
         position: fixed;
         top: 0;
-        bottom: 0;
-        z-index: 0;
         width: 100%;
-        margin: 0;
-        background-color: rgba(39, 43, 48, 0.95);
+        z-index: 0;
     }
 
     .alliance-auth-content {
-        position: relative;
         margin-bottom: 2rem;
+        position: relative;
     }
 
     img {
-        max-width: 100%;
-        height: auto;
         border-radius: 6px;
+        height: auto;
+        max-width: 100%;
     }
 
     .img-circle {
@@ -452,12 +510,12 @@
     }
 
     .breadcrumb {
-        border: 1px solid rgba(0, 0, 0, 0.6);
-        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
         background-image: linear-gradient(rgb(72, 78, 85), rgb(58, 63, 68) 60%, rgb(49, 53, 57));
         background-repeat: no-repeat;
+        border: 1px solid rgba(0, 0, 0, 0.6);
         -webkit-filter: none;
         filter: none;
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
     }
 
     /* Horizontal list group */
@@ -571,13 +629,13 @@
     }
 
     .label-tnnt-default {
-        display: inline-block;
         background-color: rgb(192, 192, 192);
+        border-left: 5px solid rgb(0, 0, 0);
         color: rgb(54, 54, 54);
-        padding: 0.625rem 0.625rem 0.625rem 0.4375rem;
+        display: inline-block;
         font-size: 1rem;
         font-weight: normal;
-        border-left: 5px solid rgb(0, 0, 0);
+        padding: 0.625rem 0.625rem 0.625rem 0.4375rem;
     }
 }
 
@@ -670,15 +728,15 @@
     }
 
     .panel-title, .modal-title {
+        color: inherit;
         display: block;
-        font-size: 1rem;
         /*font-family: Roboto, "Helvetica Neue", sans-serif;*/
         font-family: Georgia, Times, serif;
-        font-weight: 700;
+        font-size: 1rem;
         /*line-height: 1.1;*/
-        color: inherit;
-        margin-top: 0.25rem;
+        font-weight: 700;
         margin-bottom: 0.25rem;
+        margin-top: 0.25rem;
         text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
     }
 
@@ -748,8 +806,8 @@
 
     /* style group headers within a table */
     .table-striped > tbody > tr.tr-group, .tr-group {
-        font-weight: bold;
         background-color: rgb(62, 68, 76);
+        font-weight: bold;
     }
 
     .table-hover > tbody > tr:nth-of-type(odd):hover {
@@ -796,6 +854,11 @@
 /* navbar
 ------------------------------------------------------------------------------------- */
 @media all and (min-width: 768px) {
+    .navbar-nav > li > a {
+        padding-bottom: 15px;
+        padding-top: 15px;
+    }
+
     .auth-side-navbar {
         background-color: transparent;
     }
@@ -807,8 +870,8 @@
 
     .navbar-static-top {
         position: fixed;
-        width: 100%;
         top: 0;
+        width: 100%;
     }
 
     .site-body-wrapper {

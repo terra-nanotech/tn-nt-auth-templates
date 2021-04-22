@@ -6,16 +6,9 @@
 {% load static %}
 
 {% block more_css %}
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/multi-select/0.9.12/css/multi-select.min.css" />
+    <link rel="stylesheet" type="text/css" href="{% static 'tnnt_templates/libs/slim-select/1.26.0/dist/slimselect.min.css' %}">
+
     <style>
-        .form-control {
-            margin: 2px;
-        }
-
-        .ms-container {
-            width: 100% !important;
-        }
-
         input[type="color"] {
             opacity: 0;
             display: block;
@@ -24,8 +17,6 @@
             width: 100%;
         }
     </style>
-
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.26.0/slimselect.min.css">
 {% endblock %}
 
 {% block page_title %}{% translate "Edit Category" %}{% endblock %}
@@ -115,23 +106,24 @@
 {% endblock %}
 
 {% block extra_javascript %}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slim-select/1.26.0/slimselect.min.js"></script>
-{% endblock %}
+    <script type="application/javascript" src="{% static 'tnnt_templates/libs/slim-select/1.26.0/dist/slimselect.min.js' %}"></script>
 
+    <script type="application/javascript">
+        let color_picker = document.getElementById("color");
+        let color_picker_wrapper = document.getElementById("color-wrapper");
 
-{% block extra_script %}
-var color_picker = document.getElementById("color");
-var color_picker_wrapper = document.getElementById("color-wrapper");
-color_picker.onchange = function() {
-	color_picker_wrapper.style.backgroundColor = color_picker.value;
-}
-color_picker_wrapper.style.backgroundColor = color_picker.value;
+        color_picker.onchange = function () {
+            color_picker_wrapper.style.backgroundColor = color_picker.value;
+        }
 
-new SlimSelect({
-    select: "#groupSelect",
-    hideSelectedOption: true
-});
+        color_picker_wrapper.style.backgroundColor = color_picker.value;
 
-new SlimSelect({select: "#fitSelect", hideSelectedOption: true});
-new SlimSelect({select: "#docSelect", hideSelectedOption: true});
+        new SlimSelect({
+            select: "#groupSelect",
+            hideSelectedOption: true
+        });
+
+        new SlimSelect({select: "#fitSelect", hideSelectedOption: true});
+        new SlimSelect({select: "#docSelect", hideSelectedOption: true});
+    </script>
 {% endblock %}
