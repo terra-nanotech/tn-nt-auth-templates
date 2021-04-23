@@ -402,6 +402,20 @@
     }
 }
 
+/* eve time in navbar
+------------------------------------------------------------------------------------- */
+@media all {
+    .nav-item-eve-time .eve-time-wrapper {
+        border-left: 1px solid rgba(255, 255, 255, 0.1);
+        border-right: 1px solid rgba(0, 0, 0, 0.2);
+        color: rgb(200, 200, 200);
+        line-height: 20px;
+        padding: 10px;
+        /*padding-bottom: 10px;*/
+        /*padding-top: 10px;*/
+    }
+}
+
 /* display
 ------------------------------------------------------------------------------------- */
 @media all {
@@ -876,5 +890,14 @@
 
     .site-body-wrapper {
         margin-top: 53px;
+    }
+}
+
+/* eve time in navbar
+------------------------------------------------------------------------------------- */
+@media all and (min-width: 768px) {
+    .nav-item-eve-time .eve-time-wrapper {
+        padding-bottom: 15px;
+        padding-top: 15px;
     }
 }
