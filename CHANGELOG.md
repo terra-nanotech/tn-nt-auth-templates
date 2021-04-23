@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.5.5] - 2021-04-23
+
+### Added
+
+- Eve time to top menu bar
+- Bootstrap JS to Mumble Temp public template
+
+
 ## [1.5.4] - 2021-04-22
 
 ### Added

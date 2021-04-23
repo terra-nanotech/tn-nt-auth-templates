@@ -29,6 +29,9 @@
 
         <div class="collapse navbar-collapse auth-menus-collapse">
             <ul class="nav navbar-nav navbar-right navbar-pills">
+                <li class="nav-item-eve-time">
+                    <div class="eve-time-wrapper">Eve Time: <span class="eve-time-clock"></span></div>
+                </li>
                 <li class="{% navactive request 'notifications:' %}" id="menu_item_notifications">
                     {% include 'allianceauth/notifications_menu_item.html' %}
                 </li>
