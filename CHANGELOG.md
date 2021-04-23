@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 
 - Eve time to top menu bar
+- Bootstrap JS to Mumble Temp public template
 
 
 ## [1.5.4] - 2021-04-22
