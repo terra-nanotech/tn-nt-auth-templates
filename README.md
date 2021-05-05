@@ -15,36 +15,35 @@ In `local.py` right after `INSTALLED_APPS`:
 # TN-NT Auth Templates
 INSTALLED_APPS.insert(0, "tnnt_templates")
 
-if "tnnt_templates" in INSTALLED_APPS:
-    TEMPLATES[0]["OPTIONS"]["context_processors"].append(
-        "tnnt_templates.context_processors.tnnt_settings"
-    )
+TEMPLATES[0]["OPTIONS"]["context_processors"].append(
+    "tnnt_templates.context_processors.tnnt_settings"
+)
 
-    TNNT_TEMPLATE_ENTITY_ID = 08154711  #  replace with your corp/alliance ID
-    TNNT_TEMPLATE_ENTITY_TYPE = "corporation"  # default: "alliance"
-    TNNT_TEMPLATE_ENTITY_NAME = "My Awesome Corp/Alliance"  # your corp/alliance name
+TNNT_TEMPLATE_ENTITY_ID = 08154711  #  replace with your corp/alliance ID
+TNNT_TEMPLATE_ENTITY_TYPE = "corporation"  # default: "alliance"
+TNNT_TEMPLATE_ENTITY_NAME = "My Awesome Corp/Alliance"  # your corp/alliance name
 
-    # the URLs are shown in the user menu
-    TNNT_TEMPLATE_URLS_OWN_WEBSITES = [
-        {
-            "name": "Website",
-            "url": "https://webseite.com/",
-            "new_tab": True,
-        },
-        {
-            "name": "Forums",
-            "url": "https://forum.website.com/",
-            "new_tab": True,
-        },
-    ]
+# the URLs are shown in the user menu
+TNNT_TEMPLATE_URLS_OWN_WEBSITES = [
+    {
+        "name": "Website",
+        "url": "https://webseite.com/",
+        "new_tab": True,
+    },
+    {
+        "name": "Forums",
+        "url": "https://forum.website.com/",
+        "new_tab": True,
+    },
+]
 
-    TNNT_TEMPLATE_URLS_OTHER_WEBSITES = [
-        {
-            "name": "Website",
-            "url": "https://website.com/",
-            "new_tab": True,
-        },
-    ]
+TNNT_TEMPLATE_URLS_OTHER_WEBSITES = [
+    {
+        "name": "Website",
+        "url": "https://website.com/",
+        "new_tab": True,
+    },
+]
 ```
 
 **Important**
