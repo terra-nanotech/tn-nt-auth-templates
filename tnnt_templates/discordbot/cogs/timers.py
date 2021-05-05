@@ -12,6 +12,7 @@ from discord.embeds import Embed
 from discord.ext import commands
 from structuretimers.models import Timer
 
+from django.apps import apps
 from django.conf import settings
 
 # AA Contexts
@@ -23,11 +24,23 @@ logger = logging.getLogger(__name__)
 
 
 def structuretimers_active():
-    return "structuretimers" in settings.INSTALLED_APPS
+    """
+    check if "structuretimers" is installed
+    :return:
+    :rtype:
+    """
+
+    return apps.is_installed("structuretimers")
 
 
 def timezones_active():
-    return "timezones" in settings.INSTALLED_APPS
+    """
+    check if "timezones" is installed
+    :return:
+    :rtype:
+    """
+
+    return apps.is_installed("timezones")
 
 
 class Timers(commands.Cog):

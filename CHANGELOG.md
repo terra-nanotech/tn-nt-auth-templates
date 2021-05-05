@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.5.6] - 2021-05-05
+
+### Fixed
+
+- Using Django application registry instead of directly accessing `INSTALLED_APPS`
+
+
 ## [1.5.5] - 2021-04-23
 
 ### Added
