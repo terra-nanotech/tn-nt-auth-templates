@@ -38,9 +38,9 @@
 
                     {% if perms.fittings.manage %}
                         <div class="pull-right" style="margin-top: -2px !important;">
-                           <a href="{% url 'fittings:edit_category' cat.pk %}" type="button" class="btn btn-xs btn-warning" data-toggle="tooltip" data-placement="top" title="{% translate 'Edit Category' %}">
-                               <span class="fa fas fa-pencil-alt"></span>
-                           </a>
+                            <a href="{% url 'fittings:edit_category' cat.pk %}" type="button" class="btn btn-xs btn-warning" data-toggle="tooltip" data-placement="top" title="{% translate 'Edit Category' %}">
+                                <span class="fa fas fa-pencil-alt"></span>
+                            </a>
                             <a href="{% url 'fittings:delete_category' cat.pk %}" type="button" class="btn btn-xs btn-danger" data-toggle="tooltip" data-placement="top" title="{% translate 'Delete Category' %}">
                                 <span class="fa fas fa-times"></span>
                             </a>
@@ -60,9 +60,9 @@
                     <br />
 
                     {% if cat.groups.all|length != 0 %}
-                      {% for group in cat.groups.all %} <span class="label label-primary">{{group.name}}</span> {% endfor %}
+                        {% for group in cat.groups.all %} <span class="label label-primary">{{group.name}}</span> {% endfor %}
                     {% else %}
-                      <span class="label label-warning">{% translate "Category is public" %}</span>
+                        <span class="label label-warning">{% translate "Category is public" %}</span>
                     {% endif %}
                 {% endif %}
             </div>

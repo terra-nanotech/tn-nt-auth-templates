@@ -43,9 +43,7 @@ class Members(commands.Cog):
 
         input_name = ctx.message.content[8:]
 
-        embed = Embed(
-            title="Character Lookup {character_name}".format(character_name=input_name)
-        )
+        embed = Embed(title=f"Character Lookup {input_name}")
 
         try:
             char = EveCharacter.objects.get(character_name=input_name)
@@ -124,7 +122,7 @@ class Members(commands.Cog):
                 ):
                     if idx < 6:
                         embed.add_field(
-                            name="Linked Characters {}".format(idx + 1),
+                            name=f"Linked Characters {idx + 1}",
                             value="\n".join(names),
                             inline=False,
                         )
@@ -161,10 +159,10 @@ class Members(commands.Cog):
                 embed.colour = Color.blue()
 
                 embed.description = (
-                    "**{0}** is unlinked, searching for any "
+                    "**{}** is unlinked, searching for any "
                     "characters linked to known users"
                 ).format(char)
-                user_names = ["{}".format(user.username) for user in users]
+                user_names = [f"{user.username}" for user in users]
                 embed.add_field(
                     name="Old Users", value="\n".join(user_names), inline=False
                 )
@@ -187,7 +185,7 @@ class Members(commands.Cog):
                 ):
                     if idx < 6:
                         embed.add_field(
-                            name="Found Characters {}".format(idx + 1),
+                            name=f"Found Characters {idx + 1}",
                             value="\n".join(names),
                             inline=False,
                         )

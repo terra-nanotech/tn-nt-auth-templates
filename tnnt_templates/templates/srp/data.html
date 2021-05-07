@@ -59,13 +59,11 @@
         <p>
             {% if perms.auth.srp_management %}
                 {% if fleet_status == "Completed" %}
-                    <a href="{% url 'srp:mark_uncompleted' fleet_id %}"
-                       class="btn btn-warning">
+                    <a href="{% url 'srp:mark_uncompleted' fleet_id %}" class="btn btn-warning">
                         {% translate "Mark Incomplete" %}
                     </a>
                 {% else %}
-                    <a href="{% url 'srp:mark_completed' fleet_id %}"
-                       class="btn btn-success">
+                    <a href="{% url 'srp:mark_completed' fleet_id %}" class="btn btn-success">
                         {% translate "Mark Completed" %}
                     </a>
                 {% endif %}
@@ -130,13 +128,12 @@
                                         {{ srpfleetrequest.character.character_name }}
                                     </td>
                                     <td class="text-center">
-                                        <a href="{{ srpfleetrequest.killboard_link }}"
-                                           target="_blank" class="label label-warning">Link</a>
+                                        <a href="{{ srpfleetrequest.killboard_link }}" target="_blank" class="label label-warning">Link</a>
                                     </td>
                                     <td class="text-center">{{ srpfleetrequest.additional_info }}</td>
                                     <td class="text-center">{{ srpfleetrequest.srp_ship_name }}</td>
-                                    <td class="text-center"
-                                        data-sort="{{ srpfleetrequest.kb_total_loss }}">{{ srpfleetrequest.kb_total_loss | intcomma }}
+                                    <td class="text-center" data-sort="{{ srpfleetrequest.kb_total_loss }}">
+                                        {{ srpfleetrequest.kb_total_loss | intcomma }}
                                         ISK
                                     </td>
                                     <td class="srp text-center" data-name="srp_total_amount"
@@ -167,10 +164,10 @@
                                         <td class="text-center">
                                             <div class="checkbox">
                                                 <label style="font-size: 1.5em">
-                                                    <input type="checkbox"
-                                                           name="{{ srpfleetrequest.id }}">
-                                                    <span class="cr"><i
-                                                            class="cr-icon fas fa-check"></i></span>
+                                                    <input type="checkbox" name="{{ srpfleetrequest.id }}">
+                                                    <span class="cr">
+                                                        <i class="cr-icon fas fa-check"></i>
+                                                    </span>
                                                 </label>
                                             </div>
                                         </td>
