@@ -92,7 +92,7 @@ class PriceCheck(commands.Cog):
 
         if item_name != "":
             embed = Embed(
-                title="Price Lookup for {item_name}".format(item_name=item_name),
+                title=f"Price Lookup for {item_name}",
                 color=Color.green(),
             )
 
@@ -119,16 +119,20 @@ class PriceCheck(commands.Cog):
                     if has_thumbnail is False:
                         embed.set_thumbnail(
                             url=(
-                                "https://images.evetech.net/types/{type_id}/icon?size=64"
+                                "{imageserver_url}/types/{type_id}/icon?size=64"
                             ).format(
-                                type_id=market_json["appraisal"]["items"][0]["typeID"]
+                                imageserver_url="https://images.evetech.net",
+                                type_id=market_json["appraisal"]["items"][0]["typeID"],
                             )
                         )
 
                         has_thumbnail = True
 
                     # sell order price
-                    market_sell_order_price = f'{market_json["appraisal"]["items"][0]["prices"]["sell"]["min"]:,} ISK'  # noqa: E501
+                    market_api_sell_price = market_json["appraisal"]["items"][0][
+                        "prices"
+                    ]["sell"]["min"]
+                    market_sell_order_price = f"{market_api_sell_price:,} ISK"
 
                     if (
                         market_json["appraisal"]["items"][0]["prices"]["sell"][
@@ -145,7 +149,10 @@ class PriceCheck(commands.Cog):
                     )
 
                     # buy order price
-                    market_buy_order_price = f'{market_json["appraisal"]["items"][0]["prices"]["buy"]["max"]:,} ISK'  # noqa: E501
+                    market_api_buy_price = market_json["appraisal"]["items"][0][
+                        "prices"
+                    ]["buy"]["max"]
+                    market_buy_order_price = f"{market_api_buy_price:,} ISK"
 
                     if (
                         market_json["appraisal"]["items"][0]["prices"]["buy"][

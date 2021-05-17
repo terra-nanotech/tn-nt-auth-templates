@@ -59,13 +59,11 @@
         <p>
             {% if perms.auth.srp_management %}
                 {% if fleet_status == "Completed" %}
-                    <a href="{% url 'srp:mark_uncompleted' fleet_id %}"
-                       class="btn btn-warning">
+                    <a href="{% url 'srp:mark_uncompleted' fleet_id %}" class="btn btn-warning">
                         {% translate "Mark Incomplete" %}
                     </a>
                 {% else %}
-                    <a href="{% url 'srp:mark_completed' fleet_id %}"
-                       class="btn btn-success">
+                    <a href="{% url 'srp:mark_completed' fleet_id %}" class="btn btn-success">
                         {% translate "Mark Completed" %}
                     </a>
                 {% endif %}
@@ -130,13 +128,12 @@
                                         {{ srpfleetrequest.character.character_name }}
                                     </td>
                                     <td class="text-center">
-                                        <a href="{{ srpfleetrequest.killboard_link }}"
-                                           target="_blank" class="label label-warning">Link</a>
+                                        <a href="{{ srpfleetrequest.killboard_link }}" target="_blank" class="label label-warning">Link</a>
                                     </td>
                                     <td class="text-center">{{ srpfleetrequest.additional_info }}</td>
                                     <td class="text-center">{{ srpfleetrequest.srp_ship_name }}</td>
-                                    <td class="text-center"
-                                        data-sort="{{ srpfleetrequest.kb_total_loss }}">{{ srpfleetrequest.kb_total_loss | intcomma }}
+                                    <td class="text-center" data-sort="{{ srpfleetrequest.kb_total_loss }}">
+                                        {{ srpfleetrequest.kb_total_loss | intcomma }}
                                         ISK
                                     </td>
                                     <td class="srp text-center" data-name="srp_total_amount"
@@ -167,10 +164,10 @@
                                         <td class="text-center">
                                             <div class="checkbox">
                                                 <label style="font-size: 1.5em">
-                                                    <input type="checkbox"
-                                                           name="{{ srpfleetrequest.id }}">
-                                                    <span class="cr"><i
-                                                            class="cr-icon fas fa-check"></i></span>
+                                                    <input type="checkbox" name="{{ srpfleetrequest.id }}">
+                                                    <span class="cr">
+                                                        <i class="cr-icon fas fa-check"></i>
+                                                    </span>
                                                 </label>
                                             </div>
                                         </td>
@@ -214,75 +211,80 @@
     {% include 'bundles/datatables-js.html' %}
     {% include 'bundles/x-editable-js.html' %}
     {% include 'bundles/moment-js.html' %}
+
+    <script type="application/javascript">
+        $(document).ready(function() {
+            $.fn.editable.defaults.mode = 'inline';
+            $.fn.editable.defaults.showbuttons = false;
+            $.fn.editable.defaults.highlight = "#AAFF80";
+
+
+            $('.srp').editable({
+                display: function(value, response) {
+                    return false;
+                },
+                success: function(response, newValue) {
+                    newValue = parseInt(newValue);
+                    newvalue = newValue.toLocaleString() + " ISK";
+
+                    $(this).html(newvalue.bold());
+                },
+                validate: function(value) {
+                    if (value === null || value === '') {
+                        return 'Empty values not allowed';
+                    }
+                }
+            });
+
+            $('.srp').on('hidden', function(e, reason){
+                if(reason === 'save' || reason === 'nochange') {
+                    let $next = $(this).closest('tr').next().find('.editable');
+
+                    setTimeout(function() {
+                        $next.editable('show');
+                    }, 400);
+                }
+            });
+        });
+
+        $(document).ready(function(){
+            $("[rel=tooltip]").tooltip({ placement: 'top'});
+        });
+
+        $.fn.dataTable.moment = function(format, locale) {
+            let types = $.fn.dataTable.ext.type;
+
+            // Add type detection
+            types.detect.unshift(function(d) {
+                return moment(d, format, locale, true).isValid() ? 'moment-' + format : null;
+            });
+
+            // Add sorting method - use an integer for the sorting
+            types.order[ 'moment-' + format + '-pre' ] = function(d) {
+                return moment(d, format, locale, true).unix();
+            };
+        };
+
+        $(document).ready( function(){
+            $.fn.dataTable.moment('YYYY-MMM-D, HH:mm');
+
+            $('table.srplist').DataTable({
+                "order": [[ 6, "asc" ]],
+                "paging": false,
+                "columnDefs": [
+                    {
+                        "targets": [1, 8],
+                        "orderable": false
+                    },
+                    {
+                        "targets": [4, 5],
+                        "type": "num"
+                    }
+                ]
+            });
+        });
+    </script>
 {% endblock %}
 
 {% block extra_script %}
-    $(document).ready(function() {
-    $.fn.editable.defaults.mode = 'inline';
-    $.fn.editable.defaults.showbuttons = false;
-    $.fn.editable.defaults.highlight = "#AAFF80";
-
-
-    $('.srp').editable({
-    display: function(value, response) {
-    return false;
-    },
-    success: function(response, newValue) {
-    newValue = parseInt(newValue);
-    newvalue = newValue.toLocaleString() + " ISK";
-    $(this).html(newvalue.bold());
-    },
-    validate: function(value) {
-    if (value === null || value === '') {
-    return 'Empty values not allowed';
-    }
-    }
-    });
-    $('.srp').on('hidden', function(e, reason){
-    if(reason === 'save' || reason === 'nochange') {
-    var $next = $(this).closest('tr').next().find('.editable');
-    setTimeout(function() {
-    $next.editable('show');
-    }, 400);
-    }
-    });
-    });
-
-    $(document).ready(function(){
-    $("[rel=tooltip]").tooltip({ placement: 'top'});
-    });
-
-    $.fn.dataTable.moment = function(format, locale) {
-    var types = $.fn.dataTable.ext.type;
-
-    // Add type detection
-    types.detect.unshift(function(d) {
-    return moment(d, format, locale, true).isValid() ?
-    'moment-'+format :
-    null;
-    } );
-
-    // Add sorting method - use an integer for the sorting
-    types.order[ 'moment-'+format+'-pre' ] = function(d) {
-    return moment(d, format, locale, true).unix();
-    };
-    };
-
-    $(document).ready( function(){
-    $.fn.dataTable.moment('YYYY-MMM-D, HH:mm');
-
-    $('table.srplist').DataTable({
-    "order": [[ 6, "asc" ]],
-    "paging": false,
-    "columnDefs": [{
-    "targets": [1, 8],
-    "orderable": false
-    },
-    {
-    "targets": [4, 5],
-    "type": "num"
-    }]
-
-    });
-    });
 {% endblock extra_script %}

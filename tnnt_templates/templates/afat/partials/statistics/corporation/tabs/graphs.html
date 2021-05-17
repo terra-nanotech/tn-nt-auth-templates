@@ -22,9 +22,9 @@
                             data: {
                                 datasets: [{% for set in data_stacked.1 %}
                                         {
-                                          label: '{{ set.0|escapejs }}',
-                                          backgroundColor: '{{ set.1|safe }}',
-                                          data: {{ set.2 }}
+                                            label: '{{ set.0|escapejs }}',
+                                            backgroundColor: '{{ set.1|safe }}',
+                                            data: {{ set.2 }}
                                         },
                                     {% endfor %}],
                                 labels: {{ data_stacked.0|safe }}

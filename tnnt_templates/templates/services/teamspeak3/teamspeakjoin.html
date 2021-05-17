@@ -47,7 +47,7 @@
                     </div>
 
                     <div class="panel-body">
-                       <p>Once connected click here</p>
+                        <p>{% translate "Once connected click here" %}</p>
 
                         <form class="form-signin" role="form" action="{% url 'teamspeak3:verify' %}" method="POST">
                             {% csrf_token %}

@@ -107,11 +107,11 @@ class About(commands.Cog):
         if len(hooks) == 0:
             name = "{}_webhook".format(ctx.message.channel.name.replace(" ", "_"))
             hook = await ctx.message.channel.create_webhook(name=name)
-            await ctx.message.author.send("{} - {}".format(hook.name, hook.url))
+            await ctx.message.author.send(f"{hook.name} - {hook.url}")
 
         else:
             for hook in hooks:
-                await ctx.message.author.send("{} - {}".format(hook.name, hook.url))
+                await ctx.message.author.send(f"{hook.name} - {hook.url}")
 
         return await ctx.message.delete()
 
