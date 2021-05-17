@@ -31,6 +31,20 @@ $(document).ready(function () {
         });
     };
 
+
+    /**
+     * check time
+     * @param i
+     * @returns {string}
+     */
+    let checkTime = function (i) {
+        if (i < 10) {
+            i = '0' + i;
+        }
+
+        return i;
+    };
+
     /**
      * render a JS clock for Eve Time
      * @param element
@@ -62,19 +76,6 @@ $(document).ready(function () {
         setTimeout(function () {
             renderClock(element, 0);
         }, 500);
-    };
-
-    /**
-     * check time
-     * @param i
-     * @returns {string}
-     */
-    let checkTime = function (i) {
-        if (i < 10) {
-            i = '0' + i;
-        }
-
-        return i;
     };
 
     /**

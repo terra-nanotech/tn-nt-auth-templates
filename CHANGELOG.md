@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.5.8] - 2021-05-017
+
+### Fixed
+
+- Define function before use in javascript
+
+
 ## [1.5.7] - 2021-05-017
 
 ### Fixed
