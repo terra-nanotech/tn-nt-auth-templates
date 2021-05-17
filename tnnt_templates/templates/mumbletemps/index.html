@@ -135,10 +135,10 @@
     <script src="{% static 'js/timers.js' %}"></script>
 
     <script>
-        var clipboard = new ClipboardJS('#clipboard-new');
+        let clipboard = new ClipboardJS('#clipboard-new');
 
         {% for lnk in tl_list %}
-            var lnk{{ lnk.link_ref }} = new ClipboardJS('#clipboard-{{ lnk.link_ref }}');
+            let lnk{{ lnk.link_ref }} = new ClipboardJS('#clipboard-{{ lnk.link_ref }}');
         {% endfor %}
     </script>
 

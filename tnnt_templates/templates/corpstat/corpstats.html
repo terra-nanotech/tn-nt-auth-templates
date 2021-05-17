@@ -384,7 +384,7 @@
     <script type="application/javascript" src="{% static 'js/filterDropDown/filterDropDown.min.js' %}"></script>
     <script type="application/javascript">
         $(document).ready(function(){
-            var service_cols = []
+            let service_cols = []
 
             {% for service in service_percent %}
                 service_cols.push(1 + {{ forloop.counter }})

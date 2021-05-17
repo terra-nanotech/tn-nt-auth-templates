@@ -56,11 +56,11 @@
     </div>
 
     {% include 'bundles/moment-js.html' with locale=True %}
-
     <script src="{% static 'js/timers.js' %}"></script>
+
     <script type="application/javascript">
         // Data
-        var timers = [
+        let timers = [
             {% for op in optimer %}
                 {
                     'id': {{ op.id }},
@@ -69,67 +69,64 @@
                 },
             {% endfor %}
         ];
-    </script>
 
-    <script type="application/javascript">
         /**
          * Update a timer
-         *
          * @param timer Timer information
-         * @param timer.start Date of the timer
-         * @param timer.id Id number of the timer
-         * @param timer.expired
          */
-        function updateTimer(timer) {
+        let updateTimer = function (timer) {
             if (timer.start.isAfter(Date.now())) {
-                var duration = moment.duration(timer.start - moment(), 'milliseconds');
+                let duration = moment.duration(timer.start - moment(), 'milliseconds');
+
                 document.getElementById("countdown" + timer.id).innerHTML = getDurationString(duration);
             } else {
                 timer.expired = true;
+
                 document.getElementById("countdown" + timer.id).innerHTML = "";
             }
-        }
+        };
+
+        let updateAllTimers = function () {
+            let l = timers.length;
+
+            for (let i=0; i < l; ++i) {
+                if (timers[i].expired) continue;
+
+                updateTimer(timers[i]);
+            }
+        };
 
         /**
          * Set the local time info for the timer
          * @param timer Timer information
-         * @param timer.start Date of the timer
-         * @param timer.id Id number of the timer
          */
-        function setLocalTime(timer) {
+        let setLocalTime = function (timer) {
             document.getElementById("localtime" + timer.id).innerHTML = timer.start.format("ddd @ LT");
-        }
+        };
 
         /**
          * Set all local time fields
          */
-        function setAllLocalTimes() {
-            var l = timers.length;
-            for (var i=0; i < l; ++i) {
+        let setAllLocalTimes = function () {
+            let l = timers.length;
+
+            for (let i=0; i < l; ++i) {
                 setLocalTime(timers[i]);
             }
-        }
+        };
 
-        function updateClock() {
+        let updateClock = function () {
             document.getElementById("current-time").innerHTML = getCurrentEveTimeString();
-        }
+        };
 
-        function updateAllTimers () {
-            var l = timers.length;
-
-            for (var i=0; i < l; ++i) {
-                if (timers[i].expired) continue;
-                updateTimer(timers[i]);
-            }
-        }
-
-        function timedUpdate() {
+        let timedUpdate = function () {
             updateClock();
             updateAllTimers();
-        }
+        };
 
-        timedUpdate();
+        // Set initial values
         setAllLocalTimes();
+        timedUpdate();
 
         // Start timed updates
         setInterval(timedUpdate, 1000);
