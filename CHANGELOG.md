@@ -6,14 +6,21 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
-## [1.5.8] - 2021-05-017
+## [1.5.9] - 2021-05-19
+
+### Fixed (now as well for AA 2.8.x and not only for the alpha version)
+
+- Define function before use in javascript
+- Background in ckEditor
+
+## [1.5.8] - 2021-05-17
 
 ### Fixed
 
 - Define function before use in javascript
 
 
-## [1.5.7] - 2021-05-017
+## [1.5.7] - 2021-05-17
 
 ### Fixed
 
@@ -22,7 +29,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 
 - JS in templates modernized
-
 
 ## [1.5.6] - 2021-05-05
 

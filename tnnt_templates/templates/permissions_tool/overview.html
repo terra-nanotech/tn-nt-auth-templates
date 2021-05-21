@@ -95,19 +95,12 @@
 
 {% block extra_script %}
     $(document).ready(function() {
-        let groupColumn = 0;
-        let table = $('#tab_permissions_overview').DataTable({
+        var groupColumn = 0;
+        var table = $('#tab_permissions_overview').DataTable({
             columnDefs: [
-                {
-                    "visible": false,
-                    "targets": groupColumn
-                }
+                { "visible": false, "targets": groupColumn }
             ],
-            order: [
-                [groupColumn, 'asc'],
-                [1, 'asc'],
-                [2, 'asc']
-            ],
+            order: [[ groupColumn, 'asc' ], [ 1, 'asc' ], [ 2, 'asc' ] ],
             filterDropDown:
             {
                 columns: [
@@ -120,21 +113,21 @@
                 ],
                 bootstrap: true
             },
-            drawCallback: function (settings) {
-                let api = this.api();
-                let rows = api.rows({page:'current'}).nodes();
-                let last=null;
+            drawCallback: function ( settings ) {
+                var api = this.api();
+                var rows = api.rows( {page:'current'} ).nodes();
+                var last=null;
 
-                api.column(groupColumn, {page:'current'}).data().each(function (group, i) {
-                    if (last !== group) {
-                        $(rows).eq(i).before(
+                api.column(groupColumn, {page:'current'} ).data().each( function ( group, i ) {
+                    if ( last !== group ) {
+                        $(rows).eq( i ).before(
                             '<tr class="tr-group"><td colspan="6">' + group + '</td></tr>'
                         );
 
                         last = group;
                     }
-                });
+                } );
             }
-        });
-    });
+        } );
+    } );
 {% endblock %}
