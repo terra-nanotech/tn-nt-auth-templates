@@ -51,14 +51,12 @@
                                         {% endif %}
                                     </td>
                                     <td class="text-center">
-                                        <a href="{% url 'hrapplications:personal_view' personal_app.id %}"
-                                           class="btn btn-primary">
+                                        <a href="{% url 'hrapplications:personal_view' personal_app.id %}" class="btn btn-primary">
                                             <span class="glyphicon glyphicon-eye-open"></span>
                                         </a>
 
                                         {% if personal_app.approved == None %}
-                                            <a href="{% url 'hrapplications:personal_removal' personal_app.id %}"
-                                               class="btn btn-danger">
+                                            <a href="{% url 'hrapplications:personal_removal' personal_app.id %}" class="btn btn-danger">
                                                 <span class="glyphicon glyphicon-remove"></span>
                                             </a>
                                         {% endif %}
@@ -121,8 +119,7 @@
                                                 {% endif %}
                                             </td>
                                             <td class="text-center">
-                                                <a href="{% url 'hrapplications:view' app.id %}"
-                                                   class="btn btn-primary">
+                                                <a href="{% url 'hrapplications:view' app.id %}" class="btn btn-primary">
                                                     <span class="glyphicon glyphicon-eye-open"></span>
                                                 </a>
                                             </td>
@@ -196,8 +193,7 @@
 
     {% if perms.auth.human_resources %}
         <!-- Modal -->
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-             aria-hidden="true">
+        <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog">
                 <div class="modal-content">
                     <div class="modal-header">

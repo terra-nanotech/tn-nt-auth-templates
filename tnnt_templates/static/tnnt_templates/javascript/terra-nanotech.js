@@ -31,6 +31,20 @@ $(document).ready(function () {
         });
     };
 
+
+    /**
+     * check time
+     * @param i
+     * @returns {string}
+     */
+    let checkTime = function (i) {
+        if (i < 10) {
+            i = '0' + i;
+        }
+
+        return i;
+    };
+
     /**
      * check time
      * @param i

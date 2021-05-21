@@ -22,6 +22,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [1.5.7] - 2021-05-17
 
+
 ### Fixed
 
 - Background in ckEditor
@@ -29,6 +30,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 
 - JS in templates modernized
+
 
 ## [1.5.6] - 2021-05-05
 
