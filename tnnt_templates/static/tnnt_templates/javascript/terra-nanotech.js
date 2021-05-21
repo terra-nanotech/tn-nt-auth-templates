@@ -31,7 +31,6 @@ $(document).ready(function () {
         });
     };
 
-
     /**
      * check time
      * @param i

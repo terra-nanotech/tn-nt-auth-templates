@@ -20,7 +20,8 @@
                         let corpShipTypeBarChart = new Chart(document.getElementById('ship-bar-stacked'), {
                             type: "bar",
                             data: {
-                                datasets: [{% for set in data_stacked.1 %}
+                                datasets: [
+                                    {% for set in data_stacked.1 %}
                                         {
                                             label: '{{ set.0|escapejs }}',
                                             backgroundColor: '{{ set.1|safe }}',
