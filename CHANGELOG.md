@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.5.10] - 2021-05-27
+
+### Fixed
+
+- Top margin for `mumbletemps` public invite template
+
+
 ## [1.5.9] - 2021-05-19
 
 ### Fixed (now as well for AA 2.8.x and not only for the alpha version)
