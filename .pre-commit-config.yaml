@@ -32,7 +32,7 @@ repos:
         exclude: ^(LICENSE|tnnt_templates/static/tnnt_templates/libs/|tnnt_templates/static/tnnt_templates/css/theme/)
 
   - repo: https://github.com/asottile/pyupgrade
-    rev: v2.16.0
+    rev: v2.18.3
     hooks:
       - id: pyupgrade
         args: [ --py37-plus ]
