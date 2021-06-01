@@ -6,6 +6,17 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.5.11] - 2021-06-01
+
+# Fixed
+
+- Order of JavaScript functions in `mumbletemps` public template
+
+### Added
+
+- JavaScript to display Eve time in the top menu
+
+
 ## [1.5.10] - 2021-05-27
 
 ### Fixed
