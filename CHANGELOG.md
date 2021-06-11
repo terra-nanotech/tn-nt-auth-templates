@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.5.12] - 2021-06-11
+
+### Added
+
+- CSS styles for [AA Forum](https://github.com/ppfeufer/aa-forum) app
+
+
 ## [1.5.11] - 2021-06-01
 
 # Fixed
