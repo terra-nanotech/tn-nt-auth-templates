@@ -160,11 +160,6 @@
         background-color: rgba(62, 68, 76, 0.6);
     }
 
-    .aa-forum .aa-forum-topic-row:nth-of-type(odd),
-    .panel-aa-forum-category .aa-forum-board:nth-of-type(odd) {
-        background-color: rgba(62,68,76,0.5);
-    }
-
     .aa-forum .aa-forum-topic-row:hover,
     .panel-aa-forum-category .aa-forum-board:hover {
         background-color: rgba(73,81,90,0.8);

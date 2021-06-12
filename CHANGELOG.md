@@ -5,6 +5,13 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+## [1.5.13] - 2021-06-12
+
+### Changed
+
+- CSS for [AA Forum](https://github.com/ppfeufer/aa-forum) app to match its current
+  alpha release (v0.0.1-alpha.4)
+
 
 ## [1.5.12] - 2021-06-11
 
