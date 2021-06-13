@@ -5,6 +5,14 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+
+## [1.5.14] - 2021-06-13
+
+### Changed
+
+- Bottom margin on paragraphs set to 1rem
+
+
 ## [1.5.13] - 2021-06-12
 
 ### Changed
