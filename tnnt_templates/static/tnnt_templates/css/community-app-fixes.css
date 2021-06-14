@@ -160,6 +160,10 @@
         background-color: rgba(62, 68, 76, 0.6);
     }
 
+    .aa-forum .panel-aa-forum-topic-list {
+        margin: 1.25rem 0;
+    }
+
     .aa-forum .aa-forum-topic-row .aa-forum-topic:hover,
     .aa-forum .panel-aa-forum-category .aa-forum-board:hover {
         background-color: rgba(73, 81, 90, 0.8);
