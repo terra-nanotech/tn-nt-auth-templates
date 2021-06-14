@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.5.15] - 2021-06-14
+
+### Fixed
+
+- Hover state for topics in board view (AA Forum)
+
+
 ## [1.5.14] - 2021-06-13
 
 ### Changed

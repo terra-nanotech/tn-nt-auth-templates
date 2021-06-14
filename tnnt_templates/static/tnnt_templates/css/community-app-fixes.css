@@ -160,24 +160,22 @@
         background-color: rgba(62, 68, 76, 0.6);
     }
 
-    .aa-forum .aa-forum-topic-row:hover,
-    .panel-aa-forum-category .aa-forum-board:hover {
-        background-color: rgba(73,81,90,0.8);
+    .aa-forum .aa-forum-topic-row .aa-forum-topic:hover,
+    .aa-forum .panel-aa-forum-category .aa-forum-board:hover {
+        background-color: rgba(73, 81, 90, 0.8);
     }
 
     .aa-forum .aa-forum-message-body {
         border-top: 1px solid rgba(200, 200, 200, 0.25);
     }
 
-    /*background-color: rgba(73,81,90,0.8);*/
-
     /* SumoSelect
     --------------------------------------------------------------------------------- */
-    .SumoSelect {
-        color: rgb(54,54,54);
+    .aa-forum .SumoSelect {
+        color: rgb(54, 54, 54);
     }
 
-    .SumoSelect>.CaptionCont>span.placeholder {
+    .aa-forum .SumoSelect > .CaptionCont > span.placeholder {
         color: rgb(62, 68, 76);
     }
 }
