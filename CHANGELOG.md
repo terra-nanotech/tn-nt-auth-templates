@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.5.16] - 2021-06-14
+
+### Fixed
+
+- Top margin on topic list for AA Forum
+
+
 ## [1.5.15] - 2021-06-14
 
 ### Fixed
