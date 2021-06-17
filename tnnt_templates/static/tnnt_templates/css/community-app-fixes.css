@@ -182,4 +182,18 @@
     .aa-forum .SumoSelect > .CaptionCont > span.placeholder {
         color: rgb(62, 68, 76);
     }
+
+    .aa-forum .aa-forum-search-results-total-number {
+        font-size: 1.25rem;
+        font-weight: bolder;
+        margin-bottom: 2rem;
+    }
+
+    .aa-forum .aa-forum-search-result-counter {
+        font-size: 2rem;
+        font-weight: bolder;
+        margin-right: 1rem;
+        min-width: 50px;
+        padding: 1rem;
+    }
 }
