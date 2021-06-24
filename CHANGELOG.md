@@ -6,6 +6,68 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.5.17] - 2021-06-17
+
+### Changed
+
+- CSS for [AA Forum](https://github.com/ppfeufer/aa-forum) app to match its current
+  alpha release (v0.0.1-alpha.9)
+
+
+## [1.5.16] - 2021-06-14
+
+### Fixed
+
+- Top margin on topic list for AA Forum
+
+
+## [1.5.15] - 2021-06-14
+
+### Fixed
+
+- Hover state for topics in board view (AA Forum)
+
+
+## [1.5.14] - 2021-06-13
+
+### Changed
+
+- Bottom margin on paragraphs set to 1rem
+
+
+## [1.5.13] - 2021-06-12
+
+### Changed
+
+- CSS for [AA Forum](https://github.com/ppfeufer/aa-forum) app to match its current
+  alpha release (v0.0.1-alpha.4)
+
+
+## [1.5.12] - 2021-06-11
+
+### Added
+
+- CSS styles for [AA Forum](https://github.com/ppfeufer/aa-forum) app
+
+
+## [1.5.11] - 2021-06-01
+
+# Fixed
+
+- Order of JavaScript functions in `mumbletemps` public template
+
+### Added
+
+- JavaScript to display Eve time in the top menu
+
+
+## [1.5.10] - 2021-05-27
+
+### Fixed
+
+- Top margin for `mumbletemps` public invite template
+
+
 ## [1.5.9] - 2021-05-19
 
 ### Fixed (now as well for AA 2.8.x and not only for the alpha version)

@@ -141,10 +141,59 @@
     }
 }
 
-/* App: AA Timezones
+/* App: AA Fleet Pings
 ------------------------------------------------------------------------------------- */
 @media all {
     .aa-fleetpings-pingtext {
         top: 3.6875rem;
+    }
+}
+
+/* App: AA Forum
+------------------------------------------------------------------------------------- */
+@media all {
+    .aa-forum .aa-forum-admin-panel-aa-forum-category .panel-body {
+        min-height: auto;
+    }
+
+    .aa-forum .boards-sortable > li {
+        background-color: rgba(62, 68, 76, 0.6);
+    }
+
+    .aa-forum .panel-aa-forum-topic-list {
+        margin: 1.25rem 0;
+    }
+
+    .aa-forum .aa-forum-topic-row .aa-forum-topic:hover,
+    .aa-forum .panel-aa-forum-category .aa-forum-board:hover {
+        background-color: rgba(73, 81, 90, 0.8);
+    }
+
+    .aa-forum .aa-forum-message-body {
+        border-top: 1px solid rgba(200, 200, 200, 0.25);
+    }
+
+    /* SumoSelect
+    --------------------------------------------------------------------------------- */
+    .aa-forum .SumoSelect {
+        color: rgb(54, 54, 54);
+    }
+
+    .aa-forum .SumoSelect > .CaptionCont > span.placeholder {
+        color: rgb(62, 68, 76);
+    }
+
+    .aa-forum .aa-forum-search-results-total-number {
+        font-size: 1.25rem;
+        font-weight: bolder;
+        margin-bottom: 2rem;
+    }
+
+    .aa-forum .aa-forum-search-result-counter {
+        font-size: 2rem;
+        font-weight: bolder;
+        margin-right: 1rem;
+        min-width: 50px;
+        padding: 1rem;
     }
 }

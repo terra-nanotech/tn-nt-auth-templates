@@ -14,4 +14,8 @@
         min-height: 100%;
         padding: 1rem;
     }
+
+    p {
+        margin: 0 0 1rem;
+    }
 }
