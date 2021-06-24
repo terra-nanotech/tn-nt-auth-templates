@@ -173,6 +173,10 @@
         border-top: 1px solid rgba(200, 200, 200, 0.25);
     }
 
+    .aa-forum .label-aa-forum-topic-new-message {
+        margin-left: 0.5rem;
+    }
+
     /* SumoSelect
     --------------------------------------------------------------------------------- */
     .aa-forum .SumoSelect {
