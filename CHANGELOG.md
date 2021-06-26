@@ -27,7 +27,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
               (
                   "youtube",
                   "/static/tnnt_templates/ckeditor/plugins/youtube/",
-                  "plugin.js",
+                  "plugin.min.js",
               )
           ],
       }
