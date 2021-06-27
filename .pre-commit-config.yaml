@@ -29,7 +29,7 @@ repos:
     rev: 2.3.5
     hooks:
       - id: editorconfig-checker
-        exclude: ^(LICENSE|tnnt_templates/static/tnnt_templates/libs/|tnnt_templates/static/tnnt_templates/css/theme/)
+        exclude: ^(LICENSE|tnnt_templates/static/tnnt_templates/libs/|tnnt_templates/static/tnnt_templates/css/theme/|tnnt_templates/static/tnnt_templates/ckeditor/)
 
   - repo: https://github.com/asottile/pyupgrade
     rev: v2.19.4
