@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Added
 
+- Fira Code font for `<code>` blocks
 - YouTube plugin for ckEditor. Activate by adding the following to your ckEditor
   configuration in your `local.py`
   ```python
