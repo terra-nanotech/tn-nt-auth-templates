@@ -1,3 +1,5 @@
+/* global hljs */
+
 $(document).ready(function () {
     'use strict';
 
@@ -90,6 +92,7 @@ $(document).ready(function () {
     let init = function () {
         externalLinks();
         renderClock($('.eve-time-wrapper .eve-time-clock'), 0);
+        hljs.highlightAll();
     };
 
     /**

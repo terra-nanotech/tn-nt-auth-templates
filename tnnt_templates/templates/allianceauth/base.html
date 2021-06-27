@@ -20,6 +20,7 @@
 
         <link rel="stylesheet" href="{% static 'tnnt_templates/css/fonts.min.css' %}" type="text/css">
         <link rel="stylesheet" href="{% static 'tnnt_templates/libs/fira-code/5.2/fira_code.min.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% static 'tnnt_templates/libs/highlight-js/11.01/styles/default.min.css' %}" type="text/css">
         <link rel="stylesheet" href="{% static 'tnnt_templates/css/terra-nanotech.min.css' %}" type="text/css">
 
         {% block extra_css %}{% endblock extra_css %}
@@ -69,6 +70,7 @@
         {% include 'bundles/bootstrap-js.html' %}
         {% include 'bundles/jquery-visibility-js.html' %}
         <script src="{% static 'js/refresh_notifications.js' %}"></script>
+        <script src="{% static 'tnnt_templates/libs/highlight-js/11.01/highlight.min.js' %}"></script>
         <script src="{% static 'tnnt_templates/javascript/terra-nanotech.min.js' %}"></script>
 
         {% block extra_javascript %}
