@@ -104,6 +104,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Define function before use in javascript
 - Background in ckEditor
 
+
 ## [1.5.8] - 2021-05-17
 
 ### Fixed
