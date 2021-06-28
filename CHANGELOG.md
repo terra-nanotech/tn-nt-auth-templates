@@ -6,11 +6,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
-## [1.5.18] - Upcoming
+## [1.5.18] - 2021-06-28
 
 ### Added
 
 - Fira Code font for `<code>` blocks
+- New and better alert messages
 - YouTube plugin for ckEditor. Activate by adding the following to your ckEditor
   configuration in your `local.py`
   ```python
