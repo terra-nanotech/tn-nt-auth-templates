@@ -25,13 +25,6 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
                   "youtube",
               ]
           ),
-          "external_plugin_resources": [
-              (
-                  "youtube",
-                  "/static/tnnt_templates/ckeditor/plugins/youtube/",
-                  "plugin.min.js",
-              )
-          ],
       }
   }
   ```
