@@ -19,7 +19,7 @@ TEMPLATES[0]["OPTIONS"]["context_processors"].append(
     "tnnt_templates.context_processors.tnnt_settings"
 )
 
-TNNT_TEMPLATE_ENTITY_ID = 18154711  #  replace with your corp/alliance ID
+TNNT_TEMPLATE_ENTITY_ID = 8154711  #  replace with your corp/alliance ID
 TNNT_TEMPLATE_ENTITY_TYPE = "corporation"  # default: "alliance"
 TNNT_TEMPLATE_ENTITY_NAME = "My Awesome Corp/Alliance"  # your corp/alliance name
 
