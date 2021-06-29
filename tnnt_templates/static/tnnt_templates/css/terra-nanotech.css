@@ -38,6 +38,16 @@
         font-family: Roboto, "Helvetica Neue", sans-serif;
     }
 
+    code {
+        font-family: 'Fira Code', monospace;
+    }
+
+    @supports (font-variation-settings: normal) {
+        code {
+            font-family: 'Fira Code VF', monospace;
+        }
+    }
+
     .page-header {
         border-bottom: none;
     }
@@ -406,7 +416,7 @@
     }
 
     .well {
-        background-color: rgba(28, 30, 34, 0.6);
+        background-color: rgba(28, 30, 34, 0.4);
     }
 }
 

@@ -6,6 +6,42 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.5.19] - 2021-06-28
+
+### Added
+
+- Proper favicons
+
+
+## [1.5.18] - 2021-06-28
+
+### Added
+
+- Fira Code font for `<code>` blocks
+- New and better alert messages
+- YouTube plugin for ckEditor. Activate by adding the following to your ckEditor
+  configuration in your `local.py`
+  ```python
+  CKEDITOR_CONFIGS = {
+      "default": {
+          "youtube_responsive": True,
+          "youtube_privacy": True,
+          "youtube_related": False,
+          "extraPlugins": ",".join(
+              [
+                  "youtube",
+              ]
+          ),
+      }
+  }
+  ```
+
+### Changed
+
+- CSS for [AA Forum](https://github.com/ppfeufer/aa-forum) app to match its upcoming
+  alpha release (v0.0.1-alpha.10)
+
+
 ## [1.5.17] - 2021-06-17
 
 ### Changed
@@ -74,6 +110,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - Define function before use in javascript
 - Background in ckEditor
+
 
 ## [1.5.8] - 2021-05-17
 

@@ -1,24 +1,25 @@
+/* global hljs */
+
 $(document).ready(function () {
     'use strict';
 
     /**
-     * extend links to external website
+     * Extend links to external website
      * » add target="_blank"
      * » add rel="noopener noreferer"
      */
     let externalLinks = function () {
-        // let internalHost = location.hostname.replace(/ /g, '').split(',');
         let internalHost = [location.hostname];
         let protocolPattern = /^https?:\/\//i;
 
         /**
-         * walk through all links on the current page
+         * Walk through all links on the current page
          */
         $('a').each(function () {
             let href = $(this).attr('href');
 
             /**
-             * check if its a http link
+             * Check if it's a http link
              */
             if (protocolPattern.test(href)) {
                 let hrefHostname = $(new URL(href)).attr('hostname');
@@ -32,11 +33,12 @@ $(document).ready(function () {
     };
 
     /**
-     * check time
-     * @param i
+     * Add leading zero if number is below 10
+     *
+     * @param {string} i
      * @returns {string}
      */
-    let checkTime = function (i) {
+    let addLeadingZero = function (i) {
         if (i < 10) {
             i = '0' + i;
         }
@@ -45,9 +47,10 @@ $(document).ready(function () {
     };
 
     /**
-     * render a JS clock for Eve Time
+     * Render a JS clock for Eve time
+     *
      * @param element
-     * @param utcOffset
+     * @param {int} utcOffset
      */
     let renderClock = function (element, utcOffset) {
         let today = new Date();
@@ -65,11 +68,10 @@ $(document).ready(function () {
             h = h + 24;
         }
 
-        h = checkTime(h);
-        m = checkTime(m);
-        s = checkTime(s);
+        h = addLeadingZero(h);
+        m = addLeadingZero(m);
+        s = addLeadingZero(s);
 
-        // document.getElementById('clock').innerHTML = h + ":" + m + ":" + s;
         element.html(h + ':' + m + ':' + s);
 
         setTimeout(function () {
@@ -78,22 +80,23 @@ $(document).ready(function () {
     };
 
     /**
-     * functions that need to be executed on load
-     */
-    let init = function () {
-        externalLinks();
-        renderClock($('.eve-time-wrapper .eve-time-clock'), 0);
-    };
-
-    /**
-     * start the show
-     */
-    init();
-
-    /**
-     * functions that need to be executed on successful ajax events
+     * Functions that need to be executed on successful ajax events
      */
     $(document).ajaxSuccess(function () {
         externalLinks();
     });
+
+    /**
+     * Functions that need to be executed on load
+     */
+    let init = function () {
+        externalLinks();
+        renderClock($('.eve-time-wrapper .eve-time-clock'), 0);
+        hljs.highlightAll();
+    };
+
+    /**
+     * Start the show
+     */
+    init();
 });
