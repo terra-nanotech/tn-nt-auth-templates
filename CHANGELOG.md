@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.5.20] - 2021-06-30
+
+### Fixed
+
+- Table width for corpstats view
+
+
 ## [1.5.19] - 2021-06-28
 
 ### Added
