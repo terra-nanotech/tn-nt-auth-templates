@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.5.21] - 2021-07-08
+
+### Changed
+
+- CSS for AA Forum (hover for sticky and locked topics to match their original
+  background color)
+
+
 ## [1.5.20] - 2021-06-30
 
 ### Fixed
