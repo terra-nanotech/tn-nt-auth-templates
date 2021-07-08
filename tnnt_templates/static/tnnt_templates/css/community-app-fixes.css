@@ -169,6 +169,14 @@
         background-color: rgba(73, 81, 90, 0.8);
     }
 
+    .aa-forum .aa-forum-topic-locked .aa-forum-topic:hover {
+        background-color: rgba(185, 199, 219, 0.25);
+    }
+
+    .aa-forum .aa-forum-topic-sticky .aa-forum-topic:hover {
+        background-color: rgba(255, 220, 104, 0.25);
+    }
+
     .aa-forum .aa-forum-message-body {
         border-top: 1px solid rgba(200, 200, 200, 0.25);
     }
