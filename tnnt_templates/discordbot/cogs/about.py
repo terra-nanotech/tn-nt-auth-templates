@@ -7,8 +7,7 @@ Since we don't want to have it branded for "The Initiative", we have to build ou
 import logging
 
 import pendulum
-from aadiscordbot import app_settings
-from aadiscordbot.app_settings import get_site_url
+from aadiscordbot.app_settings import DISCORD_BOT_ADMIN_USER, get_site_url
 from discord.colour import Color
 from discord.embeds import Embed
 from discord.ext import commands
@@ -85,7 +84,7 @@ class About(commands.Cog):
         Returns the uptime
         """
 
-        if ctx.message.author.id not in app_settings.get_admins():
+        if ctx.message.author.id not in DISCORD_BOT_ADMIN_USER:
             return await ctx.message.add_reaction(chr(0x1F44E))
 
         await ctx.send(
@@ -100,7 +99,7 @@ class About(commands.Cog):
         Returns the webhooks for the channel
         """
 
-        if ctx.message.author.id not in app_settings.get_admins():
+        if ctx.message.author.id not in DISCORD_BOT_ADMIN_USER:
             return await ctx.message.add_reaction(chr(0x1F44E))
 
         hooks = await ctx.message.channel.webhooks()
@@ -121,7 +120,7 @@ class About(commands.Cog):
         create a new channel in a category.
         """
 
-        if ctx.message.author.id not in app_settings.get_admins():
+        if ctx.message.author.id not in DISCORD_BOT_ADMIN_USER:
             return await ctx.message.add_reaction(chr(0x1F44E))
 
         await ctx.message.channel.trigger_typing()
@@ -157,7 +156,7 @@ class About(commands.Cog):
         add a role from a channel.
         """
 
-        if ctx.message.author.id not in app_settings.get_admins():
+        if ctx.message.author.id not in DISCORD_BOT_ADMIN_USER:
             return await ctx.message.add_reaction(chr(0x1F44E))
 
         await ctx.message.channel.trigger_typing()
@@ -182,7 +181,7 @@ class About(commands.Cog):
         remove a role from a channel.
         """
 
-        if ctx.message.author.id not in app_settings.get_admins():
+        if ctx.message.author.id not in DISCORD_BOT_ADMIN_USER:
             return await ctx.message.add_reaction(chr(0x1F44E))
 
         await ctx.message.channel.trigger_typing()
