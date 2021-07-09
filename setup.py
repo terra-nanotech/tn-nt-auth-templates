@@ -23,7 +23,7 @@ setup(
     long_description_content_type="text/markdown",
     url="https://github.com/terra-nanotech/tn-nt-auth-templates",
     author="Rounon Dax",
-    author_email="info@terra-nanotech.de",
+    author_email="rounon.dax@terra-nanotech.de",
     classifiers=[
         "Environment :: Web Environment",
         "Framework :: Django",
