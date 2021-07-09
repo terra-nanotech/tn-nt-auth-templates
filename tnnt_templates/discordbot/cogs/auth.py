@@ -4,7 +4,7 @@
 
 import logging
 
-from aadiscordbot.app_settings import get_admins, get_site_url
+from aadiscordbot.app_settings import DISCORD_BOT_ADMIN_USER, get_site_url
 from discord.colour import Color
 from discord.embeds import Embed
 from discord.ext import commands
@@ -77,7 +77,7 @@ class Auth(commands.Cog):
         Returns a list of users on this server, who are unknown to TN-NT Auth
         """
 
-        if ctx.message.author.id not in get_admins():
+        if ctx.message.author.id not in DISCORD_BOT_ADMIN_USER:
             return await ctx.message.add_reaction(chr(0x1F44E))
 
         await ctx.trigger_typing()
