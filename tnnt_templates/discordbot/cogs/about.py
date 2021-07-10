@@ -217,7 +217,6 @@ class About(commands.Cog):
                 for _name, _value in overides:
                     if _value is not None:
                         roles[role.name][_name] = _value
-                pass
 
         embed = Embed(title=f"'{channel_name.name}' Channel Roles")
         embed.colour = Color.blue()
