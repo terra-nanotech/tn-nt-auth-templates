@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.5.23] - 2021-07-10
+
+### Changed
+
+- Discord cogs for AA-Discordbot v0.5.2
+
+
 ## [1.5.22] - 2021-07-09
 
 ### Changed

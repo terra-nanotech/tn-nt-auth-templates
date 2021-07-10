@@ -1,13 +1,14 @@
 """
 "About" cog for discordbot - https://github.com/pvyParts/allianceauth-discordbot
 
-Since we don't want to have it branded for "The Initiative", we have to build our own ..
+Since we don't want to have it branded for "The Initiative", we have to build our own
 """
 
 import logging
 
 import pendulum
-from aadiscordbot.app_settings import DISCORD_BOT_ADMIN_USER, get_site_url
+from aadiscordbot.app_settings import get_site_url
+from aadiscordbot.cogs.utils.decorators import sender_is_admin
 from discord.colour import Color
 from discord.embeds import Embed
 from discord.ext import commands
@@ -53,7 +54,6 @@ class About(commands.Cog):
                     embed.set_thumbnail(
                         url=corporation_logo_url(settings.TNNT_TEMPLATE_ENTITY_ID, 256)
                     )
-
         except AttributeError:
             pass
 
@@ -79,13 +79,11 @@ class About(commands.Cog):
         return await ctx.send(embed=embed)
 
     @commands.command(hidden=True)
+    @sender_is_admin()
     async def uptime(self, ctx):
         """
         Returns the uptime
         """
-
-        if ctx.message.author.id not in DISCORD_BOT_ADMIN_USER:
-            return await ctx.message.add_reaction(chr(0x1F44E))
 
         await ctx.send(
             pendulum.now(tz="UTC").diff_for_humans(
@@ -94,20 +92,19 @@ class About(commands.Cog):
         )
 
     @commands.command(hidden=True)
+    @sender_is_admin()
     async def get_webhooks(self, ctx):
         """
         Returns the webhooks for the channel
         """
 
-        if ctx.message.author.id not in DISCORD_BOT_ADMIN_USER:
-            return await ctx.message.add_reaction(chr(0x1F44E))
-
         hooks = await ctx.message.channel.webhooks()
+
         if len(hooks) == 0:
             name = "{}_webhook".format(ctx.message.channel.name.replace(" ", "_"))
             hook = await ctx.message.channel.create_webhook(name=name)
-            await ctx.message.author.send(f"{hook.name} - {hook.url}")
 
+            await ctx.message.author.send(f"{hook.name} - {hook.url}")
         else:
             for hook in hooks:
                 await ctx.message.author.send(f"{hook.name} - {hook.url}")
@@ -115,34 +112,34 @@ class About(commands.Cog):
         return await ctx.message.delete()
 
     @commands.command(hidden=True)
+    @sender_is_admin()
     async def new_channel(self, ctx):
         """
-        create a new channel in a category.
+        Create a new channel in a category.
         """
-
-        if ctx.message.author.id not in DISCORD_BOT_ADMIN_USER:
-            return await ctx.message.add_reaction(chr(0x1F44E))
 
         await ctx.message.channel.trigger_typing()
 
         input_string = ctx.message.content[13:].split(" ")
+
         if len(input_string) != 2:
             return await ctx.message.add_reaction(chr(0x274C))
 
         everyone_role = ctx.guild.default_role
         channel_name = input_string[1]
         target_cat = get(ctx.guild.channels, id=int(input_string[0]))
-
         found_channel = False
 
-        for channel in ctx.guild.channels:  # TODO replace with channel lookup not loop
+        # TODO replace with channel lookup not loop
+        for channel in ctx.guild.channels:
             if channel.name.lower() == channel_name.lower():
                 found_channel = True
 
         if not found_channel:
+            # Create channel
             channel = await ctx.guild.create_text_channel(
                 channel_name.lower(), category=target_cat
-            )  # make channel
+            )
 
             await channel.set_permissions(
                 everyone_role, read_messages=False, send_messages=False
@@ -151,17 +148,16 @@ class About(commands.Cog):
         return await ctx.message.add_reaction(chr(0x1F44D))
 
     @commands.command(hidden=True)
+    @sender_is_admin()
     async def add_role(self, ctx):
         """
-        add a role from a channel.
+        Add a role from a channel.
         """
-
-        if ctx.message.author.id not in DISCORD_BOT_ADMIN_USER:
-            return await ctx.message.add_reaction(chr(0x1F44E))
 
         await ctx.message.channel.trigger_typing()
 
         input_string = ctx.message.content[10:].split(" ")
+
         if len(input_string) != 2:
             return await ctx.message.add_reaction(chr(0x274C))
 
@@ -176,17 +172,16 @@ class About(commands.Cog):
         return await ctx.message.add_reaction(chr(0x1F44D))
 
     @commands.command(hidden=True)
+    @sender_is_admin()
     async def rem_role(self, ctx):
         """
-        remove a role from a channel.
+        Remove a role from a channel.
         """
-
-        if ctx.message.author.id not in DISCORD_BOT_ADMIN_USER:
-            return await ctx.message.add_reaction(chr(0x1F44E))
 
         await ctx.message.channel.trigger_typing()
 
         input_string = ctx.message.content[10:].split(" ")
+
         if len(input_string) != 2:
             return await ctx.message.add_reaction(chr(0x274C))
 
@@ -200,10 +195,47 @@ class About(commands.Cog):
 
         return await ctx.message.add_reaction(chr(0x1F44D))
 
+    @commands.command(hidden=True)
+    @sender_is_admin()
+    async def list_role(self, ctx):
+        """
+        List roles from a channel.
+        """
+
+        await ctx.message.channel.trigger_typing()
+
+        input_string = ctx.message.content[11:]
+
+        channel_name = get(ctx.guild.channels, name=input_string)
+        roles = {}
+
+        if channel_name:
+            for role in channel_name.overwrites:
+                roles[role.name] = {}
+                overides = channel_name.overwrites_for(role)
+
+                for _name, _value in overides:
+                    if _value is not None:
+                        roles[role.name][_name] = _value
+
+        embed = Embed(title=f"'{channel_name.name}' Channel Roles")
+        embed.colour = Color.blue()
+        message = ""
+
+        for key, role in roles.items():
+            _msg = f"\n`{key}` Role:\n"
+            for r, v in role.items():
+                _msg += f"{r}: {v}\n"
+            message += _msg
+
+        embed.description = message
+
+        return await ctx.send(embed=embed)
+
 
 def setup(bot):
     """
-    setup the cog
+    Setup the cog
     :param bot:
     """
 
