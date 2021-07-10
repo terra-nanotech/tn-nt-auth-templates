@@ -4,7 +4,8 @@
 
 import logging
 
-from aadiscordbot.app_settings import DISCORD_BOT_ADMIN_USER, get_site_url
+from aadiscordbot.app_settings import get_site_url
+from aadiscordbot.cogs.utils.decorators import sender_is_admin
 from discord.colour import Color
 from discord.embeds import Embed
 from discord.ext import commands
@@ -72,13 +73,11 @@ class Auth(commands.Cog):
         return await ctx.send(embed=embed)
 
     @commands.command(pass_context=True)
+    @sender_is_admin()
     async def orphans(self, ctx):
         """
         Returns a list of users on this server, who are unknown to TN-NT Auth
         """
-
-        if ctx.message.author.id not in DISCORD_BOT_ADMIN_USER:
-            return await ctx.message.add_reaction(chr(0x1F44E))
 
         await ctx.trigger_typing()
         await ctx.send("Searching for Orphaned Discord Users")
@@ -99,11 +98,11 @@ class Auth(commands.Cog):
                 discord_member_exists = False
 
             if discord_member_exists is not False:
-                # nothing to do, the user exists. Move on with ur life dude.
+                # Nothing to do, the user exists. Move on with ur life dude.
                 pass
 
             elif discord_member_is_bot is True:
-                # lets also ignore bots here
+                # Let's also ignore bots here
                 pass
             else:
                 # Dump the payload if it gets too big

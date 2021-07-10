@@ -5,17 +5,14 @@ All about the timers ....
 import datetime
 import logging
 
-# Cog Stuff
-from aadiscordbot.app_settings import get_site_url
+from aadiscordbot.app_settings import ADMIN_DISCORD_BOT_CHANNELS, get_site_url
+from aadiscordbot.cogs.utils.decorators import message_in_channels
 from discord.colour import Color
 from discord.embeds import Embed
 from discord.ext import commands
 from structuretimers.models import Timer
 
 from django.apps import apps
-from django.conf import settings
-
-# AA Contexts
 from django.utils import timezone
 
 from allianceauth.eveonline.templatetags.evelinks import dotlan_solar_system_url
@@ -25,7 +22,7 @@ logger = logging.getLogger(__name__)
 
 def structuretimers_active():
     """
-    check if "structuretimers" is installed
+    Check if "structuretimers" is installed
     :return:
     :rtype:
     """
@@ -35,7 +32,7 @@ def structuretimers_active():
 
 def timezones_active():
     """
-    check if "timezones" is installed
+    Check if "timezones" is installed
     :return:
     :rtype:
     """
@@ -52,18 +49,13 @@ class Timers(commands.Cog):
         self.bot = bot
 
     @commands.command(pass_context=True)
+    @message_in_channels(ADMIN_DISCORD_BOT_CHANNELS)
     async def timer(self, ctx):
         """
         Gets the Next Timer!
         :param ctx:
         :return:
         """
-
-        if (
-            ctx.message.channel.id not in settings.ADMIN_DISCORD_BOT_CHANNELS
-            and ctx.message.channel.id not in settings.DISCORD_BOT_TIMER_CHANNELS
-        ):
-            return await ctx.message.add_reaction(chr(0x1F44E))
 
         embed = Embed(title="Next Timer")
 
@@ -87,7 +79,7 @@ class Timers(commands.Cog):
             else:
                 embed.colour = Color.from_rgb(255, 255, 255)
 
-            user_has_no_profile = False
+            user_has_profile = True
 
             if next_timer.user is not None:
                 creator_name = next_timer.user.username
@@ -95,9 +87,9 @@ class Timers(commands.Cog):
                 try:
                     creator_profile = next_timer.user.profile
                 except Exception:
-                    user_has_no_profile = True
+                    user_has_profile = False
 
-                if user_has_no_profile is False:
+                if user_has_profile is True:
                     if creator_profile.main_character is not None:
                         creator_name = creator_profile.main_character.character_name
 
@@ -148,7 +140,7 @@ class Timers(commands.Cog):
 
 def setup(bot):
     """
-    setup the cog
+    Setup the cog
     :param bot:
     """
 

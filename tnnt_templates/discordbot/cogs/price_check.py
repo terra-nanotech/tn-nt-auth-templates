@@ -7,8 +7,6 @@ import logging
 import requests
 from discord.colour import Color
 from discord.embeds import Embed
-
-# Cog Stuff
 from discord.ext import commands
 
 logger = logging.getLogger(__name__)
@@ -16,7 +14,7 @@ logger = logging.getLogger(__name__)
 
 class PriceCheck(commands.Cog):
     """
-    price checks on Jita and Amarr markets
+    Price checks on Jita and Amarr markets
     """
 
     def __init__(self, bot):
@@ -79,7 +77,7 @@ class PriceCheck(commands.Cog):
 
     async def price_check(self, ctx, markets, item_name: str = None):
         """
-        do the price checks and post to Discord
+        Do the price checks and post to Discord
         :param ctx:
         :param markets:
         :param item_name:
@@ -128,7 +126,7 @@ class PriceCheck(commands.Cog):
 
                         has_thumbnail = True
 
-                    # sell order price
+                    # Sell order price
                     market_api_sell_price = market_json["appraisal"]["items"][0][
                         "prices"
                     ]["sell"]["min"]
@@ -148,7 +146,7 @@ class PriceCheck(commands.Cog):
                         inline=True,
                     )
 
-                    # buy order price
+                    # Buy order price
                     market_api_buy_price = market_json["appraisal"]["items"][0][
                         "prices"
                     ]["buy"]["max"]
@@ -194,7 +192,7 @@ class PriceCheck(commands.Cog):
 
 def setup(bot):
     """
-    add the cogg
+    Add the cogg
     :param bot:
     :return:
     """

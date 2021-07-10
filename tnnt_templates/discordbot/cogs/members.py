@@ -1,23 +1,19 @@
 import logging
 
-from aadiscordbot.app_settings import aastatistics_active
-
-# AA-Discordbot
-from aadiscordbot.cogs.utils.decorators import sender_has_perm
+from aadiscordbot.app_settings import (
+    ADMIN_DISCORD_BOT_CHANNELS,
+    DISCORD_BOT_MEMBER_ALLIANCES,
+    aastatistics_active,
+)
+from aadiscordbot.cogs.utils.decorators import message_in_channels, sender_has_any_perm
 from discord.colour import Color
 from discord.embeds import Embed
-
-# Cog Stuff
 from discord.ext import commands
 
-# Django
-from django.conf import settings
 from django.contrib.auth.models import User
 from django.core.exceptions import ObjectDoesNotExist
 
 from allianceauth.eveonline.evelinks import evewho
-
-# Alliance Auth
 from allianceauth.eveonline.models import EveCharacter
 
 logger = logging.getLogger(__name__)
@@ -32,14 +28,15 @@ class Members(commands.Cog):
         self.bot = bot
 
     @commands.command(pass_context=True)
-    @sender_has_perm("corputils.view_alliance_corpstats")
+    @sender_has_any_perm(
+        ["corputils.view_alliance_corpstats", "corpstats.view_alliance_corpstats"]
+    )
+    @message_in_channels(ADMIN_DISCORD_BOT_CHANNELS)
     async def lookup(self, ctx):
         """
         Gets Auth data about a character
         Input: a Eve Character Name
         """
-        if ctx.message.channel.id not in settings.ADMIN_DISCORD_BOT_CHANNELS:
-            return await ctx.message.add_reaction(chr(0x1F44E))
 
         input_name = ctx.message.content[8:]
 
@@ -211,18 +208,19 @@ class Members(commands.Cog):
             return await ctx.send(embed=embed)
 
     @commands.command(pass_context=True)
-    @sender_has_perm("corputils.view_alliance_corpstats")
+    @sender_has_any_perm(
+        ["corputils.view_alliance_corpstats", "corpstats.view_alliance_corpstats"]
+    )
+    @message_in_channels(ADMIN_DISCORD_BOT_CHANNELS)
     async def altcorp(self, ctx):
         """
         Gets Auth data about an altcorp
         Input: a Eve Character Name
         """
-        if ctx.message.channel.id not in settings.ADMIN_DISCORD_BOT_CHANNELS:
-            return await ctx.message.add_reaction(chr(0x1F44E))
 
         input_name = ctx.message.content[9:]
         chars = EveCharacter.objects.filter(corporation_name=input_name)
-        own_ids = [settings.DISCORD_BOT_MEMBER_ALLIANCES]
+        own_ids = [DISCORD_BOT_MEMBER_ALLIANCES]
         alts_in_corp = []
 
         for c in chars:

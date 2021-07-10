@@ -49,7 +49,7 @@ class Time(commands.Cog):
             url = get_site_url() + "/timezones/"
             configured_timezones = Timezones.objects.filter(is_enabled=True)
 
-            # get configured timezones from module setting
+            # Get configured timezones from module setting
             if configured_timezones.count() > 0:
                 for configured_timezone in configured_timezones:
                     embed.add_field(
