@@ -6,6 +6,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.6.0] - 2021-07-11
+
+### Removed
+
+- Discordbot Cogs. They have been moved to it's own app »
+  [TN-NT Discordbot Cogs](https://github.com/terra-nanotech/tn-nt-discordbot-cogs)
+
+
 ## [1.5.23] - 2021-07-10
 
 ### Changed
