@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.6.1] - 2021-07-14
+
+### Changed
+
+- Templates for `aa-structuretimers` to conform with v1.1.0
+
+
 ## [1.6.0] - 2021-07-11
 
 ### Removed
