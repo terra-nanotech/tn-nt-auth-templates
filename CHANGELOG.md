@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [1.6.2] - Unreleased
 
+### Changed
+
+- CSS for `aa-forum` to better position the search bar in the navigation
+
 ### Removed
 
 - YouTube plugin for CKEditor, it's served with `aa-forum` and `aa-bulletin-board`
