@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.6.2] - Unreleased
+
+### Removed
+
+- YouTube plugin for CKEditor, it's served with `aa-forum` and `aa-bulletin-board`
+
+
 ## [1.6.1] - 2021-07-14
 
 ### Changed
