@@ -14,25 +14,30 @@
             <rect x="0" y="0" width="150%" height="100%" fill="url(#pf-svg-sso-animation-gradient)">
                 <animate attributeType="XML" attributeName="x" from="0" to="150%" dur="2s" repeatCount="indefinite" />
             </rect>
+
             <rect x="-150%" y="0" width="150%" height="100%" fill="url(#pf-svg-sso-animation-gradient)">
                 <animate attributeType="XML" attributeName="x" from="-150%" to="0" dur="2s" repeatCount="indefinite" />
             </rect>
         </pattern>
+
         <!-- background/frame -->
         <linearGradient id="pf-svg-sso-bg-gradient">
             <stop offset="0" stop-color="#343434" />
             <stop offset=".071" stop-color="#3e3e3e" />
             <stop offset="1" stop-color="#212121" />
         </linearGradient>
+
         <linearGradient id="pf-svg-sso-bg-darken">
             <stop offset="0" style="stop-color: #343434; stop-opacity: 0;" />
             <stop offset=".071" style="stop-color: #3e3e3e; stop-opacity: .071;" />
             <stop offset="1" style="stop-color: #212121; stop-opacity: 1;" />
         </linearGradient>
+
         <linearGradient id="pf-svg-sso-bg-frame">
             <stop offset="0" style="stop-color: #6c6c6c; stop-opacity: 1" />
             <stop offset="1" style="stop-color: #232323; stop-opacity: 1" />
         </linearGradient>
+
         <linearGradient xlink:href="#pf-svg-sso-bg-frame" id="l" x1="-2.652" y1="-.686" x2="-2.298" y2="90.354" gradientUnits="userSpaceOnUse" />
         <linearGradient xlink:href="#pf-svg-sso-bg-gradient" id="k" x1="-4.95" y1="-1.747" x2="-3.712" y2="90.884" gradientUnits="userSpaceOnUse" />
         <linearGradient xlink:href="#pf-svg-sso-bg-darken" id="m" x1="-4.95" y1="-1.747" x2="-3.712" y2="90.884" gradientUnits="userSpaceOnUse" />
@@ -42,13 +47,16 @@
         <g>
             <path d="M8 0h524c4.432 0 8 3.568 8 8v74c0 4.432-3.568 8-8 8H8c-4.432 0-8-3.568-8-8V8c0-4.432 3.568-8 8-8z" fill="url(#k)" />
         </g>
+
         <g>
             <path d="M2.191 2.5A7.965 7.965 0 00.584 5h173.352v85h2.5V5h362.98a7.966 7.966 0 00-1.607-2.5z" fill="url(#l)" />
             <path d="M2.191 2.5A7.965 7.965 0 00.584 5h173.352v85h2.5V5h362.98a7.966 7.966 0 00-1.607-2.5z" fill="url(#pf-svg-sso-animation-pattern)" />
         </g>
+
         <g>
             <path d="M8 0h524c4.432 0 8 3.568 8 8v74c0 4.432-3.568 8-8 8H8c-4.432 0-8-3.568-8-8V8c0-4.432 3.568-8 8-8z" fill="url(#m)" />
         </g>
+
         <g fill="currentColor">
             <path d="M21.707 26.07v10.302h7.412v-2.65h33.59V26.07z" />
             <path d="M66.19 26.07l22.55 43.116 22.552-43.116h-8.04S89.607 51.981 88.742 53.651l-14.505-27.58z" />
@@ -58,6 +66,7 @@
             <path d="M21.707 51.796v10.339H62.71V54.46H29.119v-2.664z" />
             <path d="M114.806 51.796v10.339h40.941V54.46H122.17v-2.664z" />
         </g>
+
         <g fill="currentColor">
             <path d="M194.44 62.09v-27.3h5.67v23.309h10.509v3.99z" />
             <path d="M212.823 46.247q.059-1.738.177-3.299.139-1.58.475-2.923.355-1.363.987-2.45.652-1.086 1.719-1.857 1.086-.77 2.686-1.185 1.6-.415 3.872-.415 2.252 0 3.852.415t2.667 1.185q1.086.77 1.718 1.857.652 1.087.988 2.45.355 1.343.474 2.923.138 1.56.197 3.299v3.891q0 1.818-.098 3.477-.08 1.64-.415 3.042-.316 1.383-.948 2.509-.633 1.126-1.739 1.935-1.086.79-2.726 1.205-1.64.435-3.97.435-2.331 0-3.97-.435-1.64-.414-2.746-1.205-1.087-.81-1.739-1.935-.632-1.126-.968-2.51-.316-1.402-.414-3.041-.08-1.66-.08-3.477zm5.827 6.46q0 .552.02 1.224.04.652.158 1.323.138.652.395 1.265.276.612.73 1.086.455.454 1.127.75.691.277 1.659.277 1.007 0 1.699-.276.691-.297 1.145-.79.455-.494.712-1.126.256-.652.375-1.363.118-.712.138-1.442.02-.731.02-1.383v-6.973q0-.553-.02-1.284 0-.73-.118-1.501-.1-.79-.336-1.541-.237-.77-.692-1.363-.454-.612-1.165-.968-.711-.375-1.758-.375-1.126 0-1.857.375-.73.356-1.185.948-.454.573-.672 1.324-.217.75-.316 1.52-.079.751-.079 1.462.02.712.02 1.245z" />
