@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.7.1] - Unreleased
+
+### Changed
+
+- CSS for AA Forum v0.1.0-beta.11
+
+
 ## [1.7.0] - 2021-07-20
 
 ### Added
