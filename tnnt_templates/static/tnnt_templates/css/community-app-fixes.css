@@ -201,6 +201,10 @@
         padding: 0.25rem 0;
     }
 
+    .aa-forum .btn-aa-forum-topic-moderation {
+        border: none;
+    }
+
     /* SumoSelect
     --------------------------------------------------------------------------------- */
     .aa-forum .SumoSelect {
