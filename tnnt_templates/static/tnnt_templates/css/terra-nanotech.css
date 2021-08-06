@@ -776,9 +776,9 @@
         text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
     }
 
-    .panel-body {
-        min-height: 100px;
-    }
+    /*.panel-body {*/
+    /*    min-height: 100px;*/
+    /*}*/
 
     .panel-default > .panel-heading {
         background-color: rgba(62, 68, 76, 0.6);
