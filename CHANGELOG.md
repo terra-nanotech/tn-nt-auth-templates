@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.7.5] - 2021-08-11
+
+### Changed
+
+- Templates for `allianceauth-securegroups-0.1.0`
+
+
 ## [1.7.4] - 2021-08-06
 
 ### Changed
