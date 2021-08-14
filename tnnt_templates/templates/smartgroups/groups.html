@@ -110,46 +110,46 @@
     {% include 'bundles/datatables-js.html' %}
 
     <script type="application/javascript">
-        $('.check-user-button').on('click', function () {
-            let url = "{% url 'securegroups:request_check' 123456 %}";
-            let id = this.id;
-
-            url = url.replace('123456', id);
-
-            $.get(url, function(data) {
-                modal_body = $('#main-modal-body')[0];
-                modal_body.innerHTML = data;
-
-                $('#modal-secure-groups-checks').modal();
-            });
-        });
-
         $(document).ready(function () {
-            $('[rel="tooltip"]').tooltip();
-        });
+            $('.check-user-button').on('click', function () {
+                let url = "{% url 'securegroups:request_check' 123456 %}";
+                let id = this.id;
 
-        {% if groups %}
-            $('#available-secure-groups').DataTable({
-                paging: false,
-                info: false,
-                order: [
-                    [0, 'asc']
-                ],
-                columnDefs: [
-                    {
-                        width: '250px',
-                        targets: [0]
-                    },
-                    {
-                        width: '150px',
-                        targets: [2]
-                    },
-                    {
-                        orderable: false,
-                        targets: [1,2]
-                    }
-                ],
+                url = url.replace('123456', id);
+
+                $.get(url, function(data) {
+                    modal_body = $('#main-modal-body')[0];
+                    modal_body.innerHTML = data;
+
+                    $('#modal-secure-groups-checks').modal();
+                });
             });
-        {% endif %}
+
+            $('[rel="tooltip"]').tooltip();
+
+            {% if groups %}
+                $('#available-secure-groups').DataTable({
+                    paging: false,
+                    info: false,
+                    order: [
+                        [0, 'asc']
+                    ],
+                    columnDefs: [
+                        {
+                            width: '250px',
+                            targets: [0]
+                        },
+                        {
+                            width: '150px',
+                            targets: [2]
+                        },
+                        {
+                            orderable: false,
+                            targets: [1,2]
+                        }
+                    ],
+                });
+            {% endif %}
+        });
     </script>
 {% endblock %}
