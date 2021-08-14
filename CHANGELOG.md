@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.7.6] - 2021-08-14
+
+### Fixed
+
+- jQuery code should always be wrapped in document.ready()
+
+
 ## [1.7.5] - 2021-08-11
 
 ### Changed
