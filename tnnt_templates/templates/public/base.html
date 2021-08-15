@@ -15,7 +15,7 @@
         <meta name="og:type" content="website">
         <meta name="og:site_name" content="auth.terra-nanotech.de">
 
-        {% if request.GET.next|startswith:"/forum/" %}
+        {% if request.GET.next and request.GET.next|startswith:"/forum/" %}
             <meta name="og:title" content="{{ TNNT_TEMPLATE_ENTITY_NAME }} Forum">
             <meta name="og:description" content="Our beloved Forum. Discuss here at your hearts content. You might also find some useful information here, who knows?">
         {% else %}
