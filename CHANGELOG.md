@@ -6,6 +6,66 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.7.7] - 2021-08-15
+
+### Fixed
+
+- Check for forum URLs
+
+
+## [1.7.6] - 2021-08-14
+
+### Fixed
+
+- jQuery code should always be wrapped in document.ready()
+
+
+## [1.7.5] - 2021-08-11
+
+### Changed
+
+- Templates for `allianceauth-securegroups-0.1.0`
+
+
+## [1.7.4] - 2021-08-06
+
+### Changed
+
+- `.panel-body` min-height removed
+
+
+## [1.7.3] - 2021-08-04
+
+### Changed
+
+- Adjusted the font-size for `blockquote` to 0.95rem
+
+
+## [1.7.2] - 2021-08-02
+
+### Changed
+
+- CSS for AA Forum v0.1.0-beta.14
+
+
+## [1.7.1] - 2021-07-24
+
+### Changed
+
+- CSS for AA Forum v0.1.0-beta.11
+
+
+## [1.7.0] - 2021-07-20
+
+### Added
+
+- Detection for forum links to change meta tags accordingly
+
+### Changed
+
+- Path to login SVG
+
+
 ## [1.6.4] - 2021-07-20
 
 ### Changed

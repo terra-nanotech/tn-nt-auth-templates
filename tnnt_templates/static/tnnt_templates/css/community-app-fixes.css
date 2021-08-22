@@ -201,6 +201,10 @@
         padding: 0.25rem 0;
     }
 
+    .aa-forum .btn-aa-forum-topic-moderation {
+        border: none;
+    }
+
     /* SumoSelect
     --------------------------------------------------------------------------------- */
     .aa-forum .SumoSelect {
@@ -225,8 +229,25 @@
         padding: 1rem;
     }
 
-    .aa-forum .navbar .aa-forum-search-box {
-        margin-left: -28px;
-        margin-right: -28px;
+    .aa-forum #aa-forum-form-search-menu {
+        padding: 10px 0;
+    }
+
+    .aa-forum .aa-forum-breadcrumb {
+        padding: 1.3rem 1rem;
+    }
+
+    .aa-forum .aa-forum-legend > span {
+        margin-right: 3rem;
+    }
+}
+
+@media all and (min-width: 768px) {
+    .aa-forum #aa-forum-form-search-menu {
+        padding: 0;
+    }
+
+    .aa-forum .aa-forum-breadcrumb ul li:first-child {
+        padding-left: 0;
     }
 }

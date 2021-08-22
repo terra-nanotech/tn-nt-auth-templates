@@ -418,6 +418,10 @@
     .well {
         background-color: rgba(28, 30, 34, 0.4);
     }
+
+    blockquote {
+        font-size: 0.95rem;
+    }
 }
 
 /* eve time in navbar
@@ -772,9 +776,9 @@
         text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
     }
 
-    .panel-body {
-        min-height: 100px;
-    }
+    /*.panel-body {*/
+    /*    min-height: 100px;*/
+    /*}*/
 
     .panel-default > .panel-heading {
         background-color: rgba(62, 68, 76, 0.6);
