@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [1.8.0] - Unreleased for AA 2.9.0
+
+### Changed
+
+- Top Menu adapted for AA's new top menu structure
+
+
 ## [1.7.7] - 2021-08-15
 
 ### Fixed
