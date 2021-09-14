@@ -12,6 +12,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - Top Menu adapted for AA's new top menu structure
 
+### Fixed
+
+- CSS for SumoSelect field in `aa-bulletin-board`
+
 
 ## [1.7.7] - 2021-08-15
 
