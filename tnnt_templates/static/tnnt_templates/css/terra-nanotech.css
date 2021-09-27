@@ -578,6 +578,7 @@
     }
 
     .navbar-nav > li.top-user-menu.with-main-character > .dropdown-menu {
+        min-width: 225px;
         padding-top: 0.5rem;
     }
 
@@ -882,10 +883,6 @@
 }
 
 @media all and (min-width: 768px) {
-    .top-user-menu > li {
-        width: 205px;
-    }
-
     .top-user-menu .user-main-character-avatar img.ra-avatar {
         border-radius: 0;
     }
