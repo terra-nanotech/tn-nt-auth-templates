@@ -1,3 +1,4 @@
+{% load tnnt_template_tags %}
 {% load static %}
 {% load i18n %}
 {% load navactive %}
@@ -18,10 +19,10 @@
         <link rel="stylesheet" href="{% static 'tnnt_templates/css/theme/terra-nanotech/v3/css/bootstrap.min.css' %}" type="text/css">
         {% include 'bundles/fontawesome.html' %}
 
-        <link rel="stylesheet" href="{% static 'tnnt_templates/css/fonts.min.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% tnnt_static 'tnnt_templates/css/fonts.min.css' %}" type="text/css">
         <link rel="stylesheet" href="{% static 'tnnt_templates/libs/fira-code/5.2/fira_code.min.css' %}" type="text/css">
         <link rel="stylesheet" href="{% static 'tnnt_templates/libs/highlight-js/11.01/styles/default.min.css' %}" type="text/css">
-        <link rel="stylesheet" href="{% static 'tnnt_templates/css/terra-nanotech.min.css' %}" type="text/css">
+        <link rel="stylesheet" href="{% tnnt_static 'tnnt_templates/css/terra-nanotech.min.css' %}" type="text/css">
 
         {% block extra_css %}{% endblock extra_css %}
         <link rel="stylesheet" href="{% static 'tnnt_templates/css/community-app-fixes.min.css' %}" type="text/css">
@@ -66,7 +67,7 @@
         <script src="{% static 'js/refresh_notifications.js' %}"></script>
         <script src="{% static 'js/eve-time.js' %}"></script>
         <script src="{% static 'tnnt_templates/libs/highlight-js/11.01/highlight.min.js' %}"></script>
-        <script src="{% static 'tnnt_templates/javascript/terra-nanotech.min.js' %}"></script>
+        <script src="{% tnnt_static 'tnnt_templates/javascript/terra-nanotech.min.js' %}"></script>
 
         {% block extra_javascript %}
         {% endblock extra_javascript %}
