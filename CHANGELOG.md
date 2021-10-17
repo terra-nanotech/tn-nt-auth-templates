@@ -6,6 +6,53 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [2.0.0] - 2021-10-17
+
+Changed
+
+- Release for AA 2.9.0
+
+
+## [2.0.0-beta.2] - 2021-10-08
+
+### Important
+
+**This release is for Alliance Auth v2.9.0b1 or higher. Do not try and attempt to
+run it with any version prior!**
+
+### Changed
+
+- Public template for `mumbletemps` changed for AA 2.9.0
+
+
+## [2.0.0-beta.1] - 2021-09-28
+
+### Important
+
+**This release is for Alliance Auth v2.9.0b1 or higher. Do not try and attempt to
+run it with any version prior!**
+
+### Changed
+
+- User menu min width set to 225px
+
+
+## [1.8.0] - 2021-09-19
+
+### Important
+
+**This release is for Alliance Auth v2.9.0b1 or higher. Do not try and attempt to
+run it with any version prior!**
+
+### Changed
+
+- Top Menu adapted for AA's new top menu structure
+
+### Fixed
+
+- CSS for SumoSelect field in `aa-bulletin-board`
+
+
 ## [1.7.7] - 2021-08-15
 
 ### Fixed

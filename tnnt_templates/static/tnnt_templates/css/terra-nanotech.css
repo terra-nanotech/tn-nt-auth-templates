@@ -573,14 +573,6 @@
 /* navbar
 ------------------------------------------------------------------------------------- */
 @media all {
-    .navbar-nav > li.top-user-menu.with-main-character a {
-        padding: 9px 15px;
-    }
-
-    .navbar-nav > li.top-user-menu.with-main-character > .dropdown-menu {
-        padding-top: 0.5rem;
-    }
-
     .auth-side-navbar {
         background-color: rgb(58, 63, 68);
     }
@@ -858,6 +850,52 @@
     .nav-pills > li > a:hover {
         background-color: rgb(62, 68, 76);
         color: rgb(255, 255, 255);
+    }
+}
+
+/* user menu
+------------------------------------------------------------------------------------- */
+@media all {
+    .navbar-nav > li.top-user-menu.with-main-character a {
+        padding: 9px 15px;
+    }
+
+    .navbar-nav > li.top-user-menu.with-main-character > .dropdown-menu {
+        min-width: 225px;
+        padding-top: 0.5rem;
+    }
+
+    .top-user-menu .user-main-character-avatar img.ra-avatar {
+        border-radius: 6px;
+    }
+
+    .top-menu-bar-language-select form {
+        border-bottom: 1px solid transparent;
+        border-top: 1px solid transparent;
+        -webkit-box-shadow: inset 0 1px 0 rgb(255 255 255), 0 1px 0 rgb(255 255 255);
+        box-shadow: inset 0 1px 0 rgb(255 255 255), 0 1px 0 rgb(255 255 255);
+        margin-bottom: 7.5px;
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-top: 7.5px;
+        padding: 10px 15px;
+    }
+}
+
+@media all and (min-width: 768px) {
+    .top-user-menu .user-main-character-avatar img.ra-avatar {
+        border-radius: 0;
+    }
+
+    .top-menu-bar-language-select form {
+        border: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+        margin-left: 0;
+        margin-right: 0;
+        padding-bottom: 0;
+        padding-top: 0;
+        width: auto;
     }
 }
 
