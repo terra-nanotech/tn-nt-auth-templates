@@ -1,7 +1,6 @@
 {% extends "allianceauth/base.html" %}
 {% load static %}
 {% load i18n %}
-{% get_current_language as LANGUAGE_CODE %}
 
 {% block page_title %}{% translate "Fleet Operation Management" %}{% endblock page_title %}
 {% block extra_css %}{% endblock extra_css %}
@@ -13,17 +12,10 @@
         </h1>
 
         {% if perms.auth.optimer_management %}
-            <div class="text-right">
+            <p class="text-right">
                 <a href="{% url 'optimer:add' %}" class="btn btn-success">{% translate "Create Operation" %}</a>
-            </div>
-        {% endif %}
-
-        <div class="text-center">
-            <p>
-                <b class="label label-info text-left">{% translate "Current Eve Time:" %}</b>
-                <b class="label label-info text-left" id="current-time"></b>
             </p>
-        </div>
+        {% endif %}
 
         <!-- upcoming timers -->
         <div class="panel panel-default">
