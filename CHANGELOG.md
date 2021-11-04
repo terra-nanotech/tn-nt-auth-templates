@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [2.0.3] - 2021-11-04
+
+### Changed
+
+- Optimer templates updated to match changes in AA 2.9.1
+
+
 ## [2.0.2] - 2021-10-19
 
 ### Changed
