@@ -6,15 +6,17 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
-## [2.0.4] - Unreleased
+## [2.0.4] - 2021-11-27
 
 ### Added
 
 - Tests for template tags
+- Missing `tr` tag
 
 ### Changed
 
 - License updated to GPLv3
+- Minimum dependencies versions
 
 
 ## [2.0.3] - 2021-11-04
