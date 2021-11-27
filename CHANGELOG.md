@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 
 - License updated to GPLv3
+- Minimum dependencies versions
 
 
 ## [2.0.3] - 2021-11-04
