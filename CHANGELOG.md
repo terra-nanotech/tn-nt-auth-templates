@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Minimum requirements
   - Alliance Auth v2.9.3
 
+
 ## [2.0.4] - 2021-11-27
 
 ### Added
