@@ -1,7 +1,10 @@
+# Standard Library
 import os
 
+# Third Party
 from setuptools import find_packages, setup
 
+# AA Templates: Terra Nanotech
 from tnnt_templates import __version__
 
 # Read the contents of your README file

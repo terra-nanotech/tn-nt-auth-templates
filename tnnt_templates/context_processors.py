@@ -2,6 +2,7 @@
 tnnt template settings
 """
 
+# Django
 from django.conf import settings
 
 
