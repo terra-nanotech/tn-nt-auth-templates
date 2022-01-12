@@ -1,7 +1,10 @@
+# Standard Library
 import os
 
+# Third Party
 from setuptools import find_packages, setup
 
+# AA Templates: Terra Nanotech
 from tnnt_templates import __version__
 
 # Read the contents of your README file
@@ -22,7 +25,7 @@ project_git_url = "https://github.com/terra-nanotech/tn-nt-auth-templates"
 project_issues_url = f"{project_git_url}/issues"
 project_changelog_url = f"{project_git_url}/blob/master/CHANGELOG.md"
 project_homepage_url = project_git_url
-project_install_requirements = ["allianceauth>=2.9.3"]
+project_install_requirements = ["allianceauth>=2.9.4"]
 project_python_requires = "~=3.7"
 project_classifiers = [
     "Environment :: Web Environment",
@@ -37,6 +40,7 @@ project_classifiers = [
     "Programming Language :: Python :: 3.8",
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
     "Topic :: Internet :: WWW/HTTP",
     "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
 ]

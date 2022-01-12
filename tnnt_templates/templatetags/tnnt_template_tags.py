@@ -2,9 +2,11 @@
 Template filter for Terra Nanotech templates
 """
 
+# Django
 from django.template.defaulttags import register
 from django.templatetags.static import static
 
+# AA Templates: Terra Nanotech
 from tnnt_templates import __version__
 
 

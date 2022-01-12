@@ -1,6 +1,8 @@
+# Django
 from django.template import Context, Template
 from django.test import TestCase
 
+# AA Templates: Terra Nanotech
 from tnnt_templates import __version__
 
 
