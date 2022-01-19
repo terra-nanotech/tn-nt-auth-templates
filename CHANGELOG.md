@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [2.3.1] - 2022-01-19
+
+### Fixed
+
+- Template for `structuretimers` to match with the latest changes in v1.2.0
+
+
 ## [2.3.0] - 2022-01-12
 
 ### Added

@@ -1,6 +1,7 @@
 {% extends "structuretimers/base.html" %}
 {% load static %}
 {% load i18n %}
+{% load evelinks %}
 
 {% block details %}
     <div class="text-center">
@@ -20,8 +21,9 @@
 
     <!-- Nav tabs -->
     <ul class="nav nav-tabs" role="tablist">
-        <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Current Timers</a></li>
-        <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Past Timers</a></li>
+        <li role="presentation"><a href="#preliminary" aria-controls="preliminary" role="tab" data-toggle="tab">Preliminary</a></li>
+        <li role="presentation"><a href="#current" aria-controls="current" role="tab" data-toggle="tab">Current</a></li>
+        <li role="presentation"><a href="#past" aria-controls="past" role="tab" data-toggle="tab">Past</a></li>
         <li class="dropdown pull-right">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
                 Staging: {{ selected_staging_system|default:"?" }} <span class="caret"></span>
@@ -42,8 +44,16 @@
     <div class="panel panel-default panel-tabs">
         <div class="panel-body">
             <div class="tab-content">
+                <!-- targets tab -->
+                <div role="tabpanel" class="tab-pane" id="preliminary">
+                    {% include 'structuretimers/partials/preliminary_list_table.html' %}
+                    <p class="text-muted">
+                        This page contains potential future timers.
+                    </p>
+                </div>
+
                 <!-- current structuretimers tab -->
-                <div role="tabpanel" class="tab-pane active" id="home">
+                <div role="tabpanel" class="tab-pane" id="current">
                     {% include 'structuretimers/partials/timer_list_table.html' with tab_name='current' %}
                     <p class="text-muted">
                         Timers remain on this page for {{ max_hours_expired }} hours after they expired
@@ -51,7 +61,7 @@
                 </div>
 
                 <!-- past structuretimers tab -->
-                <div role="tabpanel" class="tab-pane" id="profile">
+                <div role="tabpanel" class="tab-pane" id="past">
                     {% include 'structuretimers/partials/timer_list_table.html' with tab_name='past' %}
                 </div>
             </div>
@@ -72,7 +82,6 @@
                     </button>
                     <h4 class="modal-title" id="gridSystemModalLabel">Timer details</h4>
                 </div>
-
                 <div class="modal-body">
                     <div id="modal_div_spinner">
                         {% if NIGHT_MODE %}
@@ -81,20 +90,9 @@
                             <img src="{% static 'structuretimers/img/Spinner-1s-64px-light.gif' %}" alt="Spinner"/>
                         {% endif %}
                     </div>
-
-                    <div id="modal_div_data" style="display: none">
-                        <label for="timerboardTimer">Timer</label>
-                        <p><span id="timerboardTimer"></span></p>
-                        <label for="timerboardImgScreenshot">Image</label>
-                        <a href="#" target="_blank">
-                            <img id="timerboardImgScreenshot" class="img-responsive" alt="details image" src=""/>
-                        </a>
-                        <br>
-                        <label for="timerboardNotes">Notes</label>
-                        <textarea id="timerboardNotes" class="form-control" rows="3" readonly></textarea>
-                    </div>
+                    <div id="modalContent" style="display: none"></div>
+                    <div id="modalLoadError"></div>
                 </div>
-
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                 </div>
@@ -102,13 +100,13 @@
         </div>
     </div>
 
-
     <!-- share data with JS part -->
     <div
         id="dataExport"
         data-listDataCurrentUrl="{% url 'structuretimers:timer_list_data' 'current' %}?staging={{ selected_staging_system.pk }}"
-        data-listDataPastUrl="{% url 'structuretimers:timer_list_data' 'past' %}"
-        data-getTimerDataUrl="{% url 'structuretimers:get_timer_data' 'pk_dummy' %}"
+        data-listDataPastUrl="{% url 'structuretimers:timer_list_data' 'past' %}?staging={{ selected_staging_system.pk }}"
+        data-listDataTargetUrl="{% url 'structuretimers:timer_list_data' 'preliminary' %}?staging={{ selected_staging_system.pk }}"
+        data-getTimerDataUrl="{% url 'structuretimers:detail' 'pk_dummy' %}"
         data-titleSolarSystem="{% translate 'Solar System' %}"
         data-titleRegion="{% translate 'Region' %}"
         data-titleStructureType="{% translate 'Structure Type' %}"
@@ -119,6 +117,7 @@
         data-hasPermOPSEC="{{ perms.structuretimers.opsec_access }}"
         data-dataTablesPageLength="{{ data_tables_page_length }}"
         data-dataTablesPaging="{{ data_tables_paging }}"
+        data-tabId="{{ tab }}"
     >
     </div>
 
