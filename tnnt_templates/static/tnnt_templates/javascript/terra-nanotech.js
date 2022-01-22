@@ -33,49 +33,33 @@ $(document).ready(function () {
     };
 
     /**
-     * Add leading zero if number is below 10
-     *
-     * @param {string} i
-     * @returns {string}
-     */
-    const addLeadingZero = function (i) {
-        if (i < 10) {
-            i = '0' + i;
-        }
-
-        return i;
-    };
-
-    /**
      * Render a JS clock for Eve time
      *
-     * @param element
-     * @param {int} utcOffset
+     * @param element The HTML element to display the time
      */
-    const renderClock = function (element, utcOffset) {
-        const today = new Date();
-        let h = today.getUTCHours();
-        let m = today.getUTCMinutes();
-        let s = today.getUTCSeconds();
+    const renderClock = function (element) {
+        const date = new Date();
 
-        h = h + utcOffset;
+        /**
+         * Date
+         * @type {string}
+         */
+        // const year = date.getUTCFullYear();
+        // const month = String(date.getUTCMonth() + 1).padStart(2, '0');
+        // const day = String(date.getUTCDate()).padStart(2, '0');
 
-        if (h > 24) {
-            h = h - 24;
-        }
+        /**
+         * Time
+         * @type {string}
+         */
+        const hour = String(date.getUTCHours()).padStart(2, '0');
+        const minute = String(date.getUTCMinutes()).padStart(2, '0');
+        const second = String(date.getUTCSeconds()).padStart(2, '0');
 
-        if (h < 0) {
-            h = h + 24;
-        }
-
-        h = addLeadingZero(h);
-        m = addLeadingZero(m);
-        s = addLeadingZero(s);
-
-        element.html(h + ':' + m + ':' + s);
+        element.html(hour + ':' + minute + ':' + second);
 
         setTimeout(function () {
-            renderClock(element, 0);
+            renderClock(element);
         }, 500);
     };
 
@@ -91,7 +75,7 @@ $(document).ready(function () {
      */
     const init = function () {
         externalLinks();
-        renderClock($('.eve-time-wrapper .eve-time-clock'), 0);
+        renderClock($('.eve-time-wrapper .eve-time-clock'));
         hljs.highlightAll();
     };
 

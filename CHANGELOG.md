@@ -6,6 +6,13 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [2.3.2] - 2022-01-22
+
+### Changed
+
+- Main JS cleaned up
+
+
 ## [2.3.1] - 2022-01-19
 
 ### Fixed
