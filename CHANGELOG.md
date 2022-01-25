@@ -10,7 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ### Changed
 
-- Switched to `setTimeout()` to render the Eve time
+- Switched to `setInterval()` to render the Eve time
 
 
 ## [2.3.2] - 2022-01-22
