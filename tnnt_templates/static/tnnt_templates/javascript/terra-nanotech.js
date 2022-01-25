@@ -57,10 +57,6 @@ $(document).ready(function () {
         const second = String(date.getUTCSeconds()).padStart(2, '0');
 
         element.html(hour + ':' + minute + ':' + second);
-
-        setTimeout(function () {
-            renderClock(element);
-        }, 500);
     };
 
     /**
@@ -75,8 +71,12 @@ $(document).ready(function () {
      */
     const init = function () {
         externalLinks();
-        renderClock($('.eve-time-wrapper .eve-time-clock'));
         hljs.highlightAll();
+
+        // Start the Eve time clock in the top menu bar
+        setInterval(function () {
+            renderClock($('.eve-time-wrapper .eve-time-clock'));
+        }, 500);
     };
 
     /**
