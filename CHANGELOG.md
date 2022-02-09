@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - Use proper HTML5 tags instead of self-closing XML/(X)HTML tags
 - Remove deprecated `xlink` notation for SVG
+- Use `{% static "" %}` instead of hardcoded image url in fittings templates
 
 
 ## [2.3.3] - 2022-01-25
