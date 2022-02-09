@@ -1,5 +1,5 @@
 """
-Module init
+TN-NT Templates init
 """
 
 default_app_config: str = "tnnt_templates.apps.TnntTemplatesConfig"

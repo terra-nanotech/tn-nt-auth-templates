@@ -1,3 +1,7 @@
+"""
+TN-NT Templates app config
+"""
+
 # Django
 from django.apps import AppConfig
 
