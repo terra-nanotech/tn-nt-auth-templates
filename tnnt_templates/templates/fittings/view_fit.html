@@ -378,17 +378,19 @@
                                 </div>
                             </div>
 
-                            <div class="panel panel-warning">
-                                <div class="panel-heading">
-                                    <div class="panel-title">{% translate "Fitting Notes" %}</div>
-                                </div>
+                            {% if fit.description %}
+                                <div class="panel panel-warning">
+                                    <div class="panel-heading">
+                                        <div class="panel-title">{% translate "Fitting Notes" %}</div>
+                                    </div>
 
-                                <div class="panel-body">
-                                    <div class="well">
-                                        {{ fit.description|linebreaks|urlize }}
+                                    <div class="panel-body">
+                                        <div class="well">
+                                            {{ fit.description|linebreaks|urlize }}
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
+                            {% endif %}
                         </div>
                     </div>
                 </div>
