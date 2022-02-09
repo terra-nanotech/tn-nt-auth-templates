@@ -7,7 +7,7 @@
 {% load evelinks %}
 
 {% block more_css %}
-    <link rel="stylesheet" href="{% static 'tnnt_templates/libs/multi-select/0.9.12/css/multi-select.min.css' %}" />
+    <link rel="stylesheet" href="{% static 'tnnt_templates/libs/multi-select/0.9.12/css/multi-select.min.css' %}">
 
     <style type="text/css">
         .ms-container {
@@ -51,7 +51,7 @@
                                 <label for="name" class="col-sm-2 control-label">{% translate "Doctrine Name" %}</label>
 
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" name="name" id="name" value="{{ doctrine.name }}" required/>
+                                    <input type="text" class="form-control" name="name" id="name" value="{{ doctrine.name }}" required>
                                 </div>
                             </div>
 
@@ -92,7 +92,7 @@
                                 </div>
                             </div>
 
-                            <br />
+                            <br>
                             <button class="btn btn-primary btn-block" type="submit">{% translate "Submit" %}</button>
                         </form>
                     </div>
