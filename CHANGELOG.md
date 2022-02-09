@@ -14,6 +14,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Remove deprecated `xlink` notation for SVG
 - Use `{% static "" %}` instead of hardcoded image url in fittings templates
 
+### Changed
+
+- Show "Fitting Notes" box only if there are fitting notes
+
 
 ## [2.3.3] - 2022-01-25
 
