@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 
 - Show "Fitting Notes" box only if there are fitting notes
+- JavaScript modernised
 
 
 ## [2.3.3] - 2022-01-25
