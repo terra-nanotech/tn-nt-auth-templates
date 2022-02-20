@@ -6,6 +6,20 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [2.4.0] - 2022-02-20
+
+### Fixed
+
+- Use proper HTML5 tags instead of self-closing XML/(X)HTML tags
+- Remove deprecated `xlink` notation for SVG
+- Use `{% static "" %}` instead of hardcoded image url in fittings templates
+
+### Changed
+
+- Show "Fitting Notes" box only if there are fitting notes
+- JavaScript modernised
+
+
 ## [2.3.3] - 2022-01-25
 
 ### Changed

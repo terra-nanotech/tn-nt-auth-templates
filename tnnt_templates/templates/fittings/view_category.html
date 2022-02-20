@@ -51,13 +51,13 @@
 
             <div class="panel-body tp">
                 <strong>{% translate "Name" %}: </strong>
-                <br/>
+                <br>
                 <span class="label" style="background-color: {{cat.color}}">{{cat.name}}</span>
 
                 <div id="spacer" style="padding-top: 5px;"></div>
                 {% if perms.fittings.manage %}
                     <strong>{% translate "Groups" %}: </strong>
-                    <br />
+                    <br>
 
                     {% if cat.groups.all|length != 0 %}
                         {% for group in cat.groups.all %} <span class="label label-primary">{{group.name}}</span> {% endfor %}
@@ -98,7 +98,7 @@
                                         <tr>
                                             <td>
                                                 <a href="{% url 'fittings:view_doctrine' doc.pk %}">
-                                                    <img src="{{ doc.icon_url }}" class="img-rounded" style="display: block; margin: auto;"/>
+                                                    <img src="{{ doc.icon_url }}" class="img-rounded" style="display: block; margin: auto;">
                                                 </a>
                                             </td>
                                             <td>
@@ -114,7 +114,7 @@
                                             <td> {{ doc.description|linebreaks|urlize }} </td>
                                             <td>
                                                 {% for fitting in doc_dict|get_item:doc.pk %}
-                                                    <img src="{{ fitting.ship_type_type_id|type_render_url:32 }}" class="img-rounded" data-toggle="tooltip" data-placement="bottom" title="{{ fitting.ship_type.type_name }}"/>
+                                                    <img src="{{ fitting.ship_type_type_id|type_render_url:32 }}" class="img-rounded" data-toggle="tooltip" data-placement="bottom" title="{{ fitting.ship_type.type_name }}">
                                                 {% endfor %}
                                             </td>
                                         </tr>
