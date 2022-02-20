@@ -1,6 +1,6 @@
 /* global hljs */
 
-$(document).ready(function () {
+$(document).ready(() => {
     'use strict';
 
     /**
@@ -8,14 +8,14 @@ $(document).ready(function () {
      * » add target="_blank"
      * » add rel="noopener noreferer"
      */
-    const externalLinks = function () {
+    const externalLinks = () => {
         const internalHost = [location.hostname];
         const protocolPattern = /^https?:\/\//i;
 
         /**
          * Walk through all links on the current page
          */
-        $('a').each(function () {
+        $('a').each(() => {
             const href = $(this).attr('href');
 
             /**
@@ -37,7 +37,7 @@ $(document).ready(function () {
      *
      * @param element The HTML element to display the time
      */
-    const renderClock = function (element) {
+    const renderClock = (element) => {
         const date = new Date();
 
         /**
@@ -62,19 +62,19 @@ $(document).ready(function () {
     /**
      * Functions that need to be executed on successful ajax events
      */
-    $(document).ajaxSuccess(function () {
+    $(document).ajaxSuccess(() => {
         externalLinks();
     });
 
     /**
      * Functions that need to be executed on load
      */
-    const init = function () {
+    const init = () => {
         externalLinks();
         hljs.highlightAll();
 
         // Start the Eve time clock in the top menu bar
-        setInterval(function () {
+        setInterval(() => {
             renderClock($('.eve-time-wrapper .eve-time-clock'));
         }, 500);
     };

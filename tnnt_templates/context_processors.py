@@ -1,16 +1,21 @@
 """
-tnnt template settings
+TN-NT Templates content processor
 """
 
 # Django
 from django.conf import settings
+from django.core.handlers.wsgi import WSGIRequest
 
 
-def tnnt_settings(request):
-    return_value = dict()
+def tnnt_settings(request: WSGIRequest) -> dict:
+    """
+    Returning a settings dict
+    :param request:
+    :return:
+    """
 
     # AA logo
-    return_value["TNNT_TEMPLATE_AA_LOGO"] = "/static/icons/allianceauth.png"
+    return_value = {"TNNT_TEMPLATE_AA_LOGO": "/static/icons/allianceauth.png"}
 
     # entity ID
     # 1 if none is given
