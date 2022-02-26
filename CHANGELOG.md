@@ -6,6 +6,16 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
+## [In Development] - Unreleased
+
+
+## [2.4.1] - 2022-02-26
+
+### Changed
+
+- Templates changed to match AA v2.11.0
+
+
 ## [2.4.0] - 2022-02-20
 
 ### Fixed
