@@ -109,9 +109,27 @@
                     </div>
 
                     <p>
-                        {% blocktranslate with queue_length=task_queue_length|default_if_none:"?"|intcomma %}
-                            {{ queue_length }} queued tasks
+                        {% blocktranslate with tasks_count=task_queue_length|default_if_none:"?"|intcomma %}
+                            Queued: {{ tasks_count }}
                         {% endblocktranslate %}
+
+                        {% if tasks_succeeded %}
+                            {% blocktranslate with tasks_count=tasks_succeeded|default_if_none:"?"|intcomma %}
+                                | <span class="text-success">Succeeded: {{ tasks_count }}</span>
+                            {% endblocktranslate %}
+                        {% endif %}
+
+                        {% if tasks_retried %}
+                            {% blocktranslate with tasks_count=tasks_retried|default_if_none:"?"|intcomma %}
+                                | <span class="text-info">Retried: {{ tasks_count }}</span>
+                            {% endblocktranslate %}
+                        {% endif %}
+
+                        {% if tasks_failed %}
+                            {% blocktranslate with tasks_count=tasks_failed|default_if_none:"?"|intcomma %}
+                                | <span class="text-danger">Failed: {{ tasks_count }}</span>
+                            {% endblocktranslate %}
+                        {% endif %}
                     </p>
                 </div>
             </div>
