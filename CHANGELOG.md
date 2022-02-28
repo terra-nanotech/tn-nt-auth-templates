@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [In Development] - Unreleased
 
+### Changed
+
+- Link "Latest Stable" and "Latest Pre-Release" versions to their tags on GitLab
+
 
 ## [2.4.2] - 2022-02-26
 
