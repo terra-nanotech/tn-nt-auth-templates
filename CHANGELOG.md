@@ -9,6 +9,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [In Development] - Unreleased
 
 
+## [2.5.1] - 2022-03-03
+
+### Fixed
+
+- `$(this)` in JS arrow function
+
+
 ## [2.5.0] - 2022-03-03
 
 ### Added
