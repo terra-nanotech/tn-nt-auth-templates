@@ -8,9 +8,21 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [In Development] - Unreleased
 
+
+## [2.5.0] - 2022-03-03
+
+### Added
+
+- Test suite for AA 3.x and Django 4
+
 ### Changed
 
 - Link "Latest Stable" and "Latest Pre-Release" versions to their tags on GitLab
+- Switched to `setup.cfg` as config file, since `setup.py` is deprecated now
+
+### Removed
+
+- Deprecated settings
 
 
 ## [2.4.2] - 2022-02-26
