@@ -15,8 +15,8 @@ $(document).ready(() => {
         /**
          * Walk through all links on the current page
          */
-        $('a').each(() => {
-            const href = $(this).attr('href');
+        $('a').each((index, element) => {
+            const href = $(element).attr('href');
 
             /**
              * Check if it's a http link
@@ -25,8 +25,8 @@ $(document).ready(() => {
                 const hrefHostname = $(new URL(href)).attr('hostname');
 
                 if ($.inArray(hrefHostname, internalHost) === -1) {
-                    $(this).attr('target', '_blank');
-                    $(this).attr('rel', 'noopener noreferer');
+                    $(element).attr('target', '_blank');
+                    $(element).attr('rel', 'noopener noreferer');
                 }
             }
         });
