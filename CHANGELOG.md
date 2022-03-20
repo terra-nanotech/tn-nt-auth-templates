@@ -8,9 +8,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [In Development] - Unreleased
 
+
+## [2.5.2] - 2022-03-20
+
 ### Changed
 
 - Template `allianceauth/admin-status/overview.html` to match the latest version
+- Minimum requirement
+  - Alliance Auth >= 2.11.1
 
 
 ## [2.5.1] - 2022-03-03
