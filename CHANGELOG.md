@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [In Development] - Unreleased
 
+### Changed
+
+- Template `allianceauth/admin-status/overview.html` to match the latest version
+
 
 ## [2.5.1] - 2022-03-03
 
