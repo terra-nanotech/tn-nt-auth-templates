@@ -9,6 +9,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [In Development] - Unreleased
 
 
+## [2.5.3] - 2022-05-09
+
+### Changed
+
+- Templates for `structuretimers` to match the latest version
+
+
 ## [2.5.2] - 2022-03-20
 
 ### Changed
