@@ -9,6 +9,18 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [In Development] - Unreleased
 
 
+## [2.5.4] - 2022-05-12
+
+### Added
+
+- Template for admin task status bar
+
+### Changed
+
+- Minimum requirement
+  - Alliance Auth >= 2.12.0
+
+
 ## [2.5.3] - 2022-05-09
 
 ### Changed
