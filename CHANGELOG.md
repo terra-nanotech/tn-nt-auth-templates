@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [In Development] - Unreleased
 
+### Added
+
+- Blur effect to fixed top navigation bar
+
 
 ## [2.5.4] - 2022-05-12
 
