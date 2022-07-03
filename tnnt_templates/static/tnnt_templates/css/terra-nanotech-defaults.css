@@ -1,12 +1,12 @@
 /* defaults
 ------------------------------------------------------------------------------------- */
 :root {
+    --backdrop-filter-default: saturate(1.5) blur(1.5em);
+
     --background-default: rgb(39 43 48);
     --background-default-transparency: rgba(39 43 48 / 0.75);
     --background-light-transparency: rgba(58 63 68 / 0.5);
     --background-panel-default: rgba(200 200 200 / 0.2);
-
-    --backdrop-filter-default: saturate(1.5) blur(1.5em);
 
     --background-success: rgba(98 196 98 / 0.5);
     --background-success-hover: rgba(79 189 79 / 0.6);
