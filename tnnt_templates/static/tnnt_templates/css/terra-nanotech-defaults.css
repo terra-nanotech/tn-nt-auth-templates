@@ -22,7 +22,7 @@
 
     --background-color-navigation-default-hover: rgb(62 68 76);
 
-    --background-body-default: url('https://web.ccpgamescdn.com/aws/eveonline/sso/background.jpg') no-repeat center center fixed;
+    --background-body-default: url('https://web-cdn.eveonline.com/aws/eveonline/sso/background.jpg') no-repeat center center fixed;
 
     --backdrop-filter-default: saturate(1.5) blur(1.5em);
 
