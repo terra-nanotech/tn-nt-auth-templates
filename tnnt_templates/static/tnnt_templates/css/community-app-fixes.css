@@ -25,6 +25,14 @@
     }
 }
 
+/* App: ckEditor
+------------------------------------------------------------------------------------- */
+@media all {
+    .cke_wysiwyg_frame, .cke_wysiwyg_div, .cke_inner {
+        background: transparent !important;
+    }
+}
+
 /* App: Fittings
 ------------------------------------------------------------------------------------- */
 @media all {
