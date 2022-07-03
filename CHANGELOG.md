@@ -14,6 +14,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - CSS variables
 - Background blur instead of transparency
 
+### Fixed
+
+- "Pending" button on groups page
+
 
 ## [2.5.4] - 2022-05-12
 
