@@ -14,7 +14,7 @@
 
     .auth-login-box {
         backdrop-filter: var(--backdrop-filter-default);
-        background-color: var(--background-light-transparency);
+        background-color: var(--background-color-light-transparency);
         bottom: 0;
         margin: 0;
         position: absolute;
