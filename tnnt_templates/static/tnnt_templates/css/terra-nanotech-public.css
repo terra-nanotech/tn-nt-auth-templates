@@ -13,12 +13,13 @@
     }
 
     .auth-login-box {
-        background: rgba(48, 48, 48, 0.75);
+        background-color: var(--background-light-transparency);
         bottom: 0;
         margin: 0;
         position: absolute;
         top: 0;
         width: 100%;
+        backdrop-filter: var(--backdrop-filter-default);
     }
 
     .auth-login-box-inner {

@@ -11,6 +11,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Added
 
 - Blur effect to fixed top navigation bar
+- CSS variables
+- Background blur instead of transparency
 
 
 ## [2.5.4] - 2022-05-12
