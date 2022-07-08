@@ -2,21 +2,19 @@
 ------------------------------------------------------------------------------------- */
 @media all {
     html {
-        /*font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;*/
-        font-family: Roboto, "Helvetica Neue", sans-serif;
+        font-family: var(--font-family-default);
         font-size: 100%;
     }
 
     body {
-        /*font-family: "Roboto";*/
-        background: url('https://web.ccpgamescdn.com/aws/eveonline/sso/background.jpg') no-repeat center center fixed;
-        background-color: rgb(39, 43, 48);
+        background: var(--background-body-default);
+        background-color: var(--background-color-default);
         -moz-background-size: cover;
         -o-background-size: cover;
         -webkit-background-size: cover;
         background-size: cover;
-        color: rgb(200, 200, 200);
-        font-family: Roboto, "Helvetica Neue", sans-serif;
+        color: var(--font-color-default);
+        font-family: var(--font-family-default);
         font-size: 100%;
     }
 
@@ -26,25 +24,25 @@
 
     .h1, .h2, .h3, .h4, .h5, .h6,
     h1, h2, h3, h4, h5, h6 {
-        font-family: Roboto, "Helvetica Neue", sans-serif;
+        font-family: var(--font-family-default);
         font-weight: 400;
     }
 
     .tooltip {
-        font-family: Roboto, "Helvetica Neue", sans-serif;
+        font-family: var(--font-family-default);
     }
 
     .popover {
-        font-family: Roboto, "Helvetica Neue", sans-serif;
+        font-family: var(--font-family-default);
     }
 
     code {
-        font-family: 'Fira Code', monospace;
+        font-family: var(--font-family-code);
     }
 
     @supports (font-variation-settings: normal) {
         code {
-            font-family: 'Fira Code VF', monospace;
+            font-family: var(--font-family-code-font-variation);
         }
     }
 
@@ -108,13 +106,13 @@
     }
 
     .nav-pills > li > a.active {
-        background: rgb(62, 68, 76);
+        background: var(--background-color-navigation-default-hover);
     }
 
     .nav-pills > li.active > a,
     .nav-pills > li.active > a:focus,
     .nav-pills > li.active > a:hover {
-        background-color: rgb(62, 68, 76);
+        background-color: var(--background-color-navigation-default-hover);
         background-image: none;
         background-repeat: no-repeat;
         border: none;
@@ -264,7 +262,7 @@
     .table > thead > tr.success > th,
     .table > tbody > tr.success > th,
     .table > tfoot > tr.success > th {
-        background-color: rgba(98, 196, 98, 0.5);
+        background-color: var(--background-color-success);
     }
 
     .table-hover > tbody > tr > td.success:hover,
@@ -272,7 +270,7 @@
     .table-hover > tbody > tr.success:hover > td,
     .table-hover > tbody > tr:hover > .success,
     .table-hover > tbody > tr.success:hover > th {
-        background-color: rgba(79, 189, 79, 0.5);
+        background-color: var(--background-color-success-hover);
     }
 
     .table > thead > tr > td.info,
@@ -287,7 +285,7 @@
     .table > thead > tr.info > th,
     .table > tbody > tr.info > th,
     .table > tfoot > tr.info > th {
-        background-color: rgba(91, 192, 222, 0.5);
+        background-color: var(--background-color-info);
     }
 
     .table-hover > tbody > tr > td.info:hover,
@@ -295,7 +293,7 @@
     .table-hover > tbody > tr.info:hover > td,
     .table-hover > tbody > tr:hover > .info,
     .table-hover > tbody > tr.info:hover > th {
-        background-color: rgba(70, 184, 218, 0.5);
+        background-color: var(--background-color-info-hover);
     }
 
     .table > thead > tr > td.warning,
@@ -310,7 +308,7 @@
     .table > thead > tr.warning > th,
     .table > tbody > tr.warning > th,
     .table > tfoot > tr.warning > th {
-        background-color: rgba(248, 148, 6, 0.5);
+        background-color: var(--background-color-warning);
     }
 
     .table-hover > tbody > tr > td.warning:hover,
@@ -318,7 +316,7 @@
     .table-hover > tbody > tr.warning:hover > td,
     .table-hover > tbody > tr:hover > .warning,
     .table-hover > tbody > tr.warning:hover > th {
-        background-color: rgba(223, 133, 5, 0.5);
+        background-color: var(--background-color-warning-hover);
     }
 
     .table > thead > tr > td.danger,
@@ -333,7 +331,7 @@
     .table > thead > tr.danger > th,
     .table > tbody > tr.danger > th,
     .table > tfoot > tr.danger > th {
-        background-color: rgba(238, 95, 91, 0.5);
+        background-color: var(--background-color-danger);
     }
 
     .table-hover > tbody > tr > td.danger:hover,
@@ -341,7 +339,7 @@
     .table-hover > tbody > tr.danger:hover > td,
     .table-hover > tbody > tr:hover > .danger,
     .table-hover > tbody > tr.danger:hover > th {
-        background-color: rgba(236, 72, 68, 0.5);
+        background-color: var(--background-color-danger-hover);
     }
 
     .btn-sm,
@@ -355,47 +353,47 @@
     }
 
     .list-group-item-success {
-        background-color: rgba(98, 196, 98, 0.6);
+        background-color: var(--background-color-success);
     }
 
     a.list-group-item-success:hover,
     button.list-group-item-success:hover,
     a.list-group-item-success:focus,
     button.list-group-item-success:focus {
-        background-color: rgba(79, 189, 79, 0.6);
+        background-color: var(--background-color-success-hover);
     }
 
     .list-group-item-info {
-        background-color: rgba(91, 192, 222, 0.6);
+        background-color: var(--background-color-info);
     }
 
     a.list-group-item-info:hover,
     button.list-group-item-info:hover,
     a.list-group-item-info:focus,
     button.list-group-item-info:focus {
-        background-color: rgba(70, 184, 218, 0.6);
+        background-color: var(--background-color-info-hover);
     }
 
     .list-group-item-warning {
-        background-color: rgba(248, 148, 6, 0.6);
+        background-color: var(--background-color-warning);
     }
 
     a.list-group-item-warning:hover,
     button.list-group-item-warning:hover,
     a.list-group-item-warning:focus,
     button.list-group-item-warning:focus {
-        background-color: rgba(223, 133, 5, 0.6);
+        background-color: var(--background-color-warning-hover);
     }
 
     .list-group-item-danger {
-        background-color: rgba(238, 95, 91, 0.6);
+        background-color: var(--background-color-danger);
     }
 
     a.list-group-item-danger:hover,
     button.list-group-item-danger:hover,
     a.list-group-item-danger:focus,
     button.list-group-item-danger:focus {
-        background-color: rgba(236, 72, 68, 0.6);
+        background-color: var(--background-color-danger-hover);
     }
 
     .valign-middle,
@@ -493,7 +491,8 @@
     }
 
     .alliance-auth-background {
-        background-color: rgba(39, 43, 48, 0.95);
+        backdrop-filter: var(--backdrop-filter-default);
+        background-color: var(--background-color-default-transparency);
         bottom: 0;
         margin: 0;
         position: fixed;
@@ -503,7 +502,6 @@
     }
 
     .alliance-auth-content {
-        margin-bottom: 2rem;
         position: relative;
     }
 
@@ -539,10 +537,6 @@
 
     .auth-side-navbar-collapse {
         padding-left: 0;
-    }
-
-    #site-body-wrapper {
-        margin-right: 0;
     }
 
     .breadcrumb {
@@ -621,39 +615,39 @@
     }
 
     .label-success {
-        background-color: rgba(98, 196, 98, 0.6);
+        background-color: var(--background-color-success);
     }
 
     .label-success[href]:hover,
     .label-success[href]:focus {
-        background-color: rgba(66, 177, 66, 0.6);
+        background-color: var(--background-color-success-hover);
     }
 
     .label-info {
-        background-color: rgba(91, 192, 222, 0.6);
+        background-color: var(--background-color-info);
     }
 
     .label-info[href]:hover,
     .label-info[href]:focus {
-        background-color: rgba(49, 176, 213, 0.6);
+        background-color: var(--background-color-info-hover);
     }
 
     .label-warning {
-        background-color: rgba(248, 148, 6, 0.6);
+        background-color: var(--background-color-warning);
     }
 
     .label-warning[href]:hover,
     .label-warning[href]:focus {
-        background-color: rgba(198, 118, 5, 0.6);
+        background-color: var(--background-color-warning-hover);
     }
 
     .label-danger {
-        background-color: rgba(238, 95, 91, 0.6);
+        background-color: var(--background-color-danger);
     }
 
     .label-danger[href]:hover,
     .label-danger[href]:focus {
-        background-color: rgba(233, 50, 45, 0.6);
+        background-color: var(--background-color-danger-hover);
     }
 
     .label-tnnt-default {
@@ -671,11 +665,11 @@
 ------------------------------------------------------------------------------------- */
 @media all {
     .alert-success {
-        background-color: rgba(98, 196, 98, 0.5);
+        background-color: var(--background-color-success);
     }
 
     .alert-success hr {
-        border-top-color: rgb(85, 177, 66);
+        border-top-color: var(--border-color-success);
     }
 
     .alert-success .alert-link {
@@ -683,11 +677,11 @@
     }
 
     .alert-info {
-        background-color: rgba(91, 192, 222, 0.5);
+        background-color: var(--background-color-info);
     }
 
     .alert-info hr {
-        border-top-color: rgb(42, 199, 210);
+        border-top-color: var(--border-color-info);
     }
 
     .alert-info .alert-link {
@@ -695,11 +689,11 @@
     }
 
     .alert-warning {
-        background-color: rgba(248, 148, 6, 0.5);
+        background-color: var(--background-color-warning);
     }
 
     .alert-warning hr {
-        border-top-color: rgb(208, 90, 5);
+        border-top-color: var(--border-color-warning);
     }
 
     .alert-warning .alert-link {
@@ -707,11 +701,11 @@
     }
 
     .alert-danger {
-        background-color: rgba(238, 95, 91, 0.5);
+        background-color: var(--background-color-danger);
     }
 
     .alert-danger hr {
-        border-top-color: rgb(234, 54, 79);
+        border-top-color: var(--border-color-danger);
     }
 
     .alert-danger .alert-link {
@@ -727,19 +721,19 @@
     }
 
     .progress-bar-success {
-        background-color: rgba(98, 196, 98, 0.5);
+        background-color: var(--background-color-success);
     }
 
     .progress-bar-info {
-        background-color: rgba(91, 192, 222, 0.5);
+        background-color: var(--background-color-info);
     }
 
     .progress-bar-warning {
-        background-color: rgba(248, 148, 6, 0.5);
+        background-color: var(--background-color-warning);
     }
 
     .progress-bar-danger {
-        background-color: rgba(238, 95, 91, 0.5);
+        background-color: var(--background-color-danger);
     }
 }
 
@@ -747,7 +741,7 @@
 ------------------------------------------------------------------------------------- */
 @media all {
     .panel {
-        background-color: rgba(200, 200, 200, 0.2);
+        background-color: var(--background-panel-default);
         border: none;
     }
 
@@ -758,22 +752,16 @@
     .panel-title, .modal-title {
         color: inherit;
         display: block;
-        /*font-family: Roboto, "Helvetica Neue", sans-serif;*/
-        font-family: Georgia, Times, serif;
+        font-family: var(--font-family-panel-title);
         font-size: 1rem;
-        /*line-height: 1.1;*/
         font-weight: 700;
         margin-bottom: 0.25rem;
         margin-top: 0.25rem;
         text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
     }
 
-    /*.panel-body {*/
-    /*    min-height: 100px;*/
-    /*}*/
-
     .panel-default > .panel-heading {
-        background-color: rgba(62, 68, 76, 0.6);
+        background-color: var(--background-panel-header-default);
     }
 
     .panel-default > .panel-heading .badge {
@@ -789,7 +777,7 @@
     }
 
     .panel-success > .panel-heading {
-        background-color: rgba(98, 196, 98, 0.6);
+        background-color: var(--background-color-success);
     }
 
     .panel-success > .panel-heading .badge {
@@ -801,7 +789,7 @@
     }
 
     .panel-info > .panel-heading {
-        background-color: rgba(91, 192, 222, 0.6);
+        background-color: var(--background-color-info);
     }
 
     .panel-info > .panel-heading .badge {
@@ -809,7 +797,7 @@
     }
 
     .panel-warning > .panel-heading {
-        background-color: rgba(248, 148, 6, 0.6);
+        background-color: var(--background-color-warning);
     }
 
     .panel-warning > .panel-heading .badge {
@@ -817,7 +805,7 @@
     }
 
     .panel-danger > .panel-heading {
-        background-color: rgba(238, 95, 91, 0.6);
+        background-color: var(--background-color-danger);
     }
 
     .panel-danger > .panel-heading .badge {
@@ -834,7 +822,7 @@
 
     /* style group headers within a table */
     .table-striped > tbody > tr.tr-group, .tr-group {
-        background-color: rgb(62, 68, 76);
+        background-color: var(--background-color-navigation-default-hover);
         font-weight: bold;
     }
 
@@ -848,7 +836,7 @@
 @media all {
     .nav-pills > li > a.active,
     .nav-pills > li > a:hover {
-        background-color: rgb(62, 68, 76);
+        background-color: var(--background-color-navigation-default-hover);
         color: rgb(255, 255, 255);
     }
 }
@@ -921,7 +909,9 @@
 ------------------------------------------------------------------------------------- */
 @media all and (min-width: 768px) {
     .site-body-wrapper {
+        display: flex;
         margin-left: -15px;
+        padding-bottom: 2rem;
     }
 }
 
@@ -939,10 +929,12 @@
 
     .auth-side-navbar .nav-pills > li > a.active,
     .auth-side-navbar .nav-pills > li > a:hover {
-        background-color: rgb(62, 68, 76);
+        background-color: var(--background-color-navigation-default-hover);
     }
 
     .navbar-static-top {
+        backdrop-filter: var(--backdrop-filter-default);
+        background-color: var(--background-color-light-transparency);
         position: fixed;
         top: 0;
         width: 100%;

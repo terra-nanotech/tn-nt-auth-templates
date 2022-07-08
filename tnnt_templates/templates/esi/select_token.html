@@ -8,12 +8,16 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>{% translate 'Character Selection' %}</title>
+        {% include 'allianceauth/icons.html' %}
 
+        <title>{% translate 'Character Selection' %} » {{ SITE_NAME }}</title>
+
+        <link rel="stylesheet" href="{% tnnt_static 'tnnt_templates/css/terra-nanotech-defaults.min.css' %}" type="text/css">
         <link rel="stylesheet" id="select-esi-token" href="{% static 'tnnt_templates/css/select-esi-token.min.css' %}" type="text/css" media="all">
     </head>
 
     <body class="bg-dark">
+        <div class="alliance-auth-background"></div>
         <!-- Requested Scopes -->
         <div class="container">
             <div class="container-inner">
@@ -78,7 +82,7 @@
                                         </div>
 
                                         <div class="card-footer">
-                                            <button class="btn btn-select-character" type="submit" title="{% translate 'Select Character' %} {{ token.character_name }}" formmethod="post">{% translate 'Select' %}</button>
+                                            <button class="btn btn-primary btn-xs btn-select-character" type="submit" title="{% translate 'Select Character' %} {{ token.character_name }}" formmethod="post">{% translate 'Select' %}</button>
                                         </div>
                                     </div>
                                 </form>

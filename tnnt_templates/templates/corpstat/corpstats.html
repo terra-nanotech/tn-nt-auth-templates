@@ -380,8 +380,8 @@
 
 {% block extra_javascript %}
     {% include 'bundles/datatables-js.html' %}
+    {% include 'bundles/filterdropdown-js.html' %}
 
-    <script type="application/javascript" src="{% static 'js/filterDropDown/filterDropDown.min.js' %}"></script>
     <script type="application/javascript">
         $(document).ready(function(){
             let service_cols = []

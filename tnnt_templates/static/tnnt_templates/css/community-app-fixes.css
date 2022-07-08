@@ -25,6 +25,14 @@
     }
 }
 
+/* App: ckEditor
+------------------------------------------------------------------------------------- */
+@media all {
+    .cke_wysiwyg_frame, .cke_wysiwyg_div, .cke_inner {
+        background: transparent !important;
+    }
+}
+
 /* App: Fittings
 ------------------------------------------------------------------------------------- */
 @media all {
@@ -45,7 +53,7 @@
 @media all {
     .template-light-mode .aa-blueprints .table-striped > tbody > tr.tr-group,
     .template-light-mode .aa-blueprints .tr-group {
-        background-color: rgb(62, 68, 76) !important;
+        background-color: var(--background-color-navigation-default-hover) !important;
         font-weight: bold;
     }
 }
@@ -62,18 +70,18 @@
     .template-light-mode .aa-memberaudit .sidebar_character.active > a,
     .template-dark-mode .aa-memberaudit .sidebar_character:hover > a,
     .template-dark-mode .aa-memberaudit .sidebar_character.active > a {
-        background-color: rgb(62, 68, 76);
+        background-color: var(--background-color-navigation-default-hover);
     }
 
     .template-light-mode .aa-memberaudit .nav-tabs > li.active > a,
     .template-dark-mode .aa-memberaudit .nav-tabs > li.active > a {
-        background-color: rgb(62, 68, 76) !important;
+        background-color: var(--background-color-navigation-default-hover) !important;
         color: rgb(255, 255, 255) !important;
     }
 
     .template-light-mode .aa-memberaudit .table > tbody > .table-group > td,
     .template-light-mode .aa-memberaudit .table > tbody > .table-group > td {
-        background-color: rgb(62, 68, 76);
+        background-color: var(--background-color-navigation-default-hover);
         color: rgb(255, 255, 255);
         font-weight: bold;
     }
@@ -128,7 +136,7 @@
 ------------------------------------------------------------------------------------- */
 @media all {
     .template-light-mode .nav-tabs > li.active > a {
-        background-color: rgb(62, 68, 76) !important;
+        background-color: var(--background-color-navigation-default-hover) !important;
         color: rgb(255, 255, 255) !important;
     }
 }
@@ -159,7 +167,7 @@
     }
 
     .aa-bulletin-board .SumoSelect > .CaptionCont > span.placeholder {
-        color: rgb(62, 68, 76);
+        color: var(--background-color-navigation-default-hover);
     }
 }
 
@@ -175,7 +183,7 @@
     }
 
     .aa-forum .boards-sortable > li {
-        background-color: rgba(62, 68, 76, 0.6);
+        background-color: var(--background-panel-header-default);
     }
 
     .aa-forum .panel-aa-forum-topic-list {
@@ -226,7 +234,7 @@
     }
 
     .aa-forum .SumoSelect > .CaptionCont > span.placeholder {
-        color: rgb(62, 68, 76);
+        color: var(--background-color-navigation-default-hover);
     }
 
     .aa-forum .aa-forum-search-results-total-number {

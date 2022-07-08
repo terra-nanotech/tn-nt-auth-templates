@@ -8,6 +8,28 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [In Development] - Unreleased
 
+### Fixed
+
+- "Pending" button on the groups page
+- Use AA's bundled version of `filterDropDown.js`
+- Tests and guaranteed compatibility with AA below v3.0.0
+
+### Added
+
+- Blur effect to the fixed top navigation bar
+- CSS variables
+- Background blur instead of transparency
+- Missing Favicons
+
+### Removed
+
+- Unused template
+
+### Changed
+
+- Minimum requirement
+  - Alliance Auth >= 3.0.0b2
+
 
 ## [2.5.4] - 2022-05-12
 

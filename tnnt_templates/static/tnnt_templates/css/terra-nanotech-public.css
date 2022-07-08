@@ -4,7 +4,7 @@
     }
 
     body {
-        background: url('https://web.ccpgamescdn.com/aws/eveonline/sso/background.jpg') no-repeat center center fixed;
+        background: var(--background-body-default);
         -moz-background-size: cover;
         -o-background-size: cover;
         -webkit-background-size: cover;
@@ -13,7 +13,8 @@
     }
 
     .auth-login-box {
-        background: rgba(48, 48, 48, 0.75);
+        backdrop-filter: var(--backdrop-filter-default);
+        background-color: var(--background-color-light-transparency);
         bottom: 0;
         margin: 0;
         position: absolute;
