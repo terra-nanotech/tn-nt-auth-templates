@@ -58,7 +58,7 @@
 {% endblock extra_css %}
 
 {% block extra_javascript %}
-    <script type="application/javascript" src="{% static 'structuretimers/vendor/select2-4.1.0-beta.1/select2.min.js' %}"></script>
+    <script src="{% static 'structuretimers/vendor/select2-4.1.0-beta.1/select2.min.js' %}"></script>
     {% include "bundles/jquery-datetimepicker-js.html" %}
-    <script type="text/javascript" src="{% static 'structuretimers/js/timer_edit.js' %}"></script>
+    <script src="{% static 'structuretimers/js/timer_edit.js' %}"></script>
 {% endblock extra_javascript %}

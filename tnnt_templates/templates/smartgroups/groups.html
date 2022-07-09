@@ -109,7 +109,7 @@
 {% block extra_javascript %}
     {% include 'bundles/datatables-js.html' %}
 
-    <script type="application/javascript">
+    <script>
         $(document).ready(function () {
             $('.check-user-button').on('click', function () {
                 let url = "{% url 'securegroups:request_check' 123456 %}";

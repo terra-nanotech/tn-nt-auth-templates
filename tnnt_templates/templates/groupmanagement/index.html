@@ -159,7 +159,7 @@
 {% block extra_javascript %}
     {% include 'bundles/datatables-js.html' %}
 
-    <script type="application/javascript">
+    <script>
         $(document).ready(function() {
             {% if acceptrequests %}
                 $('#group-accept-requests').DataTable({

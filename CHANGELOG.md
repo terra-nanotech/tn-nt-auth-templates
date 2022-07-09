@@ -24,6 +24,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - Unused template
 - Tests and guaranteed compatibility with AA below v3.0.0
+- `type="application/javascript"` from script-tags, as it is deprecated
 
 ### Changed
 

@@ -96,7 +96,7 @@
 {% block extra_javascript %}
     {% include 'bundles/datatables-js.html' %}
 
-    <script type="application/javascript">
+    <script>
         $(document).ready(function() {
             {% if group.user_set %}
                 $('#tab_group_members').DataTable({
