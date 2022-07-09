@@ -71,12 +71,12 @@
 
         {% include 'bundles/bootstrap-js.html' %}
         {% include 'bundles/moment-js.html' with locale=True %}
-        <script src="{% static 'js/eve-time.js' %}"></script>
+        {% include 'bundles/evetime-js.html' %}
 
         <script src="{% static 'tnnt_templates/javascript/terra-nanotech.min.js' %}"></script>
 
-        <script src="{% static 'js/timers.js' %}"></script>
-        <script type="text/javascript">
+        {% include 'bundles/timers-js.html' %}
+        <script>
             let locale = "{{ LANGUAGE_CODE }}";
             let timers = [
                 {

@@ -11,7 +11,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 
 - "Pending" button on the groups page
-- Use AA's bundled version of `filterDropDown.js`
+- Use AA's bundled versions of JavaScripts it provides
 
 ### Added
 

@@ -131,8 +131,7 @@
 {% block extra_javascript %}
     {% include 'bundles/clipboard-js.html' %}
     {% include 'bundles/moment-js.html' with locale=True %}
-
-    <script src="{% static 'js/timers.js' %}"></script>
+    {% include 'bundles/timers-js.html' %}
 
     <script>
         let clipboard = new ClipboardJS('#clipboard-new');
@@ -142,7 +141,7 @@
         {% endfor %}
     </script>
 
-    <script type="text/javascript">
+    <script>
         let locale = '{{ LANGUAGE_CODE }}';
 
         let timers = [
