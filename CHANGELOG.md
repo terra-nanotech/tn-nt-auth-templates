@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [In Development] - Unreleased
 
+### Fixed
+
+- Left margin for AA Forum in mobile view
+
 
 ## [2.6.0-beta.1] - 2022-07-16
 
