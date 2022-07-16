@@ -8,6 +8,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [In Development] - Unreleased
 
+
+## [2.6.0-beta.1] - 2022-07-16
+
+**This release is for Alliance Auth v3.0.0b3 or higher. Do not try and attempt to
+run it with any version prior!**
+
 ### Fixed
 
 - "Pending" button on the groups page
@@ -25,12 +31,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Unused template
 - Tests and guaranteed compatibility with AA below v3.0.0
 - `type="application/javascript"` from script-tags, as it is deprecated
-- `type="text/css"` from script-tags, as it is deprecated
+- `type="text/css"` from style-tags, as it is deprecated
 
 ### Changed
 
 - Minimum requirement
-  - Alliance Auth >= 3.0.0b2
+  - Alliance Auth >= 3.0.0b3
 
 
 ## [2.5.4] - 2022-05-12
