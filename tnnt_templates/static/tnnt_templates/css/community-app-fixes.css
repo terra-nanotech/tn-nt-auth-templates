@@ -99,6 +99,10 @@
 /* App: AA Sovtimer
 ------------------------------------------------------------------------------------- */
 @media all {
+    .aa-sovtimer {
+        margin-left: 0;
+    }
+
     .aa-sovtimer .table > tbody > tr > td {
         vertical-align: middle;
     }

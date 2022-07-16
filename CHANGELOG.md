@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Left margin for AA Forum in mobile view
 - Left margin for AFAT in mobile view
 - Left margin for AA SRP in mobile view
+- Left margin for AA Sovereignty Timer in mobile view
 
 
 ## [2.6.0-beta.1] - 2022-07-16
