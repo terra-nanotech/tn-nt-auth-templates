@@ -61,6 +61,10 @@
 /* App: AA Memberaudit
 ------------------------------------------------------------------------------------- */
 @media all {
+    .aa-memberaudit {
+        margin-left: 0;
+    }
+
     .template-light-mode .aa-memberaudit .sidebar_character > a,
     .template-dark-mode .aa-memberaudit .sidebar_character > a {
         color: rgb(255, 255, 255);
