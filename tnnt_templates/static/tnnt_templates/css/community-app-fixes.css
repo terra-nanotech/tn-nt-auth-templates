@@ -58,7 +58,7 @@
     }
 }
 
-/* App :: AA Memberaudit
+/* App: AA Memberaudit
 ------------------------------------------------------------------------------------- */
 @media all {
     .template-light-mode .aa-memberaudit .sidebar_character > a,
@@ -154,6 +154,14 @@
 @media all {
     .aa-fleetpings-pingtext {
         top: 3.6875rem;
+    }
+}
+
+/* App: Another Fleet Activity Tracker (AFAT)
+------------------------------------------------------------------------------------- */
+@media all {
+    .allianceauth-afat {
+        margin-left: 0;
     }
 }
 
