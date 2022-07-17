@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [In Development] - Unreleased
 
+### Added
+
+- Hide placeholders in form elements when they are being focused
+
 
 ## [2.6.0-beta.2] - 2022-07-16
 
