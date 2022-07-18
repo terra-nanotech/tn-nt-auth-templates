@@ -8,6 +8,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [In Development] - Unreleased
 
+### Fixed
+
+- Templates for `mumbletemps`
+- Use our own eve-time js in `mumbletemps` public-facing template
+
 ### Added
 
 - Hide placeholders in form elements when they are being focused

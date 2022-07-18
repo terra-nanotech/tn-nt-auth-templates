@@ -14,7 +14,7 @@
 
         {% include 'allianceauth/icons.html' %}
 
-        <title>{% block title %}Mumble Temporary Access - Alliance Auth{% endblock title %}</title>
+        <title>{% block title %}{% translate "Mumble Temporary Access" %}{% endblock title %} - {{ SITE_NAME }}</title>
 
         <link rel="stylesheet" href="{% static 'tnnt_templates/css/theme/terra-nanotech/v3/css/bootstrap.min.css' %}">
         {% include 'bundles/fontawesome.html' %}
@@ -71,7 +71,6 @@
 
         {% include 'bundles/bootstrap-js.html' %}
         {% include 'bundles/moment-js.html' with locale=True %}
-        {% include 'bundles/evetime-js.html' %}
 
         <script src="{% static 'tnnt_templates/javascript/terra-nanotech.min.js' %}"></script>
 
