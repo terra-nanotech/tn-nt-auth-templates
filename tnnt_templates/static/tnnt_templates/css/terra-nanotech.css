@@ -57,9 +57,9 @@
     .navbar {
         background-image: none;
         background-repeat: no-repeat;
-        border: 1px solid rgba(0, 0, 0, 0.6);
+        border: 1px solid rgba(0 0 0 / 0.6);
         filter: none;
-        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+        text-shadow: 1px 1px 1px rgba(0 0 0 / 0.3);
     }
 
     .navbar-nav > li > a {
@@ -84,24 +84,24 @@
     }
 
     .navbar-default {
-        background-color: rgb(58, 63, 68);
-        border-color: rgb(43, 46, 50);
+        background-color: rgb(58 63 68);
+        border-color: rgb(43 46 50);
     }
 
     .nav-pills > li > a {
         background-image: none;
         background-repeat: no-repeat;
         border: none;
-        color: rgb(255, 255, 255);
+        color: var(--white);
         -webkit-filter: none;
         filter: none;
     }
 
     .nav-pills > li > a:hover {
-        background: rgb(236, 240, 241);
+        background: rgb(236 240 241);
         background-image: none;
         border: none;
-        color: rgb(54, 54, 54);
+        color: rgb(54 54 54);
         filter: none;
     }
 
@@ -126,7 +126,7 @@
     .panel-heading .nav-pills > li.active > a,
     .panel-heading .nav-pills > li.active > a:focus,
     .panel-heading .nav-pills > li.active > a:hover {
-        background-color: rgba(200, 200, 200, 0.2);
+        background-color: rgba(200 200 200 / 0.2);
         background-image: none;
         background-repeat: no-repeat;
         border: none;
@@ -144,16 +144,16 @@
 
     .pagination > li > a,
     .pagination > li > span {
-        background-image: linear-gradient(rgb(72, 78, 85), rgb(58, 63, 68) 60%, rgb(49, 53, 57));
+        background-image: linear-gradient(rgb(72 78 85), rgb(58 63 68) 60%, rgb(49 53 57));
         background-repeat: no-repeat;
         -webkit-filter: none;
         filter: none;
-        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+        text-shadow: 1px 1px 1px rgba(0 0 0 / 0.3);
     }
 
     .pagination > li > a:hover,
     .pagination > li > span:hover {
-        background-image: linear-gradient(rgb(2, 2, 2), rgb(16, 17, 18) 40%, rgb(20, 22, 24));
+        background-image: linear-gradient(rgb(2 2 2), rgb(16 17 18) 40%, rgb(20 22 24));
         background-repeat: no-repeat;
         -webkit-filter: none;
         filter: none;
@@ -161,7 +161,7 @@
 
     .pagination > li.active > a,
     .pagination > li.active > span {
-        background-image: linear-gradient(rgb(2, 2, 2), rgb(16, 17, 18) 40%, rgb(20, 22, 24));
+        background-image: linear-gradient(rgb(2 2 2), rgb(16 17 18) 40%, rgb(20 22 24));
         background-repeat: no-repeat;
         -webkit-filter: none;
         filter: none;
@@ -172,22 +172,22 @@
     .pagination > li.disabled > span,
     .pagination > li.disabled > span:hover {
         background-color: transparent;
-        background-image: linear-gradient(rgb(72, 78, 85), rgb(58, 63, 68) 60%, rgb(49, 53, 57));
+        background-image: linear-gradient(rgb(72 78 85), rgb(58 63 68) 60%, rgb(49 53 57));
         background-repeat: no-repeat;
         -webkit-filter: none;
         filter: none;
     }
 
     .pager > li > a {
-        background-image: linear-gradient(rgb(72, 78, 85), rgb(58, 63, 68) 60%, rgb(49, 53, 57));
+        background-image: linear-gradient(rgb(72 78 85), rgb(58 63 68) 60%, rgb(49 53 57));
         background-repeat: no-repeat;
         -webkit-filter: none;
         filter: none;
-        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+        text-shadow: 1px 1px 1px rgba(0 0 0 / 0.3);
     }
 
     .pager > li > a:hover {
-        background-image: linear-gradient(rgb(2, 2, 2), rgb(16, 17, 18) 40%, rgb(20, 22, 24));
+        background-image: linear-gradient(rgb(2 2 2), rgb(16 17 18) 40%, rgb(20 22 24));
         background-repeat: no-repeat;
         -webkit-filter: none;
         filter: none;
@@ -196,7 +196,7 @@
     .pager > li.disabled > a,
     .pager > li.disabled > a:hover {
         background-color: transparent;
-        background-image: linear-gradient(rgb(72, 78, 85), rgb(58, 63, 68) 60%, rgb(49, 53, 57));
+        background-image: linear-gradient(rgb(72 78 85), rgb(58 63 68) 60%, rgb(49 53 57));
         background-repeat: no-repeat;
         -webkit-filter: none;
         filter: none;
@@ -216,15 +216,15 @@
     }
 
     .table .table {
-        background-color: rgba(39, 43, 48, 0.6);
+        background-color: rgba(39 43 48 / 0.6);
     }
 
     .table-striped > tbody > tr:nth-of-type(odd) {
-        background-color: rgba(53, 58, 65, 0.75);
+        background-color: rgba(53 58 65 / 0.75);
     }
 
     .table-hover > tbody > tr:hover {
-        background-color: rgba(73, 81, 90, 0.8);
+        background-color: rgba(73 81 90 / 0.8);
     }
 
     .table > thead > tr > td.active,
@@ -239,7 +239,7 @@
     .table > thead > tr.active > th,
     .table > tbody > tr.active > th,
     .table > tfoot > tr.active > th {
-        background-color: rgba(73, 81, 90, 0.8);
+        background-color: rgba(73 81 90 / 0.8);
     }
 
     .table-hover > tbody > tr > td.active:hover,
@@ -247,7 +247,7 @@
     .table-hover > tbody > tr.active:hover > td,
     .table-hover > tbody > tr:hover > .active,
     .table-hover > tbody > tr.active:hover > th {
-        background-color: rgba(62, 68, 76, 0.8);
+        background-color: rgba(62 68 76 / 0.8);
     }
 
     .table > thead > tr > td.success,
@@ -349,7 +349,7 @@
     }
 
     .list-group-item {
-        background-color: rgba(50, 56, 62, 0.6);
+        background-color: rgba(50 56 62 / 0.6);
     }
 
     .list-group-item-success {
@@ -414,7 +414,7 @@
     }
 
     .well {
-        background-color: rgba(28, 30, 34, 0.4);
+        background-color: rgba(28 30 34 / 0.4);
     }
 
     blockquote {
@@ -426,9 +426,9 @@
 ------------------------------------------------------------------------------------- */
 @media all {
     .nav-item-eve-time .eve-time-wrapper {
-        border-left: 1px solid rgba(255, 255, 255, 0.1);
-        border-right: 1px solid rgba(0, 0, 0, 0.2);
-        color: rgb(200, 200, 200);
+        border-left: 1px solid rgba(255 255 255 / 0.1);
+        border-right: 1px solid rgba(0 0 0 / 0.2);
+        color: rgb(200 200 200);
         line-height: 20px;
         padding: 10px;
         /*padding-bottom: 10px;*/
@@ -484,8 +484,8 @@
 ------------------------------------------------------------------------------------- */
 @media all {
     #wrapper {
-        background-color: rgba(48, 48, 48, 0.75);
-        color: rgb(255, 2552, 255);
+        background-color: rgba(48 48 48 / 0.75);
+        color: var(--white);
         padding: 0;
         width: 100%;
     }
@@ -520,11 +520,11 @@
     }
 
     .gray-icon-color .fa {
-        color: rgb(80, 80, 80);
+        color: rgb(80 80 80);
     }
 
     .notification-bell-color {
-        color: rgb(168, 143, 30);
+        color: rgb(168 143 30);
     }
 
     .auth-navbar-top .navbar-brand {
@@ -540,12 +540,12 @@
     }
 
     .breadcrumb {
-        background-image: linear-gradient(rgb(72, 78, 85), rgb(58, 63, 68) 60%, rgb(49, 53, 57));
+        background-image: linear-gradient(rgb(72 78 85), rgb(58 63 68) 60%, rgb(49 53 57));
         background-repeat: no-repeat;
-        border: 1px solid rgba(0, 0, 0, 0.6);
+        border: 1px solid rgba(0 0 0 / 0.6);
         -webkit-filter: none;
         filter: none;
-        text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+        text-shadow: 1px 1px 1px rgba(0 0 0 / 0.3);
     }
 
     /* Horizontal list group */
@@ -568,12 +568,12 @@
 ------------------------------------------------------------------------------------- */
 @media all {
     .auth-side-navbar {
-        background-color: rgb(58, 63, 68);
+        background-color: rgb(58 63 68);
     }
 
     .auth-side-navbar .nav-pills > li > a.active,
     .auth-side-navbar .nav-pills > li > a:hover {
-        background-color: rgb(39, 43, 46);
+        background-color: rgb(39 43 46);
     }
 
     .auth-side-navbar .nav-stacked > li + li:last-child {
@@ -597,21 +597,21 @@
     }
 
     .label-default {
-        background-color: rgba(58, 63, 68, 0.6);
+        background-color: rgba(58 63 68 / 0.6);
     }
 
     .label-default[href]:hover,
     .label-default[href]:focus {
-        background-color: rgba(35, 38, 40, 0.6);
+        background-color: rgba(35 38 40 / 0.6);
     }
 
     .label-primary {
-        background-color: rgba(122, 130, 136, 0.6);
+        background-color: rgba(122 130 136 / 0.6);
     }
 
     .label-primary[href]:hover,
     .label-primary[href]:focus {
-        background-color: rgba(98, 104, 109, 0.6);
+        background-color: rgba(98 104 109 / 0.6);
     }
 
     .label-success {
@@ -651,9 +651,9 @@
     }
 
     .label-tnnt-default {
-        background-color: rgb(192, 192, 192);
-        border-left: 5px solid rgb(0, 0, 0);
-        color: rgb(54, 54, 54);
+        background-color: rgb(192 192 192);
+        border-left: 5px solid var(--black);
+        color: rgb(54 54 54);
         display: inline-block;
         font-size: 1rem;
         font-weight: normal;
@@ -673,7 +673,7 @@
     }
 
     .alert-success .alert-link {
-        color: rgb(230, 230, 230);
+        color: rgb(230 230 230);
     }
 
     .alert-info {
@@ -685,7 +685,7 @@
     }
 
     .alert-info .alert-link {
-        color: rgb(230, 230, 230);
+        color: rgb(230 230 230);
     }
 
     .alert-warning {
@@ -697,7 +697,7 @@
     }
 
     .alert-warning .alert-link {
-        color: rgb(230, 230, 230);
+        color: rgb(230 230 230);
     }
 
     .alert-danger {
@@ -709,7 +709,7 @@
     }
 
     .alert-danger .alert-link {
-        color: rgb(230, 230, 230);
+        color: rgb(230 230 230);
     }
 }
 
@@ -717,7 +717,7 @@
 ------------------------------------------------------------------------------------- */
 @media all {
     .progress {
-        background-color: rgba(28, 30, 34, 0.5);
+        background-color: rgba(28 30 34 / 0.5);
     }
 
     .progress-bar-success {
@@ -746,7 +746,7 @@
     }
 
     .panel-primary {
-        border-color: rgba(200, 200, 200, 0.6);
+        border-color: rgba(200 200 200 / 0.6);
     }
 
     .panel-title, .modal-title {
@@ -757,7 +757,7 @@
         font-weight: 700;
         margin-bottom: 0.25rem;
         margin-top: 0.25rem;
-        text-shadow: -1px -1px 0 rgba(0, 0, 0, 0.3);
+        text-shadow: -1px -1px 0 rgba(0 0 0 / 0.3);
     }
 
     .panel-default > .panel-heading {
@@ -765,15 +765,15 @@
     }
 
     .panel-default > .panel-heading .badge {
-        background-color: rgba(200, 200, 200, 0.75);
+        background-color: rgba(200 200 200 / 0.75);
     }
 
     .panel-primary > .panel-heading {
-        background-color: rgba(122, 130, 136, 0.6);
+        background-color: rgba(122 130 136 / 0.6);
     }
 
     .panel-primary > .panel-heading .badge {
-        background-color: rgba(255, 255, 255, 0.75);
+        background-color: rgba(255 255 255 / 0.75);
     }
 
     .panel-success > .panel-heading {
@@ -781,11 +781,11 @@
     }
 
     .panel-success > .panel-heading .badge {
-        background-color: rgba(255, 255, 255, 0.75);
+        background-color: rgba(255 255 255 / 0.75);
     }
 
     .panel-info {
-        border-color: rgba(0, 0, 0, 0.6);
+        border-color: rgba(0 0 0 / 0.6);
     }
 
     .panel-info > .panel-heading {
@@ -793,7 +793,7 @@
     }
 
     .panel-info > .panel-heading .badge {
-        background-color: rgba(255, 255, 255, 0.75);
+        background-color: rgba(255 255 255 / 0.75);
     }
 
     .panel-warning > .panel-heading {
@@ -801,7 +801,7 @@
     }
 
     .panel-warning > .panel-heading .badge {
-        background-color: rgba(255, 255, 255, 0.75);
+        background-color: rgba(255 255 255 / 0.75);
     }
 
     .panel-danger > .panel-heading {
@@ -809,7 +809,7 @@
     }
 
     .panel-danger > .panel-heading .badge {
-        background-color: rgba(255, 255, 255, 0.75);
+        background-color: rgba(255 255 255 / 0.75);
     }
 }
 
@@ -817,7 +817,7 @@
 ------------------------------------------------------------------------------------- */
 @media all {
     .table-striped > tbody > tr:nth-of-type(odd) {
-        background-color: rgba(62, 68, 76, 0.5);
+        background-color: rgba(62 68 76 / 0.5);
     }
 
     /* Style group headers within a table */
@@ -827,7 +827,7 @@
     }
 
     .table-hover > tbody > tr:nth-of-type(odd):hover {
-        background-color: rgba(73, 81, 90, 0.8);
+        background-color: rgba(73 81 90 / 0.8);
     }
 }
 
@@ -837,7 +837,7 @@
     .nav-pills > li > a.active,
     .nav-pills > li > a:hover {
         background-color: var(--background-color-navigation-default-hover);
-        color: rgb(255, 255, 255);
+        color: var(--white);
     }
 }
 
@@ -860,8 +860,8 @@
     .top-menu-bar-language-select form {
         border-bottom: 1px solid transparent;
         border-top: 1px solid transparent;
-        -webkit-box-shadow: inset 0 1px 0 rgb(255 255 255), 0 1px 0 rgb(255 255 255);
-        box-shadow: inset 0 1px 0 rgb(255 255 255), 0 1px 0 rgb(255 255 255);
+        -webkit-box-shadow: inset 0 1px 0 var(--white), 0 1px 0 var(--white);
+        box-shadow: inset 0 1px 0 var(--white), 0 1px 0 var(--white);
         margin-bottom: 7.5px;
         margin-left: 5px;
         margin-right: 5px;

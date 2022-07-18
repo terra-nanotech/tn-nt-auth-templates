@@ -22,7 +22,7 @@
     }
 
     .bg-dark {
-        background-color: rgb(52, 58, 64);
+        background-color: rgb(52 58 64);
     }
 
     .alliance-auth-background {
@@ -68,8 +68,8 @@
     }
 
     .card-header, .card-footer {
-        background-color: rgba(0, 0, 0, 0.03);
-        border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+        background-color: rgba(0 0 0 / 0.03);
+        border-bottom: 1px solid rgba(0 0 0 / 0.125);
         margin-bottom: 0;
         padding: 0.75rem 1.25rem;
         text-align: center;
@@ -92,7 +92,7 @@
 
     .card-footer {
         border-bottom: none;
-        border-top: 1px solid rgba(0, 0, 0, 0.125);
+        border-top: 1px solid rgba(0 0 0 / 0.125);
     }
 
     .cards_container {
@@ -129,11 +129,11 @@
     }
 
     .btn-select-character {
-        background-color: #7a8288;
-        background-image: linear-gradient(#8a9196, #7a8288 60%, #70787d);
-        border: 1px solid rgba(0, 0, 0, .6);
+        background-color: rgb(122 130 136);
+        background-image: linear-gradient(rgb(138 145 150), rgb(122 130 136) 60%, rgb(112 120 125));
+        border: 1px solid rgba(0 0 0 / 0.6);
         border-radius: 3px;
-        color: #ffffff;
+        color: var(--white);
         cursor: pointer;
         font-size: 12px;
         line-height: 1.5;
@@ -151,9 +151,9 @@
     }
 
     .label-requested-esi-scope {
-        background-color: rgb(44, 62, 80);
+        background-color: rgb(44 62 80);
         border-radius: 5px;
-        color: rgb(255, 255, 255);
+        color: var(--white);
         display: inline-block;
         font-size: 1rem;
         line-height: 1;

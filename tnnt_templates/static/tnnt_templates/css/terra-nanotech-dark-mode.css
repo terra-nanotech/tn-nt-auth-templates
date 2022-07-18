@@ -2,8 +2,8 @@
     * {
         background-color: var(--background-darkmode-color-default) !important;
         background-image: none !important;
-        border-color: rgba(78, 154, 6, 0.6) !important;
-        color: rgb(78, 154, 6) !important;
+        border-color: rgba(78 154 6 / 0.6) !important;
+        color: rgb(78 154 6) !important;
         font-family: monospace;
     }
 

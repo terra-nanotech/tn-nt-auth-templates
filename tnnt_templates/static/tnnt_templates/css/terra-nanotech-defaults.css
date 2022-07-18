@@ -65,7 +65,7 @@
 ------------------------------------------------------------------------------------- */
 :root {
     --background-color-default: rgb(39 43 48);
-    --background-darkmode-color-default: rgb(0, 0, 0);
+    --background-darkmode-color-default: rgb(0 0 0);
     --background-color-default-transparency: rgba(39 43 48 / 0.75);
     --background-color-light-transparency: rgba(58 63 68 / 0.5);
     --background-panel-default: rgba(200 200 200 / 0.2);
@@ -86,6 +86,9 @@
 
     --background-color-navigation-default-hover: rgb(62 68 76);
     --background-color-darkmode-navigation-default-active: rgba(78 154 6 / 0.4);
+
+    --white: rgb(255 255 255);
+    --black: rgb(0 0 0);
 
     --background-body-default: url('https://web-cdn.eveonline.com/aws/eveonline/sso/background.jpg') no-repeat center center fixed;
 

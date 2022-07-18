@@ -31,7 +31,7 @@
     .panel-transparent {
         background: transparent;
         border: none;
-        color: rgb(255, 255, 255);
+        color: var(--white);
     }
 
     #lang-select {
@@ -41,8 +41,8 @@
     }
 
     .sso-login-button {
-        color: rgb(173, 173, 173);
-        filter: drop-shadow(0 4px 5px rgba(0, 0, 0, 0.4));
+        color: rgb(173 173 173);
+        filter: drop-shadow(0 4px 5px rgba(0 0 0 / 0.4));
         height: 45px;
         margin-bottom: 15px;
         margin-top: 10px;
@@ -52,8 +52,8 @@
     }
 
     .sso-login-button:hover {
-        color: rgb(226, 138, 13);
-        filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.4));
+        color: rgb(226 138 13);
+        filter: drop-shadow(0 1px 3px rgba(0 0 0 / 0.4));
     }
 
     .sso-login-button > svg {

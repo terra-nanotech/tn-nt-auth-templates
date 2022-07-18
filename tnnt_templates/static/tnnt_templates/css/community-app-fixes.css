@@ -67,7 +67,7 @@
 
     .template-light-mode .aa-memberaudit .sidebar_character > a,
     .template-dark-mode .aa-memberaudit .sidebar_character > a {
-        color: rgb(255, 255, 255);
+        color: var(--white);
     }
 
     .template-light-mode .aa-memberaudit .sidebar_character:hover > a,
@@ -80,19 +80,19 @@
     .template-light-mode .aa-memberaudit .nav-tabs > li.active > a,
     .template-dark-mode .aa-memberaudit .nav-tabs > li.active > a {
         background-color: var(--background-color-navigation-default-hover) !important;
-        color: rgb(255, 255, 255) !important;
+        color: var(--white) !important;
     }
 
     .template-light-mode .aa-memberaudit .table > tbody > .table-group > td,
     .template-light-mode .aa-memberaudit .table > tbody > .table-group > td {
         background-color: var(--background-color-navigation-default-hover);
-        color: rgb(255, 255, 255);
+        color: var(--white);
         font-weight: bold;
     }
 
     .template-light-mode .aa-memberaudit .cards_container .card,
     .template-dark-mode .aa-memberaudit .cards_container .card {
-        background-color: rgba(100, 100, 100, 0.5);
+        background-color: rgba(100 100 100 / 0.5);
     }
 
     .aa-memberaudit .cards_container {
@@ -135,8 +135,8 @@
     }
 
     .aa-sovtimer .aa-sovtimer-timer-elapsed {
-        color: rgb(253, 126, 20);
-        text-shadow: 1px 1px 1px rgba(255, 0, 0, 0.3);
+        color: rgb(253 126 20);
+        text-shadow: 1px 1px 1px rgba(255 0 0 / 0.3);
     }
 }
 
@@ -145,7 +145,7 @@
 @media all {
     .template-light-mode .nav-tabs > li.active > a {
         background-color: var(--background-color-navigation-default-hover) !important;
-        color: rgb(255, 255, 255) !important;
+        color: var(--white) !important;
     }
 }
 
@@ -191,7 +191,7 @@
     /* SumoSelect
     --------------------------------------------------------------------------------- */
     .aa-bulletin-board .SumoSelect {
-        color: rgb(54, 54, 54);
+        color: rgb(54 54 54);
     }
 
     .aa-bulletin-board .SumoSelect > .CaptionCont > span.placeholder {
@@ -224,19 +224,19 @@
 
     .aa-forum .aa-forum-topic-row .aa-forum-topic:hover,
     .aa-forum .panel-aa-forum-category .aa-forum-board:hover {
-        background-color: rgba(73, 81, 90, 0.8);
+        background-color: rgba(73 81 90 / 0.8);
     }
 
     .aa-forum .aa-forum-topic-locked .aa-forum-topic:hover {
-        background-color: rgba(185, 199, 219, 0.25);
+        background-color: rgba(185 199 219 / 0.25);
     }
 
     .aa-forum .aa-forum-topic-sticky .aa-forum-topic:hover {
-        background-color: rgba(255, 220, 104, 0.25);
+        background-color: rgba(255 220 104 / 0.25);
     }
 
     .aa-forum .aa-forum-message-body {
-        border-top: 1px solid rgba(200, 200, 200, 0.25);
+        border-top: 1px solid rgba(200 200 200 / 0.25);
     }
 
     .aa-forum .label-aa-forum-topic-new-message {
@@ -262,7 +262,7 @@
     /* SumoSelect
     --------------------------------------------------------------------------------- */
     .aa-forum .SumoSelect {
-        color: rgb(54, 54, 54);
+        color: rgb(54 54 54);
     }
 
     .aa-forum .SumoSelect > .CaptionCont > span.placeholder {

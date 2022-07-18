@@ -17,6 +17,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - Hide placeholders in form elements when they are being focused
 
+### Changed
+
+- CSS color values modernized
+
 
 ## [2.6.0-beta.2] - 2022-07-16
 
