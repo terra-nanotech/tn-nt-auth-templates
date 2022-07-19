@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [In Development] - Unreleased
 
+
+## [2.6.0-beta.3] - 2022-07-19
+
 ### Fixed
 
 - Templates for `mumbletemps`
