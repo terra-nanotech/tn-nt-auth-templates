@@ -1,4 +1,4 @@
-{% load static %}
+{% load tnnt_template_tags %}
 {% load i18n %}
 {% load evelinks %}
 
@@ -13,7 +13,7 @@
         <title>{% translate 'Character Selection' %} » {{ SITE_NAME }}</title>
 
         <link rel="stylesheet" href="{% tnnt_static 'tnnt_templates/css/terra-nanotech-defaults.min.css' %}">
-        <link rel="stylesheet" id="select-esi-token" href="{% static 'tnnt_templates/css/select-esi-token.min.css' %}" media="all">
+        <link rel="stylesheet" href="{% tnnt_static 'tnnt_templates/css/select-esi-token.min.css' %}" id="select-esi-token" media="all">
     </head>
 
     <body class="bg-dark">
@@ -55,7 +55,7 @@
 
                                     <div class="card-footer">
                                         <button class="btn btn-new-character-sso" type="submit" name="go">
-                                            <img class="img-rounded" src="{% static 'tnnt_templates/images/eve-sso-login-black-small.png' %}" title="{% translate 'Add new character by logging in with EVE Online' %}" alt="{% translate 'Add Character' %}">
+                                            <img class="img-rounded" src="{% tnnt_static 'tnnt_templates/images/eve-sso-login-black-small.png' %}" title="{% translate 'Add new character by logging in with EVE Online' %}" alt="{% translate 'Add Character' %}">
                                         </button>
                                     </div>
                                 </div>
@@ -108,7 +108,7 @@
 
                                 <div class="card-footer">
                                     <button class="btn btn-new-character-sso" type="submit" name="go">
-                                        <img class="img-rounded" src="{% static 'tnnt_templates/images/eve-sso-login-black-small.png' %}" title="{% translate 'Add new character by logging in with EVE Online' %}" alt="{% translate 'Add Character' %}">
+                                        <img class="img-rounded" src="{% tnnt_static 'tnnt_templates/images/eve-sso-login-black-small.png' %}" title="{% translate 'Add new character by logging in with EVE Online' %}" alt="{% translate 'Add Character' %}">
                                     </button>
                                 </div>
                             </div>

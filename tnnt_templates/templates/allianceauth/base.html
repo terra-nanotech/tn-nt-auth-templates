@@ -1,7 +1,6 @@
 {% load tnnt_template_tags %}
 {% load static %}
 {% load i18n %}
-{% load navactive %}
 {% load auth_notifications %}
 <!DOCTYPE html>
 <html lang="en">
@@ -26,10 +25,10 @@
         <link rel="stylesheet" href="{% tnnt_static 'tnnt_templates/css/terra-nanotech.min.css' %}">
 
         {% block extra_css %}{% endblock extra_css %}
-        <link rel="stylesheet" href="{% static 'tnnt_templates/css/community-app-fixes.min.css' %}">
+        <link rel="stylesheet" href="{% tnnt_static 'tnnt_templates/css/community-app-fixes.min.css' %}">
 
         {% if NIGHT_MODE %}
-            <link rel="stylesheet" href="{% static 'tnnt_templates/css/terra-nanotech-dark-mode.min.css' %}">
+            <link rel="stylesheet" href="{% tnnt_static 'tnnt_templates/css/terra-nanotech-dark-mode.min.css' %}">
         {% endif %}
     </head>
 
@@ -59,7 +58,7 @@
         {% include 'bundles/jquery-visibility-js.html' %}
 
         <script>
-            let notificationUPdateSettings = {
+            const notificationUPdateSettings = {
                 notificationsListViewUrl: "{% url 'notifications:list' %}",
                 notificationsRefreshTime: "{% notifications_refresh_time %}",
                 userNotificationsCountViewUrl: "{% url 'notifications:user_notifications_count' request.user.pk %}"

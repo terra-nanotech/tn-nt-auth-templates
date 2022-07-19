@@ -1,5 +1,4 @@
 {% extends "allianceauth/base.html" %}
-{% load static %}
 {% load i18n %}
 {% load evelinks %}
 
@@ -38,7 +37,7 @@
                                     <tr>
                                         <td class="valign-middle">
                                             {% if member.main_char %}
-                                                <img src="{{ member.main_char|character_portrait_url:32 }}" class="img-rounded" style="margin-right: 0.25rem;">
+                                                <img src="{{ member.main_char|character_portrait_url:32 }}" class="img-rounded" style="margin-right: 0.25rem;" alt="{{ member.main_char.character_name }}">
 
                                                 <a href="{{ member.main_char|evewho_character_url }}" target="_blank">
                                                     {{ member.main_char.character_name }}

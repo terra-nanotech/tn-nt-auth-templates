@@ -1,6 +1,5 @@
 {% extends "allianceauth/base.html" %}
 {% load bootstrap %}
-{% load static %}
 {% load i18n %}
 
 {% block page_title %}{% translate "Fleet Formatter Tool" %}{% endblock page_title %}
@@ -14,7 +13,8 @@
             <div class="col-md-6 col-md-offset-3">
                 <div class="row">
                     {% if generated != "" %}
-                        <textarea class="form-control" rows="10" cols="60">{{ generated }}
+                        <textarea class="form-control" rows="10" cols="60">
+                            {{ generated }}
                         </textarea>
                     {% endif %}
                     <form class="form-signin" role="form" action="" method="POST">

@@ -1,5 +1,4 @@
 {% extends "allianceauth/base.html" %}
-{% load static %}
 {% load i18n %}
 
 {% block page_title %}{% translate "Fleet Operation Management" %}{% endblock page_title %}
@@ -52,7 +51,7 @@
 
     <script>
         // Data
-        let timers = [
+        const timers = [
             {% for op in optimer %}
                 {
                     'id': {{ op.id }},
@@ -66,9 +65,9 @@
          * Update a timer
          * @param timer Timer information
          */
-        let updateTimer = function (timer) {
+        const updateTimer = function (timer) {
             if (timer.start.isAfter(Date.now())) {
-                let duration = moment.duration(timer.start - moment(), 'milliseconds');
+                const duration = moment.duration(timer.start - moment(), 'milliseconds');
 
                 document.getElementById("countdown" + timer.id).innerHTML = getDurationString(duration);
             } else {
@@ -78,8 +77,8 @@
             }
         };
 
-        let updateAllTimers = function () {
-            let l = timers.length;
+        const updateAllTimers = function () {
+            const l = timers.length;
 
             for (let i=0; i < l; ++i) {
                 if (timers[i].expired) continue;
@@ -92,14 +91,14 @@
          * Set the local time info for the timer
          * @param timer Timer information
          */
-        let setLocalTime = function (timer) {
+        const setLocalTime = function (timer) {
             document.getElementById("localtime" + timer.id).innerHTML = timer.start.format("ddd @ LT");
         };
 
         /**
          * Set all local time fields
          */
-        let setAllLocalTimes = function () {
+        const setAllLocalTimes = function () {
             let l = timers.length;
 
             for (let i=0; i < l; ++i) {
@@ -107,11 +106,11 @@
             }
         };
 
-        let updateClock = function () {
+        const updateClock = function () {
             document.getElementById("current-time").innerHTML = getCurrentEveTimeString();
         };
 
-        let timedUpdate = function () {
+        const timedUpdate = function () {
             updateClock();
             updateAllTimers();
         };

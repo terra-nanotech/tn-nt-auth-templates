@@ -1,12 +1,11 @@
 {% extends "allianceauth/base.html" %}
-{% load static %}
 {% load i18n %}
 
-{% block page_title %}{% trans "Available Groups" %}{% endblock page_title %}
+{% block page_title %}{% translate "Available Groups" %}{% endblock page_title %}
 
 {% block content %}
     <div class="clearfix">
-        <h1 class="page-header text-center">{% trans "Available Groups" %}</h1>
+        <h1 class="page-header text-center">{% translate "Available Groups" %}</h1>
 
         <div class="panel panel-default">
             <div class="panel-heading">
@@ -18,9 +17,9 @@
                     <table class="table table-striped table-hover" id="available-secure-groups">
                         <thead>
                             <tr>
-                                <th>{% trans "Name" %}</th>
-                                <th>{% trans "Description" %}</th>
-                                <th><!-- {% trans "Action" %} --></th>
+                                <th>{% translate "Name" %}</th>
+                                <th>{% translate "Description" %}</th>
+                                <th><!-- {% translate "Action" %} --></th>
                             </tr>
                         </thead>
 
@@ -50,7 +49,7 @@
                                         {% if g.smart_group.group in user.groups.all %}
                                             {% if not g.request %}
                                                 <a href="{% url 'securegroups:request_leave' g.smart_group.group.id %}" class="btn btn-danger">
-                                                    {% trans "Leave" %}
+                                                    {% translate "Leave" %}
                                                 </a>
                                             {% else %}
                                                 <button type="button" class="btn btn-primary" disabled>
@@ -59,7 +58,7 @@
                                             {% endif %}
                                         {% elif not g.request %}
                                             <a id="{{ g.smart_group.group.id }}" class="btn btn-primary check-user-button">
-                                                {% trans "Request" %}
+                                                {% translate "Request" %}
                                             </a>
                                         {% else %}
                                             <button type="button" class="btn btn-primary" disabled>
@@ -73,7 +72,7 @@
                     </table>
                 {% else %}
                     <div class="alert alert-warning text-center">
-                        {% trans "No groups available." %}
+                        {% translate "No groups available." %}
                     </div>
                 {% endif %}
             </div>
@@ -84,10 +83,12 @@
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <div class="modal-title" id="main-modal-title">{% translate "Group Requirements Checks" %}</div>
+                    <div class="modal-title" id="main-modal-title">
+                        {% translate "Group Requirements Checks" %}
+                    </div>
                 </div>
 
-                <div id="main-modal-body" class="modal-body" style="overflow-y:auto;"></div>
+                <div id="main-modal-body" class="modal-body" style="overflow-y: auto;"></div>
             </div>
         </div>
     </div>
@@ -118,7 +119,7 @@
                 url = url.replace('123456', id);
 
                 $.get(url, function(data) {
-                    modal_body = $('#main-modal-body')[0];
+                    const modal_body = $('#main-modal-body')[0];
                     modal_body.innerHTML = data;
 
                     $('#modal-secure-groups-checks').modal();

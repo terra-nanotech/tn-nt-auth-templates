@@ -43,7 +43,9 @@
 
                     <form class="navbar-form navbar-right" role="search" action="{% url 'corpstat:search' %}" method="GET">
                         <div class="form-group">
-                            <input type="text" class="form-control" name="search_string" placeholder="{% if search_string %}{{ search_string }}{% else %}{% translate "Search all corporations..." %}{% endif %}">
+                            <label style="margin: 0;">
+                                <input type="text" class="form-control" name="search_string" value="{{ search_string }}" placeholder="{% translate "Search all corporations..." %}">
+                            </label>
                         </div>
                     </form>
                 </div>

@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - Templates for `mumbletemps`
 - Use our own eve-time js in `mumbletemps` public-facing template
+- HTML Syntax in several templates
 
 ### Added
 
@@ -20,6 +21,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 
 - CSS color values modernized
+
+### Removed
+
+- No longer used templates
 
 
 ## [2.6.0-beta.2] - 2022-07-16

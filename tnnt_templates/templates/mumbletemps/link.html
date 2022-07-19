@@ -1,6 +1,7 @@
 {% load humanize %}
 {% load timetags %}
 {% load static %}
+{% load tnnt_template_tags %}
 {% load i18n %}
 {% load navactive %}
 <!DOCTYPE html>
@@ -19,14 +20,14 @@
         <link rel="stylesheet" href="{% static 'tnnt_templates/css/theme/terra-nanotech/v3/css/bootstrap.min.css' %}">
         {% include 'bundles/fontawesome.html' %}
 
-        <link rel="stylesheet" href="{% static 'tnnt_templates/css/terra-nanotech-defaults.min.css' %}">
-        <link rel="stylesheet" href="{% static 'tnnt_templates/css/terra-nanotech.min.css' %}">
+        <link rel="stylesheet" href="{% tnnt_static 'tnnt_templates/css/terra-nanotech-defaults.min.css' %}">
+        <link rel="stylesheet" href="{% tnnt_static 'tnnt_templates/css/terra-nanotech.min.css' %}">
 
         {% block extra_css %}{% endblock extra_css %}
-        <link rel="stylesheet" href="{% static 'tnnt_templates/css/community-app-fixes.min.css' %}">
+        <link rel="stylesheet" href="{% tnnt_static 'tnnt_templates/css/community-app-fixes.min.css' %}">
 
         {% if NIGHT_MODE %}
-            <link rel="stylesheet" href="{% static 'tnnt_templates/css/terra-nanotech-dark-mode.min.css' %}">
+            <link rel="stylesheet" href="{% tnnt_static 'tnnt_templates/css/terra-nanotech-dark-mode.min.css' %}">
         {% endif %}
     </head>
 
@@ -72,12 +73,12 @@
         {% include 'bundles/bootstrap-js.html' %}
         {% include 'bundles/moment-js.html' with locale=True %}
 
-        <script src="{% static 'tnnt_templates/javascript/terra-nanotech.min.js' %}"></script>
+        <script src="{% tnnt_static 'tnnt_templates/javascript/terra-nanotech.min.js' %}"></script>
 
         {% include 'bundles/timers-js.html' %}
         <script>
-            let locale = "{{ LANGUAGE_CODE }}";
-            let timers = [
+            const locale = "{{ LANGUAGE_CODE }}";
+            const timers = [
                 {
                     'id': "{{ link.link_ref }}",
                     'targetDate': moment("{{ link.expires|print_timestamp| date:"c" }}"),
@@ -96,7 +97,7 @@
              */
             function updateTimer(timer) {
                 if (timer.targetDate.isAfter(Date.now())) {
-                    let duration = moment.duration(timer.targetDate - moment(), 'milliseconds');
+                    const duration = moment.duration(timer.targetDate - moment(), 'milliseconds');
 
                     document.getElementById("countdown" + timer.id).innerHTML = getDurationString(duration);
                 } else {
@@ -107,10 +108,13 @@
             }
 
             function updateAllTimers () {
-                let l = timers.length;
+                const l = timers.length;
 
                 for (let i=0; i < l; ++i) {
-                    if (timers[i].expired) continue;
+                    if (timers[i].expired) {
+                        continue;
+                    }
+
                     updateTimer(timers[i]);
                 }
             }
