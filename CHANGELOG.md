@@ -11,6 +11,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [2.6.0-beta.3] - 2022-07-19
 
+**This release is for Alliance Auth v3.0.0b3 or higher. Do not try and attempt to
+run it with any version prior!**
+
 ### Fixed
 
 - Templates for `mumbletemps`
@@ -31,6 +34,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 
 ## [2.6.0-beta.2] - 2022-07-16
+
+**This release is for Alliance Auth v3.0.0b3 or higher. Do not try and attempt to
+run it with any version prior!**
 
 ### Fixed
 
