@@ -432,7 +432,7 @@ run it with any version prior!**
 
 ### Removed
 
-- Discordbot Cogs. They have been moved to it's own app »
+- Discordbot Cogs. They have been moved to its own app »
   [TN-NT Discordbot Cogs](https://github.com/terra-nanotech/tn-nt-discordbot-cogs)
 
 
