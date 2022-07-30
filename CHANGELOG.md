@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [In Development] - Unreleased
 
+### Changed
+
+- Bottom border colors for SRP payout values
+
 
 ## [2.6.0-beta.3] - 2022-07-19
 
