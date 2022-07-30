@@ -8,9 +8,47 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [In Development] - Unreleased
 
+
+## [2.6.0] - 2022-07-19
+
+**This release is for Alliance Auth v3.0.0b3 or higher. Do not try and attempt to
+run it with any version prior!**
+
+### Fixed
+
+- Templates for `mumbletemps`
+- Use our own eve-time js in `mumbletemps` public-facing template
+- HTML Syntax in several templates
+- Left margin for AA Forum in mobile view
+- Left margin for AFAT in mobile view
+- Left margin for AA SRP in mobile view
+- Left margin for AA Sovereignty Timer in mobile view
+- Left margin for AA Bulletin Board in mobile view
+- Left margin for AA Memberaudit in mobile view
+- "Pending" button on the groups page
+- Use AA's bundled versions of JavaScripts it provides
+
+### Added
+
+- Hide placeholders in form elements when they are being focused
+- Blur effect to the fixed top navigation bar
+- CSS variables
+- Background blur instead of transparency
+- Missing Favicons
+
 ### Changed
 
 - Bottom border colors for SRP payout values
+- CSS color values modernized
+- Minimum requirement
+  - Alliance Auth >= 3.0.0
+
+### Removed
+
+- No longer used templates
+- Tests and guaranteed compatibility with AA below v3.0.0
+- `type="application/javascript"` from script-tags, as it is deprecated
+- `type="text/css"` from style-tags, as it is deprecated
 
 
 ## [2.6.0-beta.3] - 2022-07-19
