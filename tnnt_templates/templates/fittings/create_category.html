@@ -6,7 +6,7 @@
 {% load static %}
 
 {% block more_css %}
-    <link rel="stylesheet" type="text/css" href="{% static 'tnnt_templates/libs/slim-select/1.26.0/dist/slimselect.min.css' %}">
+    <link rel="stylesheet" href="{% static 'tnnt_templates/libs/slim-select/1.26.0/dist/slimselect.min.css' %}">
 
     <style>
         input[type="color"] {
@@ -105,9 +105,9 @@
 {% endblock %}
 
 {% block extra_javascript %}
-    <script type="application/javascript" src="{% static 'tnnt_templates/libs/slim-select/1.26.0/dist/slimselect.min.js' %}"></script>
+    <script src="{% static 'tnnt_templates/libs/slim-select/1.26.0/dist/slimselect.min.js' %}"></script>
 
-    <script type="application/javascript">
+    <script>
         let color_picker = document.getElementById("color");
         let color_picker_wrapper = document.getElementById("color-wrapper");
 

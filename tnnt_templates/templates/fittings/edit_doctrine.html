@@ -9,7 +9,7 @@
 {% block more_css %}
     <link rel="stylesheet" href="{% static 'tnnt_templates/libs/multi-select/0.9.12/css/multi-select.min.css' %}">
 
-    <style type="text/css">
+    <style>
         .ms-container {
             width: 100% !important;
         }
@@ -103,10 +103,10 @@
 {% endblock %}
 
 {% block extra_javascript %}
-    <script type="application/javascript" src="{% static 'tnnt_templates/libs/multi-select/0.9.12/js/jquery.multi-select.min.js' %}"></script>
-    <script type="application/javascript" src="{% static 'tnnt_templates/libs/quicksearch/2.4.0/dist/jquery.quicksearch.min.js' %}"></script>
+    <script src="{% static 'tnnt_templates/libs/multi-select/0.9.12/js/jquery.multi-select.min.js' %}"></script>
+    <script src="{% static 'tnnt_templates/libs/quicksearch/2.4.0/dist/jquery.quicksearch.min.js' %}"></script>
 
-    <script type="application/javascript">
+    <script>
         $('#fitSelect').multiSelect({
             selectableHeader: "<input type='text' class='form-control' autocomplete='off' placeholder='Search' style='margin-bottom: 3px;'>",
             selectionHeader: "<input type='text' class='form-control' autocomplete='off' placeholder='Search' style='margin-bottom: 3px;'>",
@@ -126,7 +126,7 @@
                 });
 
                 that.qs2 = $selectionSearch.quicksearch(selectionSearchString).on('keydown', function(e) {
-                    if (e.which == 40){
+                    if (e.which === 40){
                         that.$selectionUl.focus();
 
                         return false;

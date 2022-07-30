@@ -9,7 +9,7 @@
 {% block extra_css %}
     {% include 'bundles/datatables-css.html' %}
     {% include 'bundles/x-editable.css.html' %}
-    <link href="{% static 'css/checkbox.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'allianceauth/css/checkbox.css' %}" rel="stylesheet">
     <style>
         .radio label, .checkbox label {
             padding-left: 10px;
@@ -31,8 +31,8 @@
         }
 
         .radio, .checkbox {
-            margin-top: 0px;
-            margin-bottom: 0px;
+            margin-top: 0;
+            margin-bottom: 0;
         }
 
         .editable-error-block {
@@ -163,7 +163,7 @@
                                     {% if perms.auth.srp_management %}
                                         <td class="text-center">
                                             <div class="checkbox">
-                                                <label style="font-size: 1.5em">
+                                                <label style="font-size: 1.5em;">
                                                     <input type="checkbox" name="{{ srpfleetrequest.id }}">
                                                     <span class="cr">
                                                         <i class="cr-icon fas fa-check"></i>
@@ -212,12 +212,11 @@
     {% include 'bundles/x-editable-js.html' %}
     {% include 'bundles/moment-js.html' %}
 
-    <script type="application/javascript">
+    <script>
         $(document).ready(function() {
             $.fn.editable.defaults.mode = 'inline';
             $.fn.editable.defaults.showbuttons = false;
             $.fn.editable.defaults.highlight = "#AAFF80";
-
 
             $('.srp').editable({
                 display: function(value, response) {

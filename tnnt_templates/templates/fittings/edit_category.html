@@ -6,7 +6,7 @@
 {% load static %}
 
 {% block more_css %}
-    <link rel="stylesheet" type="text/css" href="{% static 'tnnt_templates/libs/slim-select/1.26.0/dist/slimselect.min.css' %}">
+    <link rel="stylesheet" href="{% static 'tnnt_templates/libs/slim-select/1.26.0/dist/slimselect.min.css' %}">
 
     <style>
         input[type="color"] {
@@ -46,7 +46,7 @@
                                     <div class="form-group">
                                         <label for="color">{% translate "Category Color" %}</label>
 
-                                        <div class="form-control col-sm-1" id="color-wrapper" style="padding:0 !important;">
+                                        <div class="form-control col-sm-1" id="color-wrapper" style="padding: 0 !important;">
                                             <input type="color" name="color" id="color" value="{{cat.color}}" required>
                                         </div>
                                     </div>
@@ -106,9 +106,9 @@
 {% endblock %}
 
 {% block extra_javascript %}
-    <script type="application/javascript" src="{% static 'tnnt_templates/libs/slim-select/1.26.0/dist/slimselect.min.js' %}"></script>
+    <script src="{% static 'tnnt_templates/libs/slim-select/1.26.0/dist/slimselect.min.js' %}"></script>
 
-    <script type="application/javascript">
+    <script>
         let color_picker = document.getElementById("color");
         let color_picker_wrapper = document.getElementById("color-wrapper");
 

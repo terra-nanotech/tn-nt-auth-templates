@@ -1,5 +1,4 @@
 {% extends "allianceauth/base.html" %}
-{% load static %}
 {% load i18n %}
 
 {% block page_title %}{{ group }} {% translate "Audit Log" %}{% endblock page_title %}
@@ -80,10 +79,10 @@
 
 {% block extra_javascript %}
     {% include 'bundles/datatables-js.html' %}
+    {% include 'bundles/filterdropdown-js.html' %}
     {% include 'bundles/moment-js.html' with locale=True %}
-    <script type="application/javascript" src="{% static 'js/filterDropDown/filterDropDown.min.js' %}"></script>
 
-    <script type="application/javascript">
+    <script>
         $(document).ready(function() {
             $('#log-entries').DataTable({
                 order: [[0, 'desc'], [1, 'asc']],

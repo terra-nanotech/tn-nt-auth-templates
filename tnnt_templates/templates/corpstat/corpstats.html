@@ -22,7 +22,7 @@
 
                     <td class="text-center col-md-4"  rowspan="2">
                         <h4>{% translate 'Corp Info' %}</h4>
-                        <span style="background-color: {% if auth_percent >= 95 %}#00AA33{% elif auth_percent >= 80 %}#FF9000{% else %}#AA0000{% endif %}" class="label label-default">
+                        <span style="background-color: {% if auth_percent >= 95 %}rgb(0 170 51){% elif auth_percent >= 80 %}rgb(255,144 0){% else %}rgb(170 0 0){% endif %};" class="label label-default">
                             {% translate 'Authenticated' %}: {{members|length}}/{{total_members}} ({{auth_percent|floatformat:0|intcomma}}%)
                         </span>
                         <br>
@@ -32,7 +32,7 @@
                         <br>
                         <h4>{% translate 'Services Active' %}</h4>
                         {% for service, perc in service_percent.items %}
-                            <span style="background-color: {% if perc.percent >= 95 %}#00AA33{% elif perc.percent >= 80 %}#FF9000{% else %}#AA0000{% endif %}" class="label label-default">
+                            <span style="background-color: {% if perc.percent >= 95 %}rgb(0 170 51){% elif perc.percent >= 80 %}rgb(255,144 0){% else %}rgb(170 0 0){% endif %};" class="label label-default">
                                 {{service|title}} {% translate 'Activated' %}: {{perc.cnt}}/{{ total_mains }} ({{perc.percent|floatformat:0|intcomma}}%)
                             </span>
                             <br>
@@ -99,7 +99,7 @@
                                                             {{ main.main.character_name }}
                                                             <br>
                                                             {% for service, active in main.services.items %}
-                                                                <span style="background-color: {% if active %}#00AA33{% else %}#AA0000{% endif %}" class="label label-default">{{service|title}}</span>
+                                                                <span style="background-color: {% if active %}rgb(0 170 51){% else %}rgb(170 0 0){% endif %};" class="label label-default">{{service|title}}</span>
                                                             {% endfor %}
                                                         </div>
                                                     </td>
@@ -118,21 +118,21 @@
                                                             <tbody>
                                                                 {% for alt in main.alts %}
                                                                     <tr>
-                                                                        <td class="valign-middle" style="width:30%">
+                                                                        <td class="valign-middle" style="width: 30%;">
                                                                             <img src="{{ alt.portrait_url_32 }}" class="img-rounded" alt="{{ alt.character_name }}" style="margin-right: 0.25rem;">
                                                                             {{ alt.character_name }}
                                                                         </td>
-                                                                        <td class="valign-middle" style="width:30%">
+                                                                        <td class="valign-middle" style="width: 30%;">
                                                                             <img src="{{ alt.corporation_id|corporation_logo_url:32 }}" alt=" {{ alt.corporation_name }}" style="margin-right: 0.25rem;">
                                                                             {{ alt.corporation_name }}
                                                                         </td>
-                                                                        <td class="valign-middle" style="width:30%">
+                                                                        <td class="valign-middle" style="width: 30%;">
                                                                             {% if alt.alliance_name %}
                                                                                 <img src="{{ alt.alliance_id|alliance_logo_url:32 }}" alt=" {{ alt.alliance_name }}" style="margin-right: 0.25rem;">
                                                                                 {{ alt.alliance_name }}
                                                                             {% endif %}
                                                                         </td>
-                                                                        <td class="valign-middle" style="width:5%">
+                                                                        <td class="valign-middle" style="width: 5%;">
                                                                             <a href="https://zkillboard.com/character/{{ alt.character_id }}/" class="label label-danger" target="_blank">
                                                                                 {% translate "Killboard" %}
                                                                             </a>
@@ -380,9 +380,9 @@
 
 {% block extra_javascript %}
     {% include 'bundles/datatables-js.html' %}
+    {% include 'bundles/filterdropdown-js.html' %}
 
-    <script type="application/javascript" src="{% static 'js/filterDropDown/filterDropDown.min.js' %}"></script>
-    <script type="application/javascript">
+    <script>
         $(document).ready(function(){
             let service_cols = []
 

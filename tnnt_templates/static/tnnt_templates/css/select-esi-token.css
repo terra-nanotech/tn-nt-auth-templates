@@ -6,12 +6,14 @@
     }
 
     body {
-        background-color: rgb(255, 255, 255);
-        color: rgb(33, 37, 41);
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-        "Helvetica Neue", Arial, "Noto Sans", sans-serif,
-        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-        "Noto Color Emoji";
+        background: var(--background-body-default);
+        background-color: var(--background-color-default);
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        -webkit-background-size: cover;
+        background-size: cover;
+        color: var(--font-color-default);
+        font-family: var(--font-family-default);
         font-size: 1rem;
         font-weight: 400;
         line-height: 1.5;
@@ -20,7 +22,18 @@
     }
 
     .bg-dark {
-        background-color: rgb(52, 58, 64);
+        background-color: rgb(52 58 64);
+    }
+
+    .alliance-auth-background {
+        backdrop-filter: var(--backdrop-filter-default);
+        background-color: var(--background-color-default-transparency);
+        bottom: 0;
+        margin: 0;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 0;
     }
 
     .container {
@@ -41,29 +54,29 @@
 
     .card {
         background-clip: border-box;
-        background-color: rgb(255, 255, 255);
-        border: 1px solid rgba(0, 0, 0, .125);
+        background-color: var(--background-panel-default);
+        border: none;
         border-radius: 0.25rem;
         display: -ms-flexbox;
         display: flex;
         -ms-flex-direction: column;
         flex-direction: column;
         min-width: 0;
+
         position: relative;
         word-wrap: break-word;
     }
 
     .card-header, .card-footer {
-        background-color: rgba(0, 0, 0, 0.03);
-        border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+        background-color: rgba(0 0 0 / 0.03);
+        border-bottom: 1px solid rgba(0 0 0 / 0.125);
         margin-bottom: 0;
         padding: 0.75rem 1.25rem;
         text-align: center;
     }
 
-    .card-footer {
-        border-bottom: none;
-        border-top: 1px solid rgba(0, 0, 0, 0.125);
+    .card-header {
+        background-color: var(--background-panel-header-default);
     }
 
     .card-header:first-child {
@@ -75,6 +88,11 @@
         flex: 1 1 auto;
         min-height: 1px;
         padding: 1.25rem;
+    }
+
+    .card-footer {
+        border-bottom: none;
+        border-top: 1px solid rgba(0 0 0 / 0.125);
     }
 
     .cards_container {
@@ -111,22 +129,31 @@
     }
 
     .btn-select-character {
+        background-color: rgb(122 130 136);
+        background-image: linear-gradient(rgb(138 145 150), rgb(122 130 136) 60%, rgb(112 120 125));
+        border: 1px solid rgba(0 0 0 / 0.6);
+        border-radius: 3px;
+        color: var(--white);
         cursor: pointer;
-        padding: 0.15rem;
+        font-size: 12px;
+        line-height: 1.5;
+        padding: 1px 5px;
+        text-shadow: 1px 1px 1px rgb(0 0 0 / 30%);
         width: 100%;
     }
 
     .btn-new-character-sso,
     .btn-character-image {
+        background: transparent;
         border: none;
         cursor: pointer;
         padding: 0;
     }
 
     .label-requested-esi-scope {
-        background-color: rgb(44, 62, 80);
+        background-color: rgb(44 62 80);
         border-radius: 5px;
-        color: rgb(255, 255, 255);
+        color: var(--white);
         display: inline-block;
         font-size: 1rem;
         line-height: 1;

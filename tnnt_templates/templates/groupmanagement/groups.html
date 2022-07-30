@@ -1,5 +1,4 @@
 {% extends "allianceauth/base.html" %}
-{% load static %}
 {% load i18n %}
 
 {% block page_title %}{% translate "Available Groups" %}{% endblock page_title %}
@@ -36,7 +35,7 @@
                                                 </a>
                                             {% else %}
                                                 <button type="button" class="btn btn-primary" disabled>
-                                                    {{ g.request.status }}
+                                                    {% translate "Pending" %}
                                                 </button>
                                             {% endif %}
                                         {% elif not g.request %}
@@ -51,7 +50,7 @@
                                             {% endif %}
                                         {% else %}
                                             <button type="button" class="btn btn-primary" disabled>
-                                                {{ g.request.status }}
+                                                {% translate "Pending" %}
                                             </button>
                                         {% endif %}
                                     </td>
@@ -76,7 +75,7 @@
 {% block extra_javascript %}
     {% include 'bundles/datatables-js.html' %}
 
-    <script type="application/javascript">
+    <script>
         $(document).ready(function() {
             {% if groups %}
                 $('#available-groups').DataTable({

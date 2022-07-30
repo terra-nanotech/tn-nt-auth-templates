@@ -37,15 +37,17 @@
 
             <div class="panel-body">
                 {% if not docs %}
-                    <div class="alert alert-warning" style="text-align: center">{% translate "No Doctrines Found" %} </div>
+                    <div class="alert alert-warning text-center">{% translate "No Doctrines Found" %} </div>
                 {% else %}
                     <table class="table table-striped table-hover dataTable" id="docTable">
                         <thead>
-                            <th> </th>
-                            <th>{% translate "Name" %}</th>
-                            <th>{% translate "Categories" %}</th>
-                            <th>{% translate "Description" %}</th>
-                            <th>{% translate "Ships" %}</th>
+                            <tr>
+                                <th> </th>
+                                <th>{% translate "Name" %}</th>
+                                <th>{% translate "Categories" %}</th>
+                                <th>{% translate "Description" %}</th>
+                                <th>{% translate "Ships" %}</th>
+                            </tr>
                         </thead>
 
                         <tbody>
@@ -53,19 +55,19 @@
                                 <tr>
                                     <td>
                                         <a href="{% url 'fittings:view_doctrine' doc.pk %}">
-                                            <img src="{{ doc.icon_url }}" class="img-rounded" style="display: block; margin: auto;">
+                                            <img src="{{ doc.icon_url }}" class="img-rounded" style="display: block; margin: auto;" alt="{{ doc.name }}">
                                         </a>
                                     </td>
                                     <td> <a href="{% url 'fittings:view_doctrine' doc.pk %}">{{ doc.name }}</a> </td>
                                     <td>
                                         {% for cat in doc.category.all %}
-                                            <span class="label" style="background-color: {{ cat.color }}"><a href="{% url 'fittings:view_category' cat.pk %}" class="nostyle">{{ cat.name }}</a></span>
+                                            <span class="label" style="background-color: {{ cat.color }};"><a href="{% url 'fittings:view_category' cat.pk %}" class="nostyle">{{ cat.name }}</a></span>
                                         {% endfor %}
                                     </td>
                                     <td> {{ doc.description|linebreaks|urlize }} </td>
                                     <td>
                                         {% for fitting in doc_dict|get_item:doc.pk %}
-                                            <img src="{{ fitting.ship_type_type_id|type_render_url:32 }}" class="img-rounded" data-toggle="tooltip" data-placement="bottom" title="{{ fitting.ship_type.type_name }}">
+                                            <img src="{{ fitting.ship_type_type_id|type_render_url:32 }}" class="img-rounded" data-toggle="tooltip" data-placement="bottom" title="{{ fitting.ship_type.type_name }}" alt="{{ fitting.ship_type.type_name }}">
                                         {% endfor %}
                                     </td>
                                 </tr>
@@ -81,7 +83,7 @@
 {% block extra_javascript %}
     {% include 'bundles/datatables-js.html' %}
 
-    <script type="application/javascript">
+    <script>
         $(document).ready(function(){
             {% if docs %}
                 $('#docTable').DataTable({

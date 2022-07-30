@@ -25,6 +25,14 @@
     }
 }
 
+/* App: ckEditor
+------------------------------------------------------------------------------------- */
+@media all {
+    .cke_wysiwyg_frame, .cke_wysiwyg_div, .cke_inner {
+        background: transparent !important;
+    }
+}
+
 /* App: Fittings
 ------------------------------------------------------------------------------------- */
 @media all {
@@ -45,42 +53,46 @@
 @media all {
     .template-light-mode .aa-blueprints .table-striped > tbody > tr.tr-group,
     .template-light-mode .aa-blueprints .tr-group {
-        background-color: rgb(62, 68, 76) !important;
+        background-color: var(--background-color-navigation-default-hover) !important;
         font-weight: bold;
     }
 }
 
-/* App :: AA Memberaudit
+/* App: AA Memberaudit
 ------------------------------------------------------------------------------------- */
 @media all {
+    .aa-memberaudit {
+        margin-left: 0;
+    }
+
     .template-light-mode .aa-memberaudit .sidebar_character > a,
     .template-dark-mode .aa-memberaudit .sidebar_character > a {
-        color: rgb(255, 255, 255);
+        color: var(--white);
     }
 
     .template-light-mode .aa-memberaudit .sidebar_character:hover > a,
     .template-light-mode .aa-memberaudit .sidebar_character.active > a,
     .template-dark-mode .aa-memberaudit .sidebar_character:hover > a,
     .template-dark-mode .aa-memberaudit .sidebar_character.active > a {
-        background-color: rgb(62, 68, 76);
+        background-color: var(--background-color-navigation-default-hover);
     }
 
     .template-light-mode .aa-memberaudit .nav-tabs > li.active > a,
     .template-dark-mode .aa-memberaudit .nav-tabs > li.active > a {
-        background-color: rgb(62, 68, 76) !important;
-        color: rgb(255, 255, 255) !important;
+        background-color: var(--background-color-navigation-default-hover) !important;
+        color: var(--white) !important;
     }
 
     .template-light-mode .aa-memberaudit .table > tbody > .table-group > td,
     .template-light-mode .aa-memberaudit .table > tbody > .table-group > td {
-        background-color: rgb(62, 68, 76);
-        color: rgb(255, 255, 255);
+        background-color: var(--background-color-navigation-default-hover);
+        color: var(--white);
         font-weight: bold;
     }
 
     .template-light-mode .aa-memberaudit .cards_container .card,
     .template-dark-mode .aa-memberaudit .cards_container .card {
-        background-color: rgba(100, 100, 100, 0.5);
+        background-color: rgba(100 100 100 / 0.5);
     }
 
     .aa-memberaudit .cards_container {
@@ -91,6 +103,10 @@
 /* App: AA Sovtimer
 ------------------------------------------------------------------------------------- */
 @media all {
+    .aa-sovtimer {
+        margin-left: 0;
+    }
+
     .aa-sovtimer .table > tbody > tr > td {
         vertical-align: middle;
     }
@@ -119,8 +135,8 @@
     }
 
     .aa-sovtimer .aa-sovtimer-timer-elapsed {
-        color: rgb(253, 126, 20);
-        text-shadow: 1px 1px 1px rgba(255, 0, 0, 0.3);
+        color: rgb(253 126 20);
+        text-shadow: 1px 1px 1px rgba(255 0 0 / 0.3);
     }
 }
 
@@ -128,8 +144,8 @@
 ------------------------------------------------------------------------------------- */
 @media all {
     .template-light-mode .nav-tabs > li.active > a {
-        background-color: rgb(62, 68, 76) !important;
-        color: rgb(255, 255, 255) !important;
+        background-color: var(--background-color-navigation-default-hover) !important;
+        color: var(--white) !important;
     }
 }
 
@@ -149,23 +165,71 @@
     }
 }
 
+/* App: Another Fleet Activity Tracker (AFAT)
+------------------------------------------------------------------------------------- */
+@media all {
+    .allianceauth-afat {
+        margin-left: 0;
+    }
+}
+
+/* App: AA SRP
+------------------------------------------------------------------------------------- */
+@media all {
+    .aa-srp {
+        margin-left: 0;
+    }
+
+    .srp-request-payout-amount-editable .srp-payout-amount {
+        border-bottom: dashed 1px rgb(0 136 204);
+        cursor: pointer;
+        display: block;
+    }
+
+    .srp-request-status-rejected .srp-request-payout-amount-editable .srp-payout-amount {
+        border-bottom: dashed 1px rgb(106 100 100);
+        cursor: pointer;
+        display: block;
+    }
+
+    .template-dark-mode .srp-request-status-rejected .srp-request-payout-amount-editable .srp-payout-amount {
+        border-bottom: dashed 1px rgb(90 90 90);
+        cursor: pointer;
+        display: block;
+    }
+
+    .srp-request-payout-amount-editable .srp-payout-amount-changed {
+        border-bottom: dashed 1px rgb(204 71 0) !important;
+        cursor: pointer;
+        display: block;
+    }
+}
+
 /* App: AA Bulletin Board
 ------------------------------------------------------------------------------------- */
 @media all {
+    .aa-bulletin-board {
+        margin-left: 0;
+    }
+
     /* SumoSelect
     --------------------------------------------------------------------------------- */
     .aa-bulletin-board .SumoSelect {
-        color: rgb(54, 54, 54);
+        color: rgb(54 54 54);
     }
 
     .aa-bulletin-board .SumoSelect > .CaptionCont > span.placeholder {
-        color: rgb(62, 68, 76);
+        color: var(--background-color-navigation-default-hover);
     }
 }
 
 /* App: AA Forum
 ------------------------------------------------------------------------------------- */
 @media all {
+    .aa-forum {
+        margin-left: 0;
+    }
+
     .aa-forum .aa-forum-header {
         margin-bottom: 1rem;
     }
@@ -175,7 +239,7 @@
     }
 
     .aa-forum .boards-sortable > li {
-        background-color: rgba(62, 68, 76, 0.6);
+        background-color: var(--background-panel-header-default);
     }
 
     .aa-forum .panel-aa-forum-topic-list {
@@ -184,19 +248,19 @@
 
     .aa-forum .aa-forum-topic-row .aa-forum-topic:hover,
     .aa-forum .panel-aa-forum-category .aa-forum-board:hover {
-        background-color: rgba(73, 81, 90, 0.8);
+        background-color: rgba(73 81 90 / 0.8);
     }
 
     .aa-forum .aa-forum-topic-locked .aa-forum-topic:hover {
-        background-color: rgba(185, 199, 219, 0.25);
+        background-color: rgba(185 199 219 / 0.25);
     }
 
     .aa-forum .aa-forum-topic-sticky .aa-forum-topic:hover {
-        background-color: rgba(255, 220, 104, 0.25);
+        background-color: rgba(255 220 104 / 0.25);
     }
 
     .aa-forum .aa-forum-message-body {
-        border-top: 1px solid rgba(200, 200, 200, 0.25);
+        border-top: 1px solid rgba(200 200 200 / 0.25);
     }
 
     .aa-forum .label-aa-forum-topic-new-message {
@@ -222,11 +286,11 @@
     /* SumoSelect
     --------------------------------------------------------------------------------- */
     .aa-forum .SumoSelect {
-        color: rgb(54, 54, 54);
+        color: rgb(54 54 54);
     }
 
     .aa-forum .SumoSelect > .CaptionCont > span.placeholder {
-        color: rgb(62, 68, 76);
+        color: var(--background-color-navigation-default-hover);
     }
 
     .aa-forum .aa-forum-search-results-total-number {

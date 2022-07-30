@@ -4,19 +4,19 @@
 {% block content %}
     <table class="table table-striped table-hover">
         <thead>
-        <tr>
-            <th>{% translate "Operation Name" %}</th>
-            <th>{% translate "Description" %}</th>
-            <th>{% translate "Doctrine" %}</th>
-            <th>{% translate "Form Up System" %}</th>
-            <th>{% translate "Start Time" %}</th>
-            <th>{% translate "Local Time" %}</th>
-            <th>{% translate "Duration" %}</th>
-            <th>{% translate "FC" %}</th>
-            {% if perms.auth.optimer_management %}
-                <th class="text-right" style="width: 150px;">{% translate "Action" %}</th>
-            {% endif %}
-        </tr>
+            <tr>
+                <th>{% translate "Operation Name" %}</th>
+                <th>{% translate "Description" %}</th>
+                <th>{% translate "Doctrine" %}</th>
+                <th>{% translate "Form Up System" %}</th>
+                <th>{% translate "Start Time" %}</th>
+                <th>{% translate "Local Time" %}</th>
+                <th>{% translate "Duration" %}</th>
+                <th>{% translate "FC" %}</th>
+                {% if perms.auth.optimer_management %}
+                    <th class="text-right" style="width: 150px;">{% translate "Action" %}</th>
+                {% endif %}
+            </tr>
         </thead>
 
         <tbody>

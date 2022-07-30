@@ -90,7 +90,7 @@
                             <img src="{% static 'structuretimers/img/Spinner-1s-64px-light.gif' %}" alt="Spinner">
                         {% endif %}
                     </div>
-                    <div id="modalContent" style="display: none"></div>
+                    <div id="modalContent" style="display: none;"></div>
                     <div id="modalLoadError"></div>
                 </div>
                 <div class="modal-footer">
@@ -120,18 +120,19 @@
         data-tabId="{{ tab }}"
     >
     </div>
-
 {% endblock details %}
 
 {% block extra_css %}
     {% include 'bundles/datatables-css.html' %}
-    <link rel="stylesheet" href="{% static 'structuretimers/css/global.css' %}" type="text/css" media="screen">
-    <link rel="stylesheet" href="{% static 'structuretimers/css/timer_list.css' %}" type="text/css" media="screen">
+
+    <link rel="stylesheet" href="{% static 'structuretimers/css/global.css' %}" media="screen">
+    <link rel="stylesheet" href="{% static 'structuretimers/css/timer_list.css' %}" media="screen">
 {% endblock extra_css%}
 
 {% block extra_javascript %}
-    {% include 'bundles/moment-js.html' with locale=True %}
     {% include 'bundles/datatables-js.html' %}
-    <script type="application/javascript" src="{% static 'js/filterDropDown/filterDropDown.min.js' %}"></script>
-    <script type="application/javascript" src="{% static 'structuretimers/js/timer_list.js' %}"></script>
+    {% include 'bundles/filterdropdown-js.html' %}
+    {% include 'bundles/moment-js.html' with locale=True %}
+
+    <script src="{% static 'structuretimers/js/timer_list.js' %}"></script>
 {% endblock extra_javascript %}

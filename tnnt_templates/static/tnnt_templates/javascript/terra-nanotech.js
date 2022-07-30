@@ -70,13 +70,17 @@ $(document).ready(() => {
      * Functions that need to be executed on load
      */
     const init = () => {
-        externalLinks();
-        hljs.highlightAll();
-
         // Start the Eve time clock in the top menu bar
         setInterval(() => {
             renderClock($('.eve-time-wrapper .eve-time-clock'));
         }, 500);
+
+        externalLinks();
+
+        // It's not always loaded
+        if (typeof hljs !== 'undefined' && typeof hljs.highlightAll === 'function') {
+            hljs.highlightAll();
+        }
     };
 
     /**

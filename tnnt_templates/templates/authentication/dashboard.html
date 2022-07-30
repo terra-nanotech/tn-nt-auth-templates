@@ -1,6 +1,6 @@
 {% extends "allianceauth/base.html" %}
 
-{% load static %}
+{% load tnnt_template_tags %}
 {% load i18n %}
 {% load evelinks %}
 
@@ -101,7 +101,7 @@
                     </div>
 
                     <div class="panel-body text-center">
-                        <div style="height: 240px;overflow:-moz-scrollbars-vertical;overflow-y:auto;">
+                        <div style="height: 240px; overflow-y: auto;">
                             <div class="auth-member-groups">
                                 {% for group in groups %}
                                     <span class="label label-tnnt-default label-dashboard-group-name auth-member-group-item">
@@ -179,5 +179,5 @@
 {% endblock %}
 
 {% block extra_css %}
-    <link href="{% static 'tnnt_templates/css/dashboard.min.css' %}" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="{% tnnt_static 'tnnt_templates/css/dashboard.min.css' %}">
 {% endblock extra_css %}

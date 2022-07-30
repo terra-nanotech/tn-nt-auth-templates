@@ -1,5 +1,4 @@
 {% extends "allianceauth/base.html" %}
-{% load static %}
 {% load i18n %}
 {% load evelinks %}
 
@@ -51,7 +50,7 @@
                                     <tr>
                                         <td class="valign-middle">
                                             {% if acceptrequest.main_char %}
-                                                <img src="{{ acceptrequest.main_char|character_portrait_url:32 }}" class="img-rounded" style="margin-right: 0.25rem;">
+                                                <img src="{{ acceptrequest.main_char|character_portrait_url:32 }}" class="img-rounded" style="margin-right: 0.25rem;" alt="{{ acceptrequest.main_char.character_name }}">
 
                                                 <a href="{{ acceptrequest.main_char|evewho_character_url }}" target="_blank">
                                                     {{ acceptrequest.main_char.character_name }}
@@ -109,7 +108,7 @@
                                     <tr>
                                         <td class="valign-middle">
                                             {% if leaverequest.main_char %}
-                                                <img src="{{ leaverequest.main_char|character_portrait_url:32 }}" class="img-rounded" style="margin-right: 0.25rem;">
+                                                <img src="{{ leaverequest.main_char|character_portrait_url:32 }}" class="img-rounded" style="margin-right: 0.25rem;" alt="{{ leaverequest.main_char.character_name }}">
 
                                                 <a href="{{ leaverequest.main_char|evewho_character_url }}" target="_blank">
                                                     {{ leaverequest.main_char.character_name }}
@@ -159,7 +158,7 @@
 {% block extra_javascript %}
     {% include 'bundles/datatables-js.html' %}
 
-    <script type="application/javascript">
+    <script>
         $(document).ready(function() {
             {% if acceptrequests %}
                 $('#group-accept-requests').DataTable({
@@ -209,7 +208,7 @@
                 });
             {% endif %}
 
-            $('a[data-toggle="tab"]').on('shown.bs.tab', function(e) {
+            $('a[data-toggle="tab"]').on('shown.bs.tab', function() {
                 $.fn.dataTable.tables({
                     visible: true,
                     api: true

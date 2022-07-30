@@ -1,6 +1,4 @@
 {% extends "allianceauth/base.html" %}
-{% load bootstrap %}
-{% load static %}
 {% load i18n %}
 
 {% block page_title %}{% translate "Permissions Overview" %}{% endblock page_title %}
@@ -86,7 +84,7 @@
 
 {% block extra_javascript %}
     {% include 'bundles/datatables-js.html' %}
-    <script type="application/javascript" src="{% static 'js/filterDropDown/filterDropDown.min.js' %}"></script>
+    {% include 'bundles/filterdropdown-js.html' %}
 {% endblock %}
 
 {% block extra_css %}
