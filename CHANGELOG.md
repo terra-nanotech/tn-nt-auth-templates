@@ -8,6 +8,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [In Development] - Unreleased
 
+### Changed
+
+- Styles for AA-SRP
+- Darkmode CSS variables
+
 
 ## [2.6.0] - 2022-07-30
 
