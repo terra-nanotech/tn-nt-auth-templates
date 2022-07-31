@@ -65,7 +65,6 @@
 ------------------------------------------------------------------------------------- */
 :root {
     --background-color-default: rgb(39 43 48);
-    --background-darkmode-color-default: rgb(0 0 0);
     --background-color-default-transparency: rgba(39 43 48 / 0.75);
     --background-color-light-transparency: rgba(58 63 68 / 0.5);
     --background-panel-default: rgba(200 200 200 / 0.2);
@@ -79,12 +78,16 @@
     --background-color-warning-hover: rgba(223 133 5 / 0.6);
     --background-color-danger: rgba(238 95 91 / 0.5);
     --background-color-danger-hover: rgba(236 72 68 / 0.6);
+    --background-color-navigation-default-hover: rgb(62 68 76);
+
     --border-color-success: rgb(85 177 66);
     --border-color-info: rgb(42 199 210);
     --border-color-warning: rgb(208 90 5);
     --border-color-danger: rgb(234 54 79);
 
-    --background-color-navigation-default-hover: rgb(62 68 76);
+    --color-darkmode-default: rgb(78 154 6);
+    --border-color-darkmode-default: rgba(78 154 6 / 0.6);
+    --background-darkmode-color-default: rgb(0 0 0);
     --background-color-darkmode-navigation-default-active: rgba(78 154 6 / 0.4);
 
     --white: rgb(255 255 255);
