@@ -28,7 +28,9 @@
 /* App: ckEditor
 ------------------------------------------------------------------------------------- */
 @media all {
-    .cke_wysiwyg_frame, .cke_wysiwyg_div, .cke_inner {
+    .cke_wysiwyg_frame,
+    .cke_wysiwyg_div,
+    .cke_inner {
         background: transparent !important;
     }
 }
@@ -83,7 +85,6 @@
         color: var(--white) !important;
     }
 
-    .template-light-mode .aa-memberaudit .table > tbody > .table-group > td,
     .template-light-mode .aa-memberaudit .table > tbody > .table-group > td {
         background-color: var(--background-color-navigation-default-hover);
         color: var(--white);
@@ -92,11 +93,11 @@
 
     .template-light-mode .aa-memberaudit .cards_container .card,
     .template-dark-mode .aa-memberaudit .cards_container .card {
-        background-color: rgba(100 100 100 / 0.5);
+        background-color: rgba(100 100 100 / 50%);
     }
 
     .aa-memberaudit .cards_container {
-        margin: 0 0 2rem 0;
+        margin: 0 0 2rem;
     }
 }
 
@@ -136,7 +137,7 @@
 
     .aa-sovtimer .aa-sovtimer-timer-elapsed {
         color: rgb(253 126 20);
-        text-shadow: 1px 1px 1px rgba(255 0 0 / 0.3);
+        text-shadow: 1px 1px 1px rgba(255 0 0 / 30%);
     }
 }
 
@@ -247,19 +248,19 @@
 
     .aa-forum .aa-forum-topic-row .aa-forum-topic:hover,
     .aa-forum .panel-aa-forum-category .aa-forum-board:hover {
-        background-color: rgba(73 81 90 / 0.8);
+        background-color: rgba(73 81 90 / 80%);
     }
 
     .aa-forum .aa-forum-topic-locked .aa-forum-topic:hover {
-        background-color: rgba(185 199 219 / 0.25);
+        background-color: rgba(185 199 219 / 25%);
     }
 
     .aa-forum .aa-forum-topic-sticky .aa-forum-topic:hover {
-        background-color: rgba(255 220 104 / 0.25);
+        background-color: rgba(255 220 104 / 25%);
     }
 
     .aa-forum .aa-forum-message-body {
-        border-top: 1px solid rgba(200 200 200 / 0.25);
+        border-top: 1px solid rgba(200 200 200 / 25%);
     }
 
     .aa-forum .label-aa-forum-topic-new-message {

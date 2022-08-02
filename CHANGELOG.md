@@ -12,6 +12,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - Styles for AA-SRP
 - Darkmode CSS variables
+- CSS stylelint applied
 
 
 ## [2.6.0] - 2022-07-30

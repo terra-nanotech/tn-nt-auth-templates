@@ -7,16 +7,14 @@
         font-family: monospace;
     }
 
-    body {
-        /*font-size: 1.125rem;*/
-    }
-
-    .nav-pills > li > a.active, .nav-pills > li > a:hover {
+    .nav-pills > li > a.active,
+    .nav-pills > li > a:hover {
         background-color: var(--background-color-darkmode-navigation-default-active) !important;
         color: var(--background-darkmode-color-default) !important;
     }
 
-    .nav-pills > li > a.active i, .nav-pills > li > a:hover i {
+    .nav-pills > li > a.active i,
+    .nav-pills > li > a:hover i {
         background-color: transparent !important;
         color: var(--background-darkmode-color-default) !important;
     }
