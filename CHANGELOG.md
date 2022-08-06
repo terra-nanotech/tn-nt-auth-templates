@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [In Development] - Unreleased
 
+
+## [2.6.1] - 2022-08-06
+
 ### Changed
 
 - Styles for AA-SRP
