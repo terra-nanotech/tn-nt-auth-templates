@@ -9,6 +9,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [In Development] - Unreleased
 
 
+## [2.6.1] - 2022-08-06
+
+### Changed
+
+- Styles for AA-SRP
+- Darkmode CSS variables
+- CSS stylelint applied
+
+
 ## [2.6.0] - 2022-07-30
 
 **This release is for Alliance Auth v3.0.0b3 or higher. Do not try and attempt to

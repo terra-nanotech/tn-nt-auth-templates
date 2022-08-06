@@ -1,9 +1,6 @@
 @media all {
     html {
         background: transparent;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        -webkit-background-size: cover;
         background-size: cover;
         height: 100%;
     }

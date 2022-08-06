@@ -9,9 +9,6 @@
     body {
         background: var(--background-body-default);
         background-color: var(--background-color-default);
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        -webkit-background-size: cover;
         background-size: cover;
         color: var(--font-color-default);
         font-family: var(--font-family-default);
@@ -22,8 +19,18 @@
         margin: 0 0 1rem;
     }
 
-    .h1, .h2, .h3, .h4, .h5, .h6,
-    h1, h2, h3, h4, h5, h6 {
+    .h1,
+    .h2,
+    .h3,
+    .h4,
+    .h5,
+    .h6,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
         font-family: var(--font-family-default);
         font-weight: 400;
     }
@@ -51,15 +58,15 @@
     }
 
     .nav > li > a {
-        padding: 10px 10px;
+        padding: 10px;
     }
 
     .navbar {
         background-image: none;
         background-repeat: no-repeat;
-        border: 1px solid rgba(0 0 0 / 0.6);
+        border: 1px solid rgba(0 0 0 / 60%);
         filter: none;
-        text-shadow: 1px 1px 1px rgba(0 0 0 / 0.3);
+        text-shadow: 1px 1px 1px rgba(0 0 0 / 30%);
     }
 
     .navbar-nav > li > a {
@@ -72,14 +79,12 @@
         background-image: none;
         background-repeat: no-repeat;
         border-left-color: transparent;
-        -webkit-filter: none;
         filter: none;
     }
 
     .navbar-inverse .navbar-nav > li > a:hover {
         background-image: none;
         background-repeat: no-repeat;
-        -webkit-filter: none;
         filter: none;
     }
 
@@ -93,7 +98,6 @@
         background-repeat: no-repeat;
         border: none;
         color: var(--white);
-        -webkit-filter: none;
         filter: none;
     }
 
@@ -116,7 +120,6 @@
         background-image: none;
         background-repeat: no-repeat;
         border: none;
-        -webkit-filter: none;
         filter: none;
     }
 
@@ -126,11 +129,10 @@
     .panel-heading .nav-pills > li.active > a,
     .panel-heading .nav-pills > li.active > a:focus,
     .panel-heading .nav-pills > li.active > a:hover {
-        background-color: rgba(200 200 200 / 0.2);
+        background-color: rgba(200 200 200 / 20%);
         background-image: none;
         background-repeat: no-repeat;
         border: none;
-        -webkit-filter: none;
         filter: none;
     }
 
@@ -138,7 +140,6 @@
     .nav-pills > li.disabled > a:hover {
         background-image: none;
         background-repeat: no-repeat;
-        -webkit-filter: none;
         filter: none;
     }
 
@@ -146,16 +147,14 @@
     .pagination > li > span {
         background-image: linear-gradient(rgb(72 78 85), rgb(58 63 68) 60%, rgb(49 53 57));
         background-repeat: no-repeat;
-        -webkit-filter: none;
         filter: none;
-        text-shadow: 1px 1px 1px rgba(0 0 0 / 0.3);
+        text-shadow: 1px 1px 1px rgba(0 0 0 / 30%);
     }
 
     .pagination > li > a:hover,
     .pagination > li > span:hover {
         background-image: linear-gradient(rgb(2 2 2), rgb(16 17 18) 40%, rgb(20 22 24));
         background-repeat: no-repeat;
-        -webkit-filter: none;
         filter: none;
     }
 
@@ -163,7 +162,6 @@
     .pagination > li.active > span {
         background-image: linear-gradient(rgb(2 2 2), rgb(16 17 18) 40%, rgb(20 22 24));
         background-repeat: no-repeat;
-        -webkit-filter: none;
         filter: none;
     }
 
@@ -174,22 +172,19 @@
         background-color: transparent;
         background-image: linear-gradient(rgb(72 78 85), rgb(58 63 68) 60%, rgb(49 53 57));
         background-repeat: no-repeat;
-        -webkit-filter: none;
         filter: none;
     }
 
     .pager > li > a {
         background-image: linear-gradient(rgb(72 78 85), rgb(58 63 68) 60%, rgb(49 53 57));
         background-repeat: no-repeat;
-        -webkit-filter: none;
         filter: none;
-        text-shadow: 1px 1px 1px rgba(0 0 0 / 0.3);
+        text-shadow: 1px 1px 1px rgba(0 0 0 / 30%);
     }
 
     .pager > li > a:hover {
         background-image: linear-gradient(rgb(2 2 2), rgb(16 17 18) 40%, rgb(20 22 24));
         background-repeat: no-repeat;
-        -webkit-filter: none;
         filter: none;
     }
 
@@ -198,7 +193,6 @@
         background-color: transparent;
         background-image: linear-gradient(rgb(72 78 85), rgb(58 63 68) 60%, rgb(49 53 57));
         background-repeat: no-repeat;
-        -webkit-filter: none;
         filter: none;
     }
 
@@ -216,15 +210,15 @@
     }
 
     .table .table {
-        background-color: rgba(39 43 48 / 0.6);
+        background-color: rgba(39 43 48 / 60%);
     }
 
     .table-striped > tbody > tr:nth-of-type(odd) {
-        background-color: rgba(53 58 65 / 0.75);
+        background-color: rgba(53 58 65 / 75%);
     }
 
     .table-hover > tbody > tr:hover {
-        background-color: rgba(73 81 90 / 0.8);
+        background-color: rgba(73 81 90 / 80%);
     }
 
     .table > thead > tr > td.active,
@@ -239,7 +233,7 @@
     .table > thead > tr.active > th,
     .table > tbody > tr.active > th,
     .table > tfoot > tr.active > th {
-        background-color: rgba(73 81 90 / 0.8);
+        background-color: rgba(73 81 90 / 80%);
     }
 
     .table-hover > tbody > tr > td.active:hover,
@@ -247,7 +241,7 @@
     .table-hover > tbody > tr.active:hover > td,
     .table-hover > tbody > tr:hover > .active,
     .table-hover > tbody > tr.active:hover > th {
-        background-color: rgba(62 68 76 / 0.8);
+        background-color: rgba(62 68 76 / 80%);
     }
 
     .table > thead > tr > td.success,
@@ -349,7 +343,7 @@
     }
 
     .list-group-item {
-        background-color: rgba(50 56 62 / 0.6);
+        background-color: rgba(50 56 62 / 60%);
     }
 
     .list-group-item-success {
@@ -414,7 +408,7 @@
     }
 
     .well {
-        background-color: rgba(28 30 34 / 0.4);
+        background-color: rgba(28 30 34 / 40%);
     }
 
     blockquote {
@@ -426,13 +420,11 @@
 ------------------------------------------------------------------------------------- */
 @media all {
     .nav-item-eve-time .eve-time-wrapper {
-        border-left: 1px solid rgba(255 255 255 / 0.1);
-        border-right: 1px solid rgba(0 0 0 / 0.2);
+        border-left: 1px solid rgba(255 255 255 / 10%);
+        border-right: 1px solid rgba(0 0 0 / 20%);
         color: rgb(200 200 200);
         line-height: 20px;
         padding: 10px;
-        /*padding-bottom: 10px;*/
-        /*padding-top: 10px;*/
     }
 }
 
@@ -468,14 +460,10 @@
     }
 
     .d-flex {
-        display: -webkit-box !important;
-        display: -ms-flexbox !important;
         display: flex !important;
     }
 
     .d-inline-flex {
-        display: -webkit-inline-box !important;
-        display: -ms-inline-flexbox !important;
         display: inline-flex !important;
     }
 }
@@ -484,7 +472,7 @@
 ------------------------------------------------------------------------------------- */
 @media all {
     #wrapper {
-        background-color: rgba(48 48 48 / 0.75);
+        background-color: rgba(48 48 48 / 75%);
         color: var(--white);
         padding: 0;
         width: 100%;
@@ -542,10 +530,9 @@
     .breadcrumb {
         background-image: linear-gradient(rgb(72 78 85), rgb(58 63 68) 60%, rgb(49 53 57));
         background-repeat: no-repeat;
-        border: 1px solid rgba(0 0 0 / 0.6);
-        -webkit-filter: none;
+        border: 1px solid rgba(0 0 0 / 60%);
         filter: none;
-        text-shadow: 1px 1px 1px rgba(0 0 0 / 0.3);
+        text-shadow: 1px 1px 1px rgba(0 0 0 / 30%);
     }
 
     /* Horizontal list group */
@@ -597,21 +584,21 @@
     }
 
     .label-default {
-        background-color: rgba(58 63 68 / 0.6);
+        background-color: rgba(58 63 68 / 60%);
     }
 
     .label-default[href]:hover,
     .label-default[href]:focus {
-        background-color: rgba(35 38 40 / 0.6);
+        background-color: rgba(35 38 40 / 60%);
     }
 
     .label-primary {
-        background-color: rgba(122 130 136 / 0.6);
+        background-color: rgba(122 130 136 / 60%);
     }
 
     .label-primary[href]:hover,
     .label-primary[href]:focus {
-        background-color: rgba(98 104 109 / 0.6);
+        background-color: rgba(98 104 109 / 60%);
     }
 
     .label-success {
@@ -717,7 +704,7 @@
 ------------------------------------------------------------------------------------- */
 @media all {
     .progress {
-        background-color: rgba(28 30 34 / 0.5);
+        background-color: rgba(28 30 34 / 50%);
     }
 
     .progress-bar-success {
@@ -746,10 +733,11 @@
     }
 
     .panel-primary {
-        border-color: rgba(200 200 200 / 0.6);
+        border-color: rgba(200 200 200 / 60%);
     }
 
-    .panel-title, .modal-title {
+    .panel-title,
+    .modal-title {
         color: inherit;
         display: block;
         font-family: var(--font-family-panel-title);
@@ -757,7 +745,7 @@
         font-weight: 700;
         margin-bottom: 0.25rem;
         margin-top: 0.25rem;
-        text-shadow: -1px -1px 0 rgba(0 0 0 / 0.3);
+        text-shadow: -1px -1px 0 rgba(0 0 0 / 30%);
     }
 
     .panel-default > .panel-heading {
@@ -765,15 +753,15 @@
     }
 
     .panel-default > .panel-heading .badge {
-        background-color: rgba(200 200 200 / 0.75);
+        background-color: rgba(200 200 200 / 75%);
     }
 
     .panel-primary > .panel-heading {
-        background-color: rgba(122 130 136 / 0.6);
+        background-color: rgba(122 130 136 / 60%);
     }
 
     .panel-primary > .panel-heading .badge {
-        background-color: rgba(255 255 255 / 0.75);
+        background-color: rgba(255 255 255 / 75%);
     }
 
     .panel-success > .panel-heading {
@@ -781,11 +769,11 @@
     }
 
     .panel-success > .panel-heading .badge {
-        background-color: rgba(255 255 255 / 0.75);
+        background-color: rgba(255 255 255 / 75%);
     }
 
     .panel-info {
-        border-color: rgba(0 0 0 / 0.6);
+        border-color: rgba(0 0 0 / 60%);
     }
 
     .panel-info > .panel-heading {
@@ -793,7 +781,7 @@
     }
 
     .panel-info > .panel-heading .badge {
-        background-color: rgba(255 255 255 / 0.75);
+        background-color: rgba(255 255 255 / 75%);
     }
 
     .panel-warning > .panel-heading {
@@ -801,7 +789,7 @@
     }
 
     .panel-warning > .panel-heading .badge {
-        background-color: rgba(255 255 255 / 0.75);
+        background-color: rgba(255 255 255 / 75%);
     }
 
     .panel-danger > .panel-heading {
@@ -809,7 +797,7 @@
     }
 
     .panel-danger > .panel-heading .badge {
-        background-color: rgba(255 255 255 / 0.75);
+        background-color: rgba(255 255 255 / 75%);
     }
 }
 
@@ -817,17 +805,18 @@
 ------------------------------------------------------------------------------------- */
 @media all {
     .table-striped > tbody > tr:nth-of-type(odd) {
-        background-color: rgba(62 68 76 / 0.5);
+        background-color: rgba(62 68 76 / 50%);
     }
 
     /* Style group headers within a table */
-    .table-striped > tbody > tr.tr-group, .tr-group {
+    .table-striped > tbody > tr.tr-group,
+    .tr-group {
         background-color: var(--background-color-navigation-default-hover);
         font-weight: bold;
     }
 
     .table-hover > tbody > tr:nth-of-type(odd):hover {
-        background-color: rgba(73 81 90 / 0.8);
+        background-color: rgba(73 81 90 / 80%);
     }
 }
 
@@ -860,12 +849,10 @@
     .top-menu-bar-language-select form {
         border-bottom: 1px solid transparent;
         border-top: 1px solid transparent;
-        -webkit-box-shadow: inset 0 1px 0 var(--white), 0 1px 0 var(--white);
         box-shadow: inset 0 1px 0 var(--white), 0 1px 0 var(--white);
         margin-bottom: 7.5px;
         margin-left: 5px;
         margin-right: 5px;
-        margin-top: 7.5px;
         padding: 10px 15px;
     }
 }
@@ -877,7 +864,6 @@
 
     .top-menu-bar-language-select form {
         border: 0;
-        -webkit-box-shadow: none;
         box-shadow: none;
         margin-left: 0;
         margin-right: 0;
@@ -892,14 +878,11 @@
 @media (min-width: 768px) {
     /* Class for vertically aligning columns in a bootstrap row */
     .row.vertical-flexbox-row2 {
-        display: -webkit-box;
-        display: -webkit-flex;
-        display: -ms-flexbox;
         display: flex;
         flex-wrap: wrap;
     }
 
-    .row.vertical-flexbox-row2 > [class*='col-'] {
+    .row.vertical-flexbox-row2 > [class*="col-"] {
         display: flex;
         flex-direction: column;
     }

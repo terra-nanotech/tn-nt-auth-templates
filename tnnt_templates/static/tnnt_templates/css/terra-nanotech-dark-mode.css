@@ -2,21 +2,19 @@
     * {
         background-color: var(--background-darkmode-color-default) !important;
         background-image: none !important;
-        border-color: rgba(78 154 6 / 0.6) !important;
-        color: rgb(78 154 6) !important;
+        border-color: var(--border-color-darkmode-default) !important;
+        color: var(--color-darkmode-default) !important;
         font-family: monospace;
     }
 
-    body {
-        /*font-size: 1.125rem;*/
-    }
-
-    .nav-pills > li > a.active, .nav-pills > li > a:hover {
+    .nav-pills > li > a.active,
+    .nav-pills > li > a:hover {
         background-color: var(--background-color-darkmode-navigation-default-active) !important;
         color: var(--background-darkmode-color-default) !important;
     }
 
-    .nav-pills > li > a.active i, .nav-pills > li > a:hover i {
+    .nav-pills > li > a.active i,
+    .nav-pills > li > a:hover i {
         background-color: transparent !important;
         color: var(--background-darkmode-color-default) !important;
     }

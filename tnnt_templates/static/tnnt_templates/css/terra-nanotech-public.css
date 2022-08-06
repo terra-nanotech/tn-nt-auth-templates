@@ -5,9 +5,6 @@
 
     body {
         background: var(--background-body-default);
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        -webkit-background-size: cover;
         background-size: cover;
         font-size: 100%;
     }
@@ -42,7 +39,7 @@
 
     .sso-login-button {
         color: rgb(173 173 173);
-        filter: drop-shadow(0 4px 5px rgba(0 0 0 / 0.4));
+        filter: drop-shadow(0 4px 5px rgba(0 0 0 / 40%));
         height: 45px;
         margin-bottom: 15px;
         margin-top: 10px;
@@ -53,7 +50,7 @@
 
     .sso-login-button:hover {
         color: rgb(226 138 13);
-        filter: drop-shadow(0 1px 3px rgba(0 0 0 / 0.4));
+        filter: drop-shadow(0 1px 3px rgba(0 0 0 / 40%));
     }
 
     .sso-login-button > svg {
@@ -80,8 +77,6 @@
 
     .login-image {
         opacity: 0.3;
-        -moz-transition: opacity 0.5s ease-in-out;
-        -webkit-transition: opacity 0.5s ease-in-out;
         transition: opacity 0.5s ease-in-out;
     }
 
