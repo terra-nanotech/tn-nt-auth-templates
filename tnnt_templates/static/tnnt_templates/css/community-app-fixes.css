@@ -166,6 +166,14 @@
     }
 }
 
+/* App: AA Discord Announcements
+------------------------------------------------------------------------------------- */
+@media all {
+    .aa-discord-announcements-announcementtext {
+        top: 3.6875rem;
+    }
+}
+
 /* App: Another Fleet Activity Tracker (AFAT)
 ------------------------------------------------------------------------------------- */
 @media all {

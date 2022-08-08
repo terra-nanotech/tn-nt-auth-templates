@@ -9,6 +9,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [In Development] - Unreleased
 
 
+## [2.6.2] - 2022-08-08
+
+### Added
+
+- Styles for [AA Discord Announcements](https://github.com/ppfeufer/aa-discord-announcements)
+
+
 ## [2.6.1] - 2022-08-06
 
 ### Changed
