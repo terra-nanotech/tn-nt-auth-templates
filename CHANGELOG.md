@@ -14,9 +14,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Changed
 
 - Moved OpenGraph tags to their own template, so they can be overridden with a
-  simple template override in by copying [this file](tnnt_templates/templates/tnnt_templates/opengraph-tags.html) to:
+  simple template override in by copying
+  [this file](tnnt_templates/templates/tnnt_templates/opengraph-tags.html) to:
   ```
-  myauth/myauth/templates/tnnt_templates/opengraph-tags.html
+  myauth/myauth/templates/tnnt_templates/includes/opengraph-tags.html
   ```
 
 
