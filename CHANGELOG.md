@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [In Development] - Unreleased
 
+### Added
+
+- Cleaned up templates for `allianceauth-blacklist`
+
 
 ## [2.6.3] - 2022-08-09
 
