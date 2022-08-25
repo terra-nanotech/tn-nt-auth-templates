@@ -8,6 +8,11 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [In Development] - Unreleased
 
+### Changed
+
+- Split SVG Icons for dark/light mode and better icon names to match the changes in the
+  upcoming `aa-forum` version
+
 
 ## [2.7.0] - 2022-08-25
 
