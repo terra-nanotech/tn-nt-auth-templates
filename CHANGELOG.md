@@ -13,6 +13,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Cleaned up templates for `allianceauth-blacklist`
 - HTML bundles for Chart-JS, In case one of the templates we override needs it and
   is loading it from a CDN (GDPR Issue)
+- Override for `aa-forum` SVG icons
 
 
 ## [2.6.3] - 2022-08-09
