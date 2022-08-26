@@ -267,7 +267,8 @@
         background-color: rgba(255 220 104 / 25%);
     }
 
-    .aa-forum .aa-forum-message-body {
+    .aa-forum .aa-forum-message-body,
+    .aa-forum .aa-forum-message-body-author-signature {
         border-top: 1px solid rgba(200 200 200 / 25%);
     }
 
@@ -289,6 +290,10 @@
 
     .aa-forum .btn-aa-forum-topic-moderation {
         border: none;
+    }
+
+    .aa-forum .aa-forum-admin-menu .aa-forum-admin-menu-item a {
+        padding: 0.65rem 1rem;
     }
 
     /* SumoSelect

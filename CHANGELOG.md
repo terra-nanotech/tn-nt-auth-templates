@@ -9,6 +9,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [In Development] - Unreleased
 
 
+## [2.7.2] - 2022-08-25
+
+### Changed
+
+- CSS to match `aa-forum` v1.13.0
+
+
 ## [2.7.1] - 2022-08-25
 
 ### Changed
