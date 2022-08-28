@@ -8,6 +8,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [In Development] - Unreleased
 
+### Fixed
+
+- Pending button in secure groups is now correctly displayed
+- "Leave Requests" tab in group management is now hidden as it should when
+  `GROUPMANAGEMENT_AUTO_LEAVE = True`
+
 
 ## [2.7.2] - 2022-08-25
 
