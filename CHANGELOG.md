@@ -9,6 +9,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [In Development] - Unreleased
 
 
+## [2.7.4] - 2022-09-01
+
+### Added
+
+- CSS overrides for AA Forum's Personal Messages feature
+
+
 ## [2.7.3] - 2022-08-28
 
 ### Fixed

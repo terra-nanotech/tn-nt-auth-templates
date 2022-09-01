@@ -208,8 +208,8 @@
     }
 
     .modal-srp-details-request-history .request-history-comment {
-        margin-top: 1rem;
         border-bottom: 1px solid rgb(28 30 34);
+        margin-top: 1rem;
     }
 }
 
@@ -255,8 +255,9 @@
     }
 
     .aa-forum .aa-forum-topic-row .aa-forum-topic:hover,
-    .aa-forum .panel-aa-forum-category .aa-forum-board:hover {
-        background-color: rgba(73 81 90 / 80%);
+    .aa-forum .panel-aa-forum-category .aa-forum-board:hover,
+    .aa-forum .panel-aa-forum-personal-messages-item:hover {
+        background-color: rgba(73 81 90 / 65%);
     }
 
     .aa-forum .aa-forum-topic-locked .aa-forum-topic:hover {
@@ -265,6 +266,10 @@
 
     .aa-forum .aa-forum-topic-sticky .aa-forum-topic:hover {
         background-color: rgba(255 220 104 / 25%);
+    }
+
+    .aa-forum .panel-aa-forum-personal-messages-item-header {
+        border-bottom: 1px solid rgba(200 200 200 / 25%);
     }
 
     .aa-forum .aa-forum-message-body,
