@@ -11,10 +11,23 @@
 [![codecov](https://codecov.io/gh/terra-nanotech/tn-nt-auth-templates/branch/master/graph/badge.svg?token=4JLA8CXJ64)](https://codecov.io/gh/terra-nanotech/tn-nt-auth-templates)
 
 
-Template Overrides for Alliance Auth
+**Terra Nanotech Template Overrides for Alliance Auth**
 
-![TN-NT Auth Template](https://raw.githubusercontent.com/terra-nanotech/tn-nt-auth-templates/master/tnnt_templates/images/tnnt-template.jpg)
+![TN-NT Auth Template](https://raw.githubusercontent.com/terra-nanotech/tn-nt-auth-templates/master/tnnt_templates/images/tnnt-template.jpg "TN-NT Auth Template")
 
+## Important Information
+
+These template overrides are specially tailored for the corporation Terra Nanotech.
+They override templates of apps we use so it looks like we want it to. This
+might entail changes to templates that also change the behaviour in a way we like it
+to be changed.
+
+If you install this template override, you need to be aware that there will be
+no support for any kind of issues you might encounter and you have to figure it out
+on your own.
+
+
+## Install
 
 ```shell
 pip install tnnt-templates
