@@ -165,7 +165,8 @@ jobs:
   # Coverage upload to Codecov and Codacy
   upload-coverage:
     if: ${{ github.event_name == 'pull_request' }}
-    needs: [ test-coverage-aa-stable ]
+    needs: [ test-coverage-allianceauth ]
+#    needs: [ test-coverage-allianceauth, test-coverage-allianceauth-dev ]
     name: Upload Coverage
     runs-on: ubuntu-latest
 
