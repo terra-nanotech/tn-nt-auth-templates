@@ -108,9 +108,10 @@ jobs:
           ALLIANCEAUTH: stable
 
       - name: Upload Coverage Artifacts
+        if: ${{ github.event_name == 'pull_request' && matrix.python-version == '3.10' && matrix.django-version == '4.0' }}
         uses: actions/upload-artifact@v2
         with:
-          name: coverage-aa-stable-python-${{ matrix.python-version }}-django-${{ matrix.django-version }}
+          name: coverage-${{ github.event_name }}-${{ github.sha }}
           path: coverage.xml
           if-no-files-found: ignore
 
@@ -163,8 +164,8 @@ jobs:
 
   # Coverage upload to Codecov and Codacy
   upload-coverage:
-    needs: [ test-coverage-allianceauth ]
-    #    needs: [ test-coverage-allianceauth, test-coverage-allianceauth-dev ]
+    if: ${{ github.event_name == 'pull_request' }}
+    needs: [ test-coverage-aa-stable ]
     name: Upload Coverage
     runs-on: ubuntu-latest
 
@@ -177,7 +178,7 @@ jobs:
         with:
           path: artifacts
 
-      - name: Display structure of downloaded files
+      - name: Display the structure of the downloaded files
         run: ls -Rrtlh
         working-directory: artifacts
 
@@ -185,7 +186,7 @@ jobs:
         uses: codecov/codecov-action@v2
         with:
           token: ${{ secrets.CODECOV_TOKEN }} # not required for public repos
-          files: artifacts/coverage-aa-stable-python-3.10-django-4.0/coverage.xml # optional
+          files: artifacts/coverage-${{ github.event_name }}-${{ github.sha }}/coverage.xml # optional
 #          flags: unittests # optional
 #          name: codecov-umbrella # optional
 #          fail_ci_if_error: true # optional (default = false)
@@ -195,7 +196,7 @@ jobs:
         uses: codacy/codacy-coverage-reporter-action@v1
         with:
           project-token: ${{ secrets.CODACY_PROJECT_TOKEN }}
-          coverage-reports: artifacts/coverage-aa-stable-python-3.10-django-4.0/coverage.xml
+          coverage-reports: artifacts/coverage-${{ github.event_name }}-${{ github.sha }}/coverage.xml
 
   # Pypi Build Test
   pypi-build-test:

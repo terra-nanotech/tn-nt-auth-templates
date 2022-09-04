@@ -414,6 +414,10 @@
     blockquote {
         font-size: 0.95rem;
     }
+
+    .fade.in {
+        backdrop-filter: blur(5px) grayscale(100%);
+    }
 }
 
 /* Eve time in navbar
