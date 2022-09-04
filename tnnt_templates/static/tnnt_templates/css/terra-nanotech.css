@@ -415,7 +415,8 @@
         font-size: 0.95rem;
     }
 
-    .fade.in {
+    .fade.in,
+    .modal.in {
         backdrop-filter: blur(5px) grayscale(100%);
     }
 }
