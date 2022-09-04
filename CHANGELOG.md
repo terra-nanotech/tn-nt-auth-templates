@@ -15,6 +15,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - CSS overrides for AA Forum's Personal Messages feature
 
+### Changed
+
+- Backdrop effect for modal windows
+
 
 ## [2.7.3] - 2022-08-28
 
