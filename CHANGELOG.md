@@ -9,6 +9,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [In Development] - Unreleased
 
 
+## [2.7.7] - 2022-09-09
+
+### Fixed
+
+- Use the right markup for the celery progress bar
+
+
 ## [2.7.6] - 2022-09-04
 
 ### Changed
