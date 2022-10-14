@@ -8,6 +8,15 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [In Development] - Unreleased
 
+### Added
+
+- Token Management page and menu item (AA 3.3.0 | See: https://gitlab.com/allianceauth/allianceauth/-/issues/1356)
+
+### Changed
+
+- Minimum Requirements
+  - Alliance Auth >= 3.3.0
+
 
 ## [2.7.7] - 2022-09-09
 

@@ -53,7 +53,7 @@
                     </div>
                     <div class="panel-body text-center" style="min-height: 100px;">
                         <p>Expires in: <span id="countdown{{ tl.link_ref }}hot"></span></p>
-                        <pre>{{ request.scheme }}://{{ request.get_host }}{% url 'mumbletemps:join' tl.link_ref %}</pre>
+                        <pre>{{ SITE_URL }}{% url 'mumbletemps:join' tl.link_ref %}</pre>
                         <button class="btn btn-info col-md-12" id="clipboard-new" data-clipboard-text="{{ request.scheme }}://{{request.get_host}}{% url 'mumbletemps:join' tl.link_ref %}">Copy to Clipboard!</button>
                     </div>
                 </div>
@@ -88,7 +88,7 @@
                                     </td>
                                     <td class="valign-middle">{{ lnk.link_ref }}</td>
                                     <td class=valign-middle" id="countdown{{ lnk.link_ref }}"></td>
-                                    <td class="text-center valign-middle"><button class="btn btn-info" id="clipboard-{{ lnk.link_ref }}" data-clipboard-text="{{ request.scheme }}://{{ request.get_host }}{% url 'mumbletemps:join' lnk.link_ref %}">Copy to Clipboard!</button></td>
+                                    <td class="text-center valign-middle"><button class="btn btn-info" id="clipboard-{{ lnk.link_ref }}" data-clipboard-text="{{ SITE_URL }}{% url 'mumbletemps:join' lnk.link_ref %}">Copy to Clipboard!</button></td>
                                     <td class="text-center valign-middle"><a class="btn btn-danger" href="{% url 'mumbletemps:nuke' lnk.link_ref %}">Nuke Link!</a></td>
                                 </tr>
                             {% endfor %}
