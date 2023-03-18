@@ -44,6 +44,8 @@
     }
 
     code {
+        background-color: rgb(240 240 240);
+        color: rgb(58 63 68);
         font-family: var(--font-family-code);
     }
 

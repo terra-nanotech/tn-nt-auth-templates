@@ -9,6 +9,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [In Development] - Unreleased
 
 
+## [2.8.1] - 2023-03-18
+
+### Changed
+
+- Colors for code blocks updated
+
+
 ## [2.8.0] - 2022-10-14
 
 ### Added
