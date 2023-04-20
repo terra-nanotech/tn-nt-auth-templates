@@ -11,6 +11,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [2.9.0] - 2023-04-20
 
+### Fixed
+
+- Added missing `readonly` attribute to EFT fitting
+
+
+## [2.9.0] - 2023-04-20
+
 ### Changed
 
 - Templates for the `fittings` module adapted for v2.0.0 of the module
