@@ -41,5 +41,5 @@ build_test:
 	python3 -m build
 
 tox_tests:
-	tox && \
-	rm -rf .tox/
+	export USE_MYSQL=False && \
+	tox
