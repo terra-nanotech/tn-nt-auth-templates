@@ -30,6 +30,8 @@ INSTALLED_APPS = [
     "allianceauth.thirdparty.navhelper",
 ]
 
+PACKAGE = "tnnt_templates"
+
 SECRET_KEY = "wow I'm a really bad default secret key"
 
 # Celery configuration
@@ -141,7 +143,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 STATIC_URL = "/static/"
 STATICFILES_DIRS = [
-    os.path.join(PROJECT_DIR, "static"),
+    os.path.join(PROJECT_DIR, f"{PACKAGE}/static"),
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
@@ -165,6 +167,10 @@ DATABASES = {
 }
 
 SITE_NAME = "Alliance Auth"
+SITE_URL = "https://example.com"
+CSRF_TRUSTED_ORIGINS = [SITE_URL]
+
+DISCORD_BOT_TOKEN = "My_Dummy_Token"
 
 LOGIN_URL = "auth_login_user"  # view that handles login logic
 
@@ -254,6 +260,21 @@ SITE_NAME = "testauth"
 # useful error messages but can leak sensitive data.
 DEBUG = False
 
+if os.environ.get("USE_MYSQL", True) is True:
+    DATABASES["default"] = {
+        "ENGINE": "django.db.backends.mysql",
+        "NAME": "tox_allianceauth",
+        "USER": os.environ.get("DB_USER", "user"),
+        "PASSWORD": os.environ.get("DB_PASSWORD", "password"),
+        "HOST": os.environ.get("DB_HOST", ""),
+        "PORT": os.environ.get("DB_PORT", ""),
+        "OPTIONS": {"charset": "utf8mb4"},
+        "TEST": {
+            "CHARSET": "utf8mb4",
+            "NAME": "test_tox_allianceauth",
+        },
+    }
+
 # Add any additional apps to this list.
 # TN-NT Auth Templates - https://github.com/terra-nanotech/tn-nt-auth-templates
 INSTALLED_APPS.insert(0, "tnnt_templates")
@@ -287,7 +308,6 @@ TNNT_TEMPLATE_URLS_OTHER_WEBSITES = [
         "new_tab": True,
     },
 ]
-
 
 # Register an application at https://developers.eveonline.com for Authentication
 # & API Access and fill out these settings. Be sure to set the callback URL

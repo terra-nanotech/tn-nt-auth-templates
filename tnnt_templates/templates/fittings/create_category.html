@@ -1,4 +1,4 @@
-{% extends 'fittings/base.html' %}
+{% extends "fittings/base.html" %}
 
 {% load i18n %}
 {% load humanize %}
@@ -71,23 +71,22 @@
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <label for="fitSelect">{% translate "Select Fits" %}</label>
+                                        <label for="fitSelect">{% translate "Select Fittings" %}</label>
 
                                         <select name="fitSelect" id="fitSelect" multiple>
                                             {% for fit in fits %}
-                                            <option value="{{fit.pk}}">{{fit.name}}</option>
+                                                <option value="{{fit.pk}}">{{fit.name}}</option>
                                             {% endfor %}
                                         </select>
                                     </div>
                                 </div>
-
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label for="docSelect">{% translate "Select Doctrines" %}</label>
 
                                         <select name="docSelect" id="docSelect" multiple>
                                             {% for doc in docs %}
-                                            <option value="{{doc.pk}}">{{doc.name}}</option>
+                                                <option value="{{doc.pk}}">{{doc.name}}</option>
                                             {% endfor %}
                                         </select>
                                     </div>
@@ -108,21 +107,36 @@
     <script src="{% static 'tnnt_templates/libs/slim-select/1.26.0/dist/slimselect.min.js' %}"></script>
 
     <script>
-        let color_picker = document.getElementById("color");
-        let color_picker_wrapper = document.getElementById("color-wrapper");
+        const color_picker = document.getElementById('color');
+        const color_picker_wrapper = document.getElementById('color-wrapper');
 
-        color_picker.onchange = function () {
+        color_picker.onchange = function() {
             color_picker_wrapper.style.backgroundColor = color_picker.value;
         }
-
         color_picker_wrapper.style.backgroundColor = color_picker.value;
 
         new SlimSelect({
             select: "#groupSelect",
-            hideSelectedOption: true
+            hideSelectedOption: true,
+            placeholder: '{% translate "Select Value" %}',
+            searchText: '{% translate "No Results" %}',
+            searchPlaceholder: '{% translate "Search" %}'
         });
 
-        new SlimSelect({select: "#fitSelect", hideSelectedOption: true});
-        new SlimSelect({select: "#docSelect", hideSelectedOption: true});
+        new SlimSelect({
+            select: "#fitSelect",
+            hideSelectedOption: true,
+            placeholder: '{% translate "Select Value" %}',
+            searchText: '{% translate "No Results" %}',
+            searchPlaceholder: '{% translate "Search" %}'
+        });
+
+        new SlimSelect({
+            select: "#docSelect",
+            hideSelectedOption: true,
+            placeholder: '{% translate "Select Value" %}',
+            searchText: '{% translate "No Results" %}',
+            searchPlaceholder: '{% translate "Search" %}'
+        });
     </script>
 {% endblock %}
