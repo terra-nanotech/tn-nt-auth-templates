@@ -1,18 +1,20 @@
+# "H. Peter Pfeufer" <info@ppfeufer.de>, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: TN-NT Auth Templates\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-04-20 13:48+0200\n"
-"PO-Revision-Date: 2020-09-02 18:16+0200\n"
-"Last-Translator: \n"
-"Language-Team: Terra Nanotech\n"
+"PO-Revision-Date: 2023-04-20 12:26+0000\n"
+"Last-Translator: \"H. Peter Pfeufer\" <info@ppfeufer.de>\n"
+"Language-Team: German <https://weblate.ppfeufer.de/projects/"
+"alliance-auth-apps/terra-nanotech-auth-templates/de/>\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Poedit 2.2.4\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.16.4\n"
 "X-Poedit-Basepath: ../../..\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: templates/afat/partials/statistics/alliance/tabs/graphs.html:6
@@ -20,41 +22,41 @@ msgstr ""
 #: templates/afat/partials/statistics/corporation/tabs/graphs.html:6
 #: templates/afat/partials/statistics/corporation/tabs/graphs.html:14
 msgid "FATs By Ship Type"
-msgstr ""
+msgstr "FATs nach Schiffsart"
 
 #: templates/afat/partials/statistics/alliance/tabs/graphs.html:7
 msgid "Corporation Performance"
-msgstr ""
+msgstr "Corporation Performance"
 
 #: templates/afat/partials/statistics/alliance/tabs/graphs.html:8
 #: templates/afat/partials/statistics/alliance/tabs/graphs.html:47
 #: templates/afat/partials/statistics/corporation/tabs/graphs.html:7
 #: templates/afat/partials/statistics/corporation/tabs/graphs.html:58
 msgid "FATs By Time"
-msgstr ""
+msgstr "FATs nach Zeit"
 
 #: templates/afat/partials/statistics/alliance/tabs/graphs.html:9
 #: templates/afat/partials/statistics/alliance/tabs/graphs.html:79
 #: templates/afat/partials/statistics/corporation/tabs/graphs.html:8
 #: templates/afat/partials/statistics/corporation/tabs/graphs.html:88
 msgid "FATs By Weekday"
-msgstr ""
+msgstr "FATs nach Wochentag"
 
 #: templates/afat/partials/statistics/alliance/tabs/graphs.html:111
 msgid "Average FATs By Corporation"
-msgstr ""
+msgstr "Durchschnittliche FATs nach Corporation"
 
 #: templates/afat/partials/statistics/character/tabs/graphs.html:6
 msgid "FATs by Ship Type"
-msgstr ""
+msgstr "FATs nach Schiffsart"
 
 #: templates/afat/partials/statistics/character/tabs/graphs.html:30
 msgid "FATs by Time of Day"
-msgstr ""
+msgstr "FATs nach Tageszeit"
 
 #: templates/afat/partials/statistics/character/tabs/graphs.html:41
 msgid "# of FATs"
-msgstr ""
+msgstr "Anz. FATs"
 
 #: templates/allianceauth/admin-status/overview.html:9
 msgid "Alliance Auth Notifications"
@@ -67,7 +69,7 @@ msgstr ""
 
 #: templates/allianceauth/admin-status/overview.html:19
 msgid "Closed"
-msgstr ""
+msgstr "Geschlossen"
 
 #: templates/allianceauth/admin-status/overview.html:32
 msgid "Powered by GitLab"
@@ -186,7 +188,7 @@ msgstr ""
 
 #: templates/allianceauth/top-menu.html:9 templates/fittings/base.html:44
 msgid "Toggle navigation"
-msgstr ""
+msgstr "Navigation umschalten"
 
 #: templates/authentication/dashboard.html:7
 #: templates/authentication/dashboard.html:11
@@ -238,7 +240,7 @@ msgstr ""
 #: templates/permissions_tool/overview.html:36
 #: templates/smartgroups/groups.html:20
 msgid "Name"
-msgstr ""
+msgstr "Name"
 
 #: templates/authentication/dashboard.html:132
 #: templates/hrapplications/view.html:61
@@ -249,7 +251,7 @@ msgstr ""
 #: templates/blacklist/evenotes.html:46 templates/corpstat/corpstats.html:113
 #: templates/hrapplications/view.html:62
 msgid "Alliance"
-msgstr ""
+msgstr "Allianz"
 
 #: templates/authentication/tokens.html:14
 msgid "Scopes"
@@ -263,7 +265,7 @@ msgstr ""
 #: templates/hrapplications/view.html:103 templates/srp/data.html:116
 #: templates/srp/management.html:57
 msgid "Actions"
-msgstr ""
+msgstr "Aktionen"
 
 #: templates/authentication/tokens.html:16
 #: templates/corpstat/corpstats.html:111 templates/corpstat/corpstats.html:163
@@ -274,7 +276,7 @@ msgstr ""
 #: templates/groupmanagement/index.html:43
 #: templates/groupmanagement/index.html:102
 msgid "Character"
-msgstr ""
+msgstr "Charakter"
 
 #: templates/authentication/tokens.html:32
 msgid ""
@@ -301,7 +303,7 @@ msgstr ""
 #: templates/fittings/base.html:77 templates/fittings/view_category.html:37
 #: templates/fittings/view_doctrine.html:104
 msgid "Category"
-msgstr ""
+msgstr "Kategorie"
 
 #: templates/blacklist/blacklist.html:68
 msgid "No one is yet to be Blacklisted. You guys are so nice!"
@@ -344,7 +346,7 @@ msgstr ""
 #: templates/hrapplications/management.html:144
 #: templates/hrapplications/searchview.html:31
 msgid "Corporation"
-msgstr ""
+msgstr "Corporation"
 
 #: templates/blacklist/evenotes.html:74
 msgid "BLACKLISTED"
@@ -360,13 +362,13 @@ msgstr ""
 
 #: templates/corpstat/alliancestats.html:13
 msgid "Corporation Stats"
-msgstr ""
+msgstr "Corporation Statistik"
 
 #: templates/corpstat/alliancestats.html:23
 #: templates/corpstat/corpstats.html:58
 #: templates/groupmanagement/groupmembers.html:14
 msgid "Members"
-msgstr ""
+msgstr "Mitglieder"
 
 #: templates/corpstat/alliancestats.html:24
 #: templates/corpstat/corpstats.html:57
@@ -388,7 +390,7 @@ msgstr ""
 
 #: templates/corpstat/alliancestats.html:35
 msgid "Last Update"
-msgstr ""
+msgstr "Letzte Aktualisierung"
 
 #: templates/corpstat/base.html:6 templates/corpstat/base.html:10
 msgid "Corporation Member Data"
@@ -396,11 +398,11 @@ msgstr ""
 
 #: templates/corpstat/base.html:17
 msgid "Corporations"
-msgstr ""
+msgstr "Corporations"
 
 #: templates/corpstat/base.html:33 templates/srp/management.html:19
 msgid "View All"
-msgstr ""
+msgstr "Alle ansehen"
 
 #: templates/corpstat/base.html:39
 msgid "Add"
@@ -428,11 +430,11 @@ msgstr ""
 
 #: templates/corpstat/corpstats.html:36
 msgid "Activated"
-msgstr ""
+msgstr "Aktiviert"
 
 #: templates/corpstat/corpstats.html:59
 msgid "Unregistered"
-msgstr ""
+msgstr "Unregistriert"
 
 #: templates/corpstat/corpstats.html:61
 msgid "Member Tracking"
@@ -440,7 +442,7 @@ msgstr ""
 
 #: templates/corpstat/corpstats.html:65
 msgid "Last update:"
-msgstr ""
+msgstr "Letzte Aktualisierung:"
 
 #: templates/corpstat/corpstats.html:85 templates/corpstat/corpstats.html:165
 #: templates/corpstat/corpstats.html:271
@@ -449,21 +451,21 @@ msgstr ""
 #: templates/hrapplications/searchview.html:30
 #: templates/hrapplications/view.html:37
 msgid "Main Character"
-msgstr ""
+msgstr "Hauptcharakter"
 
 #: templates/corpstat/corpstats.html:137 templates/corpstat/corpstats.html:183
 #: templates/corpstat/corpstats.html:213 templates/corpstat/corpstats.html:248
 #: templates/corpstat/corpstats.html:286
 msgid "Killboard"
-msgstr ""
+msgstr "Killboard"
 
 #: templates/corpstat/corpstats.html:147
 msgid "Active"
-msgstr ""
+msgstr "Aktiv"
 
 #: templates/corpstat/corpstats.html:147
 msgid "Inactive"
-msgstr ""
+msgstr "Inaktiv"
 
 #: templates/corpstat/corpstats.html:166 templates/corpstat/corpstats.html:272
 msgid "Main Corporation"
@@ -483,7 +485,7 @@ msgstr ""
 
 #: templates/corpstat/corpstats.html:322
 msgid "Ship"
-msgstr ""
+msgstr "Schiff"
 
 #: templates/corpstat/corpstats.html:323
 msgid "Last Online"
@@ -499,7 +501,7 @@ msgstr ""
 
 #: templates/esi/select_token.html:13
 msgid "Character Selection"
-msgstr ""
+msgstr "Charakterauswahl"
 
 #: templates/esi/select_token.html:25
 msgid "Scopes Requested"
@@ -575,7 +577,7 @@ msgstr ""
 #: templates/fittings/edit_doctrine.html:101
 #: templates/fittings/edit_fit.html:56 templates/hrapplications/create.html:29
 msgid "Submit"
-msgstr ""
+msgstr "Absenden"
 
 #: templates/fittings/add_doctrine.html:127
 #: templates/fittings/create_category.html:123
@@ -585,7 +587,7 @@ msgstr ""
 #: templates/hrapplications/management.html:211
 #: templates/hrapplications/searchview.html:77
 msgid "Search"
-msgstr ""
+msgstr "Suche"
 
 #: templates/fittings/add_fit.html:7 templates/fittings/add_fit.html:33
 msgid "Add Fitting"
@@ -601,7 +603,7 @@ msgstr ""
 #: templates/groupmanagement/groups.html:20
 #: templates/optimer/fleetoptable.html:9 templates/smartgroups/groups.html:21
 msgid "Description"
-msgstr ""
+msgstr "Beschreibung"
 
 #: templates/fittings/add_fit.html:55 templates/fittings/base.html:75
 #: templates/fittings/edit_fit.html:48 templates/fittings/view_fit.html:134
@@ -630,7 +632,7 @@ msgstr ""
 #: templates/fittings/base.html:76 templates/fittings/view_doctrine.html:7
 #: templates/optimer/fleetoptable.html:10
 msgid "Doctrine"
-msgstr ""
+msgstr "Doktrin"
 
 #: templates/fittings/create_category.html:22
 msgid "Add Category"
@@ -638,12 +640,12 @@ msgstr ""
 
 #: templates/fittings/create_category.html:28
 msgid "New Category"
-msgstr ""
+msgstr "Neue Kategorie"
 
 #: templates/fittings/create_category.html:40
 #: templates/fittings/edit_category.html:40
 msgid "Category Name"
-msgstr ""
+msgstr "Kategoriename"
 
 #: templates/fittings/create_category.html:47
 #: templates/fittings/edit_category.html:48
@@ -653,7 +655,7 @@ msgstr ""
 #: templates/fittings/create_category.html:58
 #: templates/fittings/edit_category.html:60
 msgid "Select Groups"
-msgstr ""
+msgstr "Gruppenauswahl"
 
 #: templates/fittings/create_category.html:60
 #: templates/fittings/edit_category.html:62
@@ -716,7 +718,7 @@ msgstr ""
 #: templates/fittings/view_all_categories.html:65
 #: templates/fittings/view_category.html:41
 msgid "Edit Category"
-msgstr ""
+msgstr "Kategorie bearbeiten"
 
 #: templates/fittings/edit_doctrine.html:19
 #: templates/fittings/view_doctrine.html:47
@@ -769,7 +771,7 @@ msgstr ""
 #: templates/fittings/view_all_categories.html:68
 #: templates/fittings/view_category.html:44
 msgid "Delete Category"
-msgstr ""
+msgstr "Kategorie löschen"
 
 #: templates/fittings/view_all_categories.html:80
 msgid ""
@@ -791,7 +793,7 @@ msgstr ""
 #: templates/fittings/view_category.html:142
 #: templates/fittings/view_doctrine.html:102 templates/srp/data.html:108
 msgid "Ship Type"
-msgstr ""
+msgstr "Schiffstyp"
 
 #: templates/fittings/view_category.html:60
 #: templates/groupmanagement/groupmembership.html:13
@@ -865,7 +867,7 @@ msgstr ""
 #: templates/hrapplications/view.html:185
 #: templates/structuretimers/timer_list.html:97
 msgid "Close"
-msgstr ""
+msgstr "Abbrechen"
 
 #: templates/fittings/view_fit.html:78
 msgid "Fit Information"
@@ -968,7 +970,7 @@ msgstr ""
 #: templates/groupmanagement/groupmembers.html:20
 #: templates/permissions_tool/audit.html:13
 msgid "Back"
-msgstr ""
+msgstr "Zurück"
 
 #: templates/groupmanagement/audit.html:28
 msgid "Date/Time"
@@ -976,11 +978,11 @@ msgstr ""
 
 #: templates/groupmanagement/audit.html:29
 msgid "Requestor"
-msgstr ""
+msgstr "Anforderer"
 
 #: templates/groupmanagement/audit.html:32
 msgid "Type"
-msgstr ""
+msgstr "Typ"
 
 #: templates/groupmanagement/audit.html:33 templates/notifications/list.html:30
 #: templates/notifications/list.html:65 templates/optimer/fleetoptable.html:17
@@ -1044,7 +1046,7 @@ msgstr ""
 #: templates/hrapplications/management.html:145
 #: templates/hrapplications/searchview.html:32 templates/srp/data.html:114
 msgid "Status"
-msgstr ""
+msgstr "Status"
 
 #: templates/groupmanagement/groupmembership.html:24
 msgid "Member Count"
@@ -1096,11 +1098,11 @@ msgstr ""
 #: templates/smartgroups/groups.html:65 templates/srp/data.html:159
 #: templates/srp/management.html:95
 msgid "Pending"
-msgstr ""
+msgstr "Ausstehend"
 
 #: templates/groupmanagement/groups.html:44
 msgid "Join"
-msgstr ""
+msgstr "Beitreten"
 
 #: templates/groupmanagement/groups.html:48
 #: templates/smartgroups/groups.html:61
@@ -1202,14 +1204,14 @@ msgstr ""
 #: templates/hrapplications/searchview.html:45
 #: templates/hrapplications/view.html:17 templates/srp/data.html:151
 msgid "Approved"
-msgstr ""
+msgstr "Akzeptiert"
 
 #: templates/hrapplications/management.html:49
 #: templates/hrapplications/management.html:117
 #: templates/hrapplications/management.html:167
 #: templates/hrapplications/searchview.html:47 templates/srp/data.html:155
 msgid "Rejected"
-msgstr ""
+msgstr "Abgelehnt"
 
 #: templates/hrapplications/management.html:72
 msgid "Application Management"
@@ -1229,7 +1231,7 @@ msgstr ""
 #: templates/hrapplications/management.html:91
 #: templates/hrapplications/management.html:141
 msgid "Date"
-msgstr ""
+msgstr "Datum"
 
 #: templates/hrapplications/management.html:110
 #: templates/hrapplications/management.html:160
@@ -1278,7 +1280,7 @@ msgstr ""
 
 #: templates/hrapplications/view.html:36
 msgid "User"
-msgstr ""
+msgstr "Nutzer"
 
 #: templates/hrapplications/view.html:111
 msgid "Approve"
@@ -1286,7 +1288,7 @@ msgstr ""
 
 #: templates/hrapplications/view.html:123
 msgid "Delete"
-msgstr ""
+msgstr "Löschen"
 
 #: templates/hrapplications/view.html:128
 msgid "Mark in Progress"
@@ -1294,7 +1296,7 @@ msgstr ""
 
 #: templates/hrapplications/view.html:134
 msgid "Comment"
-msgstr ""
+msgstr "Kommentar"
 
 #: templates/hrapplications/view.html:144
 msgid "Comments"
@@ -1323,7 +1325,7 @@ msgstr ""
 
 #: templates/notifications/list.html:12
 msgid "Unread"
-msgstr ""
+msgstr "Ungelesen"
 
 #: templates/notifications/list.html:13
 msgid "Read"
@@ -1379,7 +1381,7 @@ msgstr ""
 
 #: templates/optimer/fleetoptable.html:13
 msgid "Local Time"
-msgstr ""
+msgstr "Ortszeit"
 
 #: templates/optimer/fleetoptable.html:14
 msgid "Duration"
@@ -1387,7 +1389,7 @@ msgstr ""
 
 #: templates/optimer/fleetoptable.html:15
 msgid "FC"
-msgstr ""
+msgstr "FC"
 
 #: templates/optimer/management.html:4
 msgid "Fleet Operation Management"
@@ -1501,7 +1503,7 @@ msgstr ""
 #: templates/public/register.html:27
 msgid "Please provide your email address for registration confirmation."
 msgstr ""
-"Bitte trage eine E-Mail Adresse  ein. Du erhältst dann einen Link zur "
+"Bitte trage eine E-Mail Adresse ein. Du erhältst dann einen Link zur "
 "Bestätigung Deine Anmeldung."
 
 #: templates/registration/activate.html:6
@@ -1668,7 +1670,7 @@ msgstr ""
 
 #: templates/srp/data.html:67
 msgid "Mark Completed"
-msgstr ""
+msgstr "Als beendet markieren"
 
 #: templates/srp/data.html:79 templates/srp/data.html:184
 msgid "Total Losses:"
@@ -1685,7 +1687,7 @@ msgstr ""
 
 #: templates/srp/data.html:100
 msgid "SRP Requests"
-msgstr ""
+msgstr "SRP Anforderungen"
 
 #: templates/srp/data.html:105
 msgid "Pilot Name"
@@ -1693,11 +1695,11 @@ msgstr ""
 
 #: templates/srp/data.html:106
 msgid "Killboard Link"
-msgstr ""
+msgstr "Killboard Link"
 
 #: templates/srp/data.html:107
 msgid "Additional Info"
-msgstr ""
+msgstr "Zusätzliche Informationen"
 
 #: templates/srp/data.html:109
 msgid "Killboard Loss Amt"
@@ -1733,23 +1735,23 @@ msgstr ""
 
 #: templates/srp/management.html:40
 msgid "SRP Links"
-msgstr ""
+msgstr "SRP Links"
 
 #: templates/srp/management.html:48
 msgid "Fleet Name"
-msgstr ""
+msgstr "Flottenname"
 
 #: templates/srp/management.html:49
 msgid "Fleet Time"
-msgstr ""
+msgstr "Flottenzeit"
 
 #: templates/srp/management.html:50
 msgid "Fleet Doctrine"
-msgstr ""
+msgstr "Flottendoktrin"
 
 #: templates/srp/management.html:51
 msgid "Fleet Commander"
-msgstr ""
+msgstr "Flottenkommandant"
 
 #: templates/srp/management.html:52
 msgid "Fleet AAR"
@@ -1761,7 +1763,7 @@ msgstr ""
 
 #: templates/srp/management.html:54
 msgid "Fleet ISK Cost"
-msgstr ""
+msgstr "Flottenkosten"
 
 #: templates/srp/management.html:55
 msgid "SRP Status"
@@ -1773,7 +1775,7 @@ msgstr ""
 
 #: templates/srp/management.html:78
 msgid "Link"
-msgstr ""
+msgstr "Link"
 
 #: templates/srp/management.html:86
 msgid "Disabled"
@@ -1781,7 +1783,7 @@ msgstr ""
 
 #: templates/srp/management.html:99
 msgid "Completed"
-msgstr ""
+msgstr "Beendet"
 
 #: templates/srp/management.html:117
 msgid "Are you sure you want to delete this SRP code and its contents?"
@@ -1793,7 +1795,7 @@ msgstr ""
 
 #: templates/srp/request.html:6
 msgid "SRP Request"
-msgstr ""
+msgstr "SRP Anforderung"
 
 #: templates/srp/request.html:9 templates/srp/request.html:18
 msgid "Create SRP Request"
@@ -1880,7 +1882,7 @@ msgstr ""
 
 #: templates/structuretimers/timer_list.html:111
 msgid "Region"
-msgstr ""
+msgstr "Region"
 
 #: templates/structuretimers/timer_list.html:112
 msgid "Structure Type"
