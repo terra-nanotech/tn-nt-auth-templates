@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-04-20 13:48+0200\n"
+"POT-Creation-Date: 2023-04-20 16:55+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -606,7 +606,7 @@ msgid "Description"
 msgstr ""
 
 #: templates/fittings/add_fit.html:55 templates/fittings/base.html:75
-#: templates/fittings/edit_fit.html:48 templates/fittings/view_fit.html:134
+#: templates/fittings/edit_fit.html:48 templates/fittings/view_fit.html:135
 msgid "Fitting"
 msgstr ""
 
@@ -690,7 +690,7 @@ msgid "Doctrine List"
 msgstr ""
 
 #: templates/fittings/dashboard.html:35
-#: templates/fittings/view_category.html:77 templates/fittings/view_fit.html:96
+#: templates/fittings/view_category.html:77 templates/fittings/view_fit.html:97
 msgid "Doctrines"
 msgstr ""
 
@@ -834,12 +834,12 @@ msgid "Delete Doctrine"
 msgstr ""
 
 #: templates/fittings/view_doctrine.html:68
-#: templates/fittings/view_fit.html:111
+#: templates/fittings/view_fit.html:112
 msgid "Created"
 msgstr ""
 
 #: templates/fittings/view_doctrine.html:77
-#: templates/fittings/view_fit.html:120
+#: templates/fittings/view_fit.html:121
 msgid "Last Updated"
 msgstr ""
 
@@ -859,7 +859,7 @@ msgstr ""
 msgid "EFT Formatted Fitting"
 msgstr ""
 
-#: templates/fittings/view_fit.html:64
+#: templates/fittings/view_fit.html:65
 #: templates/hrapplications/management.html:201
 #: templates/hrapplications/searchview.html:69
 #: templates/hrapplications/view.html:185
@@ -867,95 +867,95 @@ msgstr ""
 msgid "Close"
 msgstr ""
 
-#: templates/fittings/view_fit.html:78
+#: templates/fittings/view_fit.html:79
 msgid "Fit Information"
 msgstr ""
 
-#: templates/fittings/view_fit.html:82
+#: templates/fittings/view_fit.html:83
 msgid "Delete Fit"
 msgstr ""
 
-#: templates/fittings/view_fit.html:87
+#: templates/fittings/view_fit.html:88
 msgid "Edit/Update Fit"
 msgstr ""
 
-#: templates/fittings/view_fit.html:390 templates/fittings/view_fit.html:441
+#: templates/fittings/view_fit.html:391 templates/fittings/view_fit.html:442
 msgid "Hull"
 msgstr ""
 
-#: templates/fittings/view_fit.html:401
+#: templates/fittings/view_fit.html:402
 msgid "Fitting Notes"
 msgstr ""
 
-#: templates/fittings/view_fit.html:419
+#: templates/fittings/view_fit.html:420
 msgid "Fitting Details"
 msgstr ""
 
-#: templates/fittings/view_fit.html:423
+#: templates/fittings/view_fit.html:424
 msgid "Save to EVE"
 msgstr ""
 
-#: templates/fittings/view_fit.html:427
+#: templates/fittings/view_fit.html:428
 msgid "Copy Buy All"
 msgstr ""
 
-#: templates/fittings/view_fit.html:431
+#: templates/fittings/view_fit.html:432
 msgid "Copy Fit (EFT)"
 msgstr ""
 
-#: templates/fittings/view_fit.html:451
+#: templates/fittings/view_fit.html:452
 msgid "SubSystems"
 msgstr ""
 
-#: templates/fittings/view_fit.html:476
+#: templates/fittings/view_fit.html:477
 msgid "High Slots"
 msgstr ""
 
-#: templates/fittings/view_fit.html:481
+#: templates/fittings/view_fit.html:482
 msgid "No High Slot Items"
 msgstr ""
 
-#: templates/fittings/view_fit.html:542
+#: templates/fittings/view_fit.html:543
 msgid "Medium Slots"
 msgstr ""
 
-#: templates/fittings/view_fit.html:547
+#: templates/fittings/view_fit.html:548
 msgid "No Medium Slot Items"
 msgstr ""
 
-#: templates/fittings/view_fit.html:608
+#: templates/fittings/view_fit.html:609
 msgid "Low Slots"
 msgstr ""
 
-#: templates/fittings/view_fit.html:613
+#: templates/fittings/view_fit.html:614
 msgid "No Low Slot Items"
 msgstr ""
 
-#: templates/fittings/view_fit.html:674
+#: templates/fittings/view_fit.html:675
 msgid "Rig Slots"
 msgstr ""
 
-#: templates/fittings/view_fit.html:679
+#: templates/fittings/view_fit.html:680
 msgid "No Rig Slot Items"
 msgstr ""
 
-#: templates/fittings/view_fit.html:706
+#: templates/fittings/view_fit.html:707
 msgid "Service Slots"
 msgstr ""
 
-#: templates/fittings/view_fit.html:768
+#: templates/fittings/view_fit.html:769
 msgid "Fighter Tubes"
 msgstr ""
 
-#: templates/fittings/view_fit.html:809
+#: templates/fittings/view_fit.html:810
 msgid "Cargo Bay"
 msgstr ""
 
-#: templates/fittings/view_fit.html:822
+#: templates/fittings/view_fit.html:823
 msgid "Drone Bay"
 msgstr ""
 
-#: templates/fittings/view_fit.html:835
+#: templates/fittings/view_fit.html:836
 msgid "Fighter Bay"
 msgstr ""
 

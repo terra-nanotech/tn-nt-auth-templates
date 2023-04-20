@@ -9,6 +9,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [In Development] - Unreleased
 
 
+## [2.9.1] - 2023-04-20
+
+### Fixed
+
+- Added missing `readonly` attribute to EFT fitting
+
+
 ## [2.9.0] - 2023-04-20
 
 ### Changed
