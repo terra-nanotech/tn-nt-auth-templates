@@ -8,6 +8,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [In Development] - Unreleased
 
+### Changed
+
+- Templates for the `fittings` module adapted for v2.0.0 of the module
+
 
 ## [2.8.1] - 2023-03-18
 

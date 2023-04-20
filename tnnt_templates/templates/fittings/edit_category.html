@@ -38,6 +38,7 @@
                                 <div class="col-sm-10">
                                     <div class="form-group">
                                         <label for="name">{% translate "Category Name" %}</label>
+
                                         <input type="text" class="form-control" name="name" id="name" value="{{cat.name}}" required>
                                     </div>
                                 </div>
@@ -76,19 +77,18 @@
 
                                         <select name="fitSelect" id="fitSelect" multiple>
                                             {% for fit in fits %}
-                                            <option value="{{fit.pk}}" {% if fit in cat.fittings.all %} selected {% endif %}>{{fit.name}}</option>
+                                                <option value="{{fit.pk}}" {% if fit in cat.fittings.all %} selected {% endif %}>{{fit.name}}</option>
                                             {% endfor %}
                                         </select>
                                     </div>
                                 </div>
-
                                 <div class="col-sm-6">
                                     <div class="form-group">
                                         <label for="docSelect">{% translate "Select Doctrines" %}</label>
 
                                         <select name="docSelect" id="docSelect" multiple>
                                             {% for doc in docs %}
-                                            <option value="{{doc.pk}}" {% if doc in cat.doctrines.all %} selected {% endif %}>{{doc.name}}</option>
+                                                <option value="{{doc.pk}}" {% if doc in cat.doctrines.all %} selected {% endif %}>{{doc.name}}</option>
                                             {% endfor %}
                                         </select>
                                     </div>
