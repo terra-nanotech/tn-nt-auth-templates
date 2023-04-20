@@ -30,6 +30,8 @@ INSTALLED_APPS = [
     "allianceauth.thirdparty.navhelper",
 ]
 
+PACKAGE = "tnnt_templates"
+
 SECRET_KEY = "wow I'm a really bad default secret key"
 
 # Celery configuration
@@ -141,7 +143,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 STATIC_URL = "/static/"
 STATICFILES_DIRS = [
-    os.path.join(PROJECT_DIR, "static"),
+    os.path.join(PROJECT_DIR, f"{PACKAGE}/static"),
 ]
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
 
@@ -165,6 +167,10 @@ DATABASES = {
 }
 
 SITE_NAME = "Alliance Auth"
+SITE_URL = "https://example.com"
+CSRF_TRUSTED_ORIGINS = [SITE_URL]
+
+DISCORD_BOT_TOKEN = "My_Dummy_Token"
 
 LOGIN_URL = "auth_login_user"  # view that handles login logic
 
@@ -302,7 +308,6 @@ TNNT_TEMPLATE_URLS_OTHER_WEBSITES = [
         "new_tab": True,
     },
 ]
-
 
 # Register an application at https://developers.eveonline.com for Authentication
 # & API Access and fill out these settings. Be sure to set the callback URL
