@@ -8,6 +8,9 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [In Development] - Unreleased
 
+
+## [2.9.2] - 2023-07-30
+
 ### Added
 
 - Styles for app footer
