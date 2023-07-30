@@ -12,6 +12,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 - Styles for app footer
 
+### Changed
+
+- Moved the build process to PEP 621 / pyproject.toml
+
 ### Removed
 
 - Translation files, makes no sense in a template override
