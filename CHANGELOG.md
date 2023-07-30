@@ -9,6 +9,21 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [In Development] - Unreleased
 
 
+## [2.9.2] - 2023-07-30
+
+### Added
+
+- Styles for app footer
+
+### Changed
+
+- Moved the build process to PEP 621 / pyproject.toml
+
+### Removed
+
+- Translation files, makes no sense in a template override
+
+
 ## [2.9.1] - 2023-04-20
 
 ### Fixed

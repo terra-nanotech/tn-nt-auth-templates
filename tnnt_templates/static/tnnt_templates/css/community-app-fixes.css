@@ -25,6 +25,17 @@
     }
 }
 
+/* App footer
+------------------------------------------------------------------------------------- */
+@media all {
+    .aa-bulletin-board-footer, .aa-discord-announcements-footer, .aa-fleetpings-footer,
+    .aa-timezones-footer, .allianceauth-afat-footer, .aa-esistatus-footer,
+    .aa-srp-footer, .aa-sovtimer-footer, .aa-fleetfinder-footer, .aa-intel-tool-footer,
+    .aa-forum-footer, .aa-survey-footer {
+        border-top: 1px solid var(--background-panel-default);
+    }
+}
+
 /* App: ckEditor
 ------------------------------------------------------------------------------------- */
 @media all {
