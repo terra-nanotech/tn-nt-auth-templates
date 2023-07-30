@@ -43,3 +43,6 @@ build_test:
 tox_tests:
 	export USE_MYSQL=False && \
 	tox
+
+hatchling:
+	hatch new --init
