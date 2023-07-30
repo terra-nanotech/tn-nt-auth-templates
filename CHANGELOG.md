@@ -8,6 +8,14 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [In Development] - Unreleased
 
+### Added
+
+- Styles for app footer
+
+### Removed
+
+- Translation files, makes no sense in a template override
+
 
 ## [2.9.1] - 2023-04-20
 
