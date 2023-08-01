@@ -113,8 +113,12 @@
                     </div>
 
                     <p>
+                        {% blocktranslate with tasks_count=tasks_running|default_if_none:"?"|intcomma %}
+                            Running: {{ tasks_count }}
+                        {% endblocktranslate %}
+
                         {% blocktranslate with tasks_count=task_queue_length|default_if_none:"?"|intcomma %}
-                            Queued: {{ tasks_count }}
+                            | Queued: {{ tasks_count }}
                         {% endblocktranslate %}
 
                         {% if tasks_succeeded %}
