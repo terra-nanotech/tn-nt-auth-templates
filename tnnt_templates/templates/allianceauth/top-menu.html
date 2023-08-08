@@ -22,6 +22,7 @@
                         <img class="img-rounded" src="{{ TNNT_TEMPLATE_ENTITY_ID|corporation_logo_url:32 }}" style="display: inline-block;" height="32" width="32" alt="{{ TNNT_TEMPLATE_ENTITY_NAME }}">
                     {% endif %}
                 {% endif %}
+
                 {{ SITE_NAME }}
             </a>
         </div>
@@ -31,9 +32,12 @@
                 <li class="nav-item-eve-time">
                     <div class="eve-time-wrapper">Eve Time: <span class="eve-time-clock"></span></div>
                 </li>
-                <li class="{% navactive request 'notifications:' %}" id="menu_item_notifications">
-                    {% include 'allianceauth/notifications_menu_item.html' %}
-                </li>
+
+                {% if user.is_authenticated %}
+                    <li class="{% navactive request 'notifications:' %}" id="menu_item_notifications">
+                        {% include 'allianceauth/notifications_menu_item.html' %}
+                    </li>
+                {% endif %}
 
                 {% include 'allianceauth/top-menu-user-dropdown.html' %}
             </ul>
