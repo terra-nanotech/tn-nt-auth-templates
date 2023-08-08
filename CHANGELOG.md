@@ -9,6 +9,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [In Development] - Unreleased
 
 
+## [2.11.2] - 2023-08-08
+
+### Fixed
+
+- Allow system messages also for non-logged-in users
+
+
 ## [2.11.1] - 2023-08-08
 
 ### Fixed
