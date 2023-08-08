@@ -9,6 +9,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [In Development] - Unreleased
 
 
+## [2.11.0] - 2023-08-08
+
+### Changed
+
+- Main template adapted for AA's new public views feature
+
+
 ## [2.10.0] - 2023-08-01
 
 ### Changed

@@ -358,3 +358,29 @@
         padding-left: 0;
     }
 }
+
+/* AA Intel Tool
+------------------------------------------------------------------------------------- */
+@media all {
+    .aa-intel-tool .dataTable tr.even {
+        background-color: rgba(236 240 241 / 5%);
+    }
+
+    .aa-intel-tool .dataTable tbody tr.dataHighlight,
+    .aa-intel-tool .dataTable tbody tr.dataHighlightSticky,
+    .aa-intel-tool .dataTable tbody tr:hover {
+        background-color: rgba(236 240 241 / 15%);
+    }
+
+    /* Callouts
+     *
+     * Not quite alerts, but custom and helpful notes for folks reading the docs.
+     * Requires a base and modifier class.
+    --------------------------------------------------------------------------------- */
+    @media all {
+        /* Common styles for all types */
+        .aa-intel-tool .bs-callout {
+            background-color: var(--background-panel-default);
+        }
+    }
+}

@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "tnnt-templates"
-version = "2.10.0"
+version = "2.11.0"
 description = "Terra Nanotech Template Overrides for Alliance Auth"
 readme = "README.md"
 license = "GPL-3.0"
