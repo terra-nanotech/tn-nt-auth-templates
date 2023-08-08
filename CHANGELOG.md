@@ -9,6 +9,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [In Development] - Unreleased
 
 
+## [2.11.1] - 2023-08-08
+
+### Fixed
+
+- Missing message icon
+
+
 ## [2.11.0] - 2023-08-08
 
 ### Changed
