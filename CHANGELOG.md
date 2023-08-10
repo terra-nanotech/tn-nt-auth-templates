@@ -9,6 +9,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [In Development] - Unreleased
 
 
+## [2.11.3] - 2023-08-10
+
+### Fixed
+
+- Highlight CSS classes for AA Intel Tool
+
+
 ## [2.11.2] - 2023-08-08
 
 ### Fixed
