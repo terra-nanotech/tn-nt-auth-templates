@@ -366,8 +366,8 @@
         background-color: rgba(236 240 241 / 5%);
     }
 
-    .aa-intel-tool .dataTable tbody tr.dataHighlight,
-    .aa-intel-tool .dataTable tbody tr.dataHighlightSticky,
+    .aa-intel-tool .dataTable tbody tr.aa-intel-highlight,
+    .aa-intel-tool .dataTable tbody tr.aa-intel-highlight-sticky,
     .aa-intel-tool .dataTable tbody tr:hover {
         background-color: rgba(236 240 241 / 15%);
     }
