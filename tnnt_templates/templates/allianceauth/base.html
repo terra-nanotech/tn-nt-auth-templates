@@ -38,7 +38,7 @@
                 <!-- Navigation -->
                 {% include 'allianceauth/top-menu.html' %}
 
-                <div class="clearfix site-body-wrapper {% if not user.is_authenticated %}site-body-wrapper-public-view{% endif %}">
+                <div class="clearfix site-body-wrapper{% if not user.is_authenticated %}-public-view{% endif %}" id="site-body-wrapper">
                     {% if user.is_authenticated %}
                         {% include 'allianceauth/side-menu.html' %}
                     {% endif %}
