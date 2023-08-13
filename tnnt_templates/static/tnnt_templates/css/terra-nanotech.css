@@ -897,19 +897,15 @@
 
 /* Alliance Auth Bootstrap fixes
 ------------------------------------------------------------------------------------- */
-@media all {
-    .site-body-wrapper {
-        margin-left: -15px;
-    }
-}
-
 @media all and (min-width: 768px) {
-    .site-body-wrapper {
+    #site-body-wrapper {
         display: flex;
+        margin-left: -15px;
+        margin-top: 53px;
         padding-bottom: 2rem;
     }
 
-    .site-body-wrapper-public-view {
+    #site-body-wrapper.site-body-wrapper-public-view {
         margin-left: 0;
     }
 }
@@ -937,10 +933,6 @@
         position: fixed;
         top: 0;
         width: 100%;
-    }
-
-    .site-body-wrapper {
-        margin-top: 53px;
     }
 }
 

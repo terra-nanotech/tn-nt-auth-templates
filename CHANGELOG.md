@@ -9,6 +9,13 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ## [In Development] - Unreleased
 
 
+## [2.11.4] - 2023-08-13
+
+### Fixed
+
+- AA Bootstrap fixes
+
+
 ## [2.11.3] - 2023-08-10
 
 ### Fixed
