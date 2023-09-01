@@ -32,7 +32,7 @@
     .aa-timezones-footer, .allianceauth-afat-footer, .aa-esistatus-footer,
     .aa-srp-footer, .aa-sovtimer-footer, .aa-fleetfinder-footer, .aa-intel-tool-footer,
     .aa-forum-footer, .aa-survey-footer {
-        border-top: 1px solid var(--background-panel-default);
+        border-top: 1px solid var(--background-panel-default) !important;
     }
 }
 
@@ -372,15 +372,46 @@
         background-color: rgba(236 240 241 / 15%);
     }
 
-    /* Callouts
-     *
-     * Not quite alerts, but custom and helpful notes for folks reading the docs.
-     * Requires a base and modifier class.
-    --------------------------------------------------------------------------------- */
-    @media all {
-        /* Common styles for all types */
-        .aa-intel-tool .bs-callout {
-            background-color: var(--background-panel-default);
-        }
+    .aa-intel-tool .aa-intel-section-header {
+        border-bottom: 1px solid var(--background-panel-default);
+    }
+}
+
+/* Callouts
+ *
+ * Not quite alerts, but custom and helpful notes for folks reading the docs.
+ * Requires a base and modifier class.
+------------------------------------------------------------------------------------- */
+@media all {
+    /* Common styles for all types */
+    .aa-intel-tool .bs-callout {
+        background-color: var(--background-panel-default);
+        border: 1px solid var(--background-panel-default);
+        border-left-width: 5px;
+    }
+
+    /* Variations */
+    .aa-intel-tool .bs-callout-danger {
+        border-left-color: rgb(206 72 68);
+    }
+
+    .aa-intel-tool .bs-callout-danger h4 {
+        color: rgb(206 72 68);
+    }
+
+    .aa-intel-tool .bs-callout-warning {
+        border-left-color: rgb(170 103 8);
+    }
+
+    .aa-intel-tool .bs-callout-warning h4 {
+        color: rgb(170 103 8);
+    }
+
+    .aa-intel-tool .bs-callout-info {
+        border-left-color: rgb(27 128 158);
+    }
+
+    .aa-intel-tool .bs-callout-info h4 {
+        color: rgb(27 128 158);
     }
 }

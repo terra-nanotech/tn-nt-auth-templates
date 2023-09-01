@@ -1,4 +1,4 @@
-# Terra Nanotech Auth Templates
+# Terra Nanotech Auth Templates<a name="terra-nanotech-auth-templates"></a>
 
 [![Version](https://img.shields.io/pypi/v/tnnt-templates?label=release)](https://pypi.org/project/tnnt-templates/)
 [![GitHub license](https://img.shields.io/github/license/terra-nanotech/tn-nt-auth-templates)](https://github.com/terra-nanotech/tn-nt-auth-templates/blob/master/LICENSE)
@@ -10,24 +10,23 @@
 [![Checks](https://github.com/terra-nanotech/tn-nt-auth-templates/actions/workflows/automated-checks.yml/badge.svg)](https://github.com/terra-nanotech/tn-nt-auth-templates/actions/workflows/automated-checks.yml)
 [![codecov](https://codecov.io/gh/terra-nanotech/tn-nt-auth-templates/branch/master/graph/badge.svg?token=4JLA8CXJ64)](https://codecov.io/gh/terra-nanotech/tn-nt-auth-templates)
 
-
 **Terra Nanotech Template Overrides for Alliance Auth**
 
 ![TN-NT Auth Template](https://raw.githubusercontent.com/terra-nanotech/tn-nt-auth-templates/master/tnnt_templates/images/tnnt-template.jpg "TN-NT Auth Template")
 
+______________________________________________________________________
 
----
+<!-- mdformat-toc start --slug=gitlab --maxlevel=6 --minlevel=1 -->
 
-<!-- TOC -->
-* [Terra Nanotech Auth Templates](#terra-nanotech-auth-templates)
-  * [Important Information](#important-information)
-  * [Install](#install)
-<!-- TOC -->
+- [Terra Nanotech Auth Templates](#terra-nanotech-auth-templates)
+  - [Important Information](#important-information)
+  - [Install](#install)
 
----
+<!-- mdformat-toc end -->
 
+______________________________________________________________________
 
-## Important Information
+## Important Information<a name="important-information"></a>
 
 These template overrides are specially tailored for the corporation Terra Nanotech.
 They override templates of apps we use, so it looks like we want it to. This
@@ -37,11 +36,10 @@ to be changed.
 > **Note**
 >
 > If you install this template override, you need to be aware that there will be
-no support for any kind of issues you might encounter, and you have to figure it out
-on your own.
+> no support for any kind of issues you might encounter, and you have to figure it out
+> on your own.
 
-
-## Install
+## Install<a name="install"></a>
 
 ```shell
 pip install tnnt-templates

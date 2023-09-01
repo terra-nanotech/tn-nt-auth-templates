@@ -7,7 +7,7 @@ from django.conf import settings
 from django.core.handlers.wsgi import WSGIRequest
 
 
-def tnnt_settings(request: WSGIRequest) -> dict:
+def tnnt_settings(request: WSGIRequest) -> dict:  # pylint: disable=unused-argument
     """
     Returning a settings dict
     :param request:
