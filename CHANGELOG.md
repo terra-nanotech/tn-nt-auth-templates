@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## \[In Development\] - Unreleased
 
+## \[2.11.5\] - 2023-09-01
+
+### Fixed
+
+- Styles for AA Intel Tool
+
 ## \[2.11.4\] - 2023-08-13
 
 ### Fixed

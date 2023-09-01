@@ -6,7 +6,7 @@ requires = [
 
 [project]
 name = "tnnt-templates"
-version = "2.11.4"
+version = "2.11.5"
 description = "Terra Nanotech Template Overrides for Alliance Auth"
 readme = "README.md"
 keywords = [
