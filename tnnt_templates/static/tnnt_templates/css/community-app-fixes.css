@@ -32,7 +32,7 @@
     .aa-timezones-footer, .allianceauth-afat-footer, .aa-esistatus-footer,
     .aa-srp-footer, .aa-sovtimer-footer, .aa-fleetfinder-footer, .aa-intel-tool-footer,
     .aa-forum-footer, .aa-survey-footer {
-        border-top: 1px solid var(--background-panel-default);
+        border-top: 1px solid var(--background-panel-default) !important;
     }
 }
 
