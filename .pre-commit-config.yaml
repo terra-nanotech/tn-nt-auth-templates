@@ -75,6 +75,7 @@ repos:
         exclude: |
           (?x)(
             .min(.css|.css.map)|
+            static/(.*)/theme/|
             static/(.*)/libs/
           )
         args:
