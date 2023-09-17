@@ -59,7 +59,7 @@ repos:
           )
 
   - repo: https://github.com/pre-commit/mirrors-eslint
-    rev: v8.48.0
+    rev: v8.49.0
     hooks:
       - id: eslint
         exclude: |
@@ -113,7 +113,7 @@ repos:
           - --target-version=4.0
 
   - repo: https://github.com/asottile/pyupgrade
-    rev: v3.10.1
+    rev: v3.11.0
     hooks:
       - id: pyupgrade
         args:
@@ -140,7 +140,7 @@ repos:
       - id: black-disable-checker
 
   - repo: https://github.com/psf/black
-    rev: 23.7.0
+    rev: 23.9.1
     hooks:
       - id: black
         args:
@@ -151,7 +151,7 @@ repos:
     hooks:
       - id: blacken-docs
         additional_dependencies:
-          - black==23.7.0  # https://github.com/psf/black/releases/latest
+          - black==23.9.1  # https://github.com/psf/black/releases/latest
         args:
           - --target-version=py38
 
