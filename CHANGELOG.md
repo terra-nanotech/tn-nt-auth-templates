@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## \[In Development\] - Unreleased
 
+## \[2.11.6\] - 2023-09-17
+
+### Added
+
+- JS compression and CSS/JS source maps
+
 ## \[2.11.5\] - 2023-09-01
 
 ### Fixed
