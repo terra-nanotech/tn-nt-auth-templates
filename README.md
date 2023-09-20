@@ -5,6 +5,7 @@
 [![Python](https://img.shields.io/pypi/pyversions/tnnt-templates)](https://pypi.org/project/tnnt-templates/)
 [![Django](https://img.shields.io/pypi/djversions/tnnt-templates?label=django)](https://pypi.org/project/tnnt-templates/)
 ![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)
+[![pre-commit.ci status](https://results.pre-commit.ci/badge/github/terra-nanotech/tn-nt-auth-templates/master.svg)](https://results.pre-commit.ci/latest/github/terra-nanotech/tn-nt-auth-templates/master)
 [![Code Style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](http://black.readthedocs.io/en/latest/)
 [![Discord](https://img.shields.io/discord/790364535294132234?label=discord)](https://discord.gg/zmh52wnfvM)
 [![Checks](https://github.com/terra-nanotech/tn-nt-auth-templates/actions/workflows/automated-checks.yml/badge.svg)](https://github.com/terra-nanotech/tn-nt-auth-templates/actions/workflows/automated-checks.yml)
