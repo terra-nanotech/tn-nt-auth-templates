@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 ### Fixed
 
 - Sanitise settings from `local.py`
+- Some faulty open-graph tags
 
 ### Changed
 
