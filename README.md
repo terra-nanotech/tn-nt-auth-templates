@@ -7,7 +7,6 @@
 ![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)
 [![pre-commit.ci status](https://results.pre-commit.ci/badge/github/terra-nanotech/tn-nt-auth-templates/master.svg)](https://results.pre-commit.ci/latest/github/terra-nanotech/tn-nt-auth-templates/master)
 [![Code Style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](http://black.readthedocs.io/en/latest/)
-[![Discord](https://img.shields.io/discord/790364535294132234?label=discord)](https://discord.gg/zmh52wnfvM)
 [![Checks](https://github.com/terra-nanotech/tn-nt-auth-templates/actions/workflows/automated-checks.yml/badge.svg)](https://github.com/terra-nanotech/tn-nt-auth-templates/actions/workflows/automated-checks.yml)
 [![codecov](https://codecov.io/gh/terra-nanotech/tn-nt-auth-templates/branch/master/graph/badge.svg?token=4JLA8CXJ64)](https://codecov.io/gh/terra-nanotech/tn-nt-auth-templates)
 
@@ -22,6 +21,7 @@ ______________________________________________________________________
 - [Terra Nanotech Auth Templates](#terra-nanotech-auth-templates)
   - [Important Information](#important-information)
   - [Install](#install)
+    - [Settings](#settings)
 
 <!-- mdformat-toc end -->
 
@@ -29,14 +29,14 @@ ______________________________________________________________________
 
 ## Important Information<a name="important-information"></a>
 
-These template overrides are specially tailored for the corporation Terra Nanotech.
-They override templates of apps we use, so it looks like we want it to. This
-might entail changes to templates that also change the behaviour in a way we like it
-to be changed.
-
-> **Note**
+> **Warning**
 >
-> If you install this template override, you need to be aware that there will be
+> These template overrides are specially tailored for the corporation Terra Nanotech.
+> They override templates of apps we use, so it looks like we want it to. This
+> might entail changes to templates that also change the behaviour in a way we like it
+> to be changed.
+>
+> If you install these template overrides, you need to be aware that there will be
 > no support for any kind of issues you might encounter, and you have to figure it out
 > on your own.
 
@@ -48,39 +48,42 @@ pip install tnnt-templates
 
 In `local.py` right after `INSTALLED_APPS`:
 
+### Settings<a name="settings"></a>
+
 ```python
-# TN-NT Auth Templates
+# TN-NT Auth Templates - https://github.com/terra-nanotech/tn-nt-auth-templates
 INSTALLED_APPS.insert(0, "tnnt_templates")
 
-TEMPLATES[0]["OPTIONS"]["context_processors"].append(
-    "tnnt_templates.context_processors.tnnt_settings"
-)
+if "tnnt_templates" in INSTALLED_APPS:
+    TEMPLATES[0]["OPTIONS"]["context_processors"].append(
+        "tnnt_templates.context_processors.tnnt_settings"
+    )
 
-TNNT_TEMPLATE_ENTITY_ID = 8154711  #  replace with your corp/alliance ID
-TNNT_TEMPLATE_ENTITY_TYPE = "corporation"  # default: "alliance"
-TNNT_TEMPLATE_ENTITY_NAME = "My Awesome Corp/Alliance"  # your corp/alliance name
+    TNNT_TEMPLATE_ENTITY_ID = 8154711  #  replace with your corp/alliance ID
+    TNNT_TEMPLATE_ENTITY_TYPE = "corporation"  # default: "alliance"
+    TNNT_TEMPLATE_ENTITY_NAME = "My Awesome Corp/Alliance"  # your corp/alliance name
 
-# the URLs are shown in the user menu
-TNNT_TEMPLATE_URLS_OWN_WEBSITES = [
-    {
-        "name": "Website",
-        "url": "https://webseite.com/",
-        "new_tab": True,
-    },
-    {
-        "name": "Forums",
-        "url": "https://forum.website.com/",
-        "new_tab": True,
-    },
-]
+    # the URLs are shown in the user menu
+    TNNT_TEMPLATE_URLS_OWN_WEBSITES = [
+        {
+            "name": "Website",
+            "url": "https://webseite.com/",
+            "new_tab": True,
+        },
+        {
+            "name": "Forums",
+            "url": "https://forum.website.com/",
+            "new_tab": True,
+        },
+    ]
 
-TNNT_TEMPLATE_URLS_OTHER_WEBSITES = [
-    {
-        "name": "Website",
-        "url": "https://website.com/",
-        "new_tab": True,
-    },
-]
+    TNNT_TEMPLATE_URLS_OTHER_WEBSITES = [
+        {
+            "name": "Website",
+            "url": "https://website.com/",
+            "new_tab": True,
+        },
+    ]
 ```
 
 **Important**
