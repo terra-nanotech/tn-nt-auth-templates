@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## \[In Development\] - Unreleased
 
+## \[2.11.7\] - 2023-09-21
+
 ### Fixed
 
 - Sanitise settings from `local.py`
