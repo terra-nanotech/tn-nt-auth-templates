@@ -7,6 +7,20 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## \[In Development\] - Unreleased
 
+## \[2.11.7\] - 2023-09-21
+
+### Fixed
+
+- Sanitise settings from `local.py`
+- Some faulty open-graph tags
+
+### Changed
+
+- Minimum dependencies:
+  - `allianceauth>=3.6.1`
+  - `allianceauth-app-utils>=1.20.1`
+- Test environment for `tox` cleaned up
+
 ## \[2.11.6\] - 2023-09-17
 
 ### Added
