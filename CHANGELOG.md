@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## \[In Development\] - Unreleased
 
+### Changed
+
+- Minimum dependencies:
+  - `allianceauth>=3.6.1`
+  - `allianceauth-app-utils>=1.20.1`
+
 ## \[2.11.6\] - 2023-09-17
 
 ### Added
