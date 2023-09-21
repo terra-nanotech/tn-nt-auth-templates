@@ -17,6 +17,7 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 - Minimum dependencies:
   - `allianceauth>=3.6.1`
   - `allianceauth-app-utils>=1.20.1`
+- Test environment for `tox` cleaned up
 
 ## \[2.11.6\] - 2023-09-17
 
