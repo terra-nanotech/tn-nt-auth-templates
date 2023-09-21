@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## \[In Development\] - Unreleased
 
+### Fixed
+
+- Sanitise settings from `local.py`
+
 ### Changed
 
 - Minimum dependencies:

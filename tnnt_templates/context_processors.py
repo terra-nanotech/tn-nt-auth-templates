@@ -3,8 +3,10 @@ TN-NT Templates content processor
 """
 
 # Django
-from django.conf import settings
 from django.core.handlers.wsgi import WSGIRequest
+
+# AA Templates: Terra Nanotech
+from tnnt_templates.app_settings import AppSettings
 
 
 def tnnt_settings(request: WSGIRequest) -> dict:  # pylint: disable=unused-argument
@@ -20,35 +22,39 @@ def tnnt_settings(request: WSGIRequest) -> dict:  # pylint: disable=unused-argum
     # entity ID
     # 1 if none is given
     try:
-        return_value["TNNT_TEMPLATE_ENTITY_ID"] = settings.TNNT_TEMPLATE_ENTITY_ID
+        return_value["TNNT_TEMPLATE_ENTITY_ID"] = AppSettings.TNNT_TEMPLATE_ENTITY_ID
     except AttributeError:
         return_value["TNNT_TEMPLATE_ENTITY_ID"] = 1
 
     # entity type
     # 'alliance' if none is given
     try:
-        return_value["TNNT_TEMPLATE_ENTITY_TYPE"] = settings.TNNT_TEMPLATE_ENTITY_TYPE
+        return_value[
+            "TNNT_TEMPLATE_ENTITY_TYPE"
+        ] = AppSettings.TNNT_TEMPLATE_ENTITY_TYPE
     except AttributeError:
         return_value["TNNT_TEMPLATE_ENTITY_TYPE"] = "alliance"
 
     # entity name
     # empty if none is given
     try:
-        return_value["TNNT_TEMPLATE_ENTITY_NAME"] = settings.TNNT_TEMPLATE_ENTITY_NAME
+        return_value[
+            "TNNT_TEMPLATE_ENTITY_NAME"
+        ] = AppSettings.TNNT_TEMPLATE_ENTITY_NAME
     except AttributeError:
         return_value["TNNT_TEMPLATE_ENTITY_NAME"] = ""
 
     try:
         return_value[
             "TNNT_TEMPLATE_URLS_OWN_WEBSITES"
-        ] = settings.TNNT_TEMPLATE_URLS_OWN_WEBSITES
+        ] = AppSettings.TNNT_TEMPLATE_URLS_OWN_WEBSITES
     except AttributeError:
         pass
 
     try:
         return_value[
             "TNNT_TEMPLATE_URLS_OTHER_WEBSITES"
-        ] = settings.TNNT_TEMPLATE_URLS_OTHER_WEBSITES
+        ] = AppSettings.TNNT_TEMPLATE_URLS_OTHER_WEBSITES
     except AttributeError:
         pass
 
