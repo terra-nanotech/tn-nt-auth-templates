@@ -58,7 +58,7 @@ if os.environ.get("USE_MYSQL", True) is True:
 
 # Add any additional apps to this list.
 # TN-NT Auth Templates - https://github.com/terra-nanotech/tn-nt-auth-templates
-INSTALLED_APPS.insert(0, "tnnt_templates")
+INSTALLED_APPS.insert(0, PACKAGE)
 
 TEMPLATES[0]["OPTIONS"]["context_processors"].append(
     "tnnt_templates.context_processors.tnnt_settings"
