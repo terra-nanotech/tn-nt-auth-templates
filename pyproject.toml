@@ -41,6 +41,11 @@ dependencies = [
     "allianceauth>=3.6.1",
     "allianceauth-app-utils>=1.20.1",
 ]
+[project.optional-dependencies]
+tests-allianceauth-stable = [
+    "coverage",
+    "django-webtest",
+]
 [project.urls]
 Changelog = "https://github.com/terra-nanotech/tn-nt-auth-templates/blob/master/CHANGELOG.md"
 Documentation = "https://github.com/terra-nanotech/tn-nt-auth-templates/blob/master/README.md"
