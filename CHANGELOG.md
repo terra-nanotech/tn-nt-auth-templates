@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## \[In Development\] - Unreleased
 
+## \[2.12.0\] - 2023-10-13
+
+### Fixed
+
+- Task count on dashboard
+
+### Changed
+
+- Minimum dependencies:
+  - `allianceauth>=3.7.0`
+
 ## \[2.11.7\] - 2023-09-21
 
 ### Fixed
