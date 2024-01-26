@@ -165,7 +165,7 @@
 ------------------------------------------------------------------------------------- */
 @media all {
     .corpstat-corp-dropdown.dropdown-menu > li > a {
-        padding: 3px 36px 3px 20px;
+        padding: 10px 36px 10px 20px;
     }
 }
 
