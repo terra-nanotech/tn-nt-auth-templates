@@ -57,6 +57,13 @@ class TerraNanotechThemeHook(ThemeHook):
                     ),
                     # "integrity": "sha512-UN9+ko7uibsWja8iTqgt2NacgyXYC7bOi1emCQEUcmEOd3LjzqYt/EY6/AKXvqLpfY2mj+V5UfzVMJGKBNxtCg==",
                 },
+                {
+                    "url": urljoin(
+                        settings.STATIC_URL,
+                        "tnnt_templates/theme/terra-nanotech/aav4/css/community-app-fixes.min.css",
+                    ),
+                    # "integrity": "sha512-UN9+ko7uibsWja8iTqgt2NacgyXYC7bOi1emCQEUcmEOd3LjzqYt/EY6/AKXvqLpfY2mj+V5UfzVMJGKBNxtCg==",
+                },
             ],
             js=[
                 {
