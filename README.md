@@ -55,15 +55,45 @@ In `local.py` right after `INSTALLED_APPS`:
 INSTALLED_APPS.insert(0, "tnnt_templates")
 
 if "tnnt_templates" in INSTALLED_APPS:
+    # Add TN-NT Auth Templates theme
+    INSTALLED_APPS += [
+        "tnnt_templates.theme.terra_nanotech",
+    ]
+
+    # Remove all other themes
+    # If you want to use the TN-NT Auth Templates as the only theme,
+    # you need to remove all other themes.
+    INSTALLED_APPS.remove("allianceauth.theme.darkly")
+    INSTALLED_APPS.remove("allianceauth.theme.flatly")
+    INSTALLED_APPS.remove("allianceauth.theme.materia")
+
+    # If you are using AA-GDPR, you need to remove the darkly, flatly and materia themes
+    # added by AA-GDPR as well.
+    if "aagdpr" in INSTALLED_APPS:
+        INSTALLED_APPS.remove("aagdpr.theme.darkly")
+        INSTALLED_APPS.remove("aagdpr.theme.flatly")
+        INSTALLED_APPS.remove("aagdpr.theme.materia")
+
+        # Load Terra Nanotech theme
+        DEFAULT_THEME = (
+            "tnnt_templates.theme.terra_nanotech.auth_hooks.TerraNanotechThemeHook"
+        )
+        # Legacy AAv3 user.profile.night_mode=1
+        DEFAULT_THEME_DARK = (
+            "tnnt_templates.theme.terra_nanotech.auth_hooks.TerraNanotechThemeHook"
+        )
+
+    # Add TN-NT Auth Templates context processor
     TEMPLATES[0]["OPTIONS"]["context_processors"].append(
         "tnnt_templates.context_processors.tnnt_settings"
     )
 
+    # Add TN-NT Auth Templates settings
     TNNT_TEMPLATE_ENTITY_ID = 8154711  #  replace with your corp/alliance ID
     TNNT_TEMPLATE_ENTITY_TYPE = "corporation"  # default: "alliance"
     TNNT_TEMPLATE_ENTITY_NAME = "My Awesome Corp/Alliance"  # your corp/alliance name
 
-    # the URLs are shown in the user menu
+    # The URLs are shown in the user menu
     TNNT_TEMPLATE_URLS_OWN_WEBSITES = [
         {
             "name": "Website",
