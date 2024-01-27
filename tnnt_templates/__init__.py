@@ -2,10 +2,5 @@
 TN-NT Templates init
 """
 
-# Standard Library
-from importlib import metadata
-
-__version__ = metadata.version("tnnt-templates")
+__version__ = "2.12.0"
 __title__ = "Terra Nanotech Alliance Auth Template Overrides"
-
-del metadata
