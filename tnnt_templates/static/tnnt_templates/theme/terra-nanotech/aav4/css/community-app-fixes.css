@@ -48,10 +48,6 @@
 /* App: AA Forum
 ------------------------------------------------------------------------------------- */
 @media all {
-    .aa-forum {
-        margin-left: 0;
-    }
-
     .aa-forum .aa-forum-header {
         margin-bottom: 1rem;
     }
@@ -99,20 +95,8 @@
         margin: 0;
     }
 
-    .aa-forum .aa-forum-breadcrumb ul li {
-        padding: 0.35rem 0.3rem 0.35rem 0;
-    }
-
-    .aa-forum .aa-forum-legend {
-        padding: 0.25rem 0;
-    }
-
     .aa-forum .btn-aa-forum-topic-moderation {
         border: none;
-    }
-
-    .aa-forum .aa-forum-admin-menu .aa-forum-admin-menu-item a {
-        padding: 0.65rem 1rem;
     }
 
     /* SumoSelect
@@ -144,7 +128,7 @@
     }
 
     .aa-forum .aa-forum-breadcrumb {
-        padding: 1.3rem 1rem;
+        padding: 0.2rem;
     }
 
     .aa-forum .aa-forum-legend > span {

@@ -1,5 +1,26 @@
-/* Bootstrap theme overrides
+/* Bootstrap defaults overrides
 ------------------------------------------------------------------------------------- */
+
+@media all {
+    .progress-bar {
+        --bs-text-opacity: 1;
+
+        color: rgba(var(--bs-light-rgb), var(--bs-text-opacity)) !important; /* stylelint-disable-line color-function-notation */
+        text-shadow: -1px -1px 0 rgba(0 0 0 / 30%);
+    }
+
+    .table {
+        --bs-table-bg: var(--background-color-light-transparency) !important;
+    }
+}
+
+/* END Bootstrap defaults overrides
+------------------------------------------------------------------------------------- */
+
+
+/* Terra Nanotech theme
+------------------------------------------------------------------------------------- */
+
 @media all {
     html {
         font-family: var(--font-family-default);
@@ -32,10 +53,6 @@
 
     #sidebar > div > div > div > div {
         background-color: transparent !important;
-    }
-
-    .table {
-        --bs-table-bg: var(--background-color-light-transparency) !important;
     }
 
     .nav-pills .nav-link {
@@ -86,7 +103,7 @@
         }
     }
 
-    .dashboard-panel-software-version ul > li > .btn {
+    #aa-dashboard-panel-software-version ul > li > .btn {
         border: none;
         color: inherit;
     }
@@ -103,14 +120,10 @@
         font-size: 0.95rem;
     }
 
-    .aa-user-info button[data-bs-toggle="dropdown"] {
+    #aa-user-info button[data-bs-toggle="dropdown"] {
         border: none;
     }
-
-    .progress-bar {
-        --bs-text-opacity: 1;
-
-        color: rgba(var(--bs-light-rgb), var(--bs-text-opacity)) !important; /* stylelint-disable-line color-function-notation */
-        text-shadow: -1px -1px 0 rgba(0 0 0 / 30%);
-    }
 }
+
+/* END Terra Nanotech theme
+------------------------------------------------------------------------------------- */

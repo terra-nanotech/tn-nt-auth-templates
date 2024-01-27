@@ -14,6 +14,18 @@
                 ]
             }
         ],
+        "comment-empty-line-before": [
+            "always",
+            {
+                "except": [
+                    "first-nested"
+                ],
+                "ignore": [
+                    "after-comment",
+                    "stylelint-commands"
+                ]
+            }
+        ],
         "number-max-precision": 5,
         "no-descending-specificity": null,
         "media-feature-range-notation": "prefix",
