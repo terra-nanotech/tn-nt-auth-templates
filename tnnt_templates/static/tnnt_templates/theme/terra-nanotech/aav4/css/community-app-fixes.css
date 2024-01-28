@@ -3,15 +3,14 @@
 
 @media all {
     div:has(> div.app-translation-footer) {
-        --bs-border-opacity: 1;
+        border-color: rgba(var(--bs-secondary-rgb), var(--bs-border-opacity)) !important; /* stylelint-disable-line color-function-notation */
 
-        border-color: rgba(var(--bs-secondary-rgb), var(--bs-border-opacity))!important; /* stylelint-disable-line color-function-notation */
+        --bs-border-opacity: 1;
     }
 }
 
 /* END All my apps
 ------------------------------------------------------------------------------------- */
-
 
 /* ckEditor
 ------------------------------------------------------------------------------------- */
@@ -25,7 +24,6 @@
 /* END ckEditor
 ------------------------------------------------------------------------------------- */
 
-
 /* App: AA Sovtimer
 ------------------------------------------------------------------------------------- */
 
@@ -36,13 +34,13 @@
     }
 
     .aa-sovtimer-active-campaign {
+        color: var(--bs-table-color);
+
+        --bs-table-active-bg: rgb(240 111 107);
         --bs-table-bg: var(--bs-danger);
         --bs-table-border-color: rgb(241 127 124);
-        --bs-table-striped-bg: rgb(239 103 99);
-        --bs-table-active-bg: rgb(240 111 107);
         --bs-table-hover-bg: rgb(239 107 103);
-
-        color: var(--bs-table-color);
+        --bs-table-striped-bg: rgb(239 103 99);
     }
 
     .aa-sovtimer-active-campaign td {
@@ -50,13 +48,13 @@
     }
 
     .aa-sovtimer-upcoming-campaign {
+        color: var(--bs-table-color);
+
+        --bs-table-active-bg: rgb(249 159 31);
         --bs-table-bg: var(--bs-warning);
         --bs-table-border-color: rgb(249 169 56);
-        --bs-table-striped-bg: rgb(248 153 18);
-        --bs-table-active-bg: rgb(249 159 31);
         --bs-table-hover-bg: rgb(249 156 25);
-
-        color: var(--bs-table-color);
+        --bs-table-striped-bg: rgb(248 153 18);
     }
 
     .aa-sovtimer-upcoming-campaign td {
@@ -66,7 +64,6 @@
 
 /* END App: AA Sovtimer
 ------------------------------------------------------------------------------------- */
-
 
 /* App: AA Forum
 ------------------------------------------------------------------------------------- */
@@ -80,7 +77,7 @@
     }
 
     .aa-forum .boards-sortable > li {
-        background-color: var(--background-panel-header-default);
+        background-color: rgba(62 68 76 / 60%);
     }
 
     .aa-forum .panel-aa-forum-topic-list {
@@ -124,7 +121,6 @@
 
     /* SumoSelect
     --------------------------------------------------------------------------------- */
-
     .aa-forum .SumoSelect {
         color: rgb(54 54 54);
     }
@@ -135,7 +131,6 @@
 
     /* END SumoSelect
     --------------------------------------------------------------------------------- */
-
     .aa-forum .aa-forum-search-results-total-number {
         font-size: 1.25rem;
         font-weight: bolder;

@@ -3,9 +3,10 @@
 
 @media all {
     .progress-bar {
+        color: rgba(var(--bs-light-rgb), var(--bs-text-opacity)) !important; /* stylelint-disable-line color-function-notation */
+
         --bs-text-opacity: 1;
 
-        color: rgba(var(--bs-light-rgb), var(--bs-text-opacity)) !important; /* stylelint-disable-line color-function-notation */
         text-shadow: -1px -1px 0 rgba(0 0 0 / 30%);
     }
 
@@ -16,7 +17,6 @@
 
 /* END Bootstrap defaults overrides
 ------------------------------------------------------------------------------------- */
-
 
 /* Terra Nanotech theme
 ------------------------------------------------------------------------------------- */
@@ -61,10 +61,10 @@
     }
 
     .nav-pills .nav-link.active, .nav-pills .nav-link:hover {
-        background-image: none;
-        filter: none;
         backdrop-filter: var(--backdrop-filter-default);
         background-color: var(--background-color-light-transparency) !important;
+        background-image: none;
+        filter: none;
     }
 
     .h1,
@@ -93,10 +93,9 @@
 
     code {
         background-color: var(--background-color-light-transparency);
-        /*color: rgb(58 63 68);*/
+        border-radius: var(--bs-border-radius);
         font-family: var(--font-family-code);
         padding: 0.25rem;
-        border-radius: var(--bs-border-radius);
     }
 
     pre code {
