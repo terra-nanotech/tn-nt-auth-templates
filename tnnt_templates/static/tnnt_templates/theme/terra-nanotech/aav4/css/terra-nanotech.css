@@ -123,8 +123,15 @@
         border: none;
     }
 
-    .card-title {
+    .card-title,
+    .modal-title {
+        color: var(--white);
+        display: block;
         font-family: var(--font-family-card-title);
+        font-size: 1rem !important;
+        font-weight: 700;
+        margin-top: 0.25rem;
+        text-shadow: -1px -1px 0 rgba(0 0 0/30%);
     }
 }
 
