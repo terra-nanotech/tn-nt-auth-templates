@@ -46,6 +46,7 @@ dependencies = [
 ]
 [project.optional-dependencies]
 tests-allianceauth-latest = [
+    "aa-gdpr",
     "coverage",
     "django-webtest",
 ]
