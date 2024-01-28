@@ -31,7 +31,6 @@
         background: var(--background-body-default);
         background-color: var(--background-color-default);
         background-size: cover;
-        color: var(--font-color-default);
         font-family: var(--font-family-default);
         font-size: 100%;
     }
