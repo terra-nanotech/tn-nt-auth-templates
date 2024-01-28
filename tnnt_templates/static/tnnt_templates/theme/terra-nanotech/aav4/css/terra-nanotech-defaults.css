@@ -42,9 +42,17 @@
     --backdrop-filter-default: saturate(1.5) blur(1.5em);
     --font-color-default: rgb(200 200 200);
     --font-family-default: roboto, "Helvetica Neue", sans-serif;
-    --bs-font-sans-serif: roboto, "Helvetica Neue", sans-serif;
-    --font-family-panel-title: georgia, times, serif;
+    --font-family-card-title: georgia, times, serif;
     --font-family-code: "Fira Code", monospace;
-    --font-family-code-font-variation: "Fira Code VF", monospace;
-    --bs-font-monospace: "Fira Code VF", monospace;
+
+    /* Bootstrap overrides */
+    --bs-font-sans-serif: var(--font-family-default);
+    --bs-font-monospace: var(--font-family-code);
+}
+
+/* Code font ligatures */
+@supports (font-variation-settings: normal) {
+    :root {
+        --font-family-code: "Fira Code VF", monospace;
+    }
 }

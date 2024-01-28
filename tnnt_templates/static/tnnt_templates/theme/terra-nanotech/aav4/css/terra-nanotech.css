@@ -92,15 +92,15 @@
     }
 
     code {
-        background-color: rgb(240 240 240);
-        color: rgb(58 63 68);
+        background-color: var(--background-color-light-transparency);
+        /*color: rgb(58 63 68);*/
         font-family: var(--font-family-code);
+        padding: 0.25rem;
+        border-radius: var(--bs-border-radius);
     }
 
-    @supports (font-variation-settings: normal) {
-        code {
-            font-family: var(--font-family-code-font-variation);
-        }
+    pre code {
+        display: block;
     }
 
     #aa-dashboard-panel-software-version ul > li > .btn {
@@ -122,6 +122,10 @@
 
     #aa-user-info button[data-bs-toggle="dropdown"] {
         border: none;
+    }
+
+    .card-title {
+        font-family: var(--font-family-card-title);
     }
 }
 
