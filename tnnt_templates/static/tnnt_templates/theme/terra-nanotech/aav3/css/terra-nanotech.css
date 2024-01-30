@@ -3,7 +3,6 @@
 @media all {
     html {
         font-family: var(--font-family-default);
-        font-size: 100%;
     }
 
     body {
@@ -12,7 +11,6 @@
         background-size: cover;
         color: var(--font-color-default);
         font-family: var(--font-family-default);
-        font-size: 100%;
     }
 
     p {
