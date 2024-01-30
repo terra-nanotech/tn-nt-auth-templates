@@ -24,7 +24,6 @@
 @media all {
     html {
         font-family: var(--font-family-default);
-        font-size: 100%;
     }
 
     body {
@@ -32,7 +31,6 @@
         background-color: var(--background-color-default);
         background-size: cover;
         font-family: var(--font-family-default);
-        font-size: 100%;
     }
 
     body,
