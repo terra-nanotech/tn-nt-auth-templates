@@ -1,20 +1,3 @@
-/* Hide placeholders in form elements when they are being focused
-------------------------------------------------------------------------------------- */
-
-@media all {
-    ::placeholder {
-        opacity: 1;
-        transition: opacity 0.5s;
-    }
-
-    *:focus::placeholder {
-        opacity: 0;
-    }
-}
-
-/* END Hide placeholders in form elements when they are being focused
-------------------------------------------------------------------------------------- */
-
 /* Default theme variables
 ------------------------------------------------------------------------------------- */
 
@@ -60,4 +43,22 @@
 ------------------------------------------------------------------------------------- */
 
 /* END Default theme variables
+------------------------------------------------------------------------------------- */
+
+
+/* Hide placeholders in form elements when they are being focused
+------------------------------------------------------------------------------------- */
+
+@media all {
+    ::placeholder {
+        opacity: 1;
+        transition: opacity 0.5s;
+    }
+
+    *:focus::placeholder {
+        opacity: 0;
+    }
+}
+
+/* END Hide placeholders in form elements when they are being focused
 ------------------------------------------------------------------------------------- */
