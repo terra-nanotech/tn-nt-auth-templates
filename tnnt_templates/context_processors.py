@@ -29,32 +29,32 @@ def tnnt_settings(request: WSGIRequest) -> dict:  # pylint: disable=unused-argum
     # entity type
     # 'alliance' if none is given
     try:
-        return_value[
-            "TNNT_TEMPLATE_ENTITY_TYPE"
-        ] = AppSettings.TNNT_TEMPLATE_ENTITY_TYPE
+        return_value["TNNT_TEMPLATE_ENTITY_TYPE"] = (
+            AppSettings.TNNT_TEMPLATE_ENTITY_TYPE
+        )
     except AttributeError:
         return_value["TNNT_TEMPLATE_ENTITY_TYPE"] = "alliance"
 
     # entity name
     # empty if none is given
     try:
-        return_value[
-            "TNNT_TEMPLATE_ENTITY_NAME"
-        ] = AppSettings.TNNT_TEMPLATE_ENTITY_NAME
+        return_value["TNNT_TEMPLATE_ENTITY_NAME"] = (
+            AppSettings.TNNT_TEMPLATE_ENTITY_NAME
+        )
     except AttributeError:
         return_value["TNNT_TEMPLATE_ENTITY_NAME"] = ""
 
     try:
-        return_value[
-            "TNNT_TEMPLATE_URLS_OWN_WEBSITES"
-        ] = AppSettings.TNNT_TEMPLATE_URLS_OWN_WEBSITES
+        return_value["TNNT_TEMPLATE_URLS_OWN_WEBSITES"] = (
+            AppSettings.TNNT_TEMPLATE_URLS_OWN_WEBSITES
+        )
     except AttributeError:
         pass
 
     try:
-        return_value[
-            "TNNT_TEMPLATE_URLS_OTHER_WEBSITES"
-        ] = AppSettings.TNNT_TEMPLATE_URLS_OTHER_WEBSITES
+        return_value["TNNT_TEMPLATE_URLS_OTHER_WEBSITES"] = (
+            AppSettings.TNNT_TEMPLATE_URLS_OTHER_WEBSITES
+        )
     except AttributeError:
         pass
 
