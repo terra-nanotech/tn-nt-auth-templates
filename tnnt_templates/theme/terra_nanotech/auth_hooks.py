@@ -15,8 +15,8 @@ from allianceauth.theme.hooks import ThemeHook
 
 class TerraNanotechThemeHook(ThemeHook):
     """
-    Bootswatch Darkly Theme
-    https://bootswatch.com/darkly/
+    Terra Nanotech Corp Auth Theme
+    https://github.com/terra-nanotech/tn-nt-auth-templates/
     """
 
     def __init__(self):
@@ -79,6 +79,13 @@ class TerraNanotechThemeHook(ThemeHook):
                         "tnnt_templates/theme/terra-nanotech/aav4/libs/bootstrap/v5.3.2/javascript/bootstrap.min.js",
                     ),
                     "integrity": "sha512-BPNIL/15RLxikcVNXWuFX/0zOtsuNphZCXgIL9im3QZ8ZB3oyGgbokg2pC757WCbpDRLxFnf89pdm6KHO8fehA==",
+                },
+                {
+                    "url": urljoin(
+                        settings.STATIC_URL,
+                        "tnnt_templates/javascript/terra-nanotech.min.js",
+                    ),
+                    # "integrity": "sha512-+n8YwzG7fZV5ZL4Cnq5jZ3mW5JjYt2tVpZ9h9wZ6gYJ1H+3bZ3k1z
                 },
             ],
             header_padding="3.6em",
