@@ -12,16 +12,26 @@
 /* END All my apps
 ------------------------------------------------------------------------------------- */
 
-/* ckEditor
+/* CKEditor 5 style fixes
 ------------------------------------------------------------------------------------- */
 
 @media all {
-    .cke {
-        border-radius: var(--bs-border-radius);
+    .ck-rounded-corners {
+        --ck-border-radius: var(--bs-border-radius);
+    }
+
+    .ck-editor__editable {
+        color: initial;
+    }
+
+    .ck-word-count {
+        color: var(--bs-secondary-color) !important;
+
+        --bs-text-opacity: 1;
     }
 }
 
-/* END ckEditor
+/* END CKEditor 5 style fixes
 ------------------------------------------------------------------------------------- */
 
 /* App: AA Sovtimer
@@ -131,6 +141,7 @@
 
     /* END SumoSelect
     --------------------------------------------------------------------------------- */
+
     .aa-forum .aa-forum-search-results-total-number {
         font-size: 1.25rem;
         font-weight: bolder;
@@ -155,6 +166,14 @@
 
     .aa-forum .aa-forum-legend > span {
         margin-right: 3rem;
+    }
+
+    .aa-forum li.aa-forum-messages-sidebar-menu-item:has(a.active) {
+        background-color: var(--background-color-light-transparency) !important;
+    }
+
+    .aa-forum li.aa-forum-messages-sidebar-menu-item > a.active {
+        color: inherit !important;
     }
 }
 

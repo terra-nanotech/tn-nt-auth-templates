@@ -19,7 +19,7 @@ $(document).ready(() => {
             const href = $(element).attr('href');
 
             /**
-             * Check if it's a http link
+             * Check if it's an HTTP link
              */
             if (protocolPattern.test(href)) {
                 const hrefHostname = $(new URL(href)).attr('hostname');
