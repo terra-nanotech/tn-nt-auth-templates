@@ -32,17 +32,18 @@ $(document).ready(() => {
         });
     };
 
+
     /**
      * Render a JS clock for Eve time
      *
-     * @param element The HTML element to display the time
+     * @param {Element} element The HTML element to display the time
      */
     const renderClock = (element) => {
         const date = new Date();
 
         /**
          * Date
-         * @type {string}
+         * @type {string} 2021-01-01
          */
         // const year = date.getUTCFullYear();
         // const month = String(date.getUTCMonth() + 1).padStart(2, '0');
@@ -50,7 +51,7 @@ $(document).ready(() => {
 
         /**
          * Time
-         * @type {string}
+         * @type {string} 00:00:00
          */
         const hour = String(date.getUTCHours()).padStart(2, '0');
         const minute = String(date.getUTCMinutes()).padStart(2, '0');
@@ -59,6 +60,53 @@ $(document).ready(() => {
         element.html(hour + ':' + minute + ':' + second);
     };
 
+
+    /**
+     * Check if an element has CSS overflow
+     *
+     * @param {Element} element The element to check
+     * @returns {{horizontal: boolean, overflow: boolean, vertical: boolean}}
+     */
+    const elementHasOverflow = (element) => {
+        const clientHeight = element[0].clientHeight;
+        const scrollHeight = element[0].scrollHeight;
+        const clientWidth = element[0].clientWidth;
+        const scrollWidth = element[0].scrollWidth;
+
+        return {
+            overflow: clientHeight < scrollHeight || clientWidth < scrollWidth,
+            horizontal: clientWidth < scrollWidth,
+            vertical: clientHeight < scrollHeight
+        };
+    };
+
+
+    /**
+     * Add classes to elements that have CSS overflow
+     *
+     * @param {Element} element The element to check
+     */
+    const addOverflowClasses = (element) => {
+        if (element.length > 0) {
+            const {
+                overflow, horizontal, vertical
+            } = elementHasOverflow(element);
+
+            if (overflow) {
+                element.addClass('overflowing');
+
+                if (vertical) {
+                    element.addClass('overflowing-vertically');
+                }
+
+                if (horizontal) {
+                    element.addClass('overflow-horizontally');
+                }
+            }
+        }
+    };
+
+
     /**
      * Functions that need to be executed on successful ajax events
      */
@@ -66,8 +114,9 @@ $(document).ready(() => {
         externalLinks();
     });
 
+
     /**
-     * Functions that need to be executed on load
+     * Functions that need to be executed when the page is loaded
      */
     const init = () => {
         // Start the Eve time clock in the top menu bar
@@ -81,7 +130,13 @@ $(document).ready(() => {
         if (typeof hljs !== 'undefined' && typeof hljs.highlightAll === 'function') {
             hljs.highlightAll();
         }
+
+        // Add overflowing CSS classes to the Characters panel on the dashboard
+        addOverflowClasses(
+            $('#aa-dashboard-panel-characters div.card-body div.card-body > div')
+        );
     };
+
 
     /**
      * Start the show

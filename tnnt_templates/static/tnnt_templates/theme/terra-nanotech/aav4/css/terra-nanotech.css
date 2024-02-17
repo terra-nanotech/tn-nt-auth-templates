@@ -130,6 +130,21 @@
         margin-top: 0.25rem;
         text-shadow: -1px -1px 0 rgba(0 0 0/30%);
     }
+
+    /* Character panel, right padding on vertical overflow */
+    #aa-dashboard-panel-characters div.card-body div.card-body > div.overflowing-vertically {
+        padding-right: 0.5rem !important;
+    }
+
+    /* Character panel, "Add Character" button */
+    #aa-dashboard-panel-characters a.btn[href^="/account/characters/add/"] {
+        margin-left: 0 !important;
+    }
+
+    /* Character panel, "Change Main" button */
+    #aa-dashboard-panel-characters a.btn[href^="/account/characters/main/"] {
+        margin-right: 0 !important;
+    }
 }
 
 /* END Terra Nanotech theme
