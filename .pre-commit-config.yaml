@@ -154,6 +154,7 @@ repos:
           )
         args:
           - --formatter=compact
+#          - --fix
         additional_dependencies:
           # stylelint itself needs to be here when using additional_dependencies.
           - stylelint@16.2.1  # https://github.com/stylelint/stylelint/releases/latest
