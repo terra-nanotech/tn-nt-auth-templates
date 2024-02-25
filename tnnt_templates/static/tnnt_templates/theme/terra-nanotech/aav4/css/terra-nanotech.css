@@ -27,9 +27,8 @@
     }
 
     body {
-        background: var(--background-body-default);
-        background-color: var(--background-color-default);
-        background-size: cover;
+        background: var(--background-body-default) !important;
+        background-size: cover !important;
         font-family: var(--font-family-default);
     }
 
@@ -150,6 +149,34 @@
     img:not([class*="rounded"], [class*="rounded-circle"]) {
         border-radius: var(--bs-border-radius) !important;
     }
+
+    /* Login Page
+    --------------------------------------------------------------------------------- */
+
+    body:has(div.card-login) {
+        backdrop-filter: none;
+        height: 100vh;
+        position: relative;
+    }
+
+    body:has(div.card-login) div.container {
+        backdrop-filter: var(--backdrop-filter-default);
+        left: 0;
+        margin: 0 !important;
+        max-width: 100% !important;
+        padding: 2rem 0;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    body:has(div.card-login) div.container > div.row {
+        max-width: 100%;
+    }
+
+    /* END Login Page
+    --------------------------------------------------------------------------------- */
 }
 
 /* END Terra Nanotech theme
