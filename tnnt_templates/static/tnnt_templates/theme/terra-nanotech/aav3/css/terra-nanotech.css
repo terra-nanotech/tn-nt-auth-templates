@@ -1,16 +1,13 @@
 /* Bootstrap theme overrides
 ------------------------------------------------------------------------------------- */
 @media all {
-    html {
-        font-family: var(--font-family-default);
-    }
-
     body {
         background: var(--background-body-default);
         background-color: var(--background-color-default);
         background-size: cover;
         color: var(--font-color-default);
         font-family: var(--font-family-default);
+        font-size: 16px;
     }
 
     p {
@@ -33,10 +30,7 @@
         font-weight: 400;
     }
 
-    .tooltip {
-        font-family: var(--font-family-default);
-    }
-
+    .tooltip,
     .popover {
         font-family: var(--font-family-default);
     }
