@@ -74,14 +74,14 @@ if "tnnt_templates" in INSTALLED_APPS:
         INSTALLED_APPS.remove("aagdpr.theme.flatly")
         INSTALLED_APPS.remove("aagdpr.theme.materia")
 
-        # Load Terra Nanotech theme
-        DEFAULT_THEME = (
-            "tnnt_templates.theme.terra_nanotech.auth_hooks.TerraNanotechThemeHook"
-        )
-        # Legacy AAv3 user.profile.night_mode=1
-        DEFAULT_THEME_DARK = (
-            "tnnt_templates.theme.terra_nanotech.auth_hooks.TerraNanotechThemeHook"
-        )
+    # Load Terra Nanotech theme
+    DEFAULT_THEME = (
+        "tnnt_templates.theme.terra_nanotech.auth_hooks.TerraNanotechThemeHook"
+    )
+    # Legacy AAv3 user.profile.night_mode=1
+    DEFAULT_THEME_DARK = (
+        "tnnt_templates.theme.terra_nanotech.auth_hooks.TerraNanotechThemeHook"
+    )
 
     # Add TN-NT Auth Templates context processor
     TEMPLATES[0]["OPTIONS"]["context_processors"].append(
@@ -92,28 +92,6 @@ if "tnnt_templates" in INSTALLED_APPS:
     TNNT_TEMPLATE_ENTITY_ID = 8154711  #  replace with your corp/alliance ID
     TNNT_TEMPLATE_ENTITY_TYPE = "corporation"  # default: "alliance"
     TNNT_TEMPLATE_ENTITY_NAME = "My Awesome Corp/Alliance"  # your corp/alliance name
-
-    # The URLs are shown in the user menu
-    TNNT_TEMPLATE_URLS_OWN_WEBSITES = [
-        {
-            "name": "Website",
-            "url": "https://webseite.com/",
-            "new_tab": True,
-        },
-        {
-            "name": "Forums",
-            "url": "https://forum.website.com/",
-            "new_tab": True,
-        },
-    ]
-
-    TNNT_TEMPLATE_URLS_OTHER_WEBSITES = [
-        {
-            "name": "Website",
-            "url": "https://website.com/",
-            "new_tab": True,
-        },
-    ]
 ```
 
 **Important**
