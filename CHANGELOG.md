@@ -39,6 +39,10 @@ Section Order:
 
 - Overflow detection to the Membership panel on the dashboard
 
+### Changed
+
+- CSS improved for overflowing elements
+
 ## \[3.0.0-beta.1\] - 2024-02-08
 
 > \[!NOTE\]

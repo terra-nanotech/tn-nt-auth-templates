@@ -130,10 +130,14 @@
         text-shadow: -1px -1px 0 rgba(0 0 0/30%);
     }
 
-    /* Character panel: Right padding on vertical overflow */
-    #aa-dashboard-panel-characters div.card-body div.card-body > div.overflowing-vertically,
-    #aa-dashboard-panel-membership div.card-body div.card-body > div.overflowing-vertically {
+    /* Overflowing panel: Right padding on vertical overflow */
+    .overflowing.overflowing-vertically {
         padding-right: 0.5rem !important;
+    }
+
+    /* Overflowing panel: Right padding on vertical overflow */
+    .overflowing.overflowing-horizontally {
+        padding-bottom: 0.5rem !important;
     }
 
     /* Character panel: "Add Character" button */
