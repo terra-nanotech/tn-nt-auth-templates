@@ -35,6 +35,10 @@ Section Order:
 ### Security
 -->
 
+### Added
+
+- Overflow detection to the Membership panel on the dashboard
+
 ## \[3.0.0-beta.1\] - 2024-02-08
 
 > \[!NOTE\]

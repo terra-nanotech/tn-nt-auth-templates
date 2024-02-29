@@ -135,6 +135,11 @@ $(document).ready(() => {
         addOverflowClasses(
             $('#aa-dashboard-panel-characters div.card-body div.card-body > div')
         );
+
+        // Add overflowing CSS classes to the Membership panel on the dashboard
+        addOverflowClasses(
+            $('#aa-dashboard-panel-membership div.card-body div.card-body > div')
+        );
     };
 
 
