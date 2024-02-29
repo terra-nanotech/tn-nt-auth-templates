@@ -35,6 +35,18 @@ Section Order:
 ### Security
 -->
 
+## \[3.0.0-beta.2\] - 2024-02-29
+
+> \[!NOTE\]
+>
+> **This version needs at least Alliance Auth v4.0.0b2!**
+>
+> Please make sure to update your Alliance Auth instance before
+> you install this version, otherwise an update to Alliance Auth will
+> be pulled in unsupervised.
+>
+> **This version is not compatible with Alliance Auth v3.x!**
+
 ### Added
 
 - Overflow detection to the Membership panel on the dashboard
@@ -43,7 +55,7 @@ Section Order:
 
 - CSS improved for overflowing elements
 
-## \[3.0.0-beta.1\] - 2024-02-08
+## \[3.0.0-beta.1\] - 2024-02-28
 
 > \[!NOTE\]
 >
