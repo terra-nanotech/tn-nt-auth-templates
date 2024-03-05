@@ -35,6 +35,10 @@ Section Order:
 ### Security
 -->
 
+### Fixed
+
+- `.navbar-brand` padding and margin
+
 ## \[3.0.0-beta.2\] - 2024-02-29
 
 > \[!NOTE\]
