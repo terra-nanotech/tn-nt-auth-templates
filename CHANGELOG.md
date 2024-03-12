@@ -39,13 +39,15 @@ Section Order:
 
 > \[!NOTE\]
 >
-> **This version needs at least Alliance Auth v4.0.0b2!**
+> **This version needs at least Alliance Auth v4!**
 >
 > Please make sure to update your Alliance Auth instance before
 > you install this version, otherwise an update to Alliance Auth will
 > be pulled in unsupervised.
 >
 > **This version is not compatible with Alliance Auth v3.x!**
+>
+> For versions compatible with Alliance Auth v3.x, see the [Releases](https://github.com/terra-nanotech/tn-nt-auth-templates/releases) before v3.0.0.
 
 ### Fixed
 
@@ -66,6 +68,8 @@ Section Order:
 > be pulled in unsupervised.
 >
 > **This version is not compatible with Alliance Auth v3.x!**
+>
+> For versions compatible with Alliance Auth v3.x, see the [Releases](https://github.com/terra-nanotech/tn-nt-auth-templates/releases) before v3.0.0.
 
 ### Added
 
@@ -86,6 +90,8 @@ Section Order:
 > be pulled in unsupervised.
 >
 > **This version is not compatible with Alliance Auth v3.x!**
+>
+> For versions compatible with Alliance Auth v3.x, see the [Releases](https://github.com/terra-nanotech/tn-nt-auth-templates/releases) before v3.0.0.
 
 ### Added
 
@@ -106,6 +112,8 @@ Section Order:
 > be pulled in unsupervised.
 >
 > **This version is not compatible with Alliance Auth v3.x!**
+>
+> For versions compatible with Alliance Auth v3.x, see the [Releases](https://github.com/terra-nanotech/tn-nt-auth-templates/releases) before v3.0.0.
 
 ### Added
 
