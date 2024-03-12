@@ -5,7 +5,123 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/)
 and this project adheres to [Semantic Versioning](http://semver.org/).
 
+<!--
+GitHub MD Syntax:
+https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
+
+Highlighting:
+https://docs.github.com/assets/cb-41128/mw-1440/images/help/writing/alerts-rendered.webp
+
+> [!NOTE]
+> Highlights information that users should take into account, even when skimming.
+
+> [!IMPORTANT]
+> Crucial information necessary for users to succeed.
+
+> [!WARNING]
+> Critical content demanding immediate user attention due to potential risks.
+-->
+
 ## \[In Development\] - Unreleased
+
+<!--
+Section Order:
+
+### Added
+### Fixed
+### Changed
+### Deprecated
+### Removed
+### Security
+-->
+
+## \[3.0.0-rc.1\] - 2024-03-12
+
+> \[!NOTE\]
+>
+> **This version needs at least Alliance Auth v4!**
+>
+> Please make sure to update your Alliance Auth instance before
+> you install this version, otherwise an update to Alliance Auth will
+> be pulled in unsupervised.
+>
+> **This version is not compatible with Alliance Auth v3.x!**
+>
+> For versions compatible with Alliance Auth v3.x, see the [Releases](https://github.com/terra-nanotech/tn-nt-auth-templates/releases) before v3.0.0.
+
+### Fixed
+
+- CSS paths in `mumbletemps` public template for the BS3 fallback
+
+### Changed
+
+- Updated to Bootstrap 5.3.3
+
+## \[3.0.0-beta.3\] - 2024-03-10
+
+> \[!NOTE\]
+>
+> **This version needs at least Alliance Auth v4.0.0b2!**
+>
+> Please make sure to update your Alliance Auth instance before
+> you install this version, otherwise an update to Alliance Auth will
+> be pulled in unsupervised.
+>
+> **This version is not compatible with Alliance Auth v3.x!**
+>
+> For versions compatible with Alliance Auth v3.x, see the [Releases](https://github.com/terra-nanotech/tn-nt-auth-templates/releases) before v3.0.0.
+
+### Added
+
+- Integrity checks for the CSS and JS files
+
+### Fixed
+
+- `.navbar-brand` padding and margin
+
+## \[3.0.0-beta.2\] - 2024-02-29
+
+> \[!NOTE\]
+>
+> **This version needs at least Alliance Auth v4.0.0b2!**
+>
+> Please make sure to update your Alliance Auth instance before
+> you install this version, otherwise an update to Alliance Auth will
+> be pulled in unsupervised.
+>
+> **This version is not compatible with Alliance Auth v3.x!**
+>
+> For versions compatible with Alliance Auth v3.x, see the [Releases](https://github.com/terra-nanotech/tn-nt-auth-templates/releases) before v3.0.0.
+
+### Added
+
+- Overflow detection to the Membership panel on the dashboard
+
+### Changed
+
+- CSS improved for overflowing elements
+
+## \[3.0.0-beta.1\] - 2024-02-28
+
+> \[!NOTE\]
+>
+> **This version needs at least Alliance Auth v4.0.0b2!**
+>
+> Please make sure to update your Alliance Auth instance before
+> you install this version, otherwise an update to Alliance Auth will
+> be pulled in unsupervised.
+>
+> **This version is not compatible with Alliance Auth v3.x!**
+>
+> For versions compatible with Alliance Auth v3.x, see the [Releases](https://github.com/terra-nanotech/tn-nt-auth-templates/releases) before v3.0.0.
+
+### Added
+
+- Compatibility with Alliance Auth v4.0.0
+
+### Removed
+
+- Compatibility with Alliance Auth v3.x
 
 ## \[2.12.0\] - 2023-10-13
 

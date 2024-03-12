@@ -2,6 +2,9 @@
 App settings
 """
 
+# Django
+from django.apps import apps
+
 # Alliance Auth (External Libs)
 from app_utils.app_settings import clean_setting
 
@@ -30,3 +33,10 @@ class AppSettings:  # pylint: disable=too-few-public-methods
     TNNT_TEMPLATE_URLS_OTHER_WEBSITES = clean_setting(
         name="TNNT_TEMPLATE_URLS_OTHER_WEBSITES", default_value=[]
     )
+
+    def aagdpr_installed(self) -> bool:
+        """
+        Check if aagdpr is installed
+        """
+
+        return apps.is_installed("aagdpr")

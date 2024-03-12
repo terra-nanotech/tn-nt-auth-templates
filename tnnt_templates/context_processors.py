@@ -17,7 +17,9 @@ def tnnt_settings(request: WSGIRequest) -> dict:  # pylint: disable=unused-argum
     """
 
     # AA logo
-    return_value = {"TNNT_TEMPLATE_AA_LOGO": "/static/icons/allianceauth.png"}
+    return_value = {
+        "TNNT_TEMPLATE_AA_LOGO": "/static/allianceauth/images/auth-logo.svg"
+    }
 
     # entity ID
     # 1 if none is given

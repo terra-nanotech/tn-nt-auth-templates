@@ -6,7 +6,6 @@ requires = [
 
 [project]
 name = "tnnt-templates"
-version = "2.12.0"
 description = "Terra Nanotech Template Overrides for Alliance Auth"
 readme = "README.md"
 keywords = [
@@ -24,7 +23,7 @@ requires-python = ">=3.8"
 classifiers = [
     "Environment :: Web Environment",
     "Framework :: Django",
-    "Framework :: Django :: 4.0",
+    "Framework :: Django :: 4.2",
     "Intended Audience :: Developers",
     "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
     "Operating System :: OS Independent",
@@ -34,15 +33,20 @@ classifiers = [
     "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
     "Topic :: Internet :: WWW/HTTP",
     "Topic :: Internet :: WWW/HTTP :: Dynamic Content",
 ]
+dynamic = [
+    "version",
+]
 dependencies = [
-    "allianceauth>=3.7",
-    "allianceauth-app-utils>=1.20.1",
+    "allianceauth<5.0.0,>=4.0.0b2",
+    "allianceauth-app-utils>=1.25",
 ]
 [project.optional-dependencies]
-tests-allianceauth-stable = [
+tests-allianceauth-latest = [
+    "aa-gdpr",
     "coverage",
     "django-webtest",
 ]
@@ -55,3 +59,6 @@ Homepage = "https://github.com/terra-nanotech/tn-nt-auth-templates"
 include = [
     "/tnnt_templates",
 ]
+
+[tool.hatch.version]
+path = "tnnt_templates/__init__.py"
