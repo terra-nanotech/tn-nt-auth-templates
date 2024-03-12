@@ -21,7 +21,6 @@ ______________________________________________________________________
 - [Terra Nanotech Auth Templates](#terra-nanotech-auth-templates)
   - [Important Information](#important-information)
   - [Install](#install)
-    - [Settings](#settings)
 
 <!-- mdformat-toc end -->
 
@@ -29,11 +28,23 @@ ______________________________________________________________________
 
 ## Important Information<a name="important-information"></a>
 
-> **Warning**
+> \[!IMPORTANT\]
+>
+> **This template override needs Alliance Auth v4!**
+>
+> Please make sure to update your Alliance Auth instance before
+> you install this version, otherwise an update to Alliance Auth will
+> be pulled in unsupervised.
+>
+> **This template override is not compatible with Alliance Auth v3.x!**
+>
+> For versions compatible with Alliance Auth v3.x, see the [Releases](https://github.com/terra-nanotech/tn-nt-auth-templates/releases) before v3.0.0.
+
+> \[!WARNING\]
 >
 > These template overrides are specially tailored for the corporation Terra Nanotech.
 > They override templates of apps we use, so it looks like we want it to. This
-> might entail changes to templates that also change the behaviour in a way we like it
+> might entail changes to templates that also change the behavior in a way we like it
 > to be changed.
 >
 > If you install these template overrides, you need to be aware that there will be
@@ -48,11 +59,11 @@ pip install tnnt-templates
 
 In `local.py` right after `INSTALLED_APPS`:
 
-### Settings<a name="settings"></a>
-
 ```python
 # TN-NT Auth Templates - https://github.com/terra-nanotech/tn-nt-auth-templates
-INSTALLED_APPS.insert(0, "tnnt_templates")
+INSTALLED_APPS.insert(
+    0, "tnnt_templates"
+)  # Bootstrap 3 fallback for AA community app that haven't been updated to Bootstrap 5 yet.
 
 if "tnnt_templates" in INSTALLED_APPS:
     # Add TN-NT Auth Templates theme
