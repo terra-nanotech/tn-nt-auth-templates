@@ -35,6 +35,18 @@ Section Order:
 ### Security
 -->
 
+## \[3.0.0-rc.1\] - 2024-03-12
+
+> \[!NOTE\]
+>
+> **This version needs at least Alliance Auth v4.0.0b2!**
+>
+> Please make sure to update your Alliance Auth instance before
+> you install this version, otherwise an update to Alliance Auth will
+> be pulled in unsupervised.
+>
+> **This version is not compatible with Alliance Auth v3.x!**
+
 ### Fixed
 
 - CSS paths in `mumbletemps` public template for the BS3 fallback
