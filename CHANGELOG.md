@@ -35,6 +35,10 @@ Section Order:
 ### Security
 -->
 
+### Fixed
+
+- CSS paths in `mumbletemps` public template for the BS3 fallback
+
 ### Changed
 
 - Updated to Bootstrap 5.3.3

@@ -17,17 +17,17 @@
 
         <title>{% block title %}{% translate "Mumble Temporary Access" %}{% endblock title %} - {{ SITE_NAME }}</title>
 
-        <link rel="stylesheet" href="{% static 'tnnt_templates/css/theme/terra-nanotech/v3/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'tnnt_templates/theme/terra-nanotech/aav3/libs/bootstrap/v3.4.1/css/bootstrap.min.css' %}">
         {% include 'bundles/fontawesome.html' %}
 
-        <link rel="stylesheet" href="{% tnnt_static 'tnnt_templates/css/terra-nanotech-defaults.min.css' %}">
-        <link rel="stylesheet" href="{% tnnt_static 'tnnt_templates/css/terra-nanotech.min.css' %}">
+        <link rel="stylesheet" href="{% tnnt_static 'tnnt_templates/theme/terra-nanotech/aav3/css/terra-nanotech-defaults.min.css' %}">
+        <link rel="stylesheet" href="{% tnnt_static 'tnnt_templates/theme/terra-nanotech/aav3/css/terra-nanotech.min.css' %}">
 
         {% block extra_css %}{% endblock extra_css %}
-        <link rel="stylesheet" href="{% tnnt_static 'tnnt_templates/css/community-app-fixes.min.css' %}">
+        <link rel="stylesheet" href="{% tnnt_static 'tnnt_templates/theme/terra-nanotech/aav3/css/community-app-fixes.min.css' %}">
 
         {% if NIGHT_MODE %}
-            <link rel="stylesheet" href="{% tnnt_static 'tnnt_templates/css/terra-nanotech-dark-mode.min.css' %}">
+            <link rel="stylesheet" href="{% tnnt_static 'tnnt_templates/theme/terra-nanotech/aav3/css/terra-nanotech-dark-mode.min.css' %}">
         {% endif %}
     </head>
 
