@@ -17,7 +17,8 @@ ci:
   autoupdate_branch: ''
   autoupdate_commit_msg: '[pre-commit.ci] pre-commit autoupdate'
   autoupdate_schedule: monthly
-  skip: []
+  skip:
+    - eslint  # Fails due to missing node environment in CI
   submodules: false
 
 # pre-commit setup
@@ -126,7 +127,7 @@ repos:
           )
 
   - repo: https://github.com/eslint/eslint
-    rev: v8.56.0
+    rev: v8.57.0
     hooks:
       - id: eslint
         name: ESLint

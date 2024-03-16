@@ -4,6 +4,7 @@
 __pycache__
 .idea/
 /htmlcov/
+node_modules/
 /.coverage
 /.tox/
 /coverage.xml
