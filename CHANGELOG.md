@@ -35,6 +35,28 @@ Section Order:
 ### Security
 -->
 
+## \[3.0.0\] - 2024-03-16
+
+> \[!NOTE\]
+>
+> **This version needs at least Alliance Auth v4.0.0!**
+>
+> Please make sure to update your Alliance Auth instance before
+> you install this version, otherwise an update to Alliance Auth will
+> be pulled in unsupervised.
+>
+> **This version is not compatible with Alliance Auth v3.x!**
+>
+> For versions compatible with Alliance Auth v3.x, see the [Releases](https://github.com/terra-nanotech/tn-nt-auth-templates/releases) before v3.0.0.
+
+### Added
+
+- Compatibility with Alliance Auth v4.0.0
+
+### Removed
+
+- Compatibility with Alliance Auth v3.x
+
 ## \[3.0.0-rc.1\] - 2024-03-12
 
 > \[!NOTE\]
