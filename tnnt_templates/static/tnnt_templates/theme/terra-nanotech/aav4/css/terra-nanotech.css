@@ -49,7 +49,6 @@
 
     body,
     body > nav.navbar,
-    ul#sidebar-menu > li:has(> i.active),
     .modal.fade.show {
         backdrop-filter: var(--backdrop-filter-default);
     }
@@ -57,7 +56,6 @@
     body,
     #sidebar > div > div,
     body > main > div + div,
-    ul#sidebar-menu > li:has(> i.active),
     .card {
         background-color: var(--background-color-light-transparency) !important;
     }

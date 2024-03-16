@@ -55,7 +55,7 @@ class TerraNanotechThemeHook(ThemeHook):
                         settings.STATIC_URL,
                         "tnnt_templates/theme/terra-nanotech/aav4/css/terra-nanotech.min.css",
                     ),
-                    "integrity": "sha512-dSPNRPuGT87ZuFSs4XA3XRM7kDOlGjBpXHkQtLMfsVnR2/rlJFCn4S24zRYllgFHBrH8rKYDh6YryWMX709fJQ==",
+                    "integrity": "sha512-/M3Z2UIOXMWwRF23o7n7bLgCXL5z3CBPJY4BEHHTP7uTAecPTCbt615LVZIU01nLzhkqEAOyN0V4TPJEUgacgA==",
                 },
                 {
                     "url": urljoin(
