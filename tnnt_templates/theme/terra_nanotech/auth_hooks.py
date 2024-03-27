@@ -53,16 +53,30 @@ class TerraNanotechThemeHook(ThemeHook):
                 {
                     "url": urljoin(
                         settings.STATIC_URL,
+                        "tnnt_templates/libs/fira-code/6.2.0/fira_code.min.css",
+                    ),
+                    "integrity": "sha512-kb4iEbG2cLDSYtf9DwOhdfrkxZnsZM+Ce+S+ZncKJJMNszS4JmqOk/EIoK0nCMskKiBb1Dmlg+i/fyR5SRJmQg==",
+                },
+                {
+                    "url": urljoin(
+                        settings.STATIC_URL,
+                        "tnnt_templates/libs/highlight-js/11.01/styles/default.min.css",
+                    ),
+                    "integrity": "sha512-3xLMEigMNYLDJLAgaGlDSxpGykyb+nQnJBzbkQy2a0gyVKL2ZpNOPIj1rD8IPFaJbwAgId/atho1+LBpWu5DhA==",
+                },
+                {
+                    "url": urljoin(
+                        settings.STATIC_URL,
                         "tnnt_templates/theme/terra-nanotech/aav4/css/terra-nanotech.min.css",
                     ),
-                    "integrity": "sha512-/M3Z2UIOXMWwRF23o7n7bLgCXL5z3CBPJY4BEHHTP7uTAecPTCbt615LVZIU01nLzhkqEAOyN0V4TPJEUgacgA==",
+                    "integrity": "sha512-x366XgoAPLnZ4jZBd7QTU2bfM5PrqeHx7NQlN3wYYoY8uxKg7hDNhun7p8XHyV4iPkyo58VtMZQcpH757eOMsw==",
                 },
                 {
                     "url": urljoin(
                         settings.STATIC_URL,
                         "tnnt_templates/theme/terra-nanotech/aav4/css/community-app-fixes.min.css",
                     ),
-                    "integrity": "sha512-iOn30VaTPjiuGy74s2p+0YKs8URpvxXJVnZfcyMz6U1CD463h8hK5xS8QKuBqmeCJ9ECQ7HNlamn8rfGCfeU0Q==",
+                    "integrity": "sha512-4xKT3LDixu/b205++booimnbKseoWTy/798W6jtpheUCoQ5ktjT1XstVhgnJwpn6+Dr8TrlGYCYXxZ6RBuqo9g==",
                 },
             ],
             js=[
@@ -79,6 +93,13 @@ class TerraNanotechThemeHook(ThemeHook):
                         "tnnt_templates/theme/terra-nanotech/aav4/libs/bootstrap/v5.3.3/javascript/bootstrap.min.js",
                     ),
                     "integrity": "sha512-gNyiMtmOs5iIO2fjMFZRSR1s9Espoi+fdDtNuSh1iMpeRminsho2AA7767qpfkYqskd9PtUfMwAg0KdKJsMTuQ==",
+                },
+                {
+                    "url": urljoin(
+                        settings.STATIC_URL,
+                        "tnnt_templates/libs/highlight-js/11.01/highlight.min.js",
+                    ),
+                    "integrity": "sha512-W7EehcwtSbRF63FIQlXEOOd5mnq0Et0V0nUOvwcUvjnCKgOLLYbqriQxEQSp63sfrkryxIg/A/O8v8O18QwQCQ==",
                 },
                 {
                     "url": urljoin(
