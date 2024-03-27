@@ -29,6 +29,18 @@
 
         --bs-text-opacity: 1;
     }
+
+    .ck-content blockquote {
+        border-left: 2px solid var(--bs-secondary-color) !important;
+        padding: 1rem 1rem 0;
+    }
+
+    .ck-content pre {
+        background: rgba(var(--bs-light-rgb), 0.75) !important; /* stylelint-disable-line color-function-notation */
+        border: 1px solid var(--bs-secondary-color) !important;
+        border-radius: var(--bs-border-radius) !important;
+        padding: 1rem !important;
+    }
 }
 
 /* END CKEditor 5 style fixes

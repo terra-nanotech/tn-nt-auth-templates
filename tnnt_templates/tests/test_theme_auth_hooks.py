@@ -48,8 +48,8 @@ class TerraNanotechThemeHookTests(TestCase):
         :rtype:
         """
 
-        self.assertEqual(first=len(self.theme_hook.css), second=5)
-        self.assertEqual(first=len(self.theme_hook.js), second=3)
+        self.assertEqual(first=len(self.theme_hook.css), second=7)
+        self.assertEqual(first=len(self.theme_hook.js), second=4)
 
     def test_should_have_correct_header_padding(self):
         """

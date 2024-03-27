@@ -101,10 +101,10 @@
     }
 
     code {
-        background-color: var(--background-color-light-transparency);
         border-radius: var(--bs-border-radius);
+        color: var(--bs-secondary-color-text) !important;
         font-family: var(--font-family-code);
-        padding: 0.25rem;
+        padding: 0.25rem !important;
     }
 
     pre code {
