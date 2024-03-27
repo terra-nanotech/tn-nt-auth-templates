@@ -35,6 +35,11 @@ Section Order:
 ### Security
 -->
 
+### Fixed
+
+- Blockquote padding
+- Code blocks and code highlighting
+
 ## \[3.0.0\] - 2024-03-16
 
 > \[!NOTE\]
