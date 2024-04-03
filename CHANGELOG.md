@@ -35,6 +35,8 @@ Section Order:
 ### Security
 -->
 
+## \[3.0.1\] - 2024-04-03
+
 ### Fixed
 
 - Blockquote padding
