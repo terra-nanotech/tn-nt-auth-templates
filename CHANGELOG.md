@@ -39,6 +39,10 @@ Section Order:
 
 - Link color in CKEditor
 
+### Changed
+
+- Versioning own CSS and JS
+
 ## \[3.0.1\] - 2024-04-03
 
 ### Fixed

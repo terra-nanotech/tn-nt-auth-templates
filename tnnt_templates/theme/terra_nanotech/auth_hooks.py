@@ -12,6 +12,9 @@ from django.conf import settings
 from allianceauth import hooks
 from allianceauth.theme.hooks import ThemeHook
 
+# AA Templates: Terra Nanotech
+from tnnt_templates import __version__
+
 
 class TerraNanotechThemeHook(ThemeHook):
     """
@@ -39,14 +42,14 @@ class TerraNanotechThemeHook(ThemeHook):
                 {
                     "url": urljoin(
                         settings.STATIC_URL,
-                        "tnnt_templates/theme/terra-nanotech/aav4/css/terra-nanotech-defaults.min.css",
+                        f"tnnt_templates/theme/terra-nanotech/aav4/css/terra-nanotech-defaults.min.css?v={__version__}",
                     ),
                     "integrity": "sha512-E8vMqXFN+EiyBKkt06o/x5rK+ZGQk8f8+jgWJX5ZKDoxjG4noss9lfS/cgp5/evqXRlmdhBT8IB8QToCPNbq3w==",
                 },
                 {
                     "url": urljoin(
                         settings.STATIC_URL,
-                        "tnnt_templates/theme/terra-nanotech/aav4/css/terra-nanotech-fonts.min.css",
+                        f"tnnt_templates/theme/terra-nanotech/aav4/css/terra-nanotech-fonts.min.css?v={__version__}",
                     ),
                     "integrity": "sha512-mF/lpSPp8ihS9XOtcOPAFzpzsQRMKH3D0scCPEKIaTpVtDd7F6iIafkdkD1VJ1ubsQKy3CUiBWigoVKE62TlXQ==",
                 },
@@ -67,14 +70,14 @@ class TerraNanotechThemeHook(ThemeHook):
                 {
                     "url": urljoin(
                         settings.STATIC_URL,
-                        "tnnt_templates/theme/terra-nanotech/aav4/css/terra-nanotech.min.css",
+                        f"tnnt_templates/theme/terra-nanotech/aav4/css/terra-nanotech.min.css?v={__version__}",
                     ),
                     "integrity": "sha512-x366XgoAPLnZ4jZBd7QTU2bfM5PrqeHx7NQlN3wYYoY8uxKg7hDNhun7p8XHyV4iPkyo58VtMZQcpH757eOMsw==",
                 },
                 {
                     "url": urljoin(
                         settings.STATIC_URL,
-                        "tnnt_templates/theme/terra-nanotech/aav4/css/community-app-fixes.min.css",
+                        f"tnnt_templates/theme/terra-nanotech/aav4/css/community-app-fixes.min.css?v={__version__}",
                     ),
                     "integrity": "sha512-iOCuDIU9rUdO6uEUSYEtmydVzzHB0Wks1EFG/zuB14QTzUpLVUlfkZs7VEzUlYRh1rvDK2iZQq6qjP1xTY6ZJg==",
                 },
@@ -104,7 +107,7 @@ class TerraNanotechThemeHook(ThemeHook):
                 {
                     "url": urljoin(
                         settings.STATIC_URL,
-                        "tnnt_templates/javascript/terra-nanotech.min.js",
+                        f"tnnt_templates/javascript/terra-nanotech.min.js?v={__version__}",
                     ),
                     "integrity": "sha512-8vfSXueHbC/o6MgFxuPAEbbc9jMObN+r+rnk6uYDEYVdzJdCcOWglSoTmaPuGn5xurevBMnFY1IEWWpzcD31Lg==",
                 },
