@@ -35,6 +35,8 @@ Section Order:
 ### Security
 -->
 
+## \[3.0.2\] - 2024-04-03
+
 ### Fixed
 
 - Link color in CKEditor
