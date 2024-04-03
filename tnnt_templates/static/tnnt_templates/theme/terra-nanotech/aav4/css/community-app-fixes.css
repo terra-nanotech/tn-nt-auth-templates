@@ -20,7 +20,7 @@
         --ck-border-radius: var(--bs-border-radius);
     }
 
-    .ck-editor__editable {
+    .ck-editor__editable, .ck-editor__editable a {
         color: initial;
     }
 
