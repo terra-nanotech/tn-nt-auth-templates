@@ -35,6 +35,10 @@ Section Order:
 ### Security
 -->
 
+### Removed
+
+- Templates for Mumble Temps
+
 ## \[3.0.2\] - 2024-04-03
 
 ### Fixed
