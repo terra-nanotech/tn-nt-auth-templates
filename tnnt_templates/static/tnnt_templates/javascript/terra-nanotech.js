@@ -4,7 +4,7 @@ $(document).ready(() => {
     'use strict';
 
     /**
-     * Extend links to external website
+     * Extend links to external website.
      * » add target="_blank"
      * » add rel="noopener noreferer"
      */
@@ -13,7 +13,7 @@ $(document).ready(() => {
         const protocolPattern = /^https?:\/\//i;
 
         /**
-         * Walk through all links on the current page
+         * Walk through all links on the current page.
          */
         $('a').each((index, element) => {
             const href = $(element).attr('href');
@@ -34,7 +34,7 @@ $(document).ready(() => {
 
 
     /**
-     * Render a JS clock for Eve time
+     * Render a JS clock for Eve time.
      *
      * @param {Element} element The HTML element to display the time
      */
@@ -62,7 +62,7 @@ $(document).ready(() => {
 
 
     /**
-     * Check if an element has CSS overflow
+     * Check if an element has CSS overflow.
      *
      * @param {Element} element The element to check
      * @returns {{horizontal: boolean, overflow: boolean, vertical: boolean}}
@@ -82,7 +82,7 @@ $(document).ready(() => {
 
 
     /**
-     * Add classes to elements that have CSS overflow
+     * Add classes to elements that have CSS overflow.
      *
      * @param {Element} element The element to check
      */
@@ -108,7 +108,7 @@ $(document).ready(() => {
 
 
     /**
-     * Functions that need to be executed on successful ajax events
+     * Functions that need to be executed on successful ajax events.
      */
     $(document).ajaxSuccess(() => {
         externalLinks();
@@ -116,29 +116,29 @@ $(document).ready(() => {
 
 
     /**
-     * Functions that need to be executed when the page is loaded
+     * Functions that need to be executed when the page is loaded.
      */
     const init = () => {
-        // Start the Eve time clock in the top menu bar
+        // Start the Eve-time clock in the top menu bar.
         setInterval(() => {
             renderClock($('.eve-time-wrapper .eve-time-clock'));
         }, 500);
 
         externalLinks();
 
-        // It's not always loaded
+        // It's not always loaded.
         if (typeof hljs !== 'undefined' && typeof hljs.highlightAll === 'function') {
             hljs.highlightAll();
         }
 
-        // Add overflowing CSS classes to the Characters panel on the dashboard
+        // Add overflowing CSS classes to the Characters panel on the dashboard.
         addOverflowClasses(
-            $('#aa-dashboard-panel-characters div.card-body div.card-body > div')
+            $('#aa-dashboard-panel-characters div.card-body > div:nth-child(2) > div')
         );
 
-        // Add overflowing CSS classes to the Membership panel on the dashboard
+        // Add overflowing CSS classes to the Membership panel on the dashboard.
         addOverflowClasses(
-            $('#aa-dashboard-panel-membership div.card-body div.card-body > div')
+            $('#aa-dashboard-panel-membership div.card-body > div:nth-child(2) > div')
         );
     };
 

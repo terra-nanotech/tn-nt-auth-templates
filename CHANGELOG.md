@@ -35,6 +35,10 @@ Section Order:
 ### Security
 -->
 
+### Fixed
+
+- Overflow detection for the Characters and Membership panel on the dashboard
+
 ### Removed
 
 - Templates for Mumble Temps
