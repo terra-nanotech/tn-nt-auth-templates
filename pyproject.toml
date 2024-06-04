@@ -15,7 +15,7 @@ keywords = [
     "template_override",
     "terra_nanotech",
 ]
-license = {file = "LICENSE"}
+license = { file = "LICENSE" }
 authors = [
     { name = "Peter Pfeufer", email = "develop@ppfeufer.de" },
 ]
@@ -41,19 +41,17 @@ dynamic = [
     "version",
 ]
 dependencies = [
-    "allianceauth<5.0.0,>=4",
+    "allianceauth<5,>=4",
     "allianceauth-app-utils>=1.25",
 ]
-[project.optional-dependencies]
-tests-allianceauth-latest = [
+optional-dependencies.tests-allianceauth-latest = [
     "aa-gdpr",
     "coverage",
     "django-webtest",
 ]
-[project.urls]
-Changelog = "https://github.com/terra-nanotech/tn-nt-auth-templates/blob/master/CHANGELOG.md"
-Documentation = "https://github.com/terra-nanotech/tn-nt-auth-templates/blob/master/README.md"
-Homepage = "https://github.com/terra-nanotech/tn-nt-auth-templates"
+urls.Changelog = "https://github.com/terra-nanotech/tn-nt-auth-templates/blob/master/CHANGELOG.md"
+urls.Documentation = "https://github.com/terra-nanotech/tn-nt-auth-templates/blob/master/README.md"
+urls.Homepage = "https://github.com/terra-nanotech/tn-nt-auth-templates"
 
 [tool.hatch.build]
 include = [
