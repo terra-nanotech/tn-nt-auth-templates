@@ -35,13 +35,15 @@ Section Order:
 ### Security
 -->
 
+## \[3.1.0\] - 2024-06-27
+
 ### Fixed
 
 - Overflow detection for the Characters and Membership panel on the dashboard
 
 ### Removed
 
-- Templates for Mumble Temps
+- Bootstrap 3 templates for Mumble Temps
 
 ## \[3.0.2\] - 2024-04-03
 
