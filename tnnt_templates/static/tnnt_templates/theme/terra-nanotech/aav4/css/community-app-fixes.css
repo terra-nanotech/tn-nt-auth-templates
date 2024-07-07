@@ -154,6 +154,10 @@
     /* END SumoSelect
     --------------------------------------------------------------------------------- */
 
+    #aa-forum-form-search-menu .has-search svg {
+        fill: var(--font-color-default);
+    }
+
     .aa-forum .aa-forum-search-results-total-number {
         font-size: 1.25rem;
         font-weight: bolder;

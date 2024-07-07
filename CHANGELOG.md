@@ -44,6 +44,7 @@ Section Order:
 ### Fixed
 
 - Overflow detection for the Characters and Membership panel on the dashboard
+- Search icon color in the top menu
 
 ### Removed
 
