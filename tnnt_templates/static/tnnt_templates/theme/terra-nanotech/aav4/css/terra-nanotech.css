@@ -13,6 +13,21 @@
     .table {
         --bs-table-bg: var(--background-color-light-transparency) !important;
     }
+
+    .btn {
+        --bs-btn-padding-x: 0.75rem;
+        --bs-btn-padding-y: 0.5rem;
+    }
+
+    .btn-group-sm > .btn, .btn-sm {
+        --bs-btn-padding-y: 0.25rem;
+        --bs-btn-padding-x: 0.5rem;
+    }
+
+    .btn-group-lg > .btn, .btn-lg {
+        --bs-btn-padding-y: 0.5rem;
+        --bs-btn-padding-x: 1rem;
+    }
 }
 
 /* END Bootstrap defaults overrides

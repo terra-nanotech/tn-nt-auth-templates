@@ -72,7 +72,7 @@ class TerraNanotechThemeHook(ThemeHook):
                         settings.STATIC_URL,
                         f"tnnt_templates/theme/terra-nanotech/aav4/css/terra-nanotech.min.css?v={__version__}",
                     ),
-                    "integrity": "sha512-x366XgoAPLnZ4jZBd7QTU2bfM5PrqeHx7NQlN3wYYoY8uxKg7hDNhun7p8XHyV4iPkyo58VtMZQcpH757eOMsw==",
+                    "integrity": "sha512-tSa74ZzRLfzDYBcPXfr6TsNlZL+tT5J7cmCxazl/MAkGbsN5QkfL3VuHIqwqflWqIroDv20wVrPaSqYwdAFknQ==",
                 },
                 {
                     "url": urljoin(

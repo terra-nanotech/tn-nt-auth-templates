@@ -35,6 +35,10 @@ Section Order:
 ### Security
 -->
 
+### Changed
+
+- Button size slightly adjusted
+
 ## \[3.1.0\] - 2024-06-27
 
 ### Fixed
