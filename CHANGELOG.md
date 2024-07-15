@@ -35,9 +35,19 @@ Section Order:
 ### Security
 -->
 
+## \[3.2.0\] - 2024-07-15
+
+### Fixed
+
+- Search icon color for global search on `forum` app
+
 ### Changed
 
 - Button size slightly adjusted
+
+### Removed
+
+- Support for Python 3.8 and Python 3.9
 
 ## \[3.1.0\] - 2024-06-27
 
