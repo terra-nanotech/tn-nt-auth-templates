@@ -35,6 +35,10 @@ Section Order:
 ### Security
 -->
 
+### Changed
+
+- Use new CSS styling for the forum SVG icons
+
 ## \[3.2.0\] - 2024-07-15
 
 ### Fixed
