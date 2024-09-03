@@ -48,36 +48,43 @@
     <div class="card card-default card-tabs">
         <div class="card-body">
             <div class="table-responsive mb-3">
-                <table id="tab_package_list" class="table table-striped w-100">
+                <table id="tab_package_list" class="table table-hover w-100">
                     <thead>
-                    <tr>
-                        <th
-                            class="dotted_underline"
-                            title="{% translate 'Name of this distribution package' %}">
-                            {% translate "Name" %}
-                        </th>
-                        <th
-                            class="dotted_underline"
-                            title="{% translate 'Currently installed version of this package' %}">
-                            {% translate "Installed" %}
-                        </th>
-                        <th
-                            class="dotted_underline"
-                            title="{% translate 'Latest available stable version compliant with all requirements for this package' %}">
-                            {% translate "Latest" %}
-                        </th>
-                        <th>{% translate "Description" %}</th>
-                        <th
-                            class="dotted_underline"
-                            title="{% translate 'Currently installed Django apps included in this package' %}">
-                            {% translate "Included Apps" %}
-                        </th>
-                        <th
-                            class="dotted_underline"
-                            title="{% translate 'Other distribution packages that are using this package' %}">
-                            {% translate "Used By" %}
-                        </th>
-                    </tr>
+                        <tr>
+                            <th
+                                class="dotted_underline"
+                                title="{% translate 'Name of this distribution package' %}">
+                                {% translate "Name" %}
+                            </th>
+
+                            <th
+                                class="dotted_underline"
+                                title="{% translate 'Currently installed version of this package' %}">
+                                {% translate "Installed" %}
+                            </th>
+
+                            <th
+                                class="dotted_underline"
+                                title="{% translate 'Latest available stable version compliant with all requirements for this package' %}">
+                                {% translate "Latest" %}
+                            </th>
+
+                            <th>
+                                {% translate "Description" %}
+                            </th>
+
+                            <th
+                                class="dotted_underline"
+                                title="{% translate 'Currently installed Django apps included in this package' %}">
+                                {% translate "Included Apps" %}
+                            </th>
+
+                            <th
+                                class="dotted_underline"
+                                title="{% translate 'Other distribution packages that are using this package' %}">
+                                {% translate "Used By" %}
+                            </th>
+                        </tr>
                     </thead>
                 </table>
             </div>
@@ -112,7 +119,9 @@
                     <i class="far fa-copy"></i>
                 </p>
             {% else %}
-                <p class="text-muted">{% translate "No outdated packages to install." %}</p>
+                <p class="text-muted">
+                    {% translate "No outdated packages to install." %}
+                </p>
             {% endif %}
         </div>
     </div>
@@ -147,19 +156,34 @@
                 },
 
                 columns: [
-                    { data: 'name_link' },
-                    { data: 'current' },
-                    { data: 'latest' },
-                    { data: 'description' },
-                    { data: 'apps' },
-                    { data: 'used_by' }
+                    {
+                        data: 'name_link'
+                    },
+                    {
+                        data: 'current'
+                    },
+                    {
+                        data: 'latest'
+                    },
+                    {
+                        data: 'description'
+                    },
+                    {
+                        data: 'apps'
+                    },
+                    {
+                        data: 'used_by'
+                    }
                 ],
 
                 ordering: false,
                 info: false,
 
                 columnDefs: [
-                    { 'sortable': false, 'targets': [0, 1, 2, 3, 4] },
+                    {
+                        'sortable': false,
+                        'targets': [0, 1, 2, 3, 4]
+                    },
                 ],
 
                 paging: false,
