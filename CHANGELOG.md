@@ -35,13 +35,17 @@ Section Order:
 ### Security
 -->
 
+### Added
+
+- AAv4 template overrides for `aa-package-monitor`
+
 ### Changed
 
 - Use new CSS styling for the forum SVG icons
 
 ### Removed
 
-- Template overrides for `smartgroups`
+- Template overrides for `allianceauth-securegroups`
 
 ## \[3.2.0\] - 2024-07-15
 
