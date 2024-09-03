@@ -39,6 +39,10 @@ Section Order:
 
 - Use new CSS styling for the forum SVG icons
 
+### Removed
+
+- Template overrides for `smartgroups`
+
 ## \[3.2.0\] - 2024-07-15
 
 ### Fixed
