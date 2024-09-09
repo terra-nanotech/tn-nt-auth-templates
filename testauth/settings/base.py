@@ -25,6 +25,7 @@ INSTALLED_APPS = [
     "django.contrib.staticfiles",
     "django.contrib.humanize",
     "django_celery_beat",
+    "solo",
     "bootstrapform",
     "django_bootstrap5",  # https://github.com/zostera/django-bootstrap5
     "sortedm2m",
@@ -42,6 +43,7 @@ INSTALLED_APPS = [
     "allianceauth.theme.darkly",
     "allianceauth.theme.flatly",
     "allianceauth.theme.materia",
+    "allianceauth.custom_css",
 ]
 
 SECRET_KEY = "wow I'm a really bad default secret key"
@@ -77,7 +79,6 @@ PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 BASE_DIR = os.path.dirname(PROJECT_DIR)
 
 MIDDLEWARE = [
-    "allianceauth.menu.middleware.MenuSyncMiddleware",
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "allianceauth.authentication.middleware.UserSettingsMiddleware",
@@ -104,6 +105,7 @@ LANGUAGES = (
     ("ja", "Japanese"),
     ("it", "Italian"),
     ("uk", "Ukrainian"),
+    ("pl", "Polish"),
 )
 
 TEMPLATES = [
@@ -179,7 +181,7 @@ MESSAGE_TAGS = {messages.ERROR: "danger error"}
 CACHES = {
     "default": {
         "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "redis://127.0.0.1:6379/1",  # change the 1 here to change the database used
+        "LOCATION": "redis://127.0.0.1:6379/1",  # change the 1 here for the DB used
     }
 }
 
@@ -211,6 +213,8 @@ LOGOUT_REDIRECT_URL = "authentication:dashboard"  # destination after logging ou
 
 # scopes required on new tokens when logging in. Cannot be blank.
 LOGIN_TOKEN_SCOPES = ["publicData"]
+
+EMAIL_TIMEOUT = 15
 
 # number of days email verification links are valid for
 ACCOUNT_ACTIVATION_DAYS = 1

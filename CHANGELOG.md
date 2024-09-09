@@ -35,12 +35,15 @@ Section Order:
 ### Security
 -->
 
+## \[3.3.0\] - 2024-09-09
+
 ### Added
 
 - AAv4 template overrides for `aa-package-monitor`
 
 ### Changed
 
+- The minimum required AA version is now 4.3.0
 - Use new CSS styling for the forum SVG icons
 
 ### Removed
