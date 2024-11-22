@@ -104,15 +104,9 @@ $(document).ready(() => {
             } = elementHasOverflow(element);
 
             if (overflow) {
-                element.addClass('overflowing');
-
-                if (vertical) {
-                    element.addClass('overflowing-vertically');
-                }
-
-                if (horizontal) {
-                    element.addClass('overflow-horizontally');
-                }
+                element.addClass(
+                    `overflowing${vertical ? ' overflowing-vertically' : ''}${horizontal ? ' overflow-horizontally' : ''}`
+                );
             }
         }
     };
