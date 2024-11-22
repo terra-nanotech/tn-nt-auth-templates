@@ -64,8 +64,19 @@ $(document).ready(() => {
     /**
      * Check if an element has CSS overflow.
      *
+     * Usage:
+     * ```js
+     * const element = $('#element');
+     * const {
+     *     overflow, horizontal, vertical
+     * } = elementHasOverflow(element);
+     * ```
+     *
      * @param {Element} element The element to check
-     * @returns {{horizontal: boolean, overflow: boolean, vertical: boolean}}
+     * @returns {{overflow: boolean, horizontal: boolean, vertical: boolean}} An object with the results.
+     * `overflow` is true if the element has overflow,
+     * `horizontal` is true if the element has horizontal overflow,
+     * and `vertical` is true if the element has vertical overflow.
      */
     const elementHasOverflow = (element) => {
         const clientHeight = element[0].clientHeight;
@@ -118,7 +129,7 @@ $(document).ready(() => {
     /**
      * Functions that need to be executed when the page is loaded.
      */
-    const init = () => {
+    (() => {
         // Start the Eve-time clock in the top menu bar.
         setInterval(() => {
             renderClock($('.eve-time-wrapper .eve-time-clock'));
@@ -140,11 +151,11 @@ $(document).ready(() => {
         addOverflowClasses(
             $('#aa-dashboard-panel-membership div.card-body > div:nth-child(2) > div')
         );
-    };
+    })();
 
 
     /**
      * Start the show
      */
-    init();
+    // init();
 });
