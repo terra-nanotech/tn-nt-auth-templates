@@ -35,6 +35,15 @@ Section Order:
 ### Security
 -->
 
+### Changed
+
+- Make `init` function in main JS file self-executing
+- Update `blacklist` templates
+
+### Removed
+
+- Bundled ChartJS, as it was not used
+
 ## \[3.3.0\] - 2024-09-09
 
 ### Added
