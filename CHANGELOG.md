@@ -22,7 +22,7 @@ https://docs.github.com/assets/cb-41128/mw-1440/images/help/writing/alerts-rende
 > Critical content demanding immediate user attention due to potential risks.
 -->
 
-## \[In Development\] - Unreleased
+## [In Development] - Unreleased
 
 <!--
 Section Order:
@@ -44,7 +44,7 @@ Section Order:
 
 - Bundled ChartJS, as it was not used
 
-## \[3.3.0\] - 2024-09-09
+## [3.3.0] - 2024-09-09
 
 ### Added
 
@@ -59,7 +59,7 @@ Section Order:
 
 - Template overrides for `allianceauth-securegroups`
 
-## \[3.2.0\] - 2024-07-15
+## [3.2.0] - 2024-07-15
 
 ### Fixed
 
@@ -73,7 +73,7 @@ Section Order:
 
 - Support for Python 3.8 and Python 3.9
 
-## \[3.1.0\] - 2024-06-27
+## [3.1.0] - 2024-06-27
 
 ### Fixed
 
@@ -84,7 +84,7 @@ Section Order:
 
 - Bootstrap 3 templates for Mumble Temps
 
-## \[3.0.2\] - 2024-04-03
+## [3.0.2] - 2024-04-03
 
 ### Fixed
 
@@ -94,16 +94,16 @@ Section Order:
 
 - Versioning own CSS and JS
 
-## \[3.0.1\] - 2024-04-03
+## [3.0.1] - 2024-04-03
 
 ### Fixed
 
 - Blockquote padding
 - Code blocks and code highlighting
 
-## \[3.0.0\] - 2024-03-16
+## [3.0.0] - 2024-03-16
 
-> \[!NOTE\]
+> [!NOTE]
 >
 > **This version needs at least Alliance Auth v4.0.0!**
 >
@@ -123,9 +123,9 @@ Section Order:
 
 - Compatibility with Alliance Auth v3.x
 
-## \[3.0.0-rc.1\] - 2024-03-12
+## [3.0.0-rc.1] - 2024-03-12
 
-> \[!NOTE\]
+> [!NOTE]
 >
 > **This version needs at least Alliance Auth v4!**
 >
@@ -145,9 +145,9 @@ Section Order:
 
 - Updated to Bootstrap 5.3.3
 
-## \[3.0.0-beta.3\] - 2024-03-10
+## [3.0.0-beta.3] - 2024-03-10
 
-> \[!NOTE\]
+> [!NOTE]
 >
 > **This version needs at least Alliance Auth v4.0.0b2!**
 >
@@ -167,9 +167,9 @@ Section Order:
 
 - `.navbar-brand` padding and margin
 
-## \[3.0.0-beta.2\] - 2024-02-29
+## [3.0.0-beta.2] - 2024-02-29
 
-> \[!NOTE\]
+> [!NOTE]
 >
 > **This version needs at least Alliance Auth v4.0.0b2!**
 >
@@ -189,9 +189,9 @@ Section Order:
 
 - CSS improved for overflowing elements
 
-## \[3.0.0-beta.1\] - 2024-02-28
+## [3.0.0-beta.1] - 2024-02-28
 
-> \[!NOTE\]
+> [!NOTE]
 >
 > **This version needs at least Alliance Auth v4.0.0b2!**
 >
@@ -211,7 +211,7 @@ Section Order:
 
 - Compatibility with Alliance Auth v3.x
 
-## \[2.12.0\] - 2023-10-13
+## [2.12.0] - 2023-10-13
 
 ### Fixed
 
@@ -222,7 +222,7 @@ Section Order:
 - Minimum dependencies:
   - `allianceauth>=3.7.0`
 
-## \[2.11.7\] - 2023-09-21
+## [2.11.7] - 2023-09-21
 
 ### Fixed
 
@@ -236,55 +236,55 @@ Section Order:
   - `allianceauth-app-utils>=1.20.1`
 - Test environment for `tox` cleaned up
 
-## \[2.11.6\] - 2023-09-17
+## [2.11.6] - 2023-09-17
 
 ### Added
 
 - JS compression and CSS/JS source maps
 
-## \[2.11.5\] - 2023-09-01
+## [2.11.5] - 2023-09-01
 
 ### Fixed
 
 - Styles for AA Intel Tool
 
-## \[2.11.4\] - 2023-08-13
+## [2.11.4] - 2023-08-13
 
 ### Fixed
 
 - AA Bootstrap fixes
 
-## \[2.11.3\] - 2023-08-10
+## [2.11.3] - 2023-08-10
 
 ### Fixed
 
 - Highlight CSS classes for AA Intel Tool
 
-## \[2.11.2\] - 2023-08-08
+## [2.11.2] - 2023-08-08
 
 ### Fixed
 
 - Allow system messages also for non-logged-in users
 
-## \[2.11.1\] - 2023-08-08
+## [2.11.1] - 2023-08-08
 
 ### Fixed
 
 - Missing message icon
 
-## \[2.11.0\] - 2023-08-08
+## [2.11.0] - 2023-08-08
 
 ### Changed
 
 - Main template adapted for AA's new public views feature
 
-## \[2.10.0\] - 2023-08-01
+## [2.10.0] - 2023-08-01
 
 ### Changed
 
 - Adapted for Alliance Auth v3.6.0
 
-## \[2.9.2\] - 2023-07-30
+## [2.9.2] - 2023-07-30
 
 ### Added
 
@@ -298,25 +298,25 @@ Section Order:
 
 - Translation files, makes no sense in a template override
 
-## \[2.9.1\] - 2023-04-20
+## [2.9.1] - 2023-04-20
 
 ### Fixed
 
 - Added missing `readonly` attribute to EFT fitting
 
-## \[2.9.0\] - 2023-04-20
+## [2.9.0] - 2023-04-20
 
 ### Changed
 
 - Templates for the `fittings` module adapted for v2.0.0 of the module
 
-## \[2.8.1\] - 2023-03-18
+## [2.8.1] - 2023-03-18
 
 ### Changed
 
 - Colors for code blocks updated
 
-## \[2.8.0\] - 2022-10-14
+## [2.8.0] - 2022-10-14
 
 ### Added
 
@@ -327,31 +327,31 @@ Section Order:
 - Minimum Requirements
   - Alliance Auth >= 3.3.0
 
-## \[2.7.7\] - 2022-09-09
+## [2.7.7] - 2022-09-09
 
 ### Fixed
 
 - Use the right markup for the celery progress bar
 
-## \[2.7.6\] - 2022-09-04
+## [2.7.6] - 2022-09-04
 
 ### Changed
 
 - Backdrop effect for modal windows (Part 2)
 
-## \[2.7.5\] - 2022-09-04
+## [2.7.5] - 2022-09-04
 
 ### Changed
 
 - Backdrop effect for modal windows
 
-## \[2.7.4\] - 2022-09-01
+## [2.7.4] - 2022-09-01
 
 ### Added
 
 - CSS overrides for AA Forum's Personal Messages feature
 
-## \[2.7.3\] - 2022-08-28
+## [2.7.3] - 2022-08-28
 
 ### Fixed
 
@@ -359,20 +359,20 @@ Section Order:
 - "Leave Requests" tab in group management is now hidden as it should when
   `GROUPMANAGEMENT_AUTO_LEAVE = True`
 
-## \[2.7.2\] - 2022-08-25
+## [2.7.2] - 2022-08-25
 
 ### Changed
 
 - CSS to match `aa-forum` v1.13.0
 
-## \[2.7.1\] - 2022-08-25
+## [2.7.1] - 2022-08-25
 
 ### Changed
 
 - Split SVG Icons for dark/light mode and better icon names to match the changes in
   v1.12.0 of `aa-forum`
 
-## \[2.7.0\] - 2022-08-25
+## [2.7.0] - 2022-08-25
 
 ### Added
 
@@ -381,7 +381,7 @@ Section Order:
   is loading it from a CDN (GDPR Issue)
 - Override for `aa-forum` SVG icons
 
-## \[2.6.3\] - 2022-08-09
+## [2.6.3] - 2022-08-09
 
 ### Changed
 
@@ -392,13 +392,13 @@ Section Order:
   myauth/myauth/templates/tnnt_templates/includes/opengraph-tags.html
   ```
 
-## \[2.6.2\] - 2022-08-08
+## [2.6.2] - 2022-08-08
 
 ### Added
 
 - Styles for [AA Discord Announcements](https://github.com/ppfeufer/aa-discord-announcements)
 
-## \[2.6.1\] - 2022-08-06
+## [2.6.1] - 2022-08-06
 
 ### Changed
 
@@ -406,7 +406,7 @@ Section Order:
 - Darkmode CSS variables
 - CSS stylelint applied
 
-## \[2.6.0\] - 2022-07-30
+## [2.6.0] - 2022-07-30
 
 **This release is for Alliance Auth v3.0.0b3 or higher. Do not try and attempt to
 run it with any version prior!**
@@ -447,7 +447,7 @@ run it with any version prior!**
 - `type="application/javascript"` from script-tags, as it is deprecated
 - `type="text/css"` from style-tags, as it is deprecated
 
-## \[2.6.0-beta.3\] - 2022-07-19
+## [2.6.0-beta.3] - 2022-07-19
 
 **This release is for Alliance Auth v3.0.0b3 or higher. Do not try and attempt to
 run it with any version prior!**
@@ -470,7 +470,7 @@ run it with any version prior!**
 
 - No longer used templates
 
-## \[2.6.0-beta.2\] - 2022-07-16
+## [2.6.0-beta.2] - 2022-07-16
 
 **This release is for Alliance Auth v3.0.0b3 or higher. Do not try and attempt to
 run it with any version prior!**
@@ -484,7 +484,7 @@ run it with any version prior!**
 - Left margin for AA Bulletin Board in mobile view
 - Left margin for AA Memberaudit in mobile view
 
-## \[2.6.0-beta.1\] - 2022-07-16
+## [2.6.0-beta.1] - 2022-07-16
 
 **This release is for Alliance Auth v3.0.0b3 or higher. Do not try and attempt to
 run it with any version prior!**
@@ -513,7 +513,7 @@ run it with any version prior!**
 - Minimum requirement
   - Alliance Auth >= 3.0.0b3
 
-## \[2.5.4\] - 2022-05-12
+## [2.5.4] - 2022-05-12
 
 ### Added
 
@@ -524,13 +524,13 @@ run it with any version prior!**
 - Minimum requirement
   - Alliance Auth >= 2.12.0
 
-## \[2.5.3\] - 2022-05-09
+## [2.5.3] - 2022-05-09
 
 ### Changed
 
 - Templates for `structuretimers` to match the latest version
 
-## \[2.5.2\] - 2022-03-20
+## [2.5.2] - 2022-03-20
 
 ### Changed
 
@@ -538,13 +538,13 @@ run it with any version prior!**
 - Minimum requirement
   - Alliance Auth >= 2.11.1
 
-## \[2.5.1\] - 2022-03-03
+## [2.5.1] - 2022-03-03
 
 ### Fixed
 
 - `$(this)` in JS arrow function
 
-## \[2.5.0\] - 2022-03-03
+## [2.5.0] - 2022-03-03
 
 ### Added
 
@@ -559,7 +559,7 @@ run it with any version prior!**
 
 - Deprecated settings
 
-## \[2.4.2\] - 2022-02-26
+## [2.4.2] - 2022-02-26
 
 ### Changed
 
@@ -567,13 +567,13 @@ run it with any version prior!**
 - Minimum requirement
   - Alliance Auth >= 2.11.0
 
-## \[2.4.1\] - 2022-02-26
+## [2.4.1] - 2022-02-26
 
 ### Changed
 
 - Templates changed to match AA v2.11.0
 
-## \[2.4.0\] - 2022-02-20
+## [2.4.0] - 2022-02-20
 
 ### Fixed
 
@@ -586,25 +586,25 @@ run it with any version prior!**
 - Show "Fitting Notes" box only if there are fitting notes
 - JavaScript modernised
 
-## \[2.3.3\] - 2022-01-25
+## [2.3.3] - 2022-01-25
 
 ### Changed
 
 - Switched to `setInterval()` to render the Eve time
 
-## \[2.3.2\] - 2022-01-22
+## [2.3.2] - 2022-01-22
 
 ### Changed
 
 - Main JS cleaned up
 
-## \[2.3.1\] - 2022-01-19
+## [2.3.1] - 2022-01-19
 
 ### Fixed
 
 - Template for `structuretimers` to match with the latest changes in v1.2.0
 
-## \[2.3.0\] - 2022-01-12
+## [2.3.0] - 2022-01-12
 
 ### Added
 
@@ -617,20 +617,20 @@ run it with any version prior!**
 - Minimum requirements
   - Alliance Auth v2.9.4
 
-## \[2.2.0\] - 2021-12-07
+## [2.2.0] - 2021-12-07
 
 ### Changed
 
 - Fira Code updated to v6.2.0
 
-## \[2.1.0\] - 2021-11-30
+## [2.1.0] - 2021-11-30
 
 ### Changed
 
 - Minimum requirements
   - Alliance Auth v2.9.3
 
-## \[2.0.4\] - 2021-11-27
+## [2.0.4] - 2021-11-27
 
 ### Added
 
@@ -642,31 +642,31 @@ run it with any version prior!**
 - License updated to GPLv3
 - Minimum dependencies versions
 
-## \[2.0.3\] - 2021-11-04
+## [2.0.3] - 2021-11-04
 
 ### Changed
 
 - Optimer templates updated to match changes in AA 2.9.1
 
-## \[2.0.2\] - 2021-10-19
+## [2.0.2] - 2021-10-19
 
 ### Changed
 
 - Use SITE_NAME variable instead of a static site name
 
-## \[2.0.1\] - 2021-10-18
+## [2.0.1] - 2021-10-18
 
 ### Fixed
 
 - Page titles
 
-## \[2.0.0\] - 2021-10-17
+## [2.0.0] - 2021-10-17
 
 Changed
 
 - Release for AA 2.9.0
 
-## \[2.0.0-beta.2\] - 2021-10-08
+## [2.0.0-beta.2] - 2021-10-08
 
 ### Important
 
@@ -677,7 +677,7 @@ run it with any version prior!**
 
 - Public template for `mumbletemps` changed for AA 2.9.0
 
-## \[2.0.0-beta.1\] - 2021-09-28
+## [2.0.0-beta.1] - 2021-09-28
 
 ### Important
 
@@ -688,7 +688,7 @@ run it with any version prior!**
 
 - User menu min width set to 225px
 
-## \[1.8.0\] - 2021-09-19
+## [1.8.0] - 2021-09-19
 
 ### Important
 
@@ -703,49 +703,49 @@ run it with any version prior!**
 
 - CSS for SumoSelect field in `aa-bulletin-board`
 
-## \[1.7.7\] - 2021-08-15
+## [1.7.7] - 2021-08-15
 
 ### Fixed
 
 - Check for forum URLs
 
-## \[1.7.6\] - 2021-08-14
+## [1.7.6] - 2021-08-14
 
 ### Fixed
 
 - jQuery code should always be wrapped in document.ready()
 
-## \[1.7.5\] - 2021-08-11
+## [1.7.5] - 2021-08-11
 
 ### Changed
 
 - Templates for `allianceauth-securegroups-0.1.0`
 
-## \[1.7.4\] - 2021-08-06
+## [1.7.4] - 2021-08-06
 
 ### Changed
 
 - `.panel-body` min-height removed
 
-## \[1.7.3\] - 2021-08-04
+## [1.7.3] - 2021-08-04
 
 ### Changed
 
 - Adjusted the font-size for `blockquote` to 0.95rem
 
-## \[1.7.2\] - 2021-08-02
+## [1.7.2] - 2021-08-02
 
 ### Changed
 
 - CSS for AA Forum v0.1.0-beta.14
 
-## \[1.7.1\] - 2021-07-24
+## [1.7.1] - 2021-07-24
 
 ### Changed
 
 - CSS for AA Forum v0.1.0-beta.11
 
-## \[1.7.0\] - 2021-07-20
+## [1.7.0] - 2021-07-20
 
 ### Added
 
@@ -755,7 +755,7 @@ run it with any version prior!**
 
 - Path to login SVG
 
-## \[1.6.4\] - 2021-07-20
+## [1.6.4] - 2021-07-20
 
 ### Changed
 
@@ -765,13 +765,13 @@ run it with any version prior!**
 
 - Files from an earlier version that are no longer needed
 
-## \[1.6.3\] - 2021-07-19
+## [1.6.3] - 2021-07-19
 
 ### Fixed
 
 - timer_list template for `structuretimers`
 
-## \[1.6.2\] - 2021-07-16
+## [1.6.2] - 2021-07-16
 
 ### Changed
 
@@ -781,51 +781,51 @@ run it with any version prior!**
 
 - YouTube plugin for CKEditor, it's served with `aa-forum` and `aa-bulletin-board`
 
-## \[1.6.1\] - 2021-07-14
+## [1.6.1] - 2021-07-14
 
 ### Changed
 
 - Templates for `aa-structuretimers` to conform with v1.1.0
 
-## \[1.6.0\] - 2021-07-11
+## [1.6.0] - 2021-07-11
 
 ### Removed
 
 - Discordbot Cogs. They have been moved to its own app »
   [TN-NT Discordbot Cogs](https://github.com/terra-nanotech/tn-nt-discordbot-cogs)
 
-## \[1.5.23\] - 2021-07-10
+## [1.5.23] - 2021-07-10
 
 ### Changed
 
 - Discord cogs for AA-Discordbot v0.5.2
 
-## \[1.5.22\] - 2021-07-09
+## [1.5.22] - 2021-07-09
 
 ### Changed
 
 - Discord cogs for AA-Discordbot v0.5.1
 
-## \[1.5.21\] - 2021-07-08
+## [1.5.21] - 2021-07-08
 
 ### Changed
 
 - CSS for AA Forum (hover for sticky and locked topics to match their original
   background color)
 
-## \[1.5.20\] - 2021-06-30
+## [1.5.20] - 2021-06-30
 
 ### Fixed
 
 - Table width for corpstats view
 
-## \[1.5.19\] - 2021-06-28
+## [1.5.19] - 2021-06-28
 
 ### Added
 
 - Proper favicons
 
-## \[1.5.18\] - 2021-06-28
+## [1.5.18] - 2021-06-28
 
 ### Added
 
@@ -853,45 +853,45 @@ run it with any version prior!**
 - CSS for [AA Forum](https://github.com/ppfeufer/aa-forum) app to match its upcoming
   alpha release (v0.0.1-alpha.10)
 
-## \[1.5.17\] - 2021-06-17
+## [1.5.17] - 2021-06-17
 
 ### Changed
 
 - CSS for [AA Forum](https://github.com/ppfeufer/aa-forum) app to match its current
   alpha release (v0.0.1-alpha.9)
 
-## \[1.5.16\] - 2021-06-14
+## [1.5.16] - 2021-06-14
 
 ### Fixed
 
 - Top margin on topic list for AA Forum
 
-## \[1.5.15\] - 2021-06-14
+## [1.5.15] - 2021-06-14
 
 ### Fixed
 
 - Hover state for topics in board view (AA Forum)
 
-## \[1.5.14\] - 2021-06-13
+## [1.5.14] - 2021-06-13
 
 ### Changed
 
 - Bottom margin on paragraphs set to 1rem
 
-## \[1.5.13\] - 2021-06-12
+## [1.5.13] - 2021-06-12
 
 ### Changed
 
 - CSS for [AA Forum](https://github.com/ppfeufer/aa-forum) app to match its current
   alpha release (v0.0.1-alpha.4)
 
-## \[1.5.12\] - 2021-06-11
+## [1.5.12] - 2021-06-11
 
 ### Added
 
 - CSS styles for [AA Forum](https://github.com/ppfeufer/aa-forum) app
 
-## \[1.5.11\] - 2021-06-01
+## [1.5.11] - 2021-06-01
 
 # Fixed
 
@@ -901,26 +901,26 @@ run it with any version prior!**
 
 - JavaScript to display Eve time in the top menu
 
-## \[1.5.10\] - 2021-05-27
+## [1.5.10] - 2021-05-27
 
 ### Fixed
 
 - Top margin for `mumbletemps` public invite template
 
-## \[1.5.9\] - 2021-05-19
+## [1.5.9] - 2021-05-19
 
 ### Fixed (now as well for AA 2.8.x and not only for the alpha version)
 
 - Define function before use in javascript
 - Background in ckEditor
 
-## \[1.5.8\] - 2021-05-17
+## [1.5.8] - 2021-05-17
 
 ### Fixed
 
 - Define function before use in javascript
 
-## \[1.5.7\] - 2021-05-17
+## [1.5.7] - 2021-05-17
 
 ### Fixed
 
@@ -930,20 +930,20 @@ run it with any version prior!**
 
 - JS in templates modernized
 
-## \[1.5.6\] - 2021-05-05
+## [1.5.6] - 2021-05-05
 
 ### Fixed
 
 - Using Django application registry instead of directly accessing `INSTALLED_APPS`
 
-## \[1.5.5\] - 2021-04-23
+## [1.5.5] - 2021-04-23
 
 ### Added
 
 - Eve time to top menu bar
 - Bootstrap JS to Mumble Temp public template
 
-## \[1.5.4\] - 2021-04-22
+## [1.5.4] - 2021-04-22
 
 ### Added
 
@@ -959,19 +959,19 @@ run it with any version prior!**
 - Link ship icon in all fittings view to open fitting
 - Templates for Fittings and Doctrines module, so they don't use cloudflare CDN
 
-## \[1.5.3\] - 2021-03-24
+## [1.5.3] - 2021-03-24
 
 ### Changed
 
 - Mapping removed
 
-## \[1.5.2\] - 2021-03-23
+## [1.5.2] - 2021-03-23
 
 ### Changed
 
 - price check code optimized
 
-## \[1.5.1\] - 2021-03-23
+## [1.5.1] - 2021-03-23
 
 ### Added
 
@@ -981,25 +981,25 @@ run it with any version prior!**
 
 - Price check code optimized
 
-## \[1.5.0\] - 2021-03-23
+## [1.5.0] - 2021-03-23
 
 ### Added
 
 - Price checks (Jita and Amarr) for the Discordbot
 
-## \[1.4.8\] - 2021-03-16
+## [1.4.8] - 2021-03-16
 
 ### Added
 
 - Add `target="_blank"` and `rel="noopener noreferer"` to external links
 
-## \[1.4.7\] - 2021-03-16
+## [1.4.7] - 2021-03-16
 
 ### Fixed
 
 - top positioning for `.aa-fleetpings-pingtext` box
 
-## \[1.4.6\] - 2021-03-11
+## [1.4.6] - 2021-03-11
 
 ### Fixed
 
@@ -1007,31 +1007,31 @@ run it with any version prior!**
   'alliance_logo_url' (Missing evelinks template tag)
 - Page title translations
 
-## \[1.4.5\] - 2021-03-10
+## [1.4.5] - 2021-03-10
 
 ### Changed
 
 - Some text fixes for allianceauth-dicordbot
 
-## \[1.4.4\] - 2021-03-08
+## [1.4.4] - 2021-03-08
 
 ### Changed
 
 - Navbar is now sticky at the top
 
-## \[1.4.3\] - 2021-03-04
+## [1.4.3] - 2021-03-04
 
 ### Fixed
 
 - Respect Discord max payload length
 
-## \[1.4.2\] - 2021-02-16
+## [1.4.2] - 2021-02-16
 
 ### Fixed
 
 - Show alliance name in user menu only when there is an alliance
 
-## \[1.4.1\] - 2021-02-11
+## [1.4.1] - 2021-02-11
 
 ### Changed
 
@@ -1041,31 +1041,31 @@ run it with any version prior!**
 
 - Template's overall image style also for entity logo on login/register
 
-## \[1.4.0\] - 2021-02-11
+## [1.4.0] - 2021-02-11
 
 ### Changed
 
 - Template settings
 
-## \[1.3.3\] - 2021-02-08
+## [1.3.3] - 2021-02-08
 
 ### Fixed
 
 - Corpstats overview table look and feel
 
-## \[1.3.2\] - 2021-02-05
+## [1.3.2] - 2021-02-05
 
 ### Fixed
 
 - Alliance name in corpstats
 
-## \[1.3.1\] - 2021-02-05
+## [1.3.1] - 2021-02-05
 
 ### Fixed
 
 - OG-Image syntax
 
-## \[1.3.0\] - 2021-02-05
+## [1.3.0] - 2021-02-05
 
 ### Added
 
@@ -1087,57 +1087,57 @@ run it with any version prior!**
 - Table look and feel
 - Fitting panel in doctrine view (fittings module)
 
-## \[1.2.6\] - 2021-01-24
+## [1.2.6] - 2021-01-24
 
 ### Changed
 
 - Set "Roboto" as the default font
 
-## \[1.2.5\] - 2021-01-23
+## [1.2.5] - 2021-01-23
 
 ### Fixed
 
 - AttributeError: 'NoneType' object has no attribute 'username'
 
-## \[1.2.4\] - 2021-01-23
+## [1.2.4] - 2021-01-23
 
 ### Fixed
 
 - Typo in configuration constant
 
-## \[1.2.3\] - 2021-01-23
+## [1.2.3] - 2021-01-23
 
 ### Fixed
 
 - `!timer` command allowed channels
 
-## \[1.2.2\] - 2021-01-23
+## [1.2.2] - 2021-01-23
 
 ### Added
 
 - Customized cogs for aadiscordbot
 
-## \[1.2.1\] - 2021-01-20
+## [1.2.1] - 2021-01-20
 
 ### Added
 
 - Explicit font color for navigation, because there are people who override that in
   their extension CSS ...
 
-## \[1.2.0\] - 2021-01-18
+## [1.2.0] - 2021-01-18
 
 ### Added
 
 - Templates for AFAT statistics to set the right font color on the canvas elements
 
-## \[1.1.3\] - 2021-01-09
+## [1.1.3] - 2021-01-09
 
 ### Fixed
 
 - django.template.exceptions.TemplateSyntaxError:
   Invalid block tag on line 22: 'translate"Ratio"', expected 'endblock'.
 
-## \[1.1.2\] - 2021-01-06
+## [1.1.2] - 2021-01-06
 
 ### Added
 
@@ -1147,25 +1147,25 @@ run it with any version prior!**
 
 - Table header on corpstats page
 
-## \[1.1.1\] - 2020-12-27
+## [1.1.1] - 2020-12-27
 
 ### Changed
 
 - Tables in Group and Grou Management views are now DataTables
 
-## \[1.1.0\] - 2020.12.22
+## [1.1.0] - 2020.12.22
 
 ### Added
 
 - Templates for AA Fleet
 
-## \[1.0.1\] - 2020.12.20
+## [1.0.1] - 2020.12.20
 
 ### Added
 
 - Hover and active style to nav-pills in panel-header
 
-## \[1.0.0\] - 2020.12.19
+## [1.0.0] - 2020.12.19
 
 ### Added
 
@@ -1177,13 +1177,13 @@ run it with any version prior!**
 
 - Many wrongly used bootstrap classes and markup within the original Auth template
 
-## \[0.0.6\] - 2020.12.14
+## [0.0.6] - 2020.12.14
 
 ### Fixed
 
 - Missing `}` in a django template
 
-## \[0.0.5\] - 2020.12.14
+## [0.0.5] - 2020.12.14
 
 ### Added
 
@@ -1194,7 +1194,7 @@ run it with any version prior!**
 - DataTables filter on corpstats
 - Templates for fittings module
 
-## \[0.0.4\] - 2020.12.13
+## [0.0.4] - 2020.12.13
 
 ### Added
 
@@ -1202,19 +1202,19 @@ run it with any version prior!**
 - Template overrides for built-in functions to accommodate these fixes
 - Template overrides for external apps we use
 
-## \[0.0.3\] - 2020.12.13
+## [0.0.3] - 2020.12.13
 
 ### Changed
 
 - Margins moved to elements that actually need them
 
-## \[0.0.2\] - 2020.12.13
+## [0.0.2] - 2020.12.13
 
 ### Changed
 
 - Group names on the dashboard are now nice labels instead of an ugly table
 
-## \[0.0.1\] - 2020.12.10
+## [0.0.1] - 2020.12.10
 
 ### Added
 

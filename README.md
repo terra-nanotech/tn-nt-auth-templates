@@ -28,7 +28,7 @@ ______________________________________________________________________
 
 ## Important Information<a name="important-information"></a>
 
-> \[!IMPORTANT\]
+> [!IMPORTANT]
 >
 > **This template override needs Alliance Auth v4!**
 >
@@ -40,7 +40,7 @@ ______________________________________________________________________
 >
 > For versions compatible with Alliance Auth v3.x, see the [Releases](https://github.com/terra-nanotech/tn-nt-auth-templates/releases) before v3.0.0.
 
-> \[!WARNING\]
+> [!WARNING]
 >
 > These template overrides are specially tailored for the corporation Terra Nanotech.
 > They override templates of apps we use, so it looks like we want it to. This
