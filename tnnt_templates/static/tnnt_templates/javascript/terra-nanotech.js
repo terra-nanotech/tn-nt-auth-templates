@@ -1,4 +1,4 @@
-/* global hljs */
+import hljs from '../libs/highlight-js/11.10.0/es/highlight.min.js';
 
 $(document).ready(() => {
     'use strict';
@@ -104,15 +104,9 @@ $(document).ready(() => {
             } = elementHasOverflow(element);
 
             if (overflow) {
-                element.addClass('overflowing');
-
-                if (vertical) {
-                    element.addClass('overflowing-vertically');
-                }
-
-                if (horizontal) {
-                    element.addClass('overflow-horizontally');
-                }
+                element.addClass(
+                    `overflowing${vertical ? ' overflowing-vertically' : ''}${horizontal ? ' overflow-horizontally' : ''}`
+                );
             }
         }
     };
@@ -151,11 +145,7 @@ $(document).ready(() => {
         addOverflowClasses(
             $('#aa-dashboard-panel-membership div.card-body > div:nth-child(2) > div')
         );
+
+        console.log('Terra Nanotech JS: Loaded');
     })();
-
-
-    /**
-     * Start the show
-     */
-    // init();
 });
