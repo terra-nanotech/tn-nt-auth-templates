@@ -38,7 +38,9 @@ Section Order:
 ### Changed
 
 - Make `init` function in main JS file self-executing
-- Update `blacklist` templates
+- `blacklist` templates updated
+- highlight.js updated to v11.10.0
+- Code block detection for highlight.js improved
 
 ### Removed
 
