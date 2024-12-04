@@ -1,3 +1,4 @@
+// Load the required libraries
 import hljs from '../libs/highlight-js/11.10.0/es/highlight.min.js';
 
 $(document).ready(() => {
@@ -9,21 +10,23 @@ $(document).ready(() => {
      * » add rel="noopener noreferer"
      */
     const externalLinks = () => {
+        // Get the current location hostname
         const internalHost = [location.hostname];
+
+        // Regex pattern to match HTTP and HTTPS
         const protocolPattern = /^https?:\/\//i;
 
-        /**
-         * Walk through all links on the current page.
-         */
+        // Walk through all links on the current page.
         $('a').each((index, element) => {
+            // Get the href attribute of the link
             const href = $(element).attr('href');
 
-            /**
-             * Check if it's an HTTP link
-             */
+            // Check if it's an HTTP link
             if (protocolPattern.test(href)) {
+                // Get the hostname of the link
                 const hrefHostname = $(new URL(href)).attr('hostname');
 
+                // Check if the hostname is not in the internalHost array and add the target and rel attributes to the link element.
                 if ($.inArray(hrefHostname, internalHost) === -1) {
                     $(element).attr('target', '_blank');
                     $(element).attr('rel', 'noopener noreferer');
@@ -99,11 +102,13 @@ $(document).ready(() => {
      */
     const addOverflowClasses = (element) => {
         if (element.length > 0) {
+            // Check if the element has overflow
             const {
                 overflow, horizontal, vertical
             } = elementHasOverflow(element);
 
             if (overflow) {
+                // Add the overflowing class
                 element.addClass(
                     `overflowing${vertical ? ' overflowing-vertically' : ''}${horizontal ? ' overflow-horizontally' : ''}`
                 );
@@ -131,9 +136,31 @@ $(document).ready(() => {
 
         externalLinks();
 
-        // It's not always loaded.
-        if (typeof hljs !== 'undefined' && typeof hljs.highlightAll === 'function') {
-            hljs.highlightAll();
+        // Highlight code blocks with highlight.js
+        if (typeof hljs !== 'undefined' && typeof hljs.highlightElement === 'function') {
+            // Get all code blocks
+            const codeBlocks = document.querySelectorAll('pre code');
+
+            // Check if there are code blocks
+            if (codeBlocks.length > 0) {
+                // Regex to split the language class
+                const regexSplit = /^language-/;
+
+                // Loop through all code blocks
+                codeBlocks.forEach((block) => {
+                    // Get the language of the code block
+                    const language = block.className.split(' ')
+                        .find(
+                            (elementClass) => regexSplit.test(elementClass)
+                        ).split('-')[1];
+
+                    // Check if the language is found
+                    if (language) {
+                        // Highlight the code block
+                        hljs.highlightElement(block, {language: language});
+                    }
+                });
+            }
         }
 
         // Add overflowing CSS classes to the Characters panel on the dashboard.
