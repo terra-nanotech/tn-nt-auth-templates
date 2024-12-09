@@ -4,9 +4,32 @@
 appname = tn-nt-auth-templates
 appname_verbose = TN-NT Auth Templates
 package = tnnt_templates
+translation_template = $(package)/locale/django.pot
+git_repository = https://github.com/ppfeufer/$(appname)
+git_repository_issues = $(git_repository)/issues
 
 # Default goal
 .DEFAULT_GOAL := help
+
+# Confirm action
+.PHONY: confirm-action
+confirm-action:
+	@read -p "Are you sure you want to run '$(MAKECMDGOALS)'? [Y/n] " response; \
+	response=$${response:-Y}; \
+	if [ "$$response" != "Y" ] && [ "$$response" != "y" ]; then \
+		echo "Aborted"; \
+		exit 1; \
+	fi
+
+# General confirmation
+.PHONY: confirm
+confirm:
+	@read -p "Are you sure? [Y/n] " response; \
+	response=$${response:-Y}; \
+	if [ "$$response" != "Y" ] && [ "$$response" != "y" ]; then \
+		echo "Aborted"; \
+		exit 1; \
+	fi
 
 # Graph models
 .PHONY: graph_models
