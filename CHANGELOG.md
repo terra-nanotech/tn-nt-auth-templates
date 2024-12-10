@@ -35,12 +35,16 @@ Section Order:
 ### Security
 -->
 
+## [3.4.0] - 2024-12-10
+
 ### Changed
 
 - Make `init` function in main JS file self-executing
 - `blacklist` templates updated
 - highlight.js updated to v11.10.0
-- Code block detection for highlight.js improved
+- Code block detection for `highlight.js` improved
+- Minimum dependencies:
+  - `allianceauth>=4.5.0`
 
 ### Removed
 
