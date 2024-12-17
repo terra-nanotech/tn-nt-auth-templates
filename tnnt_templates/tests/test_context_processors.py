@@ -7,7 +7,7 @@ from unittest.mock import patch
 
 # Django
 from django.http import HttpRequest
-from django.test import TestCase
+from django.test import TestCase, override_settings
 
 # AA Templates: Terra Nanotech
 from tnnt_templates.app_settings import AppSettings
@@ -199,16 +199,12 @@ class ContextProcessorsTests(TestCase):
 
         result = tnnt_settings(request=self.request)
 
-        self.assertEqual(first=result["REGISTRATION_VERIFY_EMAIL"], second=True)
+        self.assertTrue(result["REGISTRATION_VERIFY_EMAIL"])
 
-    @patch.object(
-        target=AppSettings,
-        attribute="REGISTRATION_VERIFY_EMAIL",
-        new=False,
-    )
+    @override_settings(REGISTRATION_VERIFY_EMAIL=False)
     def test_should_return_email_verification_as_false(self):
         """
-        Test the default value of REGISTRATION_VERIFY_EMAIL
+        Test the custom value of REGISTRATION_VERIFY_EMAIL
 
         :return:
         :rtype:
@@ -216,4 +212,4 @@ class ContextProcessorsTests(TestCase):
 
         result = tnnt_settings(request=self.request)
 
-        self.assertEqual(first=result["REGISTRATION_VERIFY_EMAIL"], second=False)
+        self.assertFalse(result["REGISTRATION_VERIFY_EMAIL"])
