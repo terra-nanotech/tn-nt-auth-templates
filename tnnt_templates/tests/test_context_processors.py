@@ -188,3 +188,32 @@ class ContextProcessorsTests(TestCase):
             first=result["TNNT_TEMPLATE_AA_LOGO"],
             second="/static/allianceauth/images/auth-logo.svg",
         )
+
+    def test_should_return_email_verification_as_true(self):
+        """
+        Test the default value of REGISTRATION_VERIFY_EMAIL
+
+        :return:
+        :rtype:
+        """
+
+        result = tnnt_settings(request=self.request)
+
+        self.assertEqual(first=result["REGISTRATION_VERIFY_EMAIL"], second=True)
+
+    @patch.object(
+        target=AppSettings,
+        attribute="REGISTRATION_VERIFY_EMAIL",
+        new=False,
+    )
+    def test_should_return_email_verification_as_false(self):
+        """
+        Test the default value of REGISTRATION_VERIFY_EMAIL
+
+        :return:
+        :rtype:
+        """
+
+        result = tnnt_settings(request=self.request)
+
+        self.assertEqual(first=result["REGISTRATION_VERIFY_EMAIL"], second=False)
