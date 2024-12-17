@@ -108,7 +108,7 @@ ESI_SSO_CALLBACK_URL = "http://localhost:8000"
 # Set the default from email to something like 'noreply@example.com'
 # Email validation can be turned off by uncommenting the line below.
 # This can break some services.
-REGISTRATION_VERIFY_EMAIL = False
+# REGISTRATION_VERIFY_EMAIL = False
 EMAIL_HOST = ""
 EMAIL_PORT = 587
 EMAIL_HOST_USER = ""

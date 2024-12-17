@@ -35,6 +35,10 @@ Section Order:
 ### Security
 -->
 
+### Changed
+
+- Don't ask for an email when `REGISTRATION_VERIFY_EMAIL` is set to `False`
+
 ## [3.4.0] - 2024-12-10
 
 ### Changed
