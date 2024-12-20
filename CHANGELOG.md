@@ -35,6 +35,14 @@ Section Order:
 ### Security
 -->
 
+### Added
+
+- Management command to anonymize all user's email addresses in the database
+  ```shell
+  python manage.py tnnt_anonymize_emails
+  ```
+  This will replace each user's email address with `user_id@domain.tld` (e.g. `371@my.auth.com`)
+
 ## [3.4.1] - 2024-12-17
 
 ### Changed
