@@ -43,6 +43,10 @@ Section Order:
   ```
   This will replace each user's email address with `user_id@domain.tld` (e.g. `371@my.auth.com`)
 
+### Fixed
+
+- JS issues with the BS3 fallback
+
 ## [3.4.1] - 2024-12-17
 
 ### Changed
