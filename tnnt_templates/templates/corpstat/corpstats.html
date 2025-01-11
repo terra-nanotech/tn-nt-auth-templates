@@ -64,29 +64,79 @@
 
             <div class="card card-default">
                 <div class="card-header clearfix">
-                    <ul class="nav nav-pills pull-left">
-                        <li class="active">
-                            <a href="#mains" data-toggle="pill">{% translate 'Mains' %} ({{ total_mains }})</a>
+                    <ul class="nav nav-pills float-start">
+                        <li class="nav-item" role="presentation">
+                            <a
+                                class="nav-link active"
+                                id="mains"
+                                data-bs-toggle="tab"
+                                href="#tab-mains"
+                                role="tab"
+                                aria-controls="tab-mains"
+                                aria-selected="true"
+                            >
+                                {% translate 'Mains' %} ({{ total_mains }})
+                            </a>
                         </li>
 
-                        <li>
-                            <a href="#members" data-toggle="pill">{% translate 'Members' %} ({{ total_members }})</a>
+                        <li class="nav-item" role="presentation">
+                            <a
+                                class="nav-link"
+                                id="members"
+                                data-bs-toggle="tab"
+                                href="#tab-members"
+                                role="tab"
+                                aria-controls="tab-members"
+                                aria-selected="false"
+                            >
+                                {% translate 'Members' %} ({{ total_members }})
+                            </a>
                         </li>
 
-                        <li>
-                            <a href="#unregistered" data-toggle="pill">{% translate 'Unregistered' %} ({{ total_unreg }})</a>
+                        <li class="nav-item" role="presentation">
+                            <a
+                                class="nav-link"
+                                id="unregistered"
+                                data-bs-toggle="tab"
+                                href="#tab-unregistered"
+                                role="tab"
+                                aria-controls="tab-unregistered"
+                                aria-selected="false"
+                            >
+                                {% translate 'Unregistered' %} ({{ total_unreg }})
+                            </a>
                         </li>
 
-                        <li>
-                            <a href="#orphans" data-toggle="pill">{% translate 'Orphans' %} ({{ total_orphans }})</a>
+                        <li class="nav-item" role="presentation">
+                            <a
+                                class="nav-link"
+                                id="orphans"
+                                data-bs-toggle="tab"
+                                href="#tab-orphans"
+                                role="tab"
+                                aria-controls="tab-orphans"
+                                aria-selected="false"
+                            >
+                                {% translate 'Orphans' %} ({{ total_orphans }})
+                            </a>
                         </li>
 
-                        <li>
-                            <a href="#tracking" data-toggle="pill">{% translate 'Member Tracking' %}</a>
+                        <li class="nav-item" role="presentation">
+                            <a
+                                class="nav-link"
+                                id="tracking"
+                                data-bs-toggle="tab"
+                                href="#tab-tracking"
+                                role="tab"
+                                aria-controls="tab-tracking"
+                                aria-selected="false"
+                            >
+                                {% translate 'Member Tracking' %}
+                            </a>
                         </li>
                     </ul>
 
-                    <div class="pull-right">
+                    <div class="float-end">
                         {% translate "Last update:" %} {{ corpstats.last_update|naturaltime }}
 
                         <a
@@ -95,7 +145,7 @@
                             href="{% url 'corpstat:update' corpstats.corp.corporation_id %}"
                             title="{% translate 'Update Now' %}"
                         >
-                            <span class="glyphicon glyphicon-refresh"></span>
+                            <span class="fa-solid fa-rotate"></span>
                         </a>
 
                         <a
@@ -104,14 +154,14 @@
                             href="{%  url 'corpstat:export' corpstats.corp.corporation_id %}"
                             title="{% translate 'Export' %}"
                         >
-                            <span class="glyphicon glyphicon-download-alt"></span>
+                            <span class="fa-solid fa-download"></span>
                         </a>
                     </div>
                 </div>
 
                 <div class="card-body">
                     <div class="tab-content">
-                        <div class="tab-pane fade in active" id="mains">
+                        <div id="tab-mains" class="tab-pane fade show active card card-default border-0" role="tabpanel" aria-labelledby="tab-mains">
                             {% if mains %}
                                 <div class="table-responsive">
                                     <table class="table table-hover" id="table-mains" style="width: 100%;">
@@ -226,7 +276,7 @@
                             {% endif %}
                         </div>
 
-                        <div class="tab-pane fade" id="members">
+                        <div id="tab-members" class="tab-pane fade card card-default border-0" role="tabpanel" aria-labelledby="tab-members">
                             {% if members %}
                                 <div class="table-responsive">
                                     <table class="table table-striped table-hover" id="table-members">
@@ -329,7 +379,7 @@
                             {% endif %}
                         </div>
 
-                        <div class="tab-pane fade" id="unregistered">
+                        <div id="tab-unregistered" class="tab-pane fade card card-default border-0" role="tabpanel" aria-labelledby="tab-unregistered">
                             {% if unregistered %}
                                 <div class="table-responsive">
                                     <table class="table table-striped table-hover" id="table-unregistered">
@@ -374,7 +424,7 @@
                             {% endif %}
                         </div>
 
-                        <div class="tab-pane fade" id="orphans">
+                        <div id="tab-orphans" class="tab-pane fade card card-default border-0" role="tabpanel" aria-labelledby="tab-orphans">
                             {% if orphans %}
                                 <div class="table-responsive">
                                     <table class="table table-striped table-hover" id="table-orphans">
@@ -454,7 +504,7 @@
                             {% endif %}
                         </div>
 
-                        <div class="tab-pane fade" id="tracking">
+                        <div id="tab-tracking" class="tab-pane fade card card-default border-0" role="tabpanel" aria-labelledby="tab-tracking">
                             {% if members %}
                                 <div class="table-responsive">
                                     <table class="table table-striped table-hover" id="table-tracking">
@@ -587,7 +637,7 @@
 {% endblock %}
 
 {% block extra_javascript %}
-    {% include 'bundles/datatables-js.html' %}
+    {% include 'bundles/datatables-js-bs5.html' %}
     {% include 'bundles/filterdropdown-js.html' %}
 
     <script>
@@ -618,7 +668,8 @@
                         {% endfor %}
                     ],
                     autoSize: false,
-                    bootstrap: true
+                    bootstrap: true,
+                    bootstrap_version: 5,
                 }
             });
 
@@ -633,7 +684,9 @@
                         targets: [1]
                     },
                 ],
-                order: [[0, 'asc']]
+                order: [[0, 'asc']],
+                bootstrap: true,
+                bootstrap_version: 5,
             });
 
             $('#table-unregistered').DataTable({
@@ -648,6 +701,8 @@
                     },
                 ],
                 order: [[0, 'asc']],
+                bootstrap: true,
+                bootstrap_version: 5,
             });
 
             $('#table-tracking').DataTable({
@@ -662,6 +717,8 @@
                     },
                 ],
                 order: [[0, 'asc']],
+                bootstrap: true,
+                bootstrap_version: 5,
             });
         });
     </script>
