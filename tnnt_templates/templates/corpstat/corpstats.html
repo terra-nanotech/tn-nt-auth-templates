@@ -8,65 +8,62 @@
 {% block member_data %}
     {% if corpstats %}
         <div class="aa-corpstats-corpstats">
-            <table class="table">
-                <tr>
-                    <td class="text-center {% if corpstats.corp.alliance %}col-md-4{% else %}col-md-8{% endif %}">
-                        <img
-                            class="img-rounded ra-avatar"
-                            src="{{ corpstats.corp.corporation_id|corporation_logo_url:128 }}"
-                            alt="{{ corpstats.corp.corporation_name }}"
-                        >
-                        <br>
-                        {{ corpstats.corp.corporation_name }}
-                    </td>
-
-                    {% if corpstats.corp.alliance %}
-                        <td class="text-center col-md-4">
-                            <img
-                                class="img-rounded ra-avatar"
-                                src="{{ corpstats.corp.alliance.alliance_id|alliance_logo_url:128 }}"
-                                alt="{{ corpstats.corp.alliance.alliance_name }}"
-                            >
-                            <br>
-                            {{ corpstats.corp.alliance.alliance_name }}
-                        </td>
-                    {% endif %}
-
-                    <td class="text-center col-md-4"  rowspan="2">
-                        <div>
-                            <h4>{% translate 'Corp Info' %}</h4>
-
-                            <span
-                                class="label label-default"
-                                style="background-color: {% if auth_percent >= 95 %}rgb(0 170 51){% elif auth_percent >= 80 %}rgb(255 144 0){% else %}rgb(170 0 0){% endif %};"
-                            >
-                                {% translate 'Authenticated' %}: {{members|length}}/{{total_members}} ({{auth_percent|floatformat:0|intcomma}}%)
-                            </span>
-                            <br>
-                            <span class="label label-default">
-                                {% translate 'Main/Alt Ratio' %}: {{alt_ratio|floatformat:2|intcomma}}
-                            </span>
+            <div class="card card-default mb-3">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-4 text-center">
+                            <figure>
+                                <img
+                                    class="rounded"
+                                    src="{{ corpstats.corp.corporation_id|corporation_logo_url:256 }}"
+                                    alt="{{ corpstats.corp.corporation_name }}"
+                                >
+                                <figcaption class="figure-caption">{{ corpstats.corp.corporation_name }}</figcaption>
+                            </figure>
                         </div>
 
-                        <div>
-                            <h4>{% translate 'Services Active' %}</h4>
+                        {% if corpstats.corp.alliance %}
+                            <div class="col-md-4 text-center">
+                                <figure>
+                                    <img
+                                        class="rounded"
+                                        src="{{ corpstats.corp.alliance.alliance_id|alliance_logo_url:256 }}"
+                                        alt="{{ corpstats.corp.alliance.alliance_name }}"
+                                    >
+                                    <figcaption class="figure-caption">{{ corpstats.corp.alliance.alliance_name }}</figcaption>
+                                </figure>
+                            </div>
+                        {% endif %}
 
-                            {% for service, perc in service_percent.items %}
-                                <span
-                                    class="label label-default"
-                                    style="background-color: {% if perc.percent >= 95 %}rgb(0 170 51){% elif perc.percent >= 80 %}rgb(255 144 0){% else %}rgb(170 0 0){% endif %};"
-                                >
-                                    {{service|title}} {% translate 'Activated' %}: {{perc.cnt}}/{{ total_mains }} ({{perc.percent|floatformat:0|intcomma}}%)
+                        <div class="col-md-4 text-center">
+                            <div class="mb-3">
+                                <h4>{% translate 'Corp Info' %}</h4>
+
+                                <span class="badge bg-{% if auth_percent >= 95 %}success{% elif auth_percent >= 80 %}warning{% else %}danger{% endif %}">
+                                    {% translate 'Authenticated' %}: {{members|length}}/{{total_members}} ({{auth_percent|floatformat:0|intcomma}}%)
                                 </span>
                                 <br>
-                            {% endfor %}
-                        </div>
-                    </td>
-                </tr>
-            </table>
+                                <span class="badge bg-primary">
+                                    {% translate 'Main/Alt Ratio' %}: {{alt_ratio|floatformat:2|intcomma}}
+                                </span>
+                            </div>
 
-            <div class="panel panel-default">
-                <div class="panel-heading clearfix">
+                            <div>
+                                <h4>{% translate 'Services Active' %}</h4>
+
+                                {% for service, perc in service_percent.items %}
+                                    <span class="d-inline-block badge bg-{% if perc.percent >= 95 %}success{% elif perc.percent >= 80 %}warning{% else %}danger{% endif %}">
+                                        {{service|title}} {% translate 'Activated' %}: {{perc.cnt}}/{{ total_mains }} ({{perc.percent|floatformat:0|intcomma}}%)
+                                    </span>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card card-default">
+                <div class="card-header clearfix">
                     <ul class="nav nav-pills pull-left">
                         <li class="active">
                             <a href="#mains" data-toggle="pill">{% translate 'Mains' %} ({{ total_mains }})</a>
@@ -112,7 +109,7 @@
                     </div>
                 </div>
 
-                <div class="panel-body">
+                <div class="card-body">
                     <div class="tab-content">
                         <div class="tab-pane fade in active" id="mains">
                             {% if mains %}
@@ -134,7 +131,7 @@
                                                 <tr>
                                                     <td class="text-center valign-middle">
                                                         <img
-                                                            class="img-rounded"
+                                                            class="roundec"
                                                             src="{{ main.main.character_id|character_portrait_url:64 }}"
                                                             alt="{{ main.main.character_name }}"
                                                         >
@@ -169,7 +166,7 @@
                                                                     <tr>
                                                                         <td class="valign-middle" style="width: 30%;">
                                                                             <img
-                                                                                class="img-rounded"
+                                                                                class="roundec"
                                                                                 src="{{ alt.character_id|character_portrait_url:32 }}"
                                                                                 alt="{{ alt.character_name }}"
                                                                                 style="margin-right: 0.25rem;"
@@ -248,7 +245,7 @@
                                                 <tr>
                                                     <td class="valign-middle">
                                                         <img
-                                                            class="img-rounded"
+                                                            class="roundec"
                                                             src="{{ member.character_id|character_portrait_url:32 }}"
                                                             alt="{{ member.character_name }}"
                                                             style="margin-right: 0.25rem;"
@@ -266,7 +263,7 @@
 
                                                     <td class="valign-middle">
                                                         <img
-                                                            class="img-rounded"
+                                                            class="roundec"
                                                             src="{{ member.character_ownership.user.profile.main_character.character_id|character_portrait_url:32 }}"
                                                             alt="{{ member.character_ownership.user.profile.main_character.character_name }}"
                                                             style="margin-right: 0.25rem;"
@@ -276,7 +273,7 @@
 
                                                     <td class="valign-middle">
                                                         <img
-                                                            class="img-rounded"
+                                                            class="roundec"
                                                             src="{{ member.character_ownership.user.profile.main_character.corporation_id|corporation_logo_url:32 }}"
                                                             alt="{{ member.character_ownership.user.profile.main_character.corporation_name }}"
                                                             style="margin-right: 0.25rem;"
@@ -287,7 +284,7 @@
                                                     <td class="valign-middle">
                                                         {% if member.character_ownership.user.profile.main_character.alliance_name %}
                                                             <img
-                                                                class="img-rounded"
+                                                                class="roundec"
                                                                 src="{{ member.character_ownership.user.profile.main_character.alliance_id|alliance_logo_url:32 }}"
                                                                 alt="{{ member.character_ownership.user.profile.main_character.alliance_name }}"
                                                                 style="margin-right: 0.25rem;"
@@ -302,7 +299,7 @@
                                                 <tr class="danger">
                                                     <td class="valign-middle">
                                                         <img
-                                                            class="img-rounded"
+                                                            class="roundec"
                                                             src="{{ member.portrait_url }}"
                                                             alt="{{ member.character_name }}"
                                                             style="margin-right: 0.25rem;"
@@ -348,7 +345,7 @@
                                                 <tr class="danger">
                                                     <td class="valign-middle">
                                                         <img
-                                                            class="img-rounded"
+                                                            class="roundec"
                                                             src="{{ member.character_id|character_portrait_url:32 }}"
                                                             alt="{{ member.character_name }}"
                                                             style="margin-right: 0.25rem;"
@@ -396,7 +393,7 @@
                                                 <tr class="danger">
                                                     <td class="valign-middle">
                                                         <img
-                                                            class="img-rounded"
+                                                            class="roundec"
                                                             src="{{ member.character_id|character_portrait_url:32 }}"
                                                             alt="{{ member.character_name }}"
                                                             style="margin-right: 0.25rem;"
@@ -416,7 +413,7 @@
 
                                                     <td class="valign-middle">
                                                         <img
-                                                            class="img-rounded"
+                                                            class="roundec"
                                                             src="{{ member.character_ownership.user.profile.main_character.character_id|character_portrait_url:32 }}"
                                                             alt="{{ member.character_ownership.user.profile.main_character.character_name }}"
                                                             style="margin-right: 0.25rem;"
@@ -426,7 +423,7 @@
 
                                                     <td class="valign-middle">
                                                         <img
-                                                            class="img-rounded"
+                                                            class="roundec"
                                                             src="{{ member.character_ownership.user.profile.main_character.corporation_id|corporation_logo_url:32 }}"
                                                             alt="{{ member.character_ownership.user.profile.main_character.corporation_name }}"
                                                             style="margin-right: 0.25rem;"
@@ -437,7 +434,7 @@
                                                     <td class="valign-middle">
                                                         {% if member.character_ownership.user.profile.main_character.alliance_name %}
                                                             <img
-                                                                class="img-rounded"
+                                                                class="roundec"
                                                                 src="{{ member.character_ownership.user.profile.main_character.alliance_id|alliance_logo_url:32 }}"
                                                                 alt="{{ member.character_ownership.user.profile.main_character.alliance_name }}"
                                                                 style="margin-right: 0.25rem;"
@@ -476,7 +473,7 @@
                                                 <tr class="danger">
                                                     <td class="valign-middle">
                                                         <img
-                                                            class="img-rounded"
+                                                            class="roundec"
                                                             src="{{ member.character_id|character_portrait_url:32 }}"
                                                             alt="{{ member.character_name }}"
                                                             style="margin-right: 0.25rem;"
@@ -486,7 +483,7 @@
 
                                                     <td class="valign-middle">
                                                         <img
-                                                            class="img-rounded"
+                                                            class="roundec"
                                                             src="{{ member.ship_type_id|type_render_url:32 }}"
                                                             alt="{{ member.ship_type_name }}"
                                                             style="margin-right: 0.25rem;"
@@ -528,7 +525,7 @@
                                                 <tr >
                                                     <td class="valign-middle" style="vertical-align:middle">
                                                         <img
-                                                            class="img-rounded"
+                                                            class="roundec"
                                                             src="{{ member.character_id|character_portrait_url:32 }}"
                                                             alt="{{ member.character_name }}"
                                                             style="margin-right: 0.25rem;"
@@ -538,7 +535,7 @@
 
                                                     <td class="valign-middle">
                                                         <img
-                                                            class="img-rounded"
+                                                            class="roundec"
                                                             src="{{ member.ship_type_id|type_render_url:32 }}"
                                                             alt="{{ member.ship_type_name }}"
                                                             style="margin-right: 0.25rem;"
