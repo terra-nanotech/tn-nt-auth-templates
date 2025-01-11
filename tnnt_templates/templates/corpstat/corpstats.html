@@ -7,7 +7,7 @@
 
 {% block member_data %}
     {% if corpstats %}
-        <div class="clearfix">
+        <div class="aa-corpstats-corpstats">
             <table class="table">
                 <tr>
                     <td class="text-center {% if corpstats.corp.alliance %}col-md-4{% else %}col-md-8{% endif %}">
@@ -16,6 +16,8 @@
                             src="{{ corpstats.corp.corporation_id|corporation_logo_url:128 }}"
                             alt="{{ corpstats.corp.corporation_name }}"
                         >
+                        <br>
+                        {{ corpstats.corp.corporation_name }}
                     </td>
 
                     {% if corpstats.corp.alliance %}
@@ -25,6 +27,8 @@
                                 src="{{ corpstats.corp.alliance.alliance_id|alliance_logo_url:128 }}"
                                 alt="{{ corpstats.corp.alliance.alliance_name }}"
                             >
+                            <br>
+                            {{ corpstats.corp.alliance.alliance_name }}
                         </td>
                     {% endif %}
 
@@ -59,18 +63,8 @@
                         </div>
                     </td>
                 </tr>
-
-                <tr>
-                    <td class="text-center">{{ corpstats.corp.corporation_name }}</td>
-
-                    {% if corpstats.corp.alliance_id %}
-                        <td class="text-center">{{ corpstats.corp.alliance.alliance_name }}</td>
-                    {% endif %}
-                </tr>
             </table>
-        </div>
 
-        <div class="clearfix">
             <div class="panel panel-default">
                 <div class="panel-heading clearfix">
                     <ul class="nav nav-pills pull-left">
