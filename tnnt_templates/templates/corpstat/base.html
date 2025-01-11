@@ -7,7 +7,9 @@
 
 {% block content %}
     <div class="clearfix">
-        <h1 class="page-header text-center">{% translate "Corporation Member Data" %}</h1>
+        {% translate "Corporation Member Data" as site_title %}
+        {% include "framework/header/page-header.html" with title=site_title %}
+
         <div class="clearfix">
             <nav class="navbar navbar-default">
                 <div class="container-fluid">
