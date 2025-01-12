@@ -35,6 +35,8 @@ Section Order:
 ### Security
 -->
 
+## [3.5.0] - 2025-01-12
+
 ### Added
 
 - Management command to anonymize all user's email addresses in the database
