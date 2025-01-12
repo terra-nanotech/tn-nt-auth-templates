@@ -7,85 +7,171 @@
 
 {% block member_data %}
     {% if corpstats %}
-        <div class="clearfix">
-            <table class="table">
-                <tr>
-                    <td class="text-center {% if corpstats.corp.alliance %}col-md-4{% else %}col-md-8{% endif %}">
-                        <img class="img-rounded ra-avatar" src="{{ corpstats.corp.logo_url_128 }}" alt="{{ corpstats.corp.corporation_name }}">
-                    </td>
+        <div class="aa-corpstats-corpstats">
+            <div class="card card-default mb-3">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-4 text-center">
+                            <figure>
+                                <img
+                                    class="rounded"
+                                    src="{{ corpstats.corp.corporation_id|corporation_logo_url:256 }}"
+                                    alt="{{ corpstats.corp.corporation_name }}"
+                                >
+                                <figcaption class="figure-caption">{{ corpstats.corp.corporation_name }}</figcaption>
+                            </figure>
+                        </div>
 
-                    {% if corpstats.corp.alliance %}
-                        <td class="text-center col-md-4">
-                            <img class="img-rounded ra-avatar" src="{{ corpstats.corp.alliance.logo_url_128 }}" alt="{{ corpstats.corp.alliance.alliance_name }}">
-                        </td>
-                    {% endif %}
+                        {% if corpstats.corp.alliance %}
+                            <div class="col-md-4 text-center">
+                                <figure>
+                                    <img
+                                        class="rounded"
+                                        src="{{ corpstats.corp.alliance.alliance_id|alliance_logo_url:256 }}"
+                                        alt="{{ corpstats.corp.alliance.alliance_name }}"
+                                    >
+                                    <figcaption class="figure-caption">{{ corpstats.corp.alliance.alliance_name }}</figcaption>
+                                </figure>
+                            </div>
+                        {% endif %}
 
-                    <td class="text-center col-md-4"  rowspan="2">
-                        <h4>{% translate 'Corp Info' %}</h4>
-                        <span style="background-color: {% if auth_percent >= 95 %}rgb(0 170 51){% elif auth_percent >= 80 %}rgb(255,144 0){% else %}rgb(170 0 0){% endif %};" class="label label-default">
-                            {% translate 'Authenticated' %}: {{members|length}}/{{total_members}} ({{auth_percent|floatformat:0|intcomma}}%)
-                        </span>
-                        <br>
-                        <span class="label label-default">
-                            {% translate 'Main/Alt Ratio' %}: {{alt_ratio|floatformat:2|intcomma}}
-                        </span>
-                        <br>
-                        <h4>{% translate 'Services Active' %}</h4>
-                        {% for service, perc in service_percent.items %}
-                            <span style="background-color: {% if perc.percent >= 95 %}rgb(0 170 51){% elif perc.percent >= 80 %}rgb(255,144 0){% else %}rgb(170 0 0){% endif %};" class="label label-default">
-                                {{service|title}} {% translate 'Activated' %}: {{perc.cnt}}/{{ total_mains }} ({{perc.percent|floatformat:0|intcomma}}%)
-                            </span>
-                            <br>
-                        {% endfor %}
-                    </td>
-                </tr>
+                        <div class="col-md-4 text-center">
+                            <div class="mb-3">
+                                <h4>{% translate 'Corp Info' %}</h4>
 
-                <tr>
-                    <td class="text-center">{{ corpstats.corp.corporation_name }}</td>
+                                <span class="badge bg-{% if auth_percent >= 95 %}success{% elif auth_percent >= 80 %}warning{% else %}danger{% endif %}">
+                                    {% translate 'Authenticated' %}: {{ members|length }}/{{ total_members }} ({{ auth_percent|floatformat:0|intcomma }}%)
+                                </span>
+                                <br>
+                                <span class="badge bg-primary">
+                                    {% translate 'Main/Alt Ratio' %}: {{ alt_ratio|floatformat:2|intcomma }}
+                                </span>
+                            </div>
 
-                    {% if corpstats.corp.alliance_id %}
-                        <td class="text-center">{{ corpstats.corp.alliance.alliance_name }}</td>
-                    {% endif %}
-                </tr>
-            </table>
-        </div>
+                            <div>
+                                <h4>{% translate 'Services Active' %}</h4>
 
-        <div class="clearfix">
-            <div class="panel panel-default">
-                <div class="panel-heading clearfix">
-                    <ul class="nav nav-pills pull-left">
-                        <li class="active"><a href="#mains" data-toggle="pill">{% translate 'Mains' %} ({{ total_mains }})</a></li>
-                        <li><a href="#members" data-toggle="pill">{% translate 'Members' %} ({{ total_members }})</a></li>
-                        <li><a href="#unregistered" data-toggle="pill">{% translate 'Unregistered' %} ({{ total_unreg }})</a></li>
-                        <li><a href="#orphans" data-toggle="pill">{% translate 'Orphans' %} ({{ total_orphans }})</a></li>
-                        <li><a href="#tracking" data-toggle="pill">{% translate 'Member Tracking' %}</a></li>
+                                {% for service, perc in service_percent.items %}
+                                    <span class="d-inline-block badge bg-{% if perc.percent >= 95 %}success{% elif perc.percent >= 80 %}warning{% else %}danger{% endif %}">
+                                        {{ service|title }} {% translate 'Activated' %}: {{ perc.cnt }}/{{ total_mains }} ({{ perc.percent|floatformat:0|intcomma }}%)
+                                    </span>
+                                {% endfor %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card card-default">
+                <div class="card-header clearfix">
+                    <ul class="nav nav-pills float-start">
+                        <li class="nav-item" role="presentation">
+                            <a
+                                class="nav-link active"
+                                id="mains"
+                                data-bs-toggle="tab"
+                                href="#tab-mains"
+                                role="tab"
+                                aria-controls="tab-mains"
+                                aria-selected="true"
+                            >
+                                {% translate 'Mains' %} ({{ total_mains }})
+                            </a>
+                        </li>
+
+                        <li class="nav-item" role="presentation">
+                            <a
+                                class="nav-link"
+                                id="members"
+                                data-bs-toggle="tab"
+                                href="#tab-members"
+                                role="tab"
+                                aria-controls="tab-members"
+                                aria-selected="false"
+                            >
+                                {% translate 'Members' %} ({{ total_members }})
+                            </a>
+                        </li>
+
+                        <li class="nav-item" role="presentation">
+                            <a
+                                class="nav-link"
+                                id="unregistered"
+                                data-bs-toggle="tab"
+                                href="#tab-unregistered"
+                                role="tab"
+                                aria-controls="tab-unregistered"
+                                aria-selected="false"
+                            >
+                                {% translate 'Unregistered' %} ({{ total_unreg }})
+                            </a>
+                        </li>
+
+                        <li class="nav-item" role="presentation">
+                            <a
+                                class="nav-link"
+                                id="orphans"
+                                data-bs-toggle="tab"
+                                href="#tab-orphans"
+                                role="tab"
+                                aria-controls="tab-orphans"
+                                aria-selected="false"
+                            >
+                                {% translate 'Orphans' %} ({{ total_orphans }})
+                            </a>
+                        </li>
+
+                        <li class="nav-item" role="presentation">
+                            <a
+                                class="nav-link"
+                                id="tracking"
+                                data-bs-toggle="tab"
+                                href="#tab-tracking"
+                                role="tab"
+                                aria-controls="tab-tracking"
+                                aria-selected="false"
+                            >
+                                {% translate 'Member Tracking' %}
+                            </a>
+                        </li>
                     </ul>
 
-                    <div class="pull-right">
+                    <div class="float-end">
                         {% translate "Last update:" %} {{ corpstats.last_update|naturaltime }}
 
-                        <a class="btn btn-success" type="button" href="{% url 'corpstat:update' corpstats.corp.corporation_id %}" title="Update Now">
-                            <span class="glyphicon glyphicon-refresh"></span>
+                        <a
+                            class="btn btn-success"
+                            type="button"
+                            href="{% url 'corpstat:update' corpstats.corp.corporation_id %}"
+                            title="{% translate 'Update Now' %}"
+                        >
+                            <span class="fa-solid fa-rotate"></span>
                         </a>
 
-                        <a class="btn btn-primary" type="button" href="{%  url 'corpstat:export' corpstats.corp.corporation_id %}" title="Export">
-                            <span class="glyphicon glyphicon-download-alt"></span>
+                        <a
+                            class="btn btn-primary"
+                            type="button"
+                            href="{%  url 'corpstat:export' corpstats.corp.corporation_id %}"
+                            title="{% translate 'Export' %}"
+                        >
+                            <span class="fa-solid fa-download"></span>
                         </a>
                     </div>
                 </div>
 
-                <div class="panel-body">
+                <div class="card-body">
                     <div class="tab-content">
-                        <div class="tab-pane fade in active" id="mains">
+                        <div id="tab-mains" class="tab-pane fade show active card card-default border-0" role="tabpanel" aria-labelledby="tab-mains">
                             {% if mains %}
                                 <div class="table-responsive">
-                                    <table class="table table-hover" id="table-mains" style="width: 100%;">
+                                    <table class="table table-striped table-hover w-100" id="table-mains">
                                         <thead>
                                             <tr>
-                                                <th>{% translate "Main Character" %}</th>
+                                                <th style="max-width: 300px;">{% translate "Main Character" %}</th>
                                                 <th></th>
+
                                                 {% for service in service_percent %}
-                                                    <th>{{service|title}}</th>
+                                                    <th>{{ service|title }}</th>
                                                 {% endfor %}
                                             </tr>
                                         </thead>
@@ -94,18 +180,27 @@
                                             {% for id, main in mains.items %}
                                                 <tr>
                                                     <td class="text-center valign-middle">
-                                                        <img src="{{ main.main.portrait_url_64 }}" class="img-rounded" alt="{{ main.main.character_name }}">
+                                                        <img
+                                                            class="rounded"
+                                                            src="{{ main.main.character_id|character_portrait_url:64 }}"
+                                                            alt="{{ main.main.character_name }}"
+                                                        >
+
                                                         <div class="caption text-center">
                                                             {{ main.main.character_name }}
                                                             <br>
                                                             {% for service, active in main.services.items %}
-                                                                <span style="background-color: {% if active %}rgb(0 170 51){% else %}rgb(170 0 0){% endif %};" class="label label-default">{{service|title}}</span>
+                                                                <span
+                                                                    class="d-inline-block badge bg-{% if active %}success{% else %}danger{% endif %}"
+                                                                >
+                                                                    {{ service|title }}
+                                                                </span>
                                                             {% endfor %}
                                                         </div>
                                                     </td>
 
                                                     <td>
-                                                        <table class="table table-striped table-hover">
+                                                        <table class="table table-striped table-hover w-100">
                                                             <thead>
                                                                 <tr>
                                                                     <th>{% translate "Character" %}</th>
@@ -118,22 +213,44 @@
                                                             <tbody>
                                                                 {% for alt in main.alts %}
                                                                     <tr>
-                                                                        <td class="valign-middle" style="width: 30%;">
-                                                                            <img src="{{ alt.portrait_url_32 }}" class="img-rounded" alt="{{ alt.character_name }}" style="margin-right: 0.25rem;">
+                                                                        <td style="width: 30%;">
+                                                                            <img
+                                                                                class="rounded"
+                                                                                src="{{ alt.character_id|character_portrait_url:32 }}"
+                                                                                alt="{{ alt.character_name }}"
+                                                                                style="margin-right: 0.25rem;"
+                                                                            >
                                                                             {{ alt.character_name }}
                                                                         </td>
-                                                                        <td class="valign-middle" style="width: 30%;">
-                                                                            <img src="{{ alt.corporation_id|corporation_logo_url:32 }}" alt=" {{ alt.corporation_name }}" style="margin-right: 0.25rem;">
+
+                                                                        <td style="width: 30%;">
+                                                                            <img
+                                                                                class="rounded"
+                                                                                src="{{ alt.corporation_id|corporation_logo_url:32 }}"
+                                                                                alt=" {{ alt.corporation_name }}"
+                                                                                style="margin-right: 0.25rem;"
+                                                                            >
                                                                             {{ alt.corporation_name }}
                                                                         </td>
-                                                                        <td class="valign-middle" style="width: 30%;">
+
+                                                                        <td style="width: 30%;">
                                                                             {% if alt.alliance_name %}
-                                                                                <img src="{{ alt.alliance_id|alliance_logo_url:32 }}" alt=" {{ alt.alliance_name }}" style="margin-right: 0.25rem;">
+                                                                                <img
+                                                                                    class="rounded"
+                                                                                    src="{{ alt.alliance_id|alliance_logo_url:32 }}"
+                                                                                    alt=" {{ alt.alliance_name }}"
+                                                                                    style="margin-right: 0.25rem;"
+                                                                                >
                                                                                 {{ alt.alliance_name }}
                                                                             {% endif %}
                                                                         </td>
-                                                                        <td class="valign-middle" style="width: 5%;">
-                                                                            <a href="https://zkillboard.com/character/{{ alt.character_id }}/" class="label label-danger" target="_blank">
+
+                                                                        <td style="width: 5%;">
+                                                                            <a
+                                                                                class="badge bg-danger"
+                                                                                href="{{ alt.character_id|zkillboard_character_url }}"
+                                                                                target="_blank"
+                                                                            >
                                                                                 {% translate "Killboard" %}
                                                                             </a>
                                                                         </td>
@@ -144,7 +261,13 @@
                                                     </td>
 
                                                     {% for service, active in main.services.items %}
-                                                        <td>{% if active %}{% translate 'Active' %}{% else %}{% translate 'Inactive' %}{% endif %}</td>
+                                                        <td>
+                                                            {% if active %}
+                                                                {% translate 'Active' %}
+                                                            {% else %}
+                                                                {% translate 'Inactive' %}
+                                                            {% endif %}
+                                                        </td>
                                                     {% endfor %}
                                                 </tr>
                                             {% endfor %}
@@ -154,10 +277,10 @@
                             {% endif %}
                         </div>
 
-                        <div class="tab-pane fade" id="members">
+                        <div id="tab-members" class="tab-pane fade card card-default border-0" role="tabpanel" aria-labelledby="tab-members">
                             {% if members %}
                                 <div class="table-responsive">
-                                    <table class="table table-striped table-hover" id="table-members">
+                                    <table class="table table-striped table-hover w-100" id="table-members">
                                         <thead>
                                             <tr>
                                                 <th>{% translate "Character" %}</th>
@@ -171,28 +294,54 @@
                                         <tbody>
                                             {% for member in members %}
                                                 <tr>
-                                                    <td class="valign-middle">
-                                                        <img src="{{ member.portrait_url }}" class="img-rounded" alt="{{ member.character_name }}" style="margin-right: 0.25rem;">
+                                                    <td>
+                                                        <img
+                                                            class="rounded"
+                                                            src="{{ member.character_id|character_portrait_url:32 }}"
+                                                            alt="{{ member.character_name }}"
+                                                            style="margin-right: 0.25rem;"
+                                                        >
                                                         {{ member.character_name }}
                                                     </td>
-                                                    <td class="valign-middle">
+
+                                                    <td class="text-center">
                                                         <a
-                                                            href="https://zkillboard.com/character/{{ member.character_id }}/"
-                                                            class="label label-danger"
+                                                            href="{{ member.character_id|zkillboard_character_url }}"
+                                                            class="badge bg-danger"
                                                             target="_blank"
-                                                        >{% translate "Killboard" %}</a>
+                                                        >
+                                                            {% translate "Killboard" %}
+                                                        </a>
                                                     </td>
-                                                    <td class="valign-middle">
-                                                        <img src="{{ member.character_ownership.user.profile.main_character.character_id|character_portrait_url:32 }}" class="img-rounded" alt="{{ member.character_ownership.user.profile.main_character.character_name }}" style="margin-right: 0.25rem;">
+
+                                                    <td>
+                                                        <img
+                                                            class="rounded"
+                                                            src="{{ member.character_ownership.user.profile.main_character.character_id|character_portrait_url:32 }}"
+                                                            alt="{{ member.character_ownership.user.profile.main_character.character_name }}"
+                                                            style="margin-right: 0.25rem;"
+                                                        >
                                                         {{ member.character_ownership.user.profile.main_character.character_name }}
                                                     </td>
-                                                    <td class="valign-middle">
-                                                        <img src="{{ member.character_ownership.user.profile.main_character.corporation_id|corporation_logo_url:32 }}" class="img-rounded" alt="{{ member.character_ownership.user.profile.main_character.corporation_name }}" style="margin-right: 0.25rem;">
+
+                                                    <td>
+                                                        <img
+                                                            class="rounded"
+                                                            src="{{ member.character_ownership.user.profile.main_character.corporation_id|corporation_logo_url:32 }}"
+                                                            alt="{{ member.character_ownership.user.profile.main_character.corporation_name }}"
+                                                            style="margin-right: 0.25rem;"
+                                                        >
                                                         {{ member.character_ownership.user.profile.main_character.corporation_name }}
                                                     </td>
-                                                    <td class="valign-middle">
+
+                                                    <td>
                                                         {% if member.character_ownership.user.profile.main_character.alliance_name %}
-                                                            <img src="{{ member.character_ownership.user.profile.main_character.alliance_id|alliance_logo_url:32 }}" class="img-rounded" alt="{{ member.character_ownership.user.profile.main_character.alliance_name }}" style="margin-right: 0.25rem;">
+                                                            <img
+                                                                class="rounded"
+                                                                src="{{ member.character_ownership.user.profile.main_character.alliance_id|alliance_logo_url:32 }}"
+                                                                alt="{{ member.character_ownership.user.profile.main_character.alliance_name }}"
+                                                                style="margin-right: 0.25rem;"
+                                                            >
                                                             {{ member.character_ownership.user.profile.main_character.alliance_name }}
                                                         {% endif %}
                                                     </td>
@@ -200,21 +349,30 @@
                                             {% endfor %}
 
                                             {% for member in unregistered %}
-                                                <tr class="danger">
-                                                    <td class="valign-middle">
-                                                        <img src="{{ member.portrait_url }}" class="img-rounded" alt="{{ member.character_name }}" style="margin-right: 0.25rem;">
+                                                <tr class="table-warning">
+                                                    <td>
+                                                        <img
+                                                            class="rounded"
+                                                            src="{{ member.portrait_url }}"
+                                                            alt="{{ member.character_name }}"
+                                                            style="margin-right: 0.25rem;"
+                                                        >
                                                         {{ member.character_name }}
                                                     </td>
-                                                    <td class="valign-middle">
+
+                                                    <td class="text-center" style="width: 5%;">
                                                         <a
-                                                            href="https://zkillboard.com/character/{{ member.character_id }}/"
-                                                            class="label label-danger"
+                                                            class="badge bg-danger"
+                                                            href="{{ member.character_id|zkillboard_character_url }}"
                                                             target="_blank"
-                                                        >{% translate "Killboard" %}</a>
+                                                        >
+                                                            {% translate "Killboard" %}
+                                                        </a>
                                                     </td>
-                                                    <td class="valign-middle"></td>
-                                                    <td class="valign-middle"></td>
-                                                    <td class="valign-middle"></td>
+
+                                                    <td></td>
+                                                    <td></td>
+                                                    <td></td>
                                                 </tr>
                                             {% endfor %}
 
@@ -224,10 +382,10 @@
                             {% endif %}
                         </div>
 
-                        <div class="tab-pane fade" id="unregistered">
+                        <div id="tab-unregistered" class="tab-pane fade card card-default border-0" role="tabpanel" aria-labelledby="tab-unregistered">
                             {% if unregistered %}
                                 <div class="table-responsive">
-                                    <table class="table table-striped table-hover" id="table-unregistered">
+                                    <table class="table table-striped table-hover w-100" id="table-unregistered">
                                         <thead>
                                             <tr>
                                                 <th>{% translate "Character" %}</th>
@@ -237,14 +395,23 @@
 
                                         <tbody>
                                             {% for member in unregistered %}
-                                                <tr class="danger">
-                                                    <td class="valign-middle">
-                                                        <img src="{{ member.portrait_url }}" class="img-rounded" alt="{{ member.character_name }}" style="margin-right: 0.25rem;">
+                                                <tr>
+                                                    <td>
+                                                        <img
+                                                            class="rounded"
+                                                            src="{{ member.character_id|character_portrait_url:32 }}"
+                                                            alt="{{ member.character_name }}"
+                                                            style="margin-right: 0.25rem;"
+                                                        >
                                                         {{ member.character_name }}
                                                     </td>
 
-                                                    <td class="valign-middle">
-                                                        <a href="https://zkillboard.com/character/{{ member.character_id }}/" class="label label-danger" target="_blank">
+                                                    <td class="text-center" style="width: 5%;">
+                                                        <a
+                                                            class="badge bg-danger"
+                                                            href="{{ member.character_id|zkillboard_character_url }}"
+                                                            target="_blank"
+                                                        >
                                                             {% translate "Killboard" %}
                                                         </a>
                                                     </td>
@@ -260,10 +427,10 @@
                             {% endif %}
                         </div>
 
-                        <div class="tab-pane fade" id="orphans">
+                        <div id="tab-orphans" class="tab-pane fade card card-default border-0" role="tabpanel" aria-labelledby="tab-orphans">
                             {% if orphans %}
                                 <div class="table-responsive">
-                                    <table class="table table-striped table-hover" id="table-orphans">
+                                    <table class="table table-striped table-hover w-100" id="table-orphans">
                                         <thead>
                                             <tr>
                                                 <th>{% translate "Character" %}</th>
@@ -276,27 +443,55 @@
 
                                         <tbody>
                                             {% for member in orphans %}
-                                                <tr class="danger">
-                                                    <td class="valign-middle">
-                                                        <img src="{{ member.portrait_url }}" class="img-rounded" alt="{{ member.character_name }}" style="margin-right: 0.25rem;">
+                                                <tr>
+                                                    <td>
+                                                        <img
+                                                            class="rounded"
+                                                            src="{{ member.character_id|character_portrait_url:32 }}"
+                                                            alt="{{ member.character_name }}"
+                                                            style="margin-right: 0.25rem;"
+                                                        >
                                                         {{ member.character_name }}
                                                     </td>
-                                                    <td class="valign-middle">
-                                                        <a href="https://zkillboard.com/character/{{ member.character_id }}/" class="label label-danger" target="_blank">
+
+                                                    <td class="text-center" style="width: 5%;">
+                                                        <a
+                                                            class="badge bg-danger"
+                                                            href="{{ member.character_id|zkillboard_character_url }}"
+                                                            target="_blank"
+                                                        >
                                                             {% translate "Killboard" %}
                                                         </a>
                                                     </td>
-                                                    <td class="valign-middle">
-                                                        <img src="{{ member.character_ownership.user.profile.main_character.character_id|character_portrait_url:32 }}" class="img-rounded" alt="{{ member.character_ownership.user.profile.main_character.character_name }}" style="margin-right: 0.25rem;">
+
+                                                    <td>
+                                                        <img
+                                                            class="rounded"
+                                                            src="{{ member.character_ownership.user.profile.main_character.character_id|character_portrait_url:32 }}"
+                                                            alt="{{ member.character_ownership.user.profile.main_character.character_name }}"
+                                                            style="margin-right: 0.25rem;"
+                                                        >
                                                         {{ member.character_ownership.user.profile.main_character.character_name }}
                                                     </td>
-                                                    <td class="valign-middle">
-                                                        <img src="{{ member.character_ownership.user.profile.main_character.corporation_id|corporation_logo_url:32 }}" class="img-rounded" alt="{{ member.character_ownership.user.profile.main_character.corporation_name }}" style="margin-right: 0.25rem;">
+
+                                                    <td>
+                                                        <img
+                                                            class="rounded"
+                                                            src="{{ member.character_ownership.user.profile.main_character.corporation_id|corporation_logo_url:32 }}"
+                                                            alt="{{ member.character_ownership.user.profile.main_character.corporation_name }}"
+                                                            style="margin-right: 0.25rem;"
+                                                        >
                                                         {{ member.character_ownership.user.profile.main_character.corporation_name }}
                                                     </td>
-                                                    <td class="valign-middle">
+
+                                                    <td>
                                                         {% if member.character_ownership.user.profile.main_character.alliance_name %}
-                                                            <img src="{{ member.character_ownership.user.profile.main_character.alliance_id|alliance_logo_url:32 }}" class="img-rounded" alt="{{ member.character_ownership.user.profile.main_character.alliance_name }}" style="margin-right: 0.25rem;">
+                                                            <img
+                                                                class="rounded"
+                                                                src="{{ member.character_ownership.user.profile.main_character.alliance_id|alliance_logo_url:32 }}"
+                                                                alt="{{ member.character_ownership.user.profile.main_character.alliance_name }}"
+                                                                style="margin-right: 0.25rem;"
+                                                            >
                                                             {{ member.character_ownership.user.profile.main_character.alliance_name }}
                                                         {% endif %}
                                                     </td>
@@ -312,10 +507,10 @@
                             {% endif %}
                         </div>
 
-                        <div class="tab-pane fade" id="tracking">
+                        <div id="tab-tracking" class="tab-pane fade card card-default border-0" role="tabpanel" aria-labelledby="tab-tracking">
                             {% if members %}
                                 <div class="table-responsive">
-                                    <table class="table table-striped table-hover" id="table-tracking">
+                                    <table class="table table-striped table-hover w-100" id="table-tracking">
                                         <thead>
                                             <tr>
                                                 <th>{% translate 'Character' %}</th>
@@ -328,37 +523,104 @@
 
                                         <tbody>
                                             {% for member in unregistered %}
-                                                <tr class="danger">
-                                                    <td class="valign-middle" style="vertical-align:middle">
-                                                        <img src="{{ member.portrait_url }}" class="img-rounded" alt="{{ member.character_name }}" style="margin-right: 0.25rem;">
+                                                <tr class="table-warning">
+                                                    <td>
+                                                        <img
+                                                            class="rounded"
+                                                            src="{{ member.character_id|character_portrait_url:32 }}"
+                                                            alt="{{ member.character_name }}"
+                                                            style="margin-right: 0.25rem;"
+                                                        >
                                                         {{ member.character_name }}
                                                     </td>
-                                                    <td class="valign-middle">
-                                                        <img src="{{ member.ship_type_id|type_render_url:32 }}" class="img-rounded" alt="{{ member.ship_type_name }}" style="margin-right: 0.25rem;">
+
+                                                    <td>
+                                                        <img
+                                                            class="rounded"
+                                                            src="{{ member.ship_type_id|type_render_url:32 }}"
+                                                            alt="{{ member.ship_type_name }}"
+                                                            style="margin-right: 0.25rem;"
+                                                        >
                                                         {{ member.ship_type_name }}
                                                     </td>
-                                                    <td class="valign-middle">{{ member.logoff_date|date:"Y-m-d H:i" }}<br><span class="label label-primary">{{ member.logon_date|timesince }} ago</span><br><span class="label label-default">Duration: {{ member.logon_date|timesince:member.logoff_date }}</span></td>
-                                                    <td class="valign-middle">{{ member.start_date|date:"Y-m-d H:i" }}<br><span class="label label-primary">{{ member.start_date|timesince }}</span></td>
-                                                    <td class="text-center valign-middle">
-                                                        <span class="glyphicon glyphicon-remove"></span>
+
+                                                    <td>
+                                                        {{ member.logoff_date|date:"Y-m-d H:i" }}
+                                                        <br>
+                                                        <span class="badge bg-primary">
+                                                            {% blocktrans with member.logon_date|timesince as time_since %}
+                                                                {{ time_since }} ago
+                                                            {% endblocktrans %}
+                                                        </span>
+                                                        <br>
+                                                        <span class="badge bg-secondary">
+                                                            {% blocktrans with member.logon_date|timesince:member.logoff_date as duration %}
+                                                                Duration: {{ duration }}
+                                                            {% endblocktrans %}
+                                                        </span>
+                                                    </td>
+
+                                                    <td>
+                                                        {{ member.start_date|date:"Y-m-d H:i" }}
+                                                        <br>
+                                                        <span class="badge bg-primary">
+                                                            {{ member.start_date|timesince }}
+                                                        </span>
+                                                    </td>
+
+                                                    <td class="text-center align-middle" style="width: 5%;">
+                                                        <span class="fa-solid fa-xmark fa-xl"></span>
                                                     </td>
                                                 </tr>
                                             {% endfor %}
 
                                             {% for member in tracking %}
                                                 <tr >
-                                                    <td class="valign-middle" style="vertical-align:middle">
-                                                        <img src="{{ member.portrait_url }}" class="img-rounded" alt="{{ member.character_name }}" style="margin-right: 0.25rem;">
+                                                    <td style="vertical-align:middle">
+                                                        <img
+                                                            class="rounded"
+                                                            src="{{ member.character_id|character_portrait_url:32 }}"
+                                                            alt="{{ member.character_name }}"
+                                                            style="margin-right: 0.25rem;"
+                                                        >
                                                         {{ member.character_name }}
                                                     </td>
-                                                    <td class="valign-middle">
-                                                        <img src="{{ member.ship_type_id|type_render_url:32 }}" class="img-rounded" alt="{{ member.ship_type_name }}" style="margin-right: 0.25rem;">
+
+                                                    <td>
+                                                        <img
+                                                            class="rounded"
+                                                            src="{{ member.ship_type_id|type_render_url:32 }}"
+                                                            alt="{{ member.ship_type_name }}"
+                                                            style="margin-right: 0.25rem;"
+                                                        >
                                                         {{ member.ship_type_name }}
                                                     </td>
-                                                    <td class="valign-middle">{{ member.logoff_date|date:"Y-m-d H:i" }}<br><span class="label label-primary">{{ member.logon_date|timesince }} ago</span><br><span class="label label-default">Duration: {{ member.logon_date|timesince:member.logoff_date }}</span></td>
-                                                    <td class="valign-middle">{{ member.start_date|date:"Y-m-d H:i" }}<br><span class="label label-primary">{{ member.start_date|timesince }}</span></td>
-                                                    <td class="text-center valign-middle">
-                                                        <span class="glyphicon glyphicon-ok"></span>
+
+                                                    <td>
+                                                        {{ member.logoff_date|date:"Y-m-d H:i" }}
+                                                        <br>
+                                                        <span class="badge bg-primary">
+                                                            {% blocktrans with member.logon_date|timesince as time_since %}
+                                                                {{ time_since }} ago
+                                                            {% endblocktrans %}
+                                                        </span>
+                                                        <br>
+                                                        <span class="badge bg-default">
+                                                            {% blocktrans with member.logon_date|timesince:member.logoff_date as duration %}
+                                                                Duration: {{ duration }}
+                                                            {% endblocktrans %}
+                                                        </span>
+                                                    </td>
+
+                                                    <td>
+                                                        {{ member.start_date|date:"Y-m-d H:i" }}<br>
+                                                        <span class="badge bg-primary">
+                                                            {{ member.start_date|timesince }}
+                                                        </span>
+                                                    </td>
+
+                                                    <td class="text-center align-middle" style="width: 5%;">
+                                                        <span class="fa-solid fa-check fa-lg"></span>
                                                     </td>
                                                 </tr>
                                             {% endfor %}
@@ -375,16 +637,16 @@
 {% endblock %}
 
 {% block extra_css %}
-    {% include 'bundles/datatables-css.html' %}
+    {% include 'bundles/datatables-css-bs5.html' %}
 {% endblock %}
 
 {% block extra_javascript %}
-    {% include 'bundles/datatables-js.html' %}
+    {% include 'bundles/datatables-js-bs5.html' %}
     {% include 'bundles/filterdropdown-js.html' %}
 
     <script>
-        $(document).ready(function(){
-            let service_cols = []
+        $(document).ready(() => {
+            const service_cols = []
 
             {% for service in service_percent %}
                 service_cols.push(1 + {{ forloop.counter }})
@@ -409,8 +671,9 @@
                             },
                         {% endfor %}
                     ],
-                    autoSize: false,
-                    bootstrap: true
+                    autoSize: true,
+                    bootstrap: true,
+                    bootstrap_version: 5,
                 }
             });
 
@@ -439,7 +702,7 @@
                         targets: [1]
                     },
                 ],
-                order: [[0, 'asc']],
+                order: [[0, 'asc']]
             });
 
             $('#table-tracking').DataTable({
@@ -453,7 +716,7 @@
                         targets: [4]
                     },
                 ],
-                order: [[0, 'asc']],
+                order: [[0, 'asc']]
             });
         });
     </script>
