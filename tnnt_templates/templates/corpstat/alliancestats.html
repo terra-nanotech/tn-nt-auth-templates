@@ -7,75 +7,73 @@
 
 {% block member_data %}
     <div class="aa-corpstats-alliancestats">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <div class="panel-title">{% translate "Corporation Stats" %}</div>
+        <div class="card card-default">
+            <div class="card-header">
+                <div class="card-title mb-0">{% translate "Corporation Overview" %}</div>
             </div>
 
-            <div class="panel-body">
-                <div class="tab-pane fade in active" id="mains">
-                    <div class="table-responsive">
-                        <table class="table table-striped table-hover" id="table-mains">
-                            <thead>
-                                <tr>
-                                    <th>{% translate "Corporation" %}</th>
-                                    <th>{% translate "Members" %}</th>
-                                    <th>{% translate "Mains" %}</th>
-                                    <th>{% translate "Ratio" %}</th>
-                                    <th>{% translate "Authed" %}</th>
-                                    <th>{% translate "Orphans" %}</th>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover w-100" id="table-mains">
+                        <thead>
+                            <tr>
+                                <th>{% translate "Corporation" %}</th>
+                                <th>{% translate "Members" %}</th>
+                                <th>{% translate "Mains" %}</th>
+                                <th>{% translate "Ratio" %}</th>
+                                <th>{% translate "Authed" %}</th>
+                                <th>{% translate "Orphans" %}</th>
 
-                                    {% for corp in stats %}
-                                        {% if forloop.first %}
-                                            {% for k, v in corp.data.service_percent.items %}
-                                                <th>{{ k|title }}</th>
-                                            {% endfor %}
-                                        {% endif %}
-                                    {% endfor %}
-
-                                    <th>{% translate "Last Update" %}</th>
-                                </tr>
-                            </thead>
-
-                            <tbody>
                                 {% for corp in stats %}
-                                    <tr>
-                                        <td>
-                                            {{ corp.data.corp_name }}
-                                        </td>
-
-                                        <td>
-                                            {{ corp.data.total_members }}
-                                        </td>
-
-                                        <td>
-                                            {{ corp.data.total_mains }}
-                                        </td>
-
-                                        <td>
-                                            {{ corp.data.alt_ratio|floatformat:2|intcomma }}
-                                        </td>
-
-                                        <td style="color: var(--white); background-color: {% if corp.data.auth_percent >= 95 %}rgb(0 170 51){% elif corp.data.auth_percent >= 80 %}rgb(255 144 0){% else %}rgb(170 0 0){% endif %};">
-                                            {{ corp.data.auth_percent|floatformat:0|intcomma }}% ({{ corp.data.authd_members }}/{{ corp.data.total_members }})
-                                        </td>
-
-                                        <td style="color: var(--white); background-color: {% if corp.data.orphan_count == 0 %}rgb(0 170 51){% else %}rgb(170 0 0){% endif %};">
-                                            {{ corp.data.orphan_count }}
-                                        </td>
-
+                                    {% if forloop.first %}
                                         {% for k, v in corp.data.service_percent.items %}
-                                            <td style="color: var(--white); background-color: {% if v.percent >= 95 %}rgb(0 170 51){% elif v.percent >= 80 %}rgb(255 144 0){% else %}rgb(170 0 0){% endif %};">
-                                                {{ v.percent|floatformat:0|intcomma }}% ({{ v.cnt }}/{{ corp.data.total_mains }})
-                                            </td>
-                                        {% endfor%}
-
-                                        <td>{{ corp.date|str2date|naturaltime }}</td>
-                                    </tr>
+                                            <th>{{ k|title }}</th>
+                                        {% endfor %}
+                                    {% endif %}
                                 {% endfor %}
-                            </tbody>
-                        </table>
-                    </div>
+
+                                <th>{% translate "Last Update" %}</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            {% for corp in stats %}
+                                <tr>
+                                    <td>
+                                        {{ corp.data.corp_name }}
+                                    </td>
+
+                                    <td>
+                                        {{ corp.data.total_members }}
+                                    </td>
+
+                                    <td>
+                                        {{ corp.data.total_mains }}
+                                    </td>
+
+                                    <td>
+                                        {{ corp.data.alt_ratio|floatformat:2|intcomma }}
+                                    </td>
+
+                                    <td class="table-{% if corp.data.auth_percent >= 95 %}success{% elif corp.data.auth_percent >= 80 %}warning{% else %}danger{% endif %}">
+                                        {{ corp.data.auth_percent|floatformat:0|intcomma }}% ({{ corp.data.authd_members }}/{{ corp.data.total_members }})
+                                    </td>
+
+                                    <td class="table-{% if corp.data.orphan_count == 0 %}success{% else %}danger{% endif %}">
+                                        {{ corp.data.orphan_count }}
+                                    </td>
+
+                                    {% for k, v in corp.data.service_percent.items %}
+                                        <td class="table-{% if v.percent >= 95 %}success{% elif v.percent >= 80 %}warning{% else %}danger{% endif %}">
+                                            {{ v.percent|floatformat:0|intcomma }}% ({{ v.cnt }}/{{ corp.data.total_mains }})
+                                        </td>
+                                    {% endfor%}
+
+                                    <td>{{ corp.date|str2date|naturaltime }}</td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
@@ -83,11 +81,11 @@
 {% endblock %}
 
 {% block extra_css %}
-    {% include 'bundles/datatables-css.html' %}
+    {% include 'bundles/datatables-css-bs5.html' %}
 {% endblock %}
 
 {% block extra_javascript %}
-    {% include 'bundles/datatables-js.html' %}
+    {% include 'bundles/datatables-js-bs5.html' %}
 
     <script>
         $(document).ready(() => {
@@ -95,7 +93,7 @@
                 lengthMenu: [
                     [-1, 25, 50],
                     ['All', 25, 50]
-                ],
+                ]
             });
         });
     </script>
