@@ -3,24 +3,6 @@
 {% load i18n %}
 
 {% if available %}
-    <li class="dropdown">
-        <ul class="dropdown-menu corpstat-corp-dropdown" role="menu" aria-labelledby="dLabel">
-            {% for corpstat in available %}
-                <li>
-                    <a href="{% url 'corpstat:view_corp' corpstat.corp.corporation_id %}">
-                        <img
-                            src="{{ corpstat.corp.corporation_id|corporation_logo_url:32 }}"
-                            class="roundec"
-                            alt="{{ corpstat.corp.corporation_name }}"
-                            style="margin-right: 0.25rem; width: 1.5rem; height: 1.5rem;"
-                        >
-                        {{ corpstat.corp.corporation_name }}
-                    </a>
-                </li>
-            {% endfor %}
-        </ul>
-    </li>
-
     <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">
             {% translate "Corporations" %}

@@ -47,6 +47,10 @@ Section Order:
 
 - JS issues with the BS3 fallback
 
+### Changed
+
+- `corpstat` templates updated for Bootstrap 5
+
 ## [3.4.1] - 2024-12-17
 
 ### Changed
