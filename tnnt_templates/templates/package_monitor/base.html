@@ -46,19 +46,24 @@
 {% endblock %}
 
 {% block header_nav_collapse_right %}
-    <span class="nav-link">
-        {% translate "not yet" as never_text %}
-        {% translate 'Last updated' %} {{ updated_at|naturaltime|default_if_none:never_text }}
-    </span>
-    <button
-        type="button"
-        class="btn btn-success"
-        data-bs-toggle="modal"
-        data-bs-target="#modalRefreshingDistributions"
-        title="{% translate 'Refresh data now' %}"
-    >
-        <i class="fas fa-sync"></i>
-    </button>
+    <li role="presentation" class="nav-item">
+        <span class="nav-link">
+            {% translate "not yet" as never_text %}
+            {% translate 'Last updated' %} {{ updated_at|naturaltime|default_if_none:never_text }}
+        </span>
+    </li>
+
+    <li role="presentation" class="nav-item">
+        <button
+            type="button"
+            class="btn btn-success mt-2"
+            data-bs-toggle="modal"
+            data-bs-target="#modalRefreshingDistributions"
+            title="{% translate 'Refresh data now' %}"
+        >
+            <i class="fa-solid fa-sync"></i>
+        </button>
+    </li>
 {% endblock %}
 
 {% block content %}
