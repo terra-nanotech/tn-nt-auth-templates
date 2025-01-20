@@ -35,6 +35,8 @@ Section Order:
 ### Security
 -->
 
+## [3.5.1] - 2025-01-20
+
 ### Fixed
 
 - Datatable translations
