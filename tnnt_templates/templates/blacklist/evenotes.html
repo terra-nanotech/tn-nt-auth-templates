@@ -1,5 +1,6 @@
 {% extends 'blacklist/base.html' %}
 
+{% load aa_i18n %}
 {% load evelinks %}
 {% load i18n %}
 {% load humanize %}
@@ -203,13 +204,15 @@
     {% include "bundles/datatables-js.html" %}
     {% include "bundles/filterdropdown-js.html" %}
 
+    {% get_datatables_language_static LANGUAGE_CODE as DT_LANG_PATH %}
+
     <script>
         $('.modal-comments-button').on('click', function () {
             const id = this.id;
             const title = this.title;
             const url = '{% url "blacklist:modal_comment" 123456 %}'.replace('123456', id);
 
-            $.get(url, function (data) {
+            $.get(url, (data) => {
                 const modal_body = $('#main-modal-body')[0];
                 const modal_title = $('#main-modal-title')[0];
 
@@ -241,7 +244,7 @@
             const title = this.title;
             const url = '{% url "blacklist:modal_add_comment" 123456 %}'.replace('123456', id);
 
-            $.get(url, function (data) {
+            $.get(url, (data) => {
                 const modal_body = $('#main-modal-body')[0];
                 const modal_title = $('#main-modal-title')[0];
 
@@ -256,20 +259,13 @@
             const url = '{% url "blacklist:search_names" %}';
             const title = this.title;
 
-            function search () {
+            const search = () => {
                 const url = '{% url "blacklist:search_names" %}';
                 const search_data = {'name': $('#id_name').val()};
                 const token = document.getElementsByName('csrfmiddlewaretoken')[1].value;
                 const modal_body = $('#main-modal-body')[0];
 
-                modal_body.innerHTML = '<div class="text-center">' +
-                    '<div class="lds-ellipsis">' +
-                    '<div></div>' +
-                    '<div></div>' +
-                    '<div></div>' +
-                    '<div></div>' +
-                    '</div>' +
-                    '</div>';
+                modal_body.innerHTML = `<div class="text-center"><div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div></div>`;
 
                 $.ajax({
                     headers: {'X-CSRFToken': token},
@@ -278,9 +274,9 @@
                     data: search_data,
                     success: search_post
                 });
-            }
+            };
 
-            function search_post (data) {
+            const search_post = (data) => {
                 let modal_body = $('#main-modal-body')[0];
                 const modal_title = $('#main-modal-title')[0];
 
@@ -289,16 +285,17 @@
 
                 $('#modal-main').modal();
 
-                $('#id_name').keypress(function (event) {
+                $('#id_name').keypress((event) => {
                     const keycode = (event.keyCode ? event.keyCode : event.which);
 
                     if (keycode === '13') {
                         event.preventDefault();
+
                         search();
                     }
                 });
 
-                $('.search-submit').on('click', function () {
+                $('.search-submit').on('click', () => {
                     modal_body = $('#main-modal-body')[0];
 
                     search();
@@ -310,14 +307,7 @@
                     const modal_body = $('#main-modal-body')[0];
                     const token = document.getElementsByName('csrfmiddlewaretoken')[1].value;
 
-                    modal_body.innerHTML = '<div class="text-center">' +
-                        '<div class="lds-ellipsis">' +
-                        '<div></div>' +
-                        '<div></div>' +
-                        '<div></div>' +
-                        '<div></div>' +
-                        '</div>' +
-                        '</div>';
+                    modal_body.innerHTML = `<div class="text-center"><div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div></div>`;
 
                     $.ajax({
                         headers: {'X-CSRFToken': token},
@@ -328,23 +318,32 @@
                 });
 
                 $('#searched-names').DataTable({
-                    'filterDropDown': {
+                    language: {
+                        url: '{{ DT_LANG_PATH }}'
+                    },
+                    filterDropDown: {
                         columns: [{
                             idx: 2
                         }],
                         bootstrap: true
                     },
-                    'columnDefs': [
-                        {'searchable': false, 'targets': [0, 3]},
-                        {'sortable': false, 'targets': [0, 3]}
+                    columnDefs: [
+                        {
+                            searchable: false,
+                            targets: [0, 3]
+                        },
+                        {
+                            sortable: false,
+                            targets: [0, 3]
+                        }
                     ],
-                    'order': [
+                    order: [
                         [1, 'asc']
                     ],
-                    'pageLength': 10,
-                    'responsive': true
+                    pageLength: 10,
+                    responsive: true
                 });
-            }
+            };
 
             $.get(url, search_post);
         });
@@ -355,9 +354,12 @@
             modal_body.html('');
         });
 
-        $(document).ready(function () {
+        $(document).ready(() => {
             $('#notes-table').DataTable({
-                'filterDropDown': {
+                language: {
+                    url: '{{ DT_LANG_PATH }}'
+                },
+                filterDropDown: {
                     columns: [
                         {idx: 5},
                         {idx: 6},
@@ -366,17 +368,26 @@
                     ],
                     bootstrap: true
                 },
-                'columnDefs': [
-                    {'searchable': false, 'targets': [0]},
-                    {'sortable': false, 'targets': [0, 4, 9]},
-                    {'visible': false, 'targets': [5, 6, 7, 8]}
+                columnDefs: [
+                    {
+                        searchable: false,
+                        targets: [0]
+                    },
+                    {
+                        sortable: false,
+                        targets: [0, 4, 9]
+                    },
+                    {
+                        visible: false,
+                        targets: [5, 6, 7, 8]
+                    }
 
                 ],
-                'order': [
+                order: [
                     [1, 'asc']
                 ],
-                'pageLength': 25,
-                'responsive': true
+                pageLength: 25,
+                responsive: true
             });
         });
     </script>
