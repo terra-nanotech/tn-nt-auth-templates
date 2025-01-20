@@ -1,4 +1,6 @@
 {% extends 'fittings/base.html' %}
+
+{% load aa_i18n %}
 {% load i18n %}
 {% load humanize %}
 {% load filters %}
@@ -82,12 +84,14 @@
 {% block extra_javascript %}
     {% include 'bundles/datatables-js.html' %}
 
+    {% get_datatables_language_static LANGUAGE_CODE as DT_LANG_PATH %}
+
     <script>
-        $(document).ready(function() {
+        $(document).ready(() => {
             {% if fits %}
                 $('#fitTable').DataTable({
                     language: {
-                        url: '{{ STATIC_URL }}/tnnt_templates/libs/DataTables-Plugins/1.13.4/i18n/{{ LANGUAGE_CODE }}.json'
+                        url: '{{ DT_LANG_PATH }}'
                     },
                 });
             {% endif %}

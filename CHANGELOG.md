@@ -37,6 +37,7 @@ Section Order:
 
 ### Fixed
 
+- Datatable translations
 - Missing `li` tags
 
 ## [3.5.0] - 2025-01-12

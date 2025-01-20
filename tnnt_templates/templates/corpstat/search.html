@@ -1,5 +1,6 @@
 {% extends "corpstat/base.html" %}
 
+{% load aa_i18n %}
 {% load i18n %}
 {% load evelinks %}
 
@@ -66,9 +67,15 @@
 {% block extra_javascript %}
     {% include 'bundles/datatables-js-bs5.html' %}
 
+    {% get_datatables_language_static LANGUAGE_CODE as DT_LANG_PATH %}
+
     <script>
         $(document).ready(() => {
-            $('#table-search').DataTable();
+            $('#table-search').DataTable({
+                language: {
+                    url: '{{ DT_LANG_PATH }}'
+                },
+            });
         });
     </script>
 {% endblock %}

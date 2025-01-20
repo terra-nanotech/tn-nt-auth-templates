@@ -1,5 +1,6 @@
 {% extends 'corpstat/base.html' %}
 
+{% load aa_i18n %}
 {% load i18n %}
 {% load humanize %}
 {% load static %}
@@ -644,6 +645,8 @@
     {% include 'bundles/datatables-js-bs5.html' %}
     {% include 'bundles/filterdropdown-js.html' %}
 
+    {% get_datatables_language_static LANGUAGE_CODE as DT_LANG_PATH %}
+
     <script>
         $(document).ready(() => {
             const service_cols = []
@@ -653,6 +656,9 @@
             {% endfor %}
 
             $('#table-mains').DataTable({
+                language: {
+                    url: '{{ DT_LANG_PATH }}'
+                },
                 columnDefs: [
                     {
                         sortable: false,
@@ -678,6 +684,9 @@
             });
 
             $('#table-members').DataTable({
+                language: {
+                    url: '{{ DT_LANG_PATH }}'
+                },
                 columnDefs: [
                     {
                         searchable: false,
@@ -692,6 +701,9 @@
             });
 
             $('#table-unregistered').DataTable({
+                language: {
+                    url: '{{ DT_LANG_PATH }}'
+                },
                 columnDefs: [
                     {
                         searchable: false,
@@ -706,6 +718,9 @@
             });
 
             $('#table-tracking').DataTable({
+                language: {
+                    url: '{{ DT_LANG_PATH }}'
+                },
                 columnDefs: [
                     {
                         searchable: false,
