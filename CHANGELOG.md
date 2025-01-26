@@ -35,6 +35,8 @@ Section Order:
 ### Security
 -->
 
+## [3.6.0] - 2025-01-26
+
 ### Changed
 
 - Use `django-sri` for hash calculation
