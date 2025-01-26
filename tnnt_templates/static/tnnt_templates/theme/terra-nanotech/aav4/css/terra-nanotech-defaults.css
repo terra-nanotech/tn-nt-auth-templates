@@ -15,6 +15,7 @@
     --font-family-code: "Fira Code", monospace;
     --font-family-default: roboto, "Helvetica Neue", sans-serif;
     --backdrop-filter-default: saturate(1.5) blur(1.5em);
+    --backdrop-filter-sidenav: saturate(0.1) blur(1.5em);
 
     /* END TN-NT Theme Defaults
     --------------------------------------------------------------------------------- */
