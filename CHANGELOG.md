@@ -37,6 +37,7 @@ Section Order:
 
 ### Changed
 
+- Use `django-sri` for hash calculation
 - Highlight for active menu items in the sidebar menu improved
 
 ## [3.5.1] - 2025-01-20
