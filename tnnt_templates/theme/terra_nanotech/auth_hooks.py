@@ -45,7 +45,7 @@ class TerraNanotechThemeHook(ThemeHook):
                         base=settings.STATIC_URL,
                         url=f"tnnt_templates/theme/terra-nanotech/aav4/css/terra-nanotech-defaults.min.css?v={__version__}",
                     ),
-                    "integrity": "sha512-E8vMqXFN+EiyBKkt06o/x5rK+ZGQk8f8+jgWJX5ZKDoxjG4noss9lfS/cgp5/evqXRlmdhBT8IB8QToCPNbq3w==",
+                    "integrity": "sha512-YxT6QJL/XZt9AoLDnb3nL2NH73+fWFckEIA8v2wXqr0nGxjWBKhXL4iVGOFiXkQ8Avj+3/JGrK5kl86M4XokwA==",
                 },
                 {
                     "url": urljoin(
@@ -73,7 +73,7 @@ class TerraNanotechThemeHook(ThemeHook):
                         base=settings.STATIC_URL,
                         url=f"tnnt_templates/theme/terra-nanotech/aav4/css/terra-nanotech.min.css?v={__version__}",
                     ),
-                    "integrity": "sha512-tSa74ZzRLfzDYBcPXfr6TsNlZL+tT5J7cmCxazl/MAkGbsN5QkfL3VuHIqwqflWqIroDv20wVrPaSqYwdAFknQ==",
+                    "integrity": "sha512-S5OsDPsewG4OjFEcgG9yTHwgxI3Z3l0B05MHZjyDbz7tAo0JjWXYm+9OhQRU9cBkr96ZYpubVwoplKUEYqtT2w==",
                 },
                 {
                     "url": urljoin(

@@ -210,6 +210,21 @@
 
     /* END Login page
     --------------------------------------------------------------------------------- */
+
+    /* Sidebar Menu
+    --------------------------------------------------------------------------------- */
+
+    #sidebar-menu > li:has(a.nav-link.active),
+    #sidebar-menu > li:has(ul.collapse li a.nav-link.active) {
+        backdrop-filter: var(--backdrop-filter-sidenav);
+    }
+
+    #sidebar-menu > li:has(ul.collapse li a.nav-link.active) > a.nav-link {
+        color: var(--bs-navbar-active-color);
+    }
+
+    /* END Sidebar Menu
+    --------------------------------------------------------------------------------- */
 }
 
 /* END Terra Nanotech theme
