@@ -35,6 +35,10 @@ Section Order:
 ### Security
 -->
 
+### Removed
+
+- `corpstats` templates
+
 ## [3.6.0] - 2025-01-26
 
 ### Changed
