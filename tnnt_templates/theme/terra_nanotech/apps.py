@@ -5,6 +5,9 @@ AppConfig for Terra Nanotech theme.
 # Django
 from django.apps import AppConfig
 
+# AA Templates: Terra Nanotech
+from tnnt_templates import __version__
+
 
 class TerraNanotechThemeConfig(AppConfig):
     """
@@ -13,8 +16,7 @@ class TerraNanotechThemeConfig(AppConfig):
 
     name = "tnnt_templates.theme.terra_nanotech"
     label = "terra_nanotech"
-    version = "5.3.2"
-    verbose_name = f"Terra Nanotech v{version}"
+    verbose_name = f"Terra Nanotech Corp Auth Theme v{__version__}"
 
     def ready(self):
         """
