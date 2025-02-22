@@ -62,7 +62,16 @@
         font-family: var(--font-family-default);
     }
 
-    body,
+    .blur-background {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+
+    .blur-background,
     body > nav.navbar,
     .modal.fade.show {
         backdrop-filter: var(--backdrop-filter-default);
@@ -117,7 +126,6 @@
 
     code {
         border-radius: var(--bs-border-radius);
-        color: var(--bs-secondary-color-text) !important;
         font-family: var(--font-family-code);
         padding: 0.25rem !important;
     }
