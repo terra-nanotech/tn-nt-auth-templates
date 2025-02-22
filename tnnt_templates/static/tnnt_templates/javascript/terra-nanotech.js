@@ -118,6 +118,14 @@ $(document).ready(() => {
 
 
     /**
+     * Inject a blurred background to the body.
+     */
+    const injectBlurBodyBackground = () => {
+        $('<div class="blur-background"></div>').prependTo('body');
+    };
+
+
+    /**
      * Functions that need to be executed on successful ajax events.
      */
     $(document).ajaxSuccess(() => {
@@ -129,6 +137,8 @@ $(document).ready(() => {
      * Functions that need to be executed when the page is loaded.
      */
     (() => {
+        injectBlurBodyBackground();
+
         // Start the Eve-time clock in the top menu bar.
         setInterval(() => {
             renderClock($('.eve-time-wrapper .eve-time-clock'));
