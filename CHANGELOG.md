@@ -35,6 +35,8 @@ Section Order:
 ### Security
 -->
 
+## [3.7.1] - 2025-02-22
+
 ### Fixed
 
 - Tooltip flicker in CorpTools ([CorpTools#117](https://github.com/Solar-Helix-Independent-Transport/allianceauth-corp-tools/issues/117))
