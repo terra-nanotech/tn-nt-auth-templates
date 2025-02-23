@@ -155,28 +155,6 @@ if "tnnt_templates" in INSTALLED_APPS:
     )
 
     # Add TN-NT Auth Templates settings
-    # TNNT_TEMPLATE_ENTITY_ID = 8154711  #  replace with your corp/alliance ID
-    # TNNT_TEMPLATE_ENTITY_TYPE = "corporation"  # default: "alliance"
-    # TNNT_TEMPLATE_ENTITY_NAME = "My Awesome Corp/Alliance"  # your corp/alliance name
-
-    # The URLs are shown in the user menu
-    # TNNT_TEMPLATE_URLS_OWN_WEBSITES = [
-    #     {
-    #         "name": "Website",
-    #         "url": "https://webseite.com/",
-    #         "new_tab": True,
-    #     },
-    #     {
-    #         "name": "Forums",
-    #         "url": "https://forum.website.com/",
-    #         "new_tab": True,
-    #     },
-    # ]
-    #
-    # TNNT_TEMPLATE_URLS_OTHER_WEBSITES = [
-    #     {
-    #         "name": "Website",
-    #         "url": "https://website.com/",
-    #         "new_tab": True,
-    #     },
-    # ]
+    TNNT_TEMPLATE_ENTITY_NAME = "My Awesome Corp/Alliance"  # Your corp/alliance name
+    TNNT_TEMPLATE_ENTITY_ID = 8154711  #  Replace with your corp/alliance ID
+    TNNT_TEMPLATE_ENTITY_TYPE = "corporation"  # Default: "alliance"
