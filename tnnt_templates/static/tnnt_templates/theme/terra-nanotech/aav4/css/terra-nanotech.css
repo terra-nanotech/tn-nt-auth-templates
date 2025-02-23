@@ -224,7 +224,7 @@
 
     #sidebar-menu > li:has(a.nav-link.active),
     #sidebar-menu > li:has(ul.collapse li a.nav-link.active) {
-        backdrop-filter: var(--backdrop-filter-sidenav);
+        background-color: var(--background-color-light-transparency);
     }
 
     #sidebar-menu > li:has(ul.collapse li a.nav-link.active) > a.nav-link {

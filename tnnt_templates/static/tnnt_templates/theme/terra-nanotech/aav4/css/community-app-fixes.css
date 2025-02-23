@@ -142,20 +142,6 @@
         border: none;
     }
 
-    /* SumoSelect
-    --------------------------------------------------------------------------------- */
-
-    .aa-forum .SumoSelect {
-        color: rgb(54 54 54);
-    }
-
-    .aa-forum .SumoSelect > .CaptionCont > span.placeholder {
-        color: var(--background-color-navigation-default-hover);
-    }
-
-    /* END SumoSelect
-    --------------------------------------------------------------------------------- */
-
     #aa-forum-form-search-menu .has-search svg {
         fill: var(--font-color-default);
     }
