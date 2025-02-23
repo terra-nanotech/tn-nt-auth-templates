@@ -35,6 +35,10 @@ Section Order:
 ### Security
 -->
 
+### Changed
+
+- Some colour corrections
+
 ## [3.7.1] - 2025-02-22
 
 ### Fixed
