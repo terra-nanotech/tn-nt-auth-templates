@@ -35,6 +35,10 @@ Section Order:
 ### Security
 -->
 
+### Added
+
+- Corptools skill checks to fittings view
+
 ## [3.7.3] - 2025-02-23
 
 ### Changed
