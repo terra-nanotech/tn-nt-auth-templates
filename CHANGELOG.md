@@ -35,6 +35,8 @@ Section Order:
 ### Security
 -->
 
+## [3.7.5] - 2025-02-25
+
 ### Changed
 
 - Updated the `fittings` templates to Bootstrap 5
