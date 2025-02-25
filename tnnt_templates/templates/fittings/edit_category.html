@@ -13,93 +13,90 @@
             opacity: 0;
             display: block;
             border: none;
-            height:100%;
+            height: 46px;
             width: 100%;
         }
     </style>
 {% endblock %}
 
-{% block page_title %}{% translate "Edit Category" %}{% endblock %}
+{% block page_title %}{% translate "Update Category" %}{% endblock %}
 
 {% block fittings_block %}
     <div>
-        <div class="panel panel-primary">
-            <div class="panel-heading">
-                <div class="panel-title">{% translate "Edit Category" %}</div>
+        <div class="card card-primary mb-3">
+            <div class="card-header">
+                <div class="card-title mb-0">{% translate "Edit Category" %}</div>
             </div>
 
-            <div class="panel-body">
-                <div class="row">
-                    <div class="col-md-10 col-md-offset-1">
-                        <form class="form" role="form" action="" method="POST">
-                            {% csrf_token %}
+            <div class="card-body">
+                <form class="form" role="form" action="" method="POST">
+                    {% csrf_token %}
 
-                            <div class="row">
-                                <div class="col-sm-10">
-                                    <div class="form-group">
-                                        <label for="name">{% translate "Category Name" %}</label>
+                    <div class="row">
+                        <div class="col-sm-10">
+                            <div class="form-group mb-3">
+                                <label for="name">{% translate "Category Name" %}</label>
 
-                                        <input type="text" class="form-control" name="name" id="name" value="{{cat.name}}" required>
-                                    </div>
-                                </div>
+                                <input type="text" class="form-control" name="name" id="name" value="{{cat.name}}" required>
+                            </div>
+                        </div>
 
-                                <div class="col-sm-2">
-                                    <div class="form-group">
-                                        <label for="color">{% translate "Category Color" %}</label>
+                        <div class="col-sm-2">
+                            <div class="form-group mb-3">
+                                <label for="color">{% translate "Category Color" %}</label>
 
-                                        <div class="form-control col-sm-1" id="color-wrapper" style="padding: 0 !important;">
-                                            <input type="color" name="color" id="color" value="{{cat.color}}" required>
-                                        </div>
-                                    </div>
+                                <div class="form-control col-sm-1" id="color-wrapper" style="padding: 0 !important;">
+                                    <input type="color" name="color" id="color" value="{{cat.color}}" required>
                                 </div>
                             </div>
-
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <div class="form-group">
-                                        <label for="groupSelect" style="margin-bottom: 0;">{% translate "Select Groups" %}</label>
-
-                                        <span class="help-block" style="margin-top: 0; margin-bottom: 0; font-size: 10pt; font-style: italic;">{% translate "Only selected groups will have access to fittings and doctrines in this category. If no groups are selected the category will be visible to all with fittings module access." %}</span>
-
-                                        <select name="groupSelect" id="groupSelect" multiple>
-                                            {% for group in groups %}
-                                            <option value="{{group.pk}}" {% if group in cat.groups.all %} selected {%endif%}>{{group.name}}</option>
-                                            {% endfor %}
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <label for="fitSelect">{% translate "Select Fittings" %}</label>
-
-                                        <select name="fitSelect" id="fitSelect" multiple>
-                                            {% for fit in fits %}
-                                                <option value="{{fit.pk}}" {% if fit in cat.fittings.all %} selected {% endif %}>{{fit.name}}</option>
-                                            {% endfor %}
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <label for="docSelect">{% translate "Select Doctrines" %}</label>
-
-                                        <select name="docSelect" id="docSelect" multiple>
-                                            {% for doc in docs %}
-                                                <option value="{{doc.pk}}" {% if doc in cat.doctrines.all %} selected {% endif %}>{{doc.name}}</option>
-                                            {% endfor %}
-                                        </select>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <br>
-                            <button class="btn btn-primary btn-block" type="submit">{% translate "Submit" %}</button>
-                        </form>
+                        </div>
                     </div>
-                </div>
+
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group mb-3">
+                                <label for="groupSelect" style="margin-bottom: 0;">{% translate "Select Groups" %}</label>
+
+                                <select name="groupSelect" id="groupSelect" multiple>
+                                    {% for group in groups %}
+                                    <option value="{{group.pk}}" {% if group in cat.groups.all %} selected {%endif%}>{{group.name}}</option>
+                                    {% endfor %}
+                                </select>
+
+                                <p class="text-muted small">
+                                    {% translate "Only selected groups will have access to fittings and doctrines in this category. If no groups are selected the category will be visible to all with fittings module access." %}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <div class="form-group mb-3">
+                                <label for="fitSelect">{% translate "Select Fittings" %}</label>
+
+                                <select name="fitSelect" id="fitSelect" multiple>
+                                    {% for fit in fits %}
+                                        <option value="{{fit.pk}}" {% if fit in cat.fittings.all %} selected {% endif %}>{{fit.name}}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group mb-3">
+                                <label for="docSelect">{% translate "Select Doctrines" %}</label>
+
+                                <select name="docSelect" id="docSelect" multiple>
+                                    {% for doc in docs %}
+                                        <option value="{{doc.pk}}" {% if doc in cat.doctrines.all %} selected {% endif %}>{{doc.name}}</option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary btn-block" type="submit">{% translate "Submit" %}</button>
+                </form>
             </div>
         </div>
     </div>

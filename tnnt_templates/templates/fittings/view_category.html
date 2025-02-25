@@ -8,183 +8,112 @@
 {% load evelinks %}
 
 {% block more_css %}
-    <style>
-        .tp {
-            padding-bottom: 0;
-        }
-        .btm {
-            padding-top: 5px;
-            padding-left: 0;
-            padding-right: 0;
-        }
-        .pd {
-            padding-left: 15px;
-            padding-right: 15px;
-        }
-        .mv {
-            margin-left: 15px;
-        }
-    </style>
-    {% include 'bundles/datatables-css.html' %}
+    {% include 'bundles/datatables-css-bs5.html' %}
 {% endblock %}
 
 {% block page_title %}{% translate "View Category" %}{% endblock %}
 
 {% block fittings_block %}
-    <div>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <div class="panel-title">
-                    {% translate "Category" %}
-
-                    {% if perms.fittings.manage %}
-                        <div class="pull-right" style="margin-top: -2px !important;">
-                            <a href="{% url 'fittings:edit_category' cat.pk %}" type="button" class="btn btn-xs btn-warning" data-toggle="tooltip" data-placement="top" title="{% translate 'Edit Category' %}">
-                                <span class="fa fas fa-pencil-alt"></span>
-                            </a>
-                            <a href="{% url 'fittings:delete_category' cat.pk %}" type="button" class="btn btn-xs btn-danger" data-toggle="tooltip" data-placement="top" title="{% translate 'Delete Category' %}">
-                                <span class="fa fas fa-times"></span>
-                            </a>
-                        </div>
-                    {% endif %}
-                </div>
-            </div>
-
-            <div class="panel-body tp">
-                <strong>{% translate "Name" %}: </strong>
-                <br>
-                <span class="label" style="background-color: {{cat.color}};">{{cat.name}}</span>
-
-                <div id="spacer" style="padding-top: 5px;"></div>
+    <div class="card card-default mb-3">
+        <div class="card-header">
+            <div class="card-title mb-0">
+                {% translate "Category" %}
 
                 {% if perms.fittings.manage %}
-                    <strong>{% translate "Groups" %}: </strong>
-                    <br>
+                    <div class="float-end" style="margin-top: -2px !important;">
+                        <a
+                            href="{% url 'fittings:edit_category' cat.pk %}"
+                            type="button"
+                            class="btn btn-sm btn-warning"
+                            data-bs-tooltip="aa-fittings"
+                            title="{% translate 'Edit Category' %}"
+                        >
+                            <span class="fa-solid fa-pencil-alt"></span>
+                        </a>
 
-                    {% if cat.groups.all|length != 0 %}
-                        {% for group in cat.groups.all %}
-                            <span class="label label-primary">{{group.name}}</span>
-                        {% endfor %}
-                    {% else %}
-                        <span class="label label-warning">{% translate "Category is public" %}</span>
-                    {% endif %}
+                        <a
+                            href="{% url 'fittings:delete_category' cat.pk %}"
+                            type="button"
+                            class="btn btn-sm btn-danger"
+                            data-bs-tooltip="aa-fittings"
+                            title="{% translate 'Delete Category' %}"
+                        >
+                            <span class="fa-solid fa-times"></span>
+                        </a>
+                    </div>
                 {% endif %}
             </div>
+        </div>
 
-            <p>&nbsp;</p>
+        <div class="card-body">
+            <div class="mb-3">
+                <div>
+                    <strong>{% translate "Name" %}: </strong>
 
-            <div class="panel-body btm">
-                <ul class="nav nav-tabs" style="margin-bottom: 10px;">
-                    <li class="active mv"><a data-toggle="tab" href="#doctrines">{% translate "Doctrines" %}</a></li>
-                    <li><a data-toggle="tab" href="#fittings">{% translate "Fittings" %}</a></li>
-                </ul>
-
-                <div class="tab-content">
-                    <div class="tab-pane fade-in active panel-default pd" id="doctrines">
-                        <table class="table table-striped dataTable" role="table" id="docTable">
-                            <thead>
-                                <tr>
-                                    <th></th>
-                                    <th>{% translate "Name" %}</th>
-                                    <th>{% translate "Categories" %}</th>
-                                    <th>{% translate "Description" %}</th>
-                                    <th>{% translate "Ships" %}</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                {% if not docs %}
-                                    <tr>
-                                        <td colspan="5">
-                                            <div class="alert alert-warning text-center">
-                                                {% translate "No Doctrines Found" %}
-                                            </div>
-                                        </td>
-                                    </tr>
-                                {% else %}
-                                    {% for doc in docs %}
-                                        <tr>
-                                            <td>
-                                                <a href="{% url 'fittings:view_doctrine' doc.pk %}">
-                                                    <img src="{{ doc.icon_url }}" class="img-circle" style="display: block; margin: auto;" alt="{{ doc.name }}">
-                                                </a>
-                                            </td>
-                                            <td>
-                                                <a href="{% url 'fittings:view_doctrine' doc.pk %}">{{ doc.name }}</a>
-                                            </td>
-                                            <td>
-                                                {% for cate in doc.category.all %}
-                                                    <span class="label" style="background-color: {{cate.color}};">
-                                                        <a href="{% url 'fittings:view_category' cate.pk %}" class="nostyle">{{cate.name}}</a>
-                                                    </span>
-                                                {% endfor %}
-                                            </td>
-                                            <td>
-                                                {{ doc.description|linebreaks|urlize }}
-                                            </td>
-                                            <td>
-                                                {% for fitting in doc_dict|get_item:doc.pk %}
-                                                    <img src="{{ fitting.ship_type_type_id|type_render_url:32 }}" class="img-rounded" data-toggle="tooltip" data-placement="bottom" title="{{ fitting.ship_type.type_name }}" alt="{{ fitting.ship_type.type_name }}">
-                                                {% endfor %}
-                                            </td>
-                                        </tr>
-                                    {% endfor %}
-                                {% endif %}
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <div class="tab-pane fade-in panel-default pd" id="fittings">
-                        <table class="table table-hover dataTable" id="fitTable">
-                            <thead>
-                                <tr>
-                                    <th>{% translate "Name" %}</th>
-                                    <th>{% translate "Categories" %}</th>
-                                    <th>{% translate "Description" %}</th>
-                                    <th>{% translate "Ship Type" %}</th>
-                                </tr>
-                            </thead>
-
-                            <tbody>
-                                {% if not fits %}
-                                    <tr>
-                                        <td colspan="4">
-                                            <div class="alert alert-warning text-center">
-                                                {% translate "No Fittings Found" %}
-                                            </div>
-                                        </td>
-                                    </tr>
-                                {% else %}
-                                    {% for fit in fits %}
-                                        <tr>
-                                            <td>
-                                                <a href="{% url 'fittings:view_fit' fit.pk %}">{{ fit.name }}</a>
-                                            </td>
-                                            <td>
-                                                {% for cate in cats|get_item:fit.pk %}
-                                                    <span class="label" style="background-color: {{cate.color}};">
-                                                        <a href="{% url 'fittings:view_category' cate.pk %}" class="nostyle">{{cate.name}}</a>
-                                                    </span>
-                                                {% endfor %}
-                                            </td>
-                                            <td>{{ fit.description|linebreaks|urlize }}</td>
-                                            <td>
-                                                <img class="img-rounded" src="{{ fit.ship_type_type_id|type_render_url:128 }}" style="height: 32px; width: 32px;" title="{{ fit.ship_type.type_name }}" alt="{{ fit.ship_type.type_name }}">
-                                                {{ fit.ship_type.type_name }}
-                                            </td>
-                                        </tr>
-                                    {% endfor %}
-                                {% endif %}
-                            </tbody>
-                        </table>
-                    </div>
+                    <span class="badge text-white" style="background-color: {{ cat.color }};">
+                        {{cat.name}}
+                    </span>
                 </div>
+
+                {% if perms.fittings.manage %}
+                    <div>
+                        <strong>{% translate "Groups" %}: </strong>
+
+                        {% if cat.groups.all|length != 0 %}
+                            {% for group in cat.groups.all %}
+                                <span class="badge bg-primary">{{group.name}}</span>
+                            {% endfor %}
+                        {% else %}
+                            <span class="badge bg-warning">{% translate "Category is public" %}</span>
+                        {% endif %}
+                    </div>
+                {% endif %}
+        </div>
+
+        <ul class="nav nav-tabs" style="margin-bottom: 10px;">
+            <li class="nav-item" role="presentation">
+                <a
+                    class="nav-link active"
+                    id="doctrines"
+                    data-bs-toggle="tab"
+                    href="#tab-doctrines"
+                    role="tab"
+                    aria-controls="tab-doctrines"
+                    aria-selected="true"
+                >
+                    {% translate "Doctrines" %}
+                </a>
+            </li>
+
+            <li class="nav-item" role="presentation">
+                <a
+                    class="nav-link"
+                    id="fittings"
+                    data-bs-toggle="tab"
+                    href="#tab-fittings"
+                    role="tab"
+                    aria-controls="tab-fittings"
+                    aria-selected="true"
+                >
+                    {% translate "Fittings" %}
+                </a>
+            </li>
+        </ul>
+
+        <div class="tab-content">
+            <div id="tab-doctrines" class="tab-pane fade show active card card-default border-0" role="tabpanel" aria-labelledby="tab-doctrines">
+                {% include "fittings/partials/doctrine-list-table.html" %}
+            </div>
+
+            <div id="tab-fittings" class="tab-pane fade card card-default border-0" role="tabpanel" aria-labelledby="tab-fittings">
+                {% include "fittings/partials/fittings-list-table.html" %}
             </div>
         </div>
     </div>
 {% endblock %}
 
 {% block extra_javascript %}
-    {% include 'bundles/datatables-js.html' %}
+    {% include 'bundles/datatables-js-bs5.html' %}
 
     {% get_datatables_language_static LANGUAGE_CODE as DT_LANG_PATH %}
 
@@ -195,7 +124,7 @@
                     language: {
                         url: '{{ DT_LANG_PATH }}'
                     },
-                    "order": [[ 1, "asc" ]],
+                    "order": [[ 0, "asc" ]],
                 });
             {% endif %}
 
@@ -207,7 +136,7 @@
                 });
             {% endif %}
 
-            $('[data-toggle="tooltip"]').tooltip();
+            $('[data-bs-tooltip="aa-fittings"]').tooltip();
         });
     </script>
 {% endblock %}

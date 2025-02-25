@@ -30,59 +30,20 @@
     {% endif %}
 
     <div>
-        <h2>
-            {% translate "Fittings List" %}
-        </h2>
-
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <div class="panel-title">{% translate "Fittings" %}</div>
+        <div class="card card-default mb-3">
+            <div class="card-header">
+                <div class="card-title mb-0">{% translate "Fittings List" %}</div>
             </div>
 
-            <div class="panel-body">
-                {% if not fits %}
-                    <div class="alert alert-warning text-center">{% translate "No Fittings Found" %}</div>
-                {% else %}
-                    <table class="table table-striped table-hover dataTable" id="fitTable">
-                        <thead>
-                            <tr>
-                                <th>{% translate "Ship Type" %}</th>
-                                <th>{% translate "Name" %}</th>
-                                <th>{% translate "Categories" %}</th>
-                                <th>{% translate "Description" %}</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            {% for fit in fits %}
-                                <tr>
-                                    <td>
-                                        <a href="{% url 'fittings:view_fit' fit.pk %}" class="text-decoration-none d-inline-block">
-                                            <img class="img-rounded" src="{{ fit.ship_type_type_id|type_render_url:32 }}" title="{{ fit.ship_type.type_name }}" alt="{{ fit.ship_type.type_name }}">
-                                        </a>
-                                        {{ fit.ship_type.type_name }}
-                                    </td>
-                                    <td>
-                                        <a href="{% url 'fittings:view_fit' fit.pk %}">{{ fit.name }}</a>
-                                    </td>
-                                    <td>
-                                        {% for cat in cats|get_item:fit.pk %}
-                                            <span class="label" style="background-color: {{ cat.color }};"><a href="{% url 'fittings:view_category' cat.pk %}" class="nostyle">{{ cat.name }}</a></span>
-                                        {% endfor %}
-                                    </td>
-                                    <td>{{ fit.description|linebreaks|urlize }}</td>
-                                </tr>
-                            {% endfor %}
-                        </tbody>
-                    </table>
-                {% endif %}
+            <div class="card-body">
+                {% include "fittings/partials/fittings-list-table.html" %}
             </div>
         </div>
     </div>
 {% endblock %}
 
 {% block extra_javascript %}
-    {% include 'bundles/datatables-js.html' %}
+    {% include 'bundles/datatables-js-bs5.html' %}
 
     {% get_datatables_language_static LANGUAGE_CODE as DT_LANG_PATH %}
 
@@ -95,8 +56,6 @@
                     },
                 });
             {% endif %}
-
-            $('[data-toggle="tooltip"]').tooltip();
         });
     </script>
 {% endblock %}

@@ -25,16 +25,12 @@
     {% endif %}
 
     <div>
-        <h2>
-            {% translate "Category List" %}
-        </h2>
-
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <div class="panel-title">{% translate "Fittings" %}</div>
+        <div class="card card-default mb-3">
+            <div class="card-header">
+                <div class="card-title mb-0">{% translate "Category List" %}</div>
             </div>
 
-            <div class="panel-body">
+            <div class="card-body">
                 {% if not cats %}
                     <div class="alert alert-warning text-center">{% translate "No Categories Found" %}</div>
                 {% else %}
@@ -51,23 +47,53 @@
                                 {% endif %}
                             </tr>
                         </thead>
+
                         <tbody>
                             {% for cat in cats %}
                                 <tr>
-                                    <td> <span class="label" style="background-color: {{cat.color}};"><a href="{% url 'fittings:view_category' cat.pk %}" class="nostyle">{{cat.name}}</a></span> </td>
+                                    <td>
+                                        <span class="badge text-white" style="background-color: {{ cat.color }};">
+                                            <a href="{% url 'fittings:view_category' cat.pk %}" class="nostyle">
+                                                {{cat.name}}
+                                            </a>
+                                        </span>
+                                    </td>
+
                                     <td> {{ cat.doctrines_count }}</td>
+
                                     <td> {{ cat.total_fits }} </td>
+
                                     {% if perms.fittings.manage %}
                                         <td> {{ cat.groups_count }}</td>
+
                                         <td>
-                                            <a href="{% url 'fittings:view_category' cat.pk %}" type="button" class="btn btn-sm btn-primary" data-toggle="tooltip" data-placement="top" title="{% translate 'View Category' %}">
-                                                <span class="fa fas fa-eye"></span>
+                                            <a
+                                                href="{% url 'fittings:view_category' cat.pk %}"
+                                                type="button"
+                                                class="btn btn-sm btn-primary"
+                                                data-bs-tooltip="aa-fittings"
+                                                title="{% translate 'View Category' %}"
+                                            >
+                                                <span class="fa-solid fa-eye"></span>
                                             </a>
-                                            <a href="{% url 'fittings:edit_category' cat.pk %}" type="button" class="btn btn-sm btn-warning" data-toggle="tooltip" data-placement="top" title="{% translate 'Edit Category' %}">
-                                                <span class="fa fas fa-pencil-alt"></span>
+
+                                            <a
+                                                href="{% url 'fittings:edit_category' cat.pk %}"
+                                                type="button" class="btn btn-sm btn-warning"
+                                                data-bs-tooltip="aa-fittings"
+                                                title="{% translate 'Edit Category' %}"
+                                            >
+                                                <span class="fa-solid fa-pencil-alt"></span>
                                             </a>
-                                            <a href="{% url 'fittings:delete_category' cat.pk %}" type="button" class="btn btn-sm btn-danger" data-toggle="tooltip" data-placement="top" title="{% translate 'Delete Category' %}">
-                                                <span class="fa fas fa-times"></span>
+
+                                            <a
+                                                href="{% url 'fittings:delete_category' cat.pk %}"
+                                                type="button"
+                                                class="btn btn-sm btn-danger"
+                                                data-bs-tooltip="aa-fittings"
+                                                title="{% translate 'Delete Category' %}"
+                                            >
+                                                <span class="fa-solid fa-times"></span>
                                             </a>
                                         </td>
                                     {% endif %}
@@ -77,7 +103,7 @@
                     </table>
 
                     <h6>
-                        <i class="fas fa-exclamation-triangle"></i>
+                        <i class="fa-solid fa-exclamation-triangle"></i>
                         <i>{% translate "*Note: Fitting counts may be inaccurate as fittings marked independently of doctrines may be counted more than once." %}</i>
                     </h6>
                 {% endif %}
@@ -87,7 +113,7 @@
 {% endblock %}
 
 {% block extra_javascript %}
-    {% include 'bundles/datatables-js.html' %}
+    {% include 'bundles/datatables-js-bs5.html' %}
 
     {% get_datatables_language_static LANGUAGE_CODE as DT_LANG_PATH %}
 
@@ -101,7 +127,7 @@
                 });
             {% endif %}
 
-            $('[data-toggle="tooltip"]').tooltip();
+            $('[data-bs-tooltip="aa-fittings"]').tooltip();
         });
     </script>
 {% endblock %}
