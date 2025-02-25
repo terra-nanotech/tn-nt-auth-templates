@@ -35,6 +35,12 @@ Section Order:
 ### Security
 -->
 
+## [3.7.6] - 2025-02-25
+
+### Fixed
+
+- Progressbar keyframes
+
 ## [3.7.5] - 2025-02-25
 
 ### Changed
