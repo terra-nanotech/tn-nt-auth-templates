@@ -35,6 +35,10 @@ Section Order:
 ### Security
 -->
 
+### Fixed
+
+- Button size in fittings menu
+
 ### Removed
 
 - Border from navbar menu items
