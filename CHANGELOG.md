@@ -35,6 +35,10 @@ Section Order:
 ### Security
 -->
 
+### Removed
+
+- Border from navbar menu items
+
 ## [3.7.6] - 2025-02-25
 
 ### Fixed
