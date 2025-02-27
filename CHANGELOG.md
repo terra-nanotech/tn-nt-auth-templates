@@ -35,6 +35,10 @@ Section Order:
 ### Security
 -->
 
+### Fixed
+
+- Button size in fittings menu
+
 ## [3.7.6] - 2025-02-25
 
 ### Fixed
