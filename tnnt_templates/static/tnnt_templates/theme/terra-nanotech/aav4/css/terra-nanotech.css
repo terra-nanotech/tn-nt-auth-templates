@@ -1,6 +1,5 @@
 /* Bootstrap defaults overrides
 ------------------------------------------------------------------------------------- */
-
 @media all {
     .progress-bar {
         color: rgba(var(--bs-light-rgb), var(--bs-text-opacity)) !important; /* stylelint-disable-line color-function-notation */
@@ -20,27 +19,22 @@
     }
 
     .btn-group-sm > .btn, .btn-sm {
-        --bs-btn-padding-y: 0.25rem;
         --bs-btn-padding-x: 0.5rem;
+        --bs-btn-padding-y: 0.25rem;
     }
 
     .btn-group-lg > .btn, .btn-lg {
-        --bs-btn-padding-y: 0.5rem;
         --bs-btn-padding-x: 1rem;
+        --bs-btn-padding-y: 0.5rem;
     }
 }
 
-/* END Bootstrap defaults overrides
-------------------------------------------------------------------------------------- */
-
-
 /* Bootstrap fixes
 ------------------------------------------------------------------------------------- */
-
 @media all {
     .navbar-brand {
-        padding-left: 0;
         margin-right: var(--bs-navbar-brand-margin-end);
+        padding-left: 0;
     }
 
     @keyframes progress-bar-stripes {
@@ -52,15 +46,22 @@
             background-position: 0 0
         }
     }
+
+    .navbar .nav-link,
+    .navbar.bg-primary .nav-link.active,
+    .navbar.bg-primary .nav-link:active,
+    .navbar.bg-secondary .nav-link:hover {
+        border-left: none !important;
+    }
+
+    .navbar .nav-link,
+    .navbar-brand {
+        border-right: none !important;
+    }
 }
-
-/* END Bootstrap fixes
-------------------------------------------------------------------------------------- */
-
 
 /* Terra Nanotech theme
 ------------------------------------------------------------------------------------- */
-
 @media all {
     html {
         font-family: var(--font-family-default);
@@ -73,11 +74,11 @@
     }
 
     .blur-background {
+        height: 100%;
+        left: 0;
         position: fixed;
         top: 0;
-        left: 0;
         width: 100%;
-        height: 100%;
         z-index: -1;
     }
 
@@ -203,7 +204,6 @@
 
     /* Login page
     --------------------------------------------------------------------------------- */
-
     body:has(div.card-login) {
         backdrop-filter: none;
         height: 100vh;
@@ -226,12 +226,8 @@
         max-width: 100%;
     }
 
-    /* END Login page
-    --------------------------------------------------------------------------------- */
-
     /* Sidebar Menu
     --------------------------------------------------------------------------------- */
-
     #sidebar-menu > li:has(a.nav-link.active),
     #sidebar-menu > li:has(ul.collapse li a.nav-link.active) {
         background-color: var(--background-color-light-transparency);
@@ -240,10 +236,4 @@
     #sidebar-menu > li:has(ul.collapse li a.nav-link.active) > a.nav-link {
         color: var(--bs-navbar-active-color);
     }
-
-    /* END Sidebar Menu
-    --------------------------------------------------------------------------------- */
 }
-
-/* END Terra Nanotech theme
-------------------------------------------------------------------------------------- */
