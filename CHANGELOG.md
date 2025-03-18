@@ -35,6 +35,11 @@ Section Order:
 ### Security
 -->
 
+### Added
+
+- Temporary workaround for OpenGraph tags until the merge request is merged and released
+  ([Alliance Auth/1701](https://gitlab.com/allianceauth/allianceauth/-/merge_requests/1701))
+
 ## [3.7.7] - 2025-02-28
 
 ### Fixed
