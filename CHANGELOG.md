@@ -35,6 +35,14 @@ Section Order:
 ### Security
 -->
 
+### Added
+
+- Site name and URL to OpenGraph tags
+
+### Fixed
+
+- OpenGraph meta tag syntax
+
 ## [3.7.8] - 2025-03-18
 
 ### Added
