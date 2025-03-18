@@ -7,7 +7,8 @@
 
 {% block tb_block %}
     {% translate "Blacklist" as translated_header %}
-    {% include "tnnt_templates/includes/header/page-header.html" with header_text=translated_header %}
+{#    {% include "tnnt_templates/includes/header/page-header.html" with header_text=translated_header %}#}
+    {% include "framework/header/page-header.html" with title=translated_header %}
 
     <div class="tab-pane in active" id="blacklist">
         <div class="panel panel-default clearfix">
