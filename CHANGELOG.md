@@ -35,6 +35,8 @@ Section Order:
 ### Security
 -->
 
+## [3.7.8] - 2025-03-18
+
 ### Added
 
 - Temporary workaround for OpenGraph tags until the merge request is merged and released
