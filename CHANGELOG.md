@@ -35,6 +35,10 @@ Section Order:
 ### Security
 -->
 
+### Removed
+
+- Sidebar menu item left margin
+
 ## [3.7.9] - 2025-03-18
 
 ### Added

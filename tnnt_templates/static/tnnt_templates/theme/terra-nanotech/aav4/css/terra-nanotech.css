@@ -228,6 +228,10 @@
 
     /* Sidebar Menu
     --------------------------------------------------------------------------------- */
+    #sidebar-menu > li {
+        margin-left: 0 !important;
+    }
+
     #sidebar-menu > li:has(a.nav-link.active),
     #sidebar-menu > li:has(ul.collapse li a.nav-link.active) {
         background-color: var(--background-color-light-transparency);
