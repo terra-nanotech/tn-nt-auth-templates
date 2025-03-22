@@ -35,6 +35,10 @@ Section Order:
 ### Security
 -->
 
+### Fixed
+
+- `logo_height` variable name
+
 ## [3.7.9] - 2025-03-18
 
 ### Added
