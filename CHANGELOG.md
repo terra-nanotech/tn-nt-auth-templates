@@ -701,7 +701,7 @@ run it with any version prior!**
 
 ### Changed
 
-- Switched to `setInterval()` to render the Eve time
+- Switched to `setInterval()` to render the EVE time
 
 ## [2.3.2] - 2022-01-22
 
@@ -720,7 +720,7 @@ run it with any version prior!**
 ### Added
 
 - Tests for Python 3.11
-- Seconds to Eve time in header
+- Seconds to EVE time in header
 
 ### Changed
 
@@ -1010,7 +1010,7 @@ run it with any version prior!**
 
 ### Added
 
-- JavaScript to display Eve time in the top menu
+- JavaScript to display EVE time in the top menu
 
 ## [1.5.10] - 2021-05-27
 
@@ -1051,7 +1051,7 @@ run it with any version prior!**
 
 ### Added
 
-- Eve time to top menu bar
+- EVE time to top menu bar
 - Bootstrap JS to Mumble Temp public template
 
 ## [1.5.4] - 2021-04-22

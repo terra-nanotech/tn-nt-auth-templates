@@ -37,7 +37,7 @@ $(document).ready(() => {
 
 
     /**
-     * Render a JS clock for Eve time.
+     * Render a JS clock for EVE time.
      *
      * @param {Element} element The HTML element to display the time
      */
