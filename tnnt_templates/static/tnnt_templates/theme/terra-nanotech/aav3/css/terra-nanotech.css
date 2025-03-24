@@ -415,7 +415,7 @@
     }
 }
 
-/* Eve time in navbar
+/* EVE time in navbar
 ------------------------------------------------------------------------------------- */
 @media all {
     .nav-item-eve-time .eve-time-wrapper {
@@ -926,7 +926,7 @@
     }
 }
 
-/* Eve time in navbar
+/* EVE time in navbar
 ------------------------------------------------------------------------------------- */
 @media all and (min-width: 768px) {
     .nav-item-eve-time .eve-time-wrapper {
