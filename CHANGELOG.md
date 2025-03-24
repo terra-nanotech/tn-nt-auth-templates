@@ -37,6 +37,7 @@ Section Order:
 
 ### Fixed
 
+- Scrollbar positioning in content area
 - `logo_height` variable name
 
 ## [3.7.9] - 2025-03-18
