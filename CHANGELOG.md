@@ -35,6 +35,8 @@ Section Order:
 ### Security
 -->
 
+## [3.7.10] - 2025-03-24
+
 ### Fixed
 
 - Scrollbar positioning in content area
