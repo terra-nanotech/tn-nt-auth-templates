@@ -29,7 +29,8 @@
             }
 
             .nav-padding {
-                padding-top: {% header_padding_size %} !important;
+                margin-top: {% header_padding_size %} !important;
+                max-height: calc(100vh - {% header_padding_size %}) !important;
             }
         </style>
 
