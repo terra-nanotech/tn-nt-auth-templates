@@ -37,6 +37,7 @@ Section Order:
 
 ### Removed
 
+- Workaround for the Bootstrap 5 base template
 - Obsolete settings
 
 ## [3.7.10] - 2025-03-24
