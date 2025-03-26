@@ -26,15 +26,8 @@ class AppSettings:  # pylint: disable=too-few-public-methods
         name="TNNT_TEMPLATE_ENTITY_NAME", default_value="", required_type=str
     )
 
-    TNNT_TEMPLATE_URLS_OWN_WEBSITES = clean_setting(
-        name="TNNT_TEMPLATE_URLS_OWN_WEBSITES", default_value=[]
-    )
-
-    TNNT_TEMPLATE_URLS_OTHER_WEBSITES = clean_setting(
-        name="TNNT_TEMPLATE_URLS_OTHER_WEBSITES", default_value=[]
-    )
-
-    def aagdpr_installed(self) -> bool:
+    @staticmethod
+    def aagdpr_installed() -> bool:
         """
         Check if aagdpr is installed
         """

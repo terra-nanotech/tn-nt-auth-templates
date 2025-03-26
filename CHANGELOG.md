@@ -35,6 +35,10 @@ Section Order:
 ### Security
 -->
 
+### Removed
+
+- Obsolete settings
+
 ## [3.7.10] - 2025-03-24
 
 ### Fixed
