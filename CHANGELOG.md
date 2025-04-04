@@ -35,6 +35,10 @@ Section Order:
 ### Security
 -->
 
+### Changed
+
+- Wording for the redirect message after registration
+
 ### Removed
 
 - Workaround for the Bootstrap 5 base template
