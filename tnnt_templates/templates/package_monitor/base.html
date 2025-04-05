@@ -12,7 +12,8 @@
             class="nav-link{% if filter != 'current' and filter != 'outdated' and filter != 'unknown' %} active{% endif %}"
             href="{% url 'package_monitor:index' %}?filter=all"
         >
-            {% translate "All" %} ({{ all_count|default:"-" }})
+            {% translate "All Packages" %}
+            &nbsp;<span class="badge text-bg-secondary">{{ all_count }}</span>
         </a>
     </li>
 
@@ -21,7 +22,8 @@
             class="nav-link{% if filter == 'current' %} active{% endif %}"
             href="{% url 'package_monitor:index' %}?filter=current"
         >
-            {% translate "Current" %} ({{ current_count|default:"-" }})
+            {% translate "Current" %}
+            &nbsp;<span class="badge text-bg-secondary">{{ current_count }}</span>
         </a>
     </li>
 
@@ -30,7 +32,8 @@
             class="nav-link{% if filter == 'outdated' %} active{% endif %}"
             href="{% url 'package_monitor:index' %}?filter=outdated"
         >
-            {% translate "Update available" %} ({{ outdated_count|default:"-" }})
+            {% translate "Update Available" %}
+            {% if outdated_count > 0 %}&nbsp;<span class="badge text-bg-danger">{{ outdated_count }}</span>{% endif%}
         </a>
     </li>
 
@@ -38,9 +41,11 @@
         <a
             class="nav-link dotted_underline{% if filter == 'unknown' %} active{% endif %}"
             href="{% url 'package_monitor:index' %}?filter=unknown"
-            title="{% translate 'No information about new release available on PyPI' %}"
+            title="{% translate 'No information about releases available on PyPI' %}"
+            data-bs-tooltip="aa-package-monitor"
         >
-            {% translate 'No Info' %} ({{ unknown_count|default:"-" }})
+            {% translate 'Unknown packages' %}
+            {% if outdated_count > 0 %}&nbsp;<span class="badge text-bg-secondary">{{ unknown_count }}</span>{% endif%}
         </a>
     </li>
 {% endblock %}
@@ -56,10 +61,11 @@
     <li role="presentation" class="nav-item">
         <button
             type="button"
-            class="btn btn-success mt-2"
+            class="btn btn-sm btn-success btn-refresh-package-data mt-2"
             data-bs-toggle="modal"
             data-bs-target="#modalRefreshingDistributions"
             title="{% translate 'Refresh data now' %}"
+            data-bs-tooltip="aa-package-monitor"
         >
             <i class="fa-solid fa-sync"></i>
         </button>
@@ -67,7 +73,7 @@
 {% endblock %}
 
 {% block content %}
-{#    {% include "framework/header/page-header.html" with title=page_title %}#}
-
-    {% block details %}{% endblock %}
-{% endblock %}
+    <div class="aa-package-monitor">
+        {% block aa_package_monitor %}{% endblock aa_package_monitor %}
+    </div>
+{% endblock content %}
