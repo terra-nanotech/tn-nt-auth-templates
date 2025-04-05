@@ -68,7 +68,7 @@ class TerraNanotechThemeHook(ThemeHook):
             html_tags={"data-theme": "terra-nanotech"},
             css=css_static_files,
             js=js_static_files,
-            header_padding="3.6em",
+            header_padding="3.5em",
         )
 
 

@@ -60,6 +60,7 @@ Section Order:
 
 ### Fixed
 
+- Top navigation inner padding
 - OpenGraph meta tag syntax
 
 ## [3.7.8] - 2025-03-18
