@@ -37,6 +37,7 @@ Section Order:
 
 ### Changed
 
+- Templates for `aa-package-monitor` updated to match v2.1.0
 - Wording for the redirect message after registration
 
 ### Removed
