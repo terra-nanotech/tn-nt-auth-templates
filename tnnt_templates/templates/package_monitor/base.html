@@ -50,6 +50,12 @@
     </li>
 {% endblock %}
 
+{% block header_nav_user_character_control %}
+    {% comment %}
+        Leave empty to remove user control nav items for this app
+    {% endcomment %}
+{% endblock %}
+
 {% block header_nav_collapse_right %}
     <li role="presentation" class="nav-item">
         <span class="nav-link">
@@ -61,7 +67,7 @@
     <li role="presentation" class="nav-item">
         <button
             type="button"
-            class="btn btn-sm btn-success btn-refresh-package-data mt-2"
+            class="btn btn-sm btn-success btn-refresh-package-data mt-1"
             data-bs-toggle="modal"
             data-bs-target="#modalRefreshingDistributions"
             title="{% translate 'Refresh data now' %}"

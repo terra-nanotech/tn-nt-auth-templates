@@ -59,7 +59,7 @@ class TerraNanotechThemeHookTests(TestCase):
         :rtype:
         """
 
-        self.assertEqual(first=self.theme_hook.header_padding, second="3.6em")
+        self.assertEqual(first=self.theme_hook.header_padding, second="3.5em")
 
     @patch("tnnt_templates.theme.terra_nanotech.auth_hooks.TerraNanotechThemeHook")
     def test_should_register_theme_hook(self, mock_theme_hook):

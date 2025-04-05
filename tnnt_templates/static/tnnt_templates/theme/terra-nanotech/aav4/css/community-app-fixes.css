@@ -216,15 +216,3 @@
 
 /* END App: Allianceauth Corpstats 2
 ------------------------------------------------------------------------------------- */
-
-/* App: AA Package Monitor
-------------------------------------------------------------------------------------- */
-
-@media all {
-    html[data-theme="terra-nanotech"] li.nav-item:has(button.btn-refresh-package-data) {
-        padding-top: 0.25rem;
-    }
-}
-
-/* END App: AA Package Monitor
-------------------------------------------------------------------------------------- */
