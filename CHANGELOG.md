@@ -37,6 +37,9 @@ Section Order:
 
 ### Changed
 
+- Some CSS tweaks
+  - `card-title` now enforces a `margin-bottom: 0;`
+  - Fixes to various form elements margins
 - Templates for `aa-package-monitor` updated to match v2.1.0
 - Wording for the redirect message after registration
 
