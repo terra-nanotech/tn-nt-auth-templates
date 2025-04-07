@@ -104,7 +104,7 @@
 
     .template-light-mode .aa-memberaudit .cards_container .card,
     .template-dark-mode .aa-memberaudit .cards_container .card {
-        background-color: rgba(100 100 100 / 50%);
+        background-color: rgb(100 100 100 / 50%);
     }
 
     .aa-memberaudit .cards_container {
@@ -148,7 +148,7 @@
 
     .aa-sovtimer .aa-sovtimer-timer-elapsed {
         color: rgb(253 126 20);
-        text-shadow: 1px 1px 1px rgba(255 0 0 / 30%);
+        text-shadow: 1px 1px 1px rgb(255 0 0 / 30%);
     }
 }
 
@@ -268,24 +268,24 @@
     .aa-forum .aa-forum-topic-row .aa-forum-topic:hover,
     .aa-forum .panel-aa-forum-category .aa-forum-board:hover,
     .aa-forum .panel-aa-forum-personal-messages-item:hover {
-        background-color: rgba(73 81 90 / 65%);
+        background-color: rgb(73 81 90 / 65%);
     }
 
     .aa-forum .aa-forum-topic-locked .aa-forum-topic:hover {
-        background-color: rgba(185 199 219 / 25%);
+        background-color: rgb(185 199 219 / 25%);
     }
 
     .aa-forum .aa-forum-topic-sticky .aa-forum-topic:hover {
-        background-color: rgba(255 220 104 / 25%);
+        background-color: rgb(255 220 104 / 25%);
     }
 
     .aa-forum .panel-aa-forum-personal-messages-item-header {
-        border-bottom: 1px solid rgba(200 200 200 / 25%);
+        border-bottom: 1px solid rgb(200 200 200 / 25%);
     }
 
     .aa-forum .aa-forum-message-body,
     .aa-forum .aa-forum-message-body-author-signature {
-        border-top: 1px solid rgba(200 200 200 / 25%);
+        border-top: 1px solid rgb(200 200 200 / 25%);
     }
 
     .aa-forum .label-aa-forum-topic-new-message {
@@ -363,13 +363,13 @@
 ------------------------------------------------------------------------------------- */
 @media all {
     .aa-intel-tool .dataTable tr.even {
-        background-color: rgba(236 240 241 / 5%);
+        background-color: rgb(236 240 241 / 5%);
     }
 
     .aa-intel-tool .dataTable tbody tr.aa-intel-highlight,
     .aa-intel-tool .dataTable tbody tr.aa-intel-highlight-sticky,
     .aa-intel-tool .dataTable tbody tr:hover {
-        background-color: rgba(236 240 241 / 15%);
+        background-color: rgb(236 240 241 / 15%);
     }
 
     .aa-intel-tool .aa-intel-section-header {

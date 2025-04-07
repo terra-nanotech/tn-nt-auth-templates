@@ -9,7 +9,7 @@
     --background-body-default: url("https://web-cdn.eveonline.com/aws/eveonline/sso/background.jpg") no-repeat center center fixed;
     --background-color-default: rgb(39 43 48);
     --font-color-default: rgb(200 200 200);
-    --background-color-light-transparency: rgba(58 63 68 / 50%);
+    --background-color-light-transparency: rgb(58 63 68 / 50%);
     --font-family-card-title: georgia, times, serif;
     --font-family-code: "Fira Code", monospace;
     --font-family-default: roboto, "Helvetica Neue", sans-serif;
