@@ -35,6 +35,10 @@ Section Order:
 ### Security
 -->
 
+### Fixed
+
+- Stylelint issues (Expected "rgba" to be "rgb" (color-function-alias-notation))
+
 ### Changed
 
 - Some CSS tweaks
