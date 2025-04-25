@@ -41,6 +41,7 @@ Section Order:
 
 ### Changed
 
+- `fittings` templates updated
 - Some CSS tweaks
   - `card-title` now enforces a `margin-bottom: 0;`
   - Fixes to various form elements margins
