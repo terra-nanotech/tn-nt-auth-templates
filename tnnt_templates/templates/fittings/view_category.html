@@ -51,7 +51,7 @@
                     <strong>{% translate "Name" %}: </strong>
 
                     <span class="badge text-white" style="background-color: {{ cat.color }};">
-                        {{cat.name}}
+                        {{ cat.name }}
                     </span>
                 </div>
 
@@ -61,52 +61,53 @@
 
                         {% if cat.groups.all|length != 0 %}
                             {% for group in cat.groups.all %}
-                                <span class="badge bg-primary">{{group.name}}</span>
+                                <span class="badge text-bg-primary">{{ group.name }}</span>
                             {% endfor %}
                         {% else %}
-                            <span class="badge bg-warning">{% translate "Category is public" %}</span>
+                            <span class="badge text-bg-warning">{% translate "Category is public" %}</span>
                         {% endif %}
                     </div>
                 {% endif %}
-        </div>
-
-        <ul class="nav nav-tabs" style="margin-bottom: 10px;">
-            <li class="nav-item" role="presentation">
-                <a
-                    class="nav-link active"
-                    id="doctrines"
-                    data-bs-toggle="tab"
-                    href="#tab-doctrines"
-                    role="tab"
-                    aria-controls="tab-doctrines"
-                    aria-selected="true"
-                >
-                    {% translate "Doctrines" %}
-                </a>
-            </li>
-
-            <li class="nav-item" role="presentation">
-                <a
-                    class="nav-link"
-                    id="fittings"
-                    data-bs-toggle="tab"
-                    href="#tab-fittings"
-                    role="tab"
-                    aria-controls="tab-fittings"
-                    aria-selected="true"
-                >
-                    {% translate "Fittings" %}
-                </a>
-            </li>
-        </ul>
-
-        <div class="tab-content">
-            <div id="tab-doctrines" class="tab-pane fade show active card card-default border-0" role="tabpanel" aria-labelledby="tab-doctrines">
-                {% include "fittings/partials/doctrine-list-table.html" %}
             </div>
 
-            <div id="tab-fittings" class="tab-pane fade card card-default border-0" role="tabpanel" aria-labelledby="tab-fittings">
-                {% include "fittings/partials/fittings-list-table.html" %}
+            <ul class="nav nav-tabs mb-3">
+                <li class="nav-item" role="presentation">
+                    <a
+                        class="nav-link active"
+                        id="doctrines"
+                        data-bs-toggle="tab"
+                        href="#tab-doctrines"
+                        role="tab"
+                        aria-controls="tab-doctrines"
+                        aria-selected="true"
+                    >
+                        {% translate "Doctrines" %}
+                    </a>
+                </li>
+
+                <li class="nav-item" role="presentation">
+                    <a
+                        class="nav-link"
+                        id="fittings"
+                        data-bs-toggle="tab"
+                        href="#tab-fittings"
+                        role="tab"
+                        aria-controls="tab-fittings"
+                        aria-selected="true"
+                    >
+                        {% translate "Fittings" %}
+                    </a>
+                </li>
+            </ul>
+
+            <div class="tab-content">
+                <div id="tab-doctrines" class="tab-pane fade show active card card-default border-0" role="tabpanel" aria-labelledby="tab-doctrines">
+                    {% include "fittings/partials/doctrine-list-table.html" %}
+                </div>
+
+                <div id="tab-fittings" class="tab-pane fade card card-default border-0" role="tabpanel" aria-labelledby="tab-fittings">
+                    {% include "fittings/partials/fittings-list-table.html" %}
+                </div>
             </div>
         </div>
     </div>
