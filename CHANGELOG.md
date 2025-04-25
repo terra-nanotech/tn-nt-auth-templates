@@ -49,6 +49,7 @@ Section Order:
 
 ### Removed
 
+- `corptools` template overrides, as they are now provided by the app
 - Workaround for the Bootstrap 5 base template
 - Obsolete settings
 
