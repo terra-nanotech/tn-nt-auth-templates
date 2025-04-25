@@ -28,18 +28,6 @@ ______________________________________________________________________
 
 ## Important Information<a name="important-information"></a>
 
-> [!IMPORTANT]
->
-> **This template override needs Alliance Auth v4!**
->
-> Please make sure to update your Alliance Auth instance before
-> you install this version, otherwise an update to Alliance Auth will
-> be pulled in unsupervised.
->
-> **This template override is not compatible with Alliance Auth v3.x!**
->
-> For versions compatible with Alliance Auth v3.x, see the [Releases](https://github.com/terra-nanotech/tn-nt-auth-templates/releases) before v3.0.0.
-
 > [!WARNING]
 >
 > These template overrides are specially tailored for the corporation Terra Nanotech.
@@ -47,7 +35,7 @@ ______________________________________________________________________
 > might entail changes to templates that also change the behavior in a way we like it
 > to be changed.
 >
-> If you install these template overrides, you need to be aware that there will be
+> If you install these template overrides, you need to be aware there will be
 > no support for any kind of issues you might encounter, and you have to figure it out
 > on your own.
 
@@ -114,7 +102,6 @@ entry, like this:
 # GDPR Compliance
 INSTALLED_APPS.insert(0, "aagdpr")
 AVOID_CDN = True
-
 
 # TN-NT Auth Templates
 INSTALLED_APPS.insert(0, "tnnt_templates")
