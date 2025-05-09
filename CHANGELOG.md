@@ -35,6 +35,10 @@ Section Order:
 ### Security
 -->
 
+### Added
+
+- Copy to clipboard button to highlighted code blocks
+
 ### Fixed
 
 - Code styling

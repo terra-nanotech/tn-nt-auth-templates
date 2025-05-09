@@ -1,5 +1,7 @@
+/* global CopyButtonPlugin */
+
 // Load the required libraries
-import hljs from '../libs/highlight-js/11.10.0/es/highlight.min.js';
+import hljs from '../libs/highlightjs/11.10.0/es/highlight.min.js';
 
 $(document).ready(() => {
     'use strict';
@@ -148,6 +150,9 @@ $(document).ready(() => {
 
         // Highlight code blocks with highlight.js
         if (typeof hljs !== 'undefined' && typeof hljs.highlightElement === 'function') {
+            // Add the copy button plugin to highlight.js
+            hljs.addPlugin(new CopyButtonPlugin());
+
             // Get all code blocks
             const codeBlocks = document.querySelectorAll('pre code');
 
