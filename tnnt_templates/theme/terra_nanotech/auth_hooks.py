@@ -35,7 +35,10 @@ class TerraNanotechThemeHook(ThemeHook):
             ),
             get_theme_hook_static(static_file="libs/fira-code/6.2.0/fira_code.min.css"),
             get_theme_hook_static(
-                static_file="libs/highlight-js/11.10.0/styles/github-dark.min.css"
+                static_file="libs/highlightjs/11.10.0/styles/github-dark.min.css"
+            ),
+            get_theme_hook_static(
+                static_file="libs/highlightjs-copy/1.0.6/highlightjs-copy.min.css"
             ),
             get_theme_hook_static(
                 static_file="theme/terra-nanotech/aav4/css/terra-nanotech.min.css",
@@ -53,6 +56,9 @@ class TerraNanotechThemeHook(ThemeHook):
             ),
             get_theme_hook_static(
                 static_file="theme/terra-nanotech/aav4/libs/bootstrap/v5.3.3/javascript/bootstrap.min.js"
+            ),
+            get_theme_hook_static(
+                static_file="libs/highlightjs-copy/1.0.6/highlightjs-copy.min.js"
             ),
             get_theme_hook_static(
                 static_file="javascript/terra-nanotech.min.js",
