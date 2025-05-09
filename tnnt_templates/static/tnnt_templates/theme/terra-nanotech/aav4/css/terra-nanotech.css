@@ -148,7 +148,7 @@
     }
 
     code {
-        border-radius: var(--bs-border-radius);
+        border-radius: var(--bs-border-radius) !important;
         font-family: var(--font-family-code);
         padding: 0.25rem !important;
     }

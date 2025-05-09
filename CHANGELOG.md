@@ -37,6 +37,7 @@ Section Order:
 
 ### Fixed
 
+- Code styling
 - Stylelint issues (Expected "rgba" to be "rgb" (color-function-alias-notation))
 
 ### Changed

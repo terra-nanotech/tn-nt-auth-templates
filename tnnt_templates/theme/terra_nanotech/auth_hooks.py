@@ -35,7 +35,7 @@ class TerraNanotechThemeHook(ThemeHook):
             ),
             get_theme_hook_static(static_file="libs/fira-code/6.2.0/fira_code.min.css"),
             get_theme_hook_static(
-                static_file="libs/highlight-js/11.10.0/styles/default.min.css"
+                static_file="libs/highlight-js/11.10.0/styles/github-dark.min.css"
             ),
             get_theme_hook_static(
                 static_file="theme/terra-nanotech/aav4/css/terra-nanotech.min.css",

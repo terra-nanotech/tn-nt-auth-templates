@@ -22,6 +22,7 @@
     --------------------------------------------------------------------------------- */
 
     --bs-body-color: var(--font-color-default);
+    --bs-code-color: var(--font-color-default);
     --bs-font-monospace: var(--font-family-code);
     --bs-font-sans-serif: var(--font-family-default);
 
