@@ -35,6 +35,8 @@ Section Order:
 ### Security
 -->
 
+## [3.8.0] - 2025-05-24
+
 ### Added
 
 - Copy to clipboard button to highlighted code blocks
@@ -52,6 +54,8 @@ Section Order:
   - Fixes to various form elements margins
 - Templates for `aa-package-monitor` updated to match v2.1.0
 - Wording for the redirect message after registration
+- Dependencies
+  - `allianceauth>=4.7.0`
 
 ### Removed
 
