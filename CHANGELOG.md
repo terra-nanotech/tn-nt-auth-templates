@@ -35,6 +35,10 @@ Section Order:
 ### Security
 -->
 
+### Added
+
+- Template for ESI token selection
+
 ## [3.8.0] - 2025-05-24
 
 ### Added
