@@ -39,6 +39,10 @@ Section Order:
 
 - Template for ESI token selection
 
+### Fixed
+
+- HighlightJS for BS3 template fallback
+
 ### Changed
 
 - Package Monitor templates improved
