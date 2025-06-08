@@ -27,27 +27,31 @@
         </a>
     </li>
 
-    <li role="presentation" class="nav-item">
-        <a
-            class="nav-link{% if filter == 'outdated' %} active{% endif %}"
-            href="{% url 'package_monitor:index' %}?filter=outdated"
-        >
-            {% translate "Update Available" %}
-            {% if outdated_count > 0 %}&nbsp;<span class="badge text-bg-danger">{{ outdated_count }}</span>{% endif%}
-        </a>
-    </li>
+    {% if outdated_count %}
+        <li role="presentation" class="nav-item">
+            <a
+                class="nav-link{% if filter == 'outdated' %} active{% endif %}"
+                href="{% url 'package_monitor:index' %}?filter=outdated"
+            >
+                {% translate "Update Available" %}
+                {% if outdated_count > 0 %}&nbsp;<span class="badge text-bg-danger">{{ outdated_count }}</span>{% endif%}
+            </a>
+        </li>
+    {% endif %}
 
-    <li role="presentation" class="nav-item">
-        <a
-            class="nav-link dotted_underline{% if filter == 'unknown' %} active{% endif %}"
-            href="{% url 'package_monitor:index' %}?filter=unknown"
-            title="{% translate 'No information about releases available on PyPI' %}"
-            data-bs-tooltip="aa-package-monitor"
-        >
-            {% translate 'Unknown packages' %}
-            {% if outdated_count > 0 %}&nbsp;<span class="badge text-bg-secondary">{{ unknown_count }}</span>{% endif%}
-        </a>
-    </li>
+    {% if unknown_count %}
+        <li role="presentation" class="nav-item">
+            <a
+                class="nav-link dotted_underline{% if filter == 'unknown' %} active{% endif %}"
+                href="{% url 'package_monitor:index' %}?filter=unknown"
+                title="{% translate 'No information about releases available on PyPI' %}"
+                data-bs-tooltip="aa-package-monitor"
+            >
+                {% translate 'Unknown packages' %}
+                {% if outdated_count > 0 %}&nbsp;<span class="badge text-bg-secondary">{{ unknown_count }}</span>{% endif%}
+            </a>
+        </li>
+    {% endif %}
 {% endblock %}
 
 {% block header_nav_user_character_control %}
