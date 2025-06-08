@@ -39,6 +39,10 @@ Section Order:
 
 - Template for ESI token selection
 
+### Changed
+
+- Package Monitor templates improved
+
 ## [3.8.0] - 2025-05-24
 
 ### Added
