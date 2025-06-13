@@ -63,12 +63,14 @@
         border-right: none !important;
     }
 
-    .form-control {
+    .form-control,
+    .form-select,
+    .input-group-text {
         padding: .375rem .75rem;
     }
 
     .form-select {
-        padding: .375rem 2.25rem .375rem .75rem;
+        padding-right: 2.25rem;
     }
 }
 
