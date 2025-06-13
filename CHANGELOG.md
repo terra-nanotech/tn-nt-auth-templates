@@ -41,6 +41,7 @@ Section Order:
 
 ### Fixed
 
+- `input-group-text` style
 - HighlightJS for BS3 template fallback
 
 ### Changed
