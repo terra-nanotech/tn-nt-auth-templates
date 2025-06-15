@@ -35,6 +35,8 @@ Section Order:
 ### Security
 -->
 
+## [3.8.2] - 2025-06-16
+
 ### Fixed
 
 - AA Sov Timer contrast changes in v2.4.2
