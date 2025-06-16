@@ -226,7 +226,6 @@
     }
 
     body:has(div.card-login) div.container {
-        backdrop-filter: var(--backdrop-filter-default);
         left: 0;
         margin: 0 !important;
         max-width: 100% !important;
@@ -238,7 +237,12 @@
     }
 
     body:has(div.card-login) div.container > div.row {
+        margin-left: 0;
         max-width: 100%;
+    }
+
+    body:has(div.card-login) div.card-login {
+        backdrop-filter: var(--backdrop-filter-default);
     }
 
     /* Sidebar Menu
