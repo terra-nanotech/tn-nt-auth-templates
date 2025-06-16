@@ -35,6 +35,8 @@ Section Order:
 ### Security
 -->
 
+## [3.8.4] - 2025-06-16
+
 ### Fixed
 
 - Login box appearance on mobile devices
