@@ -35,6 +35,10 @@ Section Order:
 ### Security
 -->
 
+### Added
+
+- Background image matching the EVE Online Legion expansion
+
 ## [3.8.2] - 2025-06-16
 
 ### Fixed

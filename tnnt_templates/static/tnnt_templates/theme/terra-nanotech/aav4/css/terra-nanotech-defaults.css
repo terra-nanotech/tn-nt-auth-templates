@@ -6,7 +6,9 @@
     --------------------------------------------------------------------------------- */
 
     --white: rgb(255 255 255);
-    --background-body-default: url("https://web-cdn.eveonline.com/aws/eveonline/sso/background.jpg") no-repeat center center fixed;
+
+    /* Usually: https://web-cdn.eveonline.com/aws/eveonline/sso/background.jpg */
+    --background-body-default: url("../../../../images/expansion/legion/Sarathiel_MJD_optimized.jpg") no-repeat center center fixed;
     --background-color-default: rgb(39 43 48);
     --font-color-default: rgb(200 200 200);
     --background-color-light-transparency: rgb(58 63 68 / 50%);
