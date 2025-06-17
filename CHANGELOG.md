@@ -35,6 +35,8 @@ Section Order:
 ### Security
 -->
 
+## [3.8.5] - 2025-06-17
+
 ### Changed
 
 - Login page improved by adding the site name and logo to it
