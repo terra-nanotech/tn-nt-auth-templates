@@ -9,7 +9,7 @@
 {% block header_nav_collapse_left %}
     <li role="presentation" class="nav-item">
         <a
-            class="nav-link{% if filter != 'current' and filter != 'outdated' and filter != 'unknown' %} active{% endif %}"
+            class="nav-link{% if not outdated_count or filter != 'current' and filter != 'outdated' and filter != 'unknown' %} active{% endif %}"
             href="{% url 'package_monitor:index' %}?filter=all"
         >
             {% translate "All Packages" %}
@@ -17,17 +17,17 @@
         </a>
     </li>
 
-    <li role="presentation" class="nav-item">
-        <a
-            class="nav-link{% if filter == 'current' %} active{% endif %}"
-            href="{% url 'package_monitor:index' %}?filter=current"
-        >
-            {% translate "Current" %}
-            &nbsp;<span class="badge text-bg-secondary">{{ current_count }}</span>
-        </a>
-    </li>
-
     {% if outdated_count %}
+        <li role="presentation" class="nav-item">
+            <a
+                class="nav-link{% if filter == 'current' %} active{% endif %}"
+                href="{% url 'package_monitor:index' %}?filter=current"
+            >
+                {% translate "Current" %}
+                &nbsp;<span class="badge text-bg-secondary">{{ current_count }}</span>
+            </a>
+        </li>
+
         <li role="presentation" class="nav-item">
             <a
                 class="nav-link{% if filter == 'outdated' %} active{% endif %}"
