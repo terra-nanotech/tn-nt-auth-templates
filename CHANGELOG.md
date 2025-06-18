@@ -37,7 +37,7 @@ Section Order:
 
 ### Changed
 
-- Use `sri_static` where ever possible
+- Use `sri_static` wherever possible
 
 ## [3.8.5] - 2025-06-17
 
