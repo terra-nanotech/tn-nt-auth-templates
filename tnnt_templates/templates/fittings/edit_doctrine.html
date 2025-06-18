@@ -1,13 +1,13 @@
 {% extends 'fittings/base.html' %}
 
-{% load i18n %}
-{% load humanize %}
-{% load filters %}
-{% load static %}
 {% load evelinks %}
+{% load filters %}
+{% load humanize %}
+{% load i18n %}
+{% load sri %}
 
 {% block more_css %}
-    <link rel="stylesheet" href="{% static 'tnnt_templates/libs/multi-select/0.9.12/css/multi-select.min.css' %}">
+    {% sri_static "tnnt_templates/libs/multi-select/0.9.12/css/multi-select.min.css" %}
 
     <style>
         .ms-container {
@@ -96,8 +96,8 @@
 {% endblock %}
 
 {% block extra_javascript %}
-    <script src="{% static 'tnnt_templates/libs/multi-select/0.9.12/js/jquery.multi-select.min.js' %}"></script>
-    <script src="{% static 'tnnt_templates/libs/quicksearch/2.4.0/dist/jquery.quicksearch.min.js' %}"></script>
+    {% sri_static "tnnt_templates/libs/multi-select/0.9.12/js/jquery.multi-select.min.js" %}
+    {% sri_static "tnnt_templates/libs/quicksearch/2.4.0/dist/jquery.quicksearch.min.js" %}
 
     <script>
         const translation_search = '{% translate "Search" %}';

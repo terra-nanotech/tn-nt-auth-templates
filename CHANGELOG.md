@@ -35,6 +35,10 @@ Section Order:
 ### Security
 -->
 
+### Changed
+
+- Use `sri_static` where ever possible
+
 ## [3.8.5] - 2025-06-17
 
 ### Changed
