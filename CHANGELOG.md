@@ -38,6 +38,7 @@ Section Order:
 ### Changed
 
 - Package Monitor templates to show only sections that are necessary
+- Use `sri_static` wherever possible
 
 ## [3.8.5] - 2025-06-17
 
