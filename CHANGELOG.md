@@ -37,6 +37,7 @@ Section Order:
 
 ### Changed
 
+- Icon alignment on login page
 - Use `sri_static` wherever possible
 
 ## [3.8.5] - 2025-06-17
