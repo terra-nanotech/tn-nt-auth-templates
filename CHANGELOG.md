@@ -35,6 +35,8 @@ Section Order:
 ### Security
 -->
 
+## [3.8.6] - 2025-06-27
+
 ### Changed
 
 - Package Monitor templates to show only sections that are necessary
