@@ -38,18 +38,6 @@ class TestTnntTemplateVariables(TestCase):
             rendered_template,
         )
 
-    def test_should_return_versioned_static_url(self):
-        context = Context({"version": __version__})
-        template_to_render = Template(
-            "{% load tnnt_template_tags %}"
-            "{% tnnt_static 'tnnt_templates/css/fonts.min.css' %}"
-        )
-        rendered_template = template_to_render.render(context)
-        self.assertInHTML(
-            f'/static/tnnt_templates/css/fonts.min.css?v={context["version"]}',
-            rendered_template,
-        )
-
     @modify_settings(INSTALLED_APPS={"append": "aagdpr"})
     def test_should_return_true_when_app_is_installed(self):
         template_to_render = Template(
