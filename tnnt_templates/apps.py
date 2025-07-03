@@ -16,3 +16,14 @@ class TnntTemplatesConfig(AppConfig):
     name = "tnnt_templates"
     label = "tnnt_templates"
     verbose_name = f"Alliance Auth Templates v{__version__}"
+
+    def ready(self) -> None:
+        """
+        App is ready
+
+        :return:
+        :rtype:
+        """
+
+        # AA Templates: Terra Nanotech
+        import tnnt_templates.checks  # noqa: F401 # pylint: disable=unused-import, import-outside-toplevel
