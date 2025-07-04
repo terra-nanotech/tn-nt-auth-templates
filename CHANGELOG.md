@@ -35,6 +35,18 @@ Section Order:
 ### Security
 -->
 
+## [3.9.0] - 2025-07-04
+
+### Added
+
+- Django checks for the 2 most important settings
+
+### Changed
+
+- Make use of the new `AaManifestStaticFilesStorage` storage class for static files
+- Minimum dependencies:
+  - `allianceauth>=4.8.0`
+
 ## [3.8.6] - 2025-06-27
 
 ### Changed
