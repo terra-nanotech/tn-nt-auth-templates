@@ -35,6 +35,10 @@ Section Order:
 ### Security
 -->
 
+### Added
+
+- More tests
+
 ## [3.9.0] - 2025-07-04
 
 ### Added
