@@ -13,7 +13,7 @@ from django.test import TestCase, override_settings
 from app_utils.testing import create_fake_user
 
 # AA Templates: Terra Nanotech
-from tnnt_templates.management.commands.tnnt_anonymize_emails import Command
+from tnnt_templates.management.commands.tnnt_anonymize_emails import Command, get_input
 
 
 class TestManagementCommandAnonymizeEmails(TestCase):
@@ -119,3 +119,55 @@ class TestManagementCommandAnonymizeEmails(TestCase):
             text="Are you sure you want to proceed? (yes/no) "
         )
         mock_anonymize.assert_not_called()
+
+    def test_returns_user_input_when_valid_string_is_provided(self):
+        """
+        Test that the get_input function returns the user input when a valid string is provided.
+
+        :return:
+        :rtype:
+        """
+
+        with patch("builtins.input", return_value="yes"):
+            result = get_input("Are you sure?")
+
+            self.assertEqual(result, "yes")
+
+    def test_handles_empty_input_gracefully(self):
+        """
+        Test that the get_input function handles empty input gracefully.
+
+        :return:
+        :rtype:
+        """
+
+        with patch("builtins.input", return_value=""):
+            result = get_input("Enter something:")
+
+            self.assertEqual(result, "")
+
+    def test_handles_whitespace_only_input(self):
+        """
+        Test that the get_input function handles whitespace-only input correctly.
+
+        :return:
+        :rtype:
+        """
+
+        with patch("builtins.input", return_value="   "):
+            result = get_input("Enter something:")
+
+            self.assertEqual(result, "   ")
+
+    def test_handles_special_characters_in_input(self):
+        """
+        Test that the get_input function handles special characters in input correctly.
+
+        :return:
+        :rtype:
+        """
+
+        with patch("builtins.input", return_value="!@#$%^&*()"):
+            result = get_input("Enter special characters:")
+
+            self.assertEqual(result, "!@#$%^&*()")
