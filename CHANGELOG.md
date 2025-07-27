@@ -35,6 +35,10 @@ Section Order:
 ### Security
 -->
 
+### Changed
+
+- `fittings` templates overhaul
+
 ## [3.9.1] - 2025-07-27
 
 ### Added
