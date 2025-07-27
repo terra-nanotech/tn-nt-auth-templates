@@ -35,13 +35,15 @@ Section Order:
 ### Security
 -->
 
-### Fixed
-
-- Size and position of the ESI logo in the ESi Status Dashboard widget
+## [3.9.1] - 2025-07-27
 
 ### Added
 
 - More tests
+
+### Fixed
+
+- Size and position of the ESI logo in the ESi Status Dashboard widget
 
 ## [3.9.0] - 2025-07-04
 
