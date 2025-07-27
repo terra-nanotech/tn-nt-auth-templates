@@ -35,6 +35,10 @@ Section Order:
 ### Security
 -->
 
+### Fixed
+
+- Size and position of the ESI logo in the ESi Status Dashboard widget
+
 ### Added
 
 - More tests
