@@ -35,6 +35,10 @@ Section Order:
 ### Security
 -->
 
+### Added
+
+- Background override for AA SRP bulk action window
+
 ### Changed
 
 - `fittings` templates overhaul
