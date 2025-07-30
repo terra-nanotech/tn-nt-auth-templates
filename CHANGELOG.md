@@ -43,6 +43,12 @@ Section Order:
 
 - `fittings` templates overhaul
 
+### Removed
+
+- Icons and buttons to add character and change main character
+  from the top menu and the dashboard. Adding characters should be done through
+  the Character Audit
+
 ## [3.9.1] - 2025-07-27
 
 ### Added
