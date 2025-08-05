@@ -35,6 +35,8 @@ Section Order:
 ### Security
 -->
 
+## [3.10.0] - 2025-08-05
+
 ### Added
 
 - Background override for AA SRP bulk action window
