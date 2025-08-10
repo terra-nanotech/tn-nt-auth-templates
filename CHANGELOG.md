@@ -35,6 +35,10 @@ Section Order:
 ### Security
 -->
 
+### Added
+
+- Task queue status widget updates via AJAX
+
 ### Fixed
 
 - Some CSS background overrides
