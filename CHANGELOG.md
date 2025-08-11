@@ -35,6 +35,10 @@ Section Order:
 ### Security
 -->
 
+### Fixed
+
+- Some CSS background overrides
+
 ## [3.10.0] - 2025-08-05
 
 ### Added
