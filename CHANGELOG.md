@@ -35,6 +35,8 @@ Section Order:
 ### Security
 -->
 
+## [3.11.1] - 2025-08-14
+
 ### Fixed
 
 - ESI logo height in ESI Status Dashboard widget
