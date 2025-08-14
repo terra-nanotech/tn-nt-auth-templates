@@ -35,6 +35,8 @@ Section Order:
 ### Security
 -->
 
+## [3.11.0] - 2025-08-14
+
 ### Added
 
 - Task queue status widget updates via AJAX
@@ -42,6 +44,11 @@ Section Order:
 ### Fixed
 
 - Some CSS background overrides
+
+### Changed
+
+- Minimum requirements
+  - Alliance Auth >= 4.9.0
 
 ## [3.10.0] - 2025-08-05
 
