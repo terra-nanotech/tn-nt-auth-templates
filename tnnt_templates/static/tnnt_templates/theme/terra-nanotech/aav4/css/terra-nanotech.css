@@ -102,6 +102,18 @@
         backdrop-filter: var(--backdrop-filter-default);
     }
 
+    body > nav.navbar {
+        --background-color-light-transparency: rgb(58 63 68 / 85%);
+
+        background-color: var(--background-color-light-transparency) !important;
+    }
+
+    .dropdown-menu {
+        --background-color-light-transparency: rgb(58 63 68 / 95%);
+
+        background-color: var(--background-color-light-transparency) !important;
+    }
+
     body,
     body > main > div + div,
     .card {

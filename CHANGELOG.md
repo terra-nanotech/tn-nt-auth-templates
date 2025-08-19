@@ -35,6 +35,10 @@ Section Order:
 ### Security
 -->
 
+### Fixed
+
+- Some transparencies
+
 ## [3.11.1] - 2025-08-14
 
 ### Fixed
