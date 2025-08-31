@@ -37,7 +37,6 @@ $(document).ready(() => {
         });
     };
 
-
     /**
      * Render a JS clock for EVE time.
      *
@@ -64,7 +63,6 @@ $(document).ready(() => {
 
         element.html(hour + ':' + minute + ':' + second);
     };
-
 
     /**
      * Check if an element has CSS overflow.
@@ -96,7 +94,6 @@ $(document).ready(() => {
         };
     };
 
-
     /**
      * Toggle overflow classes on an element.
      * Adds the class `overflowing` if the element has overflow,
@@ -106,24 +103,48 @@ $(document).ready(() => {
      * @param {jQuery|Element} element The element to check
      */
     const toggleOverflowClasses = (element) => {
-        if (element.length > 0) {
-            // Check if the element has overflow
-            const {
-                overflow, horizontal, vertical
-            } = elementHasOverflow(element);
+        if (element.length === 0) {
+            return;
+        }
 
-            if (overflow) {
-                // Add the overflowing class
-                element.addClass(
-                    `overflowing${vertical ? ' overflowing-vertically' : ''}${horizontal ? ' overflow-horizontally' : ''}`
-                );
-            } else {
-                // Remove the overflowing class
+        const currentClasses = element.attr('class') || '';
+        const hasOverflowingClass = currentClasses.includes('overflowing');
+
+        // Check if the element has overflow
+        const {
+            overflow, horizontal, vertical
+        } = elementHasOverflow(element);
+
+        // Only modify classes if the state has actually changed
+        if (overflow) {
+            const newClasses = ['overflowing'];
+
+            if (vertical) {
+                newClasses.push('overflowing-vertically');
+            }
+
+            if (horizontal) {
+                newClasses.push('overflow-horizontally');
+            }
+
+            const currentOverflowClasses = currentClasses.match(/\b(overflowing(?:-vertically)?|overflow-horizontally)\b/g) || [];
+            const newClassesSet = new Set(newClasses);
+            const currentClassesSet = new Set(currentOverflowClasses);
+
+            if (
+                !newClasses.every((cls) => currentClassesSet.has(cls))
+                || !currentOverflowClasses.every((cls) => newClassesSet.has(cls)) // jshint ignore:line
+            ) {
+                // Remove existing overflow classes and add the new ones
+                element.removeClass('overflowing overflowing-vertically overflow-horizontally');
+                element.addClass(newClasses.join(' '));
+            }
+        } else {
+            if (hasOverflowingClass) {
                 element.removeClass('overflowing overflowing-vertically overflow-horizontally');
             }
         }
     };
-
 
     /**
      * Inject a blurred background to the body.
@@ -132,14 +153,12 @@ $(document).ready(() => {
         $('<div class="blur-background"></div>').prependTo('body');
     };
 
-
     /**
      * Functions that need to be executed on successful ajax events.
      */
     $(document).ajaxSuccess(() => {
         externalLinks();
     });
-
 
     /**
      * Functions that need to be executed when the page is loaded.
@@ -159,29 +178,15 @@ $(document).ready(() => {
             // Add the copy button plugin to highlight.js
             hljs.addPlugin(new CopyButtonPlugin());
 
-            // Get all code blocks
-            const codeBlocks = document.querySelectorAll('pre code');
+            // Get all code blocks and highlight them
+            document.querySelectorAll('pre code[class*="language-"]').forEach((block) => {
+                const match = block.className.match(/language-(\w+)/);
+                const language = match ? match[1] : null;
 
-            // Check if there are code blocks
-            if (codeBlocks.length > 0) {
-                // Regex to split the language class
-                const regexSplit = /^language-/;
-
-                // Loop through all code blocks
-                codeBlocks.forEach((block) => {
-                    // Get the language of the code block
-                    const language = block.className.split(' ')
-                        .find(
-                            (elementClass) => regexSplit.test(elementClass)
-                        ).split('-')[1];
-
-                    // Check if the language is found
-                    if (language) {
-                        // Highlight the code block
-                        hljs.highlightElement(block, {language: language});
-                    }
-                });
-            }
+                if (language) {
+                    hljs.highlightElement(block, {language: language});
+                }
+            });
         }
 
         /**
@@ -198,14 +203,21 @@ $(document).ready(() => {
 
             toggleOverflowClasses(element);
 
-            const observer = new MutationObserver(() => {
+            // Use ResizeObserver for immediate size change detection
+            const resizeObserver = new ResizeObserver(() => { // jshint ignore:line
+                toggleOverflowClasses(element);
+            });
+            resizeObserver.observe(element[0]);
+
+            // Optimized MutationObserver for content changes
+            const mutationObserver = new MutationObserver(() => {
                 toggleOverflowClasses(element);
             });
 
-            observer.observe(element[0], {
+            mutationObserver.observe(element[0], {
                 childList: true,
                 subtree: true,
-                attributes: true
+                characterData: true
             });
         };
 
