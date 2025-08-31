@@ -219,8 +219,7 @@
 
     .overflowing,
     .overflowing-vertically,
-    .overflow-horizontally,
-    *:not(.overflowing, .overflowing-vertically, .overflow-horizontally) {
+    .overflow-horizontally {
         transition: all 0.1s ease-in-out;
     }
 
