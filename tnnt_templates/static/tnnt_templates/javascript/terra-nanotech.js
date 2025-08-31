@@ -205,7 +205,10 @@ $(document).ready(() => {
 
             // Use ResizeObserver for immediate size change detection
             const resizeObserver = new ResizeObserver(() => { // jshint ignore:line
-                toggleOverflowClasses(element);
+                // Add a small delay to allow for smoother transitions
+                requestAnimationFrame(() => {
+                    toggleOverflowClasses(element);
+                });
             });
             resizeObserver.observe(element[0]);
 

@@ -217,6 +217,13 @@
         padding-bottom: 0.5rem !important;
     }
 
+    .overflowing,
+    .overflowing-vertically,
+    .overflow-horizontally,
+    *:not(.overflowing, .overflowing-vertically, .overflow-horizontally) {
+        transition: all 0.1s ease-in-out;
+    }
+
     /* Character panel: "Add Character" button */
     #aa-dashboard-panel-characters a.btn[href^="/account/characters/add/"] {
         margin-left: 0 !important;
@@ -270,5 +277,9 @@
 
     #sidebar-menu > li:has(ul.collapse li a.nav-link.active) > a.nav-link {
         color: var(--bs-navbar-active-color);
+    }
+
+    #sidebar-menu li:has(span.badge) > a[data-bs-toggle="collapse"] {
+        max-width: calc(100% - 111px);
     }
 }
