@@ -441,3 +441,18 @@
 
 /* END App: AA SRP
 ------------------------------------------------------------------------------------- */
+
+/* Highlight.js fixes
+------------------------------------------------------------------------------------- */
+
+@media all {
+    .hljs-copy-container {
+        top: 0.75rem;
+        right: 0.75rem;
+    }
+
+    .hljs-copy-button:not([data-copied="true"])::before {
+        width: 1.25rem;
+        height: 1.25rem;
+    }
+}
