@@ -37,6 +37,7 @@ Section Order:
 
 ### Added
 
+- Overflow detection and monitoring
 - Border radius to active menu items
 
 ### Fixed
