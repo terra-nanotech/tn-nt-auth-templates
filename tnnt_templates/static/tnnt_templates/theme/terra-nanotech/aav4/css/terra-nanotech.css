@@ -265,6 +265,7 @@
     #sidebar-menu > li:has(a.nav-link.active),
     #sidebar-menu > li:has(ul.collapse li a.nav-link.active) {
         background-color: var(--background-color-light-transparency);
+        border-radius: var(--bs-border-radius);
     }
 
     #sidebar-menu > li:has(ul.collapse li a.nav-link.active) > a.nav-link {

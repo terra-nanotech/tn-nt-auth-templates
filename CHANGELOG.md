@@ -35,6 +35,10 @@ Section Order:
 ### Security
 -->
 
+### Added
+
+- Border radius to active menu items
+
 ### Fixed
 
 - Some transparencies
