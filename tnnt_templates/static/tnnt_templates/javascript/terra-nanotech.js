@@ -98,11 +98,14 @@ $(document).ready(() => {
 
 
     /**
-     * Add classes to elements that have CSS overflow.
+     * Toggle overflow classes on an element.
+     * Adds the class `overflowing` if the element has overflow,
+     * `overflowing-vertically` if it has vertical overflow,
+     * and `overflow-horizontally` if it has horizontal overflow.
      *
-     * @param {Element} element The element to check
+     * @param {jQuery|Element} element The element to check
      */
-    const addOverflowClasses = (element) => {
+    const toggleOverflowClasses = (element) => {
         if (element.length > 0) {
             // Check if the element has overflow
             const {
@@ -114,6 +117,9 @@ $(document).ready(() => {
                 element.addClass(
                     `overflowing${vertical ? ' overflowing-vertically' : ''}${horizontal ? ' overflow-horizontally' : ''}`
                 );
+            } else {
+                // Remove the overflowing class
+                element.removeClass('overflowing overflowing-vertically overflow-horizontally');
             }
         }
     };
@@ -178,15 +184,36 @@ $(document).ready(() => {
             }
         }
 
-        // Add overflowing CSS classes to the Characters panel on the dashboard.
-        addOverflowClasses(
-            $('#aa-dashboard-panel-characters div.card-body > div:nth-child(2) > div')
-        );
+        /**
+         * Set up overflow detection and monitoring for an element
+         *
+         * @param {string} selector CSS selector for the element
+         */
+        const setupOverflowMonitoring = (selector) => {
+            const element = $(selector);
 
-        // Add overflowing CSS classes to the Membership panel on the dashboard.
-        addOverflowClasses(
-            $('#aa-dashboard-panel-membership div.card-body > div:nth-child(2) > div')
-        );
+            if (element.length === 0) {
+                return;
+            }
+
+            toggleOverflowClasses(element);
+
+            const observer = new MutationObserver(() => {
+                toggleOverflowClasses(element);
+            });
+
+            observer.observe(element[0], {
+                childList: true,
+                subtree: true,
+                attributes: true
+            });
+        };
+
+        [
+            '#aa-dashboard-panel-characters div.card-body > div:nth-child(2) > div',
+            '#aa-dashboard-panel-membership div.card-body > div:nth-child(2) > div',
+            'ul#sidebar-menu'
+        ].forEach(setupOverflowMonitoring);
 
         console.log('Terra Nanotech JS: Loaded');
     })();
