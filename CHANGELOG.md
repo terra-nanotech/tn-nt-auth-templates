@@ -37,6 +37,7 @@ Section Order:
 
 ### Added
 
+- Bootstrap tooltips to `package_monitor` templates
 - Transition animation to overflow changes
 - Overflow detection and monitoring
 - Border radius to active menu items
