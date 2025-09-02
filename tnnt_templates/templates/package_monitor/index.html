@@ -7,11 +7,11 @@
 
 {% block aa_package_monitor %}
     <!-- Modal for Refreshing Distributions -->
-    <div class="modal fade" id="modalRefreshingDistributions" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal fade" id="modalRefreshingDistributions" tabindex="-1" role="dialog" aria-labelledby="modalRefreshingDistributionsLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <div class="modal-title fs-5">
+                    <div class="modal-title fs-5" id="modalRefreshingDistributionsLabel">
                         {% translate "Refreshing distributions" %}
                     </div>
 
@@ -175,9 +175,7 @@
 
             clipboard.on('success', (e) => {
                 e.clearSelection();
-            });
-
-            clipboard.on('error', (e) => {
+            }).on('error', (e) => {
                 console.error('Action:', e.action);
                 console.error('Trigger:', e.trigger);
             });
@@ -229,9 +227,22 @@
                 rowCallback: (row, data, index) => {
                     if (data['is_outdated']) {
                         $(row).find('td:eq(1)').addClass('table-warning')
-                        $(row).find('td:eq(2)').addClass('table-warning')
-                        $(row).find('td:eq(2)').css('font-weight', 'bold')
+                        $(row).find('td:eq(2)').addClass('table-warning fw-bold')
+                        {#$(row).find('td:eq(2)').css('font-weight', 'bold')#}
                     }
+                },
+                initComplete: () => {
+                    // Convert title attributes to Bootstrap tooltips
+                    document.querySelectorAll('#tab_package_list [title]')
+                        .forEach((el) => {
+                            el.setAttribute('data-bs-tooltip', 'aa-package-monitor');
+                        });
+
+                    // Enable all tooltips for this package
+                    document.querySelectorAll(`[data-bs-tooltip="aa-package-monitor"]`)
+                        .forEach((tooltipTriggerEl) => {
+                            return new bootstrap.Tooltip(tooltipTriggerEl);
+                        });
                 }
             });
 
@@ -244,25 +255,14 @@
                         window.location.reload(true);
                     })
                     .fail(( jqXHR ) => {
-                        $('#modalLoadInfo').hide();
                         console.log(jqXHR);
+
+                        $('#modalLoadInfo').hide();
                         $('#modalLoadError').html(
-                            '<p class="text-danger">An unexpected error occurred: '
-                            + jqXHR.status
-                            + ' '
-                            + jqXHR.statusText
-                            + '</p><p class="text-danger">'
-                            + 'Please close this window and try again.</p>'
+                            `<p class="text-danger">An unexpected error occurred: ${jqXHR.status} ${jqXHR.statusText}</p><p class="text-danger">Please close this window and try again.</p>`
                         );
                     });
             });
-
-            [].slice.call(document.querySelectorAll('[data-bs-tooltip="aa-package-monitor"]'))
-                .map((tooltipTriggerEl) => {
-                    'use strict';
-
-                    return new bootstrap.Tooltip(tooltipTriggerEl);
-                });
         });
     </script>
 {% endblock extra_javascript %}
