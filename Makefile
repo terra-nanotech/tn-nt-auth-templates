@@ -1,13 +1,13 @@
 # Makefile for TN-NT Auth Templates
 
 # Variables
-appname = tn-nt-auth-templates
+appname = tnnt-templates
 appname_verbose = TN-NT Auth Templates
 package = tnnt_templates
 translation_directory = $(package)/locale
 translation_template = $(translation_directory)/django.pot
 translation_file_relative_path = LC_MESSAGES/django.po
-git_repository = https://github.com/ppfeufer/$(appname)
+git_repository = https://github.com/ppfeufer/tn-nt-auth-templates
 git_repository_issues = $(git_repository)/issues
 
 # Default goal
@@ -66,7 +66,7 @@ prepare-release:
 			git restore $(translation_directory)/django.pot; \
 	else \
 		echo "$(TEXT_BOLD)Release$(TEXT_BOLD_END) version detected."; \
-		sed -i -E "/tnnt-templates==/s/==.*/==$$new_version/" README.md; \
+		sed -i -E "/$(appname)==/s/==.*/==$$new_version/" README.md; \
 		echo "Updated version in $(TEXT_BOLD)README.md$(TEXT_BOLD_END)"; \
 #		sed -i "/\"Project-Id-Version: /c\\\"Project-Id-Version: $(appname_verbose) $$new_version\\\n\"" $(translation_template); \
 #		sed -i "/\"Report-Msgid-Bugs-To: /c\\\"Report-Msgid-Bugs-To: $(git_repository_issues)\\\n\"" $(translation_template); \
