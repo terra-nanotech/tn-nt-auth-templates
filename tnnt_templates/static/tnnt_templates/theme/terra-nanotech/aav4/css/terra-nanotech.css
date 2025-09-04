@@ -281,4 +281,11 @@
     #sidebar-menu li:has(span.badge) > a[data-bs-toggle="collapse"] {
         max-width: calc(100% - 111px);
     }
+
+    /* DataTables
+    --------------------------------------------------------------------------------- */
+    div.dataTables_wrapper div.dataTables_length,
+    div.dataTables_wrapper div.dataTables_filter {
+        margin-bottom: 0.5rem;
+    }
 }

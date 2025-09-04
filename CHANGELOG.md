@@ -37,6 +37,7 @@ Section Order:
 
 ### Added
 
+- Bottom margin to DataTable filter wrappers
 - Bootstrap tooltips to `package_monitor` templates
 - Transition animation to overflow changes
 - Overflow detection and monitoring
