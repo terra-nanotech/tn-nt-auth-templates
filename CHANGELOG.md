@@ -35,6 +35,8 @@ Section Order:
 ### Security
 -->
 
+## [3.12.0] - 2025-09-05
+
 ### Added
 
 - Workaround for `structuretimers` form template to use Bootstrap5 form until fixed
