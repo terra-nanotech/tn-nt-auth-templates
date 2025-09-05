@@ -37,7 +37,10 @@ Section Order:
 
 ### Added
 
-- Workaround for `django-bootstrap5` error template until it is fixed upstream (https://github.com/zostera/django-bootstrap5/pull/767)
+- Workaround for `structuretimers` form template to use Bootstrap5 form until fixed
+  and release upstream (https://gitlab.com/ErikKalkoken/aa-structuretimers/-/merge_requests/22)
+- Workaround for `django-bootstrap5` error template until it is fixed and released
+  upstream (https://github.com/zostera/django-bootstrap5/pull/767)
 - Bottom margin to DataTable filter wrappers
 - Bootstrap tooltips to `package_monitor` templates
 - Transition animation to overflow changes
