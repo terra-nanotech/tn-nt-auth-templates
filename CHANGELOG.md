@@ -37,6 +37,7 @@ Section Order:
 
 ### Added
 
+- Workaround for `django-bootstrap5` error template until it is fixed upstream (https://github.com/zostera/django-bootstrap5/pull/767)
 - Bottom margin to DataTable filter wrappers
 - Bootstrap tooltips to `package_monitor` templates
 - Transition animation to overflow changes
