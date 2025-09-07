@@ -54,6 +54,10 @@ Section Order:
 - HighlightJS copy code button size and position
 - Some transparencies
 
+### Removed
+
+- Task queue status widget updates via AJAX, as it is now provided by Alliance Auth
+
 ## [3.11.1] - 2025-08-14
 
 ### Fixed
