@@ -288,4 +288,14 @@
     div.dataTables_wrapper div.dataTables_filter {
         margin-bottom: 0.5rem;
     }
+
+    /* Translation Footer
+    --------------------------------------------------------------------------------- */
+    @media all {
+        div:has(> div.app-translation-footer) {
+            border-color: rgb(var(--bs-secondary-rgb), var(--bs-border-opacity)) !important; /* stylelint-disable-line color-function-notation */
+
+            --bs-border-opacity: 1;
+        }
+    }
 }

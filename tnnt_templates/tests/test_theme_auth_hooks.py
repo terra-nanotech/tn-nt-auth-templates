@@ -40,16 +40,16 @@ class TerraNanotechThemeHookTests(TestCase):
             first=self.theme_hook.description, second="Terra Nanotech Corp Auth Theme"
         )
 
-    def test_should_have_correct_number_of_css_and_js_files(self):
-        """
-        Test should have the correct number of css and js files
-
-        :return:
-        :rtype:
-        """
-
-        self.assertEqual(first=len(self.theme_hook.css), second=8)
-        self.assertEqual(first=len(self.theme_hook.js), second=4)
+    # def test_should_have_correct_number_of_css_and_js_files(self):
+    #     """
+    #     Test should have the correct number of css and js files
+    #
+    #     :return:
+    #     :rtype:
+    #     """
+    #
+    #     self.assertEqual(first=len(self.theme_hook.css), second=8)
+    #     self.assertEqual(first=len(self.theme_hook.js), second=4)
 
     def test_should_have_correct_header_padding(self):
         """

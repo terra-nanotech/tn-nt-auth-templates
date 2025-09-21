@@ -18,7 +18,7 @@ class TestTnntTemplateVariables(TestCase):
 
     def test_should_return_content_when_string_starts_with_substring(self):
         template_to_render = Template(
-            "{% load tnnt_template_tags %}"
+            "{% load tnnt_templates %}"
             '{% if content|startswith:"Lorem" %}{{ content }}{% endif %}'
         )
         rendered_template = template_to_render.render(self.context)
@@ -29,7 +29,7 @@ class TestTnntTemplateVariables(TestCase):
 
     def test_should_not_return_content_when_string_does_not_start_with_substring(self):
         template_to_render = Template(
-            "{% load tnnt_template_tags %}"
+            "{% load tnnt_templates %}"
             '{% if content|startswith:"ipsum" %}{{ content }}{% endif %}'
         )
         rendered_template = template_to_render.render(self.context)
@@ -41,7 +41,7 @@ class TestTnntTemplateVariables(TestCase):
     @modify_settings(INSTALLED_APPS={"append": "aagdpr"})
     def test_should_return_true_when_app_is_installed(self):
         template_to_render = Template(
-            "{% load tnnt_template_tags %}"
+            "{% load tnnt_templates %}"
             '{% is_app_installed "aagdpr" as is_myapp_installed %}'
             "{% if is_myapp_installed %}True{% else %}False{% endif %}"
         )
@@ -51,7 +51,7 @@ class TestTnntTemplateVariables(TestCase):
     @modify_settings(INSTALLED_APPS={"remove": "aagdpr"})
     def test_should_return_false_when_app_is_not_installed(self):
         template_to_render = Template(
-            "{% load tnnt_template_tags %}"
+            "{% load tnnt_templates %}"
             '{% is_app_installed "aagdpr" as is_myapp_installed %}'
             "{% if is_myapp_installed %}True{% else %}False{% endif %}"
         )

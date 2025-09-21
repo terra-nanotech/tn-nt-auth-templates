@@ -35,6 +35,10 @@ Section Order:
 ### Security
 -->
 
+### Changed
+
+- Load static files conditionally
+
 ## [3.12.0] - 2025-09-05
 
 ### Added
