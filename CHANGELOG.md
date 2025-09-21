@@ -2,8 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-The format is based on [Keep a Changelog](http://keepachangelog.com/)
-and this project adheres to [Semantic Versioning](http://semver.org/).
+The format is based on [Keep a Changelog] and this project adheres to [Semantic Versioning].
 
 <!--
 GitHub MD Syntax:
@@ -15,11 +14,17 @@ https://docs.github.com/assets/cb-41128/mw-1440/images/help/writing/alerts-rende
 > [!NOTE]
 > Highlights information that users should take into account, even when skimming.
 
+> [!TIP]
+> Optional information to help a user be more successful.
+
 > [!IMPORTANT]
 > Crucial information necessary for users to succeed.
 
 > [!WARNING]
-> Critical content demanding immediate user attention due to potential risks.
+> Urgent info that needs immediate user attention to avoid problems.
+
+> [!CAUTION]
+> Advised about risks or negative outcomes of certain actions.
 -->
 
 ## [In Development] - Unreleased
@@ -35,9 +40,19 @@ Section Order:
 ### Security
 -->
 
+<!-- Your changes go here -->
+
+## [3.13.0] - 2025-09-21
+
 ### Changed
 
 - Load static files conditionally
+- Minimum requirements
+  - Alliance Auth >= 4.10.0
+
+### Removed
+
+- Task queue status widget updates via AJAX, as it is now provided by Alliance Auth
 
 ## [3.12.0] - 2025-09-05
 
@@ -1495,3 +1510,169 @@ run it with any version prior!**
 ### Added
 
 - initial version for Alliance Auth >= 2.8.0
+
+<!-- Links to be updated upon release -->
+
+[0.0.1]: https://github.com/terra-nanotech/tn-nt-auth-templates/commits/v0.0.1 "v0.0.1"
+[0.0.2]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v0.0.1...v0.0.2 "v0.0.2"
+[0.0.3]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v0.0.2...v0.0.3 "v0.0.3"
+[0.0.4]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v0.0.3...v0.0.4 "v0.0.4"
+[0.0.5]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v0.0.4...v0.0.5 "v0.0.5"
+[0.0.6]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v0.0.5...v0.0.6 "v0.0.6"
+[1.0.0]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v0.0.6...v1.0.0 "v1.0.0"
+[1.0.1]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v1.0.0...v1.0.1 "v1.0.1"
+[1.1.0]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v1.0.1...v1.1.0 "v1.1.0"
+[1.1.1]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v1.1.0...v1.1.1 "v1.1.1"
+[1.1.2]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v1.1.1...v1.1.2 "v1.1.2"
+[1.1.3]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v1.1.2...v1.1.3 "v1.1.3"
+[1.2.0]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v1.1.3...v1.2.0 "v1.2.0"
+[1.2.1]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v1.2.0...v1.2.1 "v1.2.1"
+[1.2.2]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v1.2.1...v1.2.2 "v1.2.2"
+[1.2.3]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v1.2.2...v1.2.3 "v1.2.3"
+[1.2.4]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v1.2.3...v1.2.4 "v1.2.4"
+[1.2.5]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v1.2.4...v1.2.5 "v1.2.5"
+[1.2.6]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v1.2.5...v1.2.6 "v1.2.6"
+[1.3.0]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v1.2.6...v1.3.0 "v1.3.0"
+[1.3.1]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v1.3.0...v1.3.1 "v1.3.1"
+[1.3.2]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v1.3.1...v1.3.2 "v1.3.2"
+[1.3.3]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v1.3.2...v1.3.3 "v1.3.3"
+[1.4.0]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v1.3.3...v1.4.0 "v1.4.0"
+[1.4.1]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v1.4.0...v1.4.1 "v1.4.1"
+[1.4.2]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v1.4.1...v1.4.2 "v1.4.2"
+[1.4.3]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v1.4.2...v1.4.3 "v1.4.3"
+[1.4.4]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v1.4.3...v1.4.4 "v1.4.4"
+[1.4.5]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v1.4.4...v1.4.5 "v1.4.5"
+[1.4.6]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v1.4.5...v1.4.6 "v1.4.6"
+[1.4.7]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v1.4.6...v1.4.7 "v1.4.7"
+[1.4.8]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v1.4.7...v1.4.8 "v1.4.8"
+[1.5.0]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v1.4.8...v1.5.0 "v1.5.0"
+[1.5.1]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v1.5.0...v1.5.1 "v1.5.1"
+[1.5.10]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v1.5.8...v1.5.10 "v1.5.10"
+[1.5.11]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v1.5.10...v1.5.11 "v1.5.11"
+[1.5.12]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v1.5.11...v1.5.12 "v1.5.12"
+[1.5.13]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v1.5.12...v1.5.13 "v1.5.13"
+[1.5.14]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v1.5.13...v1.5.14 "v1.5.14"
+[1.5.15]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v1.5.14...v1.5.15 "v1.5.15"
+[1.5.16]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v1.5.15...v1.5.16 "v1.5.16"
+[1.5.17]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v1.5.16...v1.5.17 "v1.5.17"
+[1.5.18]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v1.5.17...v1.5.18 "v1.5.18"
+[1.5.19]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v1.5.18...v1.5.19 "v1.5.19"
+[1.5.2]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v1.5.1...v1.5.2 "v1.5.2"
+[1.5.20]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v1.5.19...v1.5.20 "v1.5.20"
+[1.5.21]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v1.5.20...v1.5.21 "v1.5.21"
+[1.5.22]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v1.5.21...v1.5.22 "v1.5.22"
+[1.5.23]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v1.5.22...v1.5.23 "v1.5.23"
+[1.5.3]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v1.5.2...v1.5.3 "v1.5.3"
+[1.5.4]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v1.5.3...v1.5.4 "v1.5.4"
+[1.5.5]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v1.5.4...v1.5.5 "v1.5.5"
+[1.5.6]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v1.5.5...v1.5.6 "v1.5.6"
+[1.5.7]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v1.5.6...v1.5.7 "v1.5.7"
+[1.5.8]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v1.5.7...v1.5.8 "v1.5.8"
+[1.5.9]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v1.5.6...v1.5.9 "v1.5.9"
+[1.6.0]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v1.5.23...v1.6.0 "v1.6.0"
+[1.6.1]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v1.6.0...v1.6.1 "v1.6.1"
+[1.6.2]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v1.6.1...v1.6.2 "v1.6.2"
+[1.6.3]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v1.6.2...v1.6.3 "v1.6.3"
+[1.6.4]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v1.6.3...v1.6.4 "v1.6.4"
+[1.7.0]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v1.6.4...v1.7.0 "v1.7.0"
+[1.7.1]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v1.7.0...v1.7.1 "v1.7.1"
+[1.7.2]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v1.7.1...v1.7.2 "v1.7.2"
+[1.7.3]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v1.7.2...v1.7.3 "v1.7.3"
+[1.7.4]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v1.7.3...v1.7.4 "v1.7.4"
+[1.7.5]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v1.7.4...v1.7.5 "v1.7.5"
+[1.7.6]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v1.7.5...v1.7.6 "v1.7.6"
+[1.7.7]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v1.7.6...v1.7.7 "v1.7.7"
+[1.8.0]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v1.7.6...v1.8.0 "v1.8.0"
+[2.0.0]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v1.8.0...v2.0.0 "v2.0.0"
+[2.0.0-beta.1]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v1.8.0...v2.0.0-beta.1 "v2.0.0-beta.1"
+[2.0.0-beta.2]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v2.0.0-beta.1...v2.0.0-beta.2 "v2.0.0-beta.2"
+[2.0.1]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v2.0.0...v2.0.1 "v2.0.1"
+[2.0.2]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v2.0.1...v2.0.2 "v2.0.2"
+[2.0.3]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v2.0.2...v2.0.3 "v2.0.3"
+[2.0.4]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v2.0.3...v2.0.4 "v2.0.4"
+[2.1.0]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v2.0.4...v2.1.0 "v2.1.0"
+[2.10.0]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v2.9.2...v2.10.0 "v2.10.0"
+[2.11.0]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v2.10.0...v2.11.0 "v2.11.0"
+[2.11.1]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v2.11.0...v2.11.1 "v2.11.1"
+[2.11.2]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v2.11.1...v2.11.2 "v2.11.2"
+[2.11.3]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v2.11.2...v2.11.3 "v2.11.3"
+[2.11.4]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v2.11.3...v2.11.4 "v2.11.4"
+[2.11.5]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v2.11.4...v2.11.5 "v2.11.5"
+[2.11.6]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v2.11.5...v2.11.6 "v2.11.6"
+[2.11.7]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v2.11.6...v2.11.7 "v2.11.7"
+[2.12.0]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v2.11.7...v2.12.0 "v2.12.0"
+[2.2.0]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v2.1.0...v2.2.0 "v2.2.0"
+[2.3.0]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v2.2.0...v2.3.0 "v2.3.0"
+[2.3.1]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v2.3.0...v2.3.1 "v2.3.1"
+[2.3.2]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v2.3.1...v2.3.2 "v2.3.2"
+[2.3.3]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v2.3.2...v2.3.3 "v2.3.3"
+[2.4.0]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v2.3.3...v2.4.0 "v2.4.0"
+[2.4.1]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v2.4.0...v2.4.1 "v2.4.1"
+[2.4.2]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v2.4.1...v2.4.2 "v2.4.2"
+[2.5.0]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v2.4.2...v2.5.0 "v2.5.0"
+[2.5.1]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v2.5.0...v2.5.1 "v2.5.1"
+[2.5.2]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v2.5.1...v2.5.2 "v2.5.2"
+[2.5.3]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v2.5.2...v2.5.3 "v2.5.3"
+[2.5.4]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v2.5.3...v2.5.4 "v2.5.4"
+[2.6.0]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v2.5.4...v2.6.0 "v2.6.0"
+[2.6.0-beta.1]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v2.5.4...v2.6.0-beta.1 "v2.6.0-beta.1"
+[2.6.0-beta.2]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v2.6.0-beta.1...v2.6.0-beta.2 "v2.6.0-beta.2"
+[2.6.0-beta.3]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v2.6.0-beta.2...v2.6.0-beta.3 "v2.6.0-beta.3"
+[2.6.1]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v2.6.0...v2.6.1 "v2.6.1"
+[2.6.2]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v2.6.1...v2.6.2 "v2.6.2"
+[2.6.3]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v2.6.2...v2.6.3 "v2.6.3"
+[2.7.0]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v2.6.3...v2.7.0 "v2.7.0"
+[2.7.1]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v2.7.0...v2.7.1 "v2.7.1"
+[2.7.2]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v2.7.1...v2.7.2 "v2.7.2"
+[2.7.3]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v2.7.2...v2.7.3 "v2.7.3"
+[2.7.4]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v2.7.3...v2.7.4 "v2.7.4"
+[2.7.5]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v2.7.4...v2.7.5 "v2.7.5"
+[2.7.6]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v2.7.5...v2.7.6 "v2.7.6"
+[2.7.7]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v2.7.6...v2.7.7 "v2.7.7"
+[2.8.0]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v2.7.7...v2.8.0 "v2.8.0"
+[2.8.1]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v2.8.0...v2.8.1 "v2.8.1"
+[2.9.0]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v2.8.1...v2.9.0 "v2.9.0"
+[2.9.1]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v2.9.0...v2.9.1 "v2.9.1"
+[2.9.2]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v2.9.1...v2.9.2 "v2.9.2"
+[3.0.0]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v2.12.0...v3.0.0 "v3.0.0"
+[3.0.0-beta.1]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v2.12.0...v3.0.0-beta.1 "v3.0.0-beta.1"
+[3.0.0-beta.2]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.0.0-beta.1...v3.0.0-beta.2 "v3.0.0-beta.2"
+[3.0.0-beta.3]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.0.0-beta.2...v3.0.0-beta.3 "v3.0.0-beta.3"
+[3.0.0-rc.1]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v2.12.0...v3.0.0-rc.1 "v3.0.0-rc.1"
+[3.0.1]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.0.0...v3.0.1 "v3.1.0"
+[3.0.2]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.0.1...v3.0.2 "v3.0.2"
+[3.1.0]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.0.2...v3.1.0 "v3.1.0"
+[3.10.0]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.9.1...v3.10.0 "v3.10.0"
+[3.11.0]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.10.0...v3.11.0 "v3.11.0"
+[3.11.1]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.11.0...v3.11.1 "v3.11.1"
+[3.12.0]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.11.1...v3.12.0 "v3.12.0"
+[3.13.0]: https://github.com/ppfeufer/tn-nt-auth-templates/compare/v3.12.0...v3.13.0 "v3.13.0"
+[3.2.0]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.1.0...v3.2.0 "v3.2.0"
+[3.3.0]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.2.0...v3.3.0 "v3.3.0"
+[3.4.0]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.3.0...v3.4.0 "v3.4.0"
+[3.4.1]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.4.0...v3.4.1 "v3.4.1"
+[3.5.0]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.4.1...v3.5.0 "v3.5.0"
+[3.5.1]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.5.0...v3.5.1 "v3.5.1"
+[3.6.0]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.5.1...v3.6.0 "v3.6.0"
+[3.7.0]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.6.0...v3.7.0 "v3.7.0"
+[3.7.1]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.7.0...v3.7.1 "v3.7.1"
+[3.7.10]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.7.9...v3.7.10 "v3.7.10"
+[3.7.3]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.7.1...v3.7.3 "v3.7.3"
+[3.7.4]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.7.3...v3.7.4 "v3.7.4"
+[3.7.5]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.7.4...v3.7.5 "v3.7.5"
+[3.7.6]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.7.5...v3.7.6 "v3.7.6"
+[3.7.7]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.7.6...v3.7.7 "v3.7.7"
+[3.7.8]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.7.7...v3.7.8 "v3.7.8"
+[3.7.9]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.7.8...v3.7.9 "v3.7.9"
+[3.8.0]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.7.10...v3.8.0 "v3.8.0"
+[3.8.1]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.8.0...v3.8.1 "v3.8.1"
+[3.8.2]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.8.1...v3.8.2 "v3.8.2"
+[3.8.3]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.8.2...v3.8.3 "v3.8.3"
+[3.8.4]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.8.3...v3.8.4 "v3.8.4"
+[3.8.5]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.8.4...v3.8.5 "v3.8.5"
+[3.8.6]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.8.5...v3.8.6 "v3.8.6"
+[3.9.0]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.8.6...v3.9.0 "v3.9.0"
+[3.9.1]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.9.0...v3.9.1 "v3.9.1"
+[in development]: https://github.com/ppfeufer/tn-nt-auth-templates/compare/v3.13.0...HEAD "In Development"
+[keep a changelog]: http://keepachangelog.com/ "Keep a Changelog"
+[semantic versioning]: http://semver.org/ "Semantic Versioning"
