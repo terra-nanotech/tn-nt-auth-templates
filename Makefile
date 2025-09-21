@@ -7,7 +7,7 @@ package = tnnt_templates
 translation_directory = $(package)/locale
 translation_template = $(translation_directory)/django.pot
 translation_file_relative_path = LC_MESSAGES/django.po
-git_repository = https://github.com/ppfeufer/tn-nt-auth-templates
+git_repository = https://github.com/terra-nanotech/tn-nt-auth-templates
 git_repository_issues = $(git_repository)/issues
 
 # Set myauth path or default to ../myauth if config file (.make/myauth-path) does not exist
