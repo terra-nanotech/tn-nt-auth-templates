@@ -42,6 +42,10 @@ Section Order:
 
 <!-- Your changes go here -->
 
+### Fixed
+
+- Missing ship type name in `fittings` templates
+
 ## [3.13.0] - 2025-09-21
 
 ### Changed
