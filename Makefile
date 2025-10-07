@@ -15,7 +15,7 @@ git_repository = https://github.com/terra-nanotech/tn-nt-auth-templates
 git_repository_issues = $(git_repository)/issues
 
 # Set myauth path or default to ../myauth if config file (.make/myauth-path) does not exist
-myauth_path = $(shell cat .make/myauth-path 2>/dev/null || echo "../myauth")
+myauth_path = $(shell path=$$(cat .make/myauth-path 2>/dev/null | grep . || echo "../myauth"); echo "$${path%/}")
 
 # Default goal
 .DEFAULT_GOAL := help
@@ -25,6 +25,15 @@ myauth_path = $(shell cat .make/myauth-path 2>/dev/null || echo "../myauth")
 check-python-venv:
 	@if [ -z "$(VIRTUAL_ENV)" ]; then \
 		echo "$(TEXT_COLOR_RED)$(TEXT_BOLD)Python virtual environment is NOT active!$(TEXT_RESET)" ; \
+		exit 1; \
+	fi
+
+# Check if the 'myauth' path exists
+.PHONY: check-myauth-path
+check-myauth-path:
+	@if [ ! -d "$(myauth_path)" ]; then \
+		echo "$(TEXT_COLOR_RED)$(TEXT_BOLD)Error: '$(myauth_path)' does not exist!$(TEXT_RESET)"; \
+		echo "Please set the absolute path to your 'myauth' directory in the '.make/myauth-path' file."; \
 		exit 1; \
 	fi
 
@@ -50,7 +59,7 @@ confirm:
 
 # Graph models
 .PHONY: graph-models
-graph-models: check-python-venv
+graph-models: check-python-venv check-myauth-path
 	@echo "Creating a graph of the models …"
 	@python $(myauth_path)/manage.py \
 		graph_models \
@@ -77,18 +86,13 @@ prepare-release:
 	echo "Updated version in $(TEXT_BOLD)$(package)/__init__.py$(TEXT_BOLD_END)"; \
 	if [[ $$new_version =~ (alpha|beta) ]]; then \
 		echo "$(TEXT_COLOR_RED)$(TEXT_BOLD)Pre-release$(TEXT_RESET) version detected!"; \
-		git restore $(translation_directory)/django.pot; \
 	elif [[ $$new_version =~ rc ]]; then \
 		echo "$(TEXT_COLOR_YELLOW)$(TEXT_BOLD)Release Candidate$(TEXT_RESET) version detected!"; \
-		sed -i "/\"Project-Id-Version: /c\\\"Project-Id-Version: $(appname_verbose) $$new_version\\\n\"" $(translation_template); \
-		sed -i "/\"Report-Msgid-Bugs-To: /c\\\"Report-Msgid-Bugs-To: $(git_repository_issues)\\\n\"" $(translation_template); \
 	else \
 		echo "$(TEXT_BOLD)Release$(TEXT_BOLD_END) version detected."; \
 		sed -i -E "/$(appname)==/s/==.*/==$$new_version/" README.md; \
 		sed -i -E "\|\[in development\]\: |s|\]\: .*|\]\: $(git_repository)/compare/v$$new_version...HEAD \"In Development\"|g" CHANGELOG.md; \
 		echo "Updated version in $(TEXT_BOLD)README.md$(TEXT_BOLD_END)"; \
-		sed -i "/\"Project-Id-Version: /c\\\"Project-Id-Version: $(appname_verbose) $$new_version\\\n\"" $(translation_template); \
-		sed -i "/\"Report-Msgid-Bugs-To: /c\\\"Report-Msgid-Bugs-To: $(git_repository_issues)\\\n\"" $(translation_template); \
 	fi;
 
 # Help
@@ -96,6 +100,7 @@ prepare-release:
 help::
 	@echo ""
 	@echo "$(TEXT_BOLD)$(appname_verbose)$(TEXT_BOLD_END) Makefile"
+	@echo "('myauth_path' is set to '$(myauth_path)')"
 	@echo ""
 	@echo "$(TEXT_BOLD)Usage:$(TEXT_BOLD_END)"
 	@echo "  make [command]"
