@@ -44,6 +44,7 @@ Section Order:
 
 ### Fixed
 
+- Appearance of the `.form-check-input:checked` element
 - Template variable in `fittings` edit doctrine template
 
 ## [3.13.1] - 2025-10-07
