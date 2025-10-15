@@ -72,6 +72,11 @@
     .form-select {
         padding-right: 2.25rem;
     }
+
+    .form-check-input:checked {
+        background-color: inherit;
+        border-color: inherit;
+    }
 }
 
 /* Terra Nanotech theme
