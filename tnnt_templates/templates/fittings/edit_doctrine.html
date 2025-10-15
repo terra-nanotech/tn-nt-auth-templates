@@ -66,7 +66,7 @@
                             {% endfor %}
 
                             {% for fit in fits %}
-                                <option value="{{ fit.pk }}">{{ fit.name }} ({{fit.ship_type.type_name}})</option>
+                                <option value="{{ fit.pk }}">{{ fit.name }} ({{ fit.ship_type.name }})</option>
                             {% endfor %}
                         </select>
                     </div>
@@ -78,7 +78,7 @@
                             <option value="{{ doctrine.icon_url }}" selected> {% translate "Current Icon" %} </option>
 
                             {% for ship in ships %}
-                                <option value="{{ ship.ship_type|type_render_url:64 }}">{{ship.ship_type__name}}</option>
+                                <option value="{{ ship.ship_type|type_render_url:64 }}">{{ ship.ship_type__name }}</option>
                             {% endfor %}
                         </select>
 
