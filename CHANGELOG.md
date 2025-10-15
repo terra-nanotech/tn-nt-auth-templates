@@ -42,6 +42,10 @@ Section Order:
 
 <!-- Your changes go here -->
 
+### Fixed
+
+- Template variable in `fittings` edit doctrine template
+
 ## [3.13.1] - 2025-10-07
 
 ### Fixed
