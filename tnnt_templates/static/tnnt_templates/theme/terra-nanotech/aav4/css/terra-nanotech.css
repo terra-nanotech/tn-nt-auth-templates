@@ -27,6 +27,10 @@
         --bs-btn-padding-x: 1rem;
         --bs-btn-padding-y: 0.5rem;
     }
+
+    .list-group {
+        --bs-list-group-bg: var(--background-color-light-transparency);
+    }
 }
 
 /* Bootstrap fixes

@@ -42,6 +42,10 @@ Section Order:
 
 <!-- Your changes go here -->
 
+### Fixed
+
+- Appearance of the `.list-group` element
+
 ## [3.13.2] - 2025-10-15
 
 ### Fixed
