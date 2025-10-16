@@ -46,6 +46,10 @@ Section Order:
 
 - Appearance of the `.list-group` element
 
+### Removed
+
+- `fittings` template overrides, as they are now provided by the app
+
 ## [3.13.2] - 2025-10-15
 
 ### Fixed
