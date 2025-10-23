@@ -15,7 +15,7 @@ class TnntTemplatesConfig(AppConfig):
 
     name = "tnnt_templates"
     label = "tnnt_templates"
-    verbose_name = f"Alliance Auth Templates v{__version__}"
+    verbose_name = f"Terra Nanotech Alliance Auth Template Overrides v{__version__}"
 
     def ready(self) -> None:
         """
