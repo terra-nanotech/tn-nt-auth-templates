@@ -49,8 +49,9 @@ optional-dependencies.tests-allianceauth-latest = [
     "django-webtest",
 ]
 urls.Changelog = "https://github.com/terra-nanotech/tn-nt-auth-templates/blob/master/CHANGELOG.md"
+urls.Codecov = "https://codecov.io/gh/terra-nanotech/tn-nt-auth-templates"
 urls.Documentation = "https://github.com/terra-nanotech/tn-nt-auth-templates/blob/master/README.md"
-urls.Homepage = "https://github.com/terra-nanotech/tn-nt-auth-templates"
+urls.GitHub = "https://github.com/terra-nanotech/tn-nt-auth-templates"
 
 [tool.hatch.build]
 include = [
