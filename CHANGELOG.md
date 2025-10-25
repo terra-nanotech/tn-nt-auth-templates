@@ -42,13 +42,15 @@ Section Order:
 
 <!-- Your changes go here -->
 
+## [3.13.3] - 2025-10-26
+
 ### Fixed
 
 - Appearance of the `.list-group` element
 
 ### Removed
 
-- `fittings` template overrides, as they are now provided by the app
+- `fittings` template overrides, as they are now provided by the app (>=2.2.0)
 
 ## [3.13.2] - 2025-10-15
 
@@ -1670,6 +1672,7 @@ run it with any version prior!**
 [3.13.0]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.12.0...v3.13.0 "v3.13.0"
 [3.13.1]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.13.0...v3.13.1 "v3.13.1"
 [3.13.2]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.13.1...v3.13.2 "v3.13.2"
+[3.13.3]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.13.2...v3.13.3 "v3.13.3"
 [3.2.0]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.1.0...v3.2.0 "v3.2.0"
 [3.3.0]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.2.0...v3.3.0 "v3.3.0"
 [3.4.0]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.3.0...v3.4.0 "v3.4.0"
@@ -1696,6 +1699,6 @@ run it with any version prior!**
 [3.8.6]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.8.5...v3.8.6 "v3.8.6"
 [3.9.0]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.8.6...v3.9.0 "v3.9.0"
 [3.9.1]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.9.0...v3.9.1 "v3.9.1"
-[in development]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.13.2...HEAD "In Development"
+[in development]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.13.3...HEAD "In Development"
 [keep a changelog]: http://keepachangelog.com/ "Keep a Changelog"
 [semantic versioning]: http://semver.org/ "Semantic Versioning"
