@@ -11,11 +11,11 @@
         --bs-table-bg: var(--bs-danger);
         --bs-table-border-color: rgb(241 127 124);
         --bs-table-hover-bg: rgb(239 107 103);
-        --bs-table-striped-bg: rgb(239 103 99);
+        --bs-table-striped-bg: rgb(239 103 99 / 25%);
     }
 
     .aa-sovtimer-active-campaign td {
-        background-color: rgb(238 95 91 / 25%) !important;
+        background-color: rgb(239 103 99 / 25%) !important;
     }
 
     .aa-sovtimer-upcoming-campaign {
@@ -25,7 +25,7 @@
         --bs-table-bg: var(--bs-warning);
         --bs-table-border-color: rgb(249 169 56);
         --bs-table-hover-bg: rgb(249 156 25);
-        --bs-table-striped-bg: rgb(248 153 18);
+        --bs-table-striped-bg: rgb(248 153 18 / 25%);
     }
 
     .aa-sovtimer-upcoming-campaign td {
@@ -34,6 +34,8 @@
 
     .table-striped.aa-sovtimer-campaigns > tbody > tr:nth-of-type(odd) > *,
     .table-striped.aa-sovtimer-campaigns > tbody > tr:nth-of-type(even) > * {
+        background-color: var(--bs-table-striped-bg) !important;
+
         --bs-table-color-type: var(--bs-table-striped-color) !important;
     }
 }
