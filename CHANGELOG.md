@@ -42,6 +42,10 @@ Section Order:
 
 <!-- Your changes go here -->
 
+### Fixed
+
+- CSS for `aa-sov-timer>=3.0.0-beta.3` DataTables 2 integration
+
 ## [3.13.3] - 2025-10-26
 
 ### Fixed
