@@ -42,6 +42,10 @@ Section Order:
 
 <!-- Your changes go here -->
 
+### Fixed
+
+- CSS for campaign state filter in `aa-sov-timer`
+
 ## [3.13.4] - 2025-11-11
 
 ### Fixed
