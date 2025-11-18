@@ -42,6 +42,10 @@ Section Order:
 
 <!-- Your changes go here -->
 
+### Changed
+
+- Background to EVE Catalyst expansion
+
 ## [3.13.5] - 2025-11-16
 
 ### Fixed
