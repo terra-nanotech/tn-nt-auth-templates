@@ -5,14 +5,12 @@ Tests for the theme auth hooks
 # Standard Library
 from unittest.mock import patch
 
-# Django
-from django.test import TestCase
-
 # AA Templates: Terra Nanotech
+from tnnt_templates.tests import BaseTestCase
 from tnnt_templates.theme.terra_nanotech import auth_hooks
 
 
-class TerraNanotechThemeHookTests(TestCase):
+class TerraNanotechThemeHookTests(BaseTestCase):
     """
     Test the theme hook
     """
