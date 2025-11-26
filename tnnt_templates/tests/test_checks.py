@@ -4,13 +4,14 @@ Test cases for the functions in tnnt_templates.checks
 
 # Django
 from django.conf import settings
-from django.test import TestCase, override_settings
+from django.test import override_settings
 
 # AA Templates: Terra Nanotech
 from tnnt_templates.checks import check_mandatory_settings
+from tnnt_templates.tests import BaseTestCase
 
 
-class TestCheckMandatorySettings(TestCase):
+class TestCheckMandatorySettings(BaseTestCase):
     """
     Test the check_mandatory_settings function
     """

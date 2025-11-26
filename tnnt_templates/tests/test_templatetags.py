@@ -7,79 +7,107 @@ The tests ensure that the template tags behave as expected under various conditi
 
 # Django
 from django.template import Context, Template
-from django.test import TestCase, modify_settings
+from django.test import modify_settings
 
 # AA Templates: Terra Nanotech
 from tnnt_templates import __version__
+from tnnt_templates.templatetags.tnnt_templates import startswith
+from tnnt_templates.tests import BaseTestCase
 
 
-class TestTemplateTags(TestCase):
+class TestFilterStartsWith(BaseTestCase):
     """
-    Unit test class for verifying the functionality of TN-NT template tags.
-
-    This class contains test cases to ensure that the custom template tags
-    used in the TN-NT Auth Theme behave as expected under various conditions.
+    Unit test class for the `startswith` template filter.
     """
 
-    def setUp(self):
+    def test_returns_true_when_haystack_starts_with_needle(self):
         """
-        Sets up the test context for the test cases.
-
-        This method initializes a Django template context with a predefined
-        content string. The context is used in the template rendering tests
-        to verify the behavior of custom template tags.
+        Tests that the `startswith` filter returns True when the haystack starts with the needle.
 
         :return:
         :rtype:
         """
 
-        self.context = Context(
-            {"content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."}
-        )
+        self.assertTrue(startswith("hello world", "hello"))
 
-    def test_should_return_content_when_string_starts_with_substring(self):
+    def test_returns_false_when_haystack_does_not_start_with_needle(self):
         """
-        Tests that the template renders the content when the string starts with the specified substring.
+        Tests that the `startswith` filter returns False when the haystack does not start with the needle.
 
-        This test verifies that the custom `startswith` filter correctly identifies
-        when the `content` string begins with the substring "Lorem" and ensures
-        that the content is included in the rendered template.
-
-        :return: None
+        :return:
+        :rtype:
         """
 
-        template_to_render = Template(
-            "{% load tnnt_templates %}"
-            '{% if content|startswith:"Lorem" %}{{ content }}{% endif %}'
-        )
-        rendered_template = template_to_render.render(self.context)
+        self.assertFalse(startswith("hello world", "world"))
 
-        self.assertInHTML(
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            rendered_template,
-        )
-
-    def test_should_not_return_content_when_string_does_not_start_with_substring(self):
+    def test_returns_true_when_needle_is_empty(self):
         """
-        Tests that the template does not render the content when the string does not start with the specified substring.
+        Tests that the `startswith` filter returns True when the needle is an empty string.
 
-        This test verifies that the custom `startswith` filter correctly identifies
-        when the `content` string does not begin with the substring "ipsum" and ensures
-        that the content is excluded from the rendered template.
-
-        :return: None
+        :return:
+        :rtype:
         """
 
-        template_to_render = Template(
-            "{% load tnnt_templates %}"
-            '{% if content|startswith:"ipsum" %}{{ content }}{% endif %}'
-        )
-        rendered_template = template_to_render.render(self.context)
+        self.assertTrue(startswith("haystack", ""))
 
-        self.assertNotIn(
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-            rendered_template,
-        )
+    def test_returns_true_when_both_haystack_and_needle_are_empty(self):
+        """
+        Tests that the `startswith` filter returns True when both haystack and needle are empty strings.
+
+        :return:
+        :rtype:
+        """
+
+        self.assertTrue(startswith("", ""))
+
+    def test_is_case_sensitive(self):
+        """
+        Tests that the `startswith` filter is case-sensitive.
+
+        :return:
+        :rtype:
+        """
+
+        self.assertFalse(startswith("Hello World", "hello"))
+
+    def test_raises_type_error_when_needle_is_none(self):
+        """
+        Tests that the `startswith` filter raises a TypeError when the needle is None.
+
+        :return:
+        :rtype:
+        """
+
+        with self.assertRaises(TypeError):
+            startswith("haystack", None)
+
+    def test_raises_attribute_error_when_haystack_is_none(self):
+        """
+        Tests that the `startswith` filter raises an AttributeError when the haystack is None.
+
+        :return:
+        :rtype:
+        """
+
+        with self.assertRaises(AttributeError):
+            startswith(None, "needle")
+
+    def test_raises_attribute_error_for_non_string_haystack(self):
+        """
+        Tests that the `startswith` filter raises an AttributeError when the haystack is not a string.
+
+        :return:
+        :rtype:
+        """
+
+        with self.assertRaises(AttributeError):
+            startswith(12345, "12")
+
+
+class TestTagIsAppInstalled(BaseTestCase):
+    """
+    Unit test class for the `is_app_installed` template tag.
+    """
 
     @modify_settings(INSTALLED_APPS={"append": "aagdpr"})
     def test_should_return_true_when_app_is_installed(self):

@@ -3,7 +3,6 @@ Test the context processor for TNNT template settings.
 """
 
 # Standard Library
-import unittest
 from unittest.mock import patch
 
 # Django
@@ -11,9 +10,10 @@ from django.conf import settings
 
 # AA Templates: Terra Nanotech
 from tnnt_templates.context_processors import tnnt_settings
+from tnnt_templates.tests import BaseTestCase
 
 
-class TestContextProcessorTnntSettings(unittest.TestCase):
+class TestContextProcessorTnntSettings(BaseTestCase):
     """
     Test the tnnt_settings context processor.
     """

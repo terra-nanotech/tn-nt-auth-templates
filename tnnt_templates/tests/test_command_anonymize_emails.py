@@ -7,16 +7,15 @@ from io import StringIO
 from unittest.mock import patch
 
 # Django
-from django.test import TestCase, override_settings
-
-# Alliance Auth (External Libs)
-from app_utils.testing import create_fake_user
+from django.test import override_settings
 
 # AA Templates: Terra Nanotech
 from tnnt_templates.management.commands.tnnt_anonymize_emails import Command, get_input
+from tnnt_templates.tests import BaseTestCase
+from tnnt_templates.tests.utils import create_fake_user
 
 
-class TestManagementCommandAnonymizeEmails(TestCase):
+class TestManagementCommandAnonymizeEmails(BaseTestCase):
     """
     Test cases for the management command to anonymizes user emails.
     """
