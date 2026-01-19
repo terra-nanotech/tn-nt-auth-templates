@@ -12,6 +12,8 @@
     --background-color-default: rgb(39 43 48);
     --font-color-default: rgb(200 200 200);
     --background-color-light-transparency: rgb(58 63 68 / 50%);
+    --background-color-default-transparency: rgb(39 43 48 / 75%);
+    --background-color-dark-transparency: rgb(20 20 20 / 75%);
     --font-family-card-title: georgia, times, serif;
     --font-family-code: "Fira Code", monospace;
     --font-family-default: roboto, "Helvetica Neue", sans-serif;
