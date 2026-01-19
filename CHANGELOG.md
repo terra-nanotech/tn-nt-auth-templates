@@ -42,6 +42,10 @@ Section Order:
 
 <!-- Your changes go here -->
 
+### Added
+
+- CSS override for DataTables 2 process indicator
+
 ## [3.14.0] - 2025-12-02
 
 ### Removed

@@ -298,13 +298,18 @@
         margin-bottom: 0.5rem;
     }
 
+    /* DataTables Processing Indicator
+    --------------------------------------------------------------------------------- */
+    div.dt-processing {
+        background-color: var(--background-color-light-transparency);
+        backdrop-filter: var(--backdrop-filter-default);
+    }
+
     /* Translation Footer
     --------------------------------------------------------------------------------- */
-    @media all {
-        div:has(> div.app-translation-footer) {
-            border-color: rgb(var(--bs-secondary-rgb), var(--bs-border-opacity)) !important; /* stylelint-disable-line color-function-notation */
+    div:has(> div.app-translation-footer) {
+        border-color: rgb(var(--bs-secondary-rgb), var(--bs-border-opacity)) !important; /* stylelint-disable-line color-function-notation */
 
-            --bs-border-opacity: 1;
-        }
+        --bs-border-opacity: 1;
     }
 }
