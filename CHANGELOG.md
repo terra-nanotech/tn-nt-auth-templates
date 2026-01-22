@@ -42,6 +42,8 @@ Section Order:
 
 <!-- Your changes go here -->
 
+## [3.14.1] - 2026-01-22
+
 ### Added
 
 - CSS override for DataTables 2 process indicator
@@ -1705,6 +1707,7 @@ run it with any version prior!**
 [3.13.5]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.13.4...v3.13.5 "v3.13.5"
 [3.13.6]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.13.5...v3.13.6 "v3.13.6"
 [3.14.0]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.13.6...v3.14.0 "v3.14.0"
+[3.14.1]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.14.0...v3.14.1 "v3.14.1"
 [3.2.0]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.1.0...v3.2.0 "v3.2.0"
 [3.3.0]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.2.0...v3.3.0 "v3.3.0"
 [3.4.0]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.3.0...v3.4.0 "v3.4.0"
@@ -1731,6 +1734,6 @@ run it with any version prior!**
 [3.8.6]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.8.5...v3.8.6 "v3.8.6"
 [3.9.0]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.8.6...v3.9.0 "v3.9.0"
 [3.9.1]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.9.0...v3.9.1 "v3.9.1"
-[in development]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.14.0...HEAD "In Development"
+[in development]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.14.1...HEAD "In Development"
 [keep a changelog]: http://keepachangelog.com/ "Keep a Changelog"
 [semantic versioning]: http://semver.org/ "Semantic Versioning"
