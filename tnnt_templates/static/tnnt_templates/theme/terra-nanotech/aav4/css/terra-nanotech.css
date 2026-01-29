@@ -204,16 +204,22 @@
         border: none;
     }
 
-    .card-title,
+    .card-header,
     .modal-title {
         color: var(--white);
-        display: block;
         font-family: var(--font-family-card-title);
         font-size: 1rem !important;
         font-weight: 700;
+        text-shadow: -1px -1px 0 rgb(0 0 0 / 30%);
+    }
+
+    .card-header .card-title {
+        margin-bottom: 0;
+    }
+
+    .modal-title {
         margin-bottom: 0;
         margin-top: 0.25rem;
-        text-shadow: -1px -1px 0 rgb(0 0 0 / 30%);
     }
 
     /* Overflowing panel: Right padding on vertical overflow */

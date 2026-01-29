@@ -42,6 +42,10 @@ Section Order:
 
 <!-- Your changes go here -->
 
+### Fixed
+
+- Card header/title style
+
 ## [3.14.1] - 2026-01-22
 
 ### Added
