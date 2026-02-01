@@ -4,6 +4,11 @@
         text-shadow: 1px 1px 1px rgb(255 0 0 / 30%);
     }
 
+    #aa-sovtimer-filter-total-campaigns.aa-sovtimer-filter-active,
+    #aa-sovtimer-filter-total-campaigns.aa-sovtimer-filter-active small {
+        background-color: rgb(81 89 96 / 75%) !important;
+    }
+
     .aa-sovtimer-active-campaign,
     #aa-sovtimer-filter-active-campaigns.aa-sovtimer-filter-active,
     #aa-sovtimer-filter-active-campaigns.aa-sovtimer-filter-active small {
@@ -25,11 +30,6 @@
         background-color: transparent !important;
     }
 
-    #aa-sovtimer-filter-active-campaigns.aa-sovtimer-filter-active,
-    .aa-sovtimer #aa-sovtimer-filter-active-campaigns.aa-sovtimer-filter-active * {
-        color: var(--white) !important;
-    }
-
     .aa-sovtimer-upcoming-campaign {
         color: var(--bs-table-color) !important;
 
@@ -45,8 +45,12 @@
         background-color: rgb(248 148 6 / 25%) !important;
     }
 
+    #aa-sovtimer-filter-total-campaigns.aa-sovtimer-filter-active,
+    .aa-sovtimer #aa-sovtimer-filter-total-campaigns.aa-sovtimer-filter-active *,
     #aa-sovtimer-filter-upcoming-campaigns.aa-sovtimer-filter-active,
-    .aa-sovtimer #aa-sovtimer-filter-upcoming-campaigns.aa-sovtimer-filter-active * {
+    .aa-sovtimer #aa-sovtimer-filter-upcoming-campaigns.aa-sovtimer-filter-active *,
+    #aa-sovtimer-filter-active-campaigns.aa-sovtimer-filter-active,
+    .aa-sovtimer #aa-sovtimer-filter-active-campaigns.aa-sovtimer-filter-active * {
         color: var(--white) !important;
     }
 
