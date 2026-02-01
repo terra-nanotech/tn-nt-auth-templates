@@ -42,6 +42,11 @@ Section Order:
 
 <!-- Your changes go here -->
 
+### Added
+
+- Background to "Total Campaigns" filter above the campaign table to indicate
+  the current filter (Tweak for `sovtimer>=3.5.1`)
+
 ### Fixed
 
 - Card header/title style
