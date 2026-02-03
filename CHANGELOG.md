@@ -53,6 +53,10 @@ Section Order:
 
 - Card header/title style
 
+### Removed
+
+- Obsolete JS libraries
+
 ## [3.14.1] - 2026-01-22
 
 ### Added
