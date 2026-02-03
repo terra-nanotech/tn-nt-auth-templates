@@ -112,15 +112,15 @@
     }
 
     body > nav.navbar {
-        --background-color-light-transparency: rgb(58 63 68 / 85%);
-
         background-color: var(--background-color-light-transparency) !important;
+
+        --background-color-light-transparency: rgb(58 63 68 / 85%);
     }
 
     .dropdown-menu {
-        --background-color-light-transparency: rgb(58 63 68 / 95%);
-
         background-color: var(--background-color-light-transparency) !important;
+
+        --background-color-light-transparency: rgb(58 63 68 / 95%);
     }
 
     body,
@@ -205,11 +205,12 @@
     }
 
     .card-header,
-    .modal-title {
+    .modal-header {
         color: var(--white);
         font-family: var(--font-family-card-title);
         font-size: 1rem !important;
         font-weight: 700;
+        padding-top: 0.7rem;
         text-shadow: -1px -1px 0 rgb(0 0 0 / 30%);
     }
 
@@ -217,7 +218,8 @@
         margin-bottom: 0;
     }
 
-    .modal-title {
+    .modal-header .modal-title {
+        font-size: 1rem !important;
         margin-bottom: 0;
         margin-top: 0.25rem;
     }
@@ -307,8 +309,8 @@
     /* DataTables Processing Indicator
     --------------------------------------------------------------------------------- */
     div.dt-processing {
-        background-color: var(--background-color-light-transparency);
         backdrop-filter: var(--backdrop-filter-default);
+        background-color: var(--background-color-light-transparency);
     }
 
     /* Translation Footer

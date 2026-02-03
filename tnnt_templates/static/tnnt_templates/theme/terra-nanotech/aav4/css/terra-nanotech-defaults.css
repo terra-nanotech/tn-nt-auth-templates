@@ -8,16 +8,16 @@
     --white: rgb(255 255 255);
 
     /* Usually: https://web-cdn.eveonline.com/aws/eveonline/sso/background.jpg */
+    --bs-body-color: var(--font-color-default);
     --background-body-default: url("../../../../images/expansion/catalyst/EVE-Catalyst.jpg") no-repeat center center fixed;
+    --bs-code-color: var(--font-color-default);
+    --background-color-dark-transparency: rgb(20 20 20 / 75%);
     --background-color-default: rgb(39 43 48);
     --font-color-default: rgb(200 200 200);
-    --background-color-light-transparency: rgb(58 63 68 / 50%);
     --background-color-default-transparency: rgb(39 43 48 / 75%);
-    --background-color-dark-transparency: rgb(20 20 20 / 75%);
+    --background-color-light-transparency: rgb(58 63 68 / 50%);
     --font-family-card-title: georgia, times, serif;
     --font-family-code: "Fira Code", monospace;
-    --font-family-default: roboto, "Helvetica Neue", sans-serif;
-    --backdrop-filter-default: saturate(1.5) blur(1.5em);
 
     /* END TN-NT Theme Defaults
     --------------------------------------------------------------------------------- */
@@ -25,8 +25,8 @@
     /* Bootstrap defaults overrides
     --------------------------------------------------------------------------------- */
 
-    --bs-body-color: var(--font-color-default);
-    --bs-code-color: var(--font-color-default);
+    --font-family-default: roboto, "Helvetica Neue", sans-serif;
+    --backdrop-filter-default: saturate(1.5) blur(1.5em);
     --bs-font-monospace: var(--font-family-code);
     --bs-font-sans-serif: var(--font-family-default);
 
@@ -48,7 +48,6 @@
 
 /* END Default theme variables
 ------------------------------------------------------------------------------------- */
-
 
 /* Hide placeholders in form elements when they are being focused
 ------------------------------------------------------------------------------------- */
