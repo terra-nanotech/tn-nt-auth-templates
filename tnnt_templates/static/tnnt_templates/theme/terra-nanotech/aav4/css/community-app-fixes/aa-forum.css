@@ -90,7 +90,6 @@
 
     /* SVG icons
     --------------------------------------------------------------------------------- */
-
     html[data-theme="terra-nanotech"] .aa-forum svg.svg-icon-post {
         fill: rgb(133 133 133);
     }
@@ -118,13 +117,13 @@
 
 @media all {
     .hljs-copy-container {
-        top: 0.75rem;
         right: 0.75rem;
+        top: 0.75rem;
     }
 
     .hljs-copy-button:not([data-copied="true"])::before {
-        width: 1.25rem;
         height: 1.25rem;
+        width: 1.25rem;
     }
 }
 
