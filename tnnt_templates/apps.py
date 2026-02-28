@@ -5,7 +5,8 @@ TN-NT Templates app config
 # Django
 from django.apps import AppConfig
 
-from . import __version__
+# AA Templates: Terra Nanotech
+from tnnt_templates import __version__
 
 
 class TnntTemplatesConfig(AppConfig):
