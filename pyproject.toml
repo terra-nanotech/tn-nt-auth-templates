@@ -52,10 +52,8 @@ urls.Codecov = "https://codecov.io/gh/terra-nanotech/tn-nt-auth-templates"
 urls.Documentation = "https://github.com/terra-nanotech/tn-nt-auth-templates/blob/master/README.md"
 urls.GitHub = "https://github.com/terra-nanotech/tn-nt-auth-templates"
 
-[tool.hatch.build]
-include = [
+[tool.hatch]
+build.include = [
     "/tnnt_templates",
 ]
-
-[tool.hatch.version]
-path = "tnnt_templates/__init__.py"
+version.path = "tnnt_templates/__init__.py"
