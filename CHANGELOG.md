@@ -46,6 +46,10 @@ Section Order:
 
 - Count for "Unknown Packages" in Package Monitor templates
 
+### Changed
+
+- Switched the DataTable in Package Monitor templates to use DataTables 2
+
 ## [3.15.0] - 2026-02-03
 
 ### Added
