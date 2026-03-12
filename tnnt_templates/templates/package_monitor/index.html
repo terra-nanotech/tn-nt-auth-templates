@@ -159,38 +159,61 @@
 {% endblock aa_package_monitor %}
 
 {% block extra_javascript %}
-    {% include "bundles/datatables-js-bs5.html" %}
+    {% include "bundles/datatables-2-js-bs5.html" %}
+    {% include "bundles/datatables-2-columncontrol-js-bs5.html" %}
     {% include "bundles/clipboard-js.html" %}
 
     {% get_datatables_language_static LANGUAGE_CODE as DT_LANG_PATH %}
 
     <script>
-        /* global bootstrap, ClipboardJS */
+        /* global bootstrap, ClipboardJS, DataTable */
 
         $(document).ready(() => {
             'use strict';
 
+            const culumnControlDefaults = [
+                {
+                    target: 0,
+                    content: ['order',]
+                },
+                {
+                    target: 1,
+                    content: ['search']
+                }
+            ];
+            const columnControlDisabled = []
+
             /** Copy given text to the clipboard */
             const clipboard = new ClipboardJS('.copy_to_clipboard');
 
-            clipboard.on('success', (e) => {
+            clipboard.on('success', e => {
                 e.clearSelection();
-            }).on('error', (e) => {
+            }).on('error', e => {
                 console.error('Action:', e.action);
                 console.error('Trigger:', e.trigger);
             });
 
-            /* dataTable def */
-            $('#tab_package_list').DataTable({
+            // Render DataTable
+            const dt = new DataTable($('#tab_package_list'), {
+                order: [[0, "asc"]],
+                ordering: { // See: https://datatables.net/reference/option/ordering
+                    handler: true, // Enable ordering by clicking on column headers
+                    indicators: false, // Disable ordering indicators on column headers (important when ColumnControl is used)
+                },
+                paging: false,
+                layout: { // See: https://datatables.net/reference/option/layout
+                    topStart: 'pageLength',
+                    topEnd: 'search',
+                    bottomStart: 'info',
+                    bottomEnd: 'paging'
+                },
                 language: {
                     url: '{{ DT_LANG_PATH }}'
                 },
                 ajax: {
                     url: '{% url "package_monitor:package_list_data" %}?filter={{ filter }}',
                     dataSrc: '',
-                    cache: false
                 },
-
                 columns: [
                     {
                         data: 'name_link'
@@ -211,19 +234,17 @@
                         data: 'used_by'
                     }
                 ],
-
-                ordering: false,
-                info: false,
-
                 columnDefs: [
                     {
-                        'sortable': false,
-                        'targets': [0, 1, 2, 3, 4]
+                        targets: [0, 3, 4, 5],
+                        columnControl: culumnControlDefaults,
                     },
+                    {
+                        targets: [1, 2],
+                        columnControl: columnControlDisabled,
+                        sortable: false,
+                    }
                 ],
-
-                paging: false,
-
                 rowCallback: (row, data, index) => {
                     if (data['is_outdated']) {
                         $(row).find('td:eq(1)').addClass('table-warning')
@@ -234,19 +255,17 @@
                 initComplete: () => {
                     // Convert title attributes to Bootstrap tooltips
                     document.querySelectorAll('#tab_package_list [title]')
-                        .forEach((el) => {
+                        .forEach(el => {
                             el.setAttribute('data-bs-tooltip', 'aa-package-monitor');
                         });
 
                     // Enable all tooltips for this package
                     document.querySelectorAll(`[data-bs-tooltip="aa-package-monitor"]`)
-                        .forEach((tooltipTriggerEl) => {
-                            return new bootstrap.Tooltip(tooltipTriggerEl);
-                        });
+                        .forEach(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
                 }
             });
 
-            $('#modalRefreshingDistributions').on('show.bs.modal', (event) => {
+            $('#modalRefreshingDistributions').on('show.bs.modal', event => {
                 $('#modalLoadError').html('');
                 $('#modalLoadInfo').show();
 
@@ -254,7 +273,7 @@
                     .done(() => {
                         window.location.reload(true);
                     })
-                    .fail(( jqXHR ) => {
+                    .fail(jqXHR => {
                         console.log(jqXHR);
 
                         $('#modalLoadInfo').hide();
@@ -268,7 +287,8 @@
 {% endblock extra_javascript %}
 
 {% block extra_css %}
-    {% include 'bundles/datatables-css-bs5.html' %}
+    {% include 'bundles/datatables-2-css-bs5.html' %}
+    {% include 'bundles/datatables-2-columncontrol-css-bs5.html' %}
 
     {% sri_static "package_monitor/css/global.css" %}
     {% sri_static "package_monitor/css/package_list.css" %}
