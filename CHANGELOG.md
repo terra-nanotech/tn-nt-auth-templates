@@ -42,6 +42,10 @@ Section Order:
 
 <!-- Your changes go here -->
 
+### Fixed
+
+- Count for "Unknown Packages" in Package Monitor templates
+
 ## [3.15.0] - 2026-02-03
 
 ### Added
