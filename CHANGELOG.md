@@ -42,6 +42,10 @@ Section Order:
 
 <!-- Your changes go here -->
 
+### Changed
+
+- ESI token select template now fits into the overall theme
+
 ## [3.15.1] - 2026-03-12
 
 ### Fixed
