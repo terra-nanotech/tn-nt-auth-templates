@@ -44,6 +44,8 @@ Section Order:
 
 ### Removed
 
+- Renamed `aav4` to `bootstrap5` in theme path to reflect the fact that it is not
+  only for AA v4, but Bootstrap 5 in general
 - Bootstrap 3 fallback
 - Select token template, as it is now provided by Alliance Auth v5
 
