@@ -44,6 +44,7 @@ Section Order:
 
 ### Removed
 
+- Bootstrap 3 fallback
 - Select token template, as it is now provided by Alliance Auth v5
 
 ## [3.15.2] - 2026-03-19
