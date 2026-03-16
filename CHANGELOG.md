@@ -42,6 +42,10 @@ Section Order:
 
 <!-- Your changes go here -->
 
+### Removed
+
+- Select token template, as it is now provided by Alliance Auth v5
+
 ## [3.15.2] - 2026-03-19
 
 ### Changed
