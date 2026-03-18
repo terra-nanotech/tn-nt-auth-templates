@@ -42,6 +42,10 @@ Section Order:
 
 <!-- Your changes go here -->
 
+### Added
+
+- Check if the user is already logged in when the login page is opened
+
 ### Removed
 
 - Renamed `aav4` to `bootstrap5` in theme path to reflect the fact that it is not
