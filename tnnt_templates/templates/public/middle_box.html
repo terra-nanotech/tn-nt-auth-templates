@@ -16,7 +16,15 @@
                 <div class="card-body">
                     {% if user.is_authenticated %}
                         <div class="alert alert-info">
-                            {% translate "You are already logged in as" %} {{ user.username }}.
+                            <p class="mb-0">
+                                {% translate "You are already logged in as" %} {{ user.username }}.
+                            </p>
+                        </div>
+
+                        <div class="aa-callout aa-callout-info mb-3">
+                            <p class="mb-0">
+                                {% translate "You are seeing this page because you either opened a direct link to the login or to a page you don't have access to." %}
+                            </p>
                         </div>
 
                         <div>
