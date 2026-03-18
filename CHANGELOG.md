@@ -44,6 +44,7 @@ Section Order:
 
 ### Added
 
+- (Internal) Tests for AAv5 compatibility
 - Check if the user is already logged in when the login page is opened
 
 ### Removed
