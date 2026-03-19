@@ -9,7 +9,7 @@
 
     /* Usually: https://web-cdn.eveonline.com/aws/eveonline/sso/background.jpg */
     --bs-body-color: var(--font-color-default);
-    --background-body-default: url("../../../../images/expansion/catalyst/EVE-Catalyst.jpg") no-repeat center center fixed;
+    --background-body-default: url("../../../../images/expansion/catalyst/EVE-Catalyst-Update.jpg") no-repeat center center fixed;
     --bs-code-color: var(--font-color-default);
     --background-color-dark-transparency: rgb(20 20 20 / 75%);
     --background-color-default: rgb(39 43 48);
