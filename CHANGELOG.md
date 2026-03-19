@@ -42,6 +42,10 @@ Section Order:
 
 <!-- Your changes go here -->
 
+### Change
+
+- Background image updated to match the EVE Online Catalys expansion update
+
 ## [3.15.1] - 2026-03-12
 
 ### Fixed
