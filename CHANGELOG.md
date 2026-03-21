@@ -42,6 +42,18 @@ Section Order:
 
 <!-- Your changes go here -->
 
+### Added
+
+- (Internal) Tests for AAv5 compatibility
+- Check if the user is already logged in when the login page is opened
+
+### Removed
+
+- Renamed `aav4` to `bootstrap5` in theme path to reflect the fact that it is not
+  only for AA v4, but Bootstrap 5 in general
+- Bootstrap 3 fallback
+- Select token template, as it is now provided by Alliance Auth v5
+
 ## [3.15.2] - 2026-03-19
 
 ### Changed
