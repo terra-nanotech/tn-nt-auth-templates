@@ -24,6 +24,7 @@ classifiers = [
     "Environment :: Web Environment",
     "Framework :: Django",
     "Framework :: Django :: 4.2",
+    "Framework :: Django :: 5.2",
     "Intended Audience :: Developers",
     "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
     "Operating System :: OS Independent",
@@ -42,6 +43,12 @@ dynamic = [
 dependencies = [
     "allianceauth>=4.10",
 ]
+optional-dependencies.tests-allianceauth-development = [
+    "aa-gdpr",
+    "allianceauth @ git+https://gitlab.com/allianceauth/allianceauth#egg=master",
+    "coverage",
+    "django-webtest",
+]
 optional-dependencies.tests-allianceauth-latest = [
     "aa-gdpr",
     "coverage",
@@ -57,3 +64,4 @@ build.include = [
     "/tnnt_templates",
 ]
 version.path = "tnnt_templates/__init__.py"
+metadata.allow-direct-references = true
