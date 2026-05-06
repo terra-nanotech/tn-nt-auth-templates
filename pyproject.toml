@@ -43,12 +43,6 @@ dynamic = [
 dependencies = [
     "allianceauth>=4.10",
 ]
-optional-dependencies.tests-allianceauth-development = [
-    "aa-gdpr",
-    "allianceauth @ git+https://gitlab.com/allianceauth/allianceauth#egg=master",
-    "coverage",
-    "django-webtest",
-]
 optional-dependencies.tests-allianceauth-latest = [
     "aa-gdpr",
     "coverage",
@@ -64,4 +58,3 @@ build.include = [
     "/tnnt_templates",
 ]
 version.path = "tnnt_templates/__init__.py"
-metadata.allow-direct-references = true
