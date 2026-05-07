@@ -45,6 +45,7 @@ Section Order:
 
 ### Added
 
+- Template bundels to load AA provided libs locally instead of CDNs
 - (Internal) Tests for AAv5 compatibility
 - Check if the user is already logged in when the login page is opened
 
