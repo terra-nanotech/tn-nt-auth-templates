@@ -43,6 +43,12 @@ Section Order:
 
 <!-- Your changes go here -->
 
+## [3.15.3] - 2026-05-07
+
+### Removed
+
+- Template override for `allianceauth-blacklist`
+
 ## [3.15.2] - 2026-03-19
 
 ### Changed
@@ -1743,6 +1749,7 @@ run it with any version prior!**
 [3.15.0]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.14.1...v3.15.0 "v3.15.0"
 [3.15.1]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.15.0...v3.15.1 "v3.15.1"
 [3.15.2]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.15.1...v3.15.2 "v3.15.2"
+[3.15.3]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.15.2...v3.15.3 "v3.15.3"
 [3.2.0]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.1.0...v3.2.0 "v3.2.0"
 [3.3.0]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.2.0...v3.3.0 "v3.3.0"
 [3.4.0]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.3.0...v3.4.0 "v3.4.0"
@@ -1769,6 +1776,6 @@ run it with any version prior!**
 [3.8.6]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.8.5...v3.8.6 "v3.8.6"
 [3.9.0]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.8.6...v3.9.0 "v3.9.0"
 [3.9.1]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.9.0...v3.9.1 "v3.9.1"
-[in development]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.15.2...HEAD "In Development"
+[in development]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.15.3...HEAD "In Development"
 [keep a changelog]: http://keepachangelog.com/ "Keep a Changelog"
 [semantic versioning]: http://semver.org/ "Semantic Versioning"
