@@ -67,13 +67,6 @@ if "tnnt_templates" in INSTALLED_APPS:
     INSTALLED_APPS.remove("allianceauth.theme.flatly")
     INSTALLED_APPS.remove("allianceauth.theme.materia")
 
-    # If you are using AA-GDPR, you need to remove the darkly, flatly and materia themes
-    # added by AA-GDPR as well.
-    if "aagdpr" in INSTALLED_APPS:
-        INSTALLED_APPS.remove("aagdpr.theme.darkly")
-        INSTALLED_APPS.remove("aagdpr.theme.flatly")
-        INSTALLED_APPS.remove("aagdpr.theme.materia")
-
     # Load Terra Nanotech theme
     DEFAULT_THEME = (
         "tnnt_templates.theme.terra_nanotech.auth_hooks.TerraNanotechThemeHook"
