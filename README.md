@@ -9,6 +9,7 @@
 [![Code Style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](http://black.readthedocs.io/en/latest/)
 [![Checks](https://github.com/terra-nanotech/tn-nt-auth-templates/actions/workflows/automated-checks.yml/badge.svg)](https://github.com/terra-nanotech/tn-nt-auth-templates/actions/workflows/automated-checks.yml)
 [![codecov](https://codecov.io/gh/terra-nanotech/tn-nt-auth-templates/branch/master/graph/badge.svg?token=4JLA8CXJ64)](https://codecov.io/gh/terra-nanotech/tn-nt-auth-templates)
+[![Alliance Auth Compatibility](https://img.shields.io/badge/Alliance_Auth-v4_%7C_v5-brightgreen)](https://gitlab.com/allianceauth/allianceauth)
 
 **Terra Nanotech Template Overrides for Alliance Auth**
 
@@ -66,19 +67,8 @@ if "tnnt_templates" in INSTALLED_APPS:
     INSTALLED_APPS.remove("allianceauth.theme.flatly")
     INSTALLED_APPS.remove("allianceauth.theme.materia")
 
-    # If you are using AA-GDPR, you need to remove the darkly, flatly and materia themes
-    # added by AA-GDPR as well.
-    if "aagdpr" in INSTALLED_APPS:
-        INSTALLED_APPS.remove("aagdpr.theme.darkly")
-        INSTALLED_APPS.remove("aagdpr.theme.flatly")
-        INSTALLED_APPS.remove("aagdpr.theme.materia")
-
     # Load Terra Nanotech theme
     DEFAULT_THEME = (
-        "tnnt_templates.theme.terra_nanotech.auth_hooks.TerraNanotechThemeHook"
-    )
-    # Legacy AAv3 user.profile.night_mode=1
-    DEFAULT_THEME_DARK = (
         "tnnt_templates.theme.terra_nanotech.auth_hooks.TerraNanotechThemeHook"
     )
 

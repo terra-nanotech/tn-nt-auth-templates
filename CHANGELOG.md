@@ -43,6 +43,19 @@ Section Order:
 
 <!-- Your changes go here -->
 
+### Added
+
+- Template bundels to load AA provided libs locally instead of CDNs
+- (Internal) Tests for AAv5 compatibility
+- Check if the user is already logged in when the login page is opened
+
+### Removed
+
+- Renamed `aav4` to `bootstrap5` in theme path to reflect the fact that it is not
+  only for AA v4, but Bootstrap 5 in general
+- Bootstrap 3 fallback
+- Select token template, as it is now provided by Alliance Auth v5
+
 ## [3.15.3] - 2026-05-07
 
 ### Removed

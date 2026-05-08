@@ -5,13 +5,14 @@ This module contains unit tests for custom template tags used in the TN-NT Auth 
 The tests ensure that the template tags behave as expected under various conditions.
 """
 
+# Standard Library
+from unittest.mock import patch
+
 # Django
 from django.template import Context, Template
-from django.test import modify_settings
 
 # AA Templates: Terra Nanotech
-from tnnt_templates import __version__
-from tnnt_templates.templatetags.tnnt_templates import startswith
+from tnnt_templates.templatetags.tnnt_templates import is_app_installed, startswith
 from tnnt_templates.tests import BaseTestCase
 
 
@@ -109,44 +110,73 @@ class TestTagIsAppInstalled(BaseTestCase):
     Unit test class for the `is_app_installed` template tag.
     """
 
-    @modify_settings(INSTALLED_APPS={"append": "aagdpr"})
-    def test_should_return_true_when_app_is_installed(self):
+    def test_returns_true_when_app_is_installed(self):
         """
-        Tests that the template renders 'True' when the specified app is installed.
+        Tests that the `is_app_installed` filter returns True when the app is installed.
 
-        This test verifies the behavior of the custom `is_app_installed` template tag
-        by appending the app "aagdpr" to the `INSTALLED_APPS` setting. It ensures
-        that the template correctly identifies the app as installed and renders 'True'.
-
-        :return: None
+        :return:
+        :rtype:
         """
 
-        template_to_render = Template(
-            "{% load tnnt_templates %}"
-            '{% is_app_installed "aagdpr" as is_myapp_installed %}'
-            "{% if is_myapp_installed %}True{% else %}False{% endif %}"
+        with patch(
+            "tnnt_templates.templatetags.tnnt_templates.apps.is_installed",
+            return_value=True,
+        ) as mock_is_installed:
+            result = is_app_installed("some_app")
+            mock_is_installed.assert_called_once_with("some_app")
+
+            self.assertTrue(result)
+
+    def test_returns_false_when_app_is_not_installed(self):
+        """
+        Tests that the `is_app_installed` filter returns False when the app is not installed.
+
+        :return:
+        :rtype:
+        """
+
+        with patch(
+            "tnnt_templates.templatetags.tnnt_templates.apps.is_installed",
+            return_value=False,
+        ) as mock_is_installed:
+            result = is_app_installed("missing_app")
+            mock_is_installed.assert_called_once_with("missing_app")
+
+            self.assertFalse(result)
+
+    def test_forwards_non_string_argument_to_apps_is_installed(self):
+        """
+        Tests that the `is_app_installed` filter returns True when the app is installed and forwards non-string arguments to `apps.is_installed`.
+
+        :return:
+        :rtype:
+        """
+        with patch(
+            "tnnt_templates.templatetags.tnnt_templates.apps.is_installed",
+            return_value=False,
+        ) as mock_is_installed:
+            value = 12345
+            result = is_app_installed(value)
+            mock_is_installed.assert_called_once_with(value)
+
+            self.assertFalse(result)
+
+    def test_integration_template_tag_retrieves_value_into_context(self):
+        """
+        Test integration
+
+        :return:
+        :rtype:
+        """
+
+        tpl = Template(
+            '{% load tnnt_templates %}{% is_app_installed "myapp" as installed %}installed={{ installed }}'
         )
-        rendered_template = template_to_render.render(Context({"version": __version__}))
 
-        self.assertEqual(rendered_template, "True")
+        with patch(
+            "tnnt_templates.templatetags.tnnt_templates.apps.is_installed",
+            return_value=True,
+        ):
+            rendered = tpl.render(Context({})).strip()
 
-    @modify_settings(INSTALLED_APPS={"remove": "aagdpr"})
-    def test_should_return_false_when_app_is_not_installed(self):
-        """
-        Tests that the template renders 'False' when the specified app is not installed.
-
-        This test verifies the behavior of the custom `is_app_installed` template tag
-        by removing the app "aagdpr" from the `INSTALLED_APPS` setting. It ensures
-        that the template correctly identifies the app as not installed and renders 'False'.
-
-        :return: None
-        """
-
-        template_to_render = Template(
-            "{% load tnnt_templates %}"
-            '{% is_app_installed "aagdpr" as is_myapp_installed %}'
-            "{% if is_myapp_installed %}True{% else %}False{% endif %}"
-        )
-        rendered_template = template_to_render.render(Context({"version": __version__}))
-
-        self.assertEqual(rendered_template, "False")
+        self.assertIn("installed=True", rendered)
