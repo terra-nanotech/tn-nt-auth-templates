@@ -43,16 +43,18 @@ Section Order:
 
 <!-- Your changes go here -->
 
+## [4.0.0] - 2026-05-08
+
 ### Added
 
 - Template bundels to load AA provided libs locally instead of CDNs
 - (Internal) Tests for AAv5 compatibility
 - Check if the user is already logged in when the login page is opened
+- Renamed `aav4` to `bootstrap5` in theme path to reflect the fact that it is not
+  only for AA v4, but Bootstrap 5 in general
 
 ### Removed
 
-- Renamed `aav4` to `bootstrap5` in theme path to reflect the fact that it is not
-  only for AA v4, but Bootstrap 5 in general
 - Bootstrap 3 fallback
 - Select token template, as it is now provided by Alliance Auth v5
 
@@ -1789,6 +1791,7 @@ run it with any version prior!**
 [3.8.6]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.8.5...v3.8.6 "v3.8.6"
 [3.9.0]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.8.6...v3.9.0 "v3.9.0"
 [3.9.1]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.9.0...v3.9.1 "v3.9.1"
-[in development]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.15.3...HEAD "In Development"
+[4.0.0]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.15.3...v4.0.0 "v4.0.0"
+[in development]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v4.0.0...HEAD "In Development"
 [keep a changelog]: http://keepachangelog.com/ "Keep a Changelog"
 [semantic versioning]: http://semver.org/ "Semantic Versioning"
