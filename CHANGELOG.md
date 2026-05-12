@@ -43,6 +43,10 @@ Section Order:
 
 <!-- Your changes go here -->
 
+### Changed
+
+- Templates for Package Monitor updated
+
 ## [4.0.0] - 2026-05-08
 
 ### Added

@@ -20,23 +20,15 @@
 
                 <div class="modal-body">
                     <p>
-                        {% blocktranslate %}
-                            Refreshing data for approx. {{ all_count }} distributions...
+                        {% blocktranslate with display_value=all_count|default:"?" %}
+                            Refreshing data for approx. {{ display_value }} distributions...
                         {% endblocktranslate %}
                     </p>
 
                     <div id="modalLoadInfo">
-                        {% if NIGHT_MODE %}
-                            <img
-                                src="{% static 'package_monitor/images/Spinner-1s-64px-dark.gif' %}"
-                                alt="Loading Data"
-                            >
-                        {% else %}
-                            <img
-                                src="{% static 'package_monitor/images/Spinner-1s-64px-light.gif' %}"
-                                alt="Loading Data"
-                            >
-                        {% endif %}
+                        <svg class="package-monitor-loading-spinner">
+                            <use href="#aa-loading-spinner"></use>
+                        </svg>
 
                         <p class="text-muted"></p>
                     </div>

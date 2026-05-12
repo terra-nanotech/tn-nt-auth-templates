@@ -13,7 +13,10 @@
             href="{% url 'package_monitor:index' %}?filter=all"
         >
             {% translate "All Packages" %}
-            &nbsp;<span class="badge text-bg-secondary">{{ all_count }}</span>
+
+            {% if all_count %}
+                &nbsp;<span class="badge text-bg-secondary">{{ all_count }}</span>
+            {% endif%}
         </a>
     </li>
 
@@ -24,7 +27,10 @@
                 href="{% url 'package_monitor:index' %}?filter=current"
             >
                 {% translate "Current" %}
-                &nbsp;<span class="badge text-bg-secondary">{{ current_count }}</span>
+
+                {% if current_count %}
+                    &nbsp;<span class="badge text-bg-secondary">{{ current_count }}</span>
+                {% endif%}
             </a>
         </li>
 
@@ -34,7 +40,10 @@
                 href="{% url 'package_monitor:index' %}?filter=outdated"
             >
                 {% translate "Update Available" %}
-                {% if outdated_count > 0 %}&nbsp;<span class="badge text-bg-danger">{{ outdated_count }}</span>{% endif%}
+
+                {% if outdated_count %}
+                    &nbsp;<span class="badge text-bg-danger">{{ outdated_count }}</span>
+                {% endif%}
             </a>
         </li>
     {% endif %}
@@ -48,7 +57,10 @@
                 data-bs-tooltip="aa-package-monitor"
             >
                 {% translate 'Unknown packages' %}
-                {% if unknown_count > 0 %}&nbsp;<span class="badge text-bg-secondary">{{ unknown_count }}</span>{% endif%}
+
+                {% if unknown_count %}
+                    &nbsp;<span class="badge text-bg-secondary">{{ unknown_count }}</span>
+                {% endif%}
             </a>
         </li>
     {% endif %}
