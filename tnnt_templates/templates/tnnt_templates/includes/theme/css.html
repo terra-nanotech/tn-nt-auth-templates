@@ -7,25 +7,30 @@
 {% sri_static "tnnt_templates/theme/terra-nanotech/bootstrap5/css/terra-nanotech-fonts.min.css" %}
 {% sri_static "tnnt_templates/theme/terra-nanotech/bootstrap5/css/terra-nanotech.min.css" %}
 
-{% if request.path %}
-    {% if request.path|startswith:"/forum/" %}
+{% with community_base="tnnt_templates/theme/terra-nanotech/bootstrap5/css/community-app-fixes/" libs_base="tnnt_templates/libs/" %}
+    {% if request.path|default:''|startswith:"/forum/" %}
         <!-- AA Forum related CSS -->
-        {% sri_static "tnnt_templates/libs/fira-code/6.2.0/fira_code.min.css" %}
-        {% sri_static "tnnt_templates/libs/highlightjs/11.10.0/styles/github-dark.min.css" %}
-        {% sri_static "tnnt_templates/libs/highlightjs-copy/1.0.6/highlightjs-copy.min.css" %}
-        {% sri_static "tnnt_templates/theme/terra-nanotech/bootstrap5/css/community-app-fixes/aa-forum.min.css" %}
-        {% sri_static "tnnt_templates/theme/terra-nanotech/bootstrap5/css/community-app-fixes/ckeditor-5.min.css" %}
+        {% sri_static libs_base|add:"fira-code/6.2.0/fira_code.min.css" %}
+        {% sri_static libs_base|add:"highlightjs/11.10.0/styles/github-dark.min.css" %}
+        {% sri_static libs_base|add:"highlightjs-copy/1.0.6/highlightjs-copy.min.css" %}
+
+        {% sri_static community_base|add:"aa-forum.min.css" %}
+        {% sri_static community_base|add:"ckeditor-5.min.css" %}
         <!-- AA Forum related CSS Ends -->
-    {% elif request.path|startswith:"/bulletin-board/" %}
-        {% sri_static "tnnt_templates/theme/terra-nanotech/bootstrap5/css/community-app-fixes/ckeditor-5.min.css" %}
-    {% elif request.path|startswith:"/sovereignty-timer/" %}
+    {% elif request.path|default:''|startswith:"/bulletin-board/" %}
+        {% sri_static community_base|add:"ckeditor-5.min.css" %}
+    {% elif request.path|default:''|startswith:"/sovereignty-timer/" %}
         <!-- AA Sovereignty Timer related CSS -->
-        {% sri_static "tnnt_templates/theme/terra-nanotech/bootstrap5/css/community-app-fixes/aa-sov-timer.min.css" %}
+        {% sri_static community_base|add:"aa-sov-timer.min.css" %}
         <!-- AA Sovereignty Timer related CSS Ends -->
-    {% elif request.path|startswith:"/ship-replacement/" %}
+    {% elif request.path|default:''|startswith:"/ship-replacement/" %}
         <!-- AA SRP related CSS -->
-        {% sri_static "tnnt_templates/theme/terra-nanotech/bootstrap5/css/community-app-fixes/aa-srp.min.css" %}
+        {% sri_static community_base|add:"aa-srp.min.css" %}
         <!-- AA SRP related CSS Ends -->
+    {% elif request.path|default:''|startswith:"/package_monitor/" %}
+        <!-- AA Package Monitor related CSS -->
+        {% sri_static community_base|add:"aa-package-monitor.min.css" %}
+        <!-- AA Package Monitor related CSS Ends -->
     {% endif %}
-{% endif %}
+{% endwith %}
 <!-- Terra Nanotech Theme CSS Ends -->
