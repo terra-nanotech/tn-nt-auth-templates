@@ -43,6 +43,8 @@ Section Order:
 
 <!-- Your changes go here -->
 
+## [4.0.1] - 2026-05-12
+
 ### Changed
 
 - Templates for Package Monitor updated
@@ -1796,6 +1798,7 @@ run it with any version prior!**
 [3.9.0]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.8.6...v3.9.0 "v3.9.0"
 [3.9.1]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.9.0...v3.9.1 "v3.9.1"
 [4.0.0]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.15.3...v4.0.0 "v4.0.0"
-[in development]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v4.0.0...HEAD "In Development"
+[4.0.1]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v4.0.0...v4.0.1 "v4.0.1"
+[in development]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v4.0.1...HEAD "In Development"
 [keep a changelog]: http://keepachangelog.com/ "Keep a Changelog"
 [semantic versioning]: http://semver.org/ "Semantic Versioning"
