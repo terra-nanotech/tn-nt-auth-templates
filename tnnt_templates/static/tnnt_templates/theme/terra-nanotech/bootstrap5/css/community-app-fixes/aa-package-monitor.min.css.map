@@ -1,1 +1,1 @@
-{"version":3,"sources":["aa-package-monitor.css"],"names":[],"mappings":"AAAA,A,WACI,gC,CACI,W,CACA,Y","file":"aa-package-monitor.css","sourcesContent":["@media all {\n    .package-monitor-loading-spinner {\n        height: 2rem;\n        width: 2rem;\n    }\n}\n"]}
+{"version":3,"sources":["aa-package-monitor.css"],"names":[],"mappings":"AAAA,A,WACI,gE,CACI,W,CACA,Y","file":"aa-package-monitor.css","sourcesContent":["@media all {\n    html[data-theme=\"terra-nanotech\"] .package-monitor-loading-spinner {\n        height: 2rem;\n        width: 2rem;\n    }\n}\n"]}

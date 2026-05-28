@@ -47,6 +47,10 @@ Section Order:
 
 - AA Forum widget SVG color
 
+### Changed
+
+- Force community apps CSS overrides to be explicit
+
 ## [4.0.1] - 2026-05-12
 
 ### Changed
