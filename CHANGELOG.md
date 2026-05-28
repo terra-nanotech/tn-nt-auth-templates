@@ -43,6 +43,10 @@ Section Order:
 
 <!-- Your changes go here -->
 
+### Fixed
+
+- AA Forum widget SVG color
+
 ## [4.0.1] - 2026-05-12
 
 ### Changed
