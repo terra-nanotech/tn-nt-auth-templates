@@ -53,7 +53,7 @@ urls.Documentation = "https://github.com/terra-nanotech/tn-nt-auth-templates/blo
 urls.GitHub = "https://github.com/terra-nanotech/tn-nt-auth-templates"
 
 [tool.hatch]
+version.path = "tnnt_templates/__init__.py"
 build.include = [
     "/tnnt_templates",
 ]
-version.path = "tnnt_templates/__init__.py"
