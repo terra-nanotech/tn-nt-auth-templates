@@ -43,6 +43,13 @@ Section Order:
 
 <!-- Your changes go here -->
 
+> [!IMPORTANT]
+>
+> **This version needs Alliance Auth v5!**
+>
+> Please make sure to update your Alliance Auth instance **before** you install this
+> version, otherwise an update to Alliance Auth will be pulled in unsupervised.
+
 ### Fixed
 
 - AA Forum widget SVG color
@@ -50,6 +57,10 @@ Section Order:
 ### Changed
 
 - Force community apps CSS overrides to be explicit
+
+### Removed
+
+- Support for Alliance Auth v4
 
 ## [4.0.1] - 2026-05-12
 
