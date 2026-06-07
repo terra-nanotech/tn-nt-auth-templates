@@ -57,6 +57,7 @@ Section Order:
 ### Changed
 
 - Force community apps CSS overrides to be explicit
+- Background to match Cradle of War expansion
 
 ### Removed
 
