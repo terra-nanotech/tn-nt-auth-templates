@@ -43,6 +43,12 @@ Section Order:
 
 <!-- Your changes go here -->
 
+## [5.0.1] - 2026-07-07
+
+### Added
+
+- Support for Python 3.14
+
 ## [5.0.0] - 2026-06-07
 
 > [!IMPORTANT]
@@ -1822,6 +1828,7 @@ run it with any version prior!**
 [4.0.0]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v3.15.3...v4.0.0 "v4.0.0"
 [4.0.1]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v4.0.0...v4.0.1 "v4.0.1"
 [5.0.0]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v4.0.1...v5.0.0 "v5.0.0"
-[in development]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v5.0.0...HEAD "In Development"
+[5.0.1]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v5.0.0...v5.0.1 "v5.0.1"
+[in development]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v5.0.1...HEAD "In Development"
 [keep a changelog]: http://keepachangelog.com/ "Keep a Changelog"
 [semantic versioning]: http://semver.org/ "Semantic Versioning"
