@@ -43,6 +43,10 @@ Section Order:
 
 <!-- Your changes go here -->
 
+### Fixed
+
+- `externalLinks` JS function rel attribute for external links to be `noreferrer` instead of `noreferer`
+
 ## [5.0.1] - 2026-07-07
 
 ### Added

@@ -4,7 +4,8 @@ $(document).ready(() => {
     /**
      * Extend links to external website.
      * » add target="_blank"
-     * » add rel="noopener noreferer"
+     * » add referrerpolicy="no-referrer"
+     * » add rel="noopener noreferrer"
      */
     const externalLinks = () => {
         // Get the current location hostname
@@ -14,7 +15,7 @@ $(document).ready(() => {
         const protocolPattern = /^https?:\/\//i;
 
         // Walk through all links on the current page.
-        $('a').each((index, element) => {
+        $('a').each((index, element) => { // jshint ignore:line
             // Get the href attribute of the link
             const href = $(element).attr('href');
 
@@ -23,10 +24,12 @@ $(document).ready(() => {
                 // Get the hostname of the link
                 const hrefHostname = $(new URL(href)).attr('hostname');
 
-                // Check if the hostname is not in the internalHost array and add the target and rel attributes to the link element.
+                // Check if the hostname is not in the internalHost array and add the target and classes and attributes to the link element.
                 if ($.inArray(hrefHostname, internalHost) === -1) {
+                    $(element).addClass('external-link');
                     $(element).attr('target', '_blank');
-                    $(element).attr('rel', 'noopener noreferer');
+                    $(element).attr('rel', 'noopener noreferrer');
+                    $(element).attr('referrerpolicy', 'no-referrer');
                 }
             }
         });
