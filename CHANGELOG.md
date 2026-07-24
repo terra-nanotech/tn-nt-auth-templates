@@ -43,6 +43,8 @@ Section Order:
 
 <!-- Your changes go here -->
 
+## [5.0.2] - 2026-07-24
+
 ### Fixed
 
 - `externalLinks` JS function rel attribute for external links to be `noreferrer` instead of `noreferer`
@@ -1837,6 +1839,7 @@ run it with any version prior!**
 [4.0.1]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v4.0.0...v4.0.1 "v4.0.1"
 [5.0.0]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v4.0.1...v5.0.0 "v5.0.0"
 [5.0.1]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v5.0.0...v5.0.1 "v5.0.1"
-[in development]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v5.0.1...HEAD "In Development"
+[5.0.2]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v5.0.1...v5.0.2 "v5.0.2"
+[in development]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v5.0.2...HEAD "In Development"
 [keep a changelog]: http://keepachangelog.com/ "Keep a Changelog"
 [semantic versioning]: http://semver.org/ "Semantic Versioning"
