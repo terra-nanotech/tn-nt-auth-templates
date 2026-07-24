@@ -47,6 +47,10 @@ Section Order:
 
 - `externalLinks` JS function rel attribute for external links to be `noreferrer` instead of `noreferer`
 
+### Changed
+
+- Moved background image to a common URL instead of EVE expansion-specific image URLs
+
 ## [5.0.1] - 2026-07-07
 
 ### Added
