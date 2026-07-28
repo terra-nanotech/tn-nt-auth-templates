@@ -1,7 +1,11 @@
 @media all {
-    html[data-theme="terra-nanotech"] .aa-srp .card-srp-request-bulk-actions {
-        background-color: var(--background-color-light-transparency) !important;
+    html[data-theme="terra-nanotech"] {
+        .aa-srp {
+            .card-srp-request-bulk-actions {
+                background-color: var(--background-color-light-transparency) !important;
 
-        --background-color-light-transparency: rgb(58 63 68 / 95%);
+                --background-color-light-transparency: rgb(58 63 68 / 95%);
+            }
+        }
     }
 }

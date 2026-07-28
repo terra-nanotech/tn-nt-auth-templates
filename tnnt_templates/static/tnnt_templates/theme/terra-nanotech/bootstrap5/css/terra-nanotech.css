@@ -1,6 +1,6 @@
-/* Bootstrap defaults overrides
-------------------------------------------------------------------------------------- */
 @media all {
+    /* Bootstrap defaults overrides
+    --------------------------------------------------------------------------------- */
     .progress-bar {
         color: rgb(var(--bs-light-rgb), var(--bs-text-opacity)) !important; /* stylelint-disable-line color-function-notation */
 
@@ -31,12 +31,11 @@
     .list-group {
         --bs-list-group-bg: var(--background-color-light-transparency);
     }
-}
 
-/* Bootstrap fixes
-------------------------------------------------------------------------------------- */
-@media all {
+    /* Bootstrap fixes
+    --------------------------------------------------------------------------------- */
     .navbar-brand {
+        border-right: none !important;
         margin-right: var(--bs-navbar-brand-margin-end);
         padding-left: 0;
     }
@@ -51,20 +50,18 @@
         }
     }
 
-    .navbar .nav-link {
-        padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
-    }
+    .navbar {
+        .nav-link {
+            border-right: none !important;
+            border-left: none !important;
+            padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
+        }
 
-    .navbar .nav-link,
-    .navbar.bg-primary .nav-link.active,
-    .navbar.bg-primary .nav-link:active,
-    .navbar.bg-secondary .nav-link:hover {
-        border-left: none !important;
-    }
-
-    .navbar .nav-link,
-    .navbar-brand {
-        border-right: none !important;
+        &.bg-primary .nav-link.active,
+        &.bg-primary .nav-link:active,
+        &.bg-secondary .nav-link:hover {
+            border-left: none !important;
+        }
     }
 
     .form-control,
@@ -81,19 +78,52 @@
         background-color: inherit;
         border-color: inherit;
     }
-}
 
-/* Terra Nanotech theme
-------------------------------------------------------------------------------------- */
-@media all {
+    /* Terra Nanotech theme
+    --------------------------------------------------------------------------------- */
     html {
-        font-family: var(--font-family-default);
+        font-family: var(--font-family-default), serif;
     }
 
     body {
         background: var(--background-body-default) !important;
         background-size: cover !important;
-        font-family: var(--font-family-default);
+        font-family: var(--font-family-default), serif;
+
+        > nav.navbar {
+            background-color: var(--background-color-light-transparency) !important;
+
+            --background-color-light-transparency: rgb(58 63 68 / 85%);
+        }
+
+        /* Login page
+        ----------------------------------------------------------------------------- */
+
+        &:has(div.card-login) {
+            backdrop-filter: none;
+            height: 100vh;
+            position: relative;
+
+            div.container {
+                left: 0;
+                margin: 0 !important;
+                max-width: 100% !important;
+                padding: 2rem 0;
+                position: absolute;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+
+                > div.row {
+                    margin-left: 0;
+                    max-width: 100%;
+                }
+            }
+
+            div.card-login {
+                backdrop-filter: var(--backdrop-filter-default);
+            }
+        }
     }
 
     .blur-background {
@@ -111,12 +141,6 @@
         backdrop-filter: var(--backdrop-filter-default);
     }
 
-    body > nav.navbar {
-        background-color: var(--background-color-light-transparency) !important;
-
-        --background-color-light-transparency: rgb(58 63 68 / 85%);
-    }
-
     .dropdown-menu {
         background-color: var(--background-color-light-transparency) !important;
 
@@ -129,24 +153,33 @@
         background-color: var(--background-color-light-transparency)
     }
 
-    #sidebar > div > div {
-        background-color: var(--background-color-light-transparency) !important;
+    #sidebar {
+        > div {
+            > div {
+                background-color: var(--background-color-light-transparency) !important;
+
+                > div > div {
+                    background-color: transparent !important;
+                }
+            }
+        }
+
+
     }
 
-    #sidebar > div > div > div > div {
-        background-color: transparent !important;
-    }
+    .nav-pills {
+        .nav-link {
+            background-image: none;
+            border: 1px solid transparent;
 
-    .nav-pills .nav-link {
-        background-image: none;
-        border: 1px solid transparent;
-    }
-
-    .nav-pills .nav-link.active, .nav-pills .nav-link:hover {
-        backdrop-filter: var(--backdrop-filter-default);
-        background-color: var(--background-color-light-transparency);
-        background-image: none;
-        filter: none;
+            &.active,
+            &:hover {
+                backdrop-filter: var(--backdrop-filter-default);
+                background-color: var(--background-color-light-transparency);
+                background-image: none;
+                filter: none;
+            }
+        }
     }
 
     .h1,
@@ -161,21 +194,21 @@
     h4,
     h5,
     h6 {
-        font-family: var(--font-family-default);
+        font-family: var(--font-family-default), serif;
         font-weight: 400;
     }
 
     .tooltip {
-        font-family: var(--font-family-default);
+        font-family: var(--font-family-default), serif;
     }
 
     .popover {
-        font-family: var(--font-family-default);
+        font-family: var(--font-family-default), serif;
     }
 
     code {
         border-radius: var(--bs-border-radius) !important;
-        font-family: var(--font-family-code);
+        font-family: var(--font-family-code), monospace;
         padding: 0.25rem !important;
     }
 
@@ -207,7 +240,7 @@
     .card-header,
     .modal-header {
         color: var(--white);
-        font-family: var(--font-family-card-title);
+        font-family: var(--font-family-card-title), serif;
         font-size: 1rem !important;
         font-weight: 700;
         padding-top: 0.7rem;
@@ -224,14 +257,18 @@
         margin-top: 0.25rem;
     }
 
-    /* Overflowing panel: Right padding on vertical overflow */
-    .overflowing.overflowing-vertically {
-        padding-right: 0.5rem !important;
-    }
+    .overflowing {
+        /* Overflowing panel: Right padding on vertical overflow */
 
-    /* Overflowing panel: Right padding on vertical overflow */
-    .overflowing.overflowing-horizontally {
-        padding-bottom: 0.5rem !important;
+        &.overflowing-vertically {
+            padding-right: 0.5rem !important;
+        }
+
+        /* Overflowing panel: Right padding on vertical overflow */
+
+        &.overflowing-horizontally {
+            padding-bottom: 0.5rem !important;
+        }
     }
 
     .overflowing,
@@ -240,14 +277,18 @@
         transition: all 0.1s ease-in-out;
     }
 
-    /* Character panel: "Add Character" button */
-    #aa-dashboard-panel-characters a.btn[href^="/account/characters/add/"] {
-        margin-left: 0 !important;
-    }
+    #aa-dashboard-panel-characters {
+        /* Character panel: "Add Character" button */
 
-    /* Character panel: "Change Main" button */
-    #aa-dashboard-panel-characters a.btn[href^="/account/characters/main/"] {
-        margin-right: 0 !important;
+        a.btn[href^="/account/characters/add/"] {
+            margin-left: 0 !important;
+        }
+
+        /* Character panel: "Change Main" button */
+
+        a.btn[href^="/account/characters/main/"] {
+            margin-right: 0 !important;
+        }
     }
 
     /* Images: Rounded corners, when not defined otherwise already */
@@ -255,55 +296,31 @@
         border-radius: var(--bs-border-radius) !important;
     }
 
-    /* Login page
-    --------------------------------------------------------------------------------- */
-    body:has(div.card-login) {
-        backdrop-filter: none;
-        height: 100vh;
-        position: relative;
-    }
-
-    body:has(div.card-login) div.container {
-        left: 0;
-        margin: 0 !important;
-        max-width: 100% !important;
-        padding: 2rem 0;
-        position: absolute;
-        right: 0;
-        top: 50%;
-        transform: translateY(-50%);
-    }
-
-    body:has(div.card-login) div.container > div.row {
-        margin-left: 0;
-        max-width: 100%;
-    }
-
-    body:has(div.card-login) div.card-login {
-        backdrop-filter: var(--backdrop-filter-default);
-    }
-
     /* Sidebar Menu
     --------------------------------------------------------------------------------- */
-    #sidebar-menu > li:has(a.nav-link.active),
-    #sidebar-menu > li:has(ul.collapse li a.nav-link.active) {
-        background-color: var(--background-color-light-transparency);
-        border-radius: var(--bs-border-radius);
-    }
+    #sidebar-menu {
+        > li:has(a.nav-link.active),
+        > li:has(ul.collapse li a.nav-link.active) {
+            background-color: var(--background-color-light-transparency);
+            border-radius: var(--bs-border-radius);
+        }
 
-    #sidebar-menu > li:has(ul.collapse li a.nav-link.active) > a.nav-link {
-        color: var(--bs-navbar-active-color);
-    }
+        > li:has(ul.collapse li a.nav-link.active) > a.nav-link {
+            color: var(--bs-navbar-active-color);
+        }
 
-    #sidebar-menu li:has(span.badge) > a[data-bs-toggle="collapse"] {
-        max-width: calc(100% - 111px);
+        li:has(span.badge) > a[data-bs-toggle="collapse"] {
+            max-width: calc(100% - 111px);
+        }
     }
 
     /* DataTables
     --------------------------------------------------------------------------------- */
-    div.dataTables_wrapper div.dataTables_length,
-    div.dataTables_wrapper div.dataTables_filter {
-        margin-bottom: 0.5rem;
+    div.dataTables_wrapper {
+        div.dataTables_length,
+        div.dataTables_filter {
+            margin-bottom: 0.5rem;
+        }
     }
 
     /* DataTables Processing Indicator
