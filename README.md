@@ -46,7 +46,7 @@ ______________________________________________________________________
 ## Install<a name="install"></a>
 
 ```shell
-pip install tnnt-templates==5.0.2
+pip install tnnt-templates==5.0.3
 ```
 
 In `local.py` right after `INSTALLED_APPS`:
@@ -54,8 +54,8 @@ In `local.py` right after `INSTALLED_APPS`:
 ```python
 # TN-NT Auth Templates - https://github.com/terra-nanotech/tn-nt-auth-templates
 INSTALLED_APPS.insert(
-    0, "tnnt_templates"
-)  # Bootstrap 3 fallback for AA community app that haven't been updated to Bootstrap 5 yet.
+    0, "tnnt_templates"  # Template overrides for Terra Nanotech Auth Templates
+)
 
 if "tnnt_templates" in INSTALLED_APPS:
     # Add TN-NT Auth Templates theme
@@ -84,18 +84,4 @@ if "tnnt_templates" in INSTALLED_APPS:
     TNNT_TEMPLATE_ENTITY_ID = 8154711  #  replace with your corp/alliance ID
     TNNT_TEMPLATE_ENTITY_TYPE = "corporation"  # default: "alliance"
     TNNT_TEMPLATE_ENTITY_NAME = "My Awesome Corp/Alliance"  # your corp/alliance name
-```
-
-**Important**
-
-If you are using `AA-GDPR`, the template stuff needs to be **after** the `AA_GDPR`
-entry, like this:
-
-```python
-# GDPR Compliance
-INSTALLED_APPS.insert(0, "aagdpr")
-AVOID_CDN = True
-
-# TN-NT Auth Templates
-INSTALLED_APPS.insert(0, "tnnt_templates")
 ```

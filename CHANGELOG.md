@@ -48,6 +48,8 @@ Section Order:
 
 <!-- Your changes go here -->
 
+## [5.0.3] - 2026-08-04
+
 ### Change
 
 - CSS modernized (If you have an older browser that can't handle the new CSS, update your browser…)
@@ -1849,6 +1851,7 @@ run it with any version prior!**
 [5.0.0]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v4.0.1...v5.0.0 "v5.0.0"
 [5.0.1]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v5.0.0...v5.0.1 "v5.0.1"
 [5.0.2]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v5.0.1...v5.0.2 "v5.0.2"
-[in development]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v5.0.2...HEAD "In Development"
+[5.0.3]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v5.0.2...v5.0.3 "v5.0.3"
+[in development]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v5.0.3...HEAD "In Development"
 [keep a changelog]: http://keepachangelog.com/ "Keep a Changelog"
 [semantic versioning]: http://semver.org/ "Semantic Versioning"
