@@ -48,6 +48,11 @@ Section Order:
 
 <!-- Your changes go here -->
 
+### Added
+
+- The changed minified JS for the main JS file to include the referrer policy for
+  external links…
+
 ## [5.0.3] - 2026-08-04
 
 ### Change
