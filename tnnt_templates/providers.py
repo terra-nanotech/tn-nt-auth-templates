@@ -4,6 +4,11 @@ Providers for the TN-NT Auth Templates application.
 
 # Standard Library
 import logging
+from collections.abc import MutableMapping
+from typing import Any
+
+# AA Templates: Terra Nanotech
+from tnnt_templates import __title__
 
 
 class AppLogger(logging.LoggerAdapter):
@@ -14,28 +19,26 @@ class AppLogger(logging.LoggerAdapter):
     Credits to: Erik Kalkoken
     """
 
-    def __init__(self, my_logger, prefix):
+    def __init__(self, my_logger: logging.Logger):
         """
         Initializes the AppLogger with a logger and a prefix.
 
         :param my_logger: Logger instance
         :type my_logger: logging.Logger
-        :param prefix: Prefix string to add to log messages
-        :type prefix: str
         """
 
         super().__init__(my_logger, {})
 
-        self.prefix = prefix
+        self.prefix = __title__
 
-    def process(self, msg, kwargs):
+    def process(self, msg: str, kwargs: MutableMapping[str, Any]):
         """
         Prepares the log message by adding the prefix.
 
         :param msg: Log message
         :type msg: str
         :param kwargs: Additional keyword arguments
-        :type kwargs: dict
+        :type kwargs: MutableMapping[str, Any]
         :return: Prefixed log message and kwargs
         :rtype: tuple
         """
