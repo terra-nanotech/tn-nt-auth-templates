@@ -48,6 +48,8 @@ Section Order:
 
 <!-- Your changes go here -->
 
+## [5.0.4] - 2026-09-08
+
 ### Added
 
 - The changed minified JS for the main JS file to include the referrer policy for
@@ -1857,6 +1859,7 @@ run it with any version prior!**
 [5.0.1]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v5.0.0...v5.0.1 "v5.0.1"
 [5.0.2]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v5.0.1...v5.0.2 "v5.0.2"
 [5.0.3]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v5.0.2...v5.0.3 "v5.0.3"
-[in development]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v5.0.3...HEAD "In Development"
+[5.0.4]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v5.0.3...v5.0.4 "v5.0.4"
+[in development]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v5.0.4...HEAD "In Development"
 [keep a changelog]: http://keepachangelog.com/ "Keep a Changelog"
 [semantic versioning]: http://semver.org/ "Semantic Versioning"
