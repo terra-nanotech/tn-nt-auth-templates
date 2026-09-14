@@ -48,6 +48,10 @@ Section Order:
 
 <!-- Your changes go here -->
 
+### Removed
+
+- jQuery UI JS bundle override
+
 ## [5.0.4] - 2026-09-08
 
 ### Added
