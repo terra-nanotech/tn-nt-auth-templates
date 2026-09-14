@@ -48,6 +48,8 @@ Section Order:
 
 <!-- Your changes go here -->
 
+## [5.0.5] - 2026-09-14
+
 ### Removed
 
 - jQuery UI JS bundle override
@@ -1864,6 +1866,7 @@ run it with any version prior!**
 [5.0.2]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v5.0.1...v5.0.2 "v5.0.2"
 [5.0.3]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v5.0.2...v5.0.3 "v5.0.3"
 [5.0.4]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v5.0.3...v5.0.4 "v5.0.4"
-[in development]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v5.0.4...HEAD "In Development"
+[5.0.5]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v5.0.4...v5.0.5 "v5.0.5"
+[in development]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v5.0.5...HEAD "In Development"
 [keep a changelog]: http://keepachangelog.com/ "Keep a Changelog"
 [semantic versioning]: http://semver.org/ "Semantic Versioning"
