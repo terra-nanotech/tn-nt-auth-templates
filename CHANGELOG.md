@@ -48,6 +48,8 @@ Section Order:
 
 <!-- Your changes go here -->
 
+## [5.0.6] - 2026-09-16
+
 ### Fixed
 
 - Styling for CorpTools fuel dashboard, until [CorpTools#318](https://github.com/Solar-Helix-Independent-Transport/allianceauth-corp-tools/pull/318) is merged and released
@@ -119,7 +121,7 @@ Section Order:
 
 ### Added
 
-- Template bundels to load AA provided libs locally instead of CDNs
+- Template bundels to load AA provided libraries locally instead of CDNs
 - (Internal) Tests for AAv5 compatibility
 - Check if the user is already logged in when the login page is opened
 - Renamed `aav4` to `bootstrap5` in theme path to reflect the fact that it is not
@@ -370,7 +372,7 @@ Section Order:
 ### Fixed
 
 - Code styling
-- Stylelint issues (Expected "rgba" to be "rgb" (color-function-alias-notation))
+- Stylelint issues (Expected `rgba` to be `rgb` (color-function-alias-notation)))
 
 ### Changed
 
@@ -440,7 +442,7 @@ Section Order:
 
 ### Added
 
-- Corptools skill checks to fittings view
+- CorpTools skill checks to fittings view
 
 ## [3.7.3] - 2025-02-23
 
@@ -471,7 +473,7 @@ Section Order:
 
 ### Fixed
 
-- Datatable translations
+- DataTable translations
 - Missing `li` tags
 
 ## [3.5.0] - 2025-01-12
@@ -883,16 +885,16 @@ run it with any version prior!**
 ### Fixed
 
 - Templates for `mumbletemps`
-- Use our own eve-time js in `mumbletemps` public-facing template
+- Use our own eve-time JS in `mumbletemps` public-facing template
 - HTML Syntax in several templates
 - Left margin for AA Forum in mobile view
 - Left margin for AFAT in mobile view
 - Left margin for AA SRP in mobile view
 - Left margin for AA Sovereignty Timer in mobile view
 - Left margin for AA Bulletin Board in mobile view
-- Left margin for AA Memberaudit in mobile view
+- Left margin for AA Member Audit in mobile view
 - "Pending" button on the groups page
-- Use AA's bundled versions of JavaScripts it provides
+- Use AA's bundled versions of JavaScript it provides
 
 ### Added
 
@@ -924,7 +926,7 @@ run it with any version prior!**
 ### Fixed
 
 - Templates for `mumbletemps`
-- Use our own eve-time js in `mumbletemps` public-facing template
+- Use our own eve-time JS in `mumbletemps` public-facing template
 - HTML Syntax in several templates
 
 ### Added
@@ -951,7 +953,7 @@ run it with any version prior!**
 - Left margin for AA SRP in mobile view
 - Left margin for AA Sovereignty Timer in mobile view
 - Left margin for AA Bulletin Board in mobile view
-- Left margin for AA Memberaudit in mobile view
+- Left margin for AA Member Audit in mobile view
 
 ## [2.6.0-beta.1] - 2022-07-16
 
@@ -961,7 +963,7 @@ run it with any version prior!**
 ### Fixed
 
 - "Pending" button on the groups page
-- Use AA's bundled versions of JavaScripts it provides
+- Use AA's bundled versions of JavaScript it provides
 
 ### Added
 
@@ -1048,7 +1050,7 @@ run it with any version prior!**
 
 - Use proper HTML5 tags instead of self-closing XML/(X)HTML tags
 - Remove deprecated `xlink` notation for SVG
-- Use `{% static "" %}` instead of hardcoded image url in fittings templates
+- Use `{% static "" %}` instead of hardcoded image URL in fittings templates
 
 ### Changed
 
@@ -1238,7 +1240,7 @@ run it with any version prior!**
 
 ### Fixed
 
-- timer_list template for `structuretimers`
+- `timer_list` template for `structuretimers`
 
 ## [1.6.2] - 2021-07-16
 
@@ -1300,7 +1302,7 @@ run it with any version prior!**
 
 - Fira Code font for `<code>` blocks
 - New and better alert messages
-- YouTube plugin for ckEditor. Activate by adding the following to your ckEditor
+- YouTube plugin for CKEditor. Activate by adding the following to your CKEditor
   configuration in your `local.py`
   ```python
   CKEDITOR_CONFIGS = {
@@ -1380,20 +1382,20 @@ run it with any version prior!**
 
 ### Fixed (now as well for AA 2.8.x and not only for the alpha version)
 
-- Define function before use in javascript
-- Background in ckEditor
+- Define function before use in JavaScript
+- Background in CKEditor
 
 ## [1.5.8] - 2021-05-17
 
 ### Fixed
 
-- Define function before use in javascript
+- Define function before use in JavaScript
 
 ## [1.5.7] - 2021-05-17
 
 ### Fixed
 
-- Background in ckEditor
+- Background in CKEditor
 
 ### Changed
 
@@ -1418,15 +1420,15 @@ run it with any version prior!**
 
 - Link to support Discord to admin notifications paned on dashboard
 - JS libraries used by Fittings and Doctrines module, so we don't have to use
-  cloudflare CDN here
-- CSS for ckeditor
+  Cloudflare CDN here
+- CSS for CKEditor
 
 ### Changed
 
 - Templates for AFAT release 2.0.0
 - Link ship icon in doctrine view to open fitting
 - Link ship icon in all fittings view to open fitting
-- Templates for Fittings and Doctrines module, so they don't use cloudflare CDN
+- Templates for Fittings and Doctrines module, so they don't use Cloudflare CDN
 
 ## [1.5.3] - 2021-03-24
 
@@ -1473,7 +1475,7 @@ run it with any version prior!**
 ### Fixed
 
 - django.template.exceptions.TemplateSyntaxError: Invalid filter:
-  'alliance_logo_url' (Missing evelinks template tag)
+  `alliance_logo_url` (Missing `evelinks` template tag)
 - Page title translations
 
 ## [1.4.5] - 2021-03-10
@@ -1526,7 +1528,7 @@ run it with any version prior!**
 
 ### Fixed
 
-- Alliance name in corpstats
+- Alliance name in `corpstats`
 
 ## [1.3.1] - 2021-02-05
 
@@ -1610,17 +1612,17 @@ run it with any version prior!**
 
 ### Added
 
-- Template for mummbletemps invite page
+- Template for `mummbletemps` invite page
 
 ### Fixed
 
-- Table header on corpstats page
+- Table header on `corpstats` page
 
 ## [1.1.1] - 2020-12-27
 
 ### Changed
 
-- Tables in Group and Grou Management views are now DataTables
+- Tables in Group and Group Management views are now DataTables
 
 ## [1.1.0] - 2020.12.22
 
@@ -1650,7 +1652,7 @@ run it with any version prior!**
 
 ### Fixed
 
-- Missing `}` in a django template
+- Missing `}` in a Django template
 
 ## [0.0.5] - 2020.12.14
 
@@ -1660,8 +1662,8 @@ run it with any version prior!**
 
 ### Fixed
 
-- DataTables filter on corpstats
-- Templates for fittings module
+- DataTables filter on `corpstats` page
+- Templates for `fittings` module
 
 ## [0.0.4] - 2020.12.13
 
@@ -1871,6 +1873,7 @@ run it with any version prior!**
 [5.0.3]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v5.0.2...v5.0.3 "v5.0.3"
 [5.0.4]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v5.0.3...v5.0.4 "v5.0.4"
 [5.0.5]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v5.0.4...v5.0.5 "v5.0.5"
-[in development]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v5.0.5...HEAD "In Development"
+[5.0.6]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v5.0.5...v5.0.6 "v5.0.6"
+[in development]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v5.0.6...HEAD "In Development"
 [keep a changelog]: http://keepachangelog.com/ "Keep a Changelog"
 [semantic versioning]: http://semver.org/ "Semantic Versioning"
