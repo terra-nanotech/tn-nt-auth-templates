@@ -1,0 +1,16 @@
+@media all {
+    html[data-theme="terra-nanotech"] {
+        .fuel-dashboard-card {
+            border: none;
+            background-color: var(--background-color-light-transparency);
+
+            &.shadow-sm {
+                box-shadow: none !important;
+            }
+
+            > .card-body {
+                padding: var(--bs-card-spacer-y) var(--bs-card-spacer-x) !important;
+            }
+        }
+    }
+}

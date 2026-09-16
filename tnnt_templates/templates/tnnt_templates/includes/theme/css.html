@@ -31,6 +31,10 @@
         <!-- AA Package Monitor related CSS -->
         {% sri_static community_base|add:"aa-package-monitor.min.css" %}
         <!-- AA Package Monitor related CSS Ends -->
+    {% elif request.path|default:''|startswith:"/audit/" %}
+        <!-- CorpTools related CSS -->
+        {% sri_static community_base|add:"corptools.min.css" %}
+        <!-- CorpTools related CSS Ends -->
     {% endif %}
 {% endwith %}
 <!-- Terra Nanotech Theme CSS Ends -->
