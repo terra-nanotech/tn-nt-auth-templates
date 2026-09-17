@@ -50,6 +50,7 @@ Section Order:
 
 ### Fixed
 
+- CorpTools fuel dashboard card border
 - Typo in CSS classes
 - Sidebar menu top padding
 

@@ -1,8 +1,8 @@
 @media all {
     html[data-theme="terra-nanotech"] {
         .fuel-dashboard-card {
-            border: none;
             background-color: var(--background-color-light-transparency);
+            border: var(--bs-card-border-width) solid var(--bs-card-border-color);
 
             &.shadow-sm {
                 box-shadow: none !important;
