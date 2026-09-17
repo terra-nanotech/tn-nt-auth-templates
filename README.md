@@ -46,7 +46,7 @@ ______________________________________________________________________
 ## Install<a name="install"></a>
 
 ```shell
-pip install tnnt-templates==5.0.6
+pip install tnnt-templates==5.0.7
 ```
 
 In `local.py` right after `INSTALLED_APPS`:

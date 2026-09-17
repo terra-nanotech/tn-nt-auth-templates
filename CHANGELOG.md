@@ -48,6 +48,8 @@ Section Order:
 
 <!-- Your changes go here -->
 
+## [5.0.7] - 2026-09-17
+
 ### Fixed
 
 - CorpTools fuel dashboard card border
@@ -1880,6 +1882,7 @@ run it with any version prior!**
 [5.0.4]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v5.0.3...v5.0.4 "v5.0.4"
 [5.0.5]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v5.0.4...v5.0.5 "v5.0.5"
 [5.0.6]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v5.0.5...v5.0.6 "v5.0.6"
-[in development]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v5.0.6...HEAD "In Development"
+[5.0.7]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v5.0.6...v5.0.7 "v5.0.7"
+[in development]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v5.0.7...HEAD "In Development"
 [keep a changelog]: http://keepachangelog.com/ "Keep a Changelog"
 [semantic versioning]: http://semver.org/ "Semantic Versioning"
