@@ -299,6 +299,8 @@
     /* Sidebar Menu
     --------------------------------------------------------------------------------- */
     #sidebar-menu {
+        padding-top: 1rem !important;
+
         > li:has(a.nav-link.active),
         > li:has(ul.collapse li a.nav-link.active) {
             background-color: var(--background-color-light-transparency);
