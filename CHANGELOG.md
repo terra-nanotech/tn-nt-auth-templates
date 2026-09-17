@@ -52,6 +52,7 @@ Section Order:
 
 ### Fixed
 
+- Typo in CSS classes
 - Sidebar menu top padding
 - Styling for CorpTools fuel dashboard, until [CorpTools#318](https://github.com/Solar-Helix-Independent-Transport/allianceauth-corp-tools/pull/318) is merged and released
 
