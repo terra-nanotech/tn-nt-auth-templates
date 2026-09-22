@@ -9,6 +9,11 @@ node_modules/
 /.tox/
 /coverage.xml
 
+/*.min.css
+/*.min.css.map
+/*.min.js
+/*.min.js.map
+
 .esi-compatibility-date
 .make/myauth-path
 /.make/config-overrides.ini
