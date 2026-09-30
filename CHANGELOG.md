@@ -48,6 +48,10 @@ Section Order:
 
 <!-- Your changes go here -->
 
+### Removed
+
+- Unused Bootstrap version
+
 ## [5.0.7] - 2026-09-17
 
 ### Fixed
