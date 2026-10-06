@@ -50,6 +50,7 @@ Section Order:
 
 ### Removed
 
+- Styling for CorpTools fuel dashboard, as [CorpTools#318](https://github.com/Solar-Helix-Independent-Transport/allianceauth-corp-tools/pull/318) is merged and released
 - Unused Bootstrap version
 
 ## [5.0.7] - 2026-09-17
