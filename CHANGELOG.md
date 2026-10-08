@@ -48,6 +48,10 @@ Section Order:
 
 <!-- Your changes go here -->
 
+### Fixed
+
+- Unexpected Token JS error
+
 ## [5.0.8] - 2026-10-06
 
 ### Removed
