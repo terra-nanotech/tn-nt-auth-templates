@@ -1,9 +1,6 @@
 {% extends "package_monitor/base.html" %}
 
-{% load aa_i18n %}
-{% load i18n %}
-{% load sri %}
-{% load static %}
+{% load aa_i18n i18n sri static %}
 
 {% block aa_package_monitor %}
     <!-- Modal for Refreshing Distributions -->
@@ -118,8 +115,8 @@
 
                     {% if include_packages %}
                         {% translate "In addition these packages are shown:" %} {{ include_packages|join:", " }}
-                    {% endif%}
-                {% endif%}
+                    {% endif %}
+                {% endif %}
                 <br>
                 {% blocktranslate %}
                     The latest stable of a package is retrieved from PyPI.
@@ -241,7 +238,7 @@
                     if (data['is_outdated']) {
                         $(row).find('td:eq(1)').addClass('table-warning')
                         $(row).find('td:eq(2)').addClass('table-warning fw-bold')
-                        {#$(row).find('td:eq(2)').css('font-weight', 'bold')#}
+                        {# $(row).find('td:eq(2)').css('font-weight', 'bold') #}
                     }
                 },
                 initComplete: () => {

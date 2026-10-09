@@ -1,14 +1,13 @@
 {% extends 'public/base.html' %}
 
-{% load django_bootstrap5 %}
-{% load i18n %}
+{% load django_bootstrap5 i18n %}
 
 {% block page_title %}{% translate "Registration" %}{% endblock %}
 
 {% block extra_include %}
     {% include 'bundles/jquery-js.html' %}
     {% include 'bundles/bootstrap-js-bs5.html' %}
-{% endblock %}
+{% endblock extra_include %}
 
 {% block content %}
     <div class="row justify-content-center">
@@ -32,7 +31,7 @@
                                 class=" form-control"
                                 required=""
                                 id="id_email"
-                                value="{{request.session.registration_uid}}@{{request.get_host}}"
+                                value="{{ request.session.registration_uid }}@{{ request.get_host }}"
                                 readonly
                             >
 
@@ -59,4 +58,4 @@
             </div>
         </div>
     </div>
-{% endblock %}
+{% endblock content %}

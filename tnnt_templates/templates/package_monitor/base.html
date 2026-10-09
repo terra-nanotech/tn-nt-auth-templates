@@ -1,6 +1,5 @@
 {% extends 'allianceauth/base-bs5.html' %}
-{% load humanize %}
-{% load i18n %}
+{% load humanize i18n %}
 
 {% block page_title %}{{ app_title }}{% endblock %}
 
@@ -16,7 +15,7 @@
 
             {% if all_count %}
                 &nbsp;<span class="badge text-bg-secondary">{{ all_count }}</span>
-            {% endif%}
+            {% endif %}
         </a>
     </li>
 
@@ -30,7 +29,7 @@
 
                 {% if current_count %}
                     &nbsp;<span class="badge text-bg-secondary">{{ current_count }}</span>
-                {% endif%}
+                {% endif %}
             </a>
         </li>
 
@@ -43,7 +42,7 @@
 
                 {% if outdated_count %}
                     &nbsp;<span class="badge text-bg-danger">{{ outdated_count }}</span>
-                {% endif%}
+                {% endif %}
             </a>
         </li>
     {% endif %}
@@ -60,17 +59,17 @@
 
                 {% if unknown_count %}
                     &nbsp;<span class="badge text-bg-secondary">{{ unknown_count }}</span>
-                {% endif%}
+                {% endif %}
             </a>
         </li>
     {% endif %}
-{% endblock %}
+{% endblock header_nav_collapse_left %}
 
 {% block header_nav_user_character_control %}
     {% comment %}
         Leave empty to remove user control nav items for this app
     {% endcomment %}
-{% endblock %}
+{% endblock header_nav_user_character_control %}
 
 {% block header_nav_collapse_right %}
     <li role="presentation" class="nav-item">
@@ -92,10 +91,10 @@
             <i class="fa-solid fa-sync"></i>
         </button>
     </li>
-{% endblock %}
+{% endblock header_nav_collapse_right %}
 
 {% block content %}
     <div class="aa-package-monitor">
-        {% block aa_package_monitor %}{% endblock aa_package_monitor %}
+        {% block aa_package_monitor %}{% endblock %}
     </div>
 {% endblock content %}

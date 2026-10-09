@@ -1,14 +1,13 @@
 {% extends 'public/base.html' %}
 
-{% load i18n %}
-{% load evelinks %}
+{% load evelinks i18n %}
 
 {% block content %}
     <div class="row justify-content-center">
         <div class="col-xl-8">
             {% if messages %}
                 {% for message in messages %}
-                    <div class="alert alert-{{ message.level_tag}}">{{ message }}</div>
+                    <div class="alert alert-{{ message.level_tag }}">{{ message }}</div>
                 {% endfor %}
             {% endif %}
 
@@ -53,7 +52,7 @@
                             <div class="col-md-8">
                                 <div class="text-center">
                                     {% block middle_box_content %}
-                                    {% endblock %}
+                                    {% endblock middle_box_content %}
                                 </div>
 
                                 {% include 'public/lang_select.html' %}
@@ -77,8 +76,8 @@
             </div>
         </div>
     </div>
-{% endblock %}
+{% endblock content %}
 
 {% block extra_include %}
     {% include 'bundles/bootstrap-js-bs5.html' %}
-{% endblock %}
+{% endblock extra_include %}
