@@ -1,12 +1,15 @@
 {% load sri tnnt_templates %}
 
-<!-- Terra Nanotech Theme CSS -->
-{% sri_static "tnnt_templates/theme/terra-nanotech/bootstrap5/libs/bootstrap/v5.3.8/css/bootstrap.min.css" %}
-{% sri_static "tnnt_templates/theme/terra-nanotech/bootstrap5/css/terra-nanotech-defaults.min.css" %}
-{% sri_static "tnnt_templates/theme/terra-nanotech/bootstrap5/css/terra-nanotech-fonts.min.css" %}
-{% sri_static "tnnt_templates/theme/terra-nanotech/bootstrap5/css/terra-nanotech.min.css" %}
-
 {% with community_base="tnnt_templates/theme/terra-nanotech/bootstrap5/css/community-app-fixes/" libs_base="tnnt_templates/libs/" %}
+    <!-- Terra Nanotech Theme Base Bootstrap CSS -->
+    {% sri_static libs_base|add:"bootstrap/v5.3.8/css/bootstrap.min.css" %}
+    <!-- Terra Nanotech Theme Base Bootstrap CSS Ends -->
+
+    <!-- Terra Nanotech Theme CSS -->
+    {% sri_static "tnnt_templates/theme/terra-nanotech/bootstrap5/css/terra-nanotech-defaults.min.css" %}
+    {% sri_static "tnnt_templates/theme/terra-nanotech/bootstrap5/css/terra-nanotech-fonts.min.css" %}
+    {% sri_static "tnnt_templates/theme/terra-nanotech/bootstrap5/css/terra-nanotech.min.css" %}
+
     {% if request.path|default:''|startswith:"/forum/" %}
         <!-- AA Forum related CSS -->
         {% sri_static libs_base|add:"fira-code/6.2.0/fira_code.min.css" %}
