@@ -52,6 +52,11 @@ Section Order:
 
 - Unexpected Token JS error
 
+### Change
+
+- Use the Bootstrap JS bundle that is already bundled with AA as there is no need to
+  have 2 different variants of Bootstrap JS
+
 ## [5.0.8] - 2026-10-06
 
 ### Removed
