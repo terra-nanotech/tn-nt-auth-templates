@@ -42,6 +42,9 @@ dynamic = [
 dependencies = [
     "allianceauth>=5.3,<6",
 ]
+optional-dependencies.gdpr = [
+    "aa-gdpr",
+]
 optional-dependencies.tests-allianceauth-latest = [
     "coverage",
     "django-webtest",
