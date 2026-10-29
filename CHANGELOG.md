@@ -48,6 +48,8 @@ Section Order:
 
 <!-- Your changes go here -->
 
+## [5.1.0] - 2026-10-29
+
 ### Fixed
 
 - Unexpected Token JS error
@@ -1905,6 +1907,7 @@ run it with any version prior!**
 [5.0.6]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v5.0.5...v5.0.6 "v5.0.6"
 [5.0.7]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v5.0.6...v5.0.7 "v5.0.7"
 [5.0.8]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v5.0.7...v5.0.8 "v5.0.8"
-[in development]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v5.0.8...HEAD "In Development"
+[5.1.0]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v5.0.8...v5.1.0 "v5.1.0"
+[in development]: https://github.com/terra-nanotech/tn-nt-auth-templates/compare/v5.1.0...HEAD "In Development"
 [keep a changelog]: http://keepachangelog.com/ "Keep a Changelog"
 [semantic versioning]: http://semver.org/ "Semantic Versioning"
