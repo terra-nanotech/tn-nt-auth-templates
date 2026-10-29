@@ -23,7 +23,7 @@ db-backup:
 	# Construct the backup filename with timestamp and optional comment \
 	filename=$(DB__NAME)_backup_$$(date +%F_%H-%M-%S)$$suffix.gz; \
 	echo "Saving DB backup to $(DB__BACKUP_DIRECTORY)/$$filename"; \
-	$(DB__MYSQLDUMP_EXECUTABLE) -u$(DB__USER) -p$(DB__PASSWORD) -h$(DB__HOST) $(DB__NAME) | gzip -c > $(DB__BACKUP_DIRECTORY)/$$filename
+	$(DB__MYSQLDUMP_EXECUTABLE) -u$(DB__USER) -p$(DB__PASSWORD) -h$(DB__HOST) $(DB__NAME) --verbose | gzip -c > $(DB__BACKUP_DIRECTORY)/$$filename
 
 # Restore the database from a backup file in the backup directory.
 .PHONY: db-restore
@@ -63,6 +63,20 @@ db-restore:
 	fi; \
 	# Perform the restore operation \
 	echo "Restoring database $(DB__NAME) from backup $$sel..."; \
+	# Remove all DB tables before importing again \
+	$(DB__MYSQL_EXECUTABLE) -u$(DB__USER) -p$(DB__PASSWORD) -h$(DB__HOST) $(DB__NAME) -e \
+		"SET FOREIGN_KEY_CHECKS = 0; \
+		SET @tables = NULL; \
+		SELECT GROUP_CONCAT(CONCAT(CHAR(96), table_name, CHAR(96))) INTO @tables \
+		FROM information_schema.tables \
+		WHERE table_schema = '$(DB__NAME)'; \
+		SET @tables = IFNULL(CONCAT('DROP TABLE IF EXISTS ', @tables), 'SELECT 1'); \
+		PREPARE stmt FROM @tables; \
+		EXECUTE stmt; \
+		DEALLOCATE PREPARE stmt; \
+		SET FOREIGN_KEY_CHECKS = 1;"; \
+	# Import the backup file into the database \
+	echo "Importing backup into database $(DB__NAME)..."; \
 	zcat "$$sel" | $(DB__MYSQL_EXECUTABLE) -u$(DB__USER) -p$(DB__PASSWORD) -h$(DB__HOST) $(DB__NAME)
 
 # List available backup files in the backup directory.
@@ -121,9 +135,53 @@ db-delete-backup:
 	rm -f "$$sel"; \
 	echo "Backup $$sel deleted successfully."
 
+# Cleanup old backup files in the backup directory, keeping only the latest $(DB__BACKUP_RETENTION_COUNT) backups.
+.PHONY: db-cleanup-backups
+db-cleanup-backups:
+	@echo "Cleaning up old DB backups while keeping the latest $(DB__BACKUP_RETENTION_COUNT) backups in $(DB__BACKUP_DIRECTORY):"
+	@set -- $(DB__BACKUP_DIRECTORY)/$(DB__NAME)_backup_*.gz; \
+	if [ ! -e "$$1" ]; then \
+		echo "No backups found in $(DB__BACKUP_DIRECTORY) matching $(DB__NAME)_backup_*.gz"; \
+		exit 1; \
+	fi; \
+	# Sort the backup files by modification time (newest first) and keep the latest $(DB__BACKUP_RETENTION_COUNT) \
+	sorted_files=$$(ls -t "$$@"); \
+	i=0; \
+	for f in $$sorted_files; do \
+		i=$$((i+1)); \
+		if [ $$i -le $(DB__BACKUP_RETENTION_COUNT) ]; then continue; fi; \
+		echo "Deleting old backup: $$(basename "$$f")"; \
+		rm -f "$$f"; \
+	done
+
+# Clear all backup files in the backup directory.
+.PHONY: db-clear-backups
+db-clear-backups:
+	@echo "Clearing all DB backups in $(DB__BACKUP_DIRECTORY):"
+	@set -- $(DB__BACKUP_DIRECTORY)/$(DB__NAME)_backup_*.gz; \
+	if [ ! -e "$$1" ]; then \
+		echo "No backups found in $(DB__BACKUP_DIRECTORY) matching $(DB__NAME)_backup_*.gz"; \
+		exit 1; \
+	fi; \
+	# Confirm with the user before proceeding \
+	printf "Are you sure you want to delete all backups? (y/N): "; read confirm; \
+	if [ "$$confirm" != "y" ] && [ "$$confirm" != "Y" ]; then \
+		echo "Clear backups cancelled"; \
+		exit 0; \
+	fi; \
+	# Perform the delete operation \
+	for f in "$$@"; do \
+		echo "Deleting backup: $$(basename "$$f")"; \
+		rm -f "$$f"; \
+	done; \
+	echo "All backups deleted successfully."
+
+# Help message for database-related tasks.
 help::
 	@echo "  $(TEXT_UNDERLINE)Database:$(TEXT_RESET)"
 	@echo "    db-backup                   Backup the database $(DB__NAME) to $(DB__BACKUP_DIRECTORY)"
+	@echo "    db-cleanup-backups          Cleanup old backups of the database $(DB__NAME) in $(DB__BACKUP_DIRECTORY), keeping the latest $(DB__BACKUP_RETENTION_COUNT)"
+	@echo "    db-clear-backups            Clear all backups of the database $(DB__NAME) from $(DB__BACKUP_DIRECTORY)"
 	@echo "    db-delete-backup            Delete a backup of the database $(DB__NAME) from $(DB__BACKUP_DIRECTORY)"
 	@echo "    db-list-backups             List available backups in $(DB__BACKUP_DIRECTORY)"
 	@echo "    db-restore                  Restore the database $(DB__NAME) from a backup in $(DB__BACKUP_DIRECTORY)"

@@ -57,6 +57,11 @@ Section Order:
 - Use the Bootstrap JS bundle that is already bundled with AA as there is no need to
   have 2 different variants of Bootstrap JS
 
+### Removed
+
+- Static files bundle templates, they are covered by
+  [AA-GDPR](https://github.com/ppfeufer/aa-gdpr) now
+
 ## [5.0.8] - 2026-10-06
 
 ### Removed
