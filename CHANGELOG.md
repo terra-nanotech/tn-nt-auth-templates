@@ -48,13 +48,17 @@ Section Order:
 
 <!-- Your changes go here -->
 
+### Changed
+
+- Update background image to match the Fractured Skies expansion
+
 ## [5.1.0] - 2026-10-29
 
 ### Fixed
 
 - Unexpected Token JS error
 
-### Change
+### Changed
 
 - Use the Bootstrap JS bundle that is already bundled with AA as there is no need to
   have 2 different variants of Bootstrap JS
@@ -100,7 +104,7 @@ Section Order:
 
 ## [5.0.3] - 2026-08-04
 
-### Change
+### Changed
 
 - CSS modernized (If you have an older browser that can't handle the new CSS, update your browser…)
 
