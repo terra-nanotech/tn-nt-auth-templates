@@ -92,6 +92,8 @@
 
         > nav.navbar {
             background-color: var(--background-color-light-transparency) !important;
+            border-left: 0;
+            border-right: 0;
 
             --background-color-light-transparency: rgb(58 63 68 / 85%);
         }
