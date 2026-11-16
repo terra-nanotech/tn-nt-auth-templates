@@ -48,6 +48,10 @@ Section Order:
 
 <!-- Your changes go here -->
 
+### Changed
+
+- Border in top navigation adjusted
+
 ## [5.1.1] - 2026-11-10
 
 ### Changed
